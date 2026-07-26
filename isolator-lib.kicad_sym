@@ -294,7 +294,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 0 8.89 0)
+			(at 0 11.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -302,7 +302,7 @@
 			)
 		)
 		(property "Value" "TPS2553DBV"
-			(at 0 -8.89 0)
+			(at 0 -11.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -344,8 +344,8 @@
 		)
 		(symbol "TPS2553DBV_0_1"
 			(rectangle
-				(start -5.08 5.08)
-				(end 5.08 -5.08)
+				(start -7.62 7.62)
+				(end 7.62 -7.62)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -357,7 +357,7 @@
 		)
 		(symbol "TPS2553DBV_1_1"
 			(pin power_in line
-				(at -7.62 2.54 0)
+				(at -10.16 2.54 0)
 				(length 2.54)
 				(name "IN"
 					(effects
@@ -375,7 +375,7 @@
 				)
 			)
 			(pin power_in line
-				(at 0 -7.62 90)
+				(at 0 -10.16 90)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -393,7 +393,7 @@
 				)
 			)
 			(pin input line
-				(at -7.62 -2.54 0)
+				(at -10.16 -2.54 0)
 				(length 2.54)
 				(name "EN"
 					(effects
@@ -411,7 +411,7 @@
 				)
 			)
 			(pin open_collector line
-				(at 7.62 -2.54 180)
+				(at 10.16 -2.54 180)
 				(length 2.54)
 				(name "~{FAULT}"
 					(effects
@@ -429,7 +429,7 @@
 				)
 			)
 			(pin input line
-				(at 0 7.62 270)
+				(at 0 10.16 270)
 				(length 2.54)
 				(name "ILIM"
 					(effects
@@ -447,7 +447,7 @@
 				)
 			)
 			(pin power_out line
-				(at 7.62 2.54 180)
+				(at 10.16 2.54 180)
 				(length 2.54)
 				(name "OUT"
 					(effects
@@ -474,7 +474,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "T"
-			(at 0 5.08 0)
+			(at 0 6.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -482,7 +482,7 @@
 			)
 		)
 		(property "Value" "750313638"
-			(at 0 -5.08 0)
+			(at 0 -6.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -525,7 +525,7 @@
 		(symbol "750313638_0_1"
 			(polyline
 				(pts
-					(xy -2.54 2.54) (xy -1.27 2.54)
+					(xy -0.635 -4.445) (xy -0.635 4.445)
 				)
 				(stroke
 					(width 0)
@@ -537,90 +537,7 @@
 			)
 			(polyline
 				(pts
-					(xy -2.54 0) (xy -1.27 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy -2.54 -2.54) (xy -1.27 -2.54)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(arc
-				(start -1.27 0)
-				(mid -0.6377 -0.635)
-				(end -1.27 -1.27)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(arc
-				(start -1.27 -1.27)
-				(mid -0.6377 -1.905)
-				(end -1.27 -2.54)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(rectangle
-				(start -0.254 2.54)
-				(end 0.254 -2.54)
-				(stroke
-					(width 0.0254)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 2.54) (xy 2.54 2.54)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 0) (xy 2.54 0)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 -2.54) (xy 2.54 -2.54)
+					(xy 0.635 -4.445) (xy 0.635 4.445)
 				)
 				(stroke
 					(width 0)
@@ -633,9 +550,9 @@
 		)
 		(symbol "750313638_1_1"
 			(arc
-				(start -1.27 2.54)
-				(mid -0.6377 1.905)
-				(end -1.27 1.27)
+				(start -6.35 2.54)
+				(mid -6.985 1.905)
+				(end -6.35 1.27)
 				(stroke
 					(width 0)
 					(type default)
@@ -645,9 +562,81 @@
 				)
 			)
 			(arc
-				(start -1.27 1.27)
-				(mid -0.6377 0.635)
-				(end -1.27 0)
+				(start -6.35 1.27)
+				(mid -6.985 0.635)
+				(end -6.35 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -6.35 0)
+				(mid -6.985 -0.635)
+				(end -6.35 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -6.35 -1.27)
+				(mid -6.985 -1.905)
+				(end -6.35 -2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 6.35 2.54)
+				(mid 6.985 1.905)
+				(end 6.35 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 6.35 1.27)
+				(mid 6.985 0.635)
+				(end 6.35 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 6.35 0)
+				(mid 6.985 -0.635)
+				(end 6.35 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 6.35 -1.27)
+				(mid 6.985 -1.905)
+				(end 6.35 -2.54)
 				(stroke
 					(width 0)
 					(type default)
@@ -657,100 +646,30 @@
 				)
 			)
 			(circle
-				(center -1.143 1.905)
-				(radius 0.127)
+				(center -6.35 3.81)
+				(radius 0.254)
 				(stroke
 					(width 0.254)
 					(type default)
 				)
 				(fill
-					(type none)
+					(type outline)
 				)
 			)
 			(circle
-				(center -1.143 -0.635)
-				(radius 0.127)
+				(center 6.35 3.81)
+				(radius 0.254)
 				(stroke
 					(width 0.254)
 					(type default)
 				)
 				(fill
-					(type none)
-				)
-			)
-			(circle
-				(center 1.143 1.905)
-				(radius 0.127)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(circle
-				(center 1.143 -0.635)
-				(radius 0.127)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(arc
-				(start 1.27 1.27)
-				(mid 0.6377 1.905)
-				(end 1.27 2.54)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(arc
-				(start 1.27 0)
-				(mid 0.6377 0.635)
-				(end 1.27 1.27)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(arc
-				(start 1.27 -1.27)
-				(mid 0.6377 -0.635)
-				(end 1.27 0)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(arc
-				(start 1.27 -2.54)
-				(mid 0.6377 -1.905)
-				(end 1.27 -1.27)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
+					(type outline)
 				)
 			)
 			(pin passive line
-				(at -5.08 2.54 0)
-				(length 2.54)
+				(at -10.16 2.54 0)
+				(length 3.81)
 				(name "N1"
 					(effects
 						(font
@@ -767,8 +686,8 @@
 				)
 			)
 			(pin passive line
-				(at -5.08 0 0)
-				(length 2.54)
+				(at -10.16 0 0)
+				(length 3.81)
 				(name "CT1"
 					(effects
 						(font
@@ -785,8 +704,8 @@
 				)
 			)
 			(pin passive line
-				(at -5.08 -2.54 0)
-				(length 2.54)
+				(at -10.16 -2.54 0)
+				(length 3.81)
 				(name "N2"
 					(effects
 						(font
@@ -803,8 +722,8 @@
 				)
 			)
 			(pin passive line
-				(at 5.08 -2.54 180)
-				(length 2.54)
+				(at 10.16 -2.54 180)
+				(length 3.81)
 				(name "N4"
 					(effects
 						(font
@@ -821,8 +740,8 @@
 				)
 			)
 			(pin passive line
-				(at 5.08 0 180)
-				(length 2.54)
+				(at 10.16 0 180)
+				(length 3.81)
 				(name "CT2"
 					(effects
 						(font
@@ -839,8 +758,8 @@
 				)
 			)
 			(pin passive line
-				(at 5.08 2.54 180)
-				(length 2.54)
+				(at 10.16 2.54 180)
+				(length 3.81)
 				(name "N3"
 					(effects
 						(font
