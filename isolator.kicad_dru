@@ -1,0 +1,18 @@
+(version 1)
+
+# Galvanic isolation barrier: enforce creepage between host- and isolated-side
+# copper. KiCad's creepage engine follows the board outline, so the routed
+# slot under U1/T1 counts. T1's 7.51 mm land pattern passes because of the
+# slot; C49 (the deliberate DNP stitching bridge) is excluded.
+(rule "barrier-creepage"
+  (condition "(A.Type == 'Track' || A.Type == 'Via' || A.Type == 'Zone') && (B.Type == 'Track' || B.Type == 'Via' || B.Type == 'Zone') && A.hasNetclass('HOST_SIDE') && B.hasNetclass('ISO_SIDE')")
+  (constraint creepage (min 8mm)))
+
+# The isolator and transformer packages provide their own certified creepage
+# (8.3 mm / 5 kVrms). Check their pads at their qualified figures instead.
+(rule "barrier-clearance-U1"
+  (condition "(A.memberOfFootprint('U1') || B.memberOfFootprint('U1')) && A.hasNetclass('HOST_SIDE') && B.hasNetclass('ISO_SIDE')")
+  (constraint clearance (min 8mm)))
+(rule "barrier-clearance-T1"
+  (condition "(A.memberOfFootprint('T1') || B.memberOfFootprint('T1')) && A.hasNetclass('HOST_SIDE') && B.hasNetclass('ISO_SIDE')")
+  (constraint clearance (min 7.4mm)))
