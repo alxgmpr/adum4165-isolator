@@ -33663,7 +33663,7 @@
 		)
 		(polygon
 			(pts
-				(xy 45 45) (xy 87.5 45) (xy 87.5 125.5) (xy 45 125.5)
+				(xy 45 45) (xy 84 45) (xy 84 125.5) (xy 45 125.5)
 			)
 		)
 	)
@@ -33686,7 +33686,53 @@
 		)
 		(polygon
 			(pts
-				(xy 89.5 45) (xy 175 45) (xy 175 125.5) (xy 89.5 125.5)
+				(xy 93 45) (xy 175 45) (xy 175 125.5) (xy 93 125.5)
+			)
+		)
+	)
+	(zone
+		(net "/VBUS_HOST")
+		(layer "In2.Cu")
+		(uuid "7af35765-3823-4c12-80e5-b6bfad339f6d")
+		(name "VBUS_HOST Pour")
+		(hatch edge 0.5)
+		(connect_pads thru_hole_only
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(smoothing fillet)
+			(radius 1.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 45 45) (xy 84 45) (xy 84 125.5) (xy 45 125.5)
+			)
+		)
+	)
+	(zone
+		(net "/ISO_5V")
+		(layer "In2.Cu")
+		(uuid "a7501eb2-57c0-45a8-8870-489f38daddb3")
+		(name "ISO_5V Pour")
+		(hatch edge 0.5)
+		(connect_pads thru_hole_only
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(smoothing fillet)
+			(radius 1.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 93 45) (xy 175 45) (xy 175 125.5) (xy 93 125.5)
 			)
 		)
 	)
