@@ -6,3 +6,6 @@ fp-info-cache
 *-save.pro
 *.bak
 _autosave-*
+analysis/*/
+datasheets/
+*.rpt
