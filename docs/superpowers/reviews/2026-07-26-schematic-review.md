@@ -467,7 +467,7 @@ Run `lifecycle_audit.py analysis/2026-07-26_0129/schematic.json --temp-range ind
 - **NUP4202W1T2G claims are not datasheet-quoted** — the local PDF is an image-only scan with no extractable text.
 - **Y1/Y2 crystal specifications come from LCSC parametric data, not manufacturer PDFs.** The tolerance/stability split that the first pass flagged as unconfirmed is now **resolved** from LCSC's full parameter set (±10 ppm initial tolerance, ±30 ppm stability for Y1; ±10/±20 ppm for Y2), and both satisfy ADI's ≤ 50 ppm / ≤ 100 ppm requirement with margin. The residual gap is that this is a distributor database rather than the manufacturer's own PDF, and neither SCTF's nor YXC's datasheet was read directly — worth a glance before a production buy, no longer a pre-fab blocker.
 - **Q1/Q2 parametric data is not verified for the specified MPN** — the local PDF is JCET's 2N7002, the specified part is onsemi's `2N7002LT1G`. Pinout is verified; V<sub>GS(th)</sub> and R<sub>DS(on)</sub> are not.
-- **Bus-powered current capacity is unresolved between two vendor sources** (DR-01). No measurement was possible; this review states the conflict rather than picking a side.
+- **The bus-powered ceiling (DR-01) is established analytically, not measured.** There is no vendor conflict — TI's "100 mA" is an application-column characterisation point and Würth's own curves show headroom past 0.65 A; the limit is the host port's 500 mA budget, which gives ≈310 mA on `ISO_5V` and ≈75 mA for downstream ports. The one soft input is the ~90 % end-to-end efficiency, inferred from the shape of TI's Fig 6-22 rather than measured on this hardware: at 80 % the downstream budget falls to roughly 40 mA. Bring-up step 4 characterises the actual margin.
 
 ---
 
