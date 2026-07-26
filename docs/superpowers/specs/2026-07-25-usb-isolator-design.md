@@ -73,8 +73,10 @@ boxes with no local controller, since host power is always present there.
 - ADuM4165 in 20-lead wide-body SOIC_IC, 8.3 mm creepage/clearance.
 - The only other barrier-crossing component is the DC-DC transformer,
   rated 5 kVrms.
-- No copper on any layer bridges the barrier gap; ≥8 mm creepage maintained
-  board-wide. Optional routed slot under the ADuM4165 and transformer.
+- Creepage targets: ≥8.3 mm at the ADuM4165 (RI-20-1 package basis); ≥7.5 mm
+  at the transformer (Würth 750313638 recommended land pattern yields 7.51 mm
+  — the part is rated 5 kVrms on this pattern; a routed slot under T1 at
+  layout restores margin). No other copper bridges the barrier.
 - Footprint provision for one barrier-stitching safety capacitor (DNP by
   default) for radiated-EMI margin.
 

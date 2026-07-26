@@ -363,7 +363,7 @@ Expected: `TPS2553DBV 6 pins`, `750313638` 5–6 pins, `TPS2121` matching its pa
 | R/C/LED | 0603 (`Resistor_SMD:R_0603_1608Metric` etc.); bulk caps `Capacitor_SMD:C_1206_3216Metric`; C_stitch 1812 |
 
 - [ ] **Step 2: Custom footprints in `isolator-lib.pretty`:**
-  - `WE_750313638` — from the Würth datasheet land pattern (Task 2 PDF). Verify primary-to-secondary pad spacing ≥ 8 mm.
+  - `WE_750313638` — from the Würth datasheet land pattern (Task 2 PDF). Record actual primary-to-secondary pad clearance (7.51 mm per Würth pattern — accepted, see spec).
   - `ADI_SOIC_IC_20_RI-20-1` — from ADuM4165 datasheet Outline Dimensions. Acceptance: pad-row-to-pad-row clearance ≥ 8.3 mm. Register `fp-lib-table` like `sym-lib-table` in Task 1.
 - [ ] **Step 3: Verify** — analyzer run: `statistics.missing_footprint`-class findings zero; footprint-filter audit clean. ERC still exit 0.
 - [ ] **Step 4: Commit** — `git commit -am "feat(sch): footprint assignment, custom RI-20-1 + WE transformer footprints"`

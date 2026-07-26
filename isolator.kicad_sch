@@ -31106,7 +31106,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "102ee308-f4f6-42eb-8562-532cb18891e7")
-		(property "Reference" "C_stitch"
+		(property "Reference" "C49"
 			(at 91.9 18.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31168,7 +31168,7 @@
 		(instances
 			(project "isolator"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "C_stitch")
+					(reference "C49")
 					(unit 1)
 				)
 			)
