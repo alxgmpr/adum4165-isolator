@@ -82,16 +82,23 @@ boxes with no local controller, since host power is always present there.
 
 - **Bus-powered path:** SN6505BDBV push-pull driver (420 kHz, spread
   spectrum) + Würth 750313638 transformer (1:1.3, 5 kVrms) + Schottky
-  rectifier → ~6 V raw → AP7361C-50 LDO (1 A) → `DCDC_5V`. Usable budget
+  rectifier → ~6 V raw → MIC29302 low-dropout LDO (3 A-class, adjustable,
+  set to 5.0 V; chosen over a fixed 1117-class part because the ~6 V raw
+  rail leaves too little headroom for a 1.2 V-dropout regulator under
+  load) → `DCDC_5V`. Usable budget
   ≈ 700 mA; after isolator Side 2 (~60 mA in HS) and hub (~150 mA),
   roughly 400–500 mA remains for downstream devices.
 - **External path:** J2 power-only USB-C receptacle, dedicated dual
-  5.1 kΩ Rd. TLV7031 comparator monitors CC voltage; above the 1.23 V
-  threshold the source advertises 3 A. Comparator output gates the external
-  path's priority in the mux and drives a "full power" LED, so a weak brick
-  is never silently overloaded.
-- **Priority mux:** TPS2121. IN1 = external 5 V (priority when CC detect
-  passes), IN2 = `DCDC_5V`, output = `ISO_5V`. Seamless switchover.
+  5.1 kΩ Rd. Two TLV7041 open-drain comparators (one per CC line, outputs
+  wire-ORed, threshold 1.23 V from a divider off the 3.3 V rail) detect a
+  3 A source advertisement on whichever CC line is active. When no 3 A
+  advertisement is present, a small NMOS holds the TPS2121's PR1 priority
+  input low so the mux stays on the DC-DC — a weak brick is never
+  silently overloaded. "External active" indication comes from the
+  TPS2121 ST status pin driving an LED.
+- **Priority mux:** TPS2121. IN1 = external 5 V (priority only when the
+  CC detect confirms a 3 A source), IN2 = `DCDC_5V`, output = `ISO_5V`.
+  Seamless switchover.
 - **Rails from `ISO_5V`:** ADuM4165 `VBUS2` (internal LDO → VDD2), the four
   port switches, and an AP2112K-3.3 LDO for the hub.
 
