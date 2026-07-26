@@ -131,6 +131,12 @@ boxes with no local controller, since host power is always present there.
   consumes ~3 of USB's 5 tiers. Deeply cascaded hubs downstream may fail.
 - Downstream USB-C ports are USB 2.0 data, 5 V only. No PD, no SS pairs.
 - Bus-powered mode is a light-load mode (~400 mA total for devices).
+- The hub declares self-powered regardless of actual power source
+  (strap-only config cannot switch descriptors dynamically). In
+  bus-powered mode (no external supply) this is a USB descriptor-honesty
+  deviation; per-port TPS2553 limits, the TPS2121 3A limit, and the
+  MIC29302 current limit bound the actual draw. Rated 500 mA/port
+  operation requires the external supply.
 - L1 sleep is not supported by the ADuM4165 (L2 suspend is).
 
 ## Verification plan
