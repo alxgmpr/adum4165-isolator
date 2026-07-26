@@ -493,6 +493,7 @@ Ordered so that each step gates the next. Items marked **[decision]** resolve an
 10. **Isolation integrity.** Before any of the above: confirm > 100 MΩ between `GND1` and `GND2` with the board unpowered, and confirm no copper other than U1 and T1 bridges the barrier (visual plus continuity).
 11. **DR-03 bulk capacitance.** Hot-plug a 500 mA load on each port and scope `ISO_5V` droop. If the dip breaks the 4.75 V floor, fit the additional 47 µF called for in DR-03.
 12. **USB tiering sanity.** Enumerate through the isolator and confirm the hub reports 4 ports; remember the isolator consumes ~3 of USB's 5 tiers, so deeply cascaded hubs downstream are expected to fail (accepted spec limitation).
+13. **DR-15 — upstream inrush (accepted).** `VBUS_HOST` carries ~20 µF of input capacitance (C3 + C7 + bypass) with no inrush limiting — about 2× the USB 2.0 §7.2.4.1 bus-powered limit of 10 µF/50 µC at hot-plug. Accepted for a prototype-class bench device (real hosts tolerate it); decide accept-vs-soft-start pad at layout.
 
 ---
 

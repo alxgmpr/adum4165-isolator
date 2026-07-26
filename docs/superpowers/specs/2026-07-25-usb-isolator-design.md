@@ -134,8 +134,9 @@ boxes with no local controller, since host power is always present there.
   through 56 kΩ (Rp = default USB power; deliberately not advertising
   1.5 A the 600 mA limit can't deliver).
 - **Protection:** NUP4202 per downstream port on D+/D−.
-- **Indicators:** PGOOD LED (ADuM4165 Side-2 PGOOD), power-source LEDs
-  (bus-powered / external / external-3A).
+- **Indicators:** PGOOD LED (ADuM4165 Side-2 PGOOD), power-source LEDs: D6
+  bus-powered, D4 external-active (post-lockout, external-selected implies a
+  3 A source; "external present but locked out" reads as D4 off + D6 on).
 
 ## Layout rules
 
@@ -161,6 +162,10 @@ boxes with no local controller, since host power is always present there.
   MIC29302 current limit bound the actual draw. Rated 500 mA/port
   operation requires the external supply.
 - L1 sleep is not supported by the ADuM4165 (L2 suspend is).
+- `VBUS_HOST` carries ~20 µF of input capacitance (C3 + C7 + bypass) with no
+  inrush limiting — about 2× the USB 2.0 §7.2.4.1 bus-powered limit of
+  10 µF/50 µC at hot-plug. Accepted for a prototype-class bench device (real
+  hosts tolerate it); decide accept-vs-soft-start pad at layout.
 
 ## Verification plan
 
