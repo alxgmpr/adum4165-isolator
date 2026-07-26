@@ -19,8 +19,12 @@ Primary references:
 - ADuM4165/ADuM4166 data sheet Rev. B (`adum4165-4166.pdf`)
 - EVAL-ADuM4165/EVAL-ADuM4166 user guide UG-2027 (`eval-adum4165-4166-ug-2027.pdf`)
 
-The existing schematic core (ADuM4165 + 24 MHz crystal + 8 pF load caps +
-NUP4202 ESD array) matches the eval board reference design and is retained.
+The existing schematic core (ADuM4165 + 24 MHz crystal + 8 pF load caps)
+matches the eval board reference design and is retained, with one deliberate
+deviation: the eval board's NUP4202 ESD array is replaced by the
+USBLC6-2SC6, whose flow-through pinout (I/O1 on pins 1 and 6, I/O2 on pins 3
+and 4) lets each D+/D− pair enter one edge and leave the opposite edge at
+constant spacing, keeping the high-speed pairs symmetric and routable.
 
 ## Requirements
 
@@ -62,7 +66,8 @@ boxes with no local controller, since host power is always present there.
   and the SN6505B input. 10 µF bulk on VBUS; 0.1 µF at `VBUS1` and `VDD1`
   (exactly 0.1 µF at `VDD1` — larger disrupts start-up sequencing per data
   sheet), total lead length pin-to-cap under 10 mm.
-- **Data:** D+/D− → NUP4202 ESD array → `UD+`/`UD−`.
+- **Data:** D+/D− → USBLC6-2SC6 ESD array (flow-through: in on pins 1/3, out
+  on pins 6/4) → `UD+`/`UD−`.
 - **Clock:** 24 MHz crystal on XI₁/XO₁ with 8 pF load caps (existing).
   Crystal spec: ≤50 ppm total tolerance, ≤100 ppm stability, CL ≈ 10 pF,
   start-up within 0.3 ms (eval BOM class part). Short traces, tight
@@ -133,7 +138,8 @@ boxes with no local controller, since host power is always present there.
 - **Connectors:** 2× USB-A, 2× USB-C. Each USB-C CC pin pulls up to 5 V
   through 56 kΩ (Rp = default USB power; deliberately not advertising
   1.5 A the 600 mA limit can't deliver).
-- **Protection:** NUP4202 per downstream port on D+/D−.
+- **Protection:** USBLC6-2SC6 per downstream port on D+/D−, oriented so the
+  pair flows through from the connector edge to the hub side.
 - **Indicators:** PGOOD LED (ADuM4165 Side-2 PGOOD), power-source LEDs: D6
   bus-powered, D4 external-active (post-lockout, external-selected implies a
   3 A source; "external present but locked out" reads as D4 off + D6 on).

@@ -253,6 +253,7 @@
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
+    "drc_exclusions": [],
     "ipc2581": {
       "bom_rev": "",
       "dist": "",
@@ -264,8 +265,7 @@
     },
     "layer_pairs": [],
     "layer_presets": [],
-    "viewports": [],
-    "drc_exclusions": []
+    "viewports": []
   },
   "boards": [],
   "component_class_settings": {
