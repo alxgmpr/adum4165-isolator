@@ -126,11 +126,45 @@ def main() -> None:
     # ---- 7. Isolated-side supply budget ----------------------------------
     hdr("Isolated-side supply headroom (bus-powered path)")
     print("  TI SLLSEP9I Table 9-3: SN6505B + Wurth 750313638, 1:1.3, "
-          "5 V -> 5 V, 100 mA, LDO required")
+          "5 V -> 5 V, 100 mA, LDO required -- an APPLICATION column entry, not a rating")
     print("  Wurth 750313638 datasheet typical-application table: IOut1 = 0.65 A")
-    print("  USB 2.0 bus-powered ceiling: 500 mA from VBUS_HOST; at ~80% "
-          "end-to-end efficiency that is <= ~400 mA on ISO_5V")
-    print("  -> spec's '~700 mA usable' is not supported by any of the three")
+    print("  Binding constraint is the host port's 500 mA obligation, not the magnetics:")
+    print("  TI SLLSEP9I Fig 6-21/6-22 (p.10) 'SN6505B + Wurth 760390014, VCC = 5 V' "
+          "- the electrically identical 1:1.3 5V->5V '100 mA' entry - sweeps load current to 200 mA")
+    print("  Wurth 750313638 p.3 temperature-rise curve: push-pull output current axis "
+          "runs to 1.2 A (~40 K at 0.65 A)")
+    host_w = 0.500 * 5.0
+    u1_side1_w = 0.070 * 5.0
+    conv_w = (host_w - u1_side1_w) * 0.90
+    for vraw in (5.8, 6.15, 6.2):
+        i_raw = conv_w / vraw
+        print(f"  host {host_w:.2f} W - U1 {u1_side1_w:.2f} W = "
+              f"{host_w - u1_side1_w:.2f} W; x0.90 = {conv_w:.2f} W; "
+              f"at DCDC_RAW {vraw} V -> {i_raw*1000:.0f} mA -> "
+              f"ISO_5V ceiling ~{i_raw*1000 - 7:.0f} mA -> "
+              f"{i_raw*1000 - 7 - 235:.0f} mA for four ports")
+
+    # ---- 8. Transformer DCR headroom and PR1 cold-start level ------------
+    hdr("T1 DCR headroom (Wurth p.1: RDC1 0.35 ohm, RDC2 0.33 ohm; SN6505B RON 0.25 ohm)")
+    rdc1, rdc2, ron, n = 0.35, 0.33, 0.25, 1.3
+    for iout, vf in ((0.315, 0.40), (0.635, 0.44)):
+        ipri = n * iout
+        vpri = 5.0 - ipri * (ron + rdc1 / 2)
+        vraw = n * vpri - iout * (rdc2 / 2) - vf
+        print(f"  IOUT={iout*1000:.0f} mA (Vf={vf} V): Ipri={ipri:.3f} A, "
+              f"Vpri={vpri:.3f} V, DCDC_RAW={vraw:.2f} V "
+              f"({'above' if vraw > 5.2 else 'BELOW'} the LDO's 5 V + dropout)")
+
+    hdr("Q1 / PR1 lockout levels (TPS2121 VREF 1.06 V rising, 1.04 V falling)")
+    r_top, r_bot = 100.0, 47.0          # R10 / R11, divider off EXT_5V
+    v_pr1 = 5.0 * r_bot / (r_top + r_bot)
+    print(f"  PR1 divider R10={r_top}k / R11={r_bot}k off EXT_5V -> {v_pr1:.3f} V "
+          f"({'above' if v_pr1 > 1.06 else 'BELOW'} VREF) - fed from EXT_5V, "
+          f"so it is independent of the mux output during cold start")
+    print(f"  divider current = {5.0/((r_top+r_bot)*1e3)*1e6:.0f} uA -> Q1 must sink that "
+          f"from a 3.3 V gate drive (2N7002 VGS(th) <= 2.5 V worst case)")
+    print(f"  CP2 pull-up R9 100k with +-0.1 uA control-pin leakage -> "
+          f"{0.1e-6*100e3*1000:.0f} mV drop; n3A_DET high = ~3.29 V >> 1.06 V")
 
 
 if __name__ == "__main__":

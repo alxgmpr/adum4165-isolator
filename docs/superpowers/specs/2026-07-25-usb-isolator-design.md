@@ -87,17 +87,35 @@ boxes with no local controller, since host power is always present there.
   rectifier → ~6 V raw → MIC29302 low-dropout LDO (3 A-class, adjustable,
   set to 5.0 V; chosen over a fixed 1117-class part because the ~6 V raw
   rail leaves too little headroom for a 1.2 V-dropout regulator under
-  load) → `DCDC_5V`. Usable budget
-  ≈ 700 mA; after isolator Side 2 (~60 mA in HS) and hub (~150 mA),
-  roughly 400–500 mA remains for downstream devices.
+  load) → `DCDC_5V`. **Budget (corrected 2026-07-26, Task 11 review DR-01):**
+  the ceiling is the host port's 500 mA obligation, not the magnetics.
+  2.5 W from the host, less ~0.35 W for ADuM4165 Side 1, times ~90 %
+  converter efficiency ≈ 1.94 W; at `DCDC_RAW` ≈ 6.15 V that is ≈ 315 mA
+  through the LDO, so **`ISO_5V` tops out at ≈ 310 mA**. Isolated-side
+  self-draw is ≈ 235 mA (ADuM4165 Side 2 ~70 mA at `IDD2(H)`, hub ~155 mA
+  at `IHCH1` base + 3 × 25 mA, plus indicator LEDs), which leaves
+  **≈ 75 mA total for all four downstream ports combined** in bus-powered
+  mode. T1 itself has headroom well past this — Würth's thermal curve runs
+  to 1.2 A and the winding DCR holds `DCDC_RAW` ≥ 5.49 V at 635 mA; the
+  "100 mA" against 750313638 in TI's Table 9-3 is an application-column
+  characterization point, not a rating.
 - **External path:** J2 power-only USB-C receptacle, dedicated dual
   5.1 kΩ Rd. Two TLV7041 open-drain comparators (one per CC line, outputs
   wire-ORed, threshold 1.23 V from a divider off the 3.3 V rail) detect a
-  3 A source advertisement on whichever CC line is active. When no 3 A
-  advertisement is present, a small NMOS holds the TPS2121's PR1 priority
-  input low so the mux stays on the DC-DC — a weak brick is never
-  silently overloaded. "External active" indication comes from the
-  TPS2121 ST status pin driving an LED.
+  3 A source advertisement on whichever CC line is active. Their wire-ORed
+  open-drain output `n3A_DET` is high (via a 100 kΩ pull-up to `ISO_3V3`)
+  whenever no 3 A source is advertised, and low when one is. That single
+  net drives **both** halves of the lockout: a small NMOS inverts it onto
+  the TPS2121's PR1 priority input, **and it drives CP2 directly**. Both
+  are required — grounding CP2 and relying on PR1 alone puts the TPS2121
+  in VCOMP mode, which selects the *higher* input rather than IN2, so a
+  weak brick sitting above `DCDC_5V` would win (TPS2121 Table 9-3; VCOMP
+  is specified 0/280/600 mV). With CP2 ← `n3A_DET`: no 3 A ⇒ CP2 ≥ VREF
+  and PR1 < VREF ⇒ OUT = IN2 unconditionally; 3 A detected ⇒ CP2 < VREF
+  and PR1 ≥ VREF ⇒ OUT = IN1. A weak brick is never silently overloaded.
+  (Fixed in Task 11 as review finding DR-06; the original wiring grounded
+  CP2.) "External active" indication comes from the TPS2121 ST status pin
+  driving an LED.
 - **Priority mux:** TPS2121. IN1 = external 5 V (priority only when the
   CC detect confirms a 3 A source), IN2 = `DCDC_5V`, output = `ISO_5V`.
   Seamless switchover.
@@ -132,7 +150,10 @@ boxes with no local controller, since host power is always present there.
 - The isolator adds one-to-two hub-tier delays; with the USB2514B this
   consumes ~3 of USB's 5 tiers. Deeply cascaded hubs downstream may fail.
 - Downstream USB-C ports are USB 2.0 data, 5 V only. No PD, no SS pairs.
-- Bus-powered mode is a light-load mode (~400 mA total for devices).
+- Bus-powered mode is a light-load mode: **≈ 75 mA total for all four
+  downstream ports combined** (see the corrected budget above). That is one
+  low-power device — a debug probe, a serial adapter, a keyboard — not a
+  populated hub. Anything beyond that requires the external supply.
 - The hub declares self-powered regardless of actual power source
   (strap-only config cannot switch descriptors dynamically). In
   bus-powered mode (no external supply) this is a USB descriptor-honesty

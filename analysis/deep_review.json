@@ -227,12 +227,12 @@
     },
     {
       "detector": "deep_review",
-      "category": "power_capacity",
+      "category": "power_budget",
       "severity": "warning",
       "confidence": "high",
-      "summary": "Bus-powered budget: TI rates the SN6505B + Wurth 750313638 (5 V -> 5 V) pairing at 100 mA, but the isolated side's own idle draw is ~235 mA",
-      "description": "ISO_5V must supply the ADuM4165 Side 2 (IDD2(H) 59 mA typ / 70 mA max) plus U8, which feeds the USB2514B on ISO_3V3 (IHCH1 base 70 mA typ / 80 mA max plus 25 mA per additional active downstream port = up to 155 mA), plus ~3 mA of indicator LEDs. That is roughly 235 mA before any downstream device draws current. TI's recommended-transformer table (Table 9-3) characterises this exact SN6505B + 750313638 5 V -> 5 V combination at 100 mA with an LDO. Wurth's own datasheet typical-application table cites IOut1 = 0.65 A for the same transformer, so the two vendors disagree by 6.5x. The spec's 'usable budget ~700 mA' is supported by neither, and is in any case above the 500 mA a USB 2.0 bus-powered port may draw (~400 mA on ISO_5V at 80% end-to-end efficiency).",
-      "recommendation": "Resolve before committing to fab: bench-measure DCDC_5V under the real isolated-side load, or move to a higher-current pairing from Table 9-3 (e.g. Wurth 750315371, 1:1.1, 5 V -> 5 V, 1 A, SN6505B - different footprint). Correct the '~700 mA usable' figure in docs/superpowers/specs/2026-07-25-usb-isolator-design.md either way. Not a wiring defect: the schematic matches TI's recommended topology.",
+      "summary": "Bus-powered ceiling is the host's 500 mA budget, not the magnetics: ISO_5V tops out at ~310 mA against ~235 mA of isolated-side self-draw, leaving ~75 mA for all four downstream ports",
+      "description": "Host budget 500 mA x 5 V = 2.50 W; less U1 Side 1 (IDD1(H) 70 mA = 0.35 W) leaves 2.15 W into the converter; at ~90% end-to-end efficiency that is 1.94 W, which at DCDC_RAW ~6.15 V is ~315 mA through the LDO pass element, so ISO_5V tops out at ~310 mA after MIC29302 ground current. Isolated-side self-draw is ~235 mA (ADuM4165 Side 2 IDD2(H) 59 mA typ / 70 mA max, plus U8 feeding the USB2514B at IHCH1 base 70/80 mA + 25 mA per additional active downstream port = up to 155 mA, plus ~3 mA of LEDs). That leaves ~75 mA for all four downstream ports combined. A DCR-based estimate puts DCDC_RAW between 5.8 V and 6.2 V depending on the SS34 forward drop, moving the ceiling to ~310-325 mA - it does not move the conclusion.\n\nThe magnetics are NOT the constraint, and the '100 mA' against 750313638 in TI Table 9-3 is not a rating: (1) it sits in the table's application column beside a turns ratio and a size; (2) TI's curves for the electrically identical entry - Figures 6-21/6-22, captioned 'SN6505B + Wurth 760390014, VCC = 5 V', a 1:1.3 5 V -> 5 V '100 mA' row - sweep the load-current axis to 200 mA, while 750313638's own rows carry no figure reference at all; (3) the same part number appears twice in Table 9-3 with two different 'ratings' (1:1.3 for 5 V -> 5 V and 1.3:1 for 5 V -> 3.3 V, both '100 mA'), so the column cannot be a device rating; (4) the LDO column is a headroom fact TI corrected after publication ('Changed LDO from No to Yes for transformer ORDER NO. 750313638'), and this design already has the LDO. Wurth's own thermal curve runs the push-pull output current axis to 1.2 A (~40 K rise at 0.65 A, the same 0.65 A its agency-rated typical-application tables cite as IOut1), and with RDC1 = 0.35 ohm, RDC2 = 0.33 ohm and the SN6505B's 0.25 ohm RON the raw rail still sits at >= 5.49 V at 635 mA.",
+      "recommendation": "Documentation fix, not a hardware one: the spec's '~700 mA usable / 400-500 mA remains' has been corrected in docs/superpowers/specs/2026-07-25-usb-isolator-design.md to the ~310 mA ceiling and ~75 mA downstream figure, and the Known-limitations bullet now reads 'one low-power device'. Do NOT change T1. Bring-up step 4 characterizes the margin (measure ISO_5V current, DCDC_RAW and the host-port draw) rather than deciding a transformer.",
       "evidence": {
         "components": [
           "U5",
@@ -255,6 +255,16 @@
             "quote": "750313638"
           },
           {
+            "mpn": "SN6505BDBVR",
+            "page": 10,
+            "quote": "SN6505B + Wurth 760390014"
+          },
+          {
+            "mpn": "SN6505BDBVR",
+            "page": 2,
+            "quote": "Changed LDO from"
+          },
+          {
             "mpn": "ADUM4165BRIZ",
             "page": 3,
             "quote": "IDD2(H)"
@@ -266,14 +276,19 @@
           },
           {
             "mpn": "750313638",
-            "page": 2,
-            "quote": "Output Current 1"
+            "page": 3,
+            "quote": "Push-Pull Output Current"
+          },
+          {
+            "mpn": "750313638",
+            "page": 1,
+            "quote": "DC Resistance 1"
           }
         ],
         "computation": {
           "description": "isolated-side supply headroom, section 7",
           "script": "analysis/helpers/verify_limits.py",
-          "result": "TI Table 9-3 = 100 mA; Wurth typical application = 0.65 A; USB bus ceiling ~400 mA on ISO_5V"
+          "result": "2.50 W host - 0.35 W U1 Side 1 = 2.15 W; x0.90 = 1.94 W; /6.15 V = 315 mA; ISO_5V ceiling ~310 mA - 235 mA self-draw = ~75 mA for four ports"
         }
       },
       "evidence_checked": "full",
@@ -291,7 +306,7 @@
         "ISO_5V",
         "ISO_3V3"
       ],
-      "finding_id": "deep_review:10af1a964ef6"
+      "finding_id": "deep_review:502aae9a6117"
     },
     {
       "detector": "deep_review",
@@ -299,15 +314,18 @@
       "severity": "info",
       "confidence": "high",
       "summary": "U7 CP2 rewired from GND2 to n3A_DET during this review - PR1-low alone did not guarantee the weak-source lockout",
-      "description": "As drawn before this review, CP2 was hard-grounded and the only lockout control was PR1 pulled low by Q1. Table 9-3 of the TPS2121 datasheet shows CP2 < VREF and PR1 < VREF selects VCOMP mode, which picks the HIGHER of the two inputs, not IN2. VCOMP is specified 0 / 280 / 600 mV (VIN2 referenced to VIN1), so at the datasheet minimum a 5.0-5.25 V weak brick on IN1 would beat DCDC_5V at 4.85-4.97 V and be selected - exactly the case the lockout exists to prevent. n3A_DET is already high (3.3 V through R9) whenever no 3 A advertisement is present and low when U13/U14 detect one, so wiring CP2 directly to it needs no new parts and gives CP2 >= VREF, PR1 < VREF -> OUT = IN2 unconditionally, and CP2 < VREF, PR1 >= VREF -> OUT = IN1. Control-pin leakage is +-0.1 uA max, a 10 mV drop across the 100 kohm pull-up R9.",
-      "recommendation": "Verify at bring-up: with a Default-USB (non-3 A) source on J2, confirm ISO_5V tracks DCDC_5V and the ST LED stays off; with a 3 A source, confirm switchover to EXT_5V and the ST LED on.",
+      "description": "As drawn before this review, CP2 was hard-grounded and the only lockout control was PR1 pulled low by Q1. Table 9-3 of the TPS2121 datasheet shows CP2 < VREF and PR1 < VREF selects VCOMP mode, which picks the HIGHER of the two inputs, not IN2. VCOMP is specified 0 / 280 / 600 mV (VIN2 referenced to VIN1), so at the datasheet minimum a 5.0-5.25 V weak brick on IN1 would beat DCDC_5V at 4.85-4.97 V and be selected - exactly the case the lockout exists to prevent. n3A_DET is already high (3.3 V through R9) whenever no 3 A advertisement is present and low when U13/U14 detect one, so wiring CP2 directly to it needs no new parts and gives CP2 >= VREF, PR1 < VREF -> OUT = IN2 unconditionally, and CP2 < VREF, PR1 >= VREF -> OUT = IN1. Control-pin leakage is +-0.1 uA max, a 10 mV drop across the 100 kohm pull-up R9.\n\nCold-start quadrant (external present, host absent), verified: ISO_3V3 is dead, so R9 is a pull-up to 0 V - a deterministic pulldown on n3A_DET, not a float - and CP2 is unambiguously below VREF. PR1 is unaffected because its R10/R11 divider is fed from EXT_5V, not from the mux output: 5 V x 47k/147k = 1.599 V, above the 1.06 V threshold. Table 9-3 resolves this two ways that agree - row 3 (CP2 < VREF, PR1 >= VREF -> IN1) and row 7 (IN2 <= UV, Invalid Input -> IN1). Once ISO_5V energises U8 and ISO_3V3 rises, row 7 keeps OUT on IN1 until the DC-DC is actually alive. Stable in both directions, no start-up race.\n\nNEW conditional risk surfaced while completing this analysis: CP2's pull-up rail sits DOWNSTREAM of the mux (OUT -> U8 -> ISO_3V3 -> R9 -> CP2), so CP2's logic level depends on the rail the mux is producing. In the combination weak brick present + host present + DC-DC unable to hold its load, that closes a loop: DC-DC sags -> IN2 falls toward the 2.55 V UV falling threshold -> handover to IN1 -> the brick carries the whole board -> if it sags, IN2 recovers unloaded and the mux hands back. The only damping is the TPS2121's own IN2 UVLO hysteresis (2.65 V rising / 2.55 V falling); nothing in the CP2 path adds any. The result is a slow relaxation oscillation (hunting between sources), not a hard failure, and it cannot occur while the DC-DC is within budget or with no external supply attached.\n\nQ1 is on the lockout critical path: the lockout depends on Q1 pulling PR1_SENSE below 1.04 V while sinking the ~34 uA the R10/R11 divider delivers, from a 3.3 V gate drive. Margin is large for any 2N7002 (VGS(th) <= 2.5 V worst case), but the specified MPN's parametrics are NOT verified locally - datasheets/2N7002.pdf is JCET's part while the BOM specifies onsemi 2N7002LT1G. SOT-23 pinout checked and matching; VGS(th) and RDS(on) not.",
+      "recommendation": "Verify at bring-up: (a) with a Default-USB (non-3 A) source on J2, confirm ISO_5V tracks DCDC_5V and the ST LED stays off; (b) with a 3 A source, confirm switchover to EXT_5V and the ST LED on; (c) cold start on external only - PR1_SENSE ~1.60 V, n3A_DET near 0 V, D4 on, no chatter, then hot-plug the host and confirm a monotonic transition; (d) watch ISO_5V and n3A_DET on a slow sweep for >=30 s with weak brick + host connected to rule out hunting. Mitigation ONLY if the DC-DC proves marginal: re-derive CP2's pull-up from EXT_5V through a divider (upstream of the mux, which opens the loop). Do not implement pre-emptively - it costs two parts and the present wiring is correct in every non-marginal case.",
       "evidence": {
         "components": [
-          "U7",
+          "Q1",
+          "R10",
+          "R11",
+          "R9",
           "U13",
           "U14",
-          "Q1",
-          "R9"
+          "U7",
+          "U8"
         ],
         "nets": [
           "n3A_DET",
@@ -330,16 +348,29 @@
             "mpn": "TPS2121RUXR",
             "page": 7,
             "quote": "Input Voltage Comparator"
+          },
+          {
+            "mpn": "TPS2121RUXR",
+            "page": 7,
+            "quote": "Undervoltage Lockout"
           }
-        ]
+        ],
+        "computation": {
+          "description": "PR1 divider level from EXT_5V during cold start",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "5 V x 47k/147k = 1.599 V > 1.06 V VREF rising; R9 leakage drop 0.1 uA x 100k = 10 mV"
+        }
       },
       "evidence_checked": "full",
       "components": [
-        "U7",
+        "Q1",
+        "R10",
+        "R11",
+        "R9",
         "U13",
         "U14",
-        "Q1",
-        "R9"
+        "U7",
+        "U8"
       ],
       "nets": [
         "n3A_DET",
@@ -352,7 +383,7 @@
         "U7.3",
         "U7.6"
       ],
-      "finding_id": "deep_review:ad29f44524d9"
+      "finding_id": "deep_review:bc6b045112d3"
     },
     {
       "detector": "deep_review",
@@ -690,8 +721,8 @@
       "severity": "info",
       "confidence": "medium",
       "summary": "Y1 matches the ADuM4165 crystal requirement (24 MHz, <=50 ppm tolerance, CL 8 pF with 8 pF loads) - the same combination as ADI's own evaluation board",
-      "description": "The datasheet requires <=50 ppm frequency tolerance with <=100 ppm stability and calls for 'a typical crystal capacitance of 10 pF and capacitive loads <10 pF'. C1/C2 are 8 pF C0G, which satisfies the <10 pF load requirement. EVAL-ADuM4165EBZ Table 4 pairs those same 8 pF loads with a 24 MHz, +-50 ppm, 8 pF, 50 ohm 4-SMD crystal (IQD LFXTAL056140REEL), so CL = 8 pF is ADI's own validated point and is what has been specified (SCTF SX3B24.000F0810F30, 24 MHz, CL 8 pF, ESR 30 ohm, -40 to +85 C). The ADuM4165 datasheet does not publish an XI1/XO1 pin capacitance, so CL_eff cannot be computed exactly: with 8 pF loads it lands between 5 pF (2 pF stray) and 8 pF (8 pF stray), a pull error of at most +71 ppm at the low end.",
-      "recommendation": "At bring-up measure the actual 24 MHz frequency at XO1 and adjust C1/C2 if the error exceeds the USB 2.0 budget. Confirm the SCTF part's split between 25 C tolerance and over-temperature stability from the manufacturer datasheet - LCSC lists a single +-30 ppm figure. IQD LFXTAL056140REEL is the drop-in alternate with published ADI validation.",
+      "description": "The datasheet requires <=50 ppm frequency tolerance with <=100 ppm stability and calls for 'a typical crystal capacitance of 10 pF and capacitive loads <10 pF'. C1/C2 are 8 pF C0G, which satisfies the <10 pF load requirement. EVAL-ADuM4165EBZ Table 4 pairs those same 8 pF loads with a 24 MHz, +-50 ppm, 8 pF, 50 ohm 4-SMD crystal (IQD LFXTAL056140REEL), so CL = 8 pF is ADI's own validated point and is what has been specified (SCTF SX3B24.000F0810F30, 24 MHz, CL 8 pF, ESR 30 ohm, -40 to +85 C). The ADuM4165 datasheet does not publish an XI1/XO1 pin capacitance, so CL_eff cannot be computed exactly: with 8 pF loads it lands between 5 pF (2 pF stray) and 8 pF (8 pF stray), a pull error of at most +71 ppm at the low end. LCSC's full parameter set separates the two figures its summary view collapses: the SCTF part is +-10 ppm initial ('normal temperature') frequency tolerance with +-30 ppm stability, against ADI's <=50 ppm tolerance and <=100 ppm stability - so both halves of the requirement are met, and the caveat the first review pass raised is resolved.",
+      "recommendation": "At bring-up measure the actual 24 MHz frequency at XO1 and adjust C1/C2 if the error exceeds the USB 2.0 budget, staying below the datasheet's 10 pF load-cap ceiling. Tolerance/stability now confirmed (+-10 ppm / +-30 ppm) from LCSC's full parameter set; reading SCTF's own PDF before a production buy is good practice but no longer a pre-fab gap. IQD LFXTAL056140REEL remains the drop-in alternate with published ADI validation.",
       "evidence": {
         "components": [
           "Y1",
