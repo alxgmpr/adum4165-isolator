@@ -16,3 +16,10 @@
 (rule "barrier-clearance-T1"
   (condition "(A.memberOfFootprint('T1') || B.memberOfFootprint('T1')) && A.hasNetclass('HOST_SIDE') && B.hasNetclass('ISO_SIDE')")
   (constraint clearance (min 7.4mm)))
+
+# Fine-pitch escape: inside any connector courtyard, relax clearance to the
+# JLCPCB floor so tracks can escape 0.5 mm-pitch USB-C pad fields. Custom
+# rules take precedence over netclass clearances.
+(rule "connector-neckdown"
+  (condition "A.insideCourtyard('J1') || B.insideCourtyard('J1') || A.insideCourtyard('J2') || B.insideCourtyard('J2') || A.insideCourtyard('J3') || B.insideCourtyard('J3') || A.insideCourtyard('J4') || B.insideCourtyard('J4') || A.insideCourtyard('J5') || B.insideCourtyard('J5') || A.insideCourtyard('J6') || B.insideCourtyard('J6')")
+  (constraint clearance (min 0.127mm)))

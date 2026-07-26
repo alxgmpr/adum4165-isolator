@@ -128,152 +128,6 @@
 			(outputdirectory "")
 		)
 	)
-	(footprint "C_2220_5750Metric"
-		(layer "F.Cu")
-		(uuid "05685ae6-e123-4a29-b51c-7e69ca26744b")
-		(at 88.5 54 180)
-		(descr "Capacitor SMD 2220 (5750 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf)")
-		(tags "capacitor")
-		(property "Reference" "C49"
-			(at 0 -3.65 180)
-			(layer "F.SilkS")
-			(uuid "8b81ed88-bb1b-43f3-ac15-523f4254579e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "1nF 2kV DNP"
-			(at 0 3.65 180)
-			(layer "F.Fab")
-			(uuid "dae7fcb3-969d-4376-9dda-17c9ece4ce56")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 180)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3012fccf-285f-47ed-97ff-29b384576088")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 180)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d28eb82f-da1c-42c8-9afe-07593af1482e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 0 0 180)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "c819cf16-4cf9-4c87-a94f-80c3773f8181")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(attr smd exclude_from_pos_files exclude_from_bom dnp)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -1.415748 2.61)
-			(end 1.415748 2.61)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "70921ad7-c60f-4e6a-b461-0fc188cbd3c2")
-		)
-		(fp_line
-			(start -1.415748 -2.61)
-			(end 1.415748 -2.61)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "89757a83-36d0-4d1b-8acc-956b2f742f18")
-		)
-		(fp_rect
-			(start -3.7 -2.95)
-			(end 3.7 2.95)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.CrtYd")
-			(uuid "09263038-e5e0-4741-878f-53c4e54b2436")
-		)
-		(fp_rect
-			(start -2.85 -2.5)
-			(end 2.85 2.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "ec375aa0-1930-4e9e-a02f-406c272fdddb")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 0 180)
-			(layer "F.Fab")
-			(uuid "28a9a2c9-f09d-4541-94f9-580c7cb2c4ed")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "1" smd roundrect
-			(at -2.55 0 180)
-			(size 1.8 5.4)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.138889)
-			(net "GND2")
-			(uuid "4e87f33f-52b8-4206-ad62-054efeb5f1ec")
-		)
-		(pad "2" smd roundrect
-			(at 2.55 0 180)
-			(size 1.8 5.4)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.138889)
-			(net "GND1")
-			(uuid "56dc7b66-30b0-4ede-860d-92396a246269")
-		)
-		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_2220_5750Metric.step"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
 	(footprint "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "09b664e2-1b35-4deb-9ed4-21b78cc732f5")
@@ -9492,11 +9346,11 @@
 			)
 		)
 	)
-	(footprint "SOT-23-6"
+	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "59c6f378-68dc-4601-8c03-e59b66e3727a")
 		(at 157 92.5 180)
-		(descr "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6")
+		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U17"
 			(at 0 -2.4 180)
@@ -9520,7 +9374,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9531,7 +9385,7 @@
 				)
 			)
 		)
-		(property "Description" "Transient voltage suppressor designed to protect high speed data lines from ESD, EFT, and lightning"
+		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9555,44 +9409,54 @@
 			)
 		)
 		(property "MPN" "USBLC6-2SC6"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "0865a0ef-3a66-4f6e-b3e1-5a9cb0f53300")
+			(uuid "6b93e671-e664-4d1a-9604-7bd9d20251d4")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Manufacturer" "STMicroelectronics"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "24d9aef3-669d-4808-a832-f34272d06543")
+			(uuid "5e3d704f-8849-4a62-a8f2-93e34221092b")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "LCSC" "C2687116"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "6d2bd07f-9a4c-4e4a-b696-7bc34f3fc53d")
+			(uuid "c933d080-532f-41a8-be77-f20952adae80")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/600ba4f7-707d-4aba-8852-30d2a49679a5")
 		(sheetname "/")
 		(sheetfile "isolator.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "2" "6" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9816,6 +9680,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P3_D+")
+			(pinfunction "I/O1_1")
+			(pintype "passive")
 			(uuid "d4f67d12-f3f6-4a46-9f0a-0a6cd6c33faa")
 		)
 		(pad "2" smd roundrect
@@ -9824,6 +9690,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND2")
+			(pinfunction "GND_2")
+			(pintype "passive")
 			(uuid "416b2f97-e720-496e-9929-2fd6463712b1")
 		)
 		(pad "3" smd roundrect
@@ -9832,6 +9700,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P3_D-")
+			(pinfunction "I/O2_3")
+			(pintype "passive")
 			(uuid "01cbf1fb-54eb-4192-814a-e8f79d1ab8bc")
 		)
 		(pad "4" smd roundrect
@@ -9840,6 +9710,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P3_D-")
+			(pinfunction "I/O2_4")
+			(pintype "passive")
 			(uuid "5a860dcb-65c0-44a1-a9cb-7e962be3eeb6")
 		)
 		(pad "5" smd roundrect
@@ -9848,6 +9720,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P3_VBUS")
+			(pinfunction "VBUS_5")
+			(pintype "passive")
 			(uuid "257c5241-1118-4324-9cd7-84062c23bfda")
 		)
 		(pad "6" smd roundrect
@@ -9856,6 +9730,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P3_D+")
+			(pinfunction "I/O1_6")
+			(pintype "passive")
 			(uuid "cef79b9e-aa8a-4c9b-8a5d-ffa7dd4c7ccf")
 		)
 		(embedded_fonts no)
@@ -10624,16 +10500,16 @@
 			)
 		)
 	)
-	(footprint "SOT-23-6"
+	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "5fc7602e-874c-4877-aaf6-4c857e99b394")
-		(at 62.6 84.9125)
-		(descr "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6")
+		(at 62.6 85)
+		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U2"
 			(at 0 -2.4 0)
 			(layer "F.SilkS")
-			(uuid "5b6c1fb6-ee41-4c99-a8cb-40f9f432ae45")
+			(uuid "1554e236-ca89-4589-b1e2-5df5406e17a1")
 			(effects
 				(font
 					(size 1 1)
@@ -10644,7 +10520,7 @@
 		(property "Value" "USBLC6-2SC6"
 			(at 0 2.4 0)
 			(layer "F.Fab")
-			(uuid "0b94a92f-bd0f-454b-9ee1-afefd8cae326")
+			(uuid "62e927ce-56f0-44cb-92f1-87030049bc1f")
 			(effects
 				(font
 					(size 1 1)
@@ -10652,22 +10528,22 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "35d48470-d2e6-448b-b34a-b6e6548ce032")
+			(uuid "583b9c18-8715-4eb6-88f5-2a7c514732a5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" "Transient voltage suppressor designed to protect high speed data lines from ESD, EFT, and lightning"
+		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "676fbfe4-ce7b-4984-ad32-f35ed5e78023")
+			(uuid "a1144c6e-aa61-4ce3-9ec1-734f22ffc6c5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10688,43 +10564,53 @@
 		)
 		(property "MPN" "USBLC6-2SC6"
 			(at 0 0 0)
-			(layer "F.SilkS")
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "5df28e42-87e2-44b8-a14c-2561cd73121b")
+			(uuid "493c22f3-3903-4171-924a-e88d23ca2b6e")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Manufacturer" "STMicroelectronics"
 			(at 0 0 0)
-			(layer "F.SilkS")
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "9ebca462-4247-4d88-b7d5-08e005145ed7")
+			(uuid "5954eec4-6653-45ab-8c81-775eceb9b4b8")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "LCSC" "C2687116"
 			(at 0 0 0)
-			(layer "F.SilkS")
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "c58794ab-da5e-493b-b097-b655eedcc42b")
+			(uuid "b5fbbda3-db79-41e1-a019-724cc0384bea")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/651553d5-7057-4bad-b747-5f90394f2743")
 		(sheetname "/")
 		(sheetfile "isolator.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "2" "6" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10948,6 +10834,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/HOST_D+")
+			(pinfunction "I/O1_1")
+			(pintype "passive")
 			(uuid "b5773f60-a11a-4c2b-ae5b-80b628a8477d")
 		)
 		(pad "2" smd roundrect
@@ -10956,6 +10844,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND1")
+			(pinfunction "GND_2")
+			(pintype "passive")
 			(uuid "172d8dd2-0ee3-4279-bfe5-d852bc872a1c")
 		)
 		(pad "3" smd roundrect
@@ -10964,6 +10854,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/HOST_D-")
+			(pinfunction "I/O2_3")
+			(pintype "passive")
 			(uuid "021478ce-f827-4691-a3a5-2d69e673bcf3")
 		)
 		(pad "4" smd roundrect
@@ -10972,6 +10864,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/HOST_D-")
+			(pinfunction "I/O2_4")
+			(pintype "passive")
 			(uuid "20460995-1733-4b2e-aa41-de74b3f3024a")
 		)
 		(pad "5" smd roundrect
@@ -10980,6 +10874,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/VBUS_HOST")
+			(pinfunction "VBUS_5")
+			(pintype "passive")
 			(uuid "533bf355-45a4-44a7-bc21-dabfe4c91c40")
 		)
 		(pad "6" smd roundrect
@@ -10988,6 +10884,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/HOST_D+")
+			(pinfunction "I/O1_6")
+			(pintype "passive")
 			(uuid "2e1f129f-7e24-4933-9ca8-38b8d55ee55a")
 		)
 		(embedded_fonts no)
@@ -11216,11 +11114,11 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "6495891a-5979-45e1-8a7e-bab5bd7b21d2")
-		(at 82.5 81.5)
+		(at 81 72.75 45)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C2"
-			(at 0 -1.43 0)
+			(at 0 -1.43 45)
 			(layer "F.SilkS")
 			(uuid "51279f54-0826-46b2-9f98-11752ee0ad9b")
 			(effects
@@ -11231,7 +11129,7 @@
 			)
 		)
 		(property "Value" "8p"
-			(at 0 1.43 0)
+			(at 0 1.43 45)
 			(layer "F.Fab")
 			(uuid "cf8013c2-b343-48fa-a675-eda18ee83b34")
 			(effects
@@ -11242,7 +11140,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "21e7a52a-055b-4215-8846-b464ded5d585")
@@ -11253,7 +11151,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 0 0 0)
+			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "71465ea0-b297-4a87-b452-5044f1d67cc5")
@@ -11264,7 +11162,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 0 0 0)
+			(at 0 0 45)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "c39cb479-eb05-407b-acc8-493488a719b9")
@@ -11276,7 +11174,7 @@
 			)
 		)
 		(property "MPN" "CC0603CRNPO9BN8R0"
-			(at 0 0 0)
+			(at 0 0 45)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -11289,7 +11187,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 0 0 0)
+			(at 0 0 45)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -11302,7 +11200,7 @@
 			)
 		)
 		(property "LCSC" "C327316"
-			(at 0 0 0)
+			(at 0 0 45)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -11315,7 +11213,7 @@
 			)
 		)
 		(property "Tolerance" "±0.25pF"
-			(at 0 0 0)
+			(at 0 0 45)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -11340,8 +11238,8 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -0.14058 -0.51)
-			(end 0.14058 -0.51)
+			(start -0.140581 -0.51)
+			(end 0.140581 -0.51)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -11350,8 +11248,8 @@
 			(uuid "7c3abb17-e993-4879-9b3e-1cf9bd356f51")
 		)
 		(fp_line
-			(start -0.14058 0.51)
-			(end 0.14058 0.51)
+			(start -0.140581 0.51)
+			(end 0.140581 0.51)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -11359,9 +11257,10 @@
 			(layer "F.SilkS")
 			(uuid "0db15307-8d5a-4ff0-b668-b35270b76630")
 		)
-		(fp_rect
-			(start -1.48 -0.73)
-			(end 1.48 0.73)
+		(fp_poly
+			(pts
+				(xy -1.48 -0.73) (xy 1.48 -0.73) (xy 1.48 0.73) (xy -1.48 0.73)
+			)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -11370,9 +11269,10 @@
 			(layer "F.CrtYd")
 			(uuid "f3c43ea3-8b32-4188-a057-f3ae4c59f7fc")
 		)
-		(fp_rect
-			(start -0.8 -0.4)
-			(end 0.8 0.4)
+		(fp_poly
+			(pts
+				(xy -0.8 -0.4) (xy 0.8 -0.4) (xy 0.8 0.4) (xy -0.8 0.4)
+			)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -11382,7 +11282,7 @@
 			(uuid "b8369bb0-ae1b-4e29-ab1b-4d57ddf309ba")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 45)
 			(layer "F.Fab")
 			(uuid "54975f91-baaa-4565-b9e3-47f49c21a8e9")
 			(effects
@@ -11393,7 +11293,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.775 0)
+			(at -0.775 0 45)
 			(size 0.9 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -11402,7 +11302,7 @@
 			(uuid "a33807f8-898c-49b3-b89e-9d91faaeda54")
 		)
 		(pad "2" smd roundrect
-			(at 0.775 0)
+			(at 0.775 0 45)
 			(size 0.9 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -12263,11 +12163,11 @@
 			)
 		)
 	)
-	(footprint "SOT-23-6"
+	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "73731be0-fa53-4bba-8a9a-e31d39948ee8")
 		(at 152.5 82 180)
-		(descr "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6")
+		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U16"
 			(at 0 -2.4 180)
@@ -12291,7 +12191,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12302,7 +12202,7 @@
 				)
 			)
 		)
-		(property "Description" "Transient voltage suppressor designed to protect high speed data lines from ESD, EFT, and lightning"
+		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12326,44 +12226,54 @@
 			)
 		)
 		(property "MPN" "USBLC6-2SC6"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "55be5b5d-90ae-46bb-a330-bbf8ac9c97c5")
+			(uuid "45ac2fcc-2519-4d27-906d-20231968a156")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Manufacturer" "STMicroelectronics"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "901eb87e-77a0-4a44-9b3d-763dac822732")
+			(uuid "ed0dded2-32ea-470b-837d-2f453bf16a2b")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "LCSC" "C2687116"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "4238ce57-a573-4b8e-9c47-ac7005053a5b")
+			(uuid "2a5a37fe-d37b-4553-80a3-ac5dbdff64fc")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/e153f668-f24a-4ced-817a-26121e34ee95")
 		(sheetname "/")
 		(sheetfile "isolator.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "2" "6" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12587,6 +12497,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P2_D+")
+			(pinfunction "I/O1_1")
+			(pintype "passive")
 			(uuid "88336be3-2e7a-463c-8442-6b575c28b09d")
 		)
 		(pad "2" smd roundrect
@@ -12595,6 +12507,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND2")
+			(pinfunction "GND_2")
+			(pintype "passive")
 			(uuid "0a83bfc6-4062-42d2-92da-2553ac34c265")
 		)
 		(pad "3" smd roundrect
@@ -12603,6 +12517,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P2_D-")
+			(pinfunction "I/O2_3")
+			(pintype "passive")
 			(uuid "0cf0e209-efb0-474e-8dc4-246abfb1f017")
 		)
 		(pad "4" smd roundrect
@@ -12611,6 +12527,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P2_D-")
+			(pinfunction "I/O2_4")
+			(pintype "passive")
 			(uuid "d6f39dd1-6604-4d20-b808-237f53454a46")
 		)
 		(pad "5" smd roundrect
@@ -12619,6 +12537,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P2_VBUS")
+			(pinfunction "VBUS_5")
+			(pintype "passive")
 			(uuid "54b38380-4abe-4e8d-a45d-8bec92c339a6")
 		)
 		(pad "6" smd roundrect
@@ -12627,6 +12547,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P2_D+")
+			(pinfunction "I/O1_6")
+			(pintype "passive")
 			(uuid "8dc4c3d7-e83e-4c46-bc02-efc4688d2042")
 		)
 		(embedded_fonts no)
@@ -14361,6 +14283,164 @@
 			)
 		)
 	)
+	(footprint "Capacitor_SMD:C_2220_5750Metric"
+		(layer "F.Cu")
+		(uuid "80ff03e3-a9d9-43b8-9558-2e4b8d8f5d2d")
+		(at 88.5 54 180)
+		(descr "Capacitor SMD 2220 (5750 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf)")
+		(tags "capacitor")
+		(property "Reference" "C49"
+			(at 0 -3.65 180)
+			(layer "F.SilkS")
+			(uuid "0916bcdd-11db-4b9e-9e90-0989fba531d6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "1nF 2kV DNP"
+			(at 0 3.65 180)
+			(layer "F.Fab")
+			(uuid "065f2066-3063-45f8-b664-1bf9d75a6b56")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7dee9968-91f7-4d7a-bf74-7a246537bcc6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Y-class-style barrier stitching capacitor, GND1-GND2, DNP (EMI provision only)"
+			(at 0 0 180)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "da40b217-df33-496f-825b-a5c298787714")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 180)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "123dd8ed-6245-434d-8a75-6735bd554862")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "C_*")
+		(path "/102ee308-f4f6-42eb-8562-532cb18891e7")
+		(sheetname "/")
+		(sheetfile "isolator.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd exclude_from_bom dnp)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -1.415748 2.61)
+			(end 1.415748 2.61)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "f2329feb-78de-4e9d-9970-bceb025bd7ba")
+		)
+		(fp_line
+			(start -1.415748 -2.61)
+			(end 1.415748 -2.61)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ecd083b3-1d09-4cae-b785-b2b48e0a0b3f")
+		)
+		(fp_rect
+			(start -3.7 -2.95)
+			(end 3.7 2.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "eeef8e68-28de-4ae0-a99f-a05305c653a5")
+		)
+		(fp_rect
+			(start -2.85 -2.5)
+			(end 2.85 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "59ab8e45-2f14-424e-8c66-330eb5784d23")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 180)
+			(layer "F.Fab")
+			(uuid "49937693-6665-46e0-a9d1-82de34d3a193")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -2.55 0 180)
+			(size 1.8 5.4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.138889)
+			(net "GND2")
+			(pintype "passive")
+			(uuid "3bdba1b0-5342-4673-bc51-6cd39844191f")
+		)
+		(pad "2" smd roundrect
+			(at 2.55 0 180)
+			(size 1.8 5.4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.138889)
+			(net "GND1")
+			(pintype "passive")
+			(uuid "f88df806-2011-4679-8e66-5d8e85f5925e")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_2220_5750Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "82698e9b-6ac7-40da-b122-e22ab0e3796c")
@@ -15641,14 +15721,14 @@
 			)
 		)
 	)
-	(footprint "SOT-23-6"
+	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "8749db61-8d5b-4a73-9c3d-071c4554065a")
 		(at 158.8 103.5 180)
-		(descr "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6")
+		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U18"
-			(at 0 2.4 180)
+			(at 0 -2.4 180)
 			(layer "F.SilkS")
 			(uuid "901372cc-007e-433a-92e5-1958d92ecfcf")
 			(effects
@@ -15669,7 +15749,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -15680,7 +15760,7 @@
 				)
 			)
 		)
-		(property "Description" "Transient voltage suppressor designed to protect high speed data lines from ESD, EFT, and lightning"
+		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -15704,44 +15784,54 @@
 			)
 		)
 		(property "MPN" "USBLC6-2SC6"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "2a2d24d5-08e0-4162-9261-c8ce782aa55f")
+			(uuid "0644df35-e8e4-4b05-8e7b-bc83bd8eb121")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Manufacturer" "STMicroelectronics"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "b77604f7-c49c-4205-9a98-6e9262f1d155")
+			(uuid "53e55aa2-fe51-4ce5-8429-90f5d31c385b")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "LCSC" "C2687116"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "b5ba9efd-bd7d-4d7f-9cef-e30ca032fc15")
+			(uuid "1d3dd4ec-1d6b-4aae-8c69-23baab734c68")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/6543eaca-8684-4aba-80ce-0ff69d466422")
 		(sheetname "/")
 		(sheetfile "isolator.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "2" "6" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15965,6 +16055,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P4_D+")
+			(pinfunction "I/O1_1")
+			(pintype "passive")
 			(uuid "5491dd6a-1aa3-4d69-b77c-ef3f8fb7b125")
 		)
 		(pad "2" smd roundrect
@@ -15973,6 +16065,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND2")
+			(pinfunction "GND_2")
+			(pintype "passive")
 			(uuid "fb06564f-7163-4d59-b4be-31576acb405c")
 		)
 		(pad "3" smd roundrect
@@ -15981,6 +16075,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P4_D-")
+			(pinfunction "I/O2_3")
+			(pintype "passive")
 			(uuid "55c81a33-0f9c-4038-bef1-da70616a914c")
 		)
 		(pad "4" smd roundrect
@@ -15989,6 +16085,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P4_D-")
+			(pinfunction "I/O2_4")
+			(pintype "passive")
 			(uuid "7ba34ec8-f4f7-49f6-9e04-2c94acf5e2cd")
 		)
 		(pad "5" smd roundrect
@@ -15997,6 +16095,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P4_VBUS")
+			(pinfunction "VBUS_5")
+			(pintype "passive")
 			(uuid "f5604064-bd06-4e0e-9608-66d2fcb346bd")
 		)
 		(pad "6" smd roundrect
@@ -16005,6 +16105,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P4_D+")
+			(pinfunction "I/O1_6")
+			(pintype "passive")
 			(uuid "7dd9538d-5ea2-435f-94ac-b5d6ff0bb087")
 		)
 		(embedded_fonts no)
@@ -17903,10 +18005,10 @@
 	(footprint "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
 		(layer "F.Cu")
 		(uuid "99f5934e-22cd-4050-988d-d0d61a95cf28")
-		(at 79 78.5)
+		(at 79 71 -135)
 		(descr "SMD3225/4, Crystal, 3.2x2.5mm package, SMD, http://www.txccrystal.com/images/pdf/7m-accuracy.pdf")
 		(property "Reference" "Y1"
-			(at 0 -2.45 0)
+			(at 0 -2.450001 225)
 			(layer "F.SilkS")
 			(uuid "098dcb8d-9943-4b4b-bbb3-03490d06b473")
 			(effects
@@ -17917,7 +18019,7 @@
 			)
 		)
 		(property "Value" "24M 8pF"
-			(at 0 2.45 0)
+			(at 0 2.450001 0)
 			(layer "F.Fab")
 			(uuid "356086f6-0d9b-44f9-b75d-26463514e559")
 			(effects
@@ -17928,7 +18030,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 225)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c2841236-89dc-4a55-b764-b81b2211c3b8")
@@ -17939,7 +18041,7 @@
 			)
 		)
 		(property "Description" "Four pin crystal, GND on pins 2 and 4, small symbol"
-			(at 0 0 0)
+			(at 0 0 225)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5b7aee10-f196-400a-8ae1-4ab04dc634d8")
@@ -17950,7 +18052,7 @@
 			)
 		)
 		(property "KiLib_Generator" "crystal_resonator_oscillator"
-			(at 0 0 0)
+			(at 0 0 225)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "2fe87d35-3f71-468e-9f22-91e4605e4d4c")
@@ -17962,7 +18064,7 @@
 			)
 		)
 		(property "MPN" "SX3B24.000F0810F30"
-			(at 0 0 0)
+			(at 0 0 225)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -17975,7 +18077,7 @@
 			)
 		)
 		(property "Manufacturer" "SCTF"
-			(at 0 0 0)
+			(at 0 0 225)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -17988,7 +18090,7 @@
 			)
 		)
 		(property "LCSC" "C2901675"
-			(at 0 0 0)
+			(at 0 0 225)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -18001,7 +18103,7 @@
 			)
 		)
 		(property "Tolerance" "±30ppm"
-			(at 0 0 0)
+			(at 0 0 225)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -18026,18 +18128,8 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -2.06 -1.71)
-			(end -2.06 1.71)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "3c9c9f5d-9791-49c6-a00a-9495de26ae7e")
-		)
-		(fp_line
-			(start -2.06 1.71)
-			(end 2.06 1.71)
+			(start -2.06 1.710001)
+			(end 2.06 1.710001)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -18045,9 +18137,20 @@
 			(layer "F.SilkS")
 			(uuid "76df3eda-8ef5-4975-a22e-2a412194e9f9")
 		)
-		(fp_rect
-			(start -2.1 -1.75)
-			(end 2.1 1.75)
+		(fp_line
+			(start -2.06 -1.710001)
+			(end -2.06 1.710001)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3c9c9f5d-9791-49c6-a00a-9495de26ae7e")
+		)
+		(fp_poly
+			(pts
+				(xy -2.1 -1.75) (xy 2.1 -1.75) (xy 2.1 1.75) (xy -2.1 1.75)
+			)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -18058,7 +18161,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 1.6 -1.25) (xy 1.6 1.25) (xy -0.975 1.25) (xy -1.6 0.625) (xy -1.6 -1.25)
+				(xy 1.6 -1.25) (xy 1.6 1.25) (xy -0.975001 1.25) (xy -1.6 0.625) (xy -1.6 -1.25)
 			)
 			(stroke
 				(width 0.1)
@@ -18080,7 +18183,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.1 0.85)
+			(at -1.1 0.85 225)
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
@@ -18090,7 +18193,7 @@
 			(uuid "fa4390cf-cbbd-45a1-b5a1-3cc1e01513be")
 		)
 		(pad "2" smd roundrect
-			(at 1.1 0.85)
+			(at 1.1 0.85 225)
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
@@ -18100,7 +18203,7 @@
 			(uuid "9f58a9ea-0c41-4117-929f-4aefe609636f")
 		)
 		(pad "3" smd roundrect
-			(at 1.1 -0.85)
+			(at 1.1 -0.85 225)
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
@@ -18110,7 +18213,7 @@
 			(uuid "f7cd46cb-b656-4b8e-adbb-d0ee6097c61e")
 		)
 		(pad "4" smd roundrect
-			(at -1.1 -0.85)
+			(at -1.1 -0.85 225)
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
@@ -19225,11 +19328,11 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "a5e18997-7df0-4350-a9e2-16a6a5618e58")
-		(at 75.5 81.5)
+		(at 81.25 68.75 -45)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C1"
-			(at 0 -1.43 0)
+			(at 0 -1.43 315)
 			(layer "F.SilkS")
 			(uuid "2918ce8f-5e19-45d8-83f4-b3b6bf075674")
 			(effects
@@ -19251,7 +19354,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 315)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d2bcea1d-dd1e-4960-8f03-e132f5dd7586")
@@ -19262,7 +19365,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 0 0 0)
+			(at 0 0 315)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "17d69302-9727-4fb1-9d1d-c2a40fd9fe99")
@@ -19273,7 +19376,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 0 0 0)
+			(at 0 0 315)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "ac3206f8-6343-420a-8d9a-f2fb9343a159")
@@ -19285,7 +19388,7 @@
 			)
 		)
 		(property "MPN" "CC0603CRNPO9BN8R0"
-			(at 0 0 0)
+			(at 0 0 315)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19298,7 +19401,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 0 0 0)
+			(at 0 0 315)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19311,7 +19414,7 @@
 			)
 		)
 		(property "LCSC" "C327316"
-			(at 0 0 0)
+			(at 0 0 315)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19324,7 +19427,7 @@
 			)
 		)
 		(property "Tolerance" "±0.25pF"
-			(at 0 0 0)
+			(at 0 0 315)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19349,18 +19452,8 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -0.14058 -0.51)
-			(end 0.14058 -0.51)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "f47ef28e-45c2-4ca1-bb3d-5d9adab3404c")
-		)
-		(fp_line
-			(start -0.14058 0.51)
-			(end 0.14058 0.51)
+			(start -0.140581 0.51)
+			(end 0.140581 0.51)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -19368,9 +19461,20 @@
 			(layer "F.SilkS")
 			(uuid "c1e216d8-bd43-4a57-a8ba-a8f6022e8e3d")
 		)
-		(fp_rect
-			(start -1.48 -0.73)
-			(end 1.48 0.73)
+		(fp_line
+			(start -0.140581 -0.51)
+			(end 0.140581 -0.51)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "f47ef28e-45c2-4ca1-bb3d-5d9adab3404c")
+		)
+		(fp_poly
+			(pts
+				(xy -1.48 -0.73) (xy 1.48 -0.73) (xy 1.48 0.73) (xy -1.48 0.73)
+			)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -19379,9 +19483,10 @@
 			(layer "F.CrtYd")
 			(uuid "293fabcc-de28-4dad-9a5f-218346fc18c6")
 		)
-		(fp_rect
-			(start -0.8 -0.4)
-			(end 0.8 0.4)
+		(fp_poly
+			(pts
+				(xy -0.8 -0.4) (xy 0.8 -0.4) (xy 0.8 0.4) (xy -0.8 0.4)
+			)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -19391,7 +19496,7 @@
 			(uuid "3108bb1e-3406-4388-aeae-8d47a5ebd17f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 315)
 			(layer "F.Fab")
 			(uuid "d19a50d4-9aa2-4518-b769-cc2faf22aba4")
 			(effects
@@ -19402,7 +19507,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.775 0)
+			(at -0.775 0 315)
 			(size 0.9 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -19411,7 +19516,7 @@
 			(uuid "668a8ddd-6ff8-4692-8465-74fdbaaf598a")
 		)
 		(pad "2" smd roundrect
-			(at 0.775 0)
+			(at 0.775 0 315)
 			(size 0.9 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -25947,11 +26052,11 @@
 			)
 		)
 	)
-	(footprint "SOT-23-6"
+	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "d6387c56-aaa0-4f62-97a3-f1d07266d7d1")
 		(at 99 73)
-		(descr "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6")
+		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U3"
 			(at 0 -2.4 0)
@@ -25975,7 +26080,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25986,7 +26091,7 @@
 				)
 			)
 		)
-		(property "Description" "Transient voltage suppressor designed to protect high speed data lines from ESD, EFT, and lightning"
+		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26011,43 +26116,53 @@
 		)
 		(property "MPN" "USBLC6-2SC6"
 			(at 0 0 0)
-			(layer "F.SilkS")
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "0dad96d2-42b7-41e7-9d8a-83e556bb66f7")
+			(uuid "1be56b0d-10b0-4b57-9a76-c79f7e20cd16")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Manufacturer" "STMicroelectronics"
 			(at 0 0 0)
-			(layer "F.SilkS")
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "fb88fd87-6f85-4ecd-80c9-953574c2519c")
+			(uuid "9227efa4-82aa-4009-9a5d-4cfc6b23f8bf")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "LCSC" "C2687116"
 			(at 0 0 0)
-			(layer "F.SilkS")
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "ef67332b-d45a-4d75-8090-ccf29813d468")
+			(uuid "267ae79d-74b9-4dd2-a4f4-d492f49e844f")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/7a9b0bc7-9184-4d1e-a375-f4371430ec68")
 		(sheetname "/")
 		(sheetfile "isolator.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "2" "6" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26271,6 +26386,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/ISO_D+")
+			(pinfunction "I/O1_1")
+			(pintype "passive")
 			(uuid "77f9c545-ef14-4e1d-bb4a-10051ef13907")
 		)
 		(pad "2" smd roundrect
@@ -26279,6 +26396,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND2")
+			(pinfunction "GND_2")
+			(pintype "passive")
 			(uuid "3bf32114-5143-48b2-8ce2-c3d157d4af0a")
 		)
 		(pad "3" smd roundrect
@@ -26287,6 +26406,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/ISO_D-")
+			(pinfunction "I/O2_3")
+			(pintype "passive")
 			(uuid "85aaea60-0edd-4019-9a3d-ede8c9ac0ace")
 		)
 		(pad "4" smd roundrect
@@ -26295,6 +26416,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/ISO_D-")
+			(pinfunction "I/O2_4")
+			(pintype "passive")
 			(uuid "f85c7a0c-c061-43b5-9e42-7b3a58a88c2d")
 		)
 		(pad "5" smd roundrect
@@ -26303,6 +26426,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/ISO_5V")
+			(pinfunction "VBUS_5")
+			(pintype "passive")
 			(uuid "b1f44b39-166f-4df8-8c91-e0c9ce2ef980")
 		)
 		(pad "6" smd roundrect
@@ -26311,6 +26436,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/ISO_D+")
+			(pinfunction "I/O1_6")
+			(pintype "passive")
 			(uuid "c3f28efb-37d7-4170-991d-b42bb1efe6eb")
 		)
 		(embedded_fonts no)
@@ -26536,11 +26663,11 @@
 			)
 		)
 	)
-	(footprint "SOT-23-6"
+	(footprint "Package_TO_SOT_SMD:SOT-23-6"
 		(layer "F.Cu")
 		(uuid "df02a353-2205-40e9-a3e0-38affd522c05")
 		(at 152.5 62 180)
-		(descr "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6")
+		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U15"
 			(at 0 -2.4 180)
@@ -26564,7 +26691,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -26575,7 +26702,7 @@
 				)
 			)
 		)
-		(property "Description" "Transient voltage suppressor designed to protect high speed data lines from ESD, EFT, and lightning"
+		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -26599,44 +26726,54 @@
 			)
 		)
 		(property "MPN" "USBLC6-2SC6"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "a3a64eb1-5078-4016-a292-c194ff7ba7bb")
+			(uuid "be5a05aa-5e5b-4320-9ed1-6ec866eb3848")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "Manufacturer" "STMicroelectronics"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "52d84e65-d23a-47db-9b24-acb0bb6cc7ae")
+			(uuid "80ea01d5-5fa7-4418-b202-b32ce5f9762e")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
 		(property "LCSC" "C2687116"
-			(at 0 0 0)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "0ade724e-1f7f-4ced-ae72-3d5d1b258097")
+			(uuid "9f962873-e491-4f9e-ab12-1eaf3992638d")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/738a2187-bc02-4f78-94e3-1982b620daa7")
 		(sheetname "/")
 		(sheetfile "isolator.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "2" "6" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26860,6 +26997,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P1_D+")
+			(pinfunction "I/O1_1")
+			(pintype "passive")
 			(uuid "59811139-28e6-446b-a8c2-ba750d7d02d5")
 		)
 		(pad "2" smd roundrect
@@ -26868,6 +27007,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND2")
+			(pinfunction "GND_2")
+			(pintype "passive")
 			(uuid "973f913d-321e-4c6e-b9cd-37a9a835b22d")
 		)
 		(pad "3" smd roundrect
@@ -26876,6 +27017,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P1_D-")
+			(pinfunction "I/O2_3")
+			(pintype "passive")
 			(uuid "8af0e0ba-2752-45ea-8e41-a26e919904aa")
 		)
 		(pad "4" smd roundrect
@@ -26884,6 +27027,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P1_D-")
+			(pinfunction "I/O2_4")
+			(pintype "passive")
 			(uuid "b969f61f-34cf-4df9-a4b3-a1d468f97ac0")
 		)
 		(pad "5" smd roundrect
@@ -26892,6 +27037,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P1_VBUS")
+			(pinfunction "VBUS_5")
+			(pintype "passive")
 			(uuid "3116a679-6ed6-431e-8d07-eb6dafc8959a")
 		)
 		(pad "6" smd roundrect
@@ -26900,6 +27047,8 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net "/P1_D+")
+			(pinfunction "I/O1_6")
+			(pintype "passive")
 			(uuid "ed21810e-091e-45ab-90c0-544b8a065215")
 		)
 		(embedded_fonts no)
@@ -32765,77 +32914,205 @@
 			)
 		)
 	)
-	(gr_text "Mounting holes are optional\nKeepout areas are for for guide rails"
-		(at 55.5 148 0)
-		(layer "Cmts.User")
-		(uuid "ae6202f0-8b22-41ab-bc35-718eddd92c05")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left)
-		)
+	(segment
+		(start 65.512751 84.744)
+		(end 73.031 84.744)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "32c7f0a5-1bf0-4fe9-8565-31bf00a97d7f")
 	)
-	(zone
-		(layers "F.Cu" "B.Cu")
-		(uuid "b762a88c-55f2-48e9-8e30-f803555c9eb3")
-		(hatch full 0.508)
-		(connect_pads
-			(clearance 0)
-		)
-		(min_thickness 0.254)
-		(keepout
-			(tracks not_allowed)
-			(vias not_allowed)
-			(pads not_allowed)
-			(copperpour allowed)
-			(footprints not_allowed)
-		)
-		(placement
-			(enabled no)
-			(sheetname "")
-		)
-		(fill
-			(thermal_gap 0.508)
-			(thermal_bridge_width 0.508)
-			(island_removal_mode 0)
-		)
-		(polygon
-			(pts
-				(xy 215 145) (xy 55 145) (xy 55 142.5) (xy 215 142.5)
-			)
-		)
+	(segment
+		(start 64.731251 83.9625)
+		(end 65.512751 84.744)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "3de44c57-5624-45e5-b495-a115f5259ca9")
 	)
-	(zone
-		(layers "F.Cu" "B.Cu")
-		(uuid "e56b97e1-7c7b-4aff-9152-f587a8be4b4c")
-		(hatch full 0.508)
-		(connect_pads
-			(clearance 0)
-		)
-		(min_thickness 0.254)
-		(keepout
-			(tracks not_allowed)
-			(vias not_allowed)
-			(pads not_allowed)
-			(copperpour allowed)
-			(footprints not_allowed)
-		)
-		(placement
-			(enabled no)
-			(sheetname "")
-		)
-		(fill
-			(thermal_gap 0.508)
-			(thermal_bridge_width 0.508)
-			(island_removal_mode 0)
-		)
-		(polygon
-			(pts
-				(xy 215 47.5) (xy 55 47.5) (xy 55 45) (xy 215 45)
-			)
-		)
+	(segment
+		(start 59.22 84.75)
+		(end 59.3015 84.8315)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "52ac1c9b-801c-4028-997e-963b5949bf94")
+	)
+	(segment
+		(start 59.687249 84.8315)
+		(end 60.468749 84.05)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "5cc14610-f1b4-44ed-85a0-2470a8279f6a")
+	)
+	(segment
+		(start 82.837614 74.913)
+		(end 82.862 74.913)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "7f870a36-b0a9-4029-ad76-729cb2332c90")
+	)
+	(segment
+		(start 82.618 75.157)
+		(end 82.618 75.132614)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "95602a65-bf21-465c-b3af-12526254dbf7")
+	)
+	(segment
+		(start 58.645 84.75)
+		(end 59.22 84.75)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "a330a92d-d06d-47f5-917f-0152c082ffc3")
+	)
+	(segment
+		(start 60.468749 84.05)
+		(end 61.4625 84.05)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "b069ccb5-bd41-49c2-a12b-cbdf00a73c47")
+	)
+	(segment
+		(start 73.031 84.744)
+		(end 82.618 75.157)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "d8f1c4b9-7044-4ae9-a0bd-3d8197a4a215")
+	)
+	(segment
+		(start 63.7375 84.05)
+		(end 63.825 83.9625)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "e5789a33-3d2e-44d0-9c8e-aece244452f5")
+	)
+	(segment
+		(start 82.618 75.132614)
+		(end 82.837614 74.913)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "e802ac74-7cc0-43b8-90c5-b492688b523c")
+	)
+	(segment
+		(start 63.825 83.9625)
+		(end 64.731251 83.9625)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "f0de11c5-a962-4e4e-83eb-f19ade43ca79")
+	)
+	(segment
+		(start 82.862 74.913)
+		(end 83.6 74.175)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "f1840452-65b4-4b12-807c-7b40b07b87e4")
+	)
+	(segment
+		(start 59.3015 84.8315)
+		(end 59.687249 84.8315)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D+")
+		(uuid "f90d8981-3fcb-4b18-8ba6-b0b7fda6672a")
+	)
+	(segment
+		(start 82.80659 75.445)
+		(end 83.6 75.445)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "0e0b0681-594c-4c53-84c0-f9011dc25561")
+	)
+	(segment
+		(start 58.645 85.25)
+		(end 59.22 85.25)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "13ce3976-af17-4715-b100-7d6d09998368")
+	)
+	(segment
+		(start 59.687249 85.1685)
+		(end 60.468749 85.95)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "2a1da82d-1fee-4387-9fe3-f906384102cb")
+	)
+	(segment
+		(start 65.512751 85.081)
+		(end 73.17059 85.081)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "390a8abc-d5c4-4831-9fe3-1415b98a1320")
+	)
+	(segment
+		(start 63.825 85.8625)
+		(end 64.731251 85.8625)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "4d6eed8f-d9ac-4405-930b-2b80258cbd1b")
+	)
+	(segment
+		(start 73.17059 85.081)
+		(end 82.80659 75.445)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "57ef410c-d8f1-4915-90af-ca36f777fd00")
+	)
+	(segment
+		(start 64.731251 85.8625)
+		(end 65.512751 85.081)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "a6245979-6ac7-401b-b74b-09861884053a")
+	)
+	(segment
+		(start 59.22 85.25)
+		(end 59.3015 85.1685)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "b4dab202-f91a-4814-b4b3-61e81989e64c")
+	)
+	(segment
+		(start 63.7375 85.95)
+		(end 63.825 85.8625)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "db114773-4e46-4e4c-8692-fb27a73705ec")
+	)
+	(segment
+		(start 59.3015 85.1685)
+		(end 59.687249 85.1685)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "e6a579a2-3ab5-4ab8-bbd5-fd48a9c9c302")
+	)
+	(segment
+		(start 60.468749 85.95)
+		(end 61.4625 85.95)
+		(width 0.21)
+		(layer "F.Cu")
+		(net "/HOST_D-")
+		(uuid "ff77d959-4404-489d-8740-4691320b8d34")
 	)
 	(embedded_fonts no)
 )
