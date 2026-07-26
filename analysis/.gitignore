@@ -2,3 +2,7 @@
 *
 !.gitignore
 !manifest.json
+# Hand-authored review evidence cited by docs/superpowers/reviews/ -- not regenerable
+!deep_review.json
+!helpers/
+!helpers/*.py

@@ -1,0 +1,803 @@
+{
+  "schema_version": "1.0",
+  "produced_for_run_id": "2026-07-26_0129",
+  "produced_at": "2026-07-26T01:35:00Z",
+  "findings": [
+    {
+      "detector": "deep_review",
+      "category": "current_limit",
+      "severity": "info",
+      "confidence": "high",
+      "summary": "TPS2121 current limit is 3.00 A (R12 = 35.7k) and the soft-start cap gives ~38 mA of switchover inrush",
+      "description": "Equation 2 gives ILM = 65.2 / RILIM^0.861 with RILIM in kohm and a valid range of 18-100 kohm; R12 = 35.7k yields 3.00 A, with the OCP fold-back at 2.4x that. C20 on SS is 0.1 uF; the datasheet's worked example states a 100 nF CSS at 5 V gives 780 V/s, which against the 48.6 uF on ISO_5V is about 38 mA of inrush during switchover. OV1 and OV2 are tied to GND2, which per the truth table means the overvoltage comparators never trip - the intended 'no OV protection' configuration.",
+      "evidence": {
+        "components": [
+          "U7",
+          "R12",
+          "C20"
+        ],
+        "nets": [
+          "ILIM_SET",
+          "SS_SET",
+          "ISO_5V"
+        ],
+        "pins": [
+          "U7.10",
+          "U7.11",
+          "U7.4",
+          "U7.5"
+        ],
+        "datasheet": [
+          {
+            "mpn": "TPS2121RUXR",
+            "page": 13,
+            "quote": "Active Current Limiting"
+          },
+          {
+            "mpn": "TPS2121RUXR",
+            "page": 24,
+            "quote": "will provide a slew rate of 780V"
+          }
+        ],
+        "computation": {
+          "description": "TPS2121 current limit, section 1",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "ILM = 3.002 A, RILIM in range"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U7",
+        "R12",
+        "C20"
+      ],
+      "nets": [
+        "ILIM_SET",
+        "SS_SET",
+        "ISO_5V"
+      ],
+      "pins": [
+        "U7.10",
+        "U7.11",
+        "U7.4",
+        "U7.5"
+      ],
+      "finding_id": "deep_review:68f6784dab41"
+    },
+    {
+      "detector": "deep_review",
+      "category": "current_limit",
+      "severity": "info",
+      "confidence": "high",
+      "summary": "TPS2553 per-port limit is 592/649/713 mA min/nom/max with R27-R30 = 40.2k +-1%",
+      "description": "The datasheet's three current-limit equations (IOSmin = 25230/R^1.016, IOSnom = 23950/R^0.977, IOSmax = 22980/R^0.94, R in kohm) give 592/649/713 mA at 40.2 kohm, inside the recommended 15-232 kohm window. The worst-case minimum of 592 mA clears the 500 mA a USB 2.0 high-power port must deliver, and the maximum of 713 mA stays under the 3.00 A the upstream TPS2121 allows even with all four ports in limit (2.85 A worst case).",
+      "evidence": {
+        "components": [
+          "U9",
+          "U10",
+          "U11",
+          "U12",
+          "R27",
+          "R28",
+          "R29",
+          "R30"
+        ],
+        "nets": [
+          "P1_VBUS",
+          "P2_VBUS",
+          "P3_VBUS",
+          "P4_VBUS"
+        ],
+        "pins": [
+          "U9.5",
+          "U10.5",
+          "U11.5",
+          "U12.5"
+        ],
+        "datasheet": [
+          {
+            "mpn": "TPS2553DBVR",
+            "page": 15,
+            "quote": "Current-Limit Threshold Equations"
+          }
+        ],
+        "computation": {
+          "description": "TPS2553 per-port current limit, section 2",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "592 / 649 / 713 mA at RILIM = 40.2 kohm"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U9",
+        "U10",
+        "U11",
+        "U12",
+        "R27",
+        "R28",
+        "R29",
+        "R30"
+      ],
+      "nets": [
+        "P1_VBUS",
+        "P2_VBUS",
+        "P3_VBUS",
+        "P4_VBUS"
+      ],
+      "pins": [
+        "U9.5",
+        "U10.5",
+        "U11.5",
+        "U12.5"
+      ],
+      "finding_id": "deep_review:9c458d80ca8f"
+    },
+    {
+      "detector": "deep_review",
+      "category": "decoupling",
+      "severity": "info",
+      "confidence": "high",
+      "summary": "ADuM4165 VDD1/VDD2 bypass is exactly 0.1 uF as required - larger values are explicitly called out as harmful",
+      "description": "C5 on VDD1 and C36 on VDD2 are both 0.1 uF 0603 X7R (CC0603KRX7R9BB104). The datasheet warns that more than 0.1 uF on these internal-LDO outputs can disrupt start-up, so this is a value that must not be 'improved' at layout. VBUS1 (C4, 0.1 uF on VBUS_HOST) and VBUS2 (C35, 0.1 uF on ISO_5V) also match the pin-table requirement, and both supplies sit inside the specified 4.5-5.5 V window.",
+      "evidence": {
+        "components": [
+          "U1",
+          "C4",
+          "C5",
+          "C35",
+          "C36"
+        ],
+        "nets": [
+          "VDD1",
+          "VDD2",
+          "VBUS_HOST",
+          "ISO_5V"
+        ],
+        "pins": [
+          "U1.1",
+          "U1.3",
+          "U1.18",
+          "U1.20"
+        ],
+        "datasheet": [
+          {
+            "mpn": "ADUM4165BRIZ",
+            "page": 22,
+            "quote": "still have bypass capacitors connected"
+          },
+          {
+            "mpn": "ADUM4165BRIZ",
+            "page": 12,
+            "quote": "Connect VBUS1 to 4.5 V to 5.5 V"
+          }
+        ]
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U1",
+        "C4",
+        "C5",
+        "C35",
+        "C36"
+      ],
+      "nets": [
+        "VDD1",
+        "VDD2",
+        "VBUS_HOST",
+        "ISO_5V"
+      ],
+      "pins": [
+        "U1.1",
+        "U1.3",
+        "U1.18",
+        "U1.20"
+      ],
+      "finding_id": "deep_review:5efb870348ce"
+    },
+    {
+      "detector": "deep_review",
+      "category": "part_selection",
+      "severity": "warning",
+      "confidence": "high",
+      "summary": "USB2514B-AEZC is the legacy 36-pin QFN order code and is rated 0 C to 85 C; Microchip recommends the 36-pin SQFN for new designs",
+      "description": "The Product Identification System lists USB2514B-AEZC under '36-Pin QFN (Legacy)' at 0 C to 85 C. The preferred package for new designs is the 36-pin SQFN (/M2 suffix), which is a different footprint. The industrial-temperature drop-in for the same legacy QFN is USB2514Bi-AEZG (-40 C to 85 C). The schematic's footprint (Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP3.7x3.7mm) matches the legacy 6x6 mm QFN, so the MPN and footprint are consistent as drawn.",
+      "recommendation": "Keep -AEZC for this prototype (in stock at LCSC, C633338/C16251) but record the choice: if sub-0 C operation or long-term availability matter, respin to USB2514Bi-AEZG (same footprint) or to the SQFN /M2 part (new footprint).",
+      "evidence": {
+        "components": [
+          "U4"
+        ],
+        "datasheet": [
+          {
+            "mpn": "USB2514B-AEZC",
+            "page": 55,
+            "quote": "For new designs, the 36-pin SQFN is recommended"
+          },
+          {
+            "mpn": "USB2514B-AEZC",
+            "page": 55,
+            "quote": "USB2514B-AEZC"
+          }
+        ]
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U4"
+      ],
+      "finding_id": "deep_review:f243a80c2588"
+    },
+    {
+      "detector": "deep_review",
+      "category": "power_capacity",
+      "severity": "warning",
+      "confidence": "high",
+      "summary": "Bus-powered budget: TI rates the SN6505B + Wurth 750313638 (5 V -> 5 V) pairing at 100 mA, but the isolated side's own idle draw is ~235 mA",
+      "description": "ISO_5V must supply the ADuM4165 Side 2 (IDD2(H) 59 mA typ / 70 mA max) plus U8, which feeds the USB2514B on ISO_3V3 (IHCH1 base 70 mA typ / 80 mA max plus 25 mA per additional active downstream port = up to 155 mA), plus ~3 mA of indicator LEDs. That is roughly 235 mA before any downstream device draws current. TI's recommended-transformer table (Table 9-3) characterises this exact SN6505B + 750313638 5 V -> 5 V combination at 100 mA with an LDO. Wurth's own datasheet typical-application table cites IOut1 = 0.65 A for the same transformer, so the two vendors disagree by 6.5x. The spec's 'usable budget ~700 mA' is supported by neither, and is in any case above the 500 mA a USB 2.0 bus-powered port may draw (~400 mA on ISO_5V at 80% end-to-end efficiency).",
+      "recommendation": "Resolve before committing to fab: bench-measure DCDC_5V under the real isolated-side load, or move to a higher-current pairing from Table 9-3 (e.g. Wurth 750315371, 1:1.1, 5 V -> 5 V, 1 A, SN6505B - different footprint). Correct the '~700 mA usable' figure in docs/superpowers/specs/2026-07-25-usb-isolator-design.md either way. Not a wiring defect: the schematic matches TI's recommended topology.",
+      "evidence": {
+        "components": [
+          "U5",
+          "T1",
+          "U6",
+          "U1",
+          "U4",
+          "U8"
+        ],
+        "nets": [
+          "DCDC_RAW",
+          "DCDC_5V",
+          "ISO_5V",
+          "ISO_3V3"
+        ],
+        "datasheet": [
+          {
+            "mpn": "SN6505BDBVR",
+            "page": 29,
+            "quote": "750313638"
+          },
+          {
+            "mpn": "ADUM4165BRIZ",
+            "page": 3,
+            "quote": "IDD2(H)"
+          },
+          {
+            "mpn": "USB2514B-AEZC",
+            "page": 41,
+            "quote": "This is the base current"
+          },
+          {
+            "mpn": "750313638",
+            "page": 2,
+            "quote": "Output Current 1"
+          }
+        ],
+        "computation": {
+          "description": "isolated-side supply headroom, section 7",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "TI Table 9-3 = 100 mA; Wurth typical application = 0.65 A; USB bus ceiling ~400 mA on ISO_5V"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U5",
+        "T1",
+        "U6",
+        "U1",
+        "U4",
+        "U8"
+      ],
+      "nets": [
+        "DCDC_RAW",
+        "DCDC_5V",
+        "ISO_5V",
+        "ISO_3V3"
+      ],
+      "finding_id": "deep_review:10af1a964ef6"
+    },
+    {
+      "detector": "deep_review",
+      "category": "power_path",
+      "severity": "info",
+      "confidence": "high",
+      "summary": "U7 CP2 rewired from GND2 to n3A_DET during this review - PR1-low alone did not guarantee the weak-source lockout",
+      "description": "As drawn before this review, CP2 was hard-grounded and the only lockout control was PR1 pulled low by Q1. Table 9-3 of the TPS2121 datasheet shows CP2 < VREF and PR1 < VREF selects VCOMP mode, which picks the HIGHER of the two inputs, not IN2. VCOMP is specified 0 / 280 / 600 mV (VIN2 referenced to VIN1), so at the datasheet minimum a 5.0-5.25 V weak brick on IN1 would beat DCDC_5V at 4.85-4.97 V and be selected - exactly the case the lockout exists to prevent. n3A_DET is already high (3.3 V through R9) whenever no 3 A advertisement is present and low when U13/U14 detect one, so wiring CP2 directly to it needs no new parts and gives CP2 >= VREF, PR1 < VREF -> OUT = IN2 unconditionally, and CP2 < VREF, PR1 >= VREF -> OUT = IN1. Control-pin leakage is +-0.1 uA max, a 10 mV drop across the 100 kohm pull-up R9.",
+      "recommendation": "Verify at bring-up: with a Default-USB (non-3 A) source on J2, confirm ISO_5V tracks DCDC_5V and the ST LED stays off; with a 3 A source, confirm switchover to EXT_5V and the ST LED on.",
+      "evidence": {
+        "components": [
+          "U7",
+          "U13",
+          "U14",
+          "Q1",
+          "R9"
+        ],
+        "nets": [
+          "n3A_DET",
+          "PR1_SENSE",
+          "DCDC_5V",
+          "EXT_5V",
+          "ISO_5V"
+        ],
+        "pins": [
+          "U7.3",
+          "U7.6"
+        ],
+        "datasheet": [
+          {
+            "mpn": "TPS2121RUXR",
+            "page": 18,
+            "quote": "TPS2121 Output Source Selection Table"
+          },
+          {
+            "mpn": "TPS2121RUXR",
+            "page": 7,
+            "quote": "Input Voltage Comparator"
+          }
+        ]
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U7",
+        "U13",
+        "U14",
+        "Q1",
+        "R9"
+      ],
+      "nets": [
+        "n3A_DET",
+        "PR1_SENSE",
+        "DCDC_5V",
+        "EXT_5V",
+        "ISO_5V"
+      ],
+      "pins": [
+        "U7.3",
+        "U7.6"
+      ],
+      "finding_id": "deep_review:ad29f44524d9"
+    },
+    {
+      "detector": "deep_review",
+      "category": "regulator_stability",
+      "severity": "warning",
+      "confidence": "high",
+      "summary": "MIC29302WU minimum load current is 7 mA; DCDC_5V carries only ~3.1 mA when the mux is running from external power",
+      "description": "The only permanent loads on DCDC_5V when U7 has selected IN1 are the R3/R4 feedback divider (4.972 V / 40.1 kohm = 124 uA) and the bus-power indicator branch R36 + D6 ((4.972 - 2.1) / 1 kohm = 2.9 mA). Total ~3.1 mA against the 7 mA the datasheet specifies for the MIC2930x family. Below the minimum load, Microchip states the output voltage rises as leakage dominates; a raised DCDC_5V is seen by U7 IN2 (abs max 22 V, so no damage) but would be passed to ISO_5V if the external supply were subsequently removed.",
+      "recommendation": "Add a bleeder from DCDC_5V to GND2 sized for the shortfall (~680 ohm gives 7.3 mA total, 36 mW) or drop R36 to 470 ohm and scale the feedback divider to 3.01k/1.00k. Provide the bleeder pad at layout as a DNP and populate only if the measured unloaded DCDC_5V exceeds 5.25 V.",
+      "evidence": {
+        "components": [
+          "U6",
+          "R3",
+          "R4",
+          "R36",
+          "D6",
+          "U7"
+        ],
+        "nets": [
+          "DCDC_5V"
+        ],
+        "pins": [
+          "U6.4",
+          "U7.2"
+        ],
+        "datasheet": [
+          {
+            "mpn": "MIC29302WU",
+            "page": 25,
+            "quote": "MINIMUM LOAD CURRENTS"
+          },
+          {
+            "mpn": "MIC29302WU",
+            "page": 25,
+            "quote": "If the output current is too small"
+          }
+        ],
+        "computation": {
+          "description": "light-load current on DCDC_5V",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "124 uA divider + 2.9 mA LED branch = 3.1 mA < 7 mA minimum load"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U6",
+        "R3",
+        "R4",
+        "R36",
+        "D6",
+        "U7"
+      ],
+      "nets": [
+        "DCDC_5V"
+      ],
+      "pins": [
+        "U6.4",
+        "U7.2"
+      ],
+      "finding_id": "deep_review:f1f6fe626a74"
+    },
+    {
+      "detector": "deep_review",
+      "category": "regulator_voltage",
+      "severity": "info",
+      "confidence": "high",
+      "summary": "MIC29302WU output is 4.972 V nominal, 4.851-5.097 V worst case, and C10 (47 uF) clears the 10 uF stability minimum",
+      "description": "The ADJ pin reference is 1.240 V typ (1.228-1.252 V); with R3 = 30.1k over R4 = 10.0k that is 4.972 V nominal and 4.851-5.097 V once +-1% divider tolerance is stacked on the reference spread. Table 4-1 requires 10 uF minimum output capacitance at full load for the MIC2930x family; C10 is 47 uF 1210 X5R 25 V. Even at the 4.851 V corner there is headroom above the 4.75 V a downstream USB port must see, after the U7 and U9-U12 switch drops.",
+      "evidence": {
+        "components": [
+          "U6",
+          "R3",
+          "R4",
+          "C10"
+        ],
+        "nets": [
+          "DCDC_5V"
+        ],
+        "pins": [
+          "U6.4",
+          "U6.5"
+        ],
+        "datasheet": [
+          {
+            "mpn": "MIC29302WU",
+            "page": 25,
+            "quote": "MINIMUM CAPACITOR"
+          }
+        ],
+        "computation": {
+          "description": "MIC29302 output voltage and LDO dissipation, sections 3 and 4",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "VOUT 4.851-5.097 V; Pd 103-611 mW over the plausible VIN/IOUT range"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U6",
+        "R3",
+        "R4",
+        "C10"
+      ],
+      "nets": [
+        "DCDC_5V"
+      ],
+      "pins": [
+        "U6.4",
+        "U6.5"
+      ],
+      "finding_id": "deep_review:d802410a9f8e"
+    },
+    {
+      "detector": "deep_review",
+      "category": "required_externals",
+      "severity": "info",
+      "confidence": "high",
+      "summary": "SN6505B control pins follow the datasheet exactly: EN tied to VCC, CLK to GND, VCC bypassed with 10 uF + 0.1 uF",
+      "description": "EN (pin 5) is on VBUS_HOST, the same net as VCC (pin 2) - the datasheet states 'If unused this pin should be tied directly to VCC'. CLK (pin 6) is on GND1; the pin is internally pulled to GND and the device falls back to its internal spread-spectrum oscillator when no valid external clock is seen. C7 (10 uF 0805 X5R 25 V) plus C6 (0.1 uF) bypass VCC against the required 'a 4.7 uF or greater, low ESR capacitor'; at 5 V bias the 25 V X5R part retains roughly 8 uF, still above 4.7 uF.",
+      "evidence": {
+        "components": [
+          "U5",
+          "C6",
+          "C7"
+        ],
+        "nets": [
+          "VBUS_HOST",
+          "GND1"
+        ],
+        "pins": [
+          "U5.2",
+          "U5.5",
+          "U5.6"
+        ],
+        "datasheet": [
+          {
+            "mpn": "SN6505BDBVR",
+            "page": 3,
+            "quote": "If unused this pin should be tied directly to VCC"
+          },
+          {
+            "mpn": "SN6505BDBVR",
+            "page": 3,
+            "quote": "bypassed with a 4.7"
+          }
+        ]
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U5",
+        "C6",
+        "C7"
+      ],
+      "nets": [
+        "VBUS_HOST",
+        "GND1"
+      ],
+      "pins": [
+        "U5.2",
+        "U5.5",
+        "U5.6"
+      ],
+      "finding_id": "deep_review:910054567621"
+    },
+    {
+      "detector": "deep_review",
+      "category": "required_externals",
+      "severity": "info",
+      "confidence": "high",
+      "summary": "USB2514B required externals are all present and correctly valued: RBIAS 12.0k +-1%, CRFILT and PLLFILT 0.1 uF",
+      "description": "R15 on HUB_RBIAS is 12.0k with MPN RC0603FR-0712KL, a Yageo RC0603FR-07 series part (+-1%, +-100 ppm/K), matching the datasheet's '12.0 kohm (+/- 1%) resistor ... from ground to this pin'. C30 on HUB_CRFILT and C31 on HUB_PLLFILT are both 0.1 uF X7R, at the datasheet ceiling of 'up to a 0.1 uF low-ESR capacitor to VSS'. All six VDD33/VDDA33 pins sit on ISO_3V3 and VSS is on GND2.",
+      "evidence": {
+        "components": [
+          "U4",
+          "R15",
+          "C30",
+          "C31"
+        ],
+        "nets": [
+          "HUB_RBIAS",
+          "HUB_CRFILT",
+          "HUB_PLLFILT",
+          "ISO_3V3"
+        ],
+        "pins": [
+          "U4.35",
+          "U4.14",
+          "U4.34"
+        ],
+        "datasheet": [
+          {
+            "mpn": "USB2514B-AEZC",
+            "page": 12,
+            "quote": "resistor is attached from ground to this"
+          },
+          {
+            "mpn": "USB2514B-AEZC",
+            "page": 14,
+            "quote": "VDD Core Regulator Filter Capacitor"
+          }
+        ]
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U4",
+        "R15",
+        "C30",
+        "C31"
+      ],
+      "nets": [
+        "HUB_RBIAS",
+        "HUB_CRFILT",
+        "HUB_PLLFILT",
+        "ISO_3V3"
+      ],
+      "pins": [
+        "U4.35",
+        "U4.14",
+        "U4.34"
+      ],
+      "finding_id": "deep_review:caa934a75c73"
+    },
+    {
+      "detector": "deep_review",
+      "category": "thermal",
+      "severity": "warning",
+      "confidence": "medium",
+      "summary": "U8 (AP2112K-3.3, SOT-23-5) dissipates up to ~272 mW feeding the hub, a ~68 C junction rise",
+      "description": "ISO_3V3 supplies the USB2514B at up to 155 mA (80 mA base + 3 x 25 mA for the additional active downstream ports) plus the two TLV7041 comparators and the strap/divider network. At (5.0 - 3.3) V x 160 mA the LDO burns 272 mW; a SOT-23-5 at roughly 250 C/W puts Tj about 68 C above ambient. Current is well inside the AP2112K's 600 mA rating - the constraint is thermal, not current. This confirms the Task-7 deferred note.",
+      "recommendation": "At layout give U8 a generous copper pour on the GND2 and ISO_3V3 pads; if the enclosure ambient can exceed 55 C, move to a SOT-89 / DFN 3.3 V LDO or feed ISO_3V3 from a buck.",
+      "evidence": {
+        "components": [
+          "U8",
+          "U4",
+          "U13",
+          "U14"
+        ],
+        "nets": [
+          "ISO_5V",
+          "ISO_3V3"
+        ],
+        "pins": [
+          "U8.1",
+          "U8.5"
+        ],
+        "datasheet": [
+          {
+            "mpn": "USB2514B-AEZC",
+            "page": 41,
+            "quote": "SUPPLY CURRENT CONFIGURED: HI-SPEED HOST"
+          }
+        ],
+        "computation": {
+          "description": "LDO dissipation, section 4",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "272 mW at 160 mA; 68 C rise at 250 C/W"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "U8",
+        "U4",
+        "U13",
+        "U14"
+      ],
+      "nets": [
+        "ISO_5V",
+        "ISO_3V3"
+      ],
+      "pins": [
+        "U8.1",
+        "U8.5"
+      ],
+      "finding_id": "deep_review:6699d2ee4ef5"
+    },
+    {
+      "detector": "deep_review",
+      "category": "timing",
+      "severity": "info",
+      "confidence": "high",
+      "summary": "Y2 load caps match Microchip's own worked value: 18 pF gives CL_eff 12.5-13.5 pF against the 12 pF crystal specified",
+      "description": "Microchip's Figure 7-2 gives C1 = 2 x (CL - C0) - CS1 with C0 set to zero and CS1 = CB + CXTAL; CXTAL is specified at 6 pF, so with 1-3 pF of board capacitance the ideal C1 is 15-17 pF and Note 7-2 states 'Each of these capacitance values is typically around 18 pF'. C32/C33 are 18 pF C0G, giving CL_eff 12.5-13.5 pF against the 12 pF crystal chosen (YXC X322524MOB4SI, 24 MHz, CL 12 pF, +-20 ppm, ESR 50 ohm), a pull of about -15 ppm - far inside the +-350 ppm the hub requires.",
+      "evidence": {
+        "components": [
+          "Y2",
+          "C32",
+          "C33",
+          "U4"
+        ],
+        "nets": [
+          "HUB_XI",
+          "HUB_XO"
+        ],
+        "pins": [
+          "U4.32",
+          "U4.33"
+        ],
+        "datasheet": [
+          {
+            "mpn": "USB2514B-AEZC",
+            "page": 44,
+            "quote": "Parallel resonant, fundamental mode"
+          },
+          {
+            "mpn": "USB2514B-AEZC",
+            "page": 44,
+            "quote": "typically around 18 pF"
+          }
+        ],
+        "computation": {
+          "description": "crystal load capacitance, section 5",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "CL_eff 12.5-13.5 pF, pull -15 ppm"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "Y2",
+        "C32",
+        "C33",
+        "U4"
+      ],
+      "nets": [
+        "HUB_XI",
+        "HUB_XO"
+      ],
+      "pins": [
+        "U4.32",
+        "U4.33"
+      ],
+      "finding_id": "deep_review:849a2131f2f7"
+    },
+    {
+      "detector": "deep_review",
+      "category": "timing",
+      "severity": "info",
+      "confidence": "medium",
+      "summary": "Y1 matches the ADuM4165 crystal requirement (24 MHz, <=50 ppm tolerance, CL 8 pF with 8 pF loads) - the same combination as ADI's own evaluation board",
+      "description": "The datasheet requires <=50 ppm frequency tolerance with <=100 ppm stability and calls for 'a typical crystal capacitance of 10 pF and capacitive loads <10 pF'. C1/C2 are 8 pF C0G, which satisfies the <10 pF load requirement. EVAL-ADuM4165EBZ Table 4 pairs those same 8 pF loads with a 24 MHz, +-50 ppm, 8 pF, 50 ohm 4-SMD crystal (IQD LFXTAL056140REEL), so CL = 8 pF is ADI's own validated point and is what has been specified (SCTF SX3B24.000F0810F30, 24 MHz, CL 8 pF, ESR 30 ohm, -40 to +85 C). The ADuM4165 datasheet does not publish an XI1/XO1 pin capacitance, so CL_eff cannot be computed exactly: with 8 pF loads it lands between 5 pF (2 pF stray) and 8 pF (8 pF stray), a pull error of at most +71 ppm at the low end.",
+      "recommendation": "At bring-up measure the actual 24 MHz frequency at XO1 and adjust C1/C2 if the error exceeds the USB 2.0 budget. Confirm the SCTF part's split between 25 C tolerance and over-temperature stability from the manufacturer datasheet - LCSC lists a single +-30 ppm figure. IQD LFXTAL056140REEL is the drop-in alternate with published ADI validation.",
+      "evidence": {
+        "components": [
+          "Y1",
+          "C1",
+          "C2",
+          "U1"
+        ],
+        "nets": [
+          "XTALIN",
+          "XTALOUT"
+        ],
+        "pins": [
+          "U1.5",
+          "U1.6"
+        ],
+        "datasheet": [
+          {
+            "mpn": "ADUM4165BRIZ",
+            "page": 22,
+            "quote": "a frequency tolerance of"
+          }
+        ],
+        "computation": {
+          "description": "crystal load capacitance, section 5",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "CL_eff 5.0-8.0 pF for Cstray 2-8 pF; worst-case pull +71 ppm"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "Y1",
+        "C1",
+        "C2",
+        "U1"
+      ],
+      "nets": [
+        "XTALIN",
+        "XTALOUT"
+      ],
+      "pins": [
+        "U1.5",
+        "U1.6"
+      ],
+      "finding_id": "deep_review:bed055cc7b12"
+    },
+    {
+      "detector": "deep_review",
+      "category": "usb_compliance",
+      "severity": "warning",
+      "confidence": "high",
+      "summary": "Downstream bulk capacitance is 89 uF nominal against the 120 uF-per-hub USB requirement, before MLCC DC-bias derating",
+      "description": "ISO_5V carries 48.6 uF (C18 47 uF + C19/C21/C35 etc.) and each port node carries 10.1 uF (C38/C41/C44/C47 plus a 0.1 uF), for 89.0 uF nominal. The X5R 1210 and 0805 parts selected lose roughly 20-40% at 5 V DC bias, so the effective figure is nearer 55-70 uF.",
+      "recommendation": "Add a second 47 uF 1210 on ISO_5V near U7's output (or raise C38/C41/C44/C47 to 22 uF) at layout. Prototype function is unaffected; this matters for USB-IF compliance and for hot-plug droop.",
+      "evidence": {
+        "components": [
+          "C18",
+          "C38",
+          "C41",
+          "C44",
+          "C47",
+          "U9",
+          "U10",
+          "U11",
+          "U12"
+        ],
+        "nets": [
+          "ISO_5V",
+          "P1_VBUS",
+          "P2_VBUS",
+          "P3_VBUS",
+          "P4_VBUS"
+        ],
+        "datasheet": [
+          {
+            "mpn": "TPS2553DBVR",
+            "page": 1,
+            "quote": "downstream facing ports are bypassed with at least"
+          }
+        ],
+        "computation": {
+          "description": "bulk capacitance tally, section 6",
+          "script": "analysis/helpers/verify_limits.py",
+          "result": "89.0 uF nominal, BELOW the 120 uF guidance"
+        }
+      },
+      "evidence_checked": "full",
+      "components": [
+        "C18",
+        "C38",
+        "C41",
+        "C44",
+        "C47",
+        "U9",
+        "U10",
+        "U11",
+        "U12"
+      ],
+      "nets": [
+        "ISO_5V",
+        "P1_VBUS",
+        "P2_VBUS",
+        "P3_VBUS",
+        "P4_VBUS"
+      ],
+      "finding_id": "deep_review:486ed4649292"
+    }
+  ],
+  "quarantined": []
+}
