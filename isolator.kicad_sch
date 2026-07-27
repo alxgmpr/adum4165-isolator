@@ -9877,7 +9877,7 @@
 		)
 		(uuid "02dedad2-1699-433f-960f-21651155624e")
 	)
-	(label "P1_D+"
+	(label "P4_D+"
 		(at 463.55 153.67 0)
 		(effects
 			(font
@@ -9967,7 +9967,7 @@
 		)
 		(uuid "06c41eab-64aa-4996-97df-abb1b58e5b2f")
 	)
-	(label "P3_D+"
+	(label "P2_D+"
 		(at 463.55 179.07 0)
 		(effects
 			(font
@@ -10177,7 +10177,7 @@
 		)
 		(uuid "1a77514d-065d-442d-895c-cbc83eb6cb30")
 	)
-	(label "P4_D+"
+	(label "P1_D+"
 		(at 463.55 191.77 0)
 		(effects
 			(font
@@ -10197,7 +10197,7 @@
 		)
 		(uuid "1b4f990e-8715-49c6-b802-1750c77ea556")
 	)
-	(label "nOCS2"
+	(label "nOCS3"
 		(at 463.55 171.45 0)
 		(effects
 			(font
@@ -10307,7 +10307,7 @@
 		)
 		(uuid "2ce23d5e-7a0a-46c8-9384-5dc613c3e594")
 	)
-	(label "PRTPWR4"
+	(label "PRTPWR1"
 		(at 463.55 194.31 0)
 		(effects
 			(font
@@ -10577,7 +10577,7 @@
 		)
 		(uuid "4855db5b-5ad4-47ab-8f5a-f42ef15c00fb")
 	)
-	(label "P2_D+"
+	(label "P3_D+"
 		(at 463.55 166.37 0)
 		(effects
 			(font
@@ -10757,7 +10757,7 @@
 		)
 		(uuid "5a630735-d2c6-4a49-bcb0-81f0eec699a1")
 	)
-	(label "P2_D-"
+	(label "P3_D-"
 		(at 463.55 163.83 0)
 		(effects
 			(font
@@ -11017,7 +11017,7 @@
 		)
 		(uuid "77226bae-7d1a-4f81-801e-6fe43b693654")
 	)
-	(label "PRTPWR3"
+	(label "PRTPWR2"
 		(at 463.55 181.61 0)
 		(effects
 			(font
@@ -11277,7 +11277,7 @@
 		)
 		(uuid "96775171-f128-4c04-961e-5b32d958d06c")
 	)
-	(label "nOCS4"
+	(label "nOCS1"
 		(at 463.55 196.85 0)
 		(effects
 			(font
@@ -11477,7 +11477,7 @@
 		)
 		(uuid "a4b4b13f-904f-4be6-9e10-26e476c52aeb")
 	)
-	(label "PRTPWR2"
+	(label "PRTPWR3"
 		(at 463.55 168.91 0)
 		(effects
 			(font
@@ -11727,7 +11727,7 @@
 		)
 		(uuid "bf3bb64a-41bc-43f1-be70-34f7ccc4c3d6")
 	)
-	(label "nOCS1"
+	(label "nOCS4"
 		(at 463.55 158.75 0)
 		(effects
 			(font
@@ -11827,7 +11827,7 @@
 		)
 		(uuid "c7653745-6806-4eb8-9994-81d070f6947f")
 	)
-	(label "P4_D-"
+	(label "P1_D-"
 		(at 463.55 189.23 0)
 		(effects
 			(font
@@ -11877,7 +11877,7 @@
 		)
 		(uuid "cdd3f249-231f-415b-a22f-43bd370f2f72")
 	)
-	(label "PRTPWR1"
+	(label "PRTPWR4"
 		(at 463.55 156.21 0)
 		(effects
 			(font
@@ -12067,7 +12067,7 @@
 		)
 		(uuid "dcb9ec75-e9c8-4298-9595-8cd7284cd216")
 	)
-	(label "P1_D-"
+	(label "P4_D-"
 		(at 463.55 151.13 0)
 		(effects
 			(font
@@ -12147,7 +12147,7 @@
 		)
 		(uuid "e6b08afd-0e03-441b-bd32-83b3a80aaef7")
 	)
-	(label "P3_D-"
+	(label "P2_D-"
 		(at 463.55 176.53 0)
 		(effects
 			(font
@@ -12187,7 +12187,7 @@
 		)
 		(uuid "eb9cf6c1-70a7-4a09-9932-b101a231e3fc")
 	)
-	(label "nOCS3"
+	(label "nOCS2"
 		(at 463.55 184.15 0)
 		(effects
 			(font
