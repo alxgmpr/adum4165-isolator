@@ -16802,7 +16802,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "22u"
 			(at 171.45 345.4462 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16846,7 +16846,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL21A106KAYNNNE"
+		(property "MPN" "GRM21BR61A226ME44L"
 			(at 168.91 344.17 0)
 			(hide yes)
 			(show_name no)
@@ -18759,7 +18759,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "22u"
 			(at 133.35 400.0562 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18803,7 +18803,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL21A106KAYNNNE"
+		(property "MPN" "GRM21BR61A226ME44L"
 			(at 130.81 398.78 0)
 			(hide yes)
 			(show_name no)
@@ -19138,7 +19138,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "22u"
 			(at 294.64 345.4462 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19182,7 +19182,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL21A106KAYNNNE"
+		(property "MPN" "GRM21BR61A226ME44L"
 			(at 292.1 344.17 0)
 			(hide yes)
 			(show_name no)
@@ -20243,7 +20243,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "22u"
 			(at 83.82 345.4462 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20287,7 +20287,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL21A106KAYNNNE"
+		(property "MPN" "GRM21BR61A226ME44L"
 			(at 81.28 344.17 0)
 			(hide yes)
 			(show_name no)
@@ -21959,7 +21959,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 619.76 44.45 180)
+		(at 619.76 44.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21991,7 +21991,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D"
 			(at 619.76 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -22024,7 +22024,7 @@
 				)
 			)
 		)
-		(property "MPN" "TMK325ABJ476MM-P"
+		(property "MPN" "T491D476K010AT"
 			(at 619.76 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -33396,7 +33396,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "330R"
 			(at 504.19 303.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33440,7 +33440,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-071KL"
+		(property "MPN" "RC0603FR-07330RL"
 			(at 501.65 302.26 0)
 			(hide yes)
 			(show_name no)
@@ -36873,6 +36873,36 @@
 				)
 			)
 		)
+	)
+	(wire
+		(pts
+			(xy 193.04 176.53) (xy 199.39 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7804a0a2-21ee-4668-9720-6729ebf8e1ab")
+	)
+	(wire
+		(pts
+			(xy 195.58 181.61) (xy 195.58 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "598bed84-085f-49ad-99f7-c938d08f925f")
+	)
+	(wire
+		(pts
+			(xy 195.58 176.53) (xy 201.93 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23307677-8235-48e9-b0a0-c03047dd7282")
 	)
 	(sheet_instances
 		(path "/"
