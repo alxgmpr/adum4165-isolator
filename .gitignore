@@ -9,3 +9,5 @@ _autosave-*
 analysis/*/
 datasheets/
 *.rpt
+tools/*.jar
+tools/ar_work/
