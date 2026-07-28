@@ -492,7 +492,7 @@ New parts: U3 USBLC6-2SC6, U6 TPS2553DBV, J2 `Connector:USB_C_Receptacle_USB2.0_
 | U6.3 (EN) | tie so the switch is permanently enabled — check the TPS2553 polarity in the pin table; the DBV variant's EN is active-high, so tie to `ISO_5V` |
 | U6.4 (~FAULT) | `nFAULT`; 100 kΩ pull-up to `ISO_5V`; FAULT LED from `ISO_5V` through 330 Ω to `nFAULT` so it lights when the pin pulls low |
 | U6.5 (ILIM) | `ILIM_SET` → R from Step 2 → `GND2` |
-| U6.6 (OUT) | `PORT_VBUS`; bulk + 0.1 µF → `GND2` |
+| U6.6 (OUT) | `PORT_VBUS`; C14 22 µF + C15 0.1 µF → `GND2` |
 | U3.1, U3.6 | `PORT_D+` |
 | U3.3, U3.4 | `PORT_D-` |
 | U3.2 | `GND2` |
