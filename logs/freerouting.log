@@ -1,0 +1,90 @@
+2026-07-27 22:04:23.330 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-07-27 22:04:23.355 [main] INFO  Settings were loaded from freerouting.json
+2026-07-27 22:04:24.377 [main] INFO  Opening '/Users/alex/Documents/isolator/tools/ar_work/board.dsn'...
+2026-07-27 22:04:24.994 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.2.4
+2026-07-27 22:04:45.930 [Thread-1] INFO  Starting auto-routing...
+2026-07-27 22:04:46.030 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:04:46.127 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:04:46.155 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:04:46.159 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:04:46.164 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:04:46.169 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:05:41.643 [Thread-1] INFO  Auto-routing was completed in 55.71 seconds.
+2026-07-27 22:05:41.754 [Thread-1] INFO  Starting route optimization on 1 thread...
+2026-07-27 22:05:51.544 [Thread-1] INFO  Route optimization was completed in 9.79 seconds.
+2026-07-27 22:05:51.554 [Thread-1] INFO  Saving '/Users/alex/Documents/isolator/tools/ar_work/board.ses'...
+2026-07-27 22:07:56.856 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-07-27 22:07:56.882 [main] INFO  Settings were loaded from freerouting.json
+2026-07-27 22:07:57.904 [main] INFO  Opening '/Users/alex/Documents/isolator/tools/ar_work/board.dsn'...
+2026-07-27 22:07:58.464 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.2.4
+2026-07-27 22:08:19.531 [Thread-1] INFO  Starting auto-routing...
+2026-07-27 22:08:19.635 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:08:19.729 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:08:19.756 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:08:19.760 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:08:19.765 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:08:19.771 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:09:13.917 [Thread-1] INFO  Auto-routing was completed in 54.38 seconds.
+2026-07-27 22:09:14.027 [Thread-1] INFO  Starting route optimization on 1 thread...
+2026-07-27 22:09:23.973 [Thread-1] INFO  Route optimization was completed in 9.95 seconds.
+2026-07-27 22:09:23.984 [Thread-1] INFO  Saving '/Users/alex/Documents/isolator/tools/ar_work/board.ses'...
+2026-07-27 22:10:57.407 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-07-27 22:10:57.430 [main] INFO  Settings were loaded from freerouting.json
+2026-07-27 22:10:58.454 [main] INFO  Opening '/Users/alex/Documents/isolator/tools/ar_work/board.dsn'...
+2026-07-27 22:10:58.990 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.2.4
+2026-07-27 22:11:20.107 [Thread-1] INFO  Starting auto-routing...
+2026-07-27 22:11:20.205 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:11:20.304 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:11:20.329 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:11:20.334 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:11:20.340 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:11:20.345 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:12:15.494 [Thread-1] INFO  Auto-routing was completed in 55.38 seconds.
+2026-07-27 22:12:15.600 [Thread-1] INFO  Starting route optimization on 1 thread...
+2026-07-27 22:12:26.074 [Thread-1] INFO  Route optimization was completed in 10.47 seconds.
+2026-07-27 22:12:26.085 [Thread-1] INFO  Saving '/Users/alex/Documents/isolator/tools/ar_work/board.ses'...
+2026-07-27 22:13:47.130 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-07-27 22:13:47.154 [main] INFO  Settings were loaded from freerouting.json
+2026-07-27 22:13:48.178 [main] INFO  Opening '/Users/alex/Documents/isolator/tools/ar_work/board.dsn'...
+2026-07-27 22:13:48.774 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.2.4
+2026-07-27 22:14:09.771 [Thread-1] INFO  Starting auto-routing...
+2026-07-27 22:14:09.874 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:14:09.974 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:14:10.000 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:14:10.004 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:14:10.010 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:14:10.015 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:15:04.604 [Thread-1] INFO  Auto-routing was completed in 54.83 seconds.
+2026-07-27 22:15:04.715 [Thread-1] INFO  Starting route optimization on 1 thread...
+2026-07-27 22:15:14.325 [Thread-1] INFO  Route optimization was completed in 9.61 seconds.
+2026-07-27 22:15:14.336 [Thread-1] INFO  Saving '/Users/alex/Documents/isolator/tools/ar_work/board.ses'...
+2026-07-27 22:16:51.344 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-07-27 22:16:51.367 [main] INFO  Settings were loaded from freerouting.json
+2026-07-27 22:16:52.386 [main] INFO  Opening '/Users/alex/Documents/isolator/tools/ar_work/board.dsn'...
+2026-07-27 22:16:52.958 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.2.4
+2026-07-27 22:17:14.041 [Thread-1] INFO  Starting auto-routing...
+2026-07-27 22:17:14.143 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:17:14.242 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:17:14.269 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:17:14.273 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:17:14.278 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:17:14.284 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:18:09.050 [Thread-1] INFO  Auto-routing was completed in 55.01 seconds.
+2026-07-27 22:18:09.161 [Thread-1] INFO  Starting route optimization on 1 thread...
+2026-07-27 22:18:18.756 [Thread-1] INFO  Route optimization was completed in 9.59 seconds.
+2026-07-27 22:18:18.767 [Thread-1] INFO  Saving '/Users/alex/Documents/isolator/tools/ar_work/board.ses'...
+2026-07-27 22:21:44.859 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-07-27 22:21:44.882 [main] INFO  Settings were loaded from freerouting.json
+2026-07-27 22:21:45.905 [main] INFO  Opening '/Users/alex/Documents/isolator/tools/ar_work/board.dsn'...
+2026-07-27 22:21:46.514 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.2.4
+2026-07-27 22:22:07.542 [Thread-1] INFO  Starting auto-routing...
+2026-07-27 22:22:07.645 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:22:07.746 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:22:07.774 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:22:07.778 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:22:07.784 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:22:07.789 [Thread-1] WARN  FloatLine: Parameter is null
+2026-07-27 22:22:55.838 [Thread-1] INFO  Auto-routing was completed in 48.29 seconds.
+2026-07-27 22:22:55.948 [Thread-1] INFO  Starting route optimization on 1 thread...
+2026-07-27 22:23:04.340 [Thread-1] INFO  Route optimization was completed in 8.39 seconds.
+2026-07-27 22:23:04.350 [Thread-1] INFO  Saving '/Users/alex/Documents/isolator/tools/ar_work/board.ses'...
