@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "isolator-lib")(type "KiCad")(uri "${KIPRJMOD}/../isolator-lib.kicad_sym")(options "")(descr "Shared project symbols"))
+)
