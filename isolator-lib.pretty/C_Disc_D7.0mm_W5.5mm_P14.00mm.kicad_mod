@@ -1,0 +1,94 @@
+(footprint "C_Disc_D7.0mm_W5.5mm_P14.00mm"
+	(version 20260206)
+	(generator "manual")
+	(layer "F.Cu")
+	(descr "C, Disc series, Radial, pin pitch=14.00mm, diameter*width=7.0*5.5mm^2, Y1 safety-rated barrier stitching capacitor (custom pitch, no stock KiCad footprint at 14mm exists) -- see docs/superpowers/reviews/2026-07-28-v1-part-selection.md")
+	(tags "C Disc series Radial pin pitch 14.00mm diameter 7mm width 5.5mm Capacitor CY1 barrier stitching safety Y1")
+	(property "Reference" "REF**"
+		(at 7 -3.75 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "C_Disc_D7.0mm_W5.5mm_P14.00mm"
+		(at 7 3.75 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start 3.5 -2.75)
+		(end 10.5 2.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+	)
+	(fp_circle
+		(center -0.9 1.5)
+		(end -0.75 1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+	)
+	(fp_rect
+		(start -1.25 -3.0)
+		(end 15.25 3.0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_rect
+		(start 3.5 -2.75)
+		(end 10.5 2.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 7 0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "2" thru_hole circle
+		(at 14 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(embedded_fonts no)
+)
