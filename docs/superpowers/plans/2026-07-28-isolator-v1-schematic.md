@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build the KiCad schematic for the single-port inline isolator per `docs/superpowers/specs/2026-07-28-usb-isolator-v1-design.md`, ending with an ERC-clean, footprint-assigned, MPN-populated schematic in a new `v1/` project that passes a kicad-happy design review, plus a proven mechanical fit against a Hammond 1455C802.
+**Goal:** Build the KiCad schematic for the single-port inline isolator per `docs/superpowers/specs/2026-07-28-usb-isolator-v1-design.md`, ending with an ERC-clean, footprint-assigned, MPN-populated schematic in a new `v1/` project that passes a kicad-happy design review, plus a proven mechanical fit against a Hammond 1455C1202.
 
 **Architecture:** USB-C upstream → ADuM4165 (5.7 kV isolation) → USB-C downstream. No hub, no external power, no CC sensing. Isolated power from an SN6505B push-pull DC-DC through a center-tapped 5 kV transformer, full-wave rectified, regulated to 5.0 V by a fixed low-dropout regulator, delivered through one TPS2553 current-limit switch.
 
@@ -231,7 +231,9 @@ Expected: exit 0, empty schematic, no parse error. If `kicad-cli` rejects the fi
 
 - [ ] **Step 5: Run the mechanical feasibility gate**
 
-Compute the total component courtyard area and the longest dimension chain against the 1455C802 envelope. Usable area is 80 × 50 mm minus a 2 mm copper pullback on each long edge, i.e. **80 × 46 = 3680 mm²**.
+Compute the total component courtyard area and the longest dimension chain against the enclosure envelope. Usable area is length × 50 mm minus a 2 mm copper pullback on each long edge.
+
+**Superseded during execution — read before using this step's numbers.** This task originally gated against the **1455C802** at 80 mm (usable 80 × 46 = 3680 mm²) and returned GO. Task 7's footprint audit later replaced the script's placeholder dimensions with courtyards measured from the real `.kicad_mod` files and the length chain grew to **80.1–83.7 mm against 80.0 mm available**. The design moved to the **1455C1202** at 120 mm (usable 120 × 46 = 5520 mm²), an edge-cut-only change. Any re-run of this gate must use measured courtyards, not nominal body sizes — that substitution is what flipped the verdict.
 
 ```bash
 python3 - <<'EOF'
@@ -611,7 +613,7 @@ Reuse v2's assignments verbatim where the part is the same:
 Add a text block to the sheet so the layout plan inherits them without needing the spec open:
 
 > **v1 LAYOUT CONSTRAINTS — binding**
-> 1. Board 50 mm wide (Hammond 1455C slot), 80 mm target, 4 layers, 90 Ω differential pairs.
+> 1. Board 50 mm wide (Hammond 1455C slot), 120 mm length (1455C1202), 4 layers, 90 Ω differential pairs.
 > 2. ALL COPPER PULLED BACK ≥1 mm (target 2 mm) FROM BOTH LONG EDGES, every layer, full length. The extrusion's aluminium slots grip those edges; edge copper lets the enclosure short GND1 to GND2.
 > 3. ESD arrays (U2, U3) within 5 mm of the connector pins they protect. Array GND pin on its own via straight to plane, never daisy-chained. Pair routed in-line through pins 1/3 → 6/4, no stubs.
 > 4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other crossing. No copper bridges the barrier on any layer.

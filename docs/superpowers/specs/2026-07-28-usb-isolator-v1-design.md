@@ -256,23 +256,37 @@ This does **not** carry over to v2 — see the v2 finding recorded in
 
 ## Mechanical
 
-**Enclosure:** Hammond **1455C802** — 80 × 54 × 23 mm, extruded aluminum body,
-**plastic end panels**. Fallback **1455C1202** at 120 mm: same profile, same
-board width, reached by editing the board outline only.
+**Enclosure:** Hammond **1455C1202** — 120 × 54 × 23 mm, extruded aluminum
+body, **plastic end panels**.
 
-**Board:** 50 mm wide (the 1455C slot dimension), 80 mm target length,
-4 layers, 90 Ω differential pairs on every USB segment.
+**Board:** 50 mm wide (the 1455C slot dimension), 120 mm length, 4 layers,
+90 Ω differential pairs on every USB segment.
 
-Length budget for the 80 mm target:
+*Revised during execution.* This spec originally targeted the **1455C802** at
+80 mm, with the 120 mm part named as an outline-only fallback. Task 7's
+footprint audit replaced the length budget's placeholder dimensions with
+courtyards measured from the actual `.kicad_mod` files, and the chain no
+longer fits:
 
-| Zone | Approx. |
-|---|---|
-| J1 + ESD array + VBUS TVS | 15 mm |
-| ADuM4165 Side 1 + crystal + SN6505B | 20 mm |
-| Barrier zone | 8.3 mm |
-| Rectifier + LDO + TPS2553 | 20 mm |
-| ESD array + VBUS TVS + J2 | 15 mm |
-| **Total** | **~78 mm** |
+| Zone | Placeholder | Measured |
+|---|---|---|
+| J1 + ESD array + VBUS TVS | 15 mm | 16.2–18.0 mm |
+| ADuM4165 Side 1 + crystal + SN6505B | 20 mm | ≥20 mm |
+| Barrier zone | 8.3 mm | 8.3 mm |
+| Rectifier + LDO + TPS2553 | 20 mm | 19.36 mm |
+| ESD array + VBUS TVS + J2 | 15 mm | 16.2–18.0 mm |
+| **Total** | **~78 mm** | **80.1–83.7 mm** |
+
+Against 80.0 mm available, that is zero-to-negative margin. The USB-C
+receptacle is 9.42 mm deep rather than the assumed 9.0 mm, and `D_SMA` is
+7.0 mm on the load-bearing axis rather than 5.0 mm.
+
+**The 80 mm board is not necessarily impossible** — this is a
+one-dimensional model of a two-dimensional board, area utilization is only
+23.7 % of a 50 mm-wide panel, and nothing forces these parts into one row.
+But the fallback costs only an edge-cut edit and buys ~40 mm of slack, so
+120 mm is the working assumption rather than a gamble on tight placement.
+Revisiting 80 mm on a later spin, once real placement is known, stays open.
 
 The barrier runs across the 50 mm width with the ADuM4165 (12.8 mm) and T1
 (13.2 mm) straddling it side by side, leaving room for the routed slot and
