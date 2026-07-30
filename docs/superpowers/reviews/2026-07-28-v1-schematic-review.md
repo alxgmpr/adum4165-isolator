@@ -6,6 +6,8 @@
 **Analyzers run:** `analyze_schematic.py` (run `2026-07-30_1616`, `analysis-v1/`), `kicad-cli sch erc`, `kicad-cli sch export netlist --format kicadxml`, `kicad-cli sch export bom`, jlcsearch (LCSC) live catalogue lookups
 **Analyzers not run:** `analyze_pcb.py`, `analyze_gerbers.py`, `analyze_emc.py`, `analyze_thermal.py`, SPICE, `--lifecycle` (no distributor API keys in this environment) — no PCB exists yet, so anything layout-scoped is out of reach; see [Not Performed](#not-performed--open-items-for-layout).
 
+**Fix round 1 (2026-07-30):** closed the one Important finding from the independent review — the D5/D6 footprint-pad-to-datasheet-pinout check, open since Task 2 and never subsequently closed. See the [ESD](#2-esd) section below and `datasheets/extracted/T6V0S5A-7-pins.md`. Result: **confirms** the existing wiring; no schematic change. Also added a note under [VBUS_HOST capacitance](#6-vbus_host-total-capacitance--10-µf) clarifying that `PORT_VBUS`'s 22.1 µF is out of scope for the §7.2.4.1 limit, so it isn't re-litigated by a future reader. The schematic file (`v1/isolator-v1.kicad_sch`) was **not modified** in this round.
+
 ---
 
 ## Verdict
@@ -94,6 +96,14 @@ Each point from the Task 8 brief, checked against `kicad-cli sch export netlist 
 
 - `U2.5` on `VBUS_HOST`, `U3.5` on `PORT_VBUS` — confirmed via netlist (`VBUS_HOST` contains `('U2','5')`; `PORT_VBUS` contains `('U3','5')`). **Satisfied.**
 - `D5`/`D6` present, not DNP (`dnp no` / `in_bom yes` on both). Orientation: `D5.Description` = *"pin1(cathode)->VBUS_HOST, pin2(anode)->GND1"*, and the netlist confirms `VBUS_HOST` contains `('D5','1')` and `GND1` contains `('D5','2')` — cathode to VBUS as required. `D6` mirrors this on the downstream side: `PORT_VBUS` contains `('D6','1')`, `GND2` contains `('D6','2')`, `D6.Description` = *"pin1(cathode)->PORT_VBUS, pin2(anode)->GND2"*. **Satisfied.**
+
+  **Fix round 1 closure — D5/D6 footprint pad polarity, previously open since Task 2.** The claim above rested only on the `Device:D_TVS` symbol's `Description` property; the symbol's own pins are generic (`A1`/`A2`, both typed `passive`, no cathode/anode encoded), so the electrical-schematic wiring alone doesn't prove the *physical part*, once soldered to the *physical footprint pad*, lands cathode-side-up on the VBUS net. Task 2's report flagged this explicitly ("D5/D6 footprint identified as existing in the stock library but not pad-geometry-checked against the T6V0S5A-7's specific mechanical drawing — flagged for Task 3/4") and it was never subsequently closed — Tasks 3/4/7 verified courtyard/body size only. Closed here the same way Task 4 closed it for D1/D2's `SS34`/`D_SMA` (see `datasheets/extracted/SS34-pins.md`): read the part's own datasheet mechanical drawing and cross-checked it against the KiCad footprint file directly. Full derivation in `datasheets/extracted/T6V0S5A-7-pins.md`; summary:
+
+  1. **Datasheet** (`datasheets/T3V3S5A_T5V0S5A_T6V0S5A_T12S5A.pdf`, p.1, "Mechanical Data" + "Device Schematic"): *"Terminal Connections: Cathode Band"*; the schematic glyph `Pin 2 ─o───▷|───o─ Pin 1` puts the cathode bar at Pin 1. **Pin 1 = cathode**, on the physical, cathode-banded terminal — the same conclusion Task 5 independently reached for D6 ("Investigation 1 — D6 polarity", `task-5-report.md`), re-derived here rather than taken on faith.
+  2. **Footprint** (`Diode_SMD/D_SOD-523.kicad_mod`, read directly from the KiCad install): pad "1" sits at the footprint's negative-x end; pad "2" at positive-x. Both pads are identical roundrects (no shape-based polarity cue), so polarity comes from the `F.Fab` diode glyph the footprint author drew — reconstructing its line segments shows a triangle apex pointing at `x=-0.2` with a separate cathode bar drawn at that same apex, both on the pad-1 side; the triangle's open flat base and the anode-side lead stub point toward pad 2. **Footprint pad 1 = cathode**, matching KiCad's convention already confirmed for `Diode_SMD:D_SMA` (D1/D2).
+  3. **Binding**: KiCad pairs symbol pin numbers to footprint pad numbers by exact text match, and neither D5 nor D6 carries an `(alternate)` pin-function override (verified: zero `alternate` occurrences in the schematic file) — so symbol pin "1" binds to footprint pad "1" with no remapping.
+
+  Chain: datasheet cathode-band terminal = pin 1 → pin 1 binds to pad 1 → pad 1 sits under the footprint's cathode-bar glyph → pad 1 is wired to `VBUS_HOST` (D5) / `PORT_VBUS` (D6). **Confirms, does not contradict, the current wiring — no schematic change needed or made.** Item closed, not merely carried forward.
 - CC lines: `HOST_CC1`/`HOST_CC2` (unnamed nets `('J1','A5')`+`('R1','1')` and `('J1','B5')`+`('R2','1')`) and `PORT_CC1`/`PORT_CC2` carry only the Rd/Rp resistors, no ESD device. Deliberately unprotected per spec, and this task did **not** add protection — the brief is explicit that "fixing" this would be wrong for v1. **Satisfied, correctly left alone.**
 
 ### 3. CY1 populated, on both grounds
@@ -124,6 +134,8 @@ Four separate CC nets, four separate resistors, no sharing. **Satisfied.**
 /VBUS_HOST: C3(4.7) + C4(0.1) + C6(0.1) + C7(4.7) = 9.6 uF
 ```
 Confirmed independently by the analyzer's own USB-compliance module: `usb_compliance.connectors[J1].vbus_capacitance_detail.total_uf = 9.6`. **Satisfied**, 0.4 µF of margin under the USB 2.0 §7.2.4.1 limit.
+
+**Note for future readers — `PORT_VBUS` (downstream) is not held to this same 10 µF number.** The analyzer's `usb_compliance` module also reports `connectors[J2].vbus_capacitance_detail.total_uf = 22.1` (C14 22 µF + C15 0.1 µF). This is **not a violation** and should not be re-litigated: USB 2.0 §7.2.4.1's 10 µF/50 µC hot-plug limit applies to the load a bus-powered device presents to the *upstream* host port at attach — i.e. `VBUS_HOST`/`J1`, which is the number checked above. `J2`/`PORT_VBUS` is a downstream port fed through `U6` (TPS2553), a current-limited switch with soft-start explicitly relied upon (see spec, "Isolated side") to prevent exactly the inrush transient the 10 µF limit exists to bound. The switch, not a raw capacitance ceiling, is what makes the downstream bulk capacitance safe to attach a device to.
 
 ### 7. Two ground domains, exactly three permitted crossings
 
@@ -230,3 +242,4 @@ None of these are blockers to starting PCB layout; all are either already-known 
 | Isolation bridge check | clean |
 | New MPNs sourced this task | `C3`/`C7` (Murata `GRM21BR71E475KA73L`), `C8`/`C10` (Taiyo Yuden `TMK325ABJ476MM-P`, reused from v2) |
 | LCSC codes added this task | `C3`, `C7`, `C8`, `C10`, `U5`, `R3`–`R10` (10 refs) |
+| Fix round 1 — D5/D6 footprint pad-polarity check | **Closed** — datasheet + `.kicad_mod` cross-check confirms Pad 1 = cathode on both parts, matching current wiring; see `datasheets/extracted/T6V0S5A-7-pins.md`. Open since Task 2, never previously closed. No schematic change. |
