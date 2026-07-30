@@ -619,6 +619,7 @@ Add a text block to the sheet so the layout plan inherits them without needing t
 > 4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other crossing. No copper bridges the barrier on any layer.
 > 5. ADuM4165 bypass caps within 10 mm total lead length.
 > 6. J1 and J2 end-launched, mating faces flush with the outer face of the plastic end panels.
+> 7. Rectifier + LDO + TPS2553 zone measures 19.36 mm against a 20 mm budget. D1 and D2 must be placed **side by side, not in series** — in series the zone overruns by 3.36 mm.
 
 - [ ] **Step 3: Verify every footprint resolves**
 
