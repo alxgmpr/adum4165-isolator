@@ -8,6 +8,17 @@
 
 **Fix round 1 (2026-07-30):** closed the one Important finding from the independent review — the D5/D6 footprint-pad-to-datasheet-pinout check, open since Task 2 and never subsequently closed. See the [ESD](#2-esd) section below and `datasheets/extracted/T6V0S5A-7-pins.md`. Result: **confirms** the existing wiring; no schematic change. Also added a note under [VBUS_HOST capacitance](#6-vbus_host-total-capacitance--10-µf) clarifying that `PORT_VBUS`'s 22.1 µF is out of scope for the §7.2.4.1 limit, so it isn't re-litigated by a future reader. The schematic file (`v1/isolator-v1.kicad_sch`) was **not modified** in this round.
 
+**Fix round 2 (2026-07-30) — final whole-branch review, documentation/annotation wave.** A whole-branch review found no Critical issues but three Important and several Minor gaps, all documentation and layout-constraint gaps rather than wiring defects. All were fixed in one wave; **no schematic connectivity changed** (verified by pre/post netlist diff). Summary:
+
+- **Important — port current limit vs. supply capability.** R3 = 93.1 kΩ gives I_OS = 252/286/324 mA (min/nom/max, SLVS841F Eq. 1) against a DC-DC/LDO chain that droops to ≈ 240 mA. The spec's old claim ("ILIM ~250 mA typical, tops out near the DC-DC ceiling") was wrong on both halves — 250 mA is closer to the guaranteed floor, and the band's max sits ~33% above the ceiling. **Ruling: keep R3, correct the documentation.** R3's real job is soft-start (letting bulk-capacitance devices charge without collapsing the DC-DC into a restart loop) plus a short-circuit backstop — its original justification, unaffected. Accepted consequence: FAULT will not light on a normal overload, because the supply sags before the TPS2553's guaranteed-minimum trip point is reached; an overload drops the whole link (Side 2 UVLO standby) rather than tripping just the port. Rejected alternative: R3 ≈ 128 kΩ would cap I_OS(max) at ≈ 240 mA and make FAULT meaningful, at the cost of dropping the guaranteed port current to ≈ 182 mA and false-tripping devices the supply could actually feed. Full derivation in the spec's Power budget section ("R3 and the port current limit — corrected"); mirrored into the spec's Verification plan (step 5) as a bring-up note so nobody chases a FAULT LED that is never supposed to light.
+- **Important — ADuM4165 ground pins not suitable for bypass capacitance.** Datasheet Table 12 (p.12, verified directly against `datasheets/adum4165-4166.pdf`): U1 pins 4, 7 (GND1) and 15, 16, 17 (GND2) "must be connected to PCB ground... These pins are not suitable for connection of bypass capacitance" — verbatim. Added as a new binding layout-constraint item naming the pins explicitly and directing bypass-cap ground returns to pins 2/10 (GND1) and 11/19 (GND2) instead. The trap: pin 4 sits immediately next to VDD1's pin 3, where C5 lands — the shortest, most natural trace is the forbidden one.
+- **Important — four `VBUS_HOST` bypass caps, no placement assignment.** C3/C4/C6/C7 all carried the generic "Unpolarized capacitor, small symbol" `Description`, giving layout no signal for which cap serves which IC. Verified against the SN6505B data sheet (fetched live, Table 5-1 + §10 Power Supply Recommendations): VCC "should be bypassed with a 4.7 µF or greater, low-ESR capacitor," plus a companion 0.1 µF placed as close as possible to the VCC pin. Assigned: C7 (4.7 µF) = SN6505B's mandatory VCC bypass, C6 (0.1 µF) = its close-to-pin companion — both cluster at U4/T1 center-tap (already their schematic grouping). C4 (0.1 µF) = ADuM4165 U1's mandatory VBUS1 bypass (datasheet Table 12, pin 1), which must cluster at U1 pin 1 inside the existing "10 mm total lead length" constraint — **not** with C3 despite C3/C4 currently being drawn adjacent near J1. C3 (4.7 µF) = J1-entrance bulk/inrush capacitance, staying near J1 (SN6505B §9.2.2.4 permits supply-entrance placement on a 4-layer board). Each cap's `Description` property now states this; a matching item was added to the layout-constraints block.
+- **Minor — `DCDC_RAW` two-value spec.** 6.15 V (budget table) is unloaded; ~5.8 V (LDO dropout note) is under full load. Both now labeled.
+- **Minor — 90% converter efficiency.** No published curve for the 750313638 itself; closest 1 A-class Würth part shows ~85–86% at 300 mA. Spec now notes 85% drops the port figure to ~226 mA — 240 mA is a best case, not a floor.
+- **Minor — PGOOD absolute maximum.** Table 8 (p.10): PGOOD to GND2 abs max is **VDD2 + 0.5 V**. The schematic's PGOOD note now explicitly warns any future R9 population must return to `VDD2`, never the convenient `ISO_5V` 5 V rail.
+- **Minor — empty title block.** Filled: title "Isolated USB 2.0 Cable — v1", date, revision. No company/author precedent exists in either `isolator.kicad_sch` or `isolator-v1.kicad_pro` (checked directly — neither file has ever carried a `title_block` or a `meta`/`text_variables` company field), so those fields are left blank rather than invented.
+- **Also recorded — PGOOD structure.** See [PGOOD is push-pull](#pgood-is-push-pull-confirmed-by-table-18-p15) below. This closes a question three separate rounds of bring-up investigation left open.
+
 ---
 
 ## Verdict
@@ -203,6 +214,27 @@ d2 = nets.get('GND2', set()) - ALLOWED
 
 ---
 
+## PGOOD is push-pull, confirmed by Table 18 (p.15)
+
+This closes a question that took three rounds of prior investigation to leave open (see the schematic's own prior note: "PGOOD structure unconfirmed (no VOH/VOL row...)"). Verified directly against `datasheets/adum4165-4166.pdf`:
+
+**Table 18, "Control Signals and Power (Positive Logic)" (p.15):**
+
+| VBUS1 | VDD1 | VBUS2 | VDD2 | PGOOD | UD±/DD± |
+|---|---|---|---|---|---|
+| 5 or 3.3 V | 3.3 V | 5 or 3.3 V | 3.3 V | **High** | normal operation |
+| 0 | 0 | 5 or 3.3 V | 3.3 V | **Low** | Side 1 High-Z, Side 2 low (15 kΩ pull-down) |
+| 5 or 3.3 V | 3.3 V | 0 | 0 | **High-Z** | both High-Z / host pull-ups |
+| 0 | 0 | 0 | 0 | **High-Z** | both High-Z |
+
+PGOOD drives **High** when both sides are powered and drives **Low** (not High-Z) when Side 1 is unpowered and Side 2 is powered. High-Z occurs *only* when `VDD2` = 0. A pin that actively drives both a high and a low level whenever Side 2 has power cannot be open-drain — open-drain outputs never source a high level. **PGOOD is push-pull.**
+
+Also confirmed, Table 8 (p.10) Absolute Maximum Ratings: "Downstream Input Voltage (DD−, DD+, XI2, XO2, and PGOOD) to GND2: −0.5 V to `VDD2` + 0.5 V." PGOOD's absolute maximum is `VDD2` (3.3 V) + 0.5 V, **not** `ISO_5V` (5 V). The schematic's PGOOD note has been updated to state both facts and to warn that any future population of R9 (currently DNP) must return its pull-up to `VDD2`, never to the more convenient `ISO_5V` rail — `ISO_5V` alone would exceed the absolute maximum by design.
+
+**No schematic wiring changed.** R10 stays populated (100 kΩ pull-down; harmless — 33 µA — on a push-pull output) and R9 stays DNP, exactly as before. Changing working, ERC-clean circuitry at this stage for a structural clarification that changes no electrical requirement risks regression for no functional gain. **Recorded as an available simplification for a future spin:** now that PGOOD's structure is known to be push-pull (not open-drain), R10's pull-down serves no function a push-pull driver needs — it could be removed on a future revision to save one part and 33 µA. Not applied here.
+
+---
+
 ## Open Items for Layout / Bring-Up
 
 None of these are blockers to starting PCB layout; all are either already-known items or genuinely deferred to a stage this task cannot resolve.
@@ -212,6 +244,8 @@ None of these are blockers to starting PCB layout; all are either already-known 
 3. **`lib_symbol_mismatch` on U4** — accepted, tracked, explicitly not to be "fixed" per prior direction; a fix attempt previously introduced 11 connectivity violations and was reverted.
 4. **80 mm vs. 120 mm enclosure decision** — already an explicit open item in the spec itself (Mechanical section), not something Task 8 touches; carried forward here only for completeness of the layout hand-off.
 5. **`--lifecycle` audit not run** — no `DIGIKEY_CLIENT_ID` / `MOUSER_SEARCH_API_KEY` / `ELEMENT14_API_KEY` in this environment. LCSC stock/price was checked live via jlcsearch (no key required) for every MPN that has an LCSC presence, but active/NRND/EOL status and operating-temperature coverage were not audited. Recommend running `--lifecycle` before committing to a production order.
+6. **FAULT LED will not light on a normal port overload — this is expected, not a defect to chase at bring-up.** R3 = 93.1 kΩ gives the TPS2553 a guaranteed-minimum trip point of 252 mA (SLVS841F Eq. 1), while the DC-DC/LDO chain's own droop caps the port at ≈ 240 mA. An overload therefore sags `VBUS2` below the ADuM4165's UVLO and drops the whole link into Side-2 standby *before* the TPS2553 ever trips. See the spec's Power budget ("R3 and the port current limit — corrected") and Verification plan step 5. Whoever runs the overload bring-up test should expect the link to drop, not FAULT to assert, and should not spend time debugging a "stuck" FAULT LED.
+7. **R10 removal** — available simplification for a future spin now that PGOOD is confirmed push-pull (see above), not applied in this pass.
 
 ---
 
@@ -243,3 +277,4 @@ None of these are blockers to starting PCB layout; all are either already-known 
 | New MPNs sourced this task | `C3`/`C7` (Murata `GRM21BR71E475KA73L`), `C8`/`C10` (Taiyo Yuden `TMK325ABJ476MM-P`, reused from v2) |
 | LCSC codes added this task | `C3`, `C7`, `C8`, `C10`, `U5`, `R3`–`R10` (10 refs) |
 | Fix round 1 — D5/D6 footprint pad-polarity check | **Closed** — datasheet + `.kicad_mod` cross-check confirms Pad 1 = cathode on both parts, matching current wiring; see `datasheets/extracted/T6V0S5A-7-pins.md`. Open since Task 2, never previously closed. No schematic change. |
+| Fix round 2 — final whole-branch review (3 Important, several Minor) | **Closed, documentation/annotation only.** R3 port-current-limit spec correction (kept R3, corrected the claim); ADuM4165 GND-pin bypass-capacitance trap added to layout constraints (Table 12, p.12); `VBUS_HOST` cap placement assigned via `Description` properties + layout-constraint item; `DCDC_RAW` dual-value spec reconciled; 85% efficiency caveat added; PGOOD absolute-max/`VDD2` clause added to schematic note; title block filled; PGOOD confirmed push-pull (Table 18, p.15). No connectivity change (netlist diff verified). |

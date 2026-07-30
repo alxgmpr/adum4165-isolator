@@ -90,9 +90,11 @@ oversized. If v1 validates the substitute, fold it back into v2.
 
 *Part-selection constraint to verify:* dropout at 315 mA against a
 `DCDC_RAW` that sags under load. v2's spec records the winding DCR holding
-`DCDC_RAW` ≥ 5.49 V at 635 mA, so expect roughly 5.8 V at 315 mA, leaving a
-~0.8 V dropout budget. A 1117-class part at 1.2 V dropout does not fit; a
-300–400 mV part does, with margin.
+`DCDC_RAW` ≥ 5.49 V at 635 mA, so expect roughly 5.8 V at 315 mA **under full
+load** — this is the *loaded* figure, distinct from the ≈ 6.15 V *unloaded*
+figure the Power budget table below uses as its starting point. Leaves a
+~0.8 V dropout budget against the loaded figure. A 1117-class part at 1.2 V
+dropout does not fit; a 300–400 mV part does, with margin.
 
 **Changed from DNP to populated:** the barrier-stitching capacitor. See ESD
 protection below.
@@ -108,14 +110,64 @@ The ceiling is the host port's 500 mA obligation.
 | Host budget | 2.5 W |
 | less ADuM4165 Side 1 | −0.35 W |
 | × converter efficiency ~90 % | 1.94 W secondary |
-| at `DCDC_RAW` ≈ 6.15 V | ≈ 315 mA through the LDO |
+| at `DCDC_RAW` ≈ 6.15 V (**unloaded**) | ≈ 315 mA through the LDO |
 | less ADuM4165 Side 2 (`IDD2(H)`, high speed) | −70 mA |
 | less PGOOD / FAULT indicators | −~2 mA |
-| **available at the downstream port** | **≈ 240 mA** |
+| **available at the downstream port** | **≈ 240 mA (243 mA unrounded)** |
 
-TPS2553 ILIM is set to ~250 mA typical, so its tolerance band tops out near
-the DC-DC ceiling rather than above it. The LDO's own current limit is the
-backstop.
+The `DCDC_RAW` ≈ 6.15 V used above is the *unloaded* value the budget's mA
+figures are derived from. Under the ≈ 315 mA of full load the winding DCR
+sags it to roughly 5.8 V (see "Substituted" above) — the two numbers
+describe different operating points, not a contradiction.
+
+**90 % converter efficiency is optimistic.** TI publishes no efficiency
+curve for the 750313638 specifically; the closest 1 A-class part in the same
+Würth family shows ~85–86 % at 300 mA. At 85 %, the downstream figure drops
+to roughly 226 mA. Treat 240 mA as a best case, not a floor.
+
+### R3 and the port current limit — corrected
+
+R3 = 93.1 kΩ into the TPS2553's ILIM pin, applying SLVS841F (the TPS2553
+data sheet) §9.5.1 Equation 1, gives:
+
+**I_OS = 252 mA min / 286 mA nom / 324 mA max.**
+
+This corrects an earlier version of this section, which claimed "ILIM is set
+to ~250 mA typical, so its tolerance band tops out near the DC-DC ceiling."
+That was wrong on both halves: 250 mA is close to the *guaranteed minimum*,
+not the typical, and the tolerance band's *maximum* (324 mA) sits about
+33 % above the DC-DC ceiling, not near it.
+
+**The real current ceiling is the DC-DC droop, at ≈ 240 mA (the "available
+at the downstream port" row above), not the TPS2553.** The TPS2553's
+guaranteed-minimum trip point (252 mA) is already above what the supply can
+deliver, so it cannot intervene before the supply itself gives out. Failure
+scenario: a device draws 280 mA — legal, since the 56 kΩ Rp advertises
+Default USB Power. A nominal TPS2553 does not trip. `ISO_5V` load rises to
+match, the DC-DC/LDO chain can't hold it up, `VBUS2` sags below the
+ADuM4165's UVLO, and Side 2 drops into standby — the whole USB link goes
+down, not just the port, with no fault indication.
+
+**R3 is being kept as-is; the ruling is to correct the documentation, not
+the resistor.** R3's job in this design was never to be the overload-current
+gate — that role belongs to the DC-DC's own droop. R3's actual justification
+is **soft-start**: it lets a device with bulk input capacitance charge up
+without collapsing the DC-DC into a restart loop, plus a short-circuit
+backstop for a dead short at `J2`. Both of those are unaffected by the
+correction above — this was R3's original design justification.
+
+**Accepted consequence:** in normal operation the FAULT LED will not light
+on an overload, because the supply sags before the TPS2553's current limit
+engages. An overload drops the whole link rather than tripping just the
+port and lighting FAULT. This is accepted for a bench-class tool — see the
+Verification plan (step 5) and the schematic note beside `U6`.
+
+**Alternative considered and rejected:** R3 ≈ 128 kΩ would put I_OS(max) at
+≈ 240 mA — at or below the DC-DC ceiling, making FAULT a meaningful signal
+again. The cost: the guaranteed-minimum trip point (I_OS(min)) falls to
+≈ 182 mA, well under what the supply can actually deliver, so the port would
+false-trip legitimate devices the supply could feed. Rejected in favor of
+the higher, documentation-corrected R3.
 
 For comparison, v2's bus-powered mode budgets ≈ 75 mA shared across all four
 ports. Dropping the hub is what buys the difference.
@@ -152,9 +204,14 @@ application-column characterization point, not a rating.
   rectification → `DCDC_RAW` ≈ 6.1 V → fixed 5.0 V LDO → `ISO_5V`.
 - `ISO_5V` feeds the ADuM4165 `VBUS2` pin (internal LDO generates `VDD2`) and
   the TPS2553.
-- **TPS2553** with ILIM ≈ 250 mA, permanently enabled, soft-start relied upon
-  to let a device with bulk input capacitance charge without collapsing the
-  DC-DC into a restart loop. FAULT drives an LED.
+- **TPS2553** (R3 = 93.1 kΩ, I_OS = 252/286/324 mA min/nom/max per SLVS841F
+  Eq. 1), permanently enabled. Its job here is **soft-start** — letting a
+  device with bulk input capacitance charge without collapsing the DC-DC
+  into a restart loop — plus a short-circuit backstop, not overload
+  protection: the DC-DC's own droop (≈ 240 mA) sits below the TPS2553's
+  guaranteed-minimum trip point, so it is the real ceiling. See Power
+  budget, "R3 and the port current limit." FAULT drives an LED, but will
+  not light on a normal overload for the same reason.
 - **J2:** USB 2.0-only USB-C receptacle, 16-pin, as a DFP. CC1 and CC2 each
   pull up to 5 V through a dedicated 56 kΩ Rp (Default USB Power).
   SBU1/SBU2 unconnected.
@@ -340,8 +397,11 @@ v2 as hierarchical sheets.
 ## Known limitations (accepted)
 
 - **≈ 240 mA at the downstream port**, while the 56 kΩ Rp advertises Default
-  USB Power. This is the same descriptor-honesty deviation v2 carries,
-  bounded here by the 250 mA TPS2553 limit and the LDO's current limit.
+  USB Power. This is the same descriptor-honesty deviation v2 carries. The
+  bound is the DC-DC/LDO chain's own droop, **not** the TPS2553's current
+  limit — see Power budget, "R3 and the port current limit." A consequence
+  of this: overload will drop the whole link before FAULT lights, rather
+  than tripping just the port. Accepted for a bench-class tool.
 - A transparent isolator inherently draws host power that the downstream
   device never declared, because the host negotiates with the device, not
   with the isolator. This is intrinsic to the topology.
@@ -368,7 +428,14 @@ spec with measurements.
 4. **Enumeration** at low, full, and high speed with real devices — mouse,
    serial adapter, flash drive.
 5. **TPS2553 behavior.** Soft-start against a device with large input
-   capacitance; overload → FAULT LED → recovery.
+   capacitance. **Do not expect overload → FAULT LED as the normal
+   result.** R3 = 93.1 kΩ gives a guaranteed-minimum trip point of 252 mA
+   (SLVS841F Eq. 1), above the DC-DC/LDO chain's own ≈ 240 mA droop ceiling
+   — so an overload is expected to sag `VBUS2` and drop the whole link into
+   Side-2 standby *before* the TPS2553 trips and FAULT lights. See Power
+   budget, "R3 and the port current limit." If FAULT never asserts during
+   an overload test, that is the expected/accepted behavior, not a defect
+   to chase.
 6. **ESD.** Contact discharge to both connector shells and to the enclosure,
    with and without the stitching capacitor populated. This settles the
    DNP-versus-populate question for v2 with measurements rather than
