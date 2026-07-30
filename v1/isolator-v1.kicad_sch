@@ -4714,7 +4714,7 @@
 	)
 	(rectangle
 		(start 175.0816 17.78)
-		(end 415.29 91.8845)
+		(end 415.29 99.06)
 		(stroke
 			(width 0.254)
 			(type dash)
@@ -10202,6 +10202,327 @@
 			(justify left top)
 		)
 		(uuid "32498659-05c8-4ce9-a0e3-daedf1184d66")
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 342.9 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "8c5b5e66-4e25-4410-b762-8e872b3958c6")
+		(property "Reference" "R9"
+			(at 345.44 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 345.44 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 342.9 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 342.9 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol; PGOOD2 pull-up to VDD2 -- DNP by design. Populate ONLY if bring-up shows PGOOD is open-drain; never populate together with R10 (see schematic note)"
+			(at 342.9 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 342.9 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 342.9 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±1%"
+			(at 342.9 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "64449815-f392-477c-8f25-b8d0deb63d34")
+		)
+		(pin "2"
+			(uuid "1a95484c-3e6b-4e67-aaee-36ebc7766a6c")
+		)
+		(instances
+			(project "isolator-v1"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 342.9 74.93) (xy 342.9 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f28cfcd8-4b5d-4b48-a70c-c1edb647e84c")
+	)
+	(label "VDD2"
+		(at 342.9 69.85 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "820ad614-2faf-46de-a32b-fc736c90aaca")
+	)
+	(wire
+		(pts
+			(xy 342.9 80.01) (xy 342.9 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5f94990-5b58-4289-92c3-ed2b24cdd300")
+	)
+	(label "PGOOD2"
+		(at 342.9 82.55 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2104a220-152e-4f7a-a3e6-60c71a5b29ac")
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 353.06 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ddaf418-e52f-4b39-a830-761e3c1bc0e5")
+		(property "Reference" "R10"
+			(at 355.6 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 355.6 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol; PGOOD2 pull-down to GND2, populated -- defines Q1 gate low (Q1 definitively OFF) if PGOOD turns out to be open-drain; negligible load if PGOOD is push-pull"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±1%"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "820ad614-2faf-46de-a32b-fc736c90ac00")
+		)
+		(pin "2"
+			(uuid "3b8c4b21-1b4e-4a7f-9c9d-7c6f0a5b0e11")
+		)
+		(instances
+			(project "isolator-v1"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 353.06 74.93) (xy 353.06 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f298ff94-2104-461d-8b30-47cb3403c9c8")
+	)
+	(label "PGOOD2"
+		(at 353.06 72.39 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "061629a4-691a-451a-8097-3c840978effa")
+	)
+	(wire
+		(pts
+			(xy 353.06 80.01) (xy 353.06 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bde8a49-5dad-474a-b672-523e7274f808")
+	)
+	(label "GND2"
+		(at 353.06 85.09 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8cc28932-96cb-4d35-a54a-90692e50b90e")
+	)
+	(text "PGOOD structure unconfirmed (no VOH/VOL row; ADI eval boards use unpopulated test headers for\nALL test points incl. power pins -- proves nothing). R10 populated -> Q1 gate parks low (OFF)\nif open-drain. If bring-up shows open-drain, populate R9 instead of R10 -- never both."
+		(exclude_from_sim no)
+		(at 332.74 97.79 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "6acfbd05-bbee-40a7-823c-e2ab7757a80b")
 	)
 	(symbol
 		(lib_id "isolator-lib:2N7002")
