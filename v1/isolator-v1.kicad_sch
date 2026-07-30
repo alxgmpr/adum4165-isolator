@@ -876,6 +876,162 @@
 			(embedded_fonts no)
 		)
 
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+
 		(symbol "Device:Crystal_GND24_Small"
 			(pin_names
 				(offset 1.016)
@@ -10758,7 +10914,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (level-shift buffer to ISO_5V; PGOOD confirmed push-pull, no bias network needed), lights when PGOOD asserted"
+		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (level-shift buffer to ISO_5V; PGOOD output structure unspecified -- R10 populated so Q1 gate parks low (OFF) if open-drain), lights when PGOOD asserted"
 			(at 398.78 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13307,6 +13463,276 @@
 			(justify left top)
 		)
 		(uuid "5f8d25f6-7591-41a1-9cc4-631dced01c99")
+	)
+	(rectangle
+		(start 165.1 240.03)
+		(end 330.2 271.78)
+		(stroke
+			(width 0.254)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "4d6d9b7c-f02c-4c31-9784-884e12c8eb5b")
+	)
+	(text "CY1 -- BARRIER STITCHING (POPULATED, NOT DNP)"
+		(exclude_from_sim no)
+		(at 167.64 245.87 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "6443fa7b-0af6-4859-b566-e527e751bb73")
+	)
+	(wire
+		(pts
+			(xy 200.66 255.27) (xy 200.66 252.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6542cab1-a75c-4bc7-9af1-9c4316872042")
+	)
+	(label "GND2"
+		(at 200.66 252.73 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "07f27501-2ce5-400d-9eb5-84b8f55ce911")
+	)
+	(wire
+		(pts
+			(xy 200.66 262.89) (xy 200.66 265.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29441434-77f8-4f90-a606-3206abbbee20")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 200.66 259.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "811e0aef-9978-4e3e-a96a-03a6259de667")
+		(property "Reference" "CY1"
+			(at 203.2 257.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF Y1 400VAC"
+			(at 203.2 260.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "isolator-lib:C_Disc_D7.0mm_W5.5mm_P14.00mm"
+			(at 200.66 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "datasheet.lcsc.com/datasheet/pdf/72294672594803dd6c35ea194e227910.pdf"
+			(at 200.66 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 200.66 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Q07F3Z102MA5B0S0N0"
+			(at 200.66 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Songtian (STE)"
+			(at 200.66 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2914611"
+			(at 200.66 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±20%"
+			(at 200.66 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "72590abf-647d-48ed-b82b-1d7868458805")
+		)
+		(pin "2"
+			(uuid "1a72b1b6-657d-4d3a-8b5e-fd4f8e9dfda9")
+		)
+		(instances
+			(project "isolator-v1"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "CY1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 200.66 265.43 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dfc0ff4e-78b4-495d-a833-846403c36c0b")
+		(property "Reference" "#PWR15"
+			(at 200.66 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND1"
+			(at 203.2 266.6999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 200.66 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a17b4cda-fd16-40e7-84a1-a072357906d1")
+		)
+		(instances
+			(project "isolator-v1"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "CY1 -- barrier stitching. POPULATED, not DNP. Gives GND2's ESD current a\ndefined return to GND1 instead of forcing it through the ADuM4165 die. Y1\nsafety-rated, 14 mm pitch, clears the 8.3 mm barrier. Do NOT substitute v2's\n2220 SMD part -- its body spans only 5.7 mm and would cut the barrier below\n8.3 mm."
+		(exclude_from_sim no)
+		(at 215.9 248.92 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left top)
+		)
+		(uuid "d0f7d337-5e00-421b-8a0f-d1c10e0dd765")
 	)
 	(sheet_instances
 		(path "/"
