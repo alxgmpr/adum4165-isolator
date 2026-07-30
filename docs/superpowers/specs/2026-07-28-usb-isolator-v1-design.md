@@ -58,7 +58,7 @@ Primary references:
                              ║         ║                      │              │
    D+/D− ─ USBLC6 ─> UD± ════║═════════║══> DD± ─ USBLC6 ─┐  ADuM VBUS2  TPS2553
                              ║         ║                   │  (Side 2)   ILIM≈250mA
-                             ║   CY 1nF Y2                  └──> J2 USB-C <───┘
+                             ║   CY 1nF Y1                  └──> J2 USB-C <───┘
                              ║  (populated)                      (DFP, 2× Rp 56k)
 ```
 
@@ -227,7 +227,11 @@ which the ADuM4165 absolute maximum table caps at **±100 kV/µs**.
 
 v1 therefore **populates** the barrier-stitching capacitor that v2 marks DNP:
 
-- 470 pF–1 nF, safety-rated Y2, single point in the barrier gap.
+- 1 nF, safety-rated **Y1**, 14 mm lead pitch, single point in the barrier gap.
+  (The spec originally called for Y2. Task 2 reclassified it: CY1 bridges a
+  *reinforced* barrier — the same role as the ADuM4165 — and Y1 is the class
+  rated for that. The reclassification is also what surfaced a stocked 14 mm-pitch
+  part, taking the geometric creepage margin from +1.1 mm to +5.05 mm.)
 - Select a part whose body creepage and clearance clear the 8.3 mm barrier
   gap, so the capacitor does not become the weakest link in the barrier.
 - Negligible at DC and mains frequency: 1 nF is 2.7 MΩ at 60 Hz, so the

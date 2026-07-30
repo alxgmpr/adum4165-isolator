@@ -245,7 +245,7 @@ parts = {
     'U6 TPS2553':      (3.0, 3.0),   'Y1 crystal':      (3.2, 2.5),
     'D1 SMA':          (5.0, 3.0),   'D2 SMA':          (5.0, 3.0),
     'C bulk in':       (2.0, 1.25),  'C raw 47u':       (7.3, 4.3),
-    'C iso 47u':       (7.3, 4.3),   'CY1 Y2 disc':     (10.0, 6.0),
+    'C iso 47u':       (7.3, 4.3),   'CY1 Y1 disc':     (10.0, 6.0),
     'D3/D4 LEDs':      (3.2, 1.6),   'D5/D6 TVS':       (2.0, 1.2),
 }
 area = sum(w*h for w, h in parts.values())
@@ -329,7 +329,9 @@ Unidirectional TVS, V_RWM ≥ 5.5 V, capacitance is unconstrained on a power rai
 
 v2 carries `C49` as a **1 nF 2 kV part in a 2220 (5.7 × 5.0 mm) SMD package, DNP**. That package spans only 5.7 mm. Populating it as-is would **reduce the barrier from 8.3 mm to 5.7 mm**, making the capacitor the weakest point in the isolation — exactly what the spec forbids.
 
-Select instead a **through-hole Y2-rated safety capacitor**, 470 pF–1 nF, with a lead spacing of at least 10 mm so its body and pads clear the barrier gap. Y2 parts carry agency-rated creepage and clearance by construction. Confirm the chosen part's own creepage rating equals or exceeds 8.3 mm.
+Select instead a **through-hole safety capacitor** with enough lead pitch that its body and pads clear the barrier gap, and confirm the chosen part's creepage meets or beats 8.3 mm.
+
+**Resolved during execution:** the part chosen is `Q07F3Z102MA5B0S0N0` (Songtian), 1 nF, **Y1**-rated, 14 mm pitch. Y1 rather than the Y2 this plan first specified — CY1 bridges a *reinforced* barrier, the same role the ADuM4165 plays, and Y1 is the class rated for that. Reclassifying is also what surfaced a stocked 14 mm-pitch part, moving the geometric margin from +1.1 mm to +5.05 mm. Note that Y-capacitor datasheets generally do **not** publish a creepage figure, so the margin here is derived from mechanical-drawing dimensions and labelled as derived, not rated.
 
 Symbol: `Device:C`. Footprint: a through-hole disc footprint with ≥10 mm pad pitch — check `Capacitor_THT:` for a match, and create one in `isolator-lib.pretty` if none fits.
 
@@ -340,7 +342,7 @@ Create `docs/superpowers/reviews/2026-07-28-v1-part-selection.md` with, for each
 - [ ] **Step 7: Commit**
 
 ```bash
-git add -A && git commit -m "feat(v1): select 5V LDO, VBUS TVS, and Y2 stitching cap"
+git add -A && git commit -m "feat(v1): select 5V LDO, VBUS TVS, and Y1 stitching cap"
 ```
 
 ---
@@ -543,9 +545,9 @@ git commit -am "feat(v1/sch): ADuM Side 2, TPS2553 port switch, downstream USB-C
 
 - [ ] **Step 1: Place CY1, the barrier-stitching capacitor**
 
-Symbol `Device:C`, value from Task 2 (470 pF–1 nF Y2). One terminal to `GND1`, the other to `GND2`. Add a schematic text note beside it:
+Symbol `Device:C`, part from Task 2 (`Q07F3Z102MA5B0S0N0`, 1 nF, Y1, 14 mm pitch). One terminal to `GND1`, the other to `GND2`. Add a schematic text note beside it:
 
-> CY1 — barrier stitching. POPULATED, not DNP. Gives GND2's ESD current a defined return to GND1 instead of forcing it through the ADuM4165 die. Y2 safety-rated; body creepage must clear the 8.3 mm barrier. Do NOT substitute a 2220 SMD part.
+> CY1 — barrier stitching. POPULATED, not DNP. Gives GND2's ESD current a defined return to GND1 instead of forcing it through the ADuM4165 die. Y1 safety-rated, 14 mm pitch, clears the 8.3 mm barrier. Do NOT substitute v2's 2220 SMD part — its body spans only 5.7 mm and would cut the barrier below 8.3 mm.
 
 This is the third and last permitted barrier crossing, alongside U1 and T1.
 
