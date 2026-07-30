@@ -3926,6 +3926,136 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "isolator-lib:2N7002"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "2N7002"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/a141b8bd86b14475955ac8c4d3eea0a8.pdf"
+				(at 5.08 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "2N7002_0_1"
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "2N7002_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(symbol
 		(lib_id "Device:D_TVS")
@@ -4584,7 +4714,7 @@
 	)
 	(rectangle
 		(start 175.0816 17.78)
-		(end 370.6816 91.8845)
+		(end 415.29 91.8845)
 		(stroke
 			(width 0.254)
 			(type dash)
@@ -10074,8 +10204,8 @@
 		(uuid "32498659-05c8-4ce9-a0e3-daedf1184d66")
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 342.9 74.93 0)
+		(lib_id "Device:R_Small")
+		(at 332.74 77.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10084,9 +10214,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c33c3bc4-5eab-4d27-ab2d-e82d418ad6a3")
-		(property "Reference" "D3"
-			(at 342.9 72.39 0)
+		(uuid "54af18f2-d1ed-4231-9a21-2d6a2cee2e74")
+		(property "Reference" "R9"
+			(at 335.28 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10096,8 +10226,8 @@
 			(justify left)
 			)
 		)
-		(property "Value" "LED"
-			(at 342.9 77.47 0)
+		(property "Value" "100k"
+			(at 335.28 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10107,8 +10237,8 @@
 			(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 342.9 74.93 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 332.74 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10119,7 +10249,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 342.9 74.93 0)
+			(at 332.74 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10129,8 +10259,8 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, PGOOD indicator (lights when PGOOD2 high)"
-			(at 342.9 74.93 0)
+		(property "Description" "Resistor, small symbol; PGOOD2 pull-up to VDD2 (works whether PGOOD is open-drain or push-pull)"
+			(at 332.74 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10140,8 +10270,8 @@
 				)
 			)
 		)
-		(property "MPN" "KT-0603G"
-			(at 342.9 74.93 0)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 332.74 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10151,8 +10281,8 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Hubei KENTO Elec"
-			(at 342.9 74.93 0)
+		(property "Manufacturer" "YAGEO"
+			(at 332.74 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10162,8 +10292,8 @@
 				)
 			)
 		)
-		(property "LCSC" "C12624"
-			(at 342.9 74.93 0)
+		(property "Tolerance" "±1%"
+			(at 332.74 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10174,10 +10304,498 @@
 			)
 		)
 		(pin "1"
-			(uuid "48f39986-00f1-4411-8a13-232da2a8f4ea")
+			(uuid "7dd70bd9-f40e-42be-a020-13ff19c49ada")
 		)
 		(pin "2"
-			(uuid "51e0e6dd-732a-4902-9ea2-6f883ccd8078")
+			(uuid "ec61b6ad-bfa7-41ce-ac46-066a604c739b")
+		)
+		(instances
+			(project "isolator-v1"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 332.74 74.93) (xy 332.74 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89691a99-b8e3-43a0-bb11-9e3279fb10ce")
+	)
+	(label "VDD2"
+		(at 332.74 69.85 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7e32000c-4e56-4269-9782-a452e2030a91")
+	)
+	(wire
+		(pts
+			(xy 332.74 80.01) (xy 332.74 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2531ee5-e2e2-47ce-81d7-df17a7bb7261")
+	)
+	(label "PGOOD2"
+		(at 332.74 82.55 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "79cf2650-3c0a-4d2f-8275-62cf5eb029a6")
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 353.06 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce6c356f-788b-4934-9bab-92ef420401ea")
+		(property "Reference" "R10"
+			(at 355.6 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 355.6 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol; PGOOD2 pull-down to GND2 (matches v2's R25/R26 bias pair)"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±1%"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b07f696c-5cbd-4fb4-aeb8-8bdd9c5e36b5")
+		)
+		(pin "2"
+			(uuid "75c76546-62ac-49ff-951e-7cfb20e7276b")
+		)
+		(instances
+			(project "isolator-v1"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 353.06 74.93) (xy 353.06 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f298ff94-2104-461d-8b30-47cb3403c9c8")
+	)
+	(label "PGOOD2"
+		(at 353.06 72.39 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "061629a4-691a-451a-8097-3c840978effa")
+	)
+	(wire
+		(pts
+			(xy 353.06 80.01) (xy 353.06 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bde8a49-5dad-474a-b672-523e7274f808")
+	)
+	(label "GND2"
+		(at 353.06 85.09 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8cc28932-96cb-4d35-a54a-90692e50b90e")
+	)
+	(symbol
+		(lib_id "isolator-lib:2N7002")
+		(at 378.46 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2bae84d4-9327-44ee-8c5c-1a4fe32c8d6a")
+		(property "Reference" "Q1"
+			(at 365 83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 365 85.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 378.46 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/a141b8bd86b14475955ac8c4d3eea0a8.pdf"
+			(at 378.46 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23 -- PGOOD buffer (gate=PGOOD2, source=GND2, drain=D3 cathode)"
+			(at 378.46 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "2N7002LT1G"
+			(at 378.46 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 378.46 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C16338"
+			(at 378.46 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0438090e-aac1-4e02-b410-d55f9df2c1cf")
+		)
+		(pin "2"
+			(uuid "8599fa4f-9844-4358-b06d-4cd17d06d85d")
+		)
+		(pin "3"
+			(uuid "28253b7c-0cd7-4c37-8665-57744ac86ad7")
+		)
+		(instances
+			(project "isolator-v1"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 373.38 77.47) (xy 370.84 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c98c717f-20eb-40c5-9f78-1d6bf248b11f")
+	)
+	(label "PGOOD2"
+		(at 370.84 77.47 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9bc5e552-f7db-4e11-89f5-359a438891a0")
+	)
+	(wire
+		(pts
+			(xy 381 82.55) (xy 381 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f2ab06b-6b3d-42b0-8d00-76604fa4dfd0")
+	)
+	(label "GND2"
+		(at 381 85.09 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b19e1797-7903-4c48-abb0-16320b21b128")
+	)
+	(wire
+		(pts
+			(xy 381 72.39) (xy 381 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e7d5cc5-0db2-4b9e-ae34-55850f5cd4c4")
+	)
+	(label "PG_LED_K"
+		(at 381 69.85 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "14e12209-5143-499f-9398-b65134749f5a")
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 398.78 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5cd57575-581c-4c48-aba3-75f819de20bd")
+		(property "Reference" "D3"
+			(at 398.78 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 398.78 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			(justify left)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 398.78 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 398.78 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (open-drain-safe buffer), lights when PGOOD asserted"
+			(at 398.78 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "KT-0603G"
+			(at 398.78 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Hubei KENTO Elec"
+			(at 398.78 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C12624"
+			(at 398.78 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0f40f8a0-1f00-485e-9828-f4f56ba6fe11")
+		)
+		(pin "2"
+			(uuid "ca728e0f-1a62-431b-bcdf-f06656caa0ae")
 		)
 		(instances
 			(project "isolator-v1"
@@ -10190,47 +10808,47 @@
 	)
 	(wire
 		(pts
-			(xy 346.71 74.93) (xy 349.25 74.93)
+			(xy 394.97 77.47) (xy 392.43 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "84fb45b6-713c-49ab-9604-7d8be2fd3f72")
+		(uuid "e1cc2c5c-818f-4409-962d-ba10b237b3be")
 	)
-	(label "PGOOD2"
-		(at 349.25 74.93 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0e041178-0724-4d6a-a25b-e74c6350bd11")
-	)
-	(wire
-		(pts
-			(xy 339.09 74.93) (xy 334.01 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a7e4d5b-2ddf-43e5-89d2-496e26992777")
-	)
-	(label "PGOOD_LED_K"
-		(at 334.01 74.93 180)
+	(label "PG_LED_K"
+		(at 392.43 77.47 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "223203a2-4bb6-4066-a40b-f9ef8c89013b")
+		(uuid "924d2a06-dadb-4943-8cf6-72a86b9132c8")
+	)
+	(wire
+		(pts
+			(xy 402.59 77.47) (xy 405.13 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d30ded8-2a22-427f-bc49-36e1a5dd3c53")
+	)
+	(label "PG_LED_A"
+		(at 405.13 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f769aff3-3299-4cfa-9dfe-7efe84dc7b57")
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 360.68 80.01 0)
+		(at 375.92 38.1 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10239,9 +10857,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "06ff42c7-ee9d-45f4-89c5-b3faec3c86c0")
+		(uuid "d6a3919e-95d1-4803-add8-9f89abf8a5f4")
 		(property "Reference" "R6"
-			(at 363.22 78.74 0)
+			(at 378.46 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10251,8 +10869,8 @@
 			(justify left)
 			)
 		)
-		(property "Value" "1.3k"
-			(at 363.22 81.28 0)
+		(property "Value" "3.01k"
+			(at 378.46 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10263,7 +10881,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 360.68 80.01 0)
+			(at 375.92 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10274,7 +10892,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 360.68 80.01 0)
+			(at 375.92 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10284,8 +10902,8 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 360.68 80.01 0)
+		(property "Description" "Resistor, small symbol; PGOOD LED series, off ISO_5V (5V) via Q1 buffer, ~1mA (see task-5-report Fix round 1)"
+			(at 375.92 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10295,8 +10913,8 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-071K3L"
-			(at 360.68 80.01 0)
+		(property "MPN" "RC0603FR-073K01L"
+			(at 375.92 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10307,7 +10925,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 360.68 80.01 0)
+			(at 375.92 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10318,7 +10936,7 @@
 			)
 		)
 		(property "Tolerance" "±1%"
-			(at 360.68 80.01 0)
+			(at 375.92 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -10329,10 +10947,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "44a64740-df26-43a7-9665-7ef14520021f")
+			(uuid "fabd45a8-2d96-4753-926b-14060c1907c7")
 		)
 		(pin "2"
-			(uuid "054e1173-e146-4121-a396-163da97096b8")
+			(uuid "dae10a69-3132-4377-8179-16ca0f13e09c")
 		)
 		(instances
 			(project "isolator-v1"
@@ -10345,43 +10963,43 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 77.47) (xy 360.68 71.12)
+			(xy 375.92 35.56) (xy 375.92 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1a629c1d-d2d2-4883-8439-fa8c2c500226")
+		(uuid "15a394d8-92e4-475a-bd3d-1495474e5b5c")
 	)
-	(label "PGOOD_LED_K"
-		(at 360.68 71.12 90)
+	(label "ISO_5V"
+		(at 375.92 30.48 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "590b3f95-ae79-49e0-b304-05f6be20df26")
+		(uuid "a51d3ed0-95e2-42e2-8fd0-66874fbbf0ff")
 	)
 	(wire
 		(pts
-			(xy 360.68 82.55) (xy 360.68 88.9)
+			(xy 375.92 40.64) (xy 375.92 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "23aa25a0-7bd4-47d3-af75-b4d475fa0034")
+		(uuid "774acdfe-910b-45fe-b908-6eafcab8f263")
 	)
-	(label "GND2"
-		(at 360.68 88.9 90)
+	(label "PG_LED_A"
+		(at 375.92 45.72 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify right bottom)
 		)
-		(uuid "875f8055-207f-416e-9774-037ff646f86b")
+		(uuid "06086ce2-909f-47db-b91f-147fe717783f")
 	)
 	(rectangle
 		(start 314.96 100.33)
@@ -11115,7 +11733,7 @@
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify right bottom)
 		)
 		(uuid "4fcb1729-3afa-4aaf-924b-a824f0ebbcce")
 	)
@@ -11632,7 +12250,7 @@
 	)
 	(symbol
 		(lib_id "Power_Protection:USBLC6-2SC6")
-		(at 185.42 195.58 0)
+		(at 185.42 201.93 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11641,9 +12259,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "218f1ff2-37e7-47ae-ace1-c7f90aab5547")
+		(uuid "a3dea2eb-1434-4049-bde4-240fda68d7e3")
 		(property "Reference" "U3"
-			(at 182.92 185.08 0)
+			(at 169.5 218.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11654,7 +12272,7 @@
 			)
 		)
 		(property "Value" "USBLC6-2SC6"
-			(at 182.92 206.08 0)
+			(at 169.5 221 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11665,7 +12283,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 185.42 195.58 0)
+			(at 185.42 201.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -11676,7 +12294,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
-			(at 185.42 195.58 0)
+			(at 185.42 201.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -11687,7 +12305,7 @@
 			)
 		)
 		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
-			(at 185.42 195.58 0)
+			(at 185.42 201.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -11698,7 +12316,7 @@
 			)
 		)
 		(property "MPN" "USBLC6-2SC6"
-			(at 185.42 195.58 0)
+			(at 185.42 201.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -11709,7 +12327,7 @@
 			)
 		)
 		(property "Manufacturer" "STMicroelectronics"
-			(at 185.42 195.58 0)
+			(at 185.42 201.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -11720,7 +12338,7 @@
 			)
 		)
 		(property "LCSC" "C2687116"
-			(at 185.42 195.58 0)
+			(at 185.42 201.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 		(hide yes)
@@ -11731,22 +12349,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "ca30009e-209d-4082-a93b-9dc0853a3cd9")
+			(uuid "bdb32878-3b06-4834-b258-2454231b2303")
 		)
 		(pin "2"
-			(uuid "f31d355c-fac6-492c-85ab-9a53920fb539")
+			(uuid "6aa61cf6-01c2-4757-96eb-79681344f304")
 		)
 		(pin "3"
-			(uuid "3629dc0a-7790-4804-9e8a-c403e7506c04")
+			(uuid "c4d7a344-4c98-43de-9ab9-1801337a0486")
 		)
 		(pin "4"
-			(uuid "dc2a0cee-41f1-4546-8560-086611ef11eb")
+			(uuid "c3d92c4e-22f9-4719-b3e9-b6225e8afa2d")
 		)
 		(pin "5"
-			(uuid "e99a7b17-f03a-4258-a6de-e68483bd9899")
+			(uuid "4d952b54-1490-45d8-a06f-92a1e474b7f1")
 		)
 		(pin "6"
-			(uuid "6573160b-72ef-4f57-962c-55ac2c487bbb")
+			(uuid "192d4614-1e4f-4969-a4a4-c8da0e37462c")
 		)
 		(instances
 			(project "isolator-v1"
@@ -11759,123 +12377,123 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 195.58) (xy 177.8 195.58)
+			(xy 180.34 201.93) (xy 177.8 201.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "904e3273-5370-4a08-b61b-53c54c2f6876")
+		(uuid "66335171-fc12-4f4e-8472-1c77a29dd1fb")
 	)
 	(label "PORT_D+"
-		(at 177.8 195.58 180)
+		(at 177.8 201.93 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "f15c09a0-4629-4f7c-b349-d090a2169a7d")
+		(uuid "f47962a2-8971-4279-976e-0d665318504e")
 	)
 	(wire
 		(pts
-			(xy 190.5 195.58) (xy 193.04 195.58)
+			(xy 190.5 201.93) (xy 193.04 201.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "92e2a000-c433-43df-846b-48c0d8122d79")
+		(uuid "e2879c3c-be1b-4656-b651-28e712de57dc")
 	)
 	(label "PORT_D+"
-		(at 193.04 195.58 0)
+		(at 193.04 201.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "21b3d0b3-6dee-4e27-8325-1ead2ead3b37")
+		(uuid "04355812-eb0d-42e7-a6b1-6e0574ec0757")
 	)
 	(wire
 		(pts
-			(xy 180.34 198.12) (xy 177.8 198.12)
+			(xy 180.34 204.47) (xy 177.8 204.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "efe70229-1c7f-4620-9944-e56c45519303")
+		(uuid "5c5e765c-9453-4e51-8963-d7f64c82e7c5")
 	)
 	(label "PORT_D-"
-		(at 177.8 198.12 180)
+		(at 177.8 204.47 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "ca21fb8f-61cc-4efa-955f-f7e819018dfa")
+		(uuid "418bc4b5-bb40-4529-a6f3-ad33dd16b330")
 	)
 	(wire
 		(pts
-			(xy 190.5 198.12) (xy 193.04 198.12)
+			(xy 190.5 204.47) (xy 193.04 204.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d56565e6-af9f-4822-892e-552708ea14ce")
+		(uuid "74f75bfe-f18f-40c3-9301-fa548ef8812d")
 	)
 	(label "PORT_D-"
-		(at 193.04 198.12 0)
+		(at 193.04 204.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "cad06a78-dc14-428e-b16a-a2553b01757f")
+		(uuid "73f194fc-7238-4fbc-b005-8f23c61764cf")
 	)
 	(wire
 		(pts
-			(xy 185.42 203.2) (xy 185.42 205.74)
+			(xy 185.42 209.55) (xy 185.42 212.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f6de9bed-df01-4287-b8f2-2746b5ae2f1a")
+		(uuid "de6fb93a-c177-46e3-82bc-af9dd44c3ee2")
 	)
 	(label "GND2"
-		(at 185.42 205.74 90)
+		(at 185.42 212.09 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify right bottom)
 		)
-		(uuid "1aace96c-e9ff-438f-8dad-5c33b0460e10")
+		(uuid "6c00e5b0-1253-4b67-b2fd-62ec9ae93d61")
 	)
 	(wire
 		(pts
-			(xy 185.42 190.5) (xy 185.42 187.96)
+			(xy 185.42 196.85) (xy 185.42 194.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9f81f731-f364-47ff-a8d5-a04e4dc3b600")
+		(uuid "64935065-7d75-4d61-97bb-46cf497689aa")
 	)
 	(label "PORT_VBUS"
-		(at 185.42 187.96 90)
+		(at 185.42 194.31 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "464623c7-69e8-40d1-a397-f1be86f42d50")
+		(uuid "026291c8-fb81-48f9-8145-b78d682610d5")
 	)
 	(symbol
 		(lib_id "Device:D_TVS")
