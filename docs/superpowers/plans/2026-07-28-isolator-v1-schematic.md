@@ -77,26 +77,36 @@ ALLOWED = {'U1', 'T1', 'CY1'}   # the only parts permitted to bridge domains
 
 nets = {n.get('name').lstrip('/'): {nd.get('ref') for nd in n.iter('node')}
         for n in r.iter('net')}
-d1, d2 = nets.get('GND1', set()), nets.get('GND2', set())
 
-# A part in both domain sets is a bridge. Only ALLOWED may be one.
-for ref in sorted((d1 & d2) - ALLOWED):
+# Domain membership, with the barrier-crossing parts excluded from BOTH
+# sides. U1/T1/CY1 sit on GND1 and GND2 by design, so leaving them in would
+# make every net they touch look like a bridge.
+d1 = nets.get('GND1', set()) - ALLOWED
+d2 = nets.get('GND2', set()) - ALLOWED
+
+# A non-allowed part on both grounds is a bridge.
+for ref in sorted(d1 & d2):
     print("BRIDGE (part on both grounds):", ref)
 
-# A signal net carrying parts from both domains is a bridge, unless every
-# such part is an allowed barrier-crossing device.
+# A signal net is a bridge when it carries a GND1-domain part AND a
+# GND2-domain part, ignoring the allowed crossings.
 for name, refs in nets.items():
     if name in ('GND1', 'GND2'):
         continue
-    a, b = refs & d1, refs & d2
-    if a and b and not (a | b) <= ALLOWED:
+    rest = refs - ALLOWED
+    if (rest & d1) and (rest & d2):
         print("BRIDGE (net spans domains):", name, sorted(refs))
 EOF
 ```
 
-A clean run prints nothing. Note the second check flags a net only when a
-non-allowed part sits on each side — U1, T1, and CY1 legitimately appear on
-nets that touch both domains.
+A clean run prints nothing.
+
+**Why `ALLOWED` is subtracted from both domain sets, not just tested at the
+end:** U1, T1, and CY1 each have pins on `GND1` *and* `GND2`. If they stay in
+`d1`/`d2`, then every ordinary net they touch — `HOST_D+`, `VBUS_HOST`,
+`DCDC_RAW` — contains a member of both sets and reports a false bridge. The
+check must ask whether a *non-crossing* part on the host side shares a net
+with a *non-crossing* part on the isolated side.
 
 **ERC policy.** The schematic is ERC-clean at the end of every task *for the circuitry placed so far*. Pins whose wiring belongs to a later task get explicit `(no_connect)` markers, removed in that later task. Exit code 0 with `--severity-error` is the gate. Warnings are triaged; two-domain designs legitimately warn until PWR_FLAGs land in Task 6.
 
