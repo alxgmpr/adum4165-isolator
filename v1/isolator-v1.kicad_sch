@@ -5750,6 +5750,39 @@
 				)
 			)
 		)
+		(property "MPN" "GRM21BR71E475KA73L"
+			(at 25.4 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 25.4 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C162427"
+			(at 25.4 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		
 		
 		
@@ -7801,6 +7834,39 @@
 				)
 			)
 		)
+		(property "MPN" "GRM21BR71E475KA73L"
+			(at 38.1 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 38.1 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C162427"
+			(at 38.1 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e10cacae-2008-4fbe-81b2-690e20eb023d")
 		)
@@ -8970,6 +9036,39 @@
 				)
 			)
 		)
+		(property "MPN" "TMK325ABJ476MM-P"
+			(at 222.25 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 222.25 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C90142"
+			(at 222.25 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b9e61203-d416-4918-baa9-feb42c776b32")
 		)
@@ -9178,6 +9277,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C3752807"
+			(at 260.35 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "MPN" "TLV76750DGNR"
 			(at 260.35 135.89 0)
 		(hide yes)
@@ -9297,6 +9407,39 @@
 		(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TMK325ABJ476MM-P"
+			(at 283.21 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 283.21 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C90142"
+			(at 283.21 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10426,6 +10569,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C14675"
+			(at 342.9 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "MPN" "RC0603FR-07100KL"
 			(at 342.9 77.47 0)
 			(show_name no)
@@ -10571,6 +10725,17 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol; PGOOD2 pull-down to GND2, populated -- defines Q1 gate low (Q1 definitively OFF) if PGOOD turns out to be open-drain; negligible load if PGOOD is push-pull"
+			(at 353.06 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14675"
 			(at 353.06 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11080,6 +11245,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C137732"
+			(at 375.92 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "MPN" "RC0603FR-073K01L"
 			(at 375.92 38.1 0)
 			(show_name no)
@@ -11249,6 +11425,17 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol; sets TPS2553 I_OS threshold (see task-5-report ILIM calc)"
+			(at 322.58 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C273780"
 			(at 322.58 127 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11661,6 +11848,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C14675"
+			(at 365.76 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "MPN" "RC0603FR-07100KL"
 			(at 365.76 124.46 0)
 			(show_name no)
@@ -11806,6 +12004,17 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol; FAULT LED series"
+			(at 378.46 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C105881"
 			(at 378.46 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13221,6 +13430,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C114630"
+			(at 247.65 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "MPN" "RC0603FR-0756KL"
 			(at 247.65 187.96 0)
 			(show_name no)
@@ -13366,6 +13586,17 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol; USB-C CC2 Rp (DFP default-power advertisement)"
+			(at 262.89 190.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+		(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C114630"
 			(at 262.89 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
