@@ -10204,316 +10204,6 @@
 		(uuid "32498659-05c8-4ce9-a0e3-daedf1184d66")
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 332.74 77.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "54af18f2-d1ed-4231-9a21-2d6a2cee2e74")
-		(property "Reference" "R9"
-			(at 335.28 76.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 335.28 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 332.74 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 332.74 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol; PGOOD2 pull-up to VDD2 (works whether PGOOD is open-drain or push-pull)"
-			(at 332.74 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-07100KL"
-			(at 332.74 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 332.74 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" "±1%"
-			(at 332.74 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7dd70bd9-f40e-42be-a020-13ff19c49ada")
-		)
-		(pin "2"
-			(uuid "ec61b6ad-bfa7-41ce-ac46-066a604c739b")
-		)
-		(instances
-			(project "isolator-v1"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 332.74 74.93) (xy 332.74 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89691a99-b8e3-43a0-bb11-9e3279fb10ce")
-	)
-	(label "VDD2"
-		(at 332.74 69.85 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7e32000c-4e56-4269-9782-a452e2030a91")
-	)
-	(wire
-		(pts
-			(xy 332.74 80.01) (xy 332.74 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2531ee5-e2e2-47ce-81d7-df17a7bb7261")
-	)
-	(label "PGOOD2"
-		(at 332.74 82.55 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "79cf2650-3c0a-4d2f-8275-62cf5eb029a6")
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 353.06 77.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ce6c356f-788b-4934-9bab-92ef420401ea")
-		(property "Reference" "R10"
-			(at 355.6 76.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 355.6 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 353.06 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 353.06 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol; PGOOD2 pull-down to GND2 (matches v2's R25/R26 bias pair)"
-			(at 353.06 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-07100KL"
-			(at 353.06 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 353.06 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" "±1%"
-			(at 353.06 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-		(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b07f696c-5cbd-4fb4-aeb8-8bdd9c5e36b5")
-		)
-		(pin "2"
-			(uuid "75c76546-62ac-49ff-951e-7cfb20e7276b")
-		)
-		(instances
-			(project "isolator-v1"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 353.06 74.93) (xy 353.06 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f298ff94-2104-461d-8b30-47cb3403c9c8")
-	)
-	(label "PGOOD2"
-		(at 353.06 72.39 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "061629a4-691a-451a-8097-3c840978effa")
-	)
-	(wire
-		(pts
-			(xy 353.06 80.01) (xy 353.06 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3bde8a49-5dad-474a-b672-523e7274f808")
-	)
-	(label "GND2"
-		(at 353.06 85.09 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8cc28932-96cb-4d35-a54a-90692e50b90e")
-	)
-	(symbol
 		(lib_id "isolator-lib:2N7002")
 		(at 378.46 77.47 0)
 		(unit 1)
@@ -10747,7 +10437,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (open-drain-safe buffer), lights when PGOOD asserted"
+		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (level-shift buffer to ISO_5V; PGOOD confirmed push-pull, no bias network needed), lights when PGOOD asserted"
 			(at 398.78 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11854,7 +11544,7 @@
 	)
 	(wire
 		(pts
-			(xy 379.73 133.35) (xy 377.19 133.35)
+			(xy 379.73 133.35) (xy 375.92 133.35)
 		)
 		(stroke
 			(width 0)
@@ -11863,7 +11553,7 @@
 		(uuid "d7f68326-3088-405f-b410-2c645b2c5837")
 	)
 	(label "nFAULT"
-		(at 377.19 133.35 180)
+		(at 375.92 133.35 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12477,7 +12167,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 196.85) (xy 185.42 194.31)
+			(xy 185.42 196.85) (xy 185.42 186.69)
 		)
 		(stroke
 			(width 0)
@@ -12486,7 +12176,7 @@
 		(uuid "64935065-7d75-4d61-97bb-46cf497689aa")
 	)
 	(label "PORT_VBUS"
-		(at 185.42 194.31 90)
+		(at 185.42 186.69 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13104,7 +12794,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 185.42) (xy 247.65 179.07)
+			(xy 247.65 185.42) (xy 247.65 184.15)
 		)
 		(stroke
 			(width 0)
@@ -13113,7 +12803,7 @@
 		(uuid "949b03df-4417-45e4-8c54-ccc2f1aa43fc")
 	)
 	(label "PORT_VBUS"
-		(at 247.65 179.07 90)
+		(at 247.65 184.15 90)
 		(effects
 			(font
 				(size 1.27 1.27)
