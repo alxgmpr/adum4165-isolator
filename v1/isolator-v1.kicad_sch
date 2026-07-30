@@ -13734,6 +13734,41 @@
 		)
 		(uuid "d0f7d337-5e00-421b-8a0f-d1c10e0dd765")
 	)
+	(rectangle
+		(start 314.96 190.5)
+		(end 405.13 232.41)
+		(stroke
+			(width 0.254)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "352ead34-cf41-4b50-a2ef-6a64d8699ae8")
+	)
+	(text "V1 LAYOUT CONSTRAINTS -- BINDING"
+		(exclude_from_sim no)
+		(at 317.5 196.34 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "d301c0f7-3fa8-4beb-965d-a434d2e52a66")
+	)
+	(text "1. Board 50 mm wide (Hammond 1455C slot), 80 mm target length, 4 layers, 90\n    Ω differential pairs.\n2. ALL COPPER PULLED BACK ≥1 mm (target 2 mm) FROM BOTH LONG EDGES, every\n    layer, full length. The extrusion's aluminium slots grip those edges;\n    edge copper lets the enclosure short GND1 to GND2.\n3. ESD arrays (U2, U3) within 5 mm of the connector pins they protect. Array\n    GND pin on its own via straight to plane, never daisy-chained. Pair\n    routed in-line through pins 1/3 → 6/4, no stubs.\n4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other\n    crossing. No copper bridges the barrier on any layer.\n5. ADuM4165 bypass caps within 10 mm total lead length.\n6. J1 and J2 end-launched, mating faces flush with the outer face of the\n    plastic end panels.\n7. Length chain has only 1.7 mm margin (78.3 of 80.0 mm). The rectifier +\n    LDO + TPS2553 zone fits ONLY with D1 and D2 placed side by side; in\n    series it overruns by 3.36 mm."
+		(exclude_from_sim no)
+		(at 317.5 199.39 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left top)
+		)
+		(uuid "10e80524-dcd9-424b-8b95-82303e057849")
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
