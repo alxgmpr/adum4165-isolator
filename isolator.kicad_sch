@@ -10735,7 +10735,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "976dbc94-9ec7-44b0-846b-1bf1f5d3ad16")
+			(uuid "976dbc94-9ec7-44b0-846b-1bf1f5d3ad17")
 		)
 		(instances
 			(project "isolator"
@@ -15516,7 +15516,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e0dd936a-4ca8-4300-8129-bc80bdf6fe4c")
+			(uuid "e0dd936a-4ca8-4300-8129-bc80bdf6fe4d")
 		)
 		(instances
 			(project "isolator"
