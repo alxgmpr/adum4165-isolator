@@ -102,7 +102,10 @@ and Gate 3 would fail.
 `isolator.kicad_pcb` is a 794-byte skeleton: four copper layers declared, no
 `(stackup …)` block, no outline, no footprints, no nets. The `USB_DIFF90`
 geometry (0.21 mm / 0.127 mm) was tuned against JLCPCB **JLC04161H-7628**,
-recorded on branch `4port-archive` (commit `5c56d3e`). Without that block,
+recorded on branch `claude/jlcpcb-design-rules-4layer-6d6ae1` (commit
+`5c56d3e`) — **not** on `4port-archive`, whose board still carries the stale
+2-layer stackup (single 1.51 mm core, Er 4.5) that `5c56d3e` was written to
+replace. Without that block,
 "90 Ω" is not checkable against anything.
 
 ### 5. `.kicad_dru` is the 4-port's and is stale three ways
@@ -171,7 +174,8 @@ CY1 (6.00 mm) — 31.68 mm of parts, ~4.7 mm of gap between each.
 
 ## Layer stack
 
-JLC04161H-7628, ported verbatim from `4port-archive:isolator.kicad_pcb`:
+JLC04161H-7628, ported verbatim from
+`claude/jlcpcb-design-rules-4layer-6d6ae1:isolator.kicad_pcb`:
 
 | Layer | Type | Thickness | Er |
 |---|---|---|---|

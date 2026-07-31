@@ -238,14 +238,29 @@ KIPY=/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions
 $KIPY tools/skeleton.py isolator.kicad_pcb
 ```
 
-- [ ] **Step 4: Port the stackup from the archived 4-port board**
+- [ ] **Step 4: Port the stackup from the 4-layer branch**
 
-The `USB_DIFF90` geometry was tuned against JLCPCB JLC04161H-7628. Copy that `(stackup …)` block verbatim into `isolator.kicad_pcb`'s `(setup …)` section:
+The `USB_DIFF90` geometry was tuned against JLCPCB JLC04161H-7628.
+
+**Take it from `claude/jlcpcb-design-rules-4layer-6d6ae1`, not from `4port-archive`.** The archived 4-port board still carries the stale 2-layer stackup (single 1.51 mm core, Er 4.5); commit `5c56d3e` on the other branch is what replaced it. Extract with paren matching rather than `sed` — a `sed` range on `/(stackup/,/^\t\t)/` closes early on this file and silently drops In1.Cu and In2.Cu while still producing balanced parentheses, so the truncation does not look like an error.
+
+Copy that `(stackup …)` block verbatim into `isolator.kicad_pcb`'s `(setup …)` section:
 
 ```bash
 cd /Users/alex/Documents/isolator
-git show 4port-archive:isolator.kicad_pcb | sed -n '/(stackup/,/^\t\t)/p' > /tmp/stackup.txt
-wc -l /tmp/stackup.txt   # expect ~60 lines, F.SilkS through B.SilkS
+git show claude/jlcpcb-design-rules-4layer-6d6ae1:isolator.kicad_pcb > /tmp/archive4l.kicad_pcb
+python3 - <<'EOF'
+s = open('/tmp/archive4l.kicad_pcb').read()
+i = s.index('(stackup'); d = 0
+for j in range(i, len(s)):
+    if s[j] == '(': d += 1
+    elif s[j] == ')':
+        d -= 1
+        if d == 0: end = j + 1; break
+open('/tmp/stackup.txt', 'w').write(s[i:end])
+print('extracted', s[i:end].count(chr(10)) + 1, 'lines')
+EOF
+# expect 63 lines, F.SilkS through B.SilkS
 ```
 
 Insert it inside `(setup …)` in the worktree's `isolator.kicad_pcb`. Verify the four copper thicknesses and two dielectric Er values survived:
