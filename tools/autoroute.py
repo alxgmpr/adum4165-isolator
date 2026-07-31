@@ -19,9 +19,12 @@ WORK = os.path.join(HERE, 'ar_work')
 KIPY = '/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3'
 KICLI = '/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli'
 
-PAIR_NETS = ['/HOST_D+', '/HOST_D-', '/ISO_D+', '/ISO_D-',
-             '/P1_D+', '/P1_D-', '/P2_D+', '/P2_D-',
-             '/P3_D+', '/P3_D-', '/P4_D+', '/P4_D-']
+# Nets whose copper Freerouting must not touch. These are the pairs that are
+# ALREADY hand-routed and verified; the harvest step refuses to import any item
+# on them and the run aborts if their copper changes. /PORT_D+/- is deliberately
+# absent -- it is unrouted, so Freerouting is allowed to route it, and Gate 3
+# checks the result.
+PAIR_NETS = ['/HOST_D+', '/HOST_D-', '/PORT_D+', '/PORT_D-']
 
 STEP_EXPORT = r'''
 import pcbnew, os, sys
@@ -151,7 +154,11 @@ def protect_wiring(dsn_path):
     s = s.replace('(type route)', '(type fix)')
     # forbid routing on the plane layers: declare them power-type
     import re as _re
-    for lyr in ('GND', 'PWR'):
+    # These are this board's inner plane layer names. They were 'GND'/'PWR' on
+    # the 4-port design. If this list does not match the actual layer names the
+    # substitution silently does nothing and Freerouting will route across the
+    # split ground planes, which can bridge the isolation barrier.
+    for lyr in ('GND_SPLIT_A', 'GND_SPLIT_B'):
         s, k = _re.subn(r'\(layer %s\s*\(type signal\)' % lyr,
                         '(layer %s (type power)' % lyr, s)
         print('layer', lyr, '-> power type:', k, 'occurrence(s)')
