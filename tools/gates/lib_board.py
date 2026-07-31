@@ -6,6 +6,27 @@ BOARD_WID_MM = 50.0
 COPPER_LAYERS = [pcbnew.F_Cu, pcbnew.In1_Cu, pcbnew.In2_Cu, pcbnew.B_Cu]
 
 
+def board_box(board):
+    """(x0, y0, x1, y1) of the board outline, in mm, wherever it sits.
+
+    The board's position in sheet coordinates is arbitrary and it HAS been moved,
+    so nothing here may assume it starts at the origin. Derived from Edge.Cuts.
+    """
+    bb = board.GetBoardEdgesBoundingBox()
+    return (MM(bb.GetLeft()), MM(bb.GetTop()), MM(bb.GetRight()), MM(bb.GetBottom()))
+
+
+def long_edges(board):
+    """The two long edges as ('y', v0, v1) or ('x', v0, v1).
+
+    Constraint 2 pulls copper back from the LONG edges only -- those are the ones
+    the extrusion's slots grip. The short end edges carry the flush connectors and
+    are deliberately exempt.
+    """
+    x0, y0, x1, y1 = board_box(board)
+    return ('y', y0, y1) if (x1 - x0) >= (y1 - y0) else ('x', x0, x1)
+
+
 def MM(iu):
     return pcbnew.ToMM(iu)
 

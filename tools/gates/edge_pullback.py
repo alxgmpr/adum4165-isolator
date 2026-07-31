@@ -14,12 +14,14 @@ TARGET_MM = 2.0
 
 def check(board, floor_mm=FLOOR_MM, target_mm=TARGET_MM):
     violations, warnings = [], []
+    axis, e0, e1 = L.long_edges(board)
     for lid, lname, kind, net, (x0, y0, x1, y1) in L.copper_items(board):
-        top_gap = y0 - 0.0
-        bot_gap = L.BOARD_WID_MM - y1
+        lo, hi = (y0, y1) if axis == 'y' else (x0, x1)
+        top_gap = lo - e0
+        bot_gap = e1 - hi
         worst = min(top_gap, bot_gap)
         rec = dict(layer=lname, kind=kind, net=net, gap_mm=round(worst, 4),
-                   edge='y=0' if top_gap < bot_gap else 'y=%.0f' % L.BOARD_WID_MM)
+                   edge='%s=%.3f' % (axis, e0 if top_gap < bot_gap else e1))
         if worst < floor_mm:
             violations.append(rec)
         elif worst < target_mm:

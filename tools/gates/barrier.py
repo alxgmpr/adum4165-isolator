@@ -31,23 +31,40 @@ def _domain_map(pro_path, netlist_path):
 
 
 def _slots(board):
-    """Bounding boxes (mm) of Edge.Cuts geometry that is not the outer outline."""
-    outer = board.GetBoardEdgesBoundingBox()
-    ow, oh = pcbnew.ToMM(outer.GetWidth()), pcbnew.ToMM(outer.GetHeight())
-    segs = []
+    """Bounding boxes (mm) of Edge.Cuts cutouts -- routed slots, not the perimeter.
+
+    A cutout is an Edge.Cuts item lying STRICTLY inside the board outline. Testing
+    "is it smaller than the board" instead is wrong twice over: rounded corner
+    arcs are small but are part of the perimeter, and a barrier slot may legally
+    span almost the whole board height -- this one is 46.06 mm of a 50 mm board,
+    which a 90%-of-height test silently discarded, taking Gate 1's credit for the
+    slot with it and reporting T1's bare 7.51 mm clearance as a failure.
+    """
+    bx0, by0, bx1, by1 = L.board_box(board)
+    M = 0.5                      # margin inside which an item counts as perimeter
+    out = []
     for d in board.GetDrawings():
         if d.GetLayer() != pcbnew.Edge_Cuts:
             continue
         bb = d.GetBoundingBox()
-        segs.append((pcbnew.ToMM(bb.GetLeft()), pcbnew.ToMM(bb.GetTop()),
-                     pcbnew.ToMM(bb.GetRight()), pcbnew.ToMM(bb.GetBottom())))
-    # Group segments into connected rectangles; drop any spanning the full board.
-    inner = [s for s in segs if not (s[2] - s[0] > 0.9 * ow or s[3] - s[1] > 0.9 * oh)]
-    if not inner:
+        x0, y0 = pcbnew.ToMM(bb.GetLeft()), pcbnew.ToMM(bb.GetTop())
+        x1, y1 = pcbnew.ToMM(bb.GetRight()), pcbnew.ToMM(bb.GetBottom())
+        if x0 > bx0 + M and y0 > by0 + M and x1 < bx1 - M and y1 < by1 - M:
+            out.append((x0, y0, x1, y1))
+    if not out:
         return []
-    x0 = min(s[0] for s in inner); y0 = min(s[1] for s in inner)
-    x1 = max(s[2] for s in inner); y1 = max(s[3] for s in inner)
-    return [(x0, y0, x1, y1)]
+    # merge overlapping cutout fragments into single rectangles
+    merged = []
+    for s in out:
+        for i, m in enumerate(merged):
+            if not (s[2] < m[0] - 0.2 or m[2] < s[0] - 0.2 or
+                    s[3] < m[1] - 0.2 or m[3] < s[1] - 0.2):
+                merged[i] = (min(s[0], m[0]), min(s[1], m[1]),
+                             max(s[2], m[2]), max(s[3], m[3]))
+                break
+        else:
+            merged.append(s)
+    return merged
 
 
 def _gap(a, b):

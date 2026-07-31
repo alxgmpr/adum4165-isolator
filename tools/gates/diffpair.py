@@ -31,6 +31,7 @@ SKEW_LIMIT_MM = 0.15
 Z_TARGET, Z_TOL = 90.0, 0.10
 DIFF_GAP_MM = 0.127
 SNAP = 0.005
+TOL = 0.02        # mm; endpoints this close are the same node
 
 
 def stackup_from_file(path):
@@ -76,7 +77,26 @@ def path_length(board, net, a, c):
     the graph is keyed on (x, y) only."""
     if a is None or c is None:
         return None, set()
-    key = lambda p: (round(p[0] / SNAP), round(p[1] / SNAP))
+    # Nodes are merged when they coincide within TOL, but each keeps its EXACT
+    # coordinate so lengths stay exact. Bucketing on a grid instead would split a
+    # net whose endpoints differ by a few microns (seen here: 167.730 vs 167.725
+    # landed either side of a bucket boundary and broke the net in two), and
+    # coarsening the grid enough to avoid that would inject its own error into
+    # the very lengths this gate exists to measure.
+    nodes = []
+    index = {}
+
+    def key(p):
+        cell = (int(p[0] / TOL), int(p[1] / TOL))
+        for cx in (cell[0] - 1, cell[0], cell[0] + 1):
+            for cy in (cell[1] - 1, cell[1], cell[1] + 1):
+                for i in index.get((cx, cy), ()):
+                    if math.hypot(nodes[i][0] - p[0], nodes[i][1] - p[1]) <= TOL:
+                        return i
+        nodes.append(p)
+        index.setdefault(cell, []).append(len(nodes) - 1)
+        return len(nodes) - 1
+
     raw, widths = [], set()
     for t in board.GetTracks():
         if t.GetNetname() != net or t.GetClass() == 'PCB_VIA':
@@ -117,13 +137,32 @@ def path_length(board, net, a, c):
             adj.setdefault(key(u), []).append((key(v), d))
             adj.setdefault(key(v), []).append((key(u), d))
 
+    # Tracks also connect THROUGH pads. The pair is routed in-line across each ESD
+    # array, so a trace ends on pin 1 and another starts on pin 6 with no copper
+    # between them -- the pad itself is the link. Without this the net looks broken
+    # into separate components and the gate reports a false "no continuous path".
+    for fp in board.GetFootprints():
+        for pad in fp.Pads():
+            if pad.GetNetname() != net:
+                continue
+            bb = pad.GetBoundingBox()
+            px0, py0 = pcbnew.ToMM(bb.GetLeft()), pcbnew.ToMM(bb.GetTop())
+            px1, py1 = pcbnew.ToMM(bb.GetRight()), pcbnew.ToMM(bb.GetBottom())
+            inside = [i for i in adj
+                      if px0 <= nodes[i][0] <= px1 and py0 <= nodes[i][1] <= py1]
+            for i in range(len(inside)):
+                for j in range(i + 1, len(inside)):
+                    u, v = inside[i], inside[j]
+                    d = math.hypot(nodes[u][0] - nodes[v][0], nodes[u][1] - nodes[v][1])
+                    adj[u].append((v, d))
+                    adj[v].append((u, d))
+
     def nearest(pt):
         best, bk = None, None
-        for k in adj:
-            p = (k[0] * SNAP, k[1] * SNAP)
-            d = math.hypot(p[0] - pt[0], p[1] - pt[1])
+        for i in adj:
+            d = math.hypot(nodes[i][0] - pt[0], nodes[i][1] - pt[1])
             if best is None or d < best:
-                best, bk = d, k
+                best, bk = d, i
         return bk, best
 
     ka, da = nearest(a)
