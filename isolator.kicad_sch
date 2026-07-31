@@ -6451,7 +6451,7 @@
 		)
 		(uuid "01559fb7-399a-4c8f-8510-425af25faeb7")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 185.42 186.69 90)
 		(effects
 			(font
@@ -6831,7 +6831,7 @@
 		)
 		(uuid "52d8d617-409e-4f81-af47-8b7eb79939ef")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 262.89 181.61 90)
 		(effects
 			(font
@@ -6881,7 +6881,7 @@
 		)
 		(uuid "5ba2a58f-26da-4099-89a9-1ca3692607c6")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 231.14 182.88 0)
 		(effects
 			(font
@@ -7241,7 +7241,7 @@
 		)
 		(uuid "a7fe1e01-fbe1-471c-bba7-9d140d275df9")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 247.65 184.15 90)
 		(effects
 			(font
@@ -7331,7 +7331,7 @@
 		)
 		(uuid "c572545e-d628-44fa-bfbd-fa0ed3dd2878")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 194.31 190.5 180)
 		(effects
 			(font
@@ -15829,6 +15829,125 @@
 			(justify left bottom)
 		)
 		(uuid "e907a01b-c95a-4add-b80b-3eaad355c1e9")
+	)
+	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 365.76 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b21c99f0-5307-489b-b2a2-a2d2971fc45f")
+		(property "Reference" "NT3"
+			(at 365.76 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 365.76 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 365.76 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Net tie, 2 pins"
+			(at 365.76 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aaeecf7b-b5cb-4e6e-aca3-50b3310f409a")
+		)
+		(pin "2"
+			(uuid "886dc0bc-ded0-41c0-8060-6c00f25995ee")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "NT3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.21999999999997 163.83) (xy 358.14 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee453f1a-7eaf-4e32-9b28-c9449672061b")
+	)
+	(wire
+		(pts
+			(xy 368.3 163.83) (xy 373.38 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "651dc43e-d63e-4678-9304-94169001374d")
+	)
+	(label "PORT_VBUS"
+		(at 358.14 163.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7621ed29-6a25-4c7a-b0c3-99a092098fe2")
+	)
+	(label "PORT_VBUS_J2"
+		(at 373.38 163.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed8c00b2-b57f-4189-aa66-3733d8ab313e")
 	)
 	(sheet_instances
 		(path "/"
