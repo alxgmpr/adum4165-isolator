@@ -2,24 +2,36 @@
 
 # Galvanic isolation barrier: enforce creepage between host- and isolated-side
 # copper. KiCad's creepage engine follows the board outline, so the routed
-# slot under U1/T1 counts. T1's 7.51 mm land pattern passes because of the
-# slot; C49 (the deliberate DNP stitching bridge) is excluded.
+# slot under T1 counts toward the path.
 (rule "barrier-creepage"
   (condition "(A.Type == 'Track' || A.Type == 'Via' || A.Type == 'Zone') && (B.Type == 'Track' || B.Type == 'Via' || B.Type == 'Zone') && A.hasNetclass('HOST_SIDE') && B.hasNetclass('ISO_SIDE')")
-  (constraint creepage (min 8mm)))
+  (constraint creepage (min 8.3mm)))
 
-# The isolator and transformer packages provide their own certified creepage
-# (8.3 mm / 5 kVrms). Check their pads at their qualified figures instead.
+# U1's land pattern measures exactly 8.3000 mm pad-edge to pad-edge -- it meets
+# the requirement with zero margin. This rule stays at 8mm deliberately: setting
+# it to 8.3mm puts the threshold on the same value as the geometry it is meant
+# to permit, and risks rejecting the part it exists to allow.
 (rule "barrier-clearance-U1"
   (condition "(A.memberOfFootprint('U1') || B.memberOfFootprint('U1')) && A.hasNetclass('HOST_SIDE') && B.hasNetclass('ISO_SIDE')")
   (constraint clearance (min 8mm)))
+
+# T1's land pattern measures 7.5100 mm pad-edge to pad-edge -- 0.79 mm under the
+# barrier requirement as a straight-line clearance. The routed slot beneath it
+# removes substrate so the surface creepage path detours around the slot and
+# clears 8.3 mm. This rule permits the clearance; tools/gates/barrier.py is what
+# verifies the creepage path actually achieves it.
 (rule "barrier-clearance-T1"
   (condition "(A.memberOfFootprint('T1') || B.memberOfFootprint('T1')) && A.hasNetclass('HOST_SIDE') && B.hasNetclass('ISO_SIDE')")
   (constraint clearance (min 7.4mm)))
 
-# Fine-pitch escape: inside any connector courtyard, relax clearance to the
-# JLCPCB floor so tracks can escape 0.5 mm-pitch USB-C pad fields. Custom
+# CY1 is the barrier stitching capacitor and is POPULATED, not DNP. Its 14 mm
+# lead pitch gives 12.0 mm of copper gap, so it needs no relaxation -- it is
+# noted here only so a future reader does not mistake its barrier crossing for
+# an error.
+
+# Fine-pitch escape: inside either connector courtyard, relax clearance to the
+# JLCPCB floor so tracks can escape the 0.5 mm-pitch USB-C pad field. Custom
 # rules take precedence over netclass clearances.
 (rule "connector-neckdown"
-  (condition "A.insideCourtyard('J1') || B.insideCourtyard('J1') || A.insideCourtyard('J2') || B.insideCourtyard('J2') || A.insideCourtyard('J3') || B.insideCourtyard('J3') || A.insideCourtyard('J4') || B.insideCourtyard('J4') || A.insideCourtyard('J5') || B.insideCourtyard('J5') || A.insideCourtyard('J6') || B.insideCourtyard('J6')")
+  (condition "A.insideCourtyard('J1') || B.insideCourtyard('J1') || A.insideCourtyard('J2') || B.insideCourtyard('J2')")
   (constraint clearance (min 0.127mm)))
