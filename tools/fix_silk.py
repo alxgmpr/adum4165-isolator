@@ -12,6 +12,12 @@ b = pcbnew.LoadBoard(sys.argv[1])
 IU, MM = pcbnew.FromMM, pcbnew.ToMM
 GAP = 0.20
 
+# Derived from Edge.Cuts, not assumed: the board has been translated off the
+# origin, and a hardcoded band silently rejects every candidate position.
+_bb = b.GetBoardEdgesBoundingBox()
+BAND_LO = MM(_bb.GetTop()) + 2.0
+BAND_HI = MM(_bb.GetBottom()) - 2.0
+
 
 def boxes():
     pads = []
@@ -52,7 +58,7 @@ for f in b.GetFootprints():
             ncx = (cx0 + cx1) / 2 + dx
             ncy = (cy0 if dy < 0 else cy1) + dy
             cand = (ncx - w / 2, ncy - h / 2, ncx + w / 2, ncy + h / 2)
-            if 2.0 < cand[1] and cand[3] < 48.0 and \
+            if BAND_LO < cand[1] and cand[3] < BAND_HI and \
                not any(overlap(cand, p) for p in PADS) and \
                not any(overlap(cand, o) for o in others):
                 best = (ncx, ncy)
