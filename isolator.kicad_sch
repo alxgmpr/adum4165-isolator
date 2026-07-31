@@ -2422,6 +2422,225 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:Fiducial"
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "FID"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fiducial"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fiducial Marker"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "fiducial marker"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Fiducial*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Fiducial_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Power_Management:SN6505BDBV"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4075,6 +4294,121 @@
 				)
 			)
 			(symbol "GND1_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND2"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND2"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND2_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND2_1_1"
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
@@ -7109,7 +7443,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 135.89 246.38 0)
+			(at 135.89 246.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7177,25 +7511,23 @@
 		(fields_autoplaced yes)
 		(uuid "19ea7fe8-ab90-41f8-9f80-d2065d6bb8d8")
 		(property "Reference" "D6"
-			(at 203.16 187.96 0)
+			(at 200.66 184.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "T6V0S5A-7"
-			(at 203.16 191.77 0)
+			(at 200.66 186.69 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-523"
@@ -7281,7 +7613,7 @@
 		(fields_autoplaced yes)
 		(uuid "1ad0ace1-a85c-45bb-863e-f8910e3f4e9c")
 		(property "Reference" "C10"
-			(at 285.75 134.626 0)
+			(at 285.75 134.6262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7292,7 +7624,7 @@
 			)
 		)
 		(property "Value" "47uF"
-			(at 285.75 137.166 0)
+			(at 285.75 137.1662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7358,6 +7690,17 @@
 			)
 		)
 		(property "LCSC" "C90142"
+			(at 283.21 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 283.21 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -7554,7 +7897,7 @@
 		(fields_autoplaced yes)
 		(uuid "20580a67-a2db-48ca-8d60-b5d1f9a6117c")
 		(property "Reference" "C8"
-			(at 224.79 134.626 0)
+			(at 224.79 134.6262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7565,7 +7908,7 @@
 			)
 		)
 		(property "Value" "47uF"
-			(at 224.79 137.166 0)
+			(at 224.79 137.1662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7631,6 +7974,17 @@
 			)
 		)
 		(property "LCSC" "C90142"
+			(at 222.25 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 222.25 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -7767,6 +8121,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 209.55 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f01ab64a-5ac9-46fc-890f-2071dc86815f")
 		)
@@ -7795,7 +8160,7 @@
 		(fields_autoplaced yes)
 		(uuid "24d6b4cf-7811-4610-b48d-439bd63f62db")
 		(property "Reference" "R7"
-			(at 250.19 186.69 0)
+			(at 250.19 186.6899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7806,7 +8171,7 @@
 			)
 		)
 		(property "Value" "56k"
-			(at 250.19 189.23 0)
+			(at 250.19 189.2299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7893,6 +8258,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 247.65 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "84ce856c-554f-4b67-9e4d-cc05193c2112")
 		)
@@ -7903,6 +8279,84 @@
 			(project "isolator"
 				(path "/00000000-0000-0000-0000-000000000001"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 71.12 212.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "291dfffa-e68b-4388-a07f-b950a65302bc")
+		(property "Reference" "#PWR019"
+			(at 71.12 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 71.12 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 71.12 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "976dbc94-9ec7-44b0-846b-1bf1f5d3ad16")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -7921,25 +8375,23 @@
 		(fields_autoplaced yes)
 		(uuid "2b360cdf-2182-4bf9-9e3d-9db20df9b55f")
 		(property "Reference" "D5"
-			(at 41.91 25.4 0)
+			(at 33.02 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "T6V0S5A-7"
-			(at 41.91 29.21 0)
+			(at 33.02 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-523"
@@ -8025,7 +8477,7 @@
 		(fields_autoplaced yes)
 		(uuid "2bae84d4-9327-44ee-8c5c-1a4fe32c8d6a")
 		(property "Reference" "Q1"
-			(at 365 83 0)
+			(at 384.81 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8036,7 +8488,7 @@
 			)
 		)
 		(property "Value" "2N7002"
-			(at 365 85.54 0)
+			(at 384.81 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8112,6 +8564,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "package/gullwing"
+			(at 378.46 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0438090e-aac1-4e02-b410-d55f9df2c1cf")
 		)
@@ -8154,7 +8617,7 @@
 			)
 		)
 		(property "Value" "GND1"
-			(at 27.94 137.16 0)
+			(at 27.94 137.1599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8222,7 +8685,7 @@
 		(fields_autoplaced yes)
 		(uuid "3c04bdf3-8496-4c78-8fb2-d3f23d327489")
 		(property "Reference" "C11"
-			(at 294.64 134.626 0)
+			(at 294.64 134.6262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8233,7 +8696,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 294.64 137.166 0)
+			(at 294.64 137.1662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8320,6 +8783,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 292.1 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4fddf715-7ec7-460c-890c-351d3a8753e2")
 		)
@@ -8348,7 +8822,7 @@
 		(fields_autoplaced yes)
 		(uuid "3ddaf418-e52f-4b39-a830-761e3c1bc0e5")
 		(property "Reference" "R10"
-			(at 355.6 76.2 0)
+			(at 355.6 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8359,7 +8833,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 355.6 78.74 0)
+			(at 355.6 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8446,6 +8920,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 353.06 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "820ad614-2faf-46de-a32b-fc736c90ac00")
 		)
@@ -8456,6 +8941,161 @@
 			(project "isolator"
 				(path "/00000000-0000-0000-0000-000000000001"
 					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Fiducial")
+		(at 29.21 195.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ed5ad05-5f74-4d80-a4c6-420cfb6eddc7")
+		(property "Reference" "FID3"
+			(at 31.75 194.3099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fiducial"
+			(at 31.75 196.8499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1.5mm"
+			(at 29.21 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fiducial Marker"
+			(at 29.21 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "FID3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 57.15 173.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f679b8c-8574-40be-b278-5828993917a9")
+		(property "Reference" "H1"
+			(at 59.69 171.4499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 59.69 173.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
+			(at 57.15 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 57.15 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8422a01e-f9a8-4c01-a2a1-79d009a0f837")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -8485,7 +9125,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 109.22 246.38 0)
+			(at 109.22 246.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8541,6 +9181,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:Fiducial")
+		(at 29.21 204.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b536867-bed6-4c6e-867e-d3d20ba4bbb5")
+		(property "Reference" "FID4"
+			(at 31.75 203.1999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fiducial"
+			(at 31.75 205.7399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1.5mm"
+			(at 29.21 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fiducial Marker"
+			(at 29.21 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "FID4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Power_Protection:USBLC6-2SC6")
 		(at 135.89 44.45 0)
 		(unit 1)
@@ -8553,7 +9269,7 @@
 		(fields_autoplaced yes)
 		(uuid "52febf85-d037-4b88-bbff-bbd81e8bd1c3")
 		(property "Reference" "U2"
-			(at 139.7 38.1 0)
+			(at 137.5411 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8564,7 +9280,7 @@
 			)
 		)
 		(property "Value" "USBLC6-2SC6"
-			(at 139.7 40.64 0)
+			(at 137.5411 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8630,6 +9346,17 @@
 			)
 		)
 		(property "LCSC" "C2687116"
+			(at 135.89 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "package/gullwing"
 			(at 135.89 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -8778,6 +9505,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 93.98 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0f58b5cb-ee45-4377-bf04-d3ac288a6bd4")
 		)
@@ -8806,25 +9544,23 @@
 		(fields_autoplaced yes)
 		(uuid "5cd57575-581c-4c48-aba3-75f819de20bd")
 		(property "Reference" "D3"
-			(at 398.78 74.93 0)
+			(at 397.1925 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "LED"
-			(at 398.78 80.01 0)
+			(at 397.1925 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
@@ -8893,6 +9629,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 398.78 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0f40f8a0-1f00-485e-9828-f4f56ba6fe11")
 		)
@@ -8932,7 +9679,7 @@
 			)
 		)
 		(property "Value" "GND1"
-			(at 63.5 151.13 0)
+			(at 63.5 151.1299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9077,6 +9824,17 @@
 			)
 		)
 		(property "LCSC" "C74518"
+			(at 60.96 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "package/gullwing"
 			(at 60.96 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -9431,6 +10189,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:Fiducial")
+		(at 29.21 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76a4fab0-bfc5-4b0b-949c-626b5aa7ac44")
+		(property "Reference" "FID2"
+			(at 31.75 182.8799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fiducial"
+			(at 31.75 185.4199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1.5mm"
+			(at 29.21 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fiducial Marker"
+			(at 29.21 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "FID2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 30.48 247.65 0)
 		(unit 1)
@@ -9454,7 +10288,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 33.02 246.38 0)
+			(at 33.02 246.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9621,6 +10455,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 257.81 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "af5268f7-b658-4ef1-9da4-acb6fb6ad2e4")
 		)
@@ -9649,7 +10494,7 @@
 		(fields_autoplaced yes)
 		(uuid "7ee94c4e-345d-4e30-8cb4-783390d8dfc3")
 		(property "Reference" "C12"
-			(at 345.44 36.83 0)
+			(at 345.44 36.8362 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9660,7 +10505,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 345.44 39.37 0)
+			(at 345.44 39.3762 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9747,6 +10592,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 342.9 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "777eee14-46fe-410f-be21-a0ef516e8fcf")
 		)
@@ -9775,7 +10631,7 @@
 		(fields_autoplaced yes)
 		(uuid "811e0aef-9978-4e3e-a96a-03a6259de667")
 		(property "Reference" "CY1"
-			(at 203.2 257.81 0)
+			(at 204.47 257.8099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9786,7 +10642,7 @@
 			)
 		)
 		(property "Value" "1nF Y1 400VAC"
-			(at 203.2 260.96 0)
+			(at 204.47 260.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9889,6 +10745,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND2")
+		(at 57.15 201.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "83181b26-6349-499f-a961-4499816a882f")
+		(property "Reference" "#PWR018"
+			(at 57.15 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND2"
+			(at 57.15 207.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 57.15 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "976dbc94-9ec7-44b0-846b-1bf1f5d3ad16")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 342.9 77.47 0)
 		(unit 1)
@@ -9901,7 +10835,7 @@
 		(fields_autoplaced yes)
 		(uuid "8c5b5e66-4e25-4410-b762-8e872b3958c6")
 		(property "Reference" "R9"
-			(at 345.44 76.2 0)
+			(at 345.44 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9912,7 +10846,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 345.44 78.74 0)
+			(at 345.44 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9999,6 +10933,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 342.9 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "64449815-f392-477c-8f25-b8d0deb63d34")
 		)
@@ -10027,7 +10972,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f4a9600-a92f-42e3-9d4c-f6a6458db130")
 		(property "Reference" "R8"
-			(at 265.43 189.23 0)
+			(at 265.43 189.2299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10038,7 +10983,7 @@
 			)
 		)
 		(property "Value" "56k"
-			(at 265.43 191.77 0)
+			(at 265.43 191.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10115,6 +11060,17 @@
 			)
 		)
 		(property "Tolerance" "±1%"
+			(at 262.89 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 262.89 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -10433,6 +11389,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 25.4 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9d3a24ca-f29b-4ef7-a6f9-78481215ea30")
 		)
@@ -10468,10 +11435,9 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "PORT"
+		(property "Value" "ISO_PORT"
 			(at 213.36 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10479,7 +11445,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
@@ -10621,7 +11586,7 @@
 		(fields_autoplaced yes)
 		(uuid "9f445596-5d25-4cc2-84c8-009475bee9a6")
 		(property "Reference" "D1"
-			(at 197.167 124.46 0)
+			(at 197.1675 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10631,7 +11596,7 @@
 			)
 		)
 		(property "Value" "SS34"
-			(at 197.167 127 0)
+			(at 197.1675 127 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10734,7 +11699,7 @@
 		(fields_autoplaced yes)
 		(uuid "a0b4b3a9-4158-42f9-a683-978b0b8822fb")
 		(property "Reference" "C7"
-			(at 40.64 129.546 0)
+			(at 40.64 129.5462 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10745,7 +11710,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 40.64 132.086 0)
+			(at 40.64 132.0862 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10821,6 +11786,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 38.1 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e10cacae-2008-4fbe-81b2-690e20eb023d")
 		)
@@ -10849,7 +11825,7 @@
 		(fields_autoplaced yes)
 		(uuid "a3dea2eb-1434-4049-bde4-240fda68d7e3")
 		(property "Reference" "U3"
-			(at 169.5 218.5 0)
+			(at 187.0711 194.31 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10860,7 +11836,7 @@
 			)
 		)
 		(property "Value" "USBLC6-2SC6"
-			(at 169.5 221 0)
+			(at 187.0711 196.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10936,6 +11912,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "package/gullwing"
+			(at 185.42 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bdb32878-3b06-4834-b258-2454231b2303")
 		)
@@ -10987,7 +11974,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 58.42 246.38 0)
+			(at 58.42 246.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11066,13 +12053,14 @@
 			)
 		)
 		(property "Value" "GND1"
-			(at 36.83 30.48 0)
+			(at 39.37 35.5599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -11231,6 +12219,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 40.64 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c653e9d5-0bcb-47fd-82c1-f20122dece79")
 		)
@@ -11338,7 +12337,7 @@
 		(fields_autoplaced yes)
 		(uuid "ab9ce29f-67f8-43b8-8b5e-ce468159b858")
 		(property "Reference" "R4"
-			(at 368.3 123.19 0)
+			(at 368.3 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11349,7 +12348,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 368.3 125.73 0)
+			(at 368.3 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11436,6 +12435,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 365.76 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "16a10801-f874-41a2-a60f-9e26e72ba76d")
 		)
@@ -11464,7 +12474,7 @@
 		(fields_autoplaced yes)
 		(uuid "b412234b-9178-441c-95f1-db8e79df33f0")
 		(property "Reference" "U6"
-			(at 344.17 162.29 0)
+			(at 337.4233 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11475,7 +12485,7 @@
 			)
 		)
 		(property "Value" "TPS2553DBV"
-			(at 344.17 164.83 0)
+			(at 337.4233 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11551,6 +12561,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "package/gullwing"
+			(at 335.28 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5165b7e9-5495-4778-9d73-8b77ac468051")
 		)
@@ -11591,7 +12612,7 @@
 		(fields_autoplaced yes)
 		(uuid "b6f47789-79d8-4d8c-805b-a9971facfe56")
 		(property "Reference" "R5"
-			(at 381 123.19 0)
+			(at 381 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11602,7 +12623,7 @@
 			)
 		)
 		(property "Value" "330"
-			(at 381 125.73 0)
+			(at 381 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11689,6 +12710,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 378.46 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "07e69eb1-7af4-445d-803e-e518afa72eae")
 		)
@@ -11728,7 +12760,7 @@
 			)
 		)
 		(property "Value" "GND1"
-			(at 40.64 137.16 0)
+			(at 40.64 137.1599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11796,7 +12828,7 @@
 		(fields_autoplaced yes)
 		(uuid "bb862b24-bcc7-453e-ba60-988ca8bad585")
 		(property "Reference" "D2"
-			(at 197.167 133.35 0)
+			(at 197.1675 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11806,7 +12838,7 @@
 			)
 		)
 		(property "Value" "SS34"
-			(at 197.167 135.89 0)
+			(at 197.1675 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11961,28 +12993,6 @@
 				)
 			)
 		)
-		(property private "KLC_S3.3" "The rectangle is not a symbol body but a graphical element"
-			(at 266.7 71.12 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property private "KLC_S4.1" "Some pins are on 50mil grid to make the symbol small"
-			(at 266.7 73.66 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "MPN" "SX3B24.000F0810F30"
 			(at 266.7 60.96 0)
 			(hide yes)
@@ -12027,6 +13037,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "crystal_resonator_oscillator"
+			(at 266.7 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "536d4a0e-3f0a-46aa-b09f-843a1162b401")
 		)
@@ -12049,6 +13070,164 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 71.12 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bff0a41a-bbee-4472-864b-2b4f28bb01c2")
+		(property "Reference" "H4"
+			(at 73.66 207.0099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 73.66 209.5499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
+			(at 71.12 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 71.12 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2685e073-1786-46a9-a1ae-12a46cc374bf")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 57.15 199.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5599f02-4d29-441b-8306-abfd34dfad33")
+		(property "Reference" "H3"
+			(at 59.69 196.8499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 59.69 199.3899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
+			(at 57.15 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 57.15 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a412659f-8995-4bc9-ac28-4de905eb5085")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 25.4 130.81 0)
 		(unit 1)
@@ -12061,7 +13240,7 @@
 		(fields_autoplaced yes)
 		(uuid "cac8b1d7-e275-469f-93c4-53b406973272")
 		(property "Reference" "C6"
-			(at 27.94 129.546 0)
+			(at 27.94 129.5462 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12072,7 +13251,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 27.94 132.086 0)
+			(at 27.94 132.0862 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12159,6 +13338,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 25.4 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a5c4132d-8843-4848-b26f-23c759a8a8d0")
 		)
@@ -12169,6 +13359,85 @@
 			(project "isolator"
 				(path "/00000000-0000-0000-0000-000000000001"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 57.15 186.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d037ec64-5116-45fc-a0b9-e75b578c0f40")
+		(property "Reference" "H2"
+			(at 59.69 184.1499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 59.69 186.6899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
+			(at 57.15 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 57.15 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ddfa0937-b8a5-416e-bf38-b992f33c8578")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -12354,7 +13623,7 @@
 		(fields_autoplaced yes)
 		(uuid "d340dca2-4e2d-4af6-a827-bfba6b2ff30a")
 		(property "Reference" "R3"
-			(at 325.12 125.73 0)
+			(at 325.12 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12365,7 +13634,7 @@
 			)
 		)
 		(property "Value" "93.1k"
-			(at 325.12 128.27 0)
+			(at 325.12 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12452,6 +13721,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 322.58 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3df8815d-c5d4-4109-8d89-515b3c9f093d")
 		)
@@ -12480,25 +13760,23 @@
 		(fields_autoplaced yes)
 		(uuid "d5897748-7f7b-4743-a060-6698856f6e67")
 		(property "Reference" "U5"
-			(at 250.19 123.19 0)
+			(at 260.35 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "TLV76750DGNR"
-			(at 250.19 125.73 0)
+			(at 260.35 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Package_SO:HVSSOP-8-1EP_3x3mm_P0.65mm_EP1.57x1.89mm"
@@ -12557,6 +13835,17 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 260.35 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "package/gullwing"
 			(at 260.35 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -12695,7 +13984,7 @@
 		(fields_autoplaced yes)
 		(uuid "d6a3919e-95d1-4803-add8-9f89abf8a5f4")
 		(property "Reference" "R6"
-			(at 378.46 36.83 0)
+			(at 378.46 36.8299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12706,7 +13995,7 @@
 			)
 		)
 		(property "Value" "3.01k"
-			(at 378.46 39.37 0)
+			(at 378.46 39.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12793,6 +14082,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 375.92 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fabd45a8-2d96-4753-926b-14060c1907c7")
 		)
@@ -12803,6 +14103,84 @@
 			(project "isolator"
 				(path "/00000000-0000-0000-0000-000000000001"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 57.15 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d948d45a-b42a-4f1d-bf82-584a8b506358")
+		(property "Reference" "#PWR017"
+			(at 57.15 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND1"
+			(at 57.15 194.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 57.15 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e0dd936a-4ca8-4300-8129-bc80bdf6fe4c")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -12911,13 +14289,14 @@
 			)
 		)
 		(property "Value" "GND1"
-			(at 30.48 251.46 0)
+			(at 33.02 256.5399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -13076,6 +14455,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 102.87 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bae93b7d-cd68-402a-a8ec-b7804a2b2307")
 		)
@@ -13203,6 +14593,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 274.32 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "319020a9-4d6d-4252-95bd-cc2cbc09b75f")
 		)
@@ -13231,7 +14632,7 @@
 		(fields_autoplaced yes)
 		(uuid "ecb89d9f-0e26-4c0e-925e-5b11bca23dfd")
 		(property "Reference" "C13"
-			(at 358.14 36.83 0)
+			(at 358.14 36.8362 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13242,7 +14643,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 358.14 39.37 0)
+			(at 358.14 39.3762 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13329,6 +14730,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 355.6 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6ac10e60-4e48-4177-85e8-c8d69d7491d6")
 		)
@@ -13357,25 +14769,23 @@
 		(fields_autoplaced yes)
 		(uuid "ee0bf4c0-9c55-4129-9e58-14f65a5f1d02")
 		(property "Reference" "D4"
-			(at 383.54 130.81 0)
+			(at 381.9525 127 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "LED"
-			(at 383.54 135.89 0)
+			(at 381.9525 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
@@ -13444,6 +14854,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 383.54 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a301c90c-89f5-4b72-b923-114abb9d86a4")
 		)
@@ -13483,7 +14904,7 @@
 			)
 		)
 		(property "Value" "GND1"
-			(at 46.99 138.43 0)
+			(at 46.99 138.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13551,7 +14972,7 @@
 		(fields_autoplaced yes)
 		(uuid "f0d1a353-036e-411a-bad7-1d0398331e61")
 		(property "Reference" "C14"
-			(at 327.66 170.18 0)
+			(at 327.66 170.1862 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13562,7 +14983,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 327.66 172.72 0)
+			(at 327.66 172.7262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13649,6 +15070,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 325.12 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d2fabee6-11ac-4e00-9e7b-541d01d57169")
 		)
@@ -13659,6 +15091,82 @@
 			(project "isolator"
 				(path "/00000000-0000-0000-0000-000000000001"
 					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Fiducial")
+		(at 29.21 173.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f3bd73c7-4b01-4eca-ab49-783855fa6865")
+		(property "Reference" "FID1"
+			(at 31.75 172.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fiducial"
+			(at 31.75 175.2599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1.5mm"
+			(at 29.21 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fiducial Marker"
+			(at 29.21 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "FID1")
 					(unit 1)
 				)
 			)
@@ -13756,7 +15264,7 @@
 		(fields_autoplaced yes)
 		(uuid "fec7919e-b681-45e8-a70b-64dbf614c226")
 		(property "Reference" "C15"
-			(at 342.9 170.18 0)
+			(at 342.9 170.1862 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13767,7 +15275,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 342.9 172.72 0)
+			(at 342.9 172.7262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13844,6 +15352,17 @@
 			)
 		)
 		(property "Tolerance" "±10%"
+			(at 340.36 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
 			(at 340.36 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -13882,7 +15401,7 @@
 		(fields_autoplaced yes)
 		(uuid "feec55f2-6d64-4394-aed8-2c9d9ddeb534")
 		(property "Reference" "C9"
-			(at 233.68 134.626 0)
+			(at 233.68 134.6262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13893,7 +15412,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 233.68 137.166 0)
+			(at 233.68 137.1662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13980,6 +15499,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 231.14 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c9133618-03aa-41be-a037-5cf4751fa4be")
 		)
@@ -13990,6 +15520,84 @@
 			(project "isolator"
 				(path "/00000000-0000-0000-0000-000000000001"
 					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 57.15 176.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ffc51ad6-c150-4c9c-a6ea-9ec98e95b2e3")
+		(property "Reference" "#PWR016"
+			(at 57.15 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND1"
+			(at 57.15 181.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 57.15 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e0dd936a-4ca8-4300-8129-bc80bdf6fe4c")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)

@@ -12,3 +12,4 @@ datasheets/
 tools/*.jar
 tools/ar_work/
 __pycache__/
+~*.lck
