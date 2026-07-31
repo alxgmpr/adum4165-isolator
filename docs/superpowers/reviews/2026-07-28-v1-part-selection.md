@@ -1,16 +1,24 @@
-# v1 Part Selection: 5.0 V LDO, VBUS TVS, Barrier Stitching Capacitor (Task 2)
+# Part Selection: 5.0 V LDO, VBUS TVS, Barrier Stitching Capacitor (Task 2)
+
+> **Repo note (2026-07-30):** the design this document calls "v1" is now simply
+> **the isolator** — the single, shipping project at the repo root
+> (`isolator.kicad_sch` / `.kicad_pcb` / `.kicad_pro`). It is no longer a
+> sub-project under `v1/`, and paths below have been updated accordingly. What
+> this document calls "v2" is the **archived 4-port design**, now on branch
+> `4port-archive`. Past-tense passages comparing the two are kept as written —
+> they record why decisions were made and only make sense in that tense.
 
 **Date:** 2026-07-28 (originally); **updated 2026-07-28 in fix round 1** — the LDO and CY1
 sections were superseded after review (Critical 1 and Critical 2); the VBUS TVS section (D5, D6)
 was reviewed and approved unchanged. Read the "Fix round 1" notes inline in each section for what
 changed and why.
-**Scope:** select and datasheet-verify three parts v1 needs that v2 does not carry (or carries
+**Scope:** select and datasheet-verify three parts the isolator needs that the 4-port design does not carry (or carries
 incorrectly): the ISO_5V LDO, the VBUS ESD/TVS diodes (D5, D6), and the barrier stitching
 capacitor CY1. No schematic wiring performed in this task — selection, symbol/footprint
 resolution, and pin-table extraction only.
 
 Barrier requirement carried into every part check below: **8.3 mm creepage/clearance**, set by
-the ADuM4165 in its RI-20-1 package (self-validated in Task 10 of the v2 build,
+the ADuM4165 in its RI-20-1 package (self-validated in Task 10 of the 4-port design build,
 `E - 2L = 8.28 mm`; see `docs/superpowers/reviews/2026-07-26-schematic-review.md:436`).
 
 ---
@@ -45,7 +53,7 @@ Fixed requirements checked against real datasheets for every candidate:
 | TLV757P (TI) | SOT-23-5 (DBV/DYD), WSON-6 | **5.5 V** | Yes (0.6-5V in 50mV steps) | not evaluated further | **Rejected**: input range tops out at 5.5 V — below even the ~5.8 V sagged operating point, let alone the 6.1 V unloaded value or the 6.5 V ceiling requirement |
 | MIC5219-5.0BM5 (Microchip/Micrel) | SOT-23-5, leaded, no thermal pad | 12 V | Yes | ~0.26 V typ / ~0.39-0.49 V max (interpolated, see below) | Passes electrically and is the smallest leaded option (13.94 mm² courtyard) — close second, see "why not MIC5219" below |
 | NCP1117/NCV1117 (onsemi) — "the 1117 class" | SOT-223, DPAK | 20 V | Yes (nine fixed options incl. 5.0V) | **1.07 V typ / 1.20 V max @ 800 mA** (datasheet Table, not derived) | **Rejected**: dropout alone rules it out — even at 800mA the datasheet's own number is already 34-50% over the 0.8V budget, and 315mA would still be roughly 0.9-1.0V given this BJT topology's much flatter dropout-vs-current curve than a MOSFET pass device |
-| MIC29302WU (Microchip) | TO-263-5, leaded, tab | 26 V | No — ADJ + divider (as already wired in v2) | 0.1-0.2 V typ (order of magnitude under budget) | Passes electrically with the most margin of any candidate, but package is 8.6x the area of the HVSSOP-8 winner — **documented fallback, not the pick** |
+| MIC29302WU (Microchip) | TO-263-5, leaded, tab | 26 V | No — ADJ + divider (as already wired in the 4-port design) | 0.1-0.2 V typ (order of magnitude under budget) | Passes electrically with the most margin of any candidate, but package is 8.6x the area of the HVSSOP-8 winner — **documented fallback, not the pick** |
 
 Sources: TLV767 family — `datasheets/tlv767.pdf` (SLVSE84D), Table 6.5 p.6 and Section 8.3.2 p.15
 (dropout-scaling formula). AP2114 — `datasheets/AP2114.pdf`, "Recommended Operating Conditions"
@@ -66,7 +74,7 @@ package rated dropout is 0.9 V typ / 1.5 V max at 1 A, giving R_DS(ON) = 0.9/1.5
 unrelated measured points.
 
 **Thermal, with the exposed pad tied to a ground pour:** `R_thJA = 60.1 degC/W` (Table 6.4, DGN
-package). At the v1 operating point, `P_D = (5.8-5.0)V x 0.315A = 0.252 W`, so junction temperature
+package). At the isolator operating point, `P_D = (5.8-5.0)V x 0.315A = 0.252 W`, so junction temperature
 rise over ambient is only `0.252 x 60.1 ~= 15 degC` — this essentially removes thermal risk from
 the decision regardless of enclosure ambient.
 
@@ -179,19 +187,19 @@ in stock KiCad libraries.
 
 ## 3. Barrier stitching capacitor (CY1)
 
-### Why v2's C49 cannot be reused — read this before touching CY1's footprint
+### Why the 4-port design's C49 cannot be reused — read this before touching CY1's footprint
 
-v2 carries `C49`: **1 nF, 2 kV, `Capacitor_SMD:C_2220_5750Metric`, DNP** (marked "Y-class-style
+The 4-port design carries `C49`: **1 nF, 2 kV, `Capacitor_SMD:C_2220_5750Metric`, DNP** (marked "Y-class-style
 barrier stitching capacitor, GND1-GND2, DNP (EMI provision only)" —
-`isolator.kicad_sch:14559-14628`). That 2220 metric package body measures **5.7 x 5.0 mm** — the
-"5750" in the footprint name is the body length in tenths of mm (5.7 mm). In v2 this part is DNP
+`4port-archive:isolator.kicad_sch:14559-14628`). That 2220 metric package body measures **5.7 x 5.0 mm** — the
+"5750" in the footprint name is the body length in tenths of mm (5.7 mm). In the 4-port design this part is DNP
 (not populated), so the undersized footprint never mattered.
 
-**v1 POPULATES this capacitor.** If v1 reused the same `C_2220_5750Metric` footprint, the
+**The isolator POPULATES this capacitor.** If the isolator reused the same `C_2220_5750Metric` footprint, the
 capacitor body itself — sitting directly across the isolation barrier — would cap the barrier's
 real-world creepage/clearance at 5.7 mm, well under the 8.3 mm the ADuM4165's RI-20-1 package
 requires. The capacitor would become the weakest point in the isolation, silently undoing the
-barrier work done elsewhere in the design. **Do not carry the 2220 footprint into v1.**
+barrier work done elsewhere in the design. **Do not carry the 2220 footprint into the isolator.**
 
 ### Selection process (see full search trail below — several parts were checked and rejected)
 
@@ -336,7 +344,7 @@ explicit instruction, even though MIC29302WU is no longer the pick).
   (which should state the tested creepage/clearance number directly — this write-up could not
   obtain it) should be requested and checked before fab.
 - D5/D6's `D_SOD-523` footprint pad geometry against the T6V0S5A-7 mechanical drawing (Task 3/4).
-- The v1 mechanical-feasibility record (`docs/superpowers/reviews/2026-07-28-v1-mechanical-feasibility.md`)
+- The the isolator mechanical-feasibility record (`docs/superpowers/reviews/2026-07-28-v1-mechanical-feasibility.md`)
   was updated in this same fix round to reflect the new LDO/CY1/TVS footprints — see that
   document; the headline change is that the board's overall length margin is 1.7 mm, not the
   8.0 mm originally claimed, and D1/D2 (rectifier diodes) must be placed side by side rather than

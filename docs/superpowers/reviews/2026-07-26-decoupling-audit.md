@@ -1,5 +1,14 @@
 # Decoupling & Required-Externals Audit vs. Datasheet Typical-Application Circuits
 
+> **Repo note (2026-07-30):** this document describes the **archived 4-port
+> design**. That project no longer lives at the repo root — it was archived to
+> branch `4port-archive` when the repository collapsed to the single-port
+> isolator. Every bare `isolator.kicad_sch` / `isolator.kicad_pcb` /
+> `isolator.kicad_pro` path below refers to the **archived** files as they stood
+> on that branch, **not** to the files of those names at the root today, which
+> are the single-port isolator. Retrieve them with
+> `git show 4port-archive:isolator.kicad_sch`.
+
 **Date:** 2026-07-26
 **Scope:** every IC in `isolator.kicad_sch` / `isolator.kicad_pcb`, checked against the manufacturer's
 "typical application", "application information", "layout guidelines" and "power supply recommendations"

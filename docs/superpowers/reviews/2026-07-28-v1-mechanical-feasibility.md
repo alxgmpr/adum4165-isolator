@@ -1,10 +1,18 @@
-# v1 Mechanical Feasibility Gate (Task 1)
+# Mechanical Feasibility Gate (Task 1)
+
+> **Repo note (2026-07-30):** the design this document calls "v1" is now simply
+> **the isolator** — the single, shipping project at the repo root
+> (`isolator.kicad_sch` / `.kicad_pcb` / `.kicad_pro`). It is no longer a
+> sub-project under `v1/`, and paths below have been updated accordingly. What
+> this document calls "v2" is the **archived 4-port design**, now on branch
+> `4port-archive`. Past-tense passages comparing the two are kept as written —
+> they record why decisions were made and only make sense in that tense.
 
 **Date:** 2026-07-28 (originally); updated 2026-07-28 in Task 2 fix round 1; **rewritten
 2026-07-30 in Task 7 fix round 1 — the verdict changed. Read "Verdict" before treating any
 earlier number in this document's history as current.**
 
-**Scope:** go/no-go check on whether the v1 (single-port USB isolator) component set fits the
+**Scope:** go/no-go check on whether the isolator's component set fits the
 target enclosure.
 
 **Target envelope: Hammond 1455C1202 — 120 mm (length) x 50 mm (width).** Usable copper area for
@@ -13,7 +21,7 @@ component placement is 120 x 50 mm minus a 2 mm copper pullback on each long edg
 
 **This document previously gated against the 1455C802 (80 mm).** Task 7's footprint audit
 replaced every placeholder/nominal dimension in the length-chain and area checks with courtyards
-measured from the real `.kicad_mod` files now assigned in `v1/isolator-v1.kicad_sch`, and the
+measured from the real `.kicad_mod` files now assigned in `isolator.kicad_sch`, and the
 80 mm chain no longer closes (see "Verdict"). The design moved to the 1455C1202 at 120 mm — an
 edge-cut-only change already documented as the fallback in the original version of this
 document and in the design spec — rather than gamble a board spin on a chain with negative
@@ -173,7 +181,7 @@ zone overruns to 27.36 mm (-7.36 mm). This is unchanged in kind from the previou
 this document (which used an unmeasured 5.0 mm D_SMA placeholder and reported +2.64 mm margin);
 substituting the real 7.0 mm D_SMA dimension shrinks the true margin to +0.64 mm. **D1/D2
 side-by-side placement remains a load-bearing layout constraint** — it is what the schematic's
-"V1 LAYOUT CONSTRAINTS -- BINDING" text block (item 7) now records for the PCB placement task,
+"LAYOUT CONSTRAINTS -- BINDING" text block (item 7) now records for the PCB placement task,
 independent of which enclosure is used, since this zone's internal geometry doesn't change with
 board length.
 
@@ -188,7 +196,7 @@ actual 2-D component arrangement) could plausibly still fit it, particularly sin
 
 **The decision was made anyway to move to the 1455C1202 (120 mm)** rather than gamble a board
 spin on a chain sitting at -0.10 to -3.70 mm margin before any real placement has been attempted.
-This is an edge-cut-only change to `v1/isolator-v1.kicad_pcb` — no schematic or architectural
+This is an edge-cut-only change to `isolator.kicad_pcb` — no schematic or architectural
 change — and buys roughly 36–40 mm of slack (see the "vs 120.0 mm" margins above), comfortably
 clearing every zone including the conservative zone-2 placeholder. Revisiting 80 mm on a later
 board spin, once real 2-D placement is known, remains open; it was not closed off by this
@@ -244,6 +252,6 @@ every remaining part in the BOM (0603/0805/1210 passives, LEDs, Q1) so the area 
   relying on zone 2's number for anything tighter than the current 120 mm envelope.
 - The D1/D2-side-by-side requirement for the rectifier zone is independent of enclosure length —
   it is a fixed local-geometry constraint, not a length-budget one, and is recorded in the
-  schematic's "V1 LAYOUT CONSTRAINTS -- BINDING" text block (item 7) for exactly that reason.
+  schematic's "LAYOUT CONSTRAINTS -- BINDING" text block (item 7) for exactly that reason.
 - KiCad install used for verification: `kicad-cli` 10.0.5 at
   `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`.

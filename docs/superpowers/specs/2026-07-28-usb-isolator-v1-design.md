@@ -1,24 +1,32 @@
-# Isolated USB 2.0 Cable — v1 Design Spec
+# Isolated USB 2.0 Cable — Design Spec
+
+> **Repo note (2026-07-30):** the design this document calls "v1" is now simply
+> **the isolator** — the single, shipping project at the repo root
+> (`isolator.kicad_sch` / `.kicad_pcb` / `.kicad_pro`). It is no longer a
+> sub-project under `v1/`, and paths below have been updated accordingly. What
+> this document calls "v2" is the **archived 4-port design**, now on branch
+> `4port-archive`. Past-tense passages comparing the two are kept as written —
+> they record why decisions were made and only make sense in that tense.
 
 **Date:** 2026-07-28
-**Project:** `isolator` — new sub-project `v1/isolator-v1`
+**Project:** `isolator` — the single KiCad project at the repo root
 **Status:** Approved
 **Supersedes:** nothing. The 4-port design in
 `2026-07-25-usb-isolator-design.md` continues in parallel and is referred to
-here as **v2**.
+here as **The 4-port design**.
 
 ## Overview
 
 A single-port inline USB 2.0 isolator: one USB-C in, one USB-C out, no
-external power input, no hub. Built on the same ADuM4165 core as v2 and
+external power input, no hub. Built on the same ADuM4165 core as the 4-port design and
 housed in a Hammond 1455C extruded enclosure.
 
-v1 has two jobs at once, and both are first-class:
+The isolator has two jobs at once, and both are first-class:
 
 1. **It ships.** An enclosed bench tool that breaks a ground loop between a
    host and one USB device.
-2. **v2 inherits it.** Every block in v1 is a block v2 already needs. v1
-   validates them on real hardware — including two numbers v2's spec
+2. **The 4-port design inherits it.** Every block in the isolator is a block the 4-port design already needs. The isolator
+   validates them on real hardware — including two numbers the 4-port design's spec
    currently only estimates (see Verification, steps 3 and 6).
 
 Primary references:
@@ -66,7 +74,7 @@ The ADuM4165 (not the '4166) remains correct: its clock input is on Side 1,
 and ADI recommends the '4165 with a Side-1 crystal for isolator boxes with no
 local controller, since host power is always present there.
 
-## What changed from v2
+## What changed from the 4-port design
 
 **Deleted:** USB2514B hub and its crystal / RBIAS / CRFILT network; three of
 the four TPS2553 port switches; the AP2112K-3.3 LDO (nothing needs 3.3 V once
@@ -76,7 +84,7 @@ the hub is gone — the ADuM4165's `VBUS2` pin feeds its own internal LDO for
 USB-C downstream receptacles; the power-source indicator LEDs. Roughly 125
 footprints down to ~50.
 
-**Kept unchanged, and these are the blocks v2 inherits back:** the ADuM4165
+**Kept unchanged, and these are the blocks the 4-port design inherits back:** the ADuM4165
 core with Side-1 24 MHz crystal and 8 pF loads; the `VBUS1`/`VDD1` bypass
 rules (exactly 0.1 µF at `VDD1`, total lead length under 10 mm); the SN6505B +
 Würth 750313638 + Schottky isolated supply; USBLC6-2SC6 arrays in
@@ -85,11 +93,11 @@ under T1.
 
 **Substituted:** MIC29302 (3 A, DPAK, adjustable) replaced by a fixed-5.0 V
 low-dropout regulator of roughly 1 A class, e.g. TLV76750 in SOT-23-5. The
-bus-powered path cannot exceed ~315 mA even in v2, so the 3 A part was always
-oversized. If v1 validates the substitute, fold it back into v2.
+bus-powered path cannot exceed ~315 mA even in the 4-port design, so the 3 A part was always
+oversized. If the isolator validates the substitute, fold it back into the 4-port design.
 
 *Part-selection constraint to verify:* dropout at 315 mA against a
-`DCDC_RAW` that sags under load. v2's spec records the winding DCR holding
+`DCDC_RAW` that sags under load. The 4-port design's spec records the winding DCR holding
 `DCDC_RAW` ≥ 5.49 V at 635 mA, so expect roughly 5.8 V at 315 mA **under full
 load** — this is the *loaded* figure, distinct from the ≈ 6.15 V *unloaded*
 figure the Power budget table below uses as its starting point. Leaves a
@@ -169,7 +177,7 @@ again. The cost: the guaranteed-minimum trip point (I_OS(min)) falls to
 false-trip legitimate devices the supply could feed. Rejected in favor of
 the higher, documentation-corrected R3.
 
-For comparison, v2's bus-powered mode budgets ≈ 75 mA shared across all four
+For comparison, the 4-port design's bus-powered mode budgets ≈ 75 mA shared across all four
 ports. Dropping the hub is what buys the difference.
 
 T1 has ample headroom at this current: Würth's thermal curve runs to 1.2 A.
@@ -183,7 +191,7 @@ application-column characterization point, not a rating.
   breaks. A6/B6 and A7/B7 tied at the connector. SBU1/SBU2 unconnected.
 - **Power:** VBUS → ADuM4165 `VBUS1` and the SN6505B input. Bulk on VBUS
   sized to stay under the USB 2.0 §7.2.4.1 bus-powered limit of 10 µF / 50 µC
-  at hot-plug — v1 has far less to bypass than v2, so meeting the limit is
+  at hot-plug — the isolator has far less to bypass than the 4-port design, so meeting the limit is
   expected rather than waived. Confirm the total at schematic capture.
 - **Data:** D+/D− → USBLC6-2SC6 → `UD+`/`UD−`.
 - **Clock:** 24 MHz crystal on XI₁/XO₁ with 8 pF load caps. ≤50 ppm total
@@ -282,7 +290,7 @@ ADuM4165's die capacitance and T1's interwinding capacitance. The GND2 plane
 lifts and the strike becomes a common-mode transient across the barrier —
 which the ADuM4165 absolute maximum table caps at **±100 kV/µs**.
 
-v1 therefore **populates** the barrier-stitching capacitor that v2 marks DNP:
+The isolator therefore **populates** the barrier-stitching capacitor that the 4-port design marks DNP:
 
 - 1 nF, safety-rated **Y1**, 14 mm lead pitch, single point in the barrier gap.
   (The spec originally called for Y2. Task 2 reclassified it: CY1 bridges a
@@ -298,17 +306,17 @@ v1 therefore **populates** the barrier-stitching capacitor that v2 marks DNP:
 ### VBUS
 
 The USBLC6-2SC6's `Vbus` pin has a real transil to GND (V_BR = 6 V min), so
-VBUS is already clamped. v1 adds one dedicated 5.5 V V_RWM TVS on each
+VBUS is already clamped. The isolator adds one dedicated 5.5 V V_RWM TVS on each
 connector's VBUS for peak-current headroom, per SLVAF82B §3.3.
 
-### CC1/CC2 — deliberately unprotected in v1
+### CC1/CC2 — deliberately unprotected in the isolator
 
-In v1, CC connects only to a 5.1 kΩ Rd upstream and a 56 kΩ Rp downstream.
+In the isolator, CC connects only to a 5.1 kΩ Rd upstream and a 56 kΩ Rp downstream.
 No IC pin sits behind them, there is no PD controller, and the design is
 5 V only, so SLVAF82B §8.3's short-to-VBUS case pushes about 1 mA through a
 resistor. Protection is not justified here.
 
-This does **not** carry over to v2 — see the v2 finding recorded in
+This does **not** carry over to the 4-port design — see the 4-port design finding recorded in
 `docs/superpowers/reviews/2026-07-28-v2-cc-esd-finding.md`.
 
 ## Mechanical
@@ -380,24 +388,24 @@ rating end to end requires a non-conductive enclosure.
 
 ## Project layout
 
-v1 is a **separate KiCad project inside this repository**:
+The isolator is the **single KiCad project at the root of this repository**:
 
 ```
-v1/isolator-v1.kicad_pro
-v1/isolator-v1.kicad_sch
-v1/isolator-v1.kicad_pcb
+isolator.kicad_pro
+isolator.kicad_sch
+isolator.kicad_pcb
 ```
 
 It shares the existing `isolator-lib.pretty`, `isolator-lib.kicad_sym`,
 `datasheets/`, and `tools/` (including the Freerouting pipeline). The
 existing 4-port project files stay where they are and are untouched, so both
 designs remain buildable and diffable. Proven blocks are copied forward into
-v2 as hierarchical sheets.
+The 4-port design as hierarchical sheets.
 
 ## Known limitations (accepted)
 
 - **≈ 240 mA at the downstream port**, while the 56 kΩ Rp advertises Default
-  USB Power. This is the same descriptor-honesty deviation v2 carries. The
+  USB Power. This is the same descriptor-honesty deviation the 4-port design carries. The
   bound is the DC-DC/LDO chain's own droop, **not** the TPS2553's current
   limit — see Power budget, "R3 and the port current limit." A consequence
   of this: overload will drop the whole link before FAULT lights, rather
@@ -416,7 +424,7 @@ v2 as hierarchical sheets.
 
 ## Verification plan
 
-Steps 3 and 6 are where v1 pays for itself — both replace estimates in v2's
+Steps 3 and 6 are where the isolator pays for itself — both replace estimates in the 4-port design's
 spec with measurements.
 
 1. **Host side alone.** V_DD1 present, 24 MHz oscillation on the Side-1
@@ -424,7 +432,7 @@ spec with measurements.
 2. **Isolated supply.** `DCDC_RAW` under load, LDO dropout margin at 315 mA,
    output ripple.
 3. **Measure the actual downstream current ceiling** before the DC-DC folds.
-   v2's spec currently estimates this number.
+   the 4-port design's spec currently estimates this number.
 4. **Enumeration** at low, full, and high speed with real devices — mouse,
    serial adapter, flash drive.
 5. **TPS2553 behavior.** Soft-start against a device with large input
@@ -438,7 +446,7 @@ spec with measurements.
    to chase.
 6. **ESD.** Contact discharge to both connector shells and to the enclosure,
    with and without the stitching capacitor populated. This settles the
-   DNP-versus-populate question for v2 with measurements rather than
+   DNP-versus-populate question for the 4-port design with measurements rather than
    argument.
 7. **Barrier withstand** with the board assembled in the enclosure, which
    measures the number that actually applies to the finished product.

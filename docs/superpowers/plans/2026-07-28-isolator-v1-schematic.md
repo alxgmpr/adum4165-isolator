@@ -1,8 +1,16 @@
-# Isolator v1 — Schematic Implementation Plan
+# Isolator — Schematic Implementation Plan
+
+> **Repo note (2026-07-30):** the design this document calls "v1" is now simply
+> **the isolator** — the single, shipping project at the repo root
+> (`isolator.kicad_sch` / `.kicad_pcb` / `.kicad_pro`). It is no longer a
+> sub-project under `v1/`, and paths below have been updated accordingly. What
+> this document calls "v2" is the **archived 4-port design**, now on branch
+> `4port-archive`. Past-tense passages comparing the two are kept as written —
+> they record why decisions were made and only make sense in that tense.
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build the KiCad schematic for the single-port inline isolator per `docs/superpowers/specs/2026-07-28-usb-isolator-v1-design.md`, ending with an ERC-clean, footprint-assigned, MPN-populated schematic in a new `v1/` project that passes a kicad-happy design review, plus a proven mechanical fit against a Hammond 1455C1202.
+**Goal:** Build the KiCad schematic for the single-port inline isolator per `docs/superpowers/specs/2026-07-28-usb-isolator-v1-design.md`, ending with an ERC-clean, footprint-assigned, MPN-populated schematic in the project at the repo root that passes a kicad-happy design review, plus a proven mechanical fit against a Hammond 1455C1202.
 
 **Architecture:** USB-C upstream → ADuM4165 (5.7 kV isolation) → USB-C downstream. No hub, no external power, no CC sensing. Isolated power from an SN6505B push-pull DC-DC through a center-tapped 5 kV transformer, full-wave rectified, regulated to 5.0 V by a fixed low-dropout regulator, delivered through one TPS2553 current-limit switch.
 
@@ -33,24 +41,24 @@ Copied from the spec — every task implicitly includes these:
 ```bash
 KCLI=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli
 KH=/Users/alex/.claude/plugins/cache/kicad-happy/kicad-happy/2.0.0/skills
-SCH=v1/isolator-v1.kicad_sch
+SCH=isolator.kicad_sch
 ```
 
 **How edits are made.** The schematic is a single flat sheet in KiCad 10 s-expression format. Place symbols by (a) copying the full library symbol definition into the file's `lib_symbols` section, once per `lib_id`, and (b) adding a `(symbol (lib_id ...) (at x y rot) ...)` instance with Reference/Value/Footprint properties and a UUID. Grid is 1.27 mm (50 mil) — every pin endpoint must land on grid. Prefer net labels over long wires: place a short wire stub from each pin and label it; connectivity is by label name. See kicad-happy `references/file-formats.md` for field-by-field details.
 
-**Copy from v2, do not retype.** `isolator.kicad_sch` at the repo root already contains working, reviewed instances of U1 (ADuM4165), the USBLC6-2SC6, SN6505BDBV, TPS2553DBV, 750313638, the USB-C receptacle, and the crystal network. Lift the `lib_symbols` blocks and the symbol instances from there. This is the single biggest source of errors avoided.
+**Copy from the 4-port design, do not retype.** `4port-archive:isolator.kicad_sch` already contains working, reviewed instances of U1 (ADuM4165), the USBLC6-2SC6, SN6505BDBV, TPS2553DBV, 750313638, the USB-C receptacle, and the crystal network. Lift the `lib_symbols` blocks and the symbol instances from there. This is the single biggest source of errors avoided.
 
 **Verification tools (used in every task):**
 
 ```bash
 # ERC — also validates the file still parses; must exit 0 at the end of every task
-$KCLI sch erc "$SCH" --output /tmp/erc-v1.rpt --severity-error --exit-code-violations; echo "exit=$?"; cat /tmp/erc-v1.rpt
+$KCLI sch erc "$SCH" --output /tmp/erc.rpt --severity-error --exit-code-violations; echo "exit=$?"; cat /tmp/erc.rpt
 
 # Netlist — the ground truth for probes
-$KCLI sch export netlist --format kicadxml -o /tmp/v1-net.xml "$SCH"
+$KCLI sch export netlist --format kicadxml -o /tmp/net.xml "$SCH"
 
 # Analyzer
-python3 $KH/kicad/scripts/analyze_schematic.py "$SCH" --analysis-dir analysis-v1/
+python3 $KH/kicad/scripts/analyze_schematic.py "$SCH" --analysis-dir analysis/
 ```
 
 **Probe pattern** (fill in the net name per task):
@@ -58,7 +66,7 @@ python3 $KH/kicad/scripts/analyze_schematic.py "$SCH" --analysis-dir analysis-v1
 ```bash
 python3 - <<'EOF'
 import xml.etree.ElementTree as ET
-r = ET.parse('/tmp/v1-net.xml').getroot()
+r = ET.parse('/tmp/net.xml').getroot()
 TARGET = 'ISO_5V'
 for n in r.iter('net'):
     if n.get('name').lstrip('/') == TARGET:
@@ -72,7 +80,7 @@ EOF
 ```bash
 python3 - <<'EOF'
 import xml.etree.ElementTree as ET
-r = ET.parse('/tmp/v1-net.xml').getroot()
+r = ET.parse('/tmp/net.xml').getroot()
 ALLOWED = {'U1', 'T1', 'CY1'}   # the only parts permitted to bridge domains
 
 nets = {n.get('name').lstrip('/'): {nd.get('ref') for nd in n.iter('node')}
@@ -140,7 +148,7 @@ with a *non-crossing* part on the isolated side.
 
 Note there is no separate `ISO_D+`/`PORT_D+` split: with no hub, the ADuM4165's `DD+` pin, the USBLC6 array, and the connector are all one net. Same for `D-`.
 
-**Pin numbers verified from the v2 netlist** — use these, do not infer:
+**Pin numbers verified from the 4-port design netlist** — use these, do not infer:
 
 | Part | Pins |
 |---|---|
@@ -154,28 +162,29 @@ Note there is no separate `ISO_D+`/`PORT_D+` split: with no hub, the ADuM4165's 
 
 ---
 
-### Task 1: v1 project skeleton and mechanical feasibility gate
+### Task 1: Project skeleton and mechanical feasibility gate
 
 **Files:**
-- Create: `v1/isolator-v1.kicad_pro`, `v1/isolator-v1.kicad_sch`, `v1/isolator-v1.kicad_pcb`, `v1/sym-lib-table`, `v1/fp-lib-table`
+- Create: `isolator.kicad_pro`, `isolator.kicad_sch`, `isolator.kicad_pcb`, `sym-lib-table`, `fp-lib-table`
 - Create: `docs/superpowers/reviews/2026-07-28-v1-mechanical-feasibility.md`
 
 **Interfaces:**
-- Produces: an empty but openable KiCad project at `v1/isolator-v1.kicad_pro` with the shared `isolator-lib` registered; a written go/no-go on the 80 × 50 mm board target.
+- Produces: an empty but openable KiCad project at `isolator.kicad_pro` with the shared `isolator-lib` registered; a written go/no-go on the 80 × 50 mm board target.
 
-- [ ] **Step 1: Create the project directory and copy settings from v2**
+- [ ] **Step 1: Create the project and copy settings from the 4-port design**
+
+*Historical note: when this step ran, the isolator was a sub-project under `v1/` and the 4-port design still occupied the repo root, so the copy was `v1/isolator-v1.kicad_pro` ← root `isolator.kicad_pro`. Both have since moved — the isolator is now the root project and the 4-port design is on branch `4port-archive`. The equivalent today is:*
 
 ```bash
-mkdir -p v1
-cp isolator.kicad_pro v1/isolator-v1.kicad_pro
-cp isolator.kicad_dru v1/isolator-v1.kicad_dru
+git show 4port-archive:isolator.kicad_pro > isolator.kicad_pro
+git show 4port-archive:isolator.kicad_dru > isolator.kicad_dru
 ```
 
-Copying v2's `.kicad_pro` carries over the ERC/DRC severity settings and net classes that were already tuned for this design — do not start from a default project.
+Copying the 4-port design's `.kicad_pro` carries over the ERC/DRC severity settings and net classes that were already tuned for this design — do not start from a default project.
 
 - [ ] **Step 2: Create the empty schematic and PCB**
 
-`v1/isolator-v1.kicad_sch`:
+`isolator.kicad_sch`:
 
 ```
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0")
@@ -186,7 +195,7 @@ Copying v2's `.kicad_pro` carries over the ERC/DRC severity settings and net cla
 )
 ```
 
-`v1/isolator-v1.kicad_pcb`:
+`isolator.kicad_pcb`:
 
 ```
 (kicad_pcb (version 20241229) (generator "pcbnew") (generator_version "9.0")
@@ -203,7 +212,7 @@ Copying v2's `.kicad_pro` carries over the ERC/DRC severity settings and net cla
 
 - [ ] **Step 3: Register the shared libraries**
 
-`v1/sym-lib-table`:
+`sym-lib-table`:
 
 ```
 (sym_lib_table
@@ -212,7 +221,7 @@ Copying v2's `.kicad_pro` carries over the ERC/DRC severity settings and net cla
 )
 ```
 
-`v1/fp-lib-table`:
+`fp-lib-table`:
 
 ```
 (fp_lib_table
@@ -225,7 +234,7 @@ Copying v2's `.kicad_pro` carries over the ERC/DRC severity settings and net cla
 
 Run:
 ```bash
-$KCLI sch erc v1/isolator-v1.kicad_sch --output /tmp/erc-v1.rpt --severity-error --exit-code-violations; echo "exit=$?"
+$KCLI sch erc isolator.kicad_sch --output /tmp/erc.rpt --severity-error --exit-code-violations; echo "exit=$?"
 ```
 Expected: exit 0, empty schematic, no parse error. If `kicad-cli` rejects the file version strings, open the project once in the KiCad GUI to let it migrate, then re-run.
 
@@ -237,7 +246,7 @@ Compute the total component courtyard area and the longest dimension chain again
 
 ```bash
 python3 - <<'EOF'
-# Courtyard footprints (mm) for every v1 part. ADuM4165 and T1 measured from
+# Courtyard footprints (mm) for every isolator part. ADuM4165 and T1 measured from
 # isolator-lib.pretty; the rest are standard package sizes.
 parts = {
     'J1 USB-C':        (9.0, 7.5),   'J2 USB-C':        (9.0, 7.5),
@@ -277,7 +286,7 @@ Create `docs/superpowers/reviews/2026-07-28-v1-mechanical-feasibility.md` contai
 - [ ] **Step 7: Commit**
 
 ```bash
-git add v1 docs/superpowers/reviews/2026-07-28-v1-mechanical-feasibility.md
+git add -A docs/superpowers/reviews/2026-07-28-v1-mechanical-feasibility.md
 git commit -m "feat(v1): project skeleton, shared lib tables, mechanical feasibility gate"
 ```
 
@@ -307,7 +316,7 @@ Requirements, all of which must be checked against the actual data sheet — do 
 
 First candidate: **TLV76750** (TI, 1 A, fixed 5.0 V, SOT-23-5). Download the data sheet, confirm the fixed-5.0 V option and the exact orderable part number exist, and read the dropout-vs-current curve at 315 mA.
 
-**Documented fallback:** if the first candidate fails any row, or its 5.0 V variant is not orderable, use **MIC29302WU** — the v2 part, already validated, already has a working symbol and the `TO-263-5_TabPin3` footprint in the schematic, wired adjustable with R 30.1 kΩ / 10 kΩ for ≈4.97 V. It is physically larger and oversized for the current, which is the only reason v1 tried to replace it. Record which path was taken.
+**Documented fallback:** if the first candidate fails any row, or its 5.0 V variant is not orderable, use **MIC29302WU** — the 4-port design part, already validated, already has a working symbol and the `TO-263-5_TabPin3` footprint in the schematic, wired adjustable with R 30.1 kΩ / 10 kΩ for ≈4.97 V. It is physically larger and oversized for the current, which is the only reason the isolator tried to replace it. Record which path was taken.
 
 - [ ] **Step 2: Write the LDO pin table**
 
@@ -327,9 +336,9 @@ If a stock symbol exists, note its `lib_id`. If not, add a symbol to `isolator-l
 
 Unidirectional TVS, V_RWM ≥ 5.5 V, capacitance is unconstrained on a power rail. Candidates: **ESD441** (TI, DFN0603 — very small, check assembly method) or **PESD5V0S1BA** (Nexperia, SOD-523 — easier to hand-place). Pick one, confirm stock, and use the stock KiCad symbol `Device:D_TVS`.
 
-- [ ] **Step 5: Select the barrier-stitching capacitor CY1 — this is where v2's part is wrong**
+- [ ] **Step 5: Select the barrier-stitching capacitor CY1 — this is where the 4-port design's part is wrong**
 
-v2 carries `C49` as a **1 nF 2 kV part in a 2220 (5.7 × 5.0 mm) SMD package, DNP**. That package spans only 5.7 mm. Populating it as-is would **reduce the barrier from 8.3 mm to 5.7 mm**, making the capacitor the weakest point in the isolation — exactly what the spec forbids.
+The 4-port design carries `C49` as a **1 nF 2 kV part in a 2220 (5.7 × 5.0 mm) SMD package, DNP**. That package spans only 5.7 mm. Populating it as-is would **reduce the barrier from 8.3 mm to 5.7 mm**, making the capacitor the weakest point in the isolation — exactly what the spec forbids.
 
 Select instead a **through-hole safety capacitor** with enough lead pitch that its body and pads clear the barrier gap, and confirm the chosen part's creepage meets or beats 8.3 mm.
 
@@ -339,7 +348,7 @@ Symbol: `Device:C`. Footprint: a through-hole disc footprint with ≥10 mm pad p
 
 - [ ] **Step 6: Write the selection record**
 
-Create `docs/superpowers/reviews/2026-07-28-v1-part-selection.md` with, for each of the three parts: chosen MPN, the requirement table with measured/data-sheet values filled in, the `lib_id` and footprint, and — for CY1 — the explicit note that v2's C49 footprint must not be reused.
+Create `docs/superpowers/reviews/2026-07-28-v1-part-selection.md` with, for each of the three parts: chosen MPN, the requirement table with measured/data-sheet values filled in, the `lib_id` and footprint, and — for CY1 — the explicit note that the 4-port design's C49 footprint must not be reused.
 
 - [ ] **Step 7: Commit**
 
@@ -352,15 +361,15 @@ git add -A && git commit -m "feat(v1): select 5V LDO, VBUS TVS, and Y1 stitching
 ### Task 3: Upstream host section (GND1 domain)
 
 **Files:**
-- Modify: `v1/isolator-v1.kicad_sch`
+- Modify: `isolator.kicad_sch`
 
 **Interfaces:**
 - Consumes: `isolator-lib` from Task 1.
 - Produces: nets `VBUS_HOST`, `HOST_D+`, `HOST_D-`, `VDD1`, `XTALIN`, `XTALOUT`, `GND1`; U1 Side-1 pins fully terminated.
 
-- [ ] **Step 1: Copy the symbol definitions from v2**
+- [ ] **Step 1: Copy the symbol definitions from the 4-port design**
 
-Lift these `lib_symbols` blocks out of `isolator.kicad_sch` into `v1/isolator-v1.kicad_sch`: `Isolator:ADUM4165`, the USBLC6-2SC6 symbol, `Connector:USB_C_Receptacle_USB2.0_16P`, the crystal, `Device:R`, `Device:C`, and the `power:GND`/`power:PWR_FLAG` symbols.
+Lift these `lib_symbols` blocks out of `4port-archive:isolator.kicad_sch` into the isolator schematic: `Isolator:ADUM4165`, the USBLC6-2SC6 symbol, `Connector:USB_C_Receptacle_USB2.0_16P`, the crystal, `Device:R`, `Device:C`, and the `power:GND`/`power:PWR_FLAG` symbols.
 
 - [ ] **Step 2: Place and wire the upstream section**
 
@@ -391,13 +400,13 @@ New parts: J1 `Connector:USB_C_Receptacle_USB2.0_16P`, U1 `Isolator:ADUM4165`, U
 | U1.2, 4, 7, 10 | `GND1` |
 | U1.11–20 | `(no_connect)` for now — removed in Tasks 4 and 5 |
 
-**Bulk capacitance note:** C3 is 4.7 µF, not v2's 10 µF. With no hub and no external-power section, v1's total `VBUS_HOST` capacitance must stay under the USB 2.0 §7.2.4.1 limit of 10 µF / 50 µC. Sum C3 + C4 + U4's input bypass (added in Task 4) and confirm the total is ≤10 µF.
+**Bulk capacitance note:** C3 is 4.7 µF, not the 4-port design's 10 µF. With no hub and no external-power section, the isolator's total `VBUS_HOST` capacitance must stay under the USB 2.0 §7.2.4.1 limit of 10 µF / 50 µC. Sum C3 + C4 + U4's input bypass (added in Task 4) and confirm the total is ≤10 µF.
 
 - [ ] **Step 3: Verify**
 
 ```bash
-$KCLI sch erc "$SCH" --output /tmp/erc-v1.rpt --severity-error --exit-code-violations; echo "exit=$?"
-$KCLI sch export netlist --format kicadxml -o /tmp/v1-net.xml "$SCH"
+$KCLI sch erc "$SCH" --output /tmp/erc.rpt --severity-error --exit-code-violations; echo "exit=$?"
+$KCLI sch export netlist --format kicadxml -o /tmp/net.xml "$SCH"
 ```
 
 Expected: ERC exit 0. Probe `HOST_D+` — must contain `J1.A6`, `J1.B6`, `U1.8`, `U2.1`, `U2.6`. Probe `VBUS_HOST` — must contain `J1.A4/A9/B4/B9`, `U1.1`, `U2.5`, `D5`, C3, C4. Probe `VDD1` — must contain exactly `U1.3` and C5, nothing else.
@@ -413,21 +422,21 @@ git commit -am "feat(v1/sch): upstream USB-C host section, ADuM Side 1, crystal"
 ### Task 4: Isolated DC-DC and 5.0 V rail (GND2 domain)
 
 **Files:**
-- Modify: `v1/isolator-v1.kicad_sch`
+- Modify: `isolator.kicad_sch`
 
 **Interfaces:**
 - Consumes: `VBUS_HOST`, `GND1`, the LDO symbol from Task 2.
 - Produces: nets `DCDC_RAW`, `ISO_5V`, `GND2`.
 
-- [ ] **Step 1: Copy the symbol definitions from v2**
+- [ ] **Step 1: Copy the symbol definitions from the 4-port design**
 
-Lift `Power_Management:SN6505BDBV`, `isolator-lib:750313638`, and `Device:D_Schottky` from `isolator.kicad_sch`. Add the LDO symbol resolved in Task 2.
+Lift `Power_Management:SN6505BDBV`, `isolator-lib:750313638`, and `Device:D_Schottky` from `4port-archive:isolator.kicad_sch`. Add the LDO symbol resolved in Task 2.
 
 - [ ] **Step 2: Place and wire the DC-DC**
 
 New parts: U4 SN6505BDBV, T1 750313638, D1/D2 SS34, U5 LDO, C6 0.1 µF, C7 4.7 µF, C8 47 µF, C9 0.1 µF, C10 47 µF, C11 0.1 µF.
 
-This topology is copied verbatim from v2, where it is already reviewed. The secondary **is** center-tapped, so this is a two-diode full-wave rectifier, not a bridge.
+This topology is copied verbatim from the 4-port design, where it is already reviewed. The secondary **is** center-tapped, so this is a two-diode full-wave rectifier, not a bridge.
 
 | Connection | Notes |
 |---|---|
@@ -467,7 +476,7 @@ git commit -am "feat(v1/sch): SN6505B isolated DC-DC, full-wave rectifier, 5V LD
 ### Task 5: ADuM Side 2, port switch, and downstream USB-C
 
 **Files:**
-- Modify: `v1/isolator-v1.kicad_sch`
+- Modify: `isolator.kicad_sch`
 
 **Interfaces:**
 - Consumes: `ISO_5V`, `GND2`, U1 from Task 3.
@@ -479,7 +488,7 @@ Read the ADuM4165 Rev B data sheet pin description for **PGOOD** (pin 14) — `d
 
 - If push-pull and it can source ≥1 mA: wire D3 from `PGOOD2` through a series resistor to `GND2`. With a 3.3 V V_DD2 domain and a ~2.0 V LED, use 1.3 kΩ for ≈1 mA.
 - If open-drain: wire D3 anode to `VDD2` through the resistor, cathode to `PGOOD2`.
-- If the drive is under 1 mA: add Q1 `2N7002` as v2 does — gate to `PGOOD2`, source to `GND2`, drain to the LED cathode with the LED anode to `ISO_5V` through a resistor.
+- If the drive is under 1 mA: add Q1 `2N7002` as the 4-port design does — gate to `PGOOD2`, source to `GND2`, drain to the LED cathode with the LED anode to `ISO_5V` through a resistor.
 
 Record which case applied. Do not guess between them.
 
@@ -487,11 +496,11 @@ Record which case applied. Do not guess between them.
 
 Read the current-limit equation from `datasheets/extracted/TPS2553DBV-pins.md` and the TPS2553 data sheet. Solve for I_OS = 250 mA and pick the nearest E96 value inside the allowed 15 kΩ ≤ R_ILIM ≤ 232 kΩ range.
 
-Sanity check only, not the method: v2 uses 40.2 kΩ for ≈600 mA, so a linear scaling puts 250 mA near **96.5 kΩ** (E96 neighbours 95.3 kΩ and 97.6 kΩ). If the data-sheet equation lands far from this, trust the equation and note the discrepancy.
+Sanity check only, not the method: The 4-port design uses 40.2 kΩ for ≈600 mA, so a linear scaling puts 250 mA near **96.5 kΩ** (E96 neighbours 95.3 kΩ and 97.6 kΩ). If the data-sheet equation lands far from this, trust the equation and note the discrepancy.
 
 - [ ] **Step 3: Place and wire**
 
-New parts: U3 USBLC6-2SC6, U6 TPS2553DBV, J2 `Connector:USB_C_Receptacle_USB2.0_16P`, D4 FAULT LED, D6 TVS, R (ILIM from Step 2), R 100 kΩ (`nFAULT` pull-up), R 330 Ω (FAULT LED), R + LED per Step 1, R 56 kΩ ×2, C12 0.1 µF, C13 0.1 µF, and the port bulk pair **C14 22 µF + C15 0.1 µF** — the same values v2 uses on each of its port outputs (C38/C39), which the TPS2553 data sheet's output-capacitance guidance already covers.
+New parts: U3 USBLC6-2SC6, U6 TPS2553DBV, J2 `Connector:USB_C_Receptacle_USB2.0_16P`, D4 FAULT LED, D6 TVS, R (ILIM from Step 2), R 100 kΩ (`nFAULT` pull-up), R 330 Ω (FAULT LED), R + LED per Step 1, R 56 kΩ ×2, C12 0.1 µF, C13 0.1 µF, and the port bulk pair **C14 22 µF + C15 0.1 µF** — the same values the 4-port design uses on each of its port outputs (C38/C39), which the TPS2553 data sheet's output-capacitance guidance already covers.
 
 | From | To / net |
 |---|---|
@@ -539,7 +548,7 @@ git commit -am "feat(v1/sch): ADuM Side 2, TPS2553 port switch, downstream USB-C
 ### Task 6: Stitching capacitor, PWR_FLAGs, and ERC zero
 
 **Files:**
-- Modify: `v1/isolator-v1.kicad_sch`
+- Modify: `isolator.kicad_sch`
 
 **Interfaces:**
 - Consumes: everything from Tasks 3–5.
@@ -562,8 +571,8 @@ Per the repo's schematic layout rules, PWR_FLAG symbols go in a sheet corner, no
 - [ ] **Step 3: Drive ERC to zero**
 
 ```bash
-$KCLI sch erc "$SCH" --output /tmp/erc-v1.rpt --severity-error --exit-code-violations; echo "exit=$?"
-cat /tmp/erc-v1.rpt
+$KCLI sch erc "$SCH" --output /tmp/erc.rpt --severity-error --exit-code-violations; echo "exit=$?"
+cat /tmp/erc.rpt
 ```
 
 Expected: exit 0 and an empty error list. Then re-run without `--severity-error` and triage every remaining warning: either fix it or write a one-line justification into the commit message. Do not leave an unexplained warning.
@@ -583,14 +592,14 @@ git commit -am "feat(v1/sch): populated barrier stitching cap, PWR_FLAGs, ERC cl
 ### Task 7: Footprint assignment
 
 **Files:**
-- Modify: `v1/isolator-v1.kicad_sch`
+- Modify: `isolator.kicad_sch`
 
 **Interfaces:**
 - Produces: every symbol carrying a valid, resolvable `Footprint` property.
 
 - [ ] **Step 1: Assign footprints**
 
-Reuse v2's assignments verbatim where the part is the same:
+Reuse the 4-port design's assignments verbatim where the part is the same:
 
 | Ref | Footprint |
 |---|---|
@@ -603,7 +612,7 @@ Reuse v2's assignments verbatim where the part is the same:
 | D3, D4 | `LED_SMD:LED_0603_1608Metric` |
 | D5, D6 | per Task 2 |
 | CY1 | per Task 2 — through-hole, ≥10 mm pad pitch |
-| Y1 | copy v2's crystal footprint |
+| Y1 | copy the 4-port design's crystal footprint |
 | 47 µF | `Capacitor_SMD:C_1210_3225Metric` |
 | 4.7 µF | `Capacitor_SMD:C_0805_2012Metric` |
 | 0.1 µF, 8 pF, all R | `Capacitor_SMD:C_0603_1608Metric` / `Resistor_SMD:R_0603_1608Metric` |
@@ -624,10 +633,10 @@ Add a text block to the sheet so the layout plan inherits them without needing t
 - [ ] **Step 3: Verify every footprint resolves**
 
 ```bash
-$KCLI sch export netlist --format kicadxml -o /tmp/v1-net.xml "$SCH"
+$KCLI sch export netlist --format kicadxml -o /tmp/net.xml "$SCH"
 python3 - <<'EOF'
 import xml.etree.ElementTree as ET
-r = ET.parse('/tmp/v1-net.xml').getroot()
+r = ET.parse('/tmp/net.xml').getroot()
 missing = [c.get('ref') for c in r.iter('comp') if not (c.findtext('footprint') or '').strip()]
 print("MISSING FOOTPRINTS:", missing or "none")
 EOF
@@ -646,7 +655,7 @@ git commit -am "feat(v1/sch): footprint assignment and binding layout constraint
 ### Task 8: MPNs, BOM, and design review
 
 **Files:**
-- Modify: `v1/isolator-v1.kicad_sch`
+- Modify: `isolator.kicad_sch`
 - Create: `docs/superpowers/reviews/2026-07-28-v1-schematic-review.md`
 
 **Interfaces:**
@@ -654,13 +663,13 @@ git commit -am "feat(v1/sch): footprint assignment and binding layout constraint
 
 - [ ] **Step 1: Populate MPN properties**
 
-Add an `MPN` property to every component. Reuse v2's MPNs where the part is identical — read them out of `isolator.kicad_sch`. New lines are the LDO, the two TVS diodes, and CY1, all chosen in Task 2.
+Add an `MPN` property to every component. Reuse the 4-port design's MPNs where the part is identical — read them out of `4port-archive:isolator.kicad_sch`. New lines are the LDO, the two TVS diodes, and CY1, all chosen in Task 2.
 
 - [ ] **Step 2: Export the BOM**
 
 ```bash
 $KCLI sch export bom --fields "Reference,Value,Footprint,MPN" --group-by "Value,Footprint,MPN" \
-  -o v1/isolator-v1-bom.csv "$SCH"
+  -o isolator-bom.csv "$SCH"
 ```
 
 Confirm every grouped line has an MPN.
@@ -668,10 +677,10 @@ Confirm every grouped line has an MPN.
 - [ ] **Step 3: Run the kicad-happy design review**
 
 ```bash
-python3 $KH/kicad/scripts/analyze_schematic.py "$SCH" --analysis-dir analysis-v1/
+python3 $KH/kicad/scripts/analyze_schematic.py "$SCH" --analysis-dir analysis/
 ```
 
-Then invoke the `kicad-happy:kicad` skill for a full review of `v1/isolator-v1.kicad_sch`.
+Then invoke the `kicad-happy:kicad` skill for a full review of `isolator.kicad_sch`.
 
 - [ ] **Step 4: Check the review against the spec, point by point**
 

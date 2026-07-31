@@ -1,5 +1,14 @@
 # Isolated 4-Port USB 2.0 Hub — Schematic Implementation Plan
 
+> **Repo note (2026-07-30):** this document describes the **archived 4-port
+> design**. That project no longer lives at the repo root — it was archived to
+> branch `4port-archive` when the repository collapsed to the single-port
+> isolator. Every bare `isolator.kicad_sch` / `isolator.kicad_pcb` /
+> `isolator.kicad_pro` path below refers to the **archived** files as they stood
+> on that branch, **not** to the files of those names at the root today, which
+> are the single-port isolator. Retrieve them with
+> `git show 4port-archive:isolator.kicad_sch`.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Complete the KiCad schematic for the ADuM4165-based isolated 4-port USB 2.0 hub per `docs/superpowers/specs/2026-07-25-usb-isolator-design.md`, ending with a fully wired, ERC-clean, footprint-assigned, MPN-populated schematic that passes a kicad-happy design review.

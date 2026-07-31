@@ -1,5 +1,14 @@
 # Isolated 4-Port USB 2.0 Hub — Schematic Design Review
 
+> **Repo note (2026-07-30):** this document describes the **archived 4-port
+> design**. That project no longer lives at the repo root — it was archived to
+> branch `4port-archive` when the repository collapsed to the single-port
+> isolator. Every bare `isolator.kicad_sch` / `isolator.kicad_pcb` /
+> `isolator.kicad_pro` path below refers to the **archived** files as they stood
+> on that branch, **not** to the files of those names at the root today, which
+> are the single-port isolator. Retrieve them with
+> `git show 4port-archive:isolator.kicad_sch`.
+
 **Project:** `isolator` (KiCad 10.0.5, single flat sheet, **no PCB yet**)
 **Date:** 2026-07-26
 **Branch / commit basis:** `feature/isolated-usb-hub`, after Task 11 (MPN population)
