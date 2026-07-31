@@ -11,3 +11,4 @@ datasheets/
 *.rpt
 tools/*.jar
 tools/ar_work/
+__pycache__/

@@ -263,7 +263,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "v1.0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -626,23 +626,7 @@
       },
       {
         "netclass": "USB_DIFF90",
-        "pattern": "/ISO_D*"
-      },
-      {
-        "netclass": "USB_DIFF90",
-        "pattern": "/P1_D*"
-      },
-      {
-        "netclass": "USB_DIFF90",
-        "pattern": "/P2_D*"
-      },
-      {
-        "netclass": "USB_DIFF90",
-        "pattern": "/P3_D*"
-      },
-      {
-        "netclass": "USB_DIFF90",
-        "pattern": "/P4_D*"
+        "pattern": "/PORT_D*"
       },
       {
         "netclass": "PWR",
@@ -650,7 +634,7 @@
       },
       {
         "netclass": "PWR",
-        "pattern": "/EXT_5V"
+        "pattern": "/DCDC_RAW"
       },
       {
         "netclass": "PWR",
@@ -658,27 +642,7 @@
       },
       {
         "netclass": "PWR",
-        "pattern": "/DCDC_5V"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/DCDC_RAW"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/P1_VBUS"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/P2_VBUS"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/P3_VBUS"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/P4_VBUS"
+        "pattern": "/PORT_VBUS"
       },
       {
         "netclass": "HOST_SIDE",
@@ -690,11 +654,11 @@
       },
       {
         "netclass": "HOST_SIDE",
-        "pattern": "/HOST_*"
+        "pattern": "/VDD1"
       },
       {
         "netclass": "HOST_SIDE",
-        "pattern": "/VDD1"
+        "pattern": "/HOST_*"
       },
       {
         "netclass": "HOST_SIDE",
@@ -702,15 +666,19 @@
       },
       {
         "netclass": "HOST_SIDE",
-        "pattern": "Net-(J1*"
+        "pattern": "/PP_*"
       },
       {
         "netclass": "HOST_SIDE",
-        "pattern": "Net-(T1*"
+        "pattern": "Net-(J1*"
       },
       {
         "netclass": "ISO_SIDE",
         "pattern": "GND2"
+      },
+      {
+        "netclass": "ISO_SIDE",
+        "pattern": "/VDD2"
       },
       {
         "netclass": "ISO_SIDE",
@@ -722,39 +690,11 @@
       },
       {
         "netclass": "ISO_SIDE",
-        "pattern": "/EXT_*"
+        "pattern": "/RECT_*"
       },
       {
         "netclass": "ISO_SIDE",
-        "pattern": "/P1_*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/P2_*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/P3_*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/P4_*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/PRTPWR*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/nOCS*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/HUB_*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/VDD2"
+        "pattern": "/PORT_*"
       },
       {
         "netclass": "ISO_SIDE",
@@ -762,43 +702,19 @@
       },
       {
         "netclass": "ISO_SIDE",
-        "pattern": "/VTH"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/n3A_DET"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/PR1_SENSE"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "/SS_SET"
-      },
-      {
-        "netclass": "ISO_SIDE",
         "pattern": "/ILIM_SET"
       },
       {
         "netclass": "ISO_SIDE",
-        "pattern": "/ST_*"
+        "pattern": "/nFAULT"
       },
       {
         "netclass": "ISO_SIDE",
-        "pattern": "Net-(D1*"
+        "pattern": "/FAULT_LED_*"
       },
       {
         "netclass": "ISO_SIDE",
-        "pattern": "Net-(D2*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "Net-(U6*"
-      },
-      {
-        "netclass": "ISO_SIDE",
-        "pattern": "Net-(J2*"
+        "pattern": "/PG_LED_*"
       }
     ]
   },
