@@ -18,10 +18,17 @@ router is free to satisfy either from either end, and on the current board it
 partly has.
 
 This spec splits those nets into per-owner branches joined at explicit star
-points (KiCad net ties), adds three missing capacitors, and gives every
+points (KiCad net ties), adds two missing capacitors, and gives every
 decoupling capacitor an ownership `Description` property. After this change,
 a capacitor cannot be routed to the wrong pin without the netlist itself being
 wrong, which ERC and the existing gates will catch.
+
+**The schematic already records the correct ownership — as drawing position.**
+C12 is drawn beside C13 at U1's VBUS2/VDD2 pins; C14 and C15 are drawn beneath
+U6 on its output. A human reading the sheet can see which pin each serves. The
+netlist cannot, because every one of those capacitors is on a net shared with
+two or three other consumers, so the board placement discarded the intent. This
+change makes the drawn intent machine-readable; it does not invent new intent.
 
 **This pass is schematic-only.** The board still carries the old netlist when
 this spec is implemented; resynchronising and rerouting is deferred to a
@@ -37,32 +44,41 @@ applied — not footprint-origin approximations.
 
 **1. `/ISO_5V` spans four independent loads across ~30 mm.**
 
-| Load | Pin location | Caps on it | Distance |
+| Load | Pin location | Intended cap | Where it actually is |
 |---|---|---|---|
-| U5 TLV767 output | (171.78, 88.68) | C11 100n / C10 47µ | 2.18 / 2.37 mm |
-| U1 ADuM4165 VBUS2 | (151.78, 95.99) | *none* | nearest is 21.90 mm |
-| U6 TPS2553 input | (179.74, 100.75) | C12 100n | 2.01 mm |
+| U5 TLV767 output | (171.78, 88.68) | C11 100n, C10 47µ | 2.18 / 2.37 mm — correct |
+| U1 ADuM4165 VBUS2 | (151.78, 95.99) | C12 100n | **26.46 mm away, at U6** |
+| U6 TPS2553 input | (179.74, 100.75) | *none exists* | C12 landed here instead |
 | R4/R5/R6 indicators | y ≈ 116–121 | n/a | — |
 
-**2. U1 pin 20 (VBUS2) has no bypass capacitor at all.** The ADuM4165 data
-sheet (Rev. B, Table 12 and the PCB Layout section) requires 0.1 µF on each of
-VBUS1, VDD1, VBUS2 and VDD2, with total lead length under 10 mm. Three are
-satisfied — C4 at VBUS1 (3.11 mm), C5 at VDD1 (3.72 mm), C13 at VDD2
-(2.45 mm). VBUS2 has nothing, and no fourth 100 nF exists in the BOM for it.
-The schematic's own `LAYOUT CONSTRAINTS -- BINDING` block, item 8, already
-refers to a "VBUS2/VDD2 bypass" returning via pins 11/19, so this is an
-omission rather than a decision.
+**2. C12 is U1's VBUS2 bypass and it is 26.46 mm from the pin.** The ADuM4165
+data sheet (Rev. B, Table 12 and the PCB Layout section) requires 0.1 µF on
+each of VBUS1, VDD1, VBUS2 and VDD2, with total lead length under 10 mm. On
+the sheet C12 is drawn immediately beside C13 at U1's VBUS2/VDD2 pins, and
+the `LAYOUT CONSTRAINTS -- BINDING` block item 8 refers to them jointly as the
+"VBUS2/VDD2 bypass". C13 landed correctly at 2.45 mm from pin 18. C12 landed
+at U6's input pins, 2.01 mm from a chip it was never drawn for, leaving VBUS2
+with nothing inside 21.90 mm.
 
-**3. U6 (TPS2553) has no output capacitor near OUT.** C14 (22 µ) sits 10.87 mm
-from pin 6 and C15 (100 n) 12.49 mm; both are down at J2/U3. SLVS841F §12.1
-asks for a high-value capacitor *and* a 100 nF bypass on the output pin.
+**3. U6's input has no capacitor of its own,** in the schematic or on the
+board. C12 currently covers that pin by accident. Once C12 returns to U1,
+U6's input needs a part that does not yet exist.
 
-**4. `/DCDC_RAW` names two different nodes.** It is simultaneously the
+**4. C14 and C15 are U6's output capacitors and both are at J2.** They are
+drawn directly beneath U6 on `/PORT_VBUS`, which is what SLVS841F §12.1 asks
+for — a high-value capacitor *and* a 100 nF on the output pin. On the board
+C14 (22 µ) sits 10.87 mm from pin 6 and C15 (100 n) 12.49 mm, both clustered
+at J2/U3 instead.
+
+**5. `/DCDC_RAW` names two different nodes.** It is simultaneously the
 rectifier output (D1/D2 cathodes, wanting the 47 µF reservoir) and the LDO
-input (U5 pins 5/8, wanting a 100 nF). Both capacitors currently sit at the
-LDO: C8 is 8.08 mm from D1's cathode but 3.76 mm from U5's input.
+input (U5 pins 5/8, wanting a 100 nF). Unlike the cases above the sheet does
+not disambiguate this one either — C8 and C9 are drawn side by side between
+the diodes and U5, belonging to neither. Both landed at the LDO: C8 is
+8.08 mm from D1's cathode but 3.76 mm from U5's input. Assigning C8 to the
+rectifier is therefore a new decision, not a restoration.
 
-**5. C6 and C7 serve two pins that each want their own bulk capacitor.**
+**6. C6 and C7 serve two pins that each want their own bulk capacitor.**
 SN6505B Table 5-1 requires ≥4.7 µF low-ESR at VCC; §11.1 separately requires
 1–10 µF low-ESR at the transformer centre tap. Today one 4.7 µF (C7) and one
 100 nF (C6) cover both. C7 is 2.80 mm from U4 pin 2 and 5.57 mm from T1 pin 2;
@@ -86,8 +102,7 @@ inverted or moot elsewhere:
 |---|---|---|---|
 | U5 IN | C9 100n 3.18 | C8 47µ 3.76 | ordered, but 0.58 mm apart — effectively tied |
 | U5 OUT | C11 100n 2.18 | C10 47µ 2.37 | ordered, but 0.19 mm apart — effectively tied |
-| U6 OUT | C15 100n 12.49 | C14 22µ 10.87 | inverted, and both far |
-| J2 VBUS | C15 100n 14.05 | C14 22µ 16.03 | ordered |
+| U6 OUT | C15 100n 12.49 | C14 22µ 10.87 | inverted, and both belong 10 mm closer |
 | U4 VCC | C6 100n 4.23 | C7 4.7µ 2.80 | inverted by the general rule, **correct per SN6505B** — TI wants the bulk nearest VCC |
 | T1 centre tap | C6 100n 3.84 | C7 4.7µ 5.57 | wrong part nearest; the centre tap wants bulk |
 
@@ -109,9 +124,14 @@ Three star points, each a KiCad net tie. All new net names fall under existing
 | Net | Members |
 |---|---|
 | `/ISO_5V` | U5.1, U5.2 · C10 47µ · C11 100n · NT1.1 |
-| `/ISO_5V_VBUS2` | U1.20 · **C16 100n (new)** · NT1.2 |
-| `/ISO_5V_SW` | U6.1, U6.3 · C12 100n · NT1.3 |
+| `/ISO_5V_VBUS2` | U1.20 · C12 100n · NT1.2 |
+| `/ISO_5V_SW` | U6.1, U6.3 · **C16 100n (new)** · NT1.3 |
 | `/ISO_5V_IND` | R4.1 · R5.1 · R6.1 · NT1.4 |
+
+C12 stays exactly where it is drawn — beside C13 at U1's supply pins. Moving
+it onto its own branch net is what stops the board from satisfying it at U6
+again. C16 is the part that genuinely does not exist yet: U6's input pin has
+never had a capacitor of its own.
 
 `/ISO_5V_IND` groups the nFAULT pull-up with the two LED series resistors
 because they occupy the same physical corner and draw single-digit milliamps
@@ -133,8 +153,16 @@ the current limiter's input.
 
 | Net | Members |
 |---|---|
-| `/PORT_VBUS` | U6.6 · **C14 22µ (reassigned here)** · **C17 100n (new)** · NT3.1 |
-| `/PORT_VBUS_J2` | J2.A4/A9/B4/B9 · D6 · U3.5 · R7.1 · R8.1 · C15 100n · NT3.2 |
+| `/PORT_VBUS` | U6.6 · C14 22µ · C15 100n · NT3.1 |
+| `/PORT_VBUS_J2` | J2.A4/A9/B4/B9 · D6 · U3.5 · R7.1 · R8.1 · NT3.2 |
+
+C14 and C15 stay where they are drawn, beneath U6. No new part is needed here
+— the pair already exists and already reads correctly on the sheet. The split
+is what forces the board to honour it.
+
+`/PORT_VBUS_J2` deliberately carries no capacitor: D6 is the connector-local
+part, and the 22 µF sits ~11 mm upstream, which is electrically adjacent at
+hot-plug timescales. See Risks.
 
 NT3 carries the full downstream port current. The TPS2553's limit with
 R3 = 93.1 kΩ is 252/286/324 mA min/nom/max (SLVS841F), against a
@@ -150,36 +178,36 @@ capacitance, not topology.
 
 | Ref | Value | Footprint | MPN | Role |
 |---|---|---|---|---|
-| C16 | 100n | `Capacitor_SMD:C_0603_1608Metric` | CC0603KRX7R9BB104 | **New.** ADuM4165 VBUS2 bypass at U1 pin 20 |
-| C17 | 100n | `Capacitor_SMD:C_0603_1608Metric` | CC0603KRX7R9BB104 | **New.** TPS2553 output bypass at U6 pin 6 |
-| C18 | 4.7uF | `Capacitor_SMD:C_0805_2012Metric` | GRM21BR71E475KA73L | **New.** T1 centre-tap bulk, per SN6505B §11.1 |
-| C8 | 47uF | unchanged | unchanged | Moves from `/DCDC_RAW` to `/DCDC_RECT` |
-| C14 | 22u | unchanged | unchanged | Moves from `/PORT_VBUS_J2` to `/PORT_VBUS` |
-| C6 | 100n | unchanged | unchanged | Ownership narrows to U4 pin 2 only (C18 takes the centre tap) |
+| C16 | 100n | `Capacitor_SMD:C_0603_1608Metric` | CC0603KRX7R9BB104 | **New.** TPS2553 input bypass at U6 pins 1/3, on `/ISO_5V_SW` |
+| C17 | 4.7uF | `Capacitor_SMD:C_0805_2012Metric` | GRM21BR71E475KA73L | **New.** T1 centre-tap bulk, per SN6505B §11.1 |
+| C8 | 47uF | unchanged | unchanged | Net changes from `/DCDC_RAW` to `/DCDC_RECT` |
+| C12 | 100n | unchanged | unchanged | Net changes from `/ISO_5V` to `/ISO_5V_VBUS2` |
+| C14, C15 | 22u, 100n | unchanged | unchanged | Stay on `/PORT_VBUS`, which now means U6's output only |
+| C6 | 100n | unchanged | unchanged | Ownership narrows to U4 pin 2 only (C17 takes the centre tap) |
 | NT1 | NetTie_4 | `NetTie:NetTie-4_SMD_Pad0.5mm` | — | `/ISO_5V` star |
 | NT2 | NetTie_2 | `NetTie:NetTie-2_SMD_Pad0.5mm` | — | `/DCDC_*` star |
 | NT3 | NetTie_2 | `NetTie:NetTie-2_SMD_Pad0.5mm` | — | `/PORT_VBUS*` star |
 
-All three new capacitors reuse MPNs already on the BOM, so `isolator-bom.csv`
-gains quantity on three existing lines and no new line items. The net-tie
-footprints ship with `exclude_from_bom` and `exclude_from_pos_files` already
-set in their `attr` field, so they appear in neither the BOM nor the CPL.
+Both new capacitors reuse MPNs already on the BOM, so `isolator-bom.csv` gains
+quantity on two existing lines and no new line items. The net-tie footprints
+ship with `exclude_from_bom` and `exclude_from_pos_files` already set in their
+`attr` field, so they appear in neither the BOM nor the CPL.
 
 After this change the ordering table reads:
 
 | Pin | nearest | next | rationale |
 |---|---|---|---|
-| U5 IN | C9 100n | C8 47µ — now on `/DCDC_RECT`, not this net | reservoir moves to the rectifier where the pulsed current is |
+| U5 IN | C9 100n | — | C8 moves to `/DCDC_RECT`; C9 is the sole LDO input cap |
 | U5 OUT | C11 100n | C10 47µ | unchanged, now enforced by net membership |
-| U6 IN | C12 100n | — | sole cap on `/ISO_5V_SW` |
-| U6 OUT | C17 100n | C14 22µ | matches SLVS841F §12.1 |
-| J2 VBUS | C15 100n | — | connector-local HF only |
+| U6 IN | C16 100n | — | sole cap on `/ISO_5V_SW`; new part |
+| U6 OUT | C15 100n | C14 22µ | matches SLVS841F §12.1 once both move to pin 6 |
+| U1 VBUS2 | C12 100n | — | returns to the pin it is drawn against |
 | U4 VCC | C6 100n | C7 4.7µ | C6 moves inboard of C7; bulk still within TI's guidance |
-| T1 CT | C18 4.7µ | — | dedicated bulk, per §11.1 |
-| U1 VBUS2 | C16 100n | — | closes the datasheet gap |
+| T1 CT | C17 4.7µ | — | dedicated bulk, per §11.1 |
+| D1/D2 cathodes | C8 47µ | — | reservoir at the rectifier, where the pulsed current is |
 
 At U4 the general "smallest nearest" rule and TI's "bulk closest to VCC" both
-end up satisfiable, because C18 relieves C7 of centre-tap duty and C7 can stay
+end up satisfiable, because C17 relieves C7 of centre-tap duty and C7 can stay
 where it is while C6 moves inboard.
 
 ### Netclass patterns
@@ -209,10 +237,11 @@ left side correct and its absence is why the right side drifted.
 
 The `LAYOUT CONSTRAINTS -- BINDING` text block is updated:
 
-- **Item 5** gains VBUS2 explicitly, naming C16.
-- **Item 9** is rewritten: C6 alone at U4 pin 2, C18 at the T1 centre tap,
+- **Item 5** names C12 as the VBUS2 bypass explicitly, so the 10 mm budget is
+  attached to a reference designator rather than to a pin name.
+- **Item 9** is rewritten: C6 alone at U4 pin 2, C17 at the T1 centre tap,
   C7 remaining as the VCC bulk. The current wording, "C6+C7 cluster at U4
-  pin 2 / T1 center-tap", becomes wrong the moment C18 exists.
+  pin 2 / T1 center-tap", becomes wrong the moment C17 exists.
 - A **new item 10** states the three star points and that a branch net may
   only be fed through its net tie — the rule the ties exist to encode, written
   where a layout worker will read it.
@@ -223,8 +252,10 @@ Per the standing rules for this project: GND symbols point down, rail symbols
 point up, no symbol/wire/text overlap, PWR_FLAGs stay in their dedicated area,
 and each subsystem keeps its graphic box. The three net ties are placed inside
 the boxes for the blocks they serve, not in a separate area — a star point is
-part of its circuit. C16 is drawn adjacent to U1 pin 20 inside the isolator
-box, C17 adjacent to U6 pin 6, C18 adjacent to T1 pin 2.
+part of its circuit. C16 is drawn beside U6's IN pin inside the
+`TPS2553 PORT SWITCH (GND2)` box; C17 beside T1's CT1 pin inside the
+`SN6505B PUSH-PULL DRIVER + T1 TRANSFORMER (GND1 PRIMARY)` box. No existing
+symbol moves.
 
 ## Verification
 
@@ -254,10 +285,10 @@ rather than the board, which is why it appears as check 4 above.
 
 ## Out of Scope
 
-- **All board work.** Placement of C16/C17/C18 and NT1–NT3, relocation of C6,
-  C8 and C14, rip-up and reroute of `/ISO_5V`, `/PORT_VBUS` and `/DCDC_RAW`.
-  This needs its own plan, and the board's gate suite is the acceptance
-  criterion there, not here.
+- **All board work.** Placement of C16, C17 and NT1–NT3; relocation of C6, C8,
+  C12, C14 and C15; rip-up and reroute of `/ISO_5V`, `/PORT_VBUS` and
+  `/DCDC_RAW`. This needs its own plan, and the board's gate suite is the
+  acceptance criterion there, not here.
 - **`/VBUS_HOST` topology.** Not split. Revisit only if the isolated-side
   split proves out and the same failure mode appears on the left.
 - **R3 and the FAULT trip band, the PGOOD R9/R10 arrangement.** Both are
@@ -268,11 +299,15 @@ rather than the board, which is why it appears as check 4 above.
 
 ## Risks
 
-- **Connector-local bulk on the port.** Moving C14 to U6's output leaves J2
-  with C15 (100 n) and D6 only, with the 22 µF ~11 mm upstream. This follows
-  TI's guidance and the TPS2553's soft-start covers the inrush case, but if
-  bring-up shows droop on hot-plug, the fix is a second bulk capacitor at J2
-  rather than moving C14 back. There is board room for it.
+- **J2 ends up with no local capacitor.** Both C14 and C15 belong to U6's
+  output, so `/PORT_VBUS_J2` carries only D6. The 22 µF sits ~11 mm upstream
+  on 0.5 mm copper, which is electrically adjacent on the millisecond
+  timescales that hot-plug inrush and device load steps occupy, and the
+  TPS2553's soft-start covers the rest. This is an accepted state, not an
+  oversight. If bring-up shows droop on hot-plug, the fix is to add a
+  connector-local capacitor on `/PORT_VBUS_J2` — the branch net exists
+  precisely so that part can be added without ambiguity about which pin it
+  serves. There is board room for it.
 - **Net ties and future ERC/DRC surprises.** Net ties are well-supported in
   KiCad 10 but they are the least-exercised construct in this project. If any
   of the three proves troublesome, the fallback is to drop that tie and keep
