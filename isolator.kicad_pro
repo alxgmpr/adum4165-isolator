@@ -666,6 +666,22 @@
         "pattern": "/PORT_VBUS"
       },
       {
+        "netclass": "PWR",
+        "pattern": "/ISO_5V_VBUS2"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "/ISO_5V_SW"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "/DCDC_RECT"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "/PORT_VBUS_J2"
+      },
+      {
         "netclass": "HOST_SIDE",
         "pattern": "GND1"
       },
