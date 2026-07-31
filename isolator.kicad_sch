@@ -16518,9 +16518,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "03860154-d792-4dfe-992b-227dff463e68")
 		(property "Reference" "C16"
-			(at 317.754 175.768 0)
+			(at 318.5 172.7262 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16531,7 +16532,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 317.754 171.958 0)
+			(at 318.5 175.2662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16684,9 +16685,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "79b9a23f-84e1-4d32-9ac6-6db38024ae4a")
 		(property "Reference" "C17"
-			(at 96.774 123.698 0)
+			(at 99.06 120.6562 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16697,7 +16699,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 96.774 119.888 0)
+			(at 99.06 123.1962 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16740,18 +16742,42 @@
 				)
 			)
 		)
-    (property "MPN" "GRM21BR71E475KA73L" (at 96.52 121.92 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property "Manufacturer" "Murata" (at 96.52 121.92 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property "LCSC" "C162427" (at 96.52 121.92 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property "KiLib_Generator" "SMD_2terminal_chip_molded" (at 96.52 121.92 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+		(property "MPN" "GRM21BR71E475KA73L"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C162427"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b55cec24-5990-4a18-8187-fd45d4ad8190")
 		)
@@ -16797,72 +16823,85 @@
 		)
 		(uuid "0c3cd68d-e0f4-4640-b93c-ebd3eb0046ae")
 	)
-	  (symbol (lib_id "power:GND1") (at 96.52 127 0) (unit 1)
-    (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no)
-    (uuid "53933171-1c42-4d4f-8f12-92286c16c0a0")
-    (property "Reference" "#PWR020"
-      (at 96.52 120.65 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-					(font
-						(size 1.27 1.27)
-					)
+	(symbol
+		(lib_id "power:GND1")
+		(at 96.52 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "53933171-1c42-4d4f-8f12-92286c16c0a0")
+		(property "Reference" "#PWR020"
+			(at 96.52 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
-    )
-    (property "Value" "GND1"
-      (at 96.52 123.19 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-					(font
-						(size 1.27 1.27)
-					)
+			)
+		)
+		(property "Value" "GND1"
+			(at 99.06 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
-    )
-    (property "Footprint" ""
-      (at 96.52 127 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-					(font
-						(size 1.27 1.27)
-					)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
-    )
-    (property "Datasheet" ""
-      (at 96.52 127 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-					(font
-						(size 1.27 1.27)
-					)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
-    )
-    (property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
-      (at 96.52 127 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-					(font
-						(size 1.27 1.27)
-					)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 96.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
-    )
-    (pin "1" (uuid "ee9798a9-5c24-482c-957d-32878c4d0011"))
-    (instances
-      (project "isolator"
-        (path "/00000000-0000-0000-0000-000000000001"
-          (reference "#PWR020")
-          (unit 1)
-        )
-      )
-    )
-  )
+			)
+		)
+		(pin "1"
+			(uuid "ee9798a9-5c24-482c-957d-32878c4d0011")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
   (sheet_instances
 		(path "/"
 			(page "1")
