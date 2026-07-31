@@ -943,7 +943,7 @@
         "uuid": "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
       }
     ],
-    "used_designators": "C1-2,C50,Y1,#PWR1-6,#PWR40,U1-3",
+    "used_designators": "C1-4,C50,Y1,#PWR1-6,#PWR9-10,#PWR40,U1-3",
     "variants": []
   },
   "sheets": [
