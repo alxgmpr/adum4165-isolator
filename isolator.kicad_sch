@@ -4687,6 +4687,208 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:NetTie_4"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "NT"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NetTie_4"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Net tie, 4 pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "net tie short"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Net*Tie*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NetTie_4_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy 1.27 -2.54)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 0)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NetTie_4_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -2.54 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(rectangle
 		(start 15.24 224.79)
@@ -6791,7 +6993,7 @@
 		)
 		(uuid "4b3eadef-9b26-4176-b5c0-d9ff15bb9447")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_SW"
 		(at 322.58 146.05 180)
 		(effects
 			(font
@@ -6931,7 +7133,7 @@
 		)
 		(uuid "654014a9-e9e0-46ca-a71e-cb0887936193")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_IND"
 		(at 378.46 116.84 90)
 		(effects
 			(font
@@ -7051,7 +7253,7 @@
 		)
 		(uuid "88190e50-8610-42cc-9708-1a75872ced2b")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_IND"
 		(at 365.76 115.57 90)
 		(effects
 			(font
@@ -7201,7 +7403,7 @@
 		)
 		(uuid "a32fe658-03c9-49c9-9fba-732ff07b29db")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_IND"
 		(at 375.92 30.48 90)
 		(effects
 			(font
@@ -7271,7 +7473,7 @@
 		)
 		(uuid "b19e1797-7903-4c48-abb0-16320b21b128")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_VBUS2"
 		(at 342.9 33.02 90)
 		(effects
 			(font
@@ -7311,7 +7513,7 @@
 		)
 		(uuid "c2b3555c-ff08-4ca1-939e-adbbe5ed9478")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_VBUS2"
 		(at 317.5 44.45 90)
 		(effects
 			(font
@@ -7481,7 +7683,7 @@
 		)
 		(uuid "ed6be103-34f2-4f1c-a0e6-74c2426d8161")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_SW"
 		(at 322.58 151.13 180)
 		(effects
 			(font
@@ -15948,6 +16150,363 @@
 			(justify left bottom)
 		)
 		(uuid "ed8c00b2-b57f-4189-aa66-3733d8ab313e")
+	)
+	(symbol
+		(lib_id "Device:NetTie_4")
+		(at 264.16 113.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c3413f69-2a3a-45c0-a868-85198ffae9d9")
+		(property "Reference" "NT1"
+			(at 264.16 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_4"
+			(at 264.16 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-4_SMD_Pad0.5mm"
+			(at 264.16 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Net tie, 4 pins"
+			(at 264.16 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49d8e816-8aff-46b1-b0c0-2b8c3438f511")
+		)
+		(pin "2"
+			(uuid "0fddd769-9e02-4875-b010-bf5ad714c292")
+		)
+		(pin "3"
+			(uuid "c20fb925-d254-4cfb-8453-1916ea4600c6")
+		)
+		(pin "4"
+			(uuid "ada4303a-cd98-4049-9703-92513417dfa2")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "NT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 261.62 113.03) (xy 256.54 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1185ada4-0f57-40eb-b8a7-ea9c062091b7")
+	)
+	(wire
+		(pts
+			(xy 266.70000000000005 113.03) (xy 271.78 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a30ca03d-26cf-4def-b05f-19132c1bdc1b")
+	)
+	(wire
+		(pts
+			(xy 261.62 115.57000000000001) (xy 256.54 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1412e17-f6ff-4d20-8a44-e65296d88db4")
+	)
+	(wire
+		(pts
+			(xy 266.70000000000005 115.57000000000001) (xy 271.78 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "407a4aab-1fbb-4dac-8650-20cb45e605ff")
+	)
+	(label "ISO_5V"
+		(at 256.54 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9fe0d661-1dc5-4200-a14a-9467ac146b2e")
+	)
+	(label "ISO_5V_VBUS2"
+		(at 271.78 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f3483af-e48f-4214-83f1-7788ee94fb20")
+	)
+	(label "ISO_5V_SW"
+		(at 256.54 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4baad5de-82b9-4d48-9bcf-9e1576f6b5d3")
+	)
+	(label "ISO_5V_IND"
+		(at 271.78 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7a17acb5-b456-42ef-b76e-2f10db7f3c35")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 73.66 247.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "28a7750f-4ad4-439c-9d76-de25df88dbf8")
+		(property "Reference" "#FLG06"
+			(at 73.66 249.555 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 73.66 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 73.66 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee5957ae-41ad-4275-8ca6-7b9a53efbf9b")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#FLG06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 88.9 247.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7b40ebfa-e350-429b-8dd5-7f2b3121636f")
+		(property "Reference" "#FLG07"
+			(at 88.9 249.555 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 88.9 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 88.9 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e82d8697-6c00-4813-8753-96a746ee2e4c")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#FLG07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 73.66 247.65) (xy 73.66 255.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4725780c-a3bb-4590-a0fb-69301b5ada65")
+	)
+	(wire
+		(pts
+			(xy 88.9 247.65) (xy 88.9 255.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "202a6a20-e751-486c-a04e-42b8ca959896")
+	)
+	(label "ISO_5V_VBUS2"
+		(at 73.66 255.27 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d05b1e97-4c62-4f21-a1c3-d08c93fbc48c")
+	)
+	(label "ISO_5V_SW"
+		(at 88.9 255.27 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f5e9c49-3a31-413d-ad01-80e64b95f4e1")
 	)
 	(sheet_instances
 		(path "/"
