@@ -7,6 +7,10 @@ fp-info-cache
 *.bak
 _autosave-*
 analysis/*/
+# Datasheet PDFs stay local -- vendor-copyright, ~20 MB, re-fetchable from
+# the MPNs in isolator-bom.csv. The extracted/*-pins.md notes ARE tracked.
+datasheets/*.pdf
+datasheets/manifest.json
 *.rpt
 tools/*.jar
 tools/ar_work/
