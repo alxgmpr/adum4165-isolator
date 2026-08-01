@@ -21,16 +21,32 @@ already known DRC-clean against this footprint set. Two things are new:
   * U3.1 -> U3.6 can no longer be a straight trace, and D- carries a tuned
     meander instead of 2c1167d's untuned one.
 
-Crossover. At U1, D+ is SOUTH (y 106.1484) and D- NORTH (104.8784); at U3, D+
-is NORTH (100.7534) and D- SOUTH (102.6534), so the pair must swap. It swaps at
-x 167.225..169.225, in the middle of the F.Cu corridor Task 5 verified clear
-(x 153..190, y 103.5..111). D+ takes the B.Cu dip; D- crosses over it on F.Cu.
-The pair opens from its 0.337 pitch to 1.337 first: at 0.337 a 0.5 mm via would
-sit 0.316 mm from the other polarity's centreline and short it. Both halves
-travel the same distance through the crossover -- 0.5*sqrt(2) in, the same
-diagonal across, 0.5*sqrt(2) out -- so it is length-neutral by construction.
+Crossover, and why D- takes the dip. At U1, D+ is SOUTH (y 106.1484) and D-
+NORTH (104.8784); at U3, D+ is NORTH (100.7534) and D- SOUTH (102.6534), so the
+pair must swap. It swaps in the middle of the F.Cu corridor Task 5 verified
+clear (x 153..190, y 103.5..111), NOT at x 179.000 where /ISO_5V_IND crosses it
+on B.Cu.
 
-It is NOT sited at x 179.000: /ISO_5V_IND crosses the corridor there on B.Cu.
+A planar crossing needs exactly one of the two conductors on the other layer at
+the crossing point -- that much is unavoidable. What is NOT forced is WHICH leg
+takes it, and that is the whole of the structural-symmetry argument here. D+
+already carries a forced 2-via, 1.450 mm B.Cu hop at U3 (below). So the
+crossover dip goes on D-, and its B.Cu diagonal is sized to 1.450 mm exactly --
+h = 1.450/sqrt(2) both across and up -- so the two legs come out identical:
+
+    /PORT_D+   2 vias, 1.450 mm B.Cu       /PORT_D-   2 vias, 1.450 mm B.Cu
+
+Putting a second, balancing dip on D- at the crossover -- the other way to read
+"symmetric crossover" -- would have left D+ on four vias and 3.12 mm of B.Cu
+against D-'s two and 1.450, because it does not cancel the U3 hop. Moving the
+dip does cancel it, and adds no copper.
+
+The pair opens from its 0.337 mm pitch to 1.0253 mm before crossing: at 0.337 a
+0.5 mm via sits 0.316 mm from the other polarity's centreline and shorts it.
+Opened, the via clears the other leg's diagonal by 0.725 mm against the 0.482 mm
+(via radius + 0.127 gap + half a track) it needs. Both halves travel a*sqrt(2)
+in, the same 1.450 mm diagonal across and a*sqrt(2) out, so the crossover is
+length-neutral by construction, not by measurement.
 
 U3.1 -> U3.6. 2c1167d ran D+ straight across the gap between U3's two pad
 columns at y 100.7534, and reached U3.5 with a via in its own pad. Task 5
@@ -71,15 +87,14 @@ inner GND_SPLIT layer, so that crossing costs the pair nothing, and its via at
 shortest legal run at 0.5 mm -- straight for /RECT_A, one 45 degree step for
 /RECT_B, which has to climb 1.61 mm into D2.2.
 
-/ILIM_SET is the one that got worse. In 2c1167d R3 sat beside U6 and the link
-was 1.9 mm of F.Cu. Task 4 moved R3 to (182.300, 98.725), and U6.5 is now boxed
-in: north is U6.6 plus /PORT_VBUS's 0.5 mm trunk at y 100.753 (x 181.762..
-184.475 with caps) plus that net's teardrop, east is C15.1, and the one F.Cu
-slot left -- between the y 99.600 trunk and C15's pad tops -- is 0.428 mm where
-a 0.2 mm trace needs 0.5 mm. Going round the outside of U6 measures ~11.5 mm.
-So it hops on B.Cu: 0.888 mm of F.Cu east out of U6.5, 2.23 mm of B.Cu, 0.825 mm
-of F.Cu into R3.1 -- 3.94 mm total. SLVS841F wants this node short; 3.94 mm with
-two vias is the shortest thing available without moving a reviewed part.
+/ILIM_SET got R3 moved. Task 4 put R3 NORTH of U6, on the far side of
+/PORT_VBUS's 0.5 mm trunk at y 100.753, which boxes U6.5 in -- the best F.Cu
+route from there measures ~11.5 mm and the best B.Cu one 3.94 mm with two vias.
+R3 is south-east of U6 now, on the same side of that trunk as U6.5, and the link
+is 2.47 mm of F.Cu with no vias: east out of U6.5 at y 101.7034, then one 45
+degree step into R3.1. The move and its three-sided clearance budget are
+recorded in tools/place_iso.py, which stays the authoritative placement record.
+SLVS841F Sec 8.3.3 is what makes this worth a part move.
 
 GND1/GND2 are NOT this file's job: the ground planes are on the inner layers and
 their pads reach them through stitching vias, which Task 7 re-places.
@@ -111,8 +126,15 @@ SIBLING = {DP: DM, DM: DP}
 # ---- pair rails and waypoints (see module docstring) ----
 YA = 105.6819          # south rail: D+ before the crossover, D- after
 YB = 105.3449          # north rail: D- before the crossover, D+ after
-XC0, XC1 = 167.225, 169.225                 # crossover span
-YW_S, YW_N = 106.1819, 104.8449             # opened rails inside it
+PITCH = 0.337          # 0.21 width + 0.127 gap
+HOP_BCU = 1.450        # D+'s forced B.Cu length at U3; the crossover matches it
+CROSS_H = HOP_BCU / math.sqrt(2.0)          # 45 deg, so run == rise == 1.02530
+CROSS_A = (CROSS_H - PITCH) / 2.0           # how far each leg opens outward
+XO0 = 167.225                               # crossover: start of the opening
+XC0 = XO0 + CROSS_A                         # start of the crossing diagonal
+XC1 = XC0 + CROSS_H                         # end of it
+XN1 = XC1 + CROSS_A                         # back on the rails
+YW_S, YW_N = YA + CROSS_A, YB - CROSS_A     # opened rails inside the crossover
 X_FAN_P, X_FAN_M = 185.4936, 185.6332       # where each half starts its descent
 MEANDER_X0 = 156.500                        # D- serpentine, first tooth
 MEANDER_TEETH, MEANDER_W, MEANDER_PITCH = 3, 0.600, 0.800
@@ -135,10 +157,10 @@ def meander(x0, y, amp, teeth=MEANDER_TEETH, w=MEANDER_W, gap=MEANDER_PITCH):
 
 def pair_routes(amp):
     """(net, layer, [pts], width) for both halves, plus the pair's vias."""
+    #      D+ stays on F.Cu right through the crossover; D- is the leg that dips.
     dp_a = [(151.7750, 106.1484), (152.9000, 106.1484), (153.3665, YA),
-            (XC0, YA), (XC0 + 0.5, YW_S)]
-    dp_b = [(XC0 + 0.5, YW_S), (XC1 - 0.5, YW_N)]                    # B.Cu dip
-    dp_c = [(XC1 - 0.5, YW_N), (XC1, YB), (X_FAN_P, YB),
+            (XO0, YA), (XC0, YW_S), (XC1, YW_N), (XN1, YB),
+            (X_FAN_P, YB),
             (189.3036, 101.5349), (189.9622, 101.5349),
             (190.7437, 100.7534), (191.7375, 100.7534),
             (192.1500, 100.3409), (192.1500, 100.1500)]              # into hop
@@ -153,25 +175,26 @@ def pair_routes(amp):
 
     dm_a = ([(151.7750, 104.8784), (152.9000, 104.8784), (153.3665, YB)]
             + meander(MEANDER_X0, YB, amp)
-            + [(XC0, YB), (XC0 + 0.5, YW_N), (XC1 - 0.5, YW_S),
-               (XC1, YA), (X_FAN_M, YA),
-               (189.4432, 101.8719), (189.9622, 101.8719),
-               (190.7437, 102.6534), (191.7375, 102.6534),
-               (194.0125, 102.6534), (195.0063, 102.6534),
-               (195.7878, 101.8719), (196.4573, 101.8719),
-               (196.7430, 102.1576), (196.9208, 102.3354),
-               (197.5820, 102.3354), (197.7000, 102.4534)])
+            + [(XO0, YB), (XC0, YW_N)])                    # into the dip
+    dm_b = [(XC0, YW_N), (XC1, YW_S)]                      # B.Cu, crosses D+
+    dm_c = [(XC1, YW_S), (XN1, YA), (X_FAN_M, YA),
+            (189.4432, 101.8719), (189.9622, 101.8719),
+            (190.7437, 102.6534), (191.7375, 102.6534),
+            (194.0125, 102.6534), (195.0063, 102.6534),
+            (195.7878, 101.8719), (196.4573, 101.8719),
+            (196.7430, 102.1576), (196.9208, 102.3354),
+            (197.5820, 102.3354), (197.7000, 102.4534)]
     #      A/B tie tees off the main run rather than retracing it: a retrace is
     #      duplicate copper on the same net AND inflates what Gate 3 measures.
     dm_tie = [(196.7430, 102.1576), (196.7430, 101.7492),
               (197.0388, 101.4534), (197.7000, 101.4534)]
 
-    routes = [(DP, 'F', dp_a, W_DIFF), (DP, 'B', dp_b, W_DIFF),
-              (DP, 'F', dp_c, W_DIFF), (DP, 'B', dp_d, W_DIFF),
+    routes = [(DP, 'F', dp_a, W_DIFF), (DP, 'B', dp_d, W_DIFF),
               (DP, 'F', dp_e, W_DIFF), (DP, 'F', dp_tie, W_DIFF),
-              (DM, 'F', dm_a, W_DIFF), (DM, 'F', dm_tie, W_DIFF)]
-    vias = [(XC0 + 0.5, YW_S, DP, VIA_DIFF, DRL_DIFF),
-            (XC1 - 0.5, YW_N, DP, VIA_DIFF, DRL_DIFF),
+              (DM, 'F', dm_a, W_DIFF), (DM, 'B', dm_b, W_DIFF),
+              (DM, 'F', dm_c, W_DIFF), (DM, 'F', dm_tie, W_DIFF)]
+    vias = [(XC0, YW_N, DM, VIA_DIFF, DRL_DIFF),
+            (XC1, YW_S, DM, VIA_DIFF, DRL_DIFF),
             (192.1500, 100.1500, DP, VIA_DIFF, DRL_DIFF),
             (193.6000, 100.1500, DP, VIA_DIFF, DRL_DIFF)]
     return routes, vias
@@ -184,10 +207,9 @@ SIGNALS = [
     ('/RECT_B', 'F', [(151.5800, 89.9134), (154.3000, 89.9134),
                       (155.9134, 88.3000), (156.2000, 88.3000)], W_RECT),
 
-    # ---- /ILIM_SET: U6.5 east, B.Cu over /PORT_VBUS's trunk, into R3.1
-    ('/ILIM_SET', 'F', [(182.0125, 101.7034), (182.9000, 101.7034)], W_SIG),
-    ('/ILIM_SET', 'B', [(182.9000, 101.7034), (182.3000, 99.5500)], W_SIG),
-    ('/ILIM_SET', 'F', [(182.3000, 99.5500), (182.3000, 98.7250)], W_SIG),
+    # ---- /ILIM_SET: U6.5 east, one 45 degree step into R3.1. F.Cu, no vias.
+    ('/ILIM_SET', 'F', [(182.0125, 101.7034), (183.4280, 101.7034),
+                        (184.1750, 102.4500)], W_SIG),
 
     # ---- /nFAULT: U6.4 -> B.Cu south past the LED strip -> R4.2 -> D4.1
     ('/nFAULT', 'F', [(182.0125, 102.6534), (182.9840, 102.6534),
@@ -233,8 +255,6 @@ SIGNALS = [
 ]
 
 SIGNAL_VIAS = [
-    (182.9000, 101.7034, '/ILIM_SET', VIA_SIG, DRL_SIG),
-    (182.3000, 99.5500, '/ILIM_SET', VIA_SIG, DRL_SIG),
     (183.7500, 103.4194, '/nFAULT', VIA_SIG, DRL_SIG),
     (184.8750, 115.0175, '/nFAULT', VIA_SIG, DRL_SIG),
     (154.4500, 104.5000, '/PGOOD2', VIA_SIG, DRL_SIG),
@@ -302,7 +322,7 @@ def tune():
     2*A*(sqrt(2)-1), so one evaluation at A=0 fixes the answer.
     """
     routes, _ = pair_routes(0.0)
-    keep = {DP: [0, 1, 2, 3, 4], DM: [6]}      # indices of the main chains
+    keep = {DP: [0, 1, 2], DM: [4, 5, 6]}      # indices of the main chains
     length = {}
     for net in (DP, DM):
         length[net] = sum(polyline(routes[i][2]) for i in keep[net])

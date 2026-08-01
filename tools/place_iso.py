@@ -153,7 +153,27 @@ PLACEMENT = {
 
     # --- zone 4b: current-limit switch and its output (isolated) ---
     'C16': (92.8575, 21.300,  90),   # at U6.1, hot pad facing the pin
-    'R3':  (95.420, 21.200,   90),   # ILIM_SET, north-east of U6
+    # R3 was placed NORTH-east of U6 by this task, at local (95.420, 21.200)
+    # rot 90. TASK 6 MOVED IT, because that position made /ILIM_SET unroutable
+    # as a short direct link. U6.5 is boxed in on F.Cu: U6.6 and /PORT_VBUS's
+    # 0.5 mm trunk at absolute y 100.753 (x 181.762..184.475 with its end caps)
+    # wall it off to the north, C15.1 to the east, and the one slot left --
+    # between the y 99.600 trunk and C15's pad tops -- is 0.428 mm where a
+    # 0.2 mm trace needs 0.5 mm. R3 north of that wall meant either 3.94 mm and
+    # two vias on B.Cu or ~11.5 mm round the outside of U6. SLVS841F Sec 8.3.3
+    # is explicit that parasitics on ILIM degrade current-limit accuracy.
+    # South-EAST of U6 puts R3 on the same side of the trunk as U6.5, and the
+    # link becomes 2.47 mm of F.Cu with no vias. The position is bounded on
+    # three sides and there is very little slack in it:
+    #     west   U6's courtyard, 0.6050 mm
+    #     north  C15's courtyard, 0.2465 mm (C15 is decoupling.py's, at U6.6)
+    #     south  /nFAULT's escape via at (183.750, 103.419), 0.2299 mm to R3.1
+    # Pushing it 0.30 mm further west takes the /nFAULT gap to 0.1732 mm, which
+    # is margin-free against 0.15, so this is about as tight as it goes.
+    # R3 is in neither OWNS nor ORDER in tools/gates/decoupling.py, so the move
+    # cannot change that gate; courtyard overlaps re-checked at 0 across all
+    # 1326 footprint pairs.
+    'R3':  (98.120, 25.750,    0),   # ILIM_SET, south-east of U6 -- see above
     'C15': (98.120, 24.0534,   0),   # at U6.6
     'C14': (100.120, 21.100,   0),   # outboard of C15, north of the D+- corridor
     'NT3': (101.120, 24.0534,  0),   # /PORT_VBUS (W) -> /PORT_VBUS_J2 (E)
