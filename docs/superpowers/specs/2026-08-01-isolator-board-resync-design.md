@@ -39,8 +39,19 @@ netlist while still reading as the old topology.
 Everything isolated-side: U5, U6, U3, D1, D2, D6, C8–C16, NT1–NT3, R3–R10, Q1,
 D3, D4.
 
-Two host-side exceptions, both localised and neither part of the re-place:
-C6 moves inboard of C7 at U4 pin 2, and C17 is placed new at T1's centre tap.
+Three host-side exceptions, all localised and none part of the re-place:
+C6 moves inboard of C7 at U4 pin 2, C17 is placed new at T1's centre tap, and
+**C7 moves ~3.5 mm north to let C6 take the inboard slot**.
+
+C7's move was not in the original freeze list; it was added on 2026-08-01 when
+placement proved the ordering rule unsatisfiable with C7 fixed. C7 sat 2.06 mm
+from U4.2 and an exhaustive 0.02 mm / 1° sweep put C6's floor at 2.19 mm — short
+by 0.13 mm, with no rotation closing it. Unfreezing C7 is sound because the
+freeze existed to protect *working host routing*, and `/VBUS_HOST` carries no
+routed copper at this point in the plan — it was ripped wholesale in Task 3. The
+arrangement is also what the schematic's own `Description` properties on C6 and
+C7 already specify, so the placement was the thing contradicting the design
+record, not the rule.
 
 ## Coordinates
 

@@ -17,7 +17,7 @@ Every task implicitly includes these. Values are copied from the spec and from t
 - **Board is 120 × 50 mm**, absolute x 86.88–206.88, y 76.70–126.70. KiCad's y increases downward.
 - **Barrier keepout: absolute x 142.72–151.03**, full height, all four copper layers. Excludes tracks, vias and zone fill; permits pads. **U1, T1 and CY1 are the only permitted crossings.**
 - **Copper band: absolute y 78.70–124.70.** No copper of any kind within 1 mm of the long edges, any layer, full length.
-- **Frozen parts:** J1, J2, U1, T1, CY1, H1–H4, FID1–3, and the entire host side except C6 and C17.
+- **Frozen parts:** J1, J2, U1, T1, CY1, H1–H4, FID1–3, and the entire host side except **C6, C7 and C17**. C7 was unfrozen on 2026-08-01: the `C6 inboard of C7` rule is unsatisfiable with C7 at 2.06 mm from U4.2, and the freeze protected working routing that no longer exists — `/VBUS_HOST` was ripped in Task 3.
 - **Free parts:** U5, U6, U3, D1, D2, D6, C8–C16, NT1–NT3, R3–R10, Q1, D3, D4.
 - **U3 within 5 mm** of the J2 pins it protects; its array GND pin on its own via straight to plane, never daisy-chained.
 - **Differential pairs are `USB_DIFF90`:** 0.21 mm width, 0.127 mm gap, intra-pair skew ≤ 0.15 mm.
@@ -512,11 +512,9 @@ Write the `PLACEMENT` dict. Satisfy every row of the spec's ownership budget, th
 
 - [ ] **Step 5: Check courtyard overlaps with real courtyards**
 
-```bash
-/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 -u tools/check_placement.py isolator.kicad_pcb 2>&1 | tail -30
-```
+**`tools/check_placement.py` is broken — do not use it.** It compares board-local thresholds against a board stored in absolute coordinates and reports 58 false failures on an untouched board. Write your own courtyard check instead, in the correct frame.
 
-Read `tools/check_placement.py` first to see what it reports. Judge overlaps with **real** courtyards (`GetCourtyard`), never inflated bounding boxes — inflated checks "fix" deliberate tight placements and drag pads off their pins.
+Whatever you write must judge overlaps with **real** courtyards (`GetCourtyard()`), never inflated bounding boxes — inflated checks "fix" deliberate tight placements and drag pads off their pins. Note also that the three net-tie footprints carry no `F.CrtYd` at all, so no courtyard check will catch a part placed on top of NT1, NT2 or NT3; verify those separately. Judge overlaps with **real** courtyards (`GetCourtyard`), never inflated bounding boxes — inflated checks "fix" deliberate tight placements and drag pads off their pins.
 
 - [ ] **Step 6: Run the decoupling gate — this is the acceptance test for this task**
 
