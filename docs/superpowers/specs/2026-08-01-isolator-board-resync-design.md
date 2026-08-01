@@ -174,6 +174,32 @@ taken on trust:
   future decision about the host pair — it is **not** a licence to relax the
   gate, which stays where it is.
 
+### Ruling (2026-08-01): the D+ layer hop at U3 stands
+
+`/PORT_VBUS_J2` descends the 0.95 mm lane between U3's pad columns to reach
+U3.5, leaving 0.475 mm where a 0.21 mm pair leg needs 0.505 — short by 0.030 mm,
+both ends pad edges. D+ therefore hops 1.450 mm on B.Cu with two vias, and the
+crossover dip was moved onto D− and sized to match, so both legs carry two vias
+and 1.450 mm of B.Cu.
+
+Freeing the lane was assessed in detail: delete the 2.353 mm descent, place a
+via-in-pad at U3.5, run 1.988 mm of B.Cu east to the existing `/PORT_VBUS_J2`
+spine at x 196.000. It works geometrically. It is **not** adopted, because:
+
+1. **Total pair vias stay at four either way.** Removing D+'s hop puts D− at two
+   vias against D+'s zero — the same asymmetry inverted — so restoring parity
+   needs a balancing dip on D+ regardless. The only gain is that both dips sit
+   in open corridor and the pair stays coupled through U3.
+2. **It requires via-in-pad**, which means filled-and-capped or tented vias plus
+   a paste-aperture reduction — a fabrication-specification change. The original
+   layout avoided this with a 0.5 mm via in the lane, which no longer fits now
+   that the `PWR` netclass specifies 0.7/0.35.
+3. The hop sits **after U3's ESD clamp and ~4 mm from the connector**, where a
+   discontinuity is far less consequential than one mid-run.
+
+A modest coupling improvement is not worth a fab-spec change here. Revisit only
+if bring-up shows a real signal-integrity problem on the downstream port.
+
 - **`/PORT_D±` remains the exposure for a different reason.** U3 must stay
   within 5 mm of the J2 pins it protects, and the re-place can easily make a
   0.15 mm match harder than it needs to be. Keep U3 and the `/PORT_D±` corridor
