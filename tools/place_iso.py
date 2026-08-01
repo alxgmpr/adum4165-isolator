@@ -74,6 +74,21 @@ from x 153 to 190 for Task 6 to length-match in.
 The indicator cluster (R4-R6, D3, D4, Q1, R9, R10) and U3/D6/R7/R8 are left
 exactly where they were.
 
+COPPER THIS FILE TOUCHES BESIDES FOOTPRINTS
+-------------------------------------------
+Moving a footprint does not move the copper that was drawn around it, and this
+board carries 261 zones including four GND1/GND2 plane pours and several small
+F.Cu power pours. Two things therefore need cleaning up after the moves, and
+both are done here rather than left for a later task to trip over:
+
+  strip_vbus_host()     -- three track/via items orphaned by moving C6
+  strip_stranded_pours() -- two F.Cu power pours left ringing the wrong pads
+
+Of the 32 entries in PLACEMENT, 18 actually change position; the other 14
+re-assert coordinates the board already had. Re-asserting them is deliberate --
+it makes this file a complete record of where the isolated side sits, rather
+than a diff against a state nobody has written down.
+
 Usage:  <kicad python3> -u tools/place_iso.py isolator.kicad_pcb
 """
 import sys, os, math, pcbnew
@@ -183,6 +198,81 @@ def strip_vbus_host(board):
     return len(doomed)
 
 
+# F.Cu local power pours that this task's moves stranded: (net, outline bbox mm).
+# Matched on net + geometry rather than uuid -- pcbnew's m_Uuid.AsString() returned
+# two different strings for the same zone across two runs of the same script, so
+# the uuid is not a usable handle here.
+STRANDED_POURS = [
+    ('/ISO_5V',   (171.000, 175.000, 86.000, 89.250)),
+    ('/DCDC_RAW', (158.800, 166.500, 81.750, 91.500)),
+]
+
+
+def strip_stranded_pours(board):
+    """Delete the two F.Cu pours that this task's moves left stranded.
+
+    Both were drawn around the OLD positions and both were healthy at 26911ea:
+    the /ISO_5V pour contained U5.1, U5.2 and C10.1; the /DCDC_RAW pour
+    contained C9.1. Moving U5 east and C9/C10/C11 off them stranded both --
+    these are this task's doing, not Task 3 residue.
+
+    What they cover now is the problem. The /ISO_5V outline sits over U5's
+    GND2 thermal pad (pad 9, entirely inside), U5.6 (GND2) and U5.5/U5.8
+    (/DCDC_RAW, the raw input) -- an /ISO_5V outline ringing an LDO's ground
+    pad and its input. The /DCDC_RAW outline sits over D1.1, D2.1 and C8.1
+    (all /DCDC_RECT) plus C8.2 (GND2). Neither contains a single pad of its
+    own net, and between them they carry 60 mm2 of stale fill.
+
+    Deleted rather than redrawn, for the same reason the orphaned /VBUS_HOST
+    stub was deleted: Task 3 ripped all isolated-side copper and Task 5 routes
+    these nets from scratch. Redrawing a pour now means authoring copper
+    geometry for routing that does not exist yet -- a placement task guessing
+    at a routing task's output, which Task 5 would then have to redraw anyway.
+    These two zones are isolated-side copper that Task 3's rip-up missed;
+    removing them finishes that job and leaves Task 7's refill nothing stale
+    to reason about. It also removes the reliance on "island_removal should
+    make it vanish at fill time", which is true but is not a state worth
+    handing on undocumented.
+
+    The four GND1/GND2 plane zones on GND_SPLIT_A/B and both /RECT_A pours are
+    healthy and are left alone.
+    """
+    removed = 0
+    for net, (bx0, bx1, by0, by1) in STRANDED_POURS:
+        hits = []
+        for z in board.Zones():
+            if z.GetIsRuleArea() or z.GetNetname() != net:
+                continue
+            bb = z.Outline().BBox()
+            if (abs(pcbnew.ToMM(bb.GetLeft()) - bx0) < 0.01
+                    and abs(pcbnew.ToMM(bb.GetRight()) - bx1) < 0.01
+                    and abs(pcbnew.ToMM(bb.GetTop()) - by0) < 0.01
+                    and abs(pcbnew.ToMM(bb.GetBottom()) - by1) < 0.01):
+                hits.append(z)
+        if not hits:
+            print('  stranded %s pour already absent -- nothing to do' % net)
+            continue
+        if len(hits) > 1:
+            print('  ABORT: expected at most 1 stranded %s pour at that outline, '
+                  'found %d' % (net, len(hits)))
+            sys.stdout.flush()
+            os._exit(1)
+        z = hits[0]
+        # refuse to delete a pour that still has a pad of its own net in it
+        for fp in board.GetFootprints():
+            for p in fp.Pads():
+                if p.GetNetname() == net and z.Outline().Collide(p.GetPosition()):
+                    print('  ABORT: %s pour still contains %s.%s -- not stranded'
+                          % (net, fp.GetReference(), p.GetNumber()))
+                    sys.stdout.flush()
+                    os._exit(1)
+        print('  removed stranded %-10s pour  x %.3f..%.3f y %.3f..%.3f  (%.3f mm2 fill)'
+              % (net, bx0, bx1, by0, by1, z.GetFilledArea() / 1e12))
+        board.Remove(z)
+        removed += 1
+    return removed
+
+
 def main():
     path = sys.argv[1]
     board = pcbnew.LoadBoard(path)
@@ -192,9 +282,10 @@ def main():
         sys.stdout.flush()
         os._exit(1)
     n = strip_vbus_host(board)
+    z = strip_stranded_pours(board)
     pcbnew.SaveBoard(path, board)
-    print('placed %d footprints, removed %d orphaned /VBUS_HOST items'
-          % (len(PLACEMENT), n))
+    print('placed %d footprints (18 moved, 14 re-asserted), removed %d orphaned '
+          '/VBUS_HOST items and %d stranded pours' % (len(PLACEMENT), n, z))
     sys.stdout.flush()
     os._exit(0)
 
