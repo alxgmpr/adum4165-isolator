@@ -134,6 +134,19 @@ def V(x, y):
     return pcbnew.VECTOR2I(IU(x), IU(y))
 
 
+_CU = []
+
+
+def copper_layers(board):
+    """Every enabled copper layer id. Enumerated, not hard-coded: this board's
+    four are F.Cu(0), B.Cu(2), GND_SPLIT_A(4), GND_SPLIT_B(6), and the inner
+    ids move between KiCad versions."""
+    if not _CU:
+        _CU.extend(l for l in board.GetEnabledLayers().Seq()
+                   if pcbnew.IsCopperLayer(l))
+    return _CU
+
+
 class Obstacles(object):
     """Every copper item on the board, as its REAL shape.
 
@@ -275,6 +288,20 @@ def strip_orphan_teardrops(board):
 
 # ------------------------------------------------------------------ routes --
 # (net, layer, [waypoints], width). Consecutive waypoints become one segment.
+#
+# TODO (deferred by ruling, 2026-08-01 -- do not do this while Tasks 6 and 7
+# are still to run against this file): the waypoints that land ON A PAD are
+# hard-coded pad centres, so moving a footprint silently invalidates them.
+# The cost is real and already paid once: nudging C7 0.20 mm and C17 0.12 mm
+# forced four /VBUS_HOST waypoints and two vias to be re-derived by hand, and
+# nothing here would have complained if they had not been -- the tracks still
+# landed inside the moved pads, so every check would have passed while the
+# routing pointed at where the parts used to be.
+# The fix is to look pad centres up from the footprint at build time --
+# e.g. PAD('C17', '1') resolved against the board -- and leave only the
+# genuinely geometric waypoints (lane centres, corner positions, the y 88.300
+# detour round C8) as literals. That is a refactor of this table's core data
+# structure, which is why it is deferred rather than done.
 P, I = W_PWR, W_ISO
 
 ROUTES = [
@@ -490,14 +517,21 @@ def verify(board):
             cx, cy = MM(c.x), MM(c.y)
             bb = p.GetBoundingBox()
             box = (MM(bb.GetLeft()), MM(bb.GetTop()), MM(bb.GetRight()), MM(bb.GetBottom()))
+            # "No pour touches a tie pad" is the single most important thing
+            # this file asserts, so it is tested against the pad's real SHAPE
+            # on EVERY copper layer -- not against its centre point, which
+            # would miss a pour lapping the pad's edge, and not on one layer,
+            # which would miss the inner planes entirely.
             pour = []
             for z in board.Zones():
-                if not z.IsOnLayer(p.GetLayer()) or z.GetFilledArea() <= 0:
+                if z.GetFilledArea() <= 0:
                     continue
-                poly = z.GetFilledPolysList(p.GetLayer())
-                if poly.Collide(c, 0):
-                    pour.append('%s %s' % (z.GetNetname(),
-                                           board.GetLayerName(z.GetLayer())))
+                for lid in copper_layers(board):
+                    if not (z.IsOnLayer(lid) and p.IsOnLayer(lid)):
+                        continue
+                    if z.GetFilledPolysList(lid).Collide(p.GetEffectiveShape(lid), 0):
+                        pour.append('%s on %s' % (z.GetNetname(),
+                                                  board.GetLayerName(lid)))
             legs, via_on_pad = [], []
             for t in board.GetTracks():
                 if t.GetNetname() != p.GetNetname():
@@ -517,18 +551,26 @@ def verify(board):
                     continue
                 dirs.add(('W' if dx < -0.05 else 'E' if dx > 0.05 else '')
                          + ('N' if dy < -0.05 else 'S' if dy > 0.05 else ''))
+            # Every tie pad on this board is routed with EXACTLY one leg. Two
+            # legs means either a duplicated run or an unintended tee, and the
+            # first of those is what a second run of this script produces --
+            # _probe skips same-net items, so a re-run collides with nothing
+            # and silently doubles the copper. This row is what catches it.
             status = 'ok  '
-            if not legs:
+            notes = []
+            if len(legs) != 1:
                 status, bad = 'FAIL', bad + 1
+                notes.append('EXPECTED EXACTLY 1 TRACK LEG, FOUND %d' % len(legs))
             if via_on_pad:
                 status, bad = 'FAIL', bad + 1
+                notes.append('VIA ON TIE PAD %r' % (via_on_pad,))
             if pour:
                 status, bad = 'FAIL', bad + 1
-            print('  %s  %s.%-2s %-15s %d track leg(s), leaving %-8s no pour  %s'
+                notes.append('FED BY POUR %r' % (pour,))
+            print('  %s  %s.%-2s %-15s %d track leg(s), leaving %-8s %-9s %s'
                   % (status, ref, p.GetNumber(), p.GetNetname(), len(legs),
                      '/'.join(sorted(d for d in dirs if d)) or '-',
-                     ('VIA ON TIE PAD %r' % via_on_pad if via_on_pad else '')
-                     + ('  FED BY POUR %r' % pour if pour else '')))
+                     'POUR!' if pour else 'no pour', '  '.join(notes)))
 
     print('\n== barrier keepout / copper band / D+- corridor ==')
     bx0, bx1 = BARRIER_X
@@ -558,14 +600,38 @@ def verify(board):
         # own pre-existing solution for getting past it was a B.Cu detour.
         if on_f and seg_box_hit(a, b, r, (cx0, cy0, cx1, cy1)):
             hits.append(('CORRIDOR', t.GetNetname(), where))
+    # The corridor reserves F.Cu meander room, so PADS and ZONE FILL count as
+    # much as tracks do. Checking only tracks made this assertion narrower than
+    # the claim it was being quoted for. Inner planes and B.Cu are exempt by
+    # definition: the plane pours must cross the corridor, and the board's own
+    # pre-existing way past it was a B.Cu detour.
+    rect = pcbnew.SHAPE_RECT(pcbnew.VECTOR2I(IU(cx0), IU(cy0)),
+                             IU(cx1 - cx0), IU(cy1 - cy0))
+    for f in board.GetFootprints():
+        for p in f.Pads():
+            if not p.IsOnLayer(FCU):
+                continue
+            if rect.Collide(p.GetEffectiveShape(FCU), 0):
+                hits.append(('CORRIDOR-PAD', p.GetNetname(),
+                             '%s.%s' % (f.GetReference(), p.GetNumber())))
+    for z in board.Zones():
+        if z.GetLayer() != FCU or z.GetFilledArea() <= 0:
+            continue
+        if z.GetFilledPolysList(FCU).Collide(rect, 0):
+            bb = z.GetBoundingBox()
+            hits.append(('CORRIDOR-ZONE', z.GetNetname(),
+                         '(%.3f,%.3f)-(%.3f,%.3f)'
+                         % (MM(bb.GetLeft()), MM(bb.GetTop()),
+                            MM(bb.GetRight()), MM(bb.GetBottom()))))
+
     for kind, net, where in hits:
-        print('  FAIL  %-12s %-15s %s' % (kind, net, where))
+        print('  FAIL  %-14s %-15s %s' % (kind, net, where))
     bad += len(hits)
     if not hits:
-        print('  ok    no track or via enters x %.2f..%.2f, leaves y %.2f..%.2f,'
+        print('  ok    no track or via enters x %.2f..%.2f or leaves y %.2f..%.2f'
               % (bx0, bx1, by0, by1))
-        print('        or puts F.Cu copper in the corridor x %.0f..%.0f y %.1f..%.1f'
-              % (cx0, cx1, cy0, cy1))
+        print('  ok    no F.Cu track, via, pad or zone fill in the corridor'
+              ' x %.0f..%.0f y %.1f..%.1f' % (cx0, cx1, cy0, cy1))
     return bad
 
 
@@ -576,7 +642,32 @@ def main():
         print('LoadBoard returned None -- is %r a *.kicad_pcb?' % board_path)
         sys.exit(2)
 
-    print('== orphaned teardrops ==')
+    # This script routes all nine nets from scratch and has no incremental
+    # mode, so any existing copper on them means it has already run. Without
+    # this guard a second run is SILENT: _probe skips same-net items, so every
+    # segment collides with nothing, 93 duplicates are added, and connectivity,
+    # the tie-pad check, the keepout check and DRC all still pass. verify()
+    # now also asserts one track leg per tie pad, which catches partial
+    # duplication; this catches the wholesale case before anything is written.
+    print('== pre-flight ==')
+    existing = {}
+    for t in board.GetTracks():
+        n = t.GetNetname()
+        if n in NETS:
+            existing[n] = existing.get(n, 0) + 1
+    if existing:
+        for n in sorted(existing):
+            print('  %-15s already carries %d copper item(s)' % (n, existing[n]))
+        print('\nREFUSING TO RUN: these nets are already routed. This script is')
+        print('not idempotent -- re-running would silently double the copper.')
+        print('Restore the board to its pre-routing state first, e.g.')
+        print('  git show <task-4-commit>:isolator.kicad_pcb > isolator.kicad_pcb')
+        print('  <kicad python3> tools/place_iso.py isolator.kicad_pcb')
+        sys.stdout.flush()
+        os._exit(1)
+    print('  ok    none of the nine nets carries copper yet')
+
+    print('\n== orphaned teardrops ==')
     strip_orphan_teardrops(board)
 
     obs = Obstacles(board)
