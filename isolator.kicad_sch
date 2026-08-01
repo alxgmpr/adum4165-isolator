@@ -4998,7 +4998,7 @@
 		)
 		(uuid "db848d84-7255-4aa8-b88a-df439710896c")
 	)
-	(text "1. Board 50 mm wide (Hammond 1455C slot), 120 mm length (1455C1202), 4\n    layers, 90 Ω differential pairs.\n2. ALL COPPER PULLED BACK ≥1 mm (target 2 mm) FROM BOTH LONG EDGES, every\n    layer, full length. The extrusion's aluminium slots grip those edges;\n    edge copper lets the enclosure short GND1 to GND2.\n3. ESD arrays (U2, U3) within 5 mm of the connector pins they protect. Array\n    GND pin on its own via straight to plane, never daisy-chained. Pair\n    routed in-line through pins 1/3 → 6/4, no stubs.\n4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other\n    crossing. No copper bridges the barrier on any layer.\n5. ADuM4165 bypass caps within 10 mm total lead length: C4 at VBUS1 (pin 1),\n    C5 at VDD1 (pin 3), C12 at VBUS2 (pin 20), C13 at VDD2 (pin 18). All four\n    are named because pin names alone did not stop C12 landing at U6.\n6. J1 and J2 end-launched, mating faces flush with the outer face of the\n    plastic end panels.\n7. Rectifier + LDO + TPS2553 zone measures 19.36 mm (20 mm budget). D1 and\n    D2 must be placed side by side, not in series; in series the zone\n    overruns by 3.36 mm.\n8. U1 (ADuM4165) pins 4, 7 (GND1) and 15, 16, 17 (GND2) are ground-only -- NOT\n    suitable for bypass capacitance (datasheet Table 12, p.12). C4/C5 bypass\n    returns to GND1 via pins 2/10 ONLY; VBUS2/VDD2 bypass returns to GND2 via\n    pins 11/19 ONLY -- never pins 4/7/15/16/17.\n9. VBUS_HOST's 5 caps serve 3 pins -- see each cap's Description property\n    before placing. C6 alone at U4 pin 2, inboard of C7 (SN6505B's mandatory\n    >=4.7 uF VCC bypass, Table 5-1). C17 at T1's center-tap (SLLSEP9I Sec 11.1,\n    a separate requirement from the VCC bulk). C4 clusters at U1 pin 1 -- NOT\n    with C3. C3 is J1-entrance bulk/inrush capacitance and stays near J1.\n10. THREE NET TIES DEFINE THREE STAR POINTS. NT1 splits ISO_5V into ISO_5V\n    (U5 out, C10+C11), ISO_5V_VBUS2 (U1 pin 20, C12), ISO_5V_SW (U6 in, C16)\n    and ISO_5V_IND (R4/R5/R6). NT2 splits DCDC_RECT (D1/D2, C8) from DCDC_RAW\n    (U5 in, C9). NT3 splits PORT_VBUS (U6 out, C14+C15) from PORT_VBUS_J2 (J2,\n    D6, U3, R7/R8). A branch may be fed ONLY through its tie -- never bridge\n    two branches with copper anywhere else. The ties exist because these pins\n    shared a net name and the board satisfied the wrong ones."
+	(text "1. Board 50 mm wide (Hammond 1455C slot), 120 mm length (1455C1202), 4\n    layers, 90 Ω differential pairs.\n2. ALL COPPER PULLED BACK ≥1 mm (target 2 mm) FROM BOTH LONG EDGES, every\n    layer, full length. The extrusion's aluminium slots grip those edges;\n    edge copper lets the enclosure short GND1 to GND2.\n3. ESD arrays (U2, U3) within 5 mm of the connector pins they protect. Array\n    GND pin on its own via straight to plane, never daisy-chained. Pair\n    routed in-line through pins 1/3 → 6/4, no stubs.\n4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other\n    crossing. No copper bridges the barrier on any layer.\n5. ADuM4165 bypass caps within 10 mm total lead length: C4 at VBUS1 (pin 1),\n    C5 at VDD1 (pin 3), C12 at VBUS2 (pin 20), C13 at VDD2 (pin 18). All four\n    are named because pin names alone did not stop C12 landing at U6.\n6. J1 and J2 end-launched, mating faces flush with the outer face of the\n    plastic end panels.\n7. Rectifier + LDO + TPS2553 zone measures 19.36 mm (20 mm budget). D1 and\n    D2 must be placed side by side, not in series; in series the zone\n    overruns by 3.36 mm.\n8. U1 (ADuM4165) pins 4, 7 (GND1) and 15, 16, 17 (GND2) are ground-only -- NOT\n    suitable for bypass capacitance (datasheet Table 12, p.12). C4/C5 bypass\n    returns to GND1 via pins 2/10 ONLY; VBUS2/VDD2 bypass returns to GND2 via\n    pins 11/19 ONLY -- never pins 4/7/15/16/17.\n9. VBUS_HOST's 5 caps serve 3 pins -- see each cap's Description property\n    before placing. C6 alone at U4 pin 2, inboard of C7 (SN6505B's mandatory\n    >=4.7 uF VCC bypass, Table 5-1). C17 at T1's center-tap (SLLSEP9I Sec 11.1,\n    a separate requirement from the VCC bulk). C4 clusters at U1 pin 1 -- NOT\n    with C3. C3 is J1-entrance bulk/inrush capacitance and stays near J1.\n10. THREE NET TIES DEFINE THREE STAR POINTS. NT1 splits ISO_5V into ISO_5V\n    (U5 out, C10+C11), ISO_5V_VBUS2 (U1 pin 20, C12), ISO_5V_SW (U6 in, C16)\n    and ISO_5V_IND (R4/R5/R6). NT2 splits DCDC_RECT (D1/D2, C8) from DCDC_RAW\n    (U5 in, C9). NT3 splits PORT_VBUS (U6 out, C14+C15) from PORT_VBUS_J2 (J2,\n    D6, U3, R7/R8). PORT_VBUS_J2 carrying no capacitor of its own is\n    deliberate -- C14/C15 belong at U6's output, D6 is the connector-local\n    part, and board room should be reserved near J2 in case bring-up shows\n    hot-plug droop. A branch may be fed ONLY through its tie -- never bridge\n    two branches with copper anywhere else. The ties exist because these pins\n    shared a net name and the board satisfied the wrong ones."
 		(exclude_from_sim no)
 		(at 335.5 199.39 0)
 		(effects
@@ -7816,7 +7816,7 @@
 				)
 			)
 		)
-		(property "Description" "Unidirectional TVS, downstream PORT_VBUS ESD/surge protection, pin1(cathode)->PORT_VBUS, pin2(anode)->GND2"
+		(property "Description" "Unidirectional TVS, downstream PORT_VBUS_J2 ESD/surge protection, pin1(cathode)->PORT_VBUS_J2, pin2(anode)->GND2"
 			(at 200.66 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -9775,7 +9775,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (level-shift buffer to ISO_5V; PGOOD output structure unspecified -- R10 populated so Q1 gate parks low (OFF) if open-drain), lights when PGOOD asserted"
+		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (level-shift buffer to ISO_5V_IND; PGOOD output structure unspecified -- R10 populated so Q1 gate parks low (OFF) if open-drain), lights when PGOOD asserted"
 			(at 398.78 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10866,7 +10866,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Barrier Y-cap, GND1 to GND2. 1nF Y1-rated, 400VAC, 14mm pitch -- the only intentional connection between the two grounds, giving GND2's ESD current a defined return path across the isolation barrier instead of forcing it through the ADuM4165 die. Not an owning-pin decoupling cap. Do NOT substitute a non-safety-rated (non-Y1) part."
 			(at 200.66 259.08 0)
 			(hide yes)
 			(show_name no)
@@ -14220,7 +14220,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol; PGOOD LED series, off ISO_5V (5V) via Q1 buffer, ~1mA (see task-5-report Fix round 1)"
+		(property "Description" "Resistor, small symbol; PGOOD LED series, off ISO_5V_IND (5V) via Q1 buffer, ~1mA"
 			(at 375.92 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -16093,7 +16093,7 @@
 		(dnp no)
 		(uuid "c3413f69-2a3a-45c0-a868-85198ffae9d9")
 		(property "Reference" "NT1"
-			(at 264.16 114.3 0)
+			(at 264.16 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16396,7 +16396,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 247.65) (xy 73.66 255.27)
+			(xy 73.66 247.65) (xy 73.66 261.62)
 		)
 		(stroke
 			(width 0)
@@ -16406,7 +16406,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 247.65) (xy 88.9 255.27)
+			(xy 88.9 247.65) (xy 88.9 259.08)
 		)
 		(stroke
 			(width 0)
@@ -16415,7 +16415,7 @@
 		(uuid "202a6a20-e751-486c-a04e-42b8ca959896")
 	)
 	(label "ISO_5V_VBUS2"
-		(at 73.66 255.27 90)
+		(at 73.66 261.62 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16425,7 +16425,7 @@
 		(uuid "d05b1e97-4c62-4f21-a1c3-d08c93fbc48c")
 	)
 	(label "ISO_5V_SW"
-		(at 88.9 255.27 90)
+		(at 88.9 259.08 90)
 		(effects
 			(font
 				(size 1.27 1.27)
