@@ -5995,7 +5995,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 185.42) (xy 247.65 184.15)
+			(xy 247.65 185.42) (xy 252.73 185.42)
 		)
 		(stroke
 			(width 0)
@@ -7364,7 +7364,7 @@
 		(uuid "a7fe1e01-fbe1-471c-bba7-9d140d275df9")
 	)
 	(label "PORT_VBUS_J2"
-		(at 247.65 184.15 90)
+		(at 252.73 185.42 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11934,7 +11934,7 @@
 				)
 			)
 		)
-		(property "Description" "SN6505B U4 VCC mandatory bypass, >=4.7uF low-ESR (datasheet Table 5-1). Layout: place close to U4 pin 2 / T1 center-tap, NOT near J1."
+		(property "Description" "SN6505B U4 VCC mandatory bypass, >=4.7uF low-ESR (datasheet Table 5-1). Layout: place close to U4 pin 2, outboard of C6. C17 now covers the T1 centre-tap -- do NOT place C7 there, and NOT near J1."
 			(at 38.1 130.81 0)
 			(hide yes)
 			(show_name no)
