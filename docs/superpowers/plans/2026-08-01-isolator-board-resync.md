@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Bring `isolator.kicad_pcb` to the split netlist, re-place and re-route the entire isolated side around the three net-tie star points, and end with all six gates and a schematic-parity DRC passing.
+**Goal:** Bring `isolator.kicad_pcb` to the split netlist, re-place and re-route the entire isolated side around the three net-tie star points, and end with a schematic-parity DRC and every gate passing — **except** Gate 3's `/HOST_D±` pair, which fails on `main` today at ~2.9 mm skew and stays frozen. See Task 6.
 
 **Architecture:** The board is manipulated programmatically through KiCad's bundled `pcbnew` Python, following the pattern already in `tools/` — every coordinate reviewable in git and reproducible. Verification is scripted gates under `tools/gates/`, and the new one (`decoupling.py`) is written before the placement it polices, watched to fail, exactly as `decoupling_nets.py` was in the schematic pass.
 
@@ -638,7 +638,11 @@ git add tools/route_iso.py isolator.kicad_pcb && git commit -m "feat(pcb): route
 - Consumes: the power-routed board from Task 5.
 - Produces: a fully routed board. Task 7 pours and verifies.
 
-`/PORT_D±` is the exposure this whole plan carries. Gate 3 passed before the re-place on tuned length matching, and Task 3 ripped it. It must come back at 0.21 mm width, 0.127 mm gap, intra-pair skew ≤ 0.15 mm, 90 Ω against the stackup actually in the board file.
+**Gate 3 has never passed on this board.** On `main`, before any of this work, it reports ~2.9 mm intra-pair skew on both pairs against its 0.15 mm limit — the pairs were never length-matched. An earlier draft of this plan claimed otherwise.
+
+`/PORT_D±` is ripped and comes back at 0.21 mm width, 0.127 mm gap, intra-pair skew **≤ 0.15 mm**, 90 Ω against the stackup actually in the board file. It is the pair this plan is responsible for.
+
+`/HOST_D±` stays exactly as it is — frozen host-side routing — and Gate 3 will keep reporting it as a failure. **That is the accepted end state** (ruling, 2026-08-01), not something to fix here and not a reason to relax the gate's limit. Task 7 checks Gate 3's `/PORT_D±` line specifically rather than its overall verdict.
 
 - [ ] **Step 1: Read how the pair was routed the first time**
 
@@ -654,7 +658,9 @@ U1.12/U1.13 → J2.A6/B6 and J2.A7/B7, in-line through U3 pins 1/3 → 6/4 with 
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 -u tools/gates/diffpair.py isolator.kicad_pcb 2>&1 | tail -20
 ```
 
-Expected: PASS on both pairs, skew ≤ 0.15 mm. Fix the pair now — routing the rest of the board first only makes it harder to adjust.
+Expected: the `/PORT_D±` line reports skew ≤ 0.15 mm and `[OK]` on impedance. The gate's **overall verdict will still be FAIL** because `/HOST_D±` reports ~2.9 mm — that pair is frozen and its failure is accepted. Read the `/PORT_D±` line, not the verdict.
+
+Fix the pair now — routing the rest of the board first only makes it harder to adjust.
 
 - [ ] **Step 4: Route the remaining signals**
 
@@ -707,10 +713,15 @@ Read `/tmp/drc.rpt`. `tools/fix_drc_violations.py` exists from the original layo
 python3 tools/gates/run_all.py
 ```
 
-Expected: `ALL GATES PASS`. That is six gates plus DRC with schematic parity:
-netclass coverage · decoupling nets · Gate 1 barrier · Gate 2 edge · Gate 3 diff pairs · Gate 5 decoupling · DRC + parity.
+Expected: every step passes **except `Gate 3 diff pairs`**, which reports `/PORT_D±` within 0.15 mm and `/HOST_D±` at its pre-existing ~2.9 mm. `run_all.py` will therefore print `FAILED: Gate 3 diff pairs`.
 
-This is the first time in either plan that `run_all.py` is expected to be fully green. If any gate fails, fix the board — the gates encode datasheet and safety requirements, not preferences.
+That is the accepted end state for this plan. Confirm it is the *only* failure and that its `/PORT_D±` line is clean:
+
+```bash
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 -u tools/gates/diffpair.py isolator.kicad_pcb 2>/dev/null | grep -A1 'PORT_D'
+```
+
+Every other step — netclass coverage · decoupling nets · Gate 1 barrier · Gate 2 edge · Gate 5 decoupling · DRC + parity — must pass. If any of those fails, fix the board: they encode datasheet and safety requirements, not preferences. Do not relax any gate limit to clear a failure.
 
 - [ ] **Step 5: Confirm the schematic never moved**
 

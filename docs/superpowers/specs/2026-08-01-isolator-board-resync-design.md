@@ -128,12 +128,13 @@ default 0.2 mm. GND2 keeps its In1/In2 plane and its stitching.
 
 ## Verification
 
-All five gates plus DRC. The re-place re-opens three that currently pass, so
-none of them may be taken on trust:
+All six gates plus DRC. The re-place re-opens three of them, so none may be
+taken on trust:
 
 1. `barrier.py` — ≥ 8.3 mm HOST_SIDE↔ISO_SIDE separation, every layer.
 2. `edge_pullback.py` — no copper within 1 mm of the outline.
-3. `diffpair.py` — `/PORT_D±` and `/HOST_D±` skew ≤ 0.15 mm, 90 Ω.
+3. `diffpair.py` — `/PORT_D±` skew ≤ 0.15 mm at 90 Ω. `/HOST_D±` is a known
+   pre-existing failure (~2.9 mm) on frozen host routing; see Risks.
 4. `netclass_coverage.py` — every net in exactly one side class.
 5. `decoupling_nets.py` — the eight-net membership table.
 6. **`decoupling.py`** — new; the ownership budget above.
@@ -144,12 +145,29 @@ none of them may be taken on trust:
 
 ## Risks
 
-- **`/PORT_D±` is the exposure.** Gate 3 passes today on tuned length matching.
-  Re-placing U3 or changing J2's approach re-opens it, and U3 must additionally
-  stay within 5 mm of the J2 pins it protects. Keep U3 and the `/PORT_D±`
-  corridor as close to their current geometry as the re-place allows, and treat
-  any change there as a deliberate decision with its own verification, not as
-  incidental fallout.
+- **Gate 3 does not pass today, and never did.** An earlier draft of this spec
+  claimed it did. On `main`, before any of this work, it reports ~2.9 mm
+  intra-pair skew on **both** pairs against its 0.15 mm limit —
+  `/HOST_D±` 49.071 vs 51.980 mm, `/PORT_D±` 49.283 vs 52.146 mm. The pairs
+  were never length-matched.
+
+  **Ruling (2026-08-01):** `/PORT_D±` is ripped by this plan anyway, so Task 6
+  routes it to meet the 0.15 mm limit. `/HOST_D±` stays frozen — it is working
+  host-side routing this plan deliberately does not touch — and remains a known,
+  recorded failure. Task 7's acceptance is therefore "Gate 3 passes on
+  `/PORT_D±`", not "Gate 3 passes".
+
+  For scale: 2.9 mm is roughly 19 ps at USB high speed, comfortably inside
+  USB 2.0's real intra-pair budget. The 0.15 mm limit is a self-imposed rule
+  from the original layout spec, not a USB requirement. That is context for a
+  future decision about the host pair — it is **not** a licence to relax the
+  gate, which stays where it is.
+
+- **`/PORT_D±` remains the exposure for a different reason.** U3 must stay
+  within 5 mm of the J2 pins it protects, and the re-place can easily make a
+  0.15 mm match harder than it needs to be. Keep U3 and the `/PORT_D±` corridor
+  close to their current geometry, and treat any change there as a deliberate
+  decision with its own verification.
 - **The barrier gate is creepage-aware and non-obvious.** It measures around
   the routed slot under T1 rather than straight-line on F.Cu. Nothing in this
   spec should move T1 or that slot, but a re-placed part drifting west toward
