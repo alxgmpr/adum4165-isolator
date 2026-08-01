@@ -4545,6 +4545,350 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:NetTie_2"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "NT"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NetTie_2"
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Net tie, 2 pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "net tie short"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Net*Tie*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NetTie_2_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NetTie_2_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:NetTie_4"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "NT"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NetTie_4"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Net tie, 4 pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "net tie short"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Net*Tie*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NetTie_4_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy 1.27 -2.54)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 0)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NetTie_4_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -2.54 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(rectangle
 		(start 15.24 224.79)
@@ -4654,7 +4998,7 @@
 		)
 		(uuid "db848d84-7255-4aa8-b88a-df439710896c")
 	)
-	(text "1. Board 50 mm wide (Hammond 1455C slot), 120 mm length (1455C1202), 4\n    layers, 90 Ω differential pairs.\n2. ALL COPPER PULLED BACK ≥1 mm (target 2 mm) FROM BOTH LONG EDGES, every\n    layer, full length. The extrusion's aluminium slots grip those edges;\n    edge copper lets the enclosure short GND1 to GND2.\n3. ESD arrays (U2, U3) within 5 mm of the connector pins they protect. Array\n    GND pin on its own via straight to plane, never daisy-chained. Pair\n    routed in-line through pins 1/3 → 6/4, no stubs.\n4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other\n    crossing. No copper bridges the barrier on any layer.\n5. ADuM4165 bypass caps within 10 mm total lead length.\n6. J1 and J2 end-launched, mating faces flush with the outer face of the\n    plastic end panels.\n7. Rectifier + LDO + TPS2553 zone measures 19.36 mm (20 mm budget). D1 and\n    D2 must be placed side by side, not in series; in series the zone\n    overruns by 3.36 mm.\n8. U1 (ADuM4165) pins 4, 7 (GND1) and 15, 16, 17 (GND2) are ground-only -- NOT\n    suitable for bypass capacitance (datasheet Table 12, p.12). C4/C5 bypass\n    returns to GND1 via pins 2/10 ONLY; VBUS2/VDD2 bypass returns to GND2 via\n    pins 11/19 ONLY -- never pins 4/7/15/16/17.\n9. VBUS_HOST's 4 caps serve 2 ICs -- see each cap's Description property\n    before placing. C6+C7 cluster at U4 pin 2 / T1 center-tap (C7 = SN6505B's\n    mandatory ≥4.7 µF VCC bypass, Table 5-1). C4 clusters at U1 pin 1\n    (ADuM4165 VBUS1 bypass, item 5's budget) -- NOT with C3. C3 is\n    J1-entrance bulk/inrush capacitance and stays near J1."
+	(text "1. Board 50 mm wide (Hammond 1455C slot), 120 mm length (1455C1202), 4\n    layers, 90 Ω differential pairs.\n2. ALL COPPER PULLED BACK ≥1 mm (target 2 mm) FROM BOTH LONG EDGES, every\n    layer, full length. The extrusion's aluminium slots grip those edges;\n    edge copper lets the enclosure short GND1 to GND2.\n3. ESD arrays (U2, U3) within 5 mm of the connector pins they protect. Array\n    GND pin on its own via straight to plane, never daisy-chained. Pair\n    routed in-line through pins 1/3 → 6/4, no stubs.\n4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other\n    crossing. No copper bridges the barrier on any layer.\n5. ADuM4165 bypass caps within 10 mm total lead length: C4 at VBUS1 (pin 1),\n    C5 at VDD1 (pin 3), C12 at VBUS2 (pin 20), C13 at VDD2 (pin 18). All four\n    are named because pin names alone did not stop C12 landing at U6.\n6. J1 and J2 end-launched, mating faces flush with the outer face of the\n    plastic end panels.\n7. Rectifier + LDO + TPS2553 zone measures 19.36 mm (20 mm budget). D1 and\n    D2 must be placed side by side, not in series; in series the zone\n    overruns by 3.36 mm.\n8. U1 (ADuM4165) pins 4, 7 (GND1) and 15, 16, 17 (GND2) are ground-only -- NOT\n    suitable for bypass capacitance (datasheet Table 12, p.12). C4/C5 bypass\n    returns to GND1 via pins 2/10 ONLY; VBUS2/VDD2 bypass returns to GND2 via\n    pins 11/19 ONLY -- never pins 4/7/15/16/17.\n9. VBUS_HOST's 5 caps serve 3 pins -- see each cap's Description property\n    before placing. C6 alone at U4 pin 2, inboard of C7 (SN6505B's mandatory\n    >=4.7 uF VCC bypass, Table 5-1). C17 at T1's center-tap (SLLSEP9I Sec 11.1,\n    a separate requirement from the VCC bulk). C4 clusters at U1 pin 1 -- NOT\n    with C3. C3 is J1-entrance bulk/inrush capacitance and stays near J1.\n10. THREE NET TIES DEFINE THREE STAR POINTS. NT1 splits ISO_5V into ISO_5V\n    (U5 out, C10+C11), ISO_5V_VBUS2 (U1 pin 20, C12), ISO_5V_SW (U6 in, C16)\n    and ISO_5V_IND (R4/R5/R6). NT2 splits DCDC_RECT (D1/D2, C8) from DCDC_RAW\n    (U5 in, C9). NT3 splits PORT_VBUS (U6 out, C14+C15) from PORT_VBUS_J2 (J2,\n    D6, U3, R7/R8). PORT_VBUS_J2 carrying no capacitor of its own is\n    deliberate -- C14/C15 belong at U6's output, D6 is the connector-local\n    part, and board room should be reserved near J2 in case bring-up shows\n    hot-plug droop. A branch may be fed ONLY through its tie -- never bridge\n    two branches with copper anywhere else. The ties exist because these pins\n    shared a net name and the board satisfied the wrong ones."
 		(exclude_from_sim no)
 		(at 335.5 199.39 0)
 		(effects
@@ -4981,16 +5325,6 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 40.64) (xy 355.6 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d3e77e7-213e-4f06-84eb-50b7a0df7d6e")
-	)
-	(wire
-		(pts
 			(xy 78.74 35.56) (xy 88.9 35.56)
 		)
 		(stroke
@@ -5081,16 +5415,6 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 173.99) (xy 340.36 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34369232-3e4e-4a8d-890a-af4c4a6a91ba")
-	)
-	(wire
-		(pts
 			(xy 193.04 139.7) (xy 190.5 139.7)
 		)
 		(stroke
@@ -5138,16 +5462,6 @@
 			(type default)
 		)
 		(uuid "3bde8a49-5dad-474a-b672-523e7274f808")
-	)
-	(wire
-		(pts
-			(xy 325.12 173.99) (xy 325.12 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ca1f678-6665-458f-9075-9963b4c31641")
 	)
 	(wire
 		(pts
@@ -5521,16 +5835,6 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 40.64) (xy 342.9 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "73f24453-131f-493b-855d-5779b4cdf112")
-	)
-	(wire
-		(pts
 			(xy 119.38 139.7) (xy 123.19 139.7)
 		)
 		(stroke
@@ -5691,7 +5995,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 185.42) (xy 247.65 184.15)
+			(xy 247.65 185.42) (xy 252.73 185.42)
 		)
 		(stroke
 			(width 0)
@@ -5708,16 +6012,6 @@
 			(type default)
 		)
 		(uuid "963667ea-42f3-4f58-a8e0-56da0a4019db")
-	)
-	(wire
-		(pts
-			(xy 231.14 138.43) (xy 231.14 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "98dd21d9-0100-4e71-9f0f-b1f2d3359c1d")
 	)
 	(wire
 		(pts
@@ -5748,16 +6042,6 @@
 			(type default)
 		)
 		(uuid "9f6c00a7-6165-442d-8df9-0fde66b4c1da")
-	)
-	(wire
-		(pts
-			(xy 292.1 138.43) (xy 292.1 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1e3c5c4-8286-44c8-b507-3e43cd3cba0e")
 	)
 	(wire
 		(pts
@@ -5831,7 +6115,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 220.98) (xy 205.74 223.52)
+			(xy 205.74 220.98) (xy 205.74 227.33)
 		)
 		(stroke
 			(width 0)
@@ -5941,7 +6225,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 220.98) (xy 213.36 223.52)
+			(xy 213.36 220.98) (xy 213.36 227.33)
 		)
 		(stroke
 			(width 0)
@@ -6078,16 +6362,6 @@
 			(type default)
 		)
 		(uuid "d9558f73-ef07-4d14-bdb7-2839997c76ba")
-	)
-	(wire
-		(pts
-			(xy 283.21 138.43) (xy 283.21 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da5e0dbe-508a-4838-85da-65fc4ccdd8a4")
 	)
 	(wire
 		(pts
@@ -6281,16 +6555,6 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 138.43) (xy 222.25 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f60a863e-9120-45e4-aa90-f9aa751496a3")
-	)
-	(wire
-		(pts
 			(xy 231.14 133.35) (xy 231.14 130.81)
 		)
 		(stroke
@@ -6309,7 +6573,7 @@
 		)
 		(uuid "01559fb7-399a-4c8f-8510-425af25faeb7")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 185.42 186.69 90)
 		(effects
 			(font
@@ -6390,7 +6654,7 @@
 		(uuid "09945424-8331-487d-b44f-770c7ead1fe7")
 	)
 	(label "GND2"
-		(at 222.25 140.97 90)
+		(at 222.25 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6480,7 +6744,7 @@
 		(uuid "2a42b2de-a6fb-4b62-9648-ad83d6599883")
 	)
 	(label "GND2"
-		(at 231.14 140.97 90)
+		(at 231.14 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6520,7 +6784,7 @@
 		(uuid "3177fbf5-49bd-41ab-8a77-3db50834b8ac")
 	)
 	(label "GND2"
-		(at 355.6 43.18 90)
+		(at 355.6 46.99 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6600,7 +6864,7 @@
 		(uuid "3aa055b3-51e5-4a24-b1d9-af0275628e54")
 	)
 	(label "GND2"
-		(at 342.9 43.18 90)
+		(at 342.9 46.99 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6649,7 +6913,7 @@
 		)
 		(uuid "4b3eadef-9b26-4176-b5c0-d9ff15bb9447")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_SW"
 		(at 322.58 146.05 180)
 		(effects
 			(font
@@ -6659,7 +6923,7 @@
 		)
 		(uuid "4c6540bc-5fa9-4fd7-b91d-f3e2b4d28a25")
 	)
-	(label "DCDC_RAW"
+	(label "DCDC_RECT"
 		(at 203.2 130.81 0)
 		(effects
 			(font
@@ -6689,7 +6953,7 @@
 		)
 		(uuid "52d8d617-409e-4f81-af47-8b7eb79939ef")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 262.89 181.61 90)
 		(effects
 			(font
@@ -6739,7 +7003,7 @@
 		)
 		(uuid "5ba2a58f-26da-4099-89a9-1ca3692607c6")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 231.14 182.88 0)
 		(effects
 			(font
@@ -6780,7 +7044,7 @@
 		(uuid "63c1255f-3890-4039-806e-7e4683af9c65")
 	)
 	(label "GND2"
-		(at 213.36 223.52 90)
+		(at 213.36 227.33 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6789,7 +7053,7 @@
 		)
 		(uuid "654014a9-e9e0-46ca-a71e-cb0887936193")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_IND"
 		(at 378.46 116.84 90)
 		(effects
 			(font
@@ -6879,7 +7143,7 @@
 		)
 		(uuid "820ad614-2faf-46de-a32b-fc736c90aaca")
 	)
-	(label "DCDC_RAW"
+	(label "DCDC_RECT"
 		(at 203.2 139.7 0)
 		(effects
 			(font
@@ -6889,7 +7153,7 @@
 		)
 		(uuid "856c79bd-61fc-4e2e-b848-af1f461e454d")
 	)
-	(label "DCDC_RAW"
+	(label "DCDC_RECT"
 		(at 222.25 130.81 90)
 		(effects
 			(font
@@ -6909,7 +7173,7 @@
 		)
 		(uuid "88190e50-8610-42cc-9708-1a75872ced2b")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_IND"
 		(at 365.76 115.57 90)
 		(effects
 			(font
@@ -6960,7 +7224,7 @@
 		(uuid "8cc28932-96cb-4d35-a54a-90692e50b90e")
 	)
 	(label "GND2"
-		(at 283.21 140.97 90)
+		(at 283.21 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6980,7 +7244,7 @@
 		(uuid "924d2a06-dadb-4943-8cf6-72a86b9132c8")
 	)
 	(label "GND2"
-		(at 340.36 176.53 90)
+		(at 340.36 180.34 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7059,7 +7323,7 @@
 		)
 		(uuid "a32fe658-03c9-49c9-9fba-732ff07b29db")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_IND"
 		(at 375.92 30.48 90)
 		(effects
 			(font
@@ -7099,8 +7363,8 @@
 		)
 		(uuid "a7fe1e01-fbe1-471c-bba7-9d140d275df9")
 	)
-	(label "PORT_VBUS"
-		(at 247.65 184.15 90)
+	(label "PORT_VBUS_J2"
+		(at 252.73 185.42 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7129,7 +7393,7 @@
 		)
 		(uuid "b19e1797-7903-4c48-abb0-16320b21b128")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_VBUS2"
 		(at 342.9 33.02 90)
 		(effects
 			(font
@@ -7169,7 +7433,7 @@
 		)
 		(uuid "c2b3555c-ff08-4ca1-939e-adbbe5ed9478")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_VBUS2"
 		(at 317.5 44.45 90)
 		(effects
 			(font
@@ -7189,7 +7453,7 @@
 		)
 		(uuid "c572545e-d628-44fa-bfbd-fa0ed3dd2878")
 	)
-	(label "PORT_VBUS"
+	(label "PORT_VBUS_J2"
 		(at 194.31 190.5 180)
 		(effects
 			(font
@@ -7250,7 +7514,7 @@
 		(uuid "cfefed28-90bf-4e62-8809-b0c16324a2ae")
 	)
 	(label "GND2"
-		(at 325.12 176.53 90)
+		(at 325.12 180.34 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7320,7 +7584,7 @@
 		(uuid "e815628e-5a48-47ca-a978-931b41f89769")
 	)
 	(label "GND2"
-		(at 292.1 140.97 90)
+		(at 292.1 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7339,7 +7603,7 @@
 		)
 		(uuid "ed6be103-34f2-4f1c-a0e6-74c2426d8161")
 	)
-	(label "ISO_5V"
+	(label "ISO_5V_SW"
 		(at 322.58 151.13 180)
 		(effects
 			(font
@@ -7370,7 +7634,7 @@
 		(uuid "f47962a2-8971-4279-976e-0d665318504e")
 	)
 	(label "GND2"
-		(at 205.74 223.52 90)
+		(at 205.74 227.33 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7552,7 +7816,7 @@
 				)
 			)
 		)
-		(property "Description" "Unidirectional TVS, downstream PORT_VBUS ESD/surge protection, pin1(cathode)->PORT_VBUS, pin2(anode)->GND2"
+		(property "Description" "Unidirectional TVS, downstream PORT_VBUS_J2 ESD/surge protection, pin1(cathode)->PORT_VBUS_J2, pin2(anode)->GND2"
 			(at 200.66 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -7656,7 +7920,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TLV76750 U5 output bulk on ISO_5V, 47uF. Layout: place close to U5 pins 1/2, outboard of C11."
 			(at 283.21 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -7665,6 +7929,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "TMK325ABJ476MM-P"
@@ -7940,7 +8205,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Rectifier reservoir on DCDC_RECT, 47uF. Layout: place at the D1/D2 cathodes, NOT at U5 -- the pulsed rectifier current is what this cap smooths. C9 is the LDO input cap; do not swap them."
 			(at 222.25 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -7949,6 +8214,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "TMK325ABJ476MM-P"
@@ -8066,7 +8332,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "ADuM4165 U1 VDD1 bypass on VDD1, 100n (datasheet Rev. B, Table 12, pin 3 -- required for correct operation of the internal 3.3 V regulator). Layout: within U1's 10 mm bypass-lead budget at U1 pin 3, returning to GND1 via pins 2/10 ONLY -- never pins 4/7/15/16/17."
 			(at 209.55 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -8074,8 +8340,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-				)
-			)
+				) (hide yes))
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
 			(at 209.55 43.18 0)
@@ -8728,7 +8993,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TLV76750 U5 output HF bypass on ISO_5V, 100n. Layout: place closer to U5 pins 1/2 than C10."
 			(at 292.1 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -8737,6 +9002,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -9509,7 +9775,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (level-shift buffer to ISO_5V; PGOOD output structure unspecified -- R10 populated so Q1 gate parks low (OFF) if open-drain), lights when PGOOD asserted"
+		(property "Description" "Light emitting diode, PGOOD indicator; cathode driven by Q1 (level-shift buffer to ISO_5V_IND; PGOOD output structure unspecified -- R10 populated so Q1 gate parks low (OFF) if open-drain), lights when PGOOD asserted"
 			(at 398.78 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10324,7 +10590,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "24 MHz crystal load cap on XTALIN, 8p. Layout: place at Y1, minimising the Y1-to-U1 pin 5 trace."
 			(at 257.81 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -10333,6 +10599,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603CRNPO9BN8R0"
@@ -10461,7 +10728,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "ADuM4165 U1 VBUS2 bypass on ISO_5V_VBUS2, 100n (datasheet Rev. B, Table 12, pin 20). Layout: MUST sit within U1's 10 mm bypass-lead budget at U1 pin 20, returning to GND2 via pins 11/19 only. This cap was placed at U6 on the first board revision -- it does not belong there."
 			(at 342.9 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -10470,6 +10737,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -10598,7 +10866,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Barrier Y-cap, GND1 to GND2. 1nF Y1-rated, 400VAC, 14mm pitch -- the only intentional connection between the two grounds, giving GND2's ESD current a defined return path across the isolation barrier instead of forcing it through the ADuM4165 die. Not an owning-pin decoupling cap. Do NOT substitute a non-safety-rated (non-Y1) part."
 			(at 200.66 259.08 0)
 			(hide yes)
 			(show_name no)
@@ -11666,7 +11934,7 @@
 				)
 			)
 		)
-		(property "Description" "SN6505B U4 VCC mandatory bypass, >=4.7uF low-ESR (datasheet Table 5-1). Layout: place close to U4 pin 2 / T1 center-tap, NOT near J1."
+		(property "Description" "SN6505B U4 VCC mandatory bypass, >=4.7uF low-ESR (datasheet Table 5-1). Layout: place close to U4 pin 2, outboard of C6. C17 now covers the T1 centre-tap -- do NOT place C7 there, and NOT near J1."
 			(at 38.1 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -13207,7 +13475,7 @@
 				)
 			)
 		)
-		(property "Description" "SN6505B U4 VCC close-to-pin bypass, 0.1uF (datasheet Sec 10, Power Supply Recommendations). Layout: place immediately at U4 pin 2 / T1 center-tap, alongside C7."
+		(property "Description" "SN6505B U4 VCC close-to-pin bypass, 0.1uF (datasheet Sec 10, Power Supply Recommendations). Layout: place immediately at U4 pin 2, inboard of C7. C17 now covers the T1 centre-tap -- do not cluster C6 there."
 			(at 25.4 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -13216,6 +13484,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -13951,7 +14220,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol; PGOOD LED series, off ISO_5V (5V) via Q1 buffer, ~1mA (see task-5-report Fix round 1)"
+		(property "Description" "Resistor, small symbol; PGOOD LED series, off ISO_5V_IND (5V) via Q1 buffer, ~1mA"
 			(at 375.92 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -14462,7 +14731,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "24 MHz crystal load cap on XTALOUT, 8p. Layout: place at Y1, minimising the Y1-to-U1 pin 6 trace."
 			(at 274.32 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -14471,6 +14740,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603CRNPO9BN8R0"
@@ -14599,7 +14869,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "ADuM4165 U1 VDD2 bypass on VDD2, 100n (datasheet Rev. B, Table 12, pin 18). Layout: within the 10 mm bypass-lead budget at U1 pin 18, returning to GND2 via pins 11/19 only."
 			(at 355.6 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -14608,6 +14878,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -14939,7 +15210,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TPS2553 U6 output bulk on PORT_VBUS, 22uF (SLVS841F Sec 12.1). Layout: place at U6 pin 6, outboard of C15 -- NOT down at J2."
 			(at 325.12 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -14948,6 +15219,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "GRM21BR61A226ME44L"
@@ -15231,7 +15503,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TPS2553 U6 output HF bypass on PORT_VBUS, 100n (SLVS841F Sec 12.1). Layout: place closer to U6 pin 6 than C14 -- NOT down at J2."
 			(at 340.36 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -15240,6 +15512,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -15368,7 +15641,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TLV76750 U5 input bypass on DCDC_RAW, 100n. Layout: place close to U5 pin 8 / GND. Reaches U5 only through NT2; do not feed it from the rectifier side."
 			(at 231.14 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -15377,6 +15650,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -15526,6 +15800,1115 @@
 				)
 			)
 		)
+	)
+	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 195.58 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5d54b8fb-0695-4550-b93c-2c7708964271")
+		(property "Reference" "NT2"
+			(at 195.58 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 195.58 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 195.58 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Net tie, 2 pins"
+			(at 195.58 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f33a574b-8339-4e63-982e-c39a2960a695")
+		)
+		(pin "2"
+			(uuid "c3c20dc4-b98b-4d1c-a4e3-f8bb276281da")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "NT2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 193.04000000000002 148.59) (xy 187.96 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8c57c23-82e6-4149-a3a0-510619741d62")
+	)
+	(junction
+		(at 213.36 220.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4c34197d-3c07-44bb-b9f0-0d0813534992")
+	)
+	(junction
+		(at 307.34 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "660b1198-6daa-45db-8489-bf6a151783f6")
+	)
+	(junction
+		(at 78.74 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "da0e47f1-7cf1-48e0-861d-74fc33884ea2")
+	)
+	(junction
+		(at 266.7 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82715649-643e-48e3-a181-6526ba2e104e")
+	)
+	(junction
+		(at 228.6 182.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba70d619-59f4-4dd8-ba6f-01d2fdffd13a")
+	)
+	(junction
+		(at 317.5 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9501ab8-bb75-41fb-b4b1-f9b3f628f6fb")
+	)
+	(junction
+		(at 257.81 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "22907202-bcc4-4667-9886-8c95dbd37e90")
+	)
+	(wire
+		(pts
+			(xy 198.12 148.59) (xy 203.2 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cee8e21-979a-480f-b511-a2063055a182")
+	)
+	(label "DCDC_RECT"
+		(at 187.96 148.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "876c910f-af3a-4ff5-ad30-61a2b46e8cc2")
+	)
+	(label "DCDC_RAW"
+		(at 203.2 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e907a01b-c95a-4add-b80b-3eaad355c1e9")
+	)
+	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 365.76 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b21c99f0-5307-489b-b2a2-a2d2971fc45f")
+		(property "Reference" "NT3"
+			(at 365.76 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 365.76 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 365.76 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Net tie, 2 pins"
+			(at 365.76 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aaeecf7b-b5cb-4e6e-aca3-50b3310f409a")
+		)
+		(pin "2"
+			(uuid "886dc0bc-ded0-41c0-8060-6c00f25995ee")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "NT3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.21999999999997 163.83) (xy 358.14 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee453f1a-7eaf-4e32-9b28-c9449672061b")
+	)
+	(wire
+		(pts
+			(xy 368.3 163.83) (xy 373.38 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "651dc43e-d63e-4678-9304-94169001374d")
+	)
+	(label "PORT_VBUS"
+		(at 358.14 163.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7621ed29-6a25-4c7a-b0c3-99a092098fe2")
+	)
+	(label "PORT_VBUS_J2"
+		(at 373.38 163.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed8c00b2-b57f-4189-aa66-3733d8ab313e")
+	)
+	(symbol
+		(lib_id "Device:NetTie_4")
+		(at 264.16 113.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c3413f69-2a3a-45c0-a868-85198ffae9d9")
+		(property "Reference" "NT1"
+			(at 264.16 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_4"
+			(at 264.16 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-4_SMD_Pad0.5mm"
+			(at 264.16 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Net tie, 4 pins"
+			(at 264.16 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49d8e816-8aff-46b1-b0c0-2b8c3438f511")
+		)
+		(pin "2"
+			(uuid "0fddd769-9e02-4875-b010-bf5ad714c292")
+		)
+		(pin "3"
+			(uuid "c20fb925-d254-4cfb-8453-1916ea4600c6")
+		)
+		(pin "4"
+			(uuid "ada4303a-cd98-4049-9703-92513417dfa2")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "NT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 261.62 113.03) (xy 256.54 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1185ada4-0f57-40eb-b8a7-ea9c062091b7")
+	)
+	(wire
+		(pts
+			(xy 266.70000000000005 113.03) (xy 271.78 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a30ca03d-26cf-4def-b05f-19132c1bdc1b")
+	)
+	(wire
+		(pts
+			(xy 261.62 115.57000000000001) (xy 256.54 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1412e17-f6ff-4d20-8a44-e65296d88db4")
+	)
+	(wire
+		(pts
+			(xy 266.70000000000005 115.57000000000001) (xy 271.78 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "407a4aab-1fbb-4dac-8650-20cb45e605ff")
+	)
+	(label "ISO_5V"
+		(at 256.54 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9fe0d661-1dc5-4200-a14a-9467ac146b2e")
+	)
+	(label "ISO_5V_VBUS2"
+		(at 271.78 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f3483af-e48f-4214-83f1-7788ee94fb20")
+	)
+	(label "ISO_5V_SW"
+		(at 256.54 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4baad5de-82b9-4d48-9bcf-9e1576f6b5d3")
+	)
+	(label "ISO_5V_IND"
+		(at 271.78 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7a17acb5-b456-42ef-b76e-2f10db7f3c35")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 73.66 247.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "28a7750f-4ad4-439c-9d76-de25df88dbf8")
+		(property "Reference" "#FLG06"
+			(at 73.66 249.555 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				) (hide yes))
+		)
+		(property "Value" "PWR_FLAG"
+			(at 76.2 246.3799 0.0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				) (justify left))
+		)
+		(property "Footprint" ""
+			(at 73.66 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 73.66 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee5957ae-41ad-4275-8ca6-7b9a53efbf9b")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#FLG06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 88.9 247.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7b40ebfa-e350-429b-8dd5-7f2b3121636f")
+		(property "Reference" "#FLG07"
+			(at 88.9 249.555 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				) (hide yes))
+		)
+		(property "Value" "PWR_FLAG"
+			(at 91.44 246.3799 0.0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				) (justify left))
+		)
+		(property "Footprint" ""
+			(at 88.9 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 88.9 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e82d8697-6c00-4813-8753-96a746ee2e4c")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#FLG07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 73.66 247.65) (xy 73.66 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4725780c-a3bb-4590-a0fb-69301b5ada65")
+	)
+	(wire
+		(pts
+			(xy 88.9 247.65) (xy 88.9 259.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "202a6a20-e751-486c-a04e-42b8ca959896")
+	)
+	(label "ISO_5V_VBUS2"
+		(at 73.66 261.62 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d05b1e97-4c62-4f21-a1c3-d08c93fbc48c")
+	)
+	(label "ISO_5V_SW"
+		(at 88.9 259.08 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f5e9c49-3a31-413d-ad01-80e64b95f4e1")
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 317.5 173.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03860154-d792-4dfe-992b-227dff463e68")
+		(property "Reference" "C16"
+			(at 318.5 172.7262 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 318.5 175.2662 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 317.5 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 317.5 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "TPS2553 U6 input bypass on ISO_5V_SW, 100n (SLVS841F Sec 10.2.1.2.4, \"0.1uF or greater as close to the device as possible\"). Layout: place at U6 pins 1/3. Reaches the LDO only through NT1."
+			(at 317.5 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0603KRX7R9BB104"
+			(at 317.5 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 317.5 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 317.5 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "±10%"
+			(at 317.5 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 317.5 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ddefeab9-feab-4a02-841f-59a8a1aa5125")
+		)
+		(pin "2"
+			(uuid "ce41b82f-3fc3-4407-a589-369a7bc83026")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "C16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 317.5 171.45000000000002) (xy 317.5 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "381eb2b1-8329-457b-9b1b-784a6897a253")
+	)
+	(label "ISO_5V_SW"
+		(at 317.5 168.91 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "114e07fa-542a-4003-97f7-6a6a46d4c5ee")
+	)
+	(label "GND2"
+		(at 317.5 182.88 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "91a1858d-8660-4e8b-9fd9-c58bbdd271ea")
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 96.52 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79b9a23f-84e1-4d32-9ac6-6db38024ae4a")
+		(property "Reference" "C17"
+			(at 99.06 120.6562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 99.06 123.1962 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 96.52 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SN6505B transformer centre-tap bulk on VBUS_HOST, 4.7uF (SLLSEP9I Sec 11.1, separate from the VCC bulk). Layout: place at T1 pin 2, NOT at U4 -- C7 is the VCC bulk."
+			(at 96.52 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM21BR71E475KA73L"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C162427"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b55cec24-5990-4a18-8187-fd45d4ad8190")
+		)
+		(pin "2"
+			(uuid "6d5dcaa2-e01c-41f3-af3d-08a746f5634d")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 96.52 119.38) (xy 96.52 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5c81082-8607-48c1-9418-a19a43d693df")
+	)
+	(label "VBUS_HOST"
+		(at 96.52 116.84 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a795e13b-6558-489a-90ff-0942c0f3140c")
+	)
+	(wire
+		(pts
+			(xy 96.52 124.46000000000001) (xy 96.52 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c3cd68d-e0f4-4640-b93c-ebd3eb0046ae")
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 96.52 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "53933171-1c42-4d4f-8f12-92286c16c0a0")
+		(property "Reference" "#PWR020"
+			(at 96.52 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND1"
+			(at 99.06 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 96.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee9798a9-5c24-482c-957d-32878c4d0011")
+		)
+		(instances
+			(project "isolator"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 317.5 176.53) (xy 317.5 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "718708b8-0af2-4453-9da2-c6e366afdb3e")
+	)
+	(wire
+		(pts
+			(xy 325.12 173.99) (xy 325.12 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0f41aa2-9008-485e-8e0c-8ad965876d46")
+	)
+	(wire
+		(pts
+			(xy 340.36 173.99) (xy 340.36 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bbc8b75-b512-4288-bdae-ac85024e164c")
+	)
+	(wire
+		(pts
+			(xy 222.25 138.43) (xy 222.25 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1e720ef-2b87-479e-9713-d0f9703f90cd")
+	)
+	(wire
+		(pts
+			(xy 231.14 138.43) (xy 231.14 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "330419c9-d234-43a8-a4a8-feb311881c33")
+	)
+	(wire
+		(pts
+			(xy 283.21 138.43) (xy 283.21 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0a19e78-661d-4285-b42e-bf03d193d696")
+	)
+	(wire
+		(pts
+			(xy 292.1 138.43) (xy 292.1 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f267497-c6fe-4565-b8c5-ccffe62f2745")
+	)
+	(wire
+		(pts
+			(xy 342.9 40.64) (xy 342.9 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "932899e4-c297-435d-beb2-daca2e9610fa")
+	)
+	(wire
+		(pts
+			(xy 355.6 40.64) (xy 355.6 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f32c310f-65e4-4516-86b0-ebd03bc116d5")
 	)
 	(sheet_instances
 		(path "/"

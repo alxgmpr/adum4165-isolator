@@ -132,9 +132,9 @@
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
-        "missing_footprint": "warning",
+        "missing_footprint": "error",
         "missing_tuning_profile": "warning",
-        "net_conflict": "warning",
+        "net_conflict": "error",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
         "padstack": "error",
@@ -664,6 +664,22 @@
       {
         "netclass": "PWR",
         "pattern": "/PORT_VBUS"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "/ISO_5V_VBUS2"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "/ISO_5V_SW"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "/DCDC_RECT"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "/PORT_VBUS_J2"
       },
       {
         "netclass": "HOST_SIDE",

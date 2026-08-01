@@ -15,6 +15,7 @@ subprocess.run([KCLI, 'sch', 'export', 'netlist', SCH, '-o', NET], check=True,
 
 steps = [
     ('netclass coverage', ['python3', os.path.join(HERE, 'netclass_coverage.py'), PRO, NET]),
+    ('decoupling nets',   ['python3', os.path.join(HERE, 'decoupling_nets.py'), NET]),
     ('Gate 1 barrier',    [KIPY, os.path.join(HERE, 'barrier.py'), BOARD, PRO, NET]),
     ('Gate 2 edge',       [KIPY, os.path.join(HERE, 'edge_pullback.py'), BOARD]),
     ('Gate 3 diff pairs', [KIPY, os.path.join(HERE, 'diffpair.py'), BOARD]),

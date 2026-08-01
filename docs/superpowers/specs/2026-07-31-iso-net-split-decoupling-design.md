@@ -262,7 +262,12 @@ symbol moves.
 1. **ERC clean.** `kicad-cli sch erc --severity-error --exit-code-violations`
    exits 0. This project's ERC config treats `power_pin_not_driven` as an
    error, so each new branch net must be reachable from a driver through its
-   tie; a missing or mis-wired tie fails here rather than silently.
+   tie; a missing or mis-wired tie fails here rather than silently — but only
+   on the five branches without their own `PWR_FLAG`. `/ISO_5V_VBUS2` and
+   `/ISO_5V_SW` each carry a flag, which satisfies `power_pin_not_driven` on
+   its own; a tie coming loose on either of those two would not trip ERC.
+   `decoupling_nets.py` (the netlist membership probe below) is the real
+   backstop on those two branches, not ERC.
 2. **Netlist membership probes.** Export the netlist and assert each of the
    eight nets in the decomposition tables has exactly the listed members —
    no more, no less. This is the check that would have caught the original
@@ -303,8 +308,11 @@ rather than the board, which is why it appears as check 4 above.
   output, so `/PORT_VBUS_J2` carries only D6. The 22 µF sits ~11 mm upstream
   on 0.5 mm copper, which is electrically adjacent on the millisecond
   timescales that hot-plug inrush and device load steps occupy, and the
-  TPS2553's soft-start covers the rest. This is an accepted state, not an
-  oversight. If bring-up shows droop on hot-plug, the fix is to add a
+  TPS2553's soft-start covers the rest. Total output capacitance is
+  **unchanged** by this split — same parts, same values (C14 22µ, C15 100n),
+  only their position relative to the branch net boundary is now pinned; this
+  change moves capacitance, it does not reduce it. This is an accepted state,
+  not an oversight. If bring-up shows droop on hot-plug, the fix is to add a
   connector-local capacitor on `/PORT_VBUS_J2` — the branch net exists
   precisely so that part can be added without ambiguity about which pin it
   serves. There is board room for it.
