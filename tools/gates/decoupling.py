@@ -2,7 +2,7 @@
 
 This gate exists because of a specific failure. /ISO_5V once carried U5's
 output, U1's VBUS2 pin and U6's input under one name, and the board satisfied
-C12 -- drawn on the sheet as U1's bypass -- at U6 instead, 26.46 mm from the pin
+C12 -- drawn on the sheet as U1's bypass -- at U6 instead, 26.21 mm from the pin
 it belonged to. The schematic pass fixed the netlist so that can no longer
 happen by accident. This gate covers what the netlist still cannot say: a
 capacitor on the correct net, placed too far from its own pin.
