@@ -318,7 +318,15 @@ If `build_board.py`'s helpers are not importable as written (it executes work at
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 -u tools/resync_board.py isolator.kicad_pcb /tmp/net.net
 ```
 
-Expected: 5 footprints added, 5 nets created, and pad reassignments on C8, C12, C14, C15, D1, D2, D6, J2, R7, R8, U3, U6.
+Expected: 5 footprints added, 5 nets created, and **18 pad reassignments**:
+
+- `/ISO_5V_VBUS2` ← U1.20, C12.1
+- `/ISO_5V_SW` ← U6.1, U6.3
+- `/ISO_5V_IND` ← R4.1, R5.1, R6.1
+- `/DCDC_RECT` ← D1.1, D2.1, C8.1
+- `/PORT_VBUS_J2` ← D6.1, J2.A4/A9/B4/B9, U3.5, R7.1, R8.1
+
+C14, C15, C9, C10, C11 and U5's pads are **not** reassigned — `/ISO_5V`, `/DCDC_RAW` and `/PORT_VBUS` each keep their name for the trunk side of their split, so only the branch that got a new name moves. The five net-tie pads are bound as the footprints are added rather than reassigned.
 
 - [ ] **Step 4: Verify parity**
 
