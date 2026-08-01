@@ -1,0 +1,97 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-26T01:39:17Z",
+  "pdfs": {
+    "sha256:d6eedaec07325ba9a5ee53cc3bc4125388c6814a597119246c7dec67a1507c16": {
+      "path": "adum4165-4166.pdf",
+      "mpns": [
+        "ADUM4165",
+        "ADUM4166"
+      ],
+      "source_url": null,
+      "is_family": null
+    },
+    "sha256:1abebce9005f9645b03f7b86f5aa92415b1df89e604865e77e20550deb6a7a21": {
+      "path": "eval-adum4165-4166-ug-2027.pdf",
+      "mpns": [
+        "EVAL-ADUM4165",
+        "EVAL-ADUM4166"
+      ],
+      "source_url": null,
+      "is_family": null
+    },
+    "sha256:4ebdca503ca18f8a7a5d787148fc9f488ccd0b1a75743714aa6920c75e9a4ead": {
+      "path": "USB2514B-AEZC.pdf",
+      "mpns": [
+        "USB2514B-AEZC"
+      ],
+      "source_url": "https://ww1.microchip.com/downloads/aemDocuments/documents/UNG/ProductDocuments/DataSheets/USB251xB-xBi-Data-Sheet-DS00001692.pdf",
+      "is_family": null
+    },
+    "sha256:dfc57cb042218cb698436970611710640cde6eebf54ae0dc2e53c74fadb2ef46": {
+      "path": "SN6505BDBVR.pdf",
+      "mpns": [
+        "SN6505BDBVR"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/sn6505b.pdf",
+      "is_family": null
+    },
+    "sha256:b2f5950f596dc2c4ca33e4ebac27fd35e4dcc68ea63e173466123e1118e91a06": {
+      "path": "TPS2121RUXR.pdf",
+      "mpns": [
+        "TPS2121RUXR"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps2121.pdf",
+      "is_family": null
+    },
+    "sha256:56c62cd42a9b37ef3b680ab08b4921c3ec8cc997760ee403287dc4c1971852db": {
+      "path": "TPS2553DBVR.pdf",
+      "mpns": [
+        "TPS2553DBVR"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps2553.pdf",
+      "is_family": null
+    },
+    "sha256:c96b52561a21d7dfcb2b244af668d8e13ef31fef4cab399238efa3d1dfef1cc6": {
+      "path": "TLV7041DBVR.pdf",
+      "mpns": [
+        "TLV7041DBVR"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tlv7041.pdf",
+      "is_family": null
+    },
+    "sha256:f95273dcb3aeb1e72efa282267dec3a6eeafb2fbb76245ba78320207d455d9ed": {
+      "path": "MIC29302WU.pdf",
+      "mpns": [
+        "MIC29302WU"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/598c5d278847c11015ce5ea3cdf964c4.pdf?productCode=C11149",
+      "is_family": null
+    },
+    "sha256:7941fb423af7c6c6c8979063a7e8819bb19217ece275efcce18948950a41d9f6": {
+      "path": "2N7002.pdf",
+      "mpns": [
+        "2N7002"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/a141b8bd86b14475955ac8c4d3eea0a8.pdf?productCode=C8545",
+      "is_family": null
+    },
+    "sha256:d609aa93061f360351000a6a34a84bfc591436903b7d8f6d8bc4439d904ebb93": {
+      "path": "NUP4202W1T2G.pdf",
+      "mpns": [
+        "NUP4202W1T2G"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/4e18cbca307ff3d4f60f25dcc6534ff0.pdf?productCode=C2937014",
+      "is_family": null
+    },
+    "sha256:78196a66e1796d28540d570eea902a60e6e881058b84b8cc3a562466f2618cc6": {
+      "path": "750313638.pdf",
+      "mpns": [
+        "750313638"
+      ],
+      "source_url": "https://www.we-online.com/components/products/datasheet/750313638.pdf",
+      "is_family": null
+    }
+  },
+  "extractions": {}
+}

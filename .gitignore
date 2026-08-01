@@ -7,7 +7,6 @@ fp-info-cache
 *.bak
 _autosave-*
 analysis/*/
-datasheets/
 *.rpt
 tools/*.jar
 tools/ar_work/
