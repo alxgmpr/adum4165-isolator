@@ -24,6 +24,10 @@ preserved. What changes is that every decoupling capacitor now sits at the
 pin it serves rather than on the right net somewhere, and the three net ties
 that replaced the shared rails get real positions.
 
+One ordering decision is deliberately overturned: place.py put C7 inboard of
+C6 at U4's VCC pin. The schematic says the opposite and so does SN6505B Sec
+10. C6 and C7 swap; see the note on them in the table below.
+
 PLACEMENT REASONING
 -------------------
 Star points first -- their positions are topology decisions, everything else
@@ -78,10 +82,21 @@ OFF_X, OFF_Y = 86.88, 76.70          # absolute = local + this
 
 # ref: (local_x, local_y, rotation_deg)
 PLACEMENT = {
-    # --- host side: the only two host parts this task may touch ---
-    # C6 as close to U4.2 as U4's and C7's courtyards permit. See the report:
-    # the ORDER rule (C6 inboard of C7) is not satisfiable with C7 frozen.
-    'C6':  (50.570,  8.500,    0),
+    # --- host side ---
+    # C6/C7 swap. C7 was originally frozen, but the ORDER rule "C6 inboard of
+    # C7 at U4.2" is unsatisfiable with C7 at 2.0625 mm: U4's and C7's
+    # courtyards leave a 0.080 mm gap on the only approach, and an exhaustive
+    # sweep puts C6's floor at 2.1943 mm even with courtyards touching exactly.
+    # Alex unfroze C7 (ruling recorded in task-4-report.md) on two grounds:
+    # the freeze existed to protect working routing and Task 3 ripped
+    # /VBUS_HOST entirely, so there is nothing to disturb; and the schematic
+    # already specifies this arrangement -- C6's Description reads "place
+    # immediately at U4 pin 2, inboard of C7", C7's reads "outboard of C6".
+    # C6 takes C7's old slot (2.069 mm); C7 lifts ~3.5 mm north (2.619 mm,
+    # inside its own 3.5 mm budget). This is the datasheet arrangement: the
+    # 0.1 uF ceramic at the VCC pin, the bulk behind it.
+    'C6':  (50.0525, 11.1034, -90),
+    'C7':  (50.0525,  7.6000,  90),
     # C17 (bulk at T1's centre tap) has exactly one home: the 2.27 mm slot
     # between C7's courtyard and T1's. It is 2.05 mm wide on its side, so the
     # rotation is forced and the x position is forced to within 0.11 mm.
@@ -143,6 +158,31 @@ def place(board):
     return missing
 
 
+def strip_vbus_host(board):
+    """Remove all /VBUS_HOST copper. Task 3 ripped that net and Task 5 routes
+    it from scratch, so the invariant at the end of this task is zero.
+
+    Moving C6 re-netted three items GND1 -> /VBUS_HOST: a stub from C6's OLD
+    ground pad at (138.7325, 88.5784) absolute down to a stitching via at
+    (138.7250, 89.4500), plus the jog between them. That was C6's pad-to-plane
+    ground drop; C6 is no longer there, so it connects nothing. It only reads
+    as /VBUS_HOST because C17's pad 1 now overlaps its endpoint and pcbnew
+    re-derived the net from the pad sitting on it. DRC called it an
+    unconnected item rather than a short, and GND1's plane still covers the
+    region, but it is an artifact rather than routing anyone designed --
+    leaving it would hand Task 5 a via of unknown provenance on the only
+    /VBUS_HOST copper on the board.
+    """
+    doomed = [t for t in board.GetTracks() if t.GetNetname() == '/VBUS_HOST']
+    for t in doomed:
+        kind = 'via  ' if t.Type() == pcbnew.PCB_VIA_T else 'track'
+        p = t.GetPosition()
+        print('  removed %s on /VBUS_HOST at (%9.4f, %9.4f)'
+              % (kind, p.x / 1e6, p.y / 1e6))
+        board.Remove(t)
+    return len(doomed)
+
+
 def main():
     path = sys.argv[1]
     board = pcbnew.LoadBoard(path)
@@ -151,8 +191,10 @@ def main():
         print('  REF IN TABLE BUT NOT ON BOARD:', missing)
         sys.stdout.flush()
         os._exit(1)
+    n = strip_vbus_host(board)
     pcbnew.SaveBoard(path, board)
-    print('placed %d footprints' % len(PLACEMENT))
+    print('placed %d footprints, removed %d orphaned /VBUS_HOST items'
+          % (len(PLACEMENT), n))
     sys.stdout.flush()
     os._exit(0)
 
