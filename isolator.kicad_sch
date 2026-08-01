@@ -4998,7 +4998,7 @@
 		)
 		(uuid "db848d84-7255-4aa8-b88a-df439710896c")
 	)
-	(text "1. Board 50 mm wide (Hammond 1455C slot), 120 mm length (1455C1202), 4\n    layers, 90 Ω differential pairs.\n2. ALL COPPER PULLED BACK ≥1 mm (target 2 mm) FROM BOTH LONG EDGES, every\n    layer, full length. The extrusion's aluminium slots grip those edges;\n    edge copper lets the enclosure short GND1 to GND2.\n3. ESD arrays (U2, U3) within 5 mm of the connector pins they protect. Array\n    GND pin on its own via straight to plane, never daisy-chained. Pair\n    routed in-line through pins 1/3 → 6/4, no stubs.\n4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other\n    crossing. No copper bridges the barrier on any layer.\n5. ADuM4165 bypass caps within 10 mm total lead length.\n6. J1 and J2 end-launched, mating faces flush with the outer face of the\n    plastic end panels.\n7. Rectifier + LDO + TPS2553 zone measures 19.36 mm (20 mm budget). D1 and\n    D2 must be placed side by side, not in series; in series the zone\n    overruns by 3.36 mm.\n8. U1 (ADuM4165) pins 4, 7 (GND1) and 15, 16, 17 (GND2) are ground-only -- NOT\n    suitable for bypass capacitance (datasheet Table 12, p.12). C4/C5 bypass\n    returns to GND1 via pins 2/10 ONLY; VBUS2/VDD2 bypass returns to GND2 via\n    pins 11/19 ONLY -- never pins 4/7/15/16/17.\n9. VBUS_HOST's 4 caps serve 2 ICs -- see each cap's Description property\n    before placing. C6+C7 cluster at U4 pin 2 / T1 center-tap (C7 = SN6505B's\n    mandatory ≥4.7 µF VCC bypass, Table 5-1). C4 clusters at U1 pin 1\n    (ADuM4165 VBUS1 bypass, item 5's budget) -- NOT with C3. C3 is\n    J1-entrance bulk/inrush capacitance and stays near J1."
+	(text "1. Board 50 mm wide (Hammond 1455C slot), 120 mm length (1455C1202), 4\n    layers, 90 Ω differential pairs.\n2. ALL COPPER PULLED BACK ≥1 mm (target 2 mm) FROM BOTH LONG EDGES, every\n    layer, full length. The extrusion's aluminium slots grip those edges;\n    edge copper lets the enclosure short GND1 to GND2.\n3. ESD arrays (U2, U3) within 5 mm of the connector pins they protect. Array\n    GND pin on its own via straight to plane, never daisy-chained. Pair\n    routed in-line through pins 1/3 → 6/4, no stubs.\n4. Barrier: ≥8.3 mm creepage at U1, routed slot under T1, CY1 the only other\n    crossing. No copper bridges the barrier on any layer.\n5. ADuM4165 bypass caps within 10 mm total lead length: C4 at VBUS1 (pin 1),\n    C5 at VDD1 (pin 3), C12 at VBUS2 (pin 20), C13 at VDD2 (pin 18). All four\n    are named because pin names alone did not stop C12 landing at U6.\n6. J1 and J2 end-launched, mating faces flush with the outer face of the\n    plastic end panels.\n7. Rectifier + LDO + TPS2553 zone measures 19.36 mm (20 mm budget). D1 and\n    D2 must be placed side by side, not in series; in series the zone\n    overruns by 3.36 mm.\n8. U1 (ADuM4165) pins 4, 7 (GND1) and 15, 16, 17 (GND2) are ground-only -- NOT\n    suitable for bypass capacitance (datasheet Table 12, p.12). C4/C5 bypass\n    returns to GND1 via pins 2/10 ONLY; VBUS2/VDD2 bypass returns to GND2 via\n    pins 11/19 ONLY -- never pins 4/7/15/16/17.\n9. VBUS_HOST's 5 caps serve 3 pins -- see each cap's Description property\n    before placing. C6 alone at U4 pin 2, inboard of C7 (SN6505B's mandatory\n    >=4.7 uF VCC bypass, Table 5-1). C17 at T1's center-tap (SLLSEP9I Sec 11.1,\n    a separate requirement from the VCC bulk). C4 clusters at U1 pin 1 -- NOT\n    with C3. C3 is J1-entrance bulk/inrush capacitance and stays near J1.\n10. THREE NET TIES DEFINE THREE STAR POINTS. NT1 splits ISO_5V into ISO_5V\n    (U5 out, C10+C11), ISO_5V_VBUS2 (U1 pin 20, C12), ISO_5V_SW (U6 in, C16)\n    and ISO_5V_IND (R4/R5/R6). NT2 splits DCDC_RECT (D1/D2, C8) from DCDC_RAW\n    (U5 in, C9). NT3 splits PORT_VBUS (U6 out, C14+C15) from PORT_VBUS_J2 (J2,\n    D6, U3, R7/R8). A branch may be fed ONLY through its tie -- never bridge\n    two branches with copper anywhere else. The ties exist because these pins\n    shared a net name and the board satisfied the wrong ones."
 		(exclude_from_sim no)
 		(at 335.5 199.39 0)
 		(effects
@@ -5325,16 +5325,6 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 40.64) (xy 355.6 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d3e77e7-213e-4f06-84eb-50b7a0df7d6e")
-	)
-	(wire
-		(pts
 			(xy 78.74 35.56) (xy 88.9 35.56)
 		)
 		(stroke
@@ -5425,16 +5415,6 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 173.99) (xy 340.36 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34369232-3e4e-4a8d-890a-af4c4a6a91ba")
-	)
-	(wire
-		(pts
 			(xy 193.04 139.7) (xy 190.5 139.7)
 		)
 		(stroke
@@ -5482,16 +5462,6 @@
 			(type default)
 		)
 		(uuid "3bde8a49-5dad-474a-b672-523e7274f808")
-	)
-	(wire
-		(pts
-			(xy 325.12 173.99) (xy 325.12 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ca1f678-6665-458f-9075-9963b4c31641")
 	)
 	(wire
 		(pts
@@ -5865,16 +5835,6 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 40.64) (xy 342.9 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "73f24453-131f-493b-855d-5779b4cdf112")
-	)
-	(wire
-		(pts
 			(xy 119.38 139.7) (xy 123.19 139.7)
 		)
 		(stroke
@@ -6055,16 +6015,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 138.43) (xy 231.14 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "98dd21d9-0100-4e71-9f0f-b1f2d3359c1d")
-	)
-	(wire
-		(pts
 			(xy 317.5 88.9) (xy 320.04 88.9)
 		)
 		(stroke
@@ -6092,16 +6042,6 @@
 			(type default)
 		)
 		(uuid "9f6c00a7-6165-442d-8df9-0fde66b4c1da")
-	)
-	(wire
-		(pts
-			(xy 292.1 138.43) (xy 292.1 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1e3c5c4-8286-44c8-b507-3e43cd3cba0e")
 	)
 	(wire
 		(pts
@@ -6425,16 +6365,6 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 138.43) (xy 283.21 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da5e0dbe-508a-4838-85da-65fc4ccdd8a4")
-	)
-	(wire
-		(pts
 			(xy 304.8 46.99) (xy 304.8 44.45)
 		)
 		(stroke
@@ -6625,16 +6555,6 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 138.43) (xy 222.25 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f60a863e-9120-45e4-aa90-f9aa751496a3")
-	)
-	(wire
-		(pts
 			(xy 231.14 133.35) (xy 231.14 130.81)
 		)
 		(stroke
@@ -6734,7 +6654,7 @@
 		(uuid "09945424-8331-487d-b44f-770c7ead1fe7")
 	)
 	(label "GND2"
-		(at 222.25 140.97 90)
+		(at 222.25 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6824,7 +6744,7 @@
 		(uuid "2a42b2de-a6fb-4b62-9648-ad83d6599883")
 	)
 	(label "GND2"
-		(at 231.14 140.97 90)
+		(at 231.14 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6864,7 +6784,7 @@
 		(uuid "3177fbf5-49bd-41ab-8a77-3db50834b8ac")
 	)
 	(label "GND2"
-		(at 355.6 43.18 90)
+		(at 355.6 46.99 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6944,7 +6864,7 @@
 		(uuid "3aa055b3-51e5-4a24-b1d9-af0275628e54")
 	)
 	(label "GND2"
-		(at 342.9 43.18 90)
+		(at 342.9 46.99 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7304,7 +7224,7 @@
 		(uuid "8cc28932-96cb-4d35-a54a-90692e50b90e")
 	)
 	(label "GND2"
-		(at 283.21 140.97 90)
+		(at 283.21 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7324,7 +7244,7 @@
 		(uuid "924d2a06-dadb-4943-8cf6-72a86b9132c8")
 	)
 	(label "GND2"
-		(at 340.36 176.53 90)
+		(at 340.36 180.34 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7594,7 +7514,7 @@
 		(uuid "cfefed28-90bf-4e62-8809-b0c16324a2ae")
 	)
 	(label "GND2"
-		(at 325.12 176.53 90)
+		(at 325.12 180.34 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7664,7 +7584,7 @@
 		(uuid "e815628e-5a48-47ca-a978-931b41f89769")
 	)
 	(label "GND2"
-		(at 292.1 140.97 90)
+		(at 292.1 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8000,7 +7920,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TLV76750 U5 output bulk on ISO_5V, 47uF. Layout: place close to U5 pins 1/2, outboard of C11."
 			(at 283.21 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -8009,6 +7929,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "TMK325ABJ476MM-P"
@@ -8284,7 +8205,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Rectifier reservoir on DCDC_RECT, 47uF. Layout: place at the D1/D2 cathodes, NOT at U5 -- the pulsed rectifier current is what this cap smooths. C9 is the LDO input cap; do not swap them."
 			(at 222.25 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -8293,6 +8214,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "TMK325ABJ476MM-P"
@@ -9072,7 +8994,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TLV76750 U5 output HF bypass on ISO_5V, 100n. Layout: place closer to U5 pins 1/2 than C10."
 			(at 292.1 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -9081,6 +9003,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -10668,7 +10591,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "24 MHz crystal load cap on XTALIN, 8p. Layout: place at Y1, minimising the Y1-to-U1 pin 5 trace."
 			(at 257.81 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -10677,6 +10600,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603CRNPO9BN8R0"
@@ -10805,7 +10729,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "ADuM4165 U1 VBUS2 bypass on ISO_5V_VBUS2, 100n (datasheet Rev. B, Table 12, pin 20). Layout: MUST sit within U1's 10 mm bypass-lead budget at U1 pin 20, returning to GND2 via pins 11/19 only. This cap was placed at U6 on the first board revision -- it does not belong there."
 			(at 342.9 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -10814,6 +10738,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -13551,7 +13476,7 @@
 				)
 			)
 		)
-		(property "Description" "SN6505B U4 VCC close-to-pin bypass, 0.1uF (datasheet Sec 10, Power Supply Recommendations). Layout: place immediately at U4 pin 2 / T1 center-tap, alongside C7."
+		(property "Description" "SN6505B U4 VCC close-to-pin bypass, 0.1uF (datasheet Sec 10, Power Supply Recommendations). Layout: place immediately at U4 pin 2, inboard of C7. C17 now covers the T1 centre-tap -- do not cluster C6 there."
 			(at 25.4 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -13560,6 +13485,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -14806,7 +14732,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "24 MHz crystal load cap on XTALOUT, 8p. Layout: place at Y1, minimising the Y1-to-U1 pin 6 trace."
 			(at 274.32 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -14815,6 +14741,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603CRNPO9BN8R0"
@@ -14943,7 +14870,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "ADuM4165 U1 VDD2 bypass on VDD2, 100n (datasheet Rev. B, Table 12, pin 18). Layout: within the 10 mm bypass-lead budget at U1 pin 18, returning to GND2 via pins 11/19 only."
 			(at 355.6 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -14952,6 +14879,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -15283,7 +15211,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TPS2553 U6 output bulk on PORT_VBUS, 22uF (SLVS841F Sec 12.1). Layout: place at U6 pin 6, outboard of C15 -- NOT down at J2."
 			(at 325.12 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -15292,6 +15220,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "GRM21BR61A226ME44L"
@@ -15575,7 +15504,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TPS2553 U6 output HF bypass on PORT_VBUS, 100n (SLVS841F Sec 12.1). Layout: place closer to U6 pin 6 than C14 -- NOT down at J2."
 			(at 340.36 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -15584,6 +15513,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -15712,7 +15642,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TLV76750 U5 input bypass on DCDC_RAW, 100n. Layout: place close to U5 pin 8 / GND. Reaches U5 only through NT2; do not feed it from the rectifier side."
 			(at 231.14 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -15721,6 +15651,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -16334,18 +16265,16 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-				)
-			)
+				) (hide yes))
 		)
 		(property "Value" "PWR_FLAG"
-			(at 73.66 251.46 0)
+			(at 76.2 246.3799 0.0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
-				)
-			)
+				) (justify left))
 		)
 		(property "Footprint" ""
 			(at 73.66 247.65 0)
@@ -16410,18 +16339,16 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-				)
-			)
+				) (hide yes))
 		)
 		(property "Value" "PWR_FLAG"
-			(at 88.9 251.46 0)
+			(at 91.44 246.3799 0.0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
-				)
-			)
+				) (justify left))
 		)
 		(property "Footprint" ""
 			(at 88.9 247.65 0)
@@ -16564,7 +16491,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "TPS2553 U6 input bypass on ISO_5V_SW, 100n (SLVS841F Sec 10.2.1.2.4, \"0.1uF or greater as close to the device as possible\"). Layout: place at U6 pins 1/3. Reaches the LDO only through NT1."
 			(at 317.5 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -16573,6 +16500,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
@@ -16655,18 +16583,8 @@
 		)
 		(uuid "114e07fa-542a-4003-97f7-6a6a46d4c5ee")
 	)
-	(wire
-		(pts
-			(xy 317.5 176.53) (xy 317.5 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "507912c6-a30b-472e-90c3-c87128eb56ad")
-	)
 	(label "GND2"
-		(at 317.5 179.07 90)
+		(at 317.5 182.88 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16731,7 +16649,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "SN6505B transformer centre-tap bulk on VBUS_HOST, 4.7uF (SLLSEP9I Sec 11.1, separate from the VCC bulk). Layout: place at T1 pin 2, NOT at U4 -- C7 is the VCC bulk."
 			(at 96.52 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -16740,6 +16658,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "GRM21BR71E475KA73L"
@@ -16902,7 +16821,97 @@
 			)
 		)
 	)
-  (sheet_instances
+	(wire
+		(pts
+			(xy 317.5 176.53) (xy 317.5 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "718708b8-0af2-4453-9da2-c6e366afdb3e")
+	)
+	(wire
+		(pts
+			(xy 325.12 173.99) (xy 325.12 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0f41aa2-9008-485e-8e0c-8ad965876d46")
+	)
+	(wire
+		(pts
+			(xy 340.36 173.99) (xy 340.36 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bbc8b75-b512-4288-bdae-ac85024e164c")
+	)
+	(wire
+		(pts
+			(xy 222.25 138.43) (xy 222.25 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1e720ef-2b87-479e-9713-d0f9703f90cd")
+	)
+	(wire
+		(pts
+			(xy 231.14 138.43) (xy 231.14 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "330419c9-d234-43a8-a4a8-feb311881c33")
+	)
+	(wire
+		(pts
+			(xy 283.21 138.43) (xy 283.21 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0a19e78-661d-4285-b42e-bf03d193d696")
+	)
+	(wire
+		(pts
+			(xy 292.1 138.43) (xy 292.1 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f267497-c6fe-4565-b8c5-ccffe62f2745")
+	)
+	(wire
+		(pts
+			(xy 342.9 40.64) (xy 342.9 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "932899e4-c297-435d-beb2-daca2e9610fa")
+	)
+	(wire
+		(pts
+			(xy 355.6 40.64) (xy 355.6 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f32c310f-65e4-4516-86b0-ebd03bc116d5")
+	)
+	(sheet_instances
 		(path "/"
 			(page "1")
 		)
