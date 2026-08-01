@@ -111,11 +111,34 @@ PLACEMENT = {
     # inside its own 3.5 mm budget). This is the datasheet arrangement: the
     # 0.1 uF ceramic at the VCC pin, the bulk behind it.
     'C6':  (50.0525, 11.1034, -90),
-    'C7':  (50.0525,  7.6000,  90),
+    # C7 and C17 were nudged in TASK 5 (ruling, 2026-08-01) to clear frozen
+    # /PP_A and /PP_B copper -- transformer primary drive that a courtyard
+    # check cannot see, because the conflict is track-to-PAD, not
+    # courtyard-to-courtyard. As placed by Task 4 both sat inside DRC
+    # clearance of a winding:
+    #     C7.1  y 84.750..85.750 vs /PP_B edges 85.7634..86.0634 -> 0.0134 mm
+    #     C17.1 y 88.050..89.050 vs /PP_A edges 87.6634..87.9634 -> 0.0866 mm
+    # against a 0.15 mm PWR clearance. C7 moves NORTH 0.20 mm (local y 7.600 ->
+    # 7.400) and C17 SOUTH 0.12 mm (local y 12.800 -> 12.920), giving 0.2134 and
+    # 0.2066 mm. Every gate row still holds: C7.1 -> U4.2 becomes 2.746 mm
+    # (budget 3.5) and stays outboard of C6 at 2.069 mm; C17.1 -> T1.2 becomes
+    # 3.567 mm (budget 4.0). Re-routing /PP_A or /PP_B was rejected as a far
+    # larger change than a 0.2 mm nudge.
+    # Courtyards, measured before and after with the same method: C7<->U4 and
+    # C17<->T1 are UNCHANGED at 0.1800 and 0.2110 mm -- both gaps are pure dx
+    # and the lift does not alter the x overlap. C6<->C7 relaxes 0.3334 ->
+    # 0.5334 mm. Zero overlaps across all 1326 pairs, before and after.
+    # (Those two numbers read 0.080 and 0.111 mm in task-4-report.md. The
+    # constant 0.100 mm offset is the F.CrtYd line width, 0.05 mm per side,
+    # which GetCourtyard() includes in the polygon; the two reports are
+    # measuring the same geometry different ways, and neither shows an
+    # overlap.)
+    'C7':  (50.0525,  7.4000,  90),
     # C17 (bulk at T1's centre tap) has exactly one home: the 2.27 mm slot
     # between C7's courtyard and T1's. It is 2.05 mm wide on its side, so the
-    # rotation is forced and the x position is forced to within 0.11 mm.
-    'C17': (52.214, 12.800,  -90),
+    # rotation is forced and the x position is forced to within 0.11 mm. Only
+    # y moved in Task 5; the x constraint above is untouched.
+    'C17': (52.214, 12.920,  -90),
 
     # --- zone 4: rectifier -> reservoir -> LDO (isolated, northern strip) ---
     'D1':  (71.320,  7.400,  180),   # side by side with D2 -- NOT in series

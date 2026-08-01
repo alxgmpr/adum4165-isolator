@@ -80,14 +80,19 @@ Geometry that drove the waypoints
         and D- runs. The via column moved from x 103.2217 to 103.150: at the
         old x a 0.7 mm PWR via clears the D- diagonal by 0.150 mm, which is the
         limit and not a margin.
-      * C7 moved north in Task 4 and is now fenced off from the U4->T1 corridor
-        by the /PP_B winding (y 85.7634..86.0634, x 134.87..142.17) with only
-        0.0134 mm between /PP_B and C7's own pad. No F.Cu crossing exists
-        anywhere along that winding, so C7 is fed by a 1.76 mm B.Cu hop.
+      * C7 moved north in Task 4 and is fenced off from the U4->T1 corridor by
+        the /PP_B winding (y 85.7634..86.0634, x 134.87..142.17). No F.Cu
+        crossing exists anywhere along that winding, so C7 is fed by a 1.81 mm
+        B.Cu hop.
       * C17 is new and is fenced the same way by /PP_A (y 87.6634..87.9634) to
         its north, T1.3 to its east and C17's own GND1 pad to its south. Also
-        a B.Cu hop, 1.69 mm. It runs at x 138.050, not 137.900: a 0.7 mm PWR
+        a B.Cu hop, 1.81 mm. It runs at x 138.050, not 137.900: a 0.7 mm PWR
         via at 137.900 clears C6's GND1 pad by 0.1425 mm, under the limit.
+    C7 and C17 were also nudged 0.20 mm north and 0.12 mm south respectively in
+    this task -- as Task 4 placed them, both pads sat inside DRC clearance of
+    the winding that fences them (0.0134 and 0.0866 mm against 0.15). The
+    ruling and the numbers are recorded in tools/place_iso.py; the fencing that
+    forces the B.Cu hops is unchanged by the nudge.
 
 --------------------------------------------------------------------------
 Orphaned teardrops
@@ -355,10 +360,10 @@ ROUTES = [
     #      U4.2 -> C6.1 -> T1.2 down the lane between the /PP_B and /PP_A windings
     ('/VBUS_HOST', 'F', [(134.8700, 86.8634), (142.1700, 86.8634)], P),
     #      C7 is fenced north of /PP_B, C17 south of /PP_A: both hop on B.Cu
-    ('/VBUS_HOST', 'B', [(135.900, 86.8634), (135.850, 85.100)], P),
-    ('/VBUS_HOST', 'F', [(135.850, 85.100), (136.9325, 85.100), (136.9325, 85.250)], P),
-    ('/VBUS_HOST', 'B', [(138.050, 86.8634), (138.050, 88.550)], P),
-    ('/VBUS_HOST', 'F', [(138.050, 88.550), (139.0940, 88.550)], P),
+    ('/VBUS_HOST', 'B', [(135.850, 86.8634), (135.850, 85.050)], P),
+    ('/VBUS_HOST', 'F', [(135.850, 85.050), (136.9325, 85.050)], P),
+    ('/VBUS_HOST', 'B', [(138.050, 86.8634), (138.050, 88.670)], P),
+    ('/VBUS_HOST', 'F', [(138.050, 88.670), (139.0940, 88.670)], P),
 ]
 
 # (x, y, net, diameter, drill) -- none of these sits on a net-tie pad.
@@ -372,10 +377,10 @@ VIAS = [
     (103.1500, 103.6500, '/VBUS_HOST', VIA_PWR, DRL_PWR),
     (103.1500, 101.7000, '/VBUS_HOST', VIA_PWR, DRL_PWR),
     (103.1500, 99.5784, '/VBUS_HOST', VIA_PWR, DRL_PWR),
-    (135.900, 86.8634, '/VBUS_HOST', VIA_PWR, DRL_PWR),
-    (135.850, 85.100, '/VBUS_HOST', VIA_PWR, DRL_PWR),
+    (135.850, 86.8634, '/VBUS_HOST', VIA_PWR, DRL_PWR),
+    (135.850, 85.050, '/VBUS_HOST', VIA_PWR, DRL_PWR),
     (138.050, 86.8634, '/VBUS_HOST', VIA_PWR, DRL_PWR),
-    (138.050, 88.550, '/VBUS_HOST', VIA_PWR, DRL_PWR),
+    (138.050, 88.670, '/VBUS_HOST', VIA_PWR, DRL_PWR),
 ]
 
 # guards, checked rather than trusted
