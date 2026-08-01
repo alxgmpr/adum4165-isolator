@@ -14,7 +14,9 @@ from collections import Counter
 
 BARRIER_W, BARRIER_E = 142.72, 151.03      # absolute mm
 ALWAYS_RIP = {'/VBUS_HOST'}
-NEVER_RIP = {'/HOST_D+', '/HOST_D-'}       # host-side, Gate 3 already passes
+NEVER_RIP = {'/HOST_D+', '/HOST_D-'}       # host-side; frozen by the plan, not
+                                            # by being correct -- Gate 3 reports
+                                            # ~2.9 mm skew on this pair and always has
 
 b = pcbnew.LoadBoard(sys.argv[1])
 doomed, straddling = [], []
@@ -24,6 +26,13 @@ for t in b.GetTracks():
     if net in NEVER_RIP:
         continue
     xs = [t.GetStart().x / 1e6, t.GetEnd().x / 1e6]
+    # Full-span detector, not an any-intrusion one: this only catches a track
+    # that crosses the *entire* keepout (one endpoint west of BARRIER_W and
+    # the other east of BARRIER_E). A track with one endpoint inside the
+    # keepout and the other short of the far edge is neither ripped nor
+    # flagged. Not tightened deliberately -- U1/T1/CY1 have pads legitimately
+    # inside the keepout span, and a naive "any endpoint inside" check would
+    # false-positive on them.
     if min(xs) < BARRIER_W and max(xs) > BARRIER_E:
         straddling.append((net, xs))
         continue
