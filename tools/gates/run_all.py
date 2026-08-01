@@ -19,6 +19,7 @@ steps = [
     ('Gate 1 barrier',    [KIPY, os.path.join(HERE, 'barrier.py'), BOARD, PRO, NET]),
     ('Gate 2 edge',       [KIPY, os.path.join(HERE, 'edge_pullback.py'), BOARD]),
     ('Gate 3 diff pairs', [KIPY, os.path.join(HERE, 'diffpair.py'), BOARD]),
+    ('Gate 5 decoupling', [KIPY, os.path.join(HERE, 'decoupling.py'), BOARD]),
     ('DRC + parity',      [KCLI, 'pcb', 'drc', BOARD, '-o', '/tmp/drc.rpt',
                            '--severity-error', '--schematic-parity',
                            '--refill-zones', '--exit-code-violations']),
