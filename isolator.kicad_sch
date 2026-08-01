@@ -8332,7 +8332,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "ADuM4165 U1 VDD1 bypass on VDD1, 100n (datasheet Rev. B, Table 12, pin 3 -- required for correct operation of the internal 3.3 V regulator). Layout: within U1's 10 mm bypass-lead budget at U1 pin 3, returning to GND1 via pins 2/10 ONLY -- never pins 4/7/15/16/17."
 			(at 209.55 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -8340,8 +8340,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-				)
-			)
+				) (hide yes))
 		)
 		(property "MPN" "CC0603KRX7R9BB104"
 			(at 209.55 43.18 0)
