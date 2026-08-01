@@ -70,24 +70,33 @@ single-digit milliamps and its length is deliberately not optimised.
 ## The ownership budget
 
 This table is the specification of `tools/gates/decoupling.py`. Distances are
-pad-centre to pad-centre, in millimetres.
+pad-centre to pad-centre, in millimetres, as `pcbnew` reports them — an earlier
+draft carried hand-parsed figures that were off by up to 0.9 mm, and the gate's
+numbers supersede them.
+
+**C8 is measured to the *farther* of the two diode cathodes, not the nearer.**
+D1.1 and D2.1 sit 6.21 mm apart and both feed the reservoir, so a "nearest
+wins" rule would let C8 hug one diode while sitting 5.6 mm from the other and
+still report compliant. The farther-of rule is what actually expresses
+"reservoir at the cathode junction". D1 and D2 are both free parts, so the
+placement task can also close that 6.21 mm gap rather than only moving C8.
 
 | Cap | Owns | Budget | Current | Note |
 |---|---|---|---|---|
-| C12 | U1.20 VBUS2 | ≤ 3.0 | **26.46** | ADuM4165 Rev. B, 10 mm lead budget |
+| C12 | U1.20 VBUS2 | ≤ 3.0 | **26.21** | ADuM4165 Rev. B, 10 mm lead budget |
 | C13 | U1.18 VDD2 | ≤ 3.0 | 2.45 | already compliant |
 | C16 | U6.1 IN | ≤ 3.0 | *new* | SLVS841F §10.2.1.2.4 |
-| C15 | U6.6 OUT | ≤ 3.0 | **12.49** | SLVS841F §12.1 |
-| C14 | U6.6 OUT | ≤ 6.0 | **10.87** | must be **outboard** of C15 |
+| C15 | U6.6 OUT | ≤ 3.0 | **11.93** | SLVS841F §12.1 |
+| C14 | U6.6 OUT | ≤ 6.0 | **10.04** | must be **outboard** of C15 |
 | C11 | U5.1 OUT | ≤ 3.0 | 2.18 | |
-| C10 | U5.1 OUT | ≤ 4.0 | 2.37 | must be **outboard** of C11 |
-| C9 | U5.8 IN | ≤ 3.5 | 3.18 | |
-| C8 | nearer of D1.1 / D2.1 | ≤ 4.0 | **8.08** | reservoir at the rectifier |
-| C6 | U4.2 VCC | ≤ 2.5 | 4.23 | must be **inboard** of C7 |
-| C7 | U4.2 VCC | ≤ 3.5 | 2.80 | |
+| C10 | U5.1 OUT | ≤ 4.0 | 2.55 | must be **outboard** of C11 |
+| C9 | U5.8 IN | ≤ 3.5 | 3.48 | |
+| C8 | **farther** of D1.1 / D2.1 | ≤ 4.5 | **5.62** | reservoir at the cathode junction |
+| C6 | U4.2 VCC | ≤ 2.5 | 3.87 | must be **inboard** of C7 |
+| C7 | U4.2 VCC | ≤ 3.5 | 2.06 | |
 | C17 | T1.2 centre tap | ≤ 4.0 | *new* | SLLSEP9I §11.1 |
-| C4 | U1.1 VBUS1 | ≤ 3.5 | 3.11 | host side, unchanged |
-| C5 | U1.3 VDD1 | ≤ 4.0 | 3.72 | host side, unchanged |
+| C4 | U1.1 VBUS1 | ≤ 3.5 | 2.40 | host side, unchanged |
+| C5 | U1.3 VDD1 | ≤ 4.0 | 3.06 | host side, unchanged |
 
 The gate asserts the distances **and** the three ordering rules (C10 outboard
 of C11, C14 outboard of C15, C6 inboard of C7).

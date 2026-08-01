@@ -65,7 +65,7 @@ Create `tools/gates/decoupling.py`:
 
 This gate exists because of a specific failure. /ISO_5V once carried U5's
 output, U1's VBUS2 pin and U6's input under one name, and the board satisfied
-C12 -- drawn on the sheet as U1's bypass -- at U6 instead, 26.46 mm from the pin
+C12 -- drawn on the sheet as U1's bypass -- at U6 instead, 26.21 mm from the pin
 it belonged to. The schematic pass fixed the netlist so that can no longer
 happen by accident. This gate covers what the netlist still cannot say: a
 capacitor on the correct net, placed too far from its own pin.
@@ -78,7 +78,8 @@ Usage: <kicad python3> decoupling.py <board.kicad_pcb>
 """
 import sys, os, math, pcbnew
 
-# (cap, [owner pins, nearest wins], budget mm)
+# (cap, [owner pins], budget mm). Nearest owner pin wins unless the cap is
+# listed in FARTHEST below.
 OWNS = [
     ('C12', [('U1', '20')], 3.0),
     ('C13', [('U1', '18')], 3.0),
@@ -88,13 +89,20 @@ OWNS = [
     ('C11', [('U5', '1')],  3.0),
     ('C10', [('U5', '1')],  4.0),
     ('C9',  [('U5', '8')],  3.5),
-    ('C8',  [('D1', '1'), ('D2', '1')], 4.0),
+    ('C8',  [('D1', '1'), ('D2', '1')], 4.5),   # FARTHER of the two -- see FARTHEST
     ('C6',  [('U4', '2')],  2.5),
     ('C7',  [('U4', '2')],  3.5),
     ('C17', [('T1', '2')],  4.0),
     ('C4',  [('U1', '1')],  3.5),
     ('C5',  [('U1', '3')],  4.0),
 ]
+
+# Caps measured to the FARTHER of their owner pins rather than the nearest.
+# C8 is the full-wave rectifier reservoir: D1.1 and D2.1 both feed it and sit
+# 6.21 mm apart, so "nearest wins" would let C8 hug one diode while sitting
+# 5.6 mm from the other and still report compliant. Farther-of is what actually
+# expresses "reservoir at the cathode junction".
+FARTHEST = {'C8'}
 
 # (inner, outer, shared owner pin) -- inner must be strictly nearer than outer.
 # C6 inboard of C7 follows SN6505B Sec 10 ("0.1 uF as close as possible to the
@@ -128,7 +136,9 @@ def nearest(board, cap, owners):
         if t is None:
             continue
         d = math.hypot(c[0] - t[0], c[1] - t[1])
-        if best is None or d < best:
+        better = (best is None
+                  or (d > best if cap in FARTHEST else d < best))
+        if better:
             best, who = d, '%s.%s' % (ref, pin)
     return best, who
 
@@ -176,7 +186,7 @@ if __name__ == '__main__':
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 -u tools/gates/decoupling.py isolator.kicad_pcb; echo "exit=$?"
 ```
 
-Expected: `VERDICT: FAIL`, exit 1. Specifically — C16, C17 and the ordering rules that reference them report *footprint missing* (they exist only in the schematic so far); C12 reports ≈26.46 mm against a 3.0 budget; C15 ≈12.49 against 3.0; C14 ≈10.87 against 6.0; C8 ≈8.08 against 4.0; C6 ≈4.23 against 2.5; and the C6/C7 ordering rule fails because C7 is currently nearer. C13, C11, C10, C9, C7, C4 and C5 should already read `ok`. Record the actual output — later tasks are measured against it.
+Expected: `VERDICT: FAIL`, exit 1. Specifically — C16, C17 and the ordering rules that reference them report *footprint missing* (they exist only in the schematic so far); C12 reports ≈26.21 mm against a 3.0 budget; C15 ≈11.93 against 3.0; C14 ≈10.04 against 6.0; C8 ≈5.62 (to D1.1, the farther cathode) against 4.5; C6 ≈3.87 against 2.5; and the C6/C7 ordering rule fails because C7 is currently nearer. C13, C11, C10, C9, C7, C4 and C5 should already read `ok`. Record the actual output — later tasks are measured against it.
 
 - [ ] **Step 3: Register the gate in run_all.py**
 
