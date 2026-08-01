@@ -15,7 +15,8 @@ Usage: <kicad python3> decoupling.py <board.kicad_pcb>
 """
 import sys, os, math, pcbnew
 
-# (cap, [owner pins, nearest wins], budget mm)
+# (cap, [owner pins], budget mm). Nearest owner pin wins unless the cap is
+# listed in FARTHEST below.
 OWNS = [
     ('C12', [('U1', '20')], 3.0),
     ('C13', [('U1', '18')], 3.0),
@@ -25,13 +26,20 @@ OWNS = [
     ('C11', [('U5', '1')],  3.0),
     ('C10', [('U5', '1')],  4.0),
     ('C9',  [('U5', '8')],  3.5),
-    ('C8',  [('D1', '1'), ('D2', '1')], 4.0),
+    ('C8',  [('D1', '1'), ('D2', '1')], 4.5),   # FARTHER of the two -- see FARTHEST
     ('C6',  [('U4', '2')],  2.5),
     ('C7',  [('U4', '2')],  3.5),
     ('C17', [('T1', '2')],  4.0),
     ('C4',  [('U1', '1')],  3.5),
     ('C5',  [('U1', '3')],  4.0),
 ]
+
+# Caps measured to the FARTHER of their owner pins rather than the nearest.
+# C8 is the full-wave rectifier reservoir: D1.1 and D2.1 both feed it and sit
+# 6.21 mm apart, so "nearest wins" would let C8 hug one diode while sitting
+# 5.6 mm from the other and still report compliant. Farther-of is what actually
+# expresses "reservoir at the cathode junction".
+FARTHEST = {'C8'}
 
 # (inner, outer, shared owner pin) -- inner must be strictly nearer than outer.
 # C6 inboard of C7 follows SN6505B Sec 10 ("0.1 uF as close as possible to the
@@ -65,7 +73,9 @@ def nearest(board, cap, owners):
         if t is None:
             continue
         d = math.hypot(c[0] - t[0], c[1] - t[1])
-        if best is None or d < best:
+        better = (best is None
+                  or (d > best if cap in FARTHEST else d < best))
+        if better:
             best, who = d, '%s.%s' % (ref, pin)
     return best, who
 
