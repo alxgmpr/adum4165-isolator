@@ -236,6 +236,13 @@ def strip_stranded_pours(board):
 
     The four GND1/GND2 plane zones on GND_SPLIT_A/B and both /RECT_A pours are
     healthy and are left alone.
+
+    Caveat on the safety guard below, considered and accepted: it tests whether
+    a pad's CENTRE falls inside the outline, so a pad whose centre sits outside
+    but whose copper still clips the edge would not trip it. That is fine for
+    the two zones named here -- neither has any pad of its own net within
+    millimetres -- but if this function is ever pointed at a pour that hugs its
+    pads, tighten the test to pad-shape collision first.
     """
     removed = 0
     for net, (bx0, bx1, by0, by1) in STRANDED_POURS:
