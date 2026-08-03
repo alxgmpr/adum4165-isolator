@@ -53,7 +53,7 @@
           "45_degree_only": false,
           "border_display_style": 2,
           "border_hatch_pitch": 0.5,
-          "corner_radius": 1.0,
+          "corner_radius": 0.25,
           "corner_smoothing": 2,
           "fill_mode": 0,
           "hatch_gap": 1.5,
@@ -64,7 +64,7 @@
           "min_clearance": 0.0,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -77,16 +77,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "via_dangling|107700000|101300000|7b5182d6-4a4c-4694-aa8b-1484a0c21a46|00000000-0000-0000-0000-000000000000",
-          "impedence matching stub"
-        ],
-        [
-          "via_dangling|108500000|102100000|5eb2b574-ce34-4cc9-bd49-f6315a4109df|00000000-0000-0000-0000-000000000000",
-          "impedence matching stub"
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -888,7 +879,7 @@
         "uuid": "00000000-0000-0000-0000-000000000001"
       }
     ],
-    "used_designators": "H1-4,FID1-4,Y1,U1-3,C1-2,C50,#PWR1-6,#PWR16-20,#PWR40",
+    "used_designators": "R9-10,H1-4,FID1-4,Y1,U1-3,D5,C1-4,C7-8,C13,C17-18,C50,#PWR1-6,#PWR9,#PWR12,#PWR14,#PWR16-30,#PWR40",
     "variants": []
   },
   "sheets": [
