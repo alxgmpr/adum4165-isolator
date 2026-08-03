@@ -14877,7 +14877,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 71.12 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -14899,18 +14899,7 @@
 				)
 			)
 		)
-		(property "Description" "SN6505B U4 VCC close-to-pin bypass, 0.1uF (datasheet Sec 10, Power Supply Recommendations). Layout: place immediately at U4 pin 2, inboard of C7. C17 now covers the T1 centre-tap -- do not cluster C6 there."
-			(at 71.12 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CC0603KRX7R9BB104"
+		(property "Description" "SN6505B U4 VCC close-to-pin bypass, 0.1uF (datasheet Sec 10 Power Supply Recommendations; Sec 9.2.2.4 puts the device bypass at 10-100 nF, so 100n is the top of the range -- do not grow the value with the package). 0805 rather than 0603: the wider 0.900 mm inter-pad channel clears PP_A/PP_B beneath the part, where 0603 gives only 0.650 mm against the 0.85 mm two HOST_SIDE traces need. Layout: place immediately at U4 pin 2, inboard of C7. C17 now covers the T1 centre-tap -- do not cluster C6 there."
 			(at 71.12 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -14932,7 +14921,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14663"
+		(property "LCSC" "C49678"
 			(at 71.12 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -14971,7 +14960,11 @@
 		(pin "2"
 			(uuid "11d1a464-7a3d-46c0-be01-9c4e49b1ffb4")
 		)
-		(instances
+        (property "MPN" "CC0805KRX7R9BB104"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (instances
 			(project "isolator"
 				(path "/00000000-0000-0000-0000-000000000001"
 					(reference "C6")

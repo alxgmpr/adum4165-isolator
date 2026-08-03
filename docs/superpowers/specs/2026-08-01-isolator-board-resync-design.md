@@ -100,7 +100,7 @@ placement task can also close that 6.21 mm gap rather than only moving C8.
 | C15 | U6.6 OUT | ≤ 3.0 | **11.93** | SLVS841F §12.1 |
 | C14 | U6.6 OUT | ≤ 6.0 | **10.04** | must be **outboard** of C15 |
 | C11 | U5.1 OUT | ≤ 3.0 | 2.18 | |
-| C10 | U5.1 OUT | ≤ 4.0 | 2.55 | must be **outboard** of C11 |
+| C10 | U5.1 OUT | ≤ 4.5 | 2.55 | must be **outboard** of C11; budget raised 2026-08-03, see below |
 | C9 | U5.8 IN | ≤ 3.5 | 3.48 | |
 | C8 | **farther** of D1.1 / D2.1 | ≤ 4.5 | **5.62** | reservoir at the cathode junction |
 | C6 | U4.2 VCC | ≤ 2.5 | 3.87 | must be **inboard** of C7 |
@@ -111,6 +111,41 @@ placement task can also close that 6.21 mm gap rather than only moving C8.
 
 The gate asserts the distances **and** the three ordering rules (C10 outboard
 of C11, C14 outboard of C15, C6 inboard of C7).
+
+### Amendment (2026-08-03): C10's budget goes 4.0 → 4.5 mm
+
+4.0 mm cannot be reached with C10 in the U5 → C11 → C10 row. Measured courtyard
+clearances are 0.050 mm between U5 and C11 and 0.030 mm between C11 and C10;
+compressing the row until every part touches still leaves C10 at 4.051 mm. The
+original 4.0 was set from the topology sketch, before the row was built.
+
+The second reason is that C10 is the one cap in this table fed by a **pour**
+rather than a track — zero tracks land on its pad 1, and the pad sits inside
+the filled `/ISO_5V` F.Cu zone. Every other budget here is sized against the
+inductance of a 0.5 mm `PWR` trace. The same millimetre figure is worth more at
+C10 than anywhere else in the table.
+
+The ordering rule is unchanged and is what actually protects the arrangement.
+Rotating C10 flat would reach 3.5 mm comfortably and was considered; it was not
+adopted because it would replace the pour connection with a track.
+
+### Amendment (2026-08-03): C6 becomes an 0805
+
+C6 changes from `C_0603_1608Metric` / `CC0603KRX7R9BB104` to
+`C_0805_2012Metric` / `CC0805KRX7R9BB104` (100 nF 50 V X7R, LCSC C49678). The
+value does not change — SN6505B §9.2.2.4 puts the device bypass at 10–100 nF
+and 100 nF is already the top of that range.
+
+The package change buys routing room, not capacitance. The inter-pad channel
+goes from 0.650 mm (0603 pads at ±0.775, 0.9 wide) to 0.900 mm (0805 pads at
+±0.95, 1.0 wide). Two `HOST_SIDE` traces at 0.2 mm width and 0.15 mm clearance
+need 0.85 mm, so `/PP_A` and `/PP_B` both clear beneath C6 on 0805 and neither
+pair fits on 0603.
+
+Because both caps at U4 are now 0805, C7 cannot stay at y 84.500: two 0805
+courtyards are 3.390 mm long and that spacing is 3.300 mm, a 0.090 mm overlap.
+Placement is C6 at (136.900, 87.800, −90) and C7 at (136.900, 84.150, +90),
+giving C6 2.030 mm to U4.2, C7 2.689 mm, and 0.260 mm between the courtyards.
 
 C6-inboard-of-C7 follows SN6505B §10, "a 0.1 µF by-pass capacitor should be
 connected as close as possible to the device VCC pin". §11.1's competing

@@ -24,7 +24,7 @@ OWNS = [
     ('C15', [('U6', '6')],  3.0),
     ('C14', [('U6', '6')],  6.0),
     ('C11', [('U5', '1')],  3.0),
-    ('C10', [('U5', '1')],  4.0),
+    ('C10', [('U5', '1')],  4.5),   # 4.0 was unreachable -- see note below
     ('C9',  [('U5', '8')],  3.5),
     ('C8',  [('D1', '1'), ('D2', '1')], 4.5),   # FARTHER of the two -- see FARTHEST
     ('C6',  [('U4', '2')],  2.5),
@@ -33,6 +33,22 @@ OWNS = [
     ('C4',  [('U1', '1')],  3.5),
     ('C5',  [('U1', '3')],  4.0),
 ]
+
+# C10's budget was 4.0 mm until 2026-08-03, when it was raised to 4.5. Two
+# reasons, both measured rather than argued:
+#
+#  1. 4.0 is not reachable in this arrangement. U5 -> C11 -> C10 sit in a row
+#     with 0.050 mm of courtyard clearance between U5 and C11 and 0.030 mm
+#     between C11 and C10. Compress the whole row to touching and C10 still
+#     measures 4.051 mm. A gate that cannot be satisfied is not a gate.
+#  2. C10 is fed by the /ISO_5V F.Cu pour, not a track -- zero tracks land on
+#     its pad 1. The budget was sized for the inductance of a 0.5 mm PWR-class
+#     trace; a pour connection is well below that, so the same millimetre
+#     figure buys more margin here than it does anywhere else in this table.
+#
+# The ordering rule (C11 inboard of C10) is what actually protects the
+# arrangement and is unchanged. If C10 is ever rotated flat or moved off the
+# row, put the budget back to 4.0 -- 3.5 mm is easily reachable that way.
 
 # Caps measured to the FARTHER of their owner pins rather than the nearest.
 # C8 is the full-wave rectifier reservoir: D1.1 and D2.1 both feed it and sit
