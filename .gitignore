@@ -11,6 +11,16 @@ analysis/*/
 # the MPNs in isolator-bom.csv. The extracted/*-pins.md notes ARE tracked.
 datasheets/*.pdf
 datasheets/manifest.json
+# Vendor CAD downloads stay local. The SnapEDA/SnapMagic license (see
+# lib/*/License.txt) grants the right to distribute boards built with these
+# models but not to redistribute the models themselves, and this repo is
+# public. Re-fetch per MPN from snapeda.com (or the manufacturer) as needed:
+#   lib/750313638      -- Wurth WE-PPTI transformer, 3D model for T1
+#   lib/TLV76750DGNR   -- TI LDO
+#   lib/*250-1123*     -- enclosure
+# Land patterns actually used by the board live in isolator-lib.pretty and
+# ARE tracked; only the upstream vendor packages are ignored.
+lib/
 *.rpt
 tools/*.jar
 tools/ar_work/
