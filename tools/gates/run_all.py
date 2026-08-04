@@ -14,8 +14,10 @@ subprocess.run([KCLI, 'sch', 'export', 'netlist', SCH, '-o', NET], check=True,
                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 steps = [
+    # decoupling_nets.py is retired: it asserted the eight net-tie branch nets,
+    # and the net-tie split was abandoned on 2026-08-04. Board and schematic agree
+    # without it and schematic-parity is clean. Kept on disk for history; not run.
     ('netclass coverage', ['python3', os.path.join(HERE, 'netclass_coverage.py'), PRO, NET]),
-    ('decoupling nets',   ['python3', os.path.join(HERE, 'decoupling_nets.py'), NET]),
     ('Gate 1 barrier',    [KIPY, os.path.join(HERE, 'barrier.py'), BOARD, PRO, NET]),
     ('Gate 2 edge',       [KIPY, os.path.join(HERE, 'edge_pullback.py'), BOARD]),
     ('Gate 3 diff pairs', [KIPY, os.path.join(HERE, 'diffpair.py'), BOARD]),

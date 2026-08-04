@@ -35,3 +35,14 @@
 (rule "connector-neckdown"
   (condition "A.insideCourtyard('J1') || B.insideCourtyard('J1') || A.insideCourtyard('J2') || B.insideCourtyard('J2')")
   (constraint clearance (min 0.127mm)))
+
+# Both 90 ohm pairs reference GND_SPLIT_A through 0.2104 mm of prepreg, so the
+# outer-layer ground pour is not what gives them their return path -- it only adds
+# coplanar coupling, which pulls Zdiff down. tools/gates/diffpair.py cannot see
+# that: it computes Zdiff from w/s/h/Er alone, so the number it prints would go on
+# reading 96.28 ohm while the board no longer measured it. Holding the pour off by
+# 0.65 mm -- ~3x the dielectric height -- keeps the coplanar term in the noise and
+# keeps the gate honest. Raise the pour clearance, never lower this.
+(rule "diffpair-pour-gap"
+  (condition "(A.Type == 'Zone' && B.hasNetclass('USB_DIFF90')) || (B.Type == 'Zone' && A.hasNetclass('USB_DIFF90'))")
+  (constraint clearance (min 0.65mm)))
