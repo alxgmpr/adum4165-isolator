@@ -19,12 +19,10 @@ REQUIRED_MM = 8.3
 
 
 def _domain_map(pro_path, netlist_path):
-    pro = json.load(open(pro_path))
-    pats = [(p['netclass'], p['pattern']) for p in pro['net_settings']['netclass_patterns']
-            if p['netclass'] in ('HOST_SIDE', 'ISO_SIDE')]
+    pats, assigns = NC.load_rules(pro_path)
     out = {}
     for net in NC.nets_from_netlist(netlist_path):
-        hits = {c for c, p in pats if fnmatch.fnmatch(net, p)}
+        hits = NC.classes_for(net, pats, assigns, restrict=('HOST_SIDE', 'ISO_SIDE'))
         if len(hits) == 1:
             out[net] = hits.pop()
     return out

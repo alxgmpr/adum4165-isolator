@@ -18,27 +18,44 @@ def nets_from_netlist(path):
     return sorted(set(re.findall(r'\(name "([^"]*)"\)', blk)))
 
 
-def classes_for(net, patterns):
-    return {c for c, p in patterns if fnmatch.fnmatch(net, p)}
+def load_rules(pro_path):
+    """Both mechanisms KiCad resolves a net's classes from.
+
+    netclass_patterns are glob-matched; netclass_assignments are explicit
+    per-net entries written by Board Setup. Reading only patterns reports a net
+    as unclassified while KiCad's DRC engine sees it classed -- the mirror image
+    of the silent hole this gate exists to close, and just as misleading.
+    """
+    ns = json.load(open(pro_path))['net_settings']
+    pats = [(p['netclass'], p['pattern']) for p in ns.get('netclass_patterns') or []]
+    assigns = {n: list(cs) for n, cs in (ns.get('netclass_assignments') or {}).items()}
+    return pats, assigns
+
+
+def classes_for(net, patterns, assignments=None, restrict=None):
+    hits = {c for c, p in patterns if fnmatch.fnmatch(net, p)}
+    if assignments:
+        hits |= set(assignments.get(net, ()))
+    if restrict is not None:
+        hits &= set(restrict)
+    return hits
 
 
 def check(pro_path, netlist_path):
-    pro = json.load(open(pro_path))
-    pats = [(p['netclass'], p['pattern']) for p in pro['net_settings']['netclass_patterns']]
-    side = [(c, p) for c, p in pats if c in ('HOST_SIDE', 'ISO_SIDE')]
-    diff = [(c, p) for c, p in pats if c == 'USB_DIFF90']
+    pats, assigns = load_rules(pro_path)
 
     unclassified, both = [], []
     for n in nets_from_netlist(netlist_path):
         if n.startswith(EXEMPT_PREFIX):
             continue
-        hits = classes_for(n, side)
+        hits = classes_for(n, pats, assigns, restrict=('HOST_SIDE', 'ISO_SIDE'))
         if not hits:
             unclassified.append(n)
         elif len(hits) > 1:
             both.append(n)
 
-    diffpair_missing = [n for n in DIFF_PAIRS if not classes_for(n, diff)]
+    diffpair_missing = [n for n in DIFF_PAIRS
+                        if not classes_for(n, pats, assigns, restrict=('USB_DIFF90',))]
     ok = not unclassified and not both and not diffpair_missing
     return ok, unclassified, both, diffpair_missing
 
