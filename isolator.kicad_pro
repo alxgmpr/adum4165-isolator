@@ -879,7 +879,7 @@
         "uuid": "00000000-0000-0000-0000-000000000001"
       }
     ],
-    "used_designators": "R9-10,H1-4,FID1-4,Y1,U1-3,D5,C1-4,C7-8,C13,C17-18,C50,#PWR1-6,#PWR9,#PWR12,#PWR14,#PWR16-30,#PWR40",
+    "used_designators": "R3,R9-10,H1-4,FID1-4,Y1,U1-3,D5,C1-4,C7-8,C13,C15-18,C50,#PWR1-6,#PWR9,#PWR12,#PWR14,#PWR16-42",
     "variants": []
   },
   "sheets": [
