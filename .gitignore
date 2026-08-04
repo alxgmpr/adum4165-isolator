@@ -18,6 +18,8 @@ datasheets/manifest.json
 #   lib/750313638      -- Wurth WE-PPTI transformer, 3D model for T1
 #   lib/TLV76750DGNR   -- TI LDO
 #   lib/*250-1123*     -- enclosure
+#   lib/C2914611       -- Songtian Y1 disc cap, 3D model for CY1. Regenerate with:
+#                         uvx easyeda2kicad --lcsc_id=C2914611 --full --output=lib/C2914611/CY1
 # Land patterns actually used by the board live in isolator-lib.pretty and
 # ARE tracked; only the upstream vendor packages are ignored.
 lib/

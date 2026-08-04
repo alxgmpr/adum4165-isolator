@@ -91,4 +91,9 @@
 		(remove_unused_layers no)
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/lib/C2914611/CY1.3dshapes/CAP-TH_L7.0-W5.0-P14.0-D0.6.step"
+		(offset (xyz 7 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
 )
