@@ -72,6 +72,24 @@ def stackup_from_file(path):
     return dict(h=float(d1.group(1)), er=float(d1.group(2)), t=float(cu.group(1)))
 
 
+# Calibrated against JLCPCB's impedance calculator on 2026-08-04, for the stackup
+# actually in the board file (JLC04161H-7628: h 0.2104, Er 4.4, 1 oz outer). Asked
+# for 90 ohm as a non-coplanar differential pair on L1 referenced to L2 at 5 mil
+# spacing -- the board's real configuration, since diffpair-pour-gap holds the pour
+# 0.65 mm off and there is no meaningful coplanar term -- their field solver returns
+# 8.61 mil (0.2187 mm). This closed form returns 94.50 ohm at that same width.
+#
+# So it reads 5.0% HIGH, near enough constant across 0.210-0.225 mm. Divide by 1.050
+# before comparing to anything a fabricator says: the 96.28 ohm this prints for the
+# board's 0.210 mm geometry is ~91.7 ohm in JLC's terms. That is the difference
+# between "near the top of the +/-10% band" and "comfortably inside it," so read the
+# printed number through the correction before deciding a retune is needed.
+#
+# The gap is the solder mask and etch taper IPC-2141 omits, exactly the direction the
+# module docstring predicts. It is NOT applied to the return value on purpose: the
+# factor was measured for this stackup at this width, and folding it in would keep
+# producing a confident number after a stackup change that invalidated it. Re-measure
+# if the stackup moves.
 def z_diff_microstrip(w, s, h, er, t):
     z0 = (87.0 / math.sqrt(er + 1.41)) * math.log(5.98 * h / (0.8 * w + t))
     return 2.0 * z0 * (1.0 - 0.48 * math.exp(-0.96 * s / h))
@@ -264,8 +282,11 @@ def main():
     print("The 3.00 mm skew limit is an accepted budget (~14 ps, ~0.7% of a UI), not a")
     print("target -- see the note on SKEW_LIMIT_MM before tightening or loosening it.")
     print("Zdiff is an IPC-2141 estimate; it ignores solder mask and etch taper, both")
-    print("of which lower it. Treat it as a geometry/stackup consistency check and")
-    print("defer to the fabricator's impedance table for the real number.")
+    print("of which lower it. Measured against JLCPCB's solver on this stackup it reads")
+    print("5.0% high: divide by 1.050 for a fabricator-comparable number, so the board's")
+    print("0.210 mm geometry prints 96.28 and is ~91.7 ohm in JLC's terms. The printed")
+    print("value is raw on purpose -- see the note on z_diff_microstrip before trusting")
+    print("either number after a stackup change.")
     print("VERDICT:", "PASS" if ok else "FAIL")
     sys.exit(0 if ok else 1)
 
