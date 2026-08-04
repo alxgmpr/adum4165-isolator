@@ -1,0 +1,10 @@
+{
+  "design_rules": [
+    "No via in pad. Do not place a via inside an SMD land, tangent to one, or closer than 0.2 mm hole-edge to pad-edge (the point where the solder mask dam between via and pad disappears at this board's 0.5/0.3 mm via geometry and zero mask expansion). Enforced by the \"no-via-in-pad\" rule in isolator.kicad_dru. This includes exposed thermal pads — if an EP needs a thermal via, raise it rather than assuming the exception."
+  ],
+  "fab_constraints": {
+    "layer_count": 4,
+    "surface_finish": "ENIG"
+  },
+  "naming_conventions": {}
+}
