@@ -143,10 +143,22 @@ this mode.
 
 ## Upstream CC sensing (GND1) — new
 
-Two comparators watch J1's CC1 and CC2, outputs wire-ORed to `SN6505B.EN`
-with a pull-down. This is the same TLV7041 open-drain arrangement the
-archived design used on its *external* input, repointed at the *host* port
-and at the 1.5 A threshold rather than 3 A.
+Two comparators watch J1's CC1 and CC2, outputs wire-ORed to `SN6505B.EN`.
+This is the same TLV7041 open-drain arrangement the archived design used on
+its *external* input, repointed at the *host* port and at the 1.5 A threshold
+rather than 3 A.
+
+> **CORRECTED 2026-08-08.** This paragraph originally specified a **pull-down**
+> on the wire-OR node. That cannot work: an open-drain output pulls low when
+> asserted and is high-Z otherwise, so a node over a pull-down sits low
+> unconditionally and `EN` can never assert. The node needs a **pull-up**, and
+> because a pull-up makes it low-when-asserted while `SN6505B.EN` is
+> active-high, an inverting stage is required. TLV7041 was separately confirmed
+> to be open-drain (TLV703x is push-pull, TLV704x open-drain). Take the
+> implemented circuit and its resistor values from
+> `docs/superpowers/reviews/2026-08-08-revb-part-selection.md` §4.2, which was
+> verified on review — including the `EN` pull-up value, which must clear the
+> SN6505B's 20 µA max input leakage against a 0.7 × VCC threshold.
 
 Sink-side detection thresholds, per the Type-C specification:
 
@@ -186,12 +198,22 @@ on plug orientation.
 - **Priority mux:** TPS2121. IN1 = external, IN2 = converter output,
   OUT = `ISO_5V`.
 
-  **Carry forward from the archive (finding DR-06):** CP2 must be driven by
-  the 3 A-detect net, *not* grounded. Grounding CP2 and relying on PR1 alone
-  puts the TPS2121 in VCOMP mode, which selects the *higher* input rather
-  than IN2 — so a weak supply sitting above the converter output would win
-  and be silently overloaded. With CP2 driven: no 3 A ⇒ OUT = IN2
-  unconditionally; 3 A detected ⇒ OUT = IN1.
+  **Required behaviour (archive finding DR-06):** no 3 A ⇒ OUT = IN2
+  unconditionally; 3 A detected ⇒ OUT = IN1. Grounding CP2 and relying on PR1
+  alone puts the TPS2121 in VCOMP mode, which selects the *higher* input
+  rather than IN2 — so a weak supply sitting above the converter output would
+  win and be silently overloaded.
+
+  > **CORRECTED 2026-08-08.** This paragraph originally went on to say "CP2
+  > must be driven by the 3 A-detect net." **The behavioural goal above is
+  > right; that mechanism is wrong** and delivers its opposite. Per SLVSEA3F
+  > Table 9-3, `CP2` high with `PR1` low selects **IN2** — so driving CP2 from
+  > the detect makes the mux ignore the external supply exactly when it has
+  > been confirmed good, and fall into VCOMP mode when it has not. The working
+  > arrangement biases CP2 to a fixed level above V_REF and drives **PR1** from
+  > the detect. Take the divider values, the bias source, and the resulting
+  > switchback threshold from
+  > `docs/superpowers/reviews/2026-08-08-revb-part-selection.md` §4.2.
 
 - **Rails from `ISO_5V`:** ADuM4165 `VBUS2`, the four port switches, and a
   3.3 V rail for the hub.

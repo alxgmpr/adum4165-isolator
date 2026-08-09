@@ -402,13 +402,30 @@ J2 (power-only USB-C 6P), R7/R8 (5.1 kΩ Rd, one per CC pin, to `GND2`), D5 (TVS
 
 U7, U8 (per Task 2), threshold **1.23 V** — the Type-C 3.0 A detection point, distinct from Task 4's 1.5 A threshold. Divider R9/R10 off `EXT_5V`. Outputs wire-ORed to `EXT_3A_DET` with a 100 kΩ pull-up.
 
-- [ ] **Step 3: Place the TPS2121 mux — and drive CP2**
+- [ ] **Step 3: Place the TPS2121 mux — wire CP2 and PR1 per the Task 2 record**
 
 U9 (TPS2121). IN1 ← `EXT_5V`, IN2 ← `DCDC_5V`, OUT → `ISO_5V`.
 
-**Carry forward from the archive, finding DR-06: CP2 must be driven by `EXT_3A_DET`, not grounded.** Grounding CP2 and relying on PR1 alone puts the TPS2121 in VCOMP mode, which selects the *higher* input rather than IN2 — so a weak external supply sitting above `DCDC_5V` wins and is silently overloaded. With CP2 driven: no 3 A ⇒ OUT = IN2 unconditionally; 3 A detected ⇒ OUT = IN1.
+**CORRECTED 2026-08-08 (human ruling: datasheet governs).** An earlier version of
+this step said "CP2 must be driven by `EXT_3A_DET`, not grounded." **That was
+wrong** and would have produced the opposite of the intended behaviour. Per
+SLVSEA3F Table 9-3, `CP2` high with `PR1` low selects **IN2** — the converter — so
+driving CP2 from the detect makes the board ignore an external supply exactly when
+it has been confirmed good, and fall into VCOMP mode when it has not.
 
-PR1 takes the inverted sense via a small NMOS (Q1) as the archive did. Take the exact PR1/CP2 pin numbers and threshold from the archive symbol.
+The behavioural goal is unchanged and still correct: **no 3 A ⇒ OUT = IN2; 3 A
+detected ⇒ OUT = IN1.**
+
+**Take the actual CP2/PR1 arrangement, divider values, and pin numbers from the
+Task 2 decision record** (`docs/superpowers/reviews/2026-08-08-revb-part-selection.md`,
+§4.2 and the §6 handoff), which was verified against SLVSEA3F on review. In outline:
+CP2 is biased to a fixed level above V_REF and the 3 A detect drives PR1 above that
+bias, so no detect gives Table 9-3's deterministic IN2 row rather than VCOMP. The
+2N7002 inverter still produces the right active-high sense; it lands on PR1.
+
+Do not re-derive this from the archive symbol — the archive is where the original
+error came from. The record also states the switchback threshold; carry it into a
+schematic text note so bring-up can measure it.
 
 - [ ] **Step 4: Add the source-indication LED**
 
