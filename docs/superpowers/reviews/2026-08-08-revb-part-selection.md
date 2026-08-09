@@ -13,7 +13,7 @@ Task 6 (external input), Task 7 (hub rails).
 
 | Decision | Outcome | MPN |
 |---|---|---|
-| Post-rectifier converter topology | **Buck-boost**, not a plain buck | `TPS63070RNMR` |
+| Post-rectifier converter topology | **Buck-boost**, not a plain buck | `TPS630701RNMR` (fixed 5 V) |
 | Hub 3.3 V rail | **Buck** (rule fired: 373 mA < 450 mA) | `TPS62203DBVR` |
 | CC comparator output structure | `TLV7041` **is** open-drain — the spec's assumption is correct | `TLV7042DDFR` (dual) |
 | Resulting shared port current | **≈ 414 mA** | — |
@@ -94,6 +94,20 @@ picking one.
 current-proportional term, i.e. the most pessimistic for `DCDC_RAW` at high
 current — chosen deliberately so the port budget in §3 is a floor, not a
 midpoint.
+
+**The DCR set behind each case, stated so Case A is reproducible.** T1's datasheet
+publishes maxima only, no typicals:
+
+| Case | `R_ON` | `R_pri_half` | `R_sec_half` |
+|---|---|---|---|
+| A ("typ, warm") | 0.160 Ω (typ) | **0.150 Ω** — assumed typical, ≈ 0.86 × the 0.175 Ω max, at ~40 °C | **0.170 Ω** — the 0.165 Ω max warmed ~3 % |
+| B, C ("max, hot") | 0.250 Ω (max) | 0.2065 Ω = 0.175 × 1.18 | 0.1947 Ω = 0.165 × 1.18 |
+
+Case A therefore **mixes** an assumed-typical primary with a max-derived
+secondary. That is deliberate, not an oversight: the secondary carries the loss
+the port budget is sensitive to, and there is no published typical to lean on,
+so erring high there keeps §3's budget a floor. A fully-typical Case A would
+read ≈ 5.46 V rather than 5.42 V.
 
 **Results at the baseline split:**
 
@@ -203,16 +217,17 @@ lands at **5.00 − 0.414 × 0.135 = 4.94 V**. That difference is the decision.
 
 | Topology | Verdict | Reasoning |
 |---|---|---|
-| **Standard synchronous buck** with 100 %-duty mode | **Rejected** | §2.2: worst-corner headroom is inside the part's own dropout for every split the rev A calibration allows, so `ISO_5V` becomes an unregulated copy of `DCDC_RAW` and a port lands at 4.66–4.82 V against a 4.75 V floor. Additionally, near the dropout boundary the buck hunts between PWM and 100 % mode against a soft source (≈ 0.9 Ω secondary-referred). |
+| **Standard synchronous buck** with 100 %-duty mode | **Rejected** | §2.2: worst-corner headroom is inside the part's own dropout for every split the rev A calibration allows, so `ISO_5V` becomes an unregulated copy of `DCDC_RAW` and a port lands at 4.66–4.82 V against a 4.75 V floor. Additionally, near the dropout boundary the buck hunts between PWM and 100 % mode against a soft source (≈ 0.9 Ω secondary-referred). **This is a different thing from the PFM↔PWM boundary accepted in §2.4** — there, both modes regulate and TI's auto-transition is a designed, characterised handover; here, one of the two states is *unregulated* dropout whose output depends on a high-impedance source, so each transition moves the rail and the rail moves the transition. |
 | **Buck-boost** | **Selected** | Regulates 5.00 V across the whole 4.8–7.0 V `DCDC_RAW` range with no mode boundary at `V_in = V_out`. Decouples downstream port voltage from host cable quality. Costs ≈ 3–4 points of efficiency versus a buck in dropout, ≈ 25 mA of port budget. |
 | **Raise T1's turns ratio** | **Fallback only** | Electrically sound: output power sets primary current regardless of `n`, so a higher ratio buys headroom for free. But there is no drop-in. Würth's 5 kV, 1 A-class parts with higher ratios (`750316031/32/33`, `750315240`) are 12.32 × 15.41 × 11.05 mm — a different footprint, a different land pattern, a re-run of the routed-slot creepage work, and a re-qualification of the barrier. Reserve for a respin. |
 
-### 2.4 Selected part — `TPS63070RNMR`
+### 2.4 Selected part — `TPS630701RNMR` (fixed 5 V)
 
 | Parameter | Value | Requirement | OK? |
 |---|---|---|---|
 | Input range | 2.0–16 V (abs max 20 V) | 4.8–7.0 V operating | ✓ |
-| Output range | 2.5–9 V, `V_FB` = 800 mV | 5.0 V | ✓ |
+| Output | fixed 5.0 V, internal feedback (1.5 MΩ) | 5.0 V | ✓ |
+| Output accuracy | **±1 % in PWM; −1 %/+3 % in PFM** | see stack below | ✓ |
 | Output current | 2 A buck and boost | ≥ 700 mA | ✓ |
 | High-side switch current limit | 3.6 A | — | ✓ |
 | `I_Q` into VIN, **PFM**, no load | 54 µA typ / 103 µA max | matches the PS/SYNC = high configuration below | ✓ |
@@ -220,19 +235,63 @@ lands at **5.00 − 0.414 × 0.135 = 4.94 V**. That difference is the decision.
 | Min duty in buck mode | 30 % (⇒ `V_in/V_out` ≤ 3.33) | 1.40 max | ✓ |
 | Package | VQFN-HR-15 (RNM), 3.0 × 2.5 mm | under Shield B | ✓ |
 
-Adjustable version chosen over the fixed-5 V `TPS630701RNMR` purely on stock
-depth (26,889 vs 1,740 — see §5).
+**Why the fixed version, reversing rev 2 of this record.** Rev 2 chose the
+adjustable `TPS63070RNMR` on stock depth (26,889 vs 1,740) and set 5.0 V with a
+523 k/100 k divider. Stacking the real tolerances shows that does not fit inside
+USB's 500 mV window:
 
-**Pin table — `TPS63070RNMR`, VQFN-HR-15 (RNM):**
+| Contribution | ±1 % resistors | 0.1 % resistors | fixed part |
+|---|---|---|---|
+| `V_FB` accuracy (PFM, −1 %/+3 %) | −1 % / +3 % | −1 % / +3 % | −1 % / +3 % (on `V_OUT`) |
+| divider ratio | ±2.0 % | ±0.2 % | **none** |
+| divider used | 523 k / 100 k | 53.6 k / 10.2 k | — |
+| `V_OUT` band | 4.852 – 5.221 V | 4.946 – 5.163 V | **4.950 – 5.150 V** |
+| worst port (`− 55 mV` mux `− 56 mV` switch) | **4.741 V** | 4.835 V | **4.839 V** |
+| headroom over the 4.75 V floor | **−9 mV — fails** | +85 mV | **+89 mV** |
+| headroom under the 5.25 V ceiling | +29 mV | +87 mV | **+100 mV** |
+
+±1 % resistors do not merely leave a thin margin — they put the worst-case port
+9 mV **below** the 4.75 V floor before any PCB or connector drop. 0.1 %
+resistors recover it, but the E96 values the ratio needs are not sourceable:
+`ERA-2AEB5362X` (53.6 kΩ 0.1 % 0402) shows **21 units at DigiKey on a 33-week
+lead**, and 10.2 kΩ at 0.1 % is not reliably stocked at all. Only the E24-ish
+0.1 % values (10 k, 22 k, 100 k) are, and none of them form the required ratio.
+
+The fixed part removes the divider term entirely and beats even the 0.1 %
+divider. **Take the 1,740-unit stock and manage it as a build option** (below)
+rather than buying the accuracy back with a 33-week resistor.
+
+One helpful correlation, worth stating because it is why 89 mV is a real
+margin: the **+3 % PFM excursion only occurs at light load**, where the mux and
+switch drops are ≈ 0; the **−1 % floor is a PWM figure**, and PWM is what runs
+at the heavy load where those drops are maximal. The two worst cases do not
+stack.
+
+**Build option — adjustable part as the sourcing fallback.** Lay out three
+footprints on the feedback node: `R_FB0` (VOUT→FB), `R1` (VOUT→FB) and `R2`
+(FB→GND2).
+
+| Fitted | `R_FB0` | `R1` | `R2` | Result |
+|---|---|---|---|---|
+| `TPS630701RNMR` (default) | 0 Ω | DNP | DNP | FB tied to VOUT as the fixed version requires |
+| `TPS63070RNMR` (fallback) | DNP | 523 kΩ 1 % | 100 kΩ 1 % | 4.98 V nominal; worst-case port **4.74 V** |
+
+The two parts are pin-identical in the same VQFN-HR-15 package, so the fallback
+is a stuff change. **It is a sourcing escape hatch, not an equal option** — with
+±1 % resistors its worst-case port is ≈ 9 mV under the USB floor. If it is ever
+fitted, source 0.1 % resistors for the divider if any suitable values are
+stocked at that time, and re-check §3.3 either way.
+
+**Pin table — `TPS630701RNMR`, VQFN-HR-15 (RNM):**
 
 | Pin | Name | I/O | Function | This design |
 |---|---|---|---|---|
-| 1 | PS/SYNC | I | low = forced PWM; high = PWM/PFM (power save) | tie **high** to `ISO_5V_PRE`; DNP 0 Ω pad to GND2 for forced PWM — see note |
+| 1 | PS/SYNC | I | low = forced PWM; high = PWM/PFM (power save) | **100 kΩ to `ISO_5V_PRE`**, with a DNP 0 Ω pad from the pin to GND2 — see note |
 | 2 | PG | O | open-drain power good | 100 kΩ pull-up to `ISO_5V_PRE`, test point |
 | 3 | VAUX | O | internal LDO cap; **must not be loaded** | 100 nF 0402 to GND2 |
 | 4 | GND | — | control/logic ground | GND2 |
-| 5 | FB | I | feedback (0.800 V) | divider from `ISO_5V_PRE` |
-| 6 | FB2 | O | voltage-scaling output | 100 kΩ to FB (per TI's BOM) |
+| 5 | FB | I | on fixed versions **must be connected to VOUT** | `R_FB0` = 0 Ω to `ISO_5V_PRE` (see build option above) |
+| 6 | FB2 | O | voltage-scaling output | leave open (VSEL is tied low; unused on the fixed part) |
 | 7, 8 | VOUT | O | converter output | `ISO_5V_PRE` → TPS2121 IN2 |
 | 9 | L2 | I | inductor, output side | L to pin 11 |
 | 10 | PGND | — | power ground | GND2 |
@@ -241,7 +300,16 @@ depth (26,889 vs 1,740 — see §5).
 | 14 | EN | I | enable (precise threshold) | tie to `DCDC_RAW` (the enable decision lives on GND1 at `SN6505B.EN`) |
 | 15 | VSEL | I | voltage scaling input | tie to GND2 |
 
-**Note on PS/SYNC — changed from rev 1 of this record.** Rev 1 specified forced
+**Note on PS/SYNC — the tie-high must be a resistor, not a wire.** Two reasons,
+and one component satisfies both. First, SLVSC58B §8.4.5: *"It is recommended
+to not connect PS/SYNC directly to VIN but use a resistor in series in the
+range of 1 kΩ to 1 MΩ."* Second, rev 2 of this record specified a hard tie to
+`ISO_5V_PRE` **plus** a DNP 0 Ω pad to GND2 for the forced-PWM option — fitting
+that 0 Ω would have shorted `ISO_5V_PRE` to GND2. With the 100 kΩ in the
+tie-high leg, fitting the 0 Ω pulls PS/SYNC to GND2 through 50 µA and nothing
+else happens. **Task 5 must not implement the rev 2 wording.**
+
+**Note on PS/SYNC mode — changed from rev 1 of this record.** Rev 1 specified forced
 PWM (PS/SYNC low) for spectral cleanliness, then cited the datasheet's PFM
 `I_Q` as evidence the part idles cheaply. Those are inconsistent: SLVSC58B
 §7.5 measures 54 µA/103 µA in PFM, and in forced PWM the device switches at
@@ -271,12 +339,14 @@ deviations, both recorded with reasons:
 | C_OUT | 3 × 22 µF 16 V X5R 0805 | `CL21A226MOQNNNE` (Samsung) | equivalent to TI's Murata `GRM21BC81C226ME44L` (X6S→X5R) |
 | C_OUT-HF | 1 × 100 nF 0402 | `CL05B104KO5NNNC` | **replaces** TI's 10 µF 0603. See C_OUT effective-capacitance check below. |
 | C_VAUX | 100 nF 0402 | `CL05B104KO5NNNC` | equivalent to TI's Taiyo Yuden `TMK105B7104MV-FR` |
-| R1 (FB top) | 523 kΩ 1 % 0402 | `RC0402FR-07523KL` (Yageo) | — |
-| R2 (FB bottom) | 100 kΩ 1 % 0402 | `RC0402FR-07100KL` (Yageo) | — |
-| R4 (FB→FB2) | 100 kΩ 1 % 0402 | `RC0402FR-07100KL` | per TI's BOM |
+| R_FB0 | 0 Ω 0402 | `RC0402JR-070RL` (Yageo) | **replaces** TI's R1/R2 divider — the fixed part ties FB to VOUT |
+| R_PSS | 100 kΩ 1 % 0402 | `RC0402FR-07100KL` (Yageo) | PS/SYNC tie-high, per SLVSC58B §8.4.5 |
 | R_PG | 100 kΩ 1 % 0402 | `RC0402FR-07100KL` | — |
+| R1 / R2 | DNP (523 kΩ / 100 kΩ) | `RC0402FR-07523KL` / `-07100KL` | footprints only; populated **only** in the adjustable-part fallback |
 
-`V_OUT = 0.800 × (1 + 523/100) = 4.98 V`; ±1 % resistors give 4.91–5.05 V.
+`V_OUT` is set internally: 5.00 V, ±1 % PWM / −1 %/+3 % PFM. TI's `R4`
+(FB→FB2) is dropped — FB2 is a voltage-scaling output that does nothing with
+`VSEL` tied low, and the fixed part has no external divider for it to act on.
 
 **Effective-capacitance check.** TI requires the *effective* capacitance at
 VOUT to land in 15–470 µF for a 1.5 µH nominal inductor. 3 × 22 µF 16 V X5R
@@ -285,8 +355,12 @@ the window with margin at both ends. **Verify the chosen lot's bias curve
 before layout freeze** — the window's lower bound is what keeps the internal
 compensation valid.
 
-Layout note: the FB node's Thevenin impedance is 84 kΩ. Keep the divider
-adjacent to pin 5 and route the node away from L1/L2 and the switch loop.
+Layout note: keep `R_FB0` adjacent to pin 5 and route the FB node away from
+L1/L2 and the switch loop. If the adjustable fallback is ever fitted, its
+divider Thevenin impedance is 84 kΩ and the same routing constraint becomes
+much more important; TI's own note on Equation 6 is that the divider must pass
+**≥ 2 µA** (`R2` ≤ 400 kΩ) — 523 k/100 k passes 8 µA, so that constraint is met
+but with little margin against the 100 nA FB leakage (80×).
 
 ### 2.5 Fit under Shield B (`BMI-S-209-F`, 29.36 × 18.50 × 7.00 mm)
 
@@ -366,10 +440,15 @@ Using the Step 1 converter's numbers at the baseline (pessimistic) split:
 ```
 P_host                = 5.00 V × 800 mA                       = 4.000 W
 × η(T1 + rectifier) 83.3 %  (§2.1, derived)                   = 3.333 W  @ DCDC_RAW 5.42 V
-× η(TPS63070) 92 %          (buck-boost transition region)    = 3.066 W  @ 5.00 V
+× η(TPS630701) 92 %         (buck-boost transition region)    = 3.066 W  @ 5.00 V
 − TPS2121 IN2→OUT, 56 mΩ typ × 613 mA → 21 mW                 = 3.045 W
                                                     ISO_5V available = 609 mA
 ```
+
+The mux carries **613 mA** (`3.066 W / 5.00 V`, its input side) and **609 mA**
+is what survives to `ISO_5V` after its 21 mW. §2.2 uses the 613 mA figure for
+the same reason — it is the current in the switch, not the current in the
+budget. The 4 mA difference is bookkeeping, not a disagreement.
 
 Fixed loads on `ISO_5V`:
 
@@ -402,9 +481,24 @@ never a version of this where the LDO's simplicity was affordable.
 The +41 mA from the buck is partly offset by the more honest 83.3 %
 transformer efficiency and by the mux drop the spec omitted.
 
-Worst-case port voltage with the buck-boost regulating and one port taking the
-entire shared budget: `5.00 − 0.414 A × 135 mΩ = 4.94 V`, comfortably inside
-USB limits.
+**Worst-case port voltage — full stack.** Rev 2 of this record quoted
+`5.00 − 0.414 A × 135 mΩ = 4.94 V` and called it comfortable. That dropped the
+TPS2121 term that §2.2 correctly includes ten lines earlier, and it used the
+nominal rail rather than its tolerance band. Stacking properly, with the fixed
+`TPS630701RNMR` (§2.4):
+
+| Term | Heavy load (worst low) | Light load (worst high) |
+|---|---|---|
+| `ISO_5V_PRE` | 5.00 V × 0.99 (PWM, −1 %) = **4.950 V** | 5.00 V × 1.03 (PFM, +3 %) = **5.150 V** |
+| TPS2121 IN2→OUT, 90 mΩ max × 613 mA | −0.055 V | ≈ 0 |
+| TPS2553 DBV, 135 mΩ max × 414 mA | −0.056 V | ≈ 0 |
+| **at the downstream port** | **4.839 V** | **5.150 V** |
+| margin to the USB limit | **+89 mV** over 4.75 V | **−100 mV** under 5.25 V |
+
+Both ends hold, but the true headroom is ≈ 89 mV, not the 250 mV rev 2 implied.
+**Task 7 must budget port copper, connector, and cable drop out of 89 mV**, not
+out of a quarter volt. This is also why the fixed-output part was chosen over an
+adjustable one with a resistor divider — see the stack comparison in §2.4.
 
 ### 3.4 Selected part — `TPS62203DBVR`
 
@@ -516,9 +610,22 @@ their *low-asserted* states. So:
 From a 4.75 V rail the pull-up must satisfy
 `V_BUS − I_IH(max) × R_EN ≥ 0.7 × V_BUS`, i.e. `R_EN ≤ 0.3 × 4.75 / 20 µA =
 71 kΩ`. **The 100 kΩ used for `CC_DET_L` would put `EN` at ≈ 2.75 V against a
-3.33 V threshold — it would not turn the converter on.** At 10 kΩ the leakage
-drop is 0.2 mV and the margin to threshold is 1.4 V. Static loss when `EN` is
-held low is 2.3 mW.
+3.33 V threshold — it would not turn the converter on.** At 10 kΩ:
+
+```
+drop     = 20 µA × 10 kΩ      = 0.2 mV
+EN       = 4.75 − 0.0002      = 4.7498 V
+V_IN(ON) = 0.7 × 4.75         = 3.325 V
+margin   = 4.7498 − 3.325     = 1.425 V
+```
+
+Static loss when `EN` is held low is `4.75² / 10 kΩ` = 2.3 mW.
+
+*(Review round 2 suggested these should read 0.2 V and 1.23 V. Recomputed above
+and left at 0.2 mV / 1.425 V: `I_IH` is 20 **µA**, so 20 µA × 10 kΩ = 200 µV.
+A 0.2 V drop would need 20 µA into 10 MΩ, or 20 mA into 10 kΩ — neither is the
+spec. The 10 kΩ choice is unaffected either way; only the stated margin differs.
+Arithmetic shown so it can be re-checked rather than re-argued.)*
 
 If a non-inverting connection is wanted instead, the alternative is `TLV7032`
 (push-pull dual) with a `BAT54S` diode-OR and a pull-down — same part count,
@@ -555,31 +662,71 @@ And with no detect, CP2 low + PR1 low ⇒ **VCOMP**, higher input wins — which
 precisely the failure mode DR-06 exists to prevent. The note is self-defeating
 as written.
 
-**The working assignment is the mirror image:**
+**The working assignment is the mirror image — and CP2 must be biased from IN2,
+not IN1.** Rev 2 of this record biased CP2 from IN1. That is wrong for a second
+reason: it makes *both* XCOMP inputs scale with IN1, so `PR1 > CP2` reduces to a
+comparison between two constants and holds no matter what IN1 actually is. Once
+3 A is detected, IN1 would stay selected all the way down to `V_UV`
+(2.55–2.8 V) — a browning-out brick would drag `OUT` down with it instead of
+handing back to the converter. **Biasing CP2 from IN2 restores a designed
+switchback voltage** and satisfies every row identically.
 
 | Pin | Connection | Level |
 |---|---|---|
-| **CP2** (pin 3) | fixed bias from IN1 via a divider — **24 kΩ / 10 kΩ** to GND2 | 1.47 V at IN1 = 5.00 V (1.40 V at 4.75 V; 1.62 V at 5.50 V). Always ≥ `V_REF` (1.10 V max) with ≥ 0.30 V margin, so fast-switchover/XCOMP mode is always armed. |
-| **PR1** (pin 6) | driven by the 3 A-detect inverter — **100 kΩ to IN1, 150 kΩ to GND2**, with the `2N7002` drain on the node | 3.00 V at IN1 = 5.00 V when detected (3.30 V at 5.50 V — inside the 5.5 V pin limit); pulled to ≈ 0 V when not |
+| **CP2** (pin 3) | static bias from **IN2** (`ISO_5V_PRE`) — **23.7 kΩ / 10.2 kΩ** to GND2 | `0.3009 × IN2` = **1.506 V** nominal (1.488 V at `ISO_5V_PRE` = 4.950 V; 1.554 V at 5.150 V). ≥ `V_REF` (1.10 V max) with ≥ 0.39 V margin whenever the converter is up. |
+| **PR1** (pin 6) | driven by the 3 A-detect inverter — **17.8 kΩ to IN1, 10.0 kΩ to GND2**, with the `2N7002` drain on the node | `0.3597 × IN1` = **1.800 V** at IN1 = 5.00 V when detected (1.708 V at 4.75 V, 1.978 V at 5.50 V — all well inside the 5.5 V pin limit); pulled to ≈ 0.4 mV when not |
 
-Truth check against Table 9-3:
+**Switchback threshold** — the thing the IN1-biased version did not have:
 
-- **External supply absent** ⇒ IN1 below UV ⇒ "invalid input" row ⇒ OUT = IN2. ✓
-- **External supply present, 3 A not confirmed** ⇒ CP2 = 1 (biased), PR1 = 0
-  (FET on) ⇒ row 3 ⇒ **OUT = IN2 unconditionally**. ✓ — and note this is a
-  *deterministic* row, not VCOMP, so a weak supply sitting above the converter
-  output can never win. That is DR-06's actual intent, now delivered.
-- **3 A confirmed** ⇒ CP2 = 1.47 V, PR1 = 3.00 V ⇒ row 4 with `PR1 > CP2` ⇒
-  **OUT = IN1**. ✓ Margin 1.53 V against a comparator offset `V_OFST` of
-  5–40 mV.
+```
+IN1_switchback = V_CP2 / 0.3597 = 1.506 / 0.3597 = 4.19 V
+```
+
+Band, stacking `ISO_5V_PRE`'s tolerance (1.488–1.554 V) and the TPS2121's
+`V_OFST` of 5–40 mV (±0.111 V referred to IN1): **4.03–4.43 V**. That sits
+≥ 0.32 V clear of the 4.75 V legal minimum for a healthy external supply, so a
+compliant brick is never handed back by mistake, and a failing one is handed
+back well before it drags the ports out of spec. **Task 6 implements this;
+bring-up measures it by ramping the external supply down under load.**
+
+Comparator margin `PR1 − CP2` when 3 A is detected: 293 mV at IN1 = 5.00 V,
+202 mV at IN1 = 4.75 V — both ≫ the 40 mV max offset.
+
+**Re-verified against Table 9-3, all states:**
+
+| # | External (IN1) | Converter (IN2) | CP2 | PR1 | Row | OUT |
+|---|---|---|---|---|---|---|
+| 1 | absent (< UV) | running | 1.51 V (1) | ≈ 0 (0) | `(1,0,X,X)` invalid input | **IN2** ✓ |
+| 2 | present, 3 A **not** confirmed | running | 1.51 V (1) | 0 V (0) | `(0,0,1,0)` VREF | **IN2** ✓ deterministic |
+| 3 | present, 3 A confirmed | running | 1.51 V (1) | 1.80 V (1) | `(0,0,1,1)` XCOMP, `PR1 > CP2` | **IN1** ✓ |
+| 4 | present | off (host Default) | ≈ 0 (0) | either | `(0,1,X,X)` invalid input | **IN1** ✓ |
+| 5 | absent | off | 0 | 0 | `(1,1,X,X)` | Hi-Z ✓ |
+| 6 | 3 A confirmed, then sags < 4.19 V | running | 1.51 V (1) | < 1.51 V (1) | `(0,0,1,1)` XCOMP, `PR1 ≤ CP2` | **IN2** ✓ switchback |
+
+State 2 is the one DR-06 exists for, and it is now a *deterministic* table row
+rather than VCOMP — a weak supply sitting above the converter output can never
+win. State 6 is new and is what the IN1-biased version could not do. Below
+IN1 ≈ 2.95 V, PR1 falls under `V_REF` and state 6 becomes state 2; the answer
+stays IN2 either way, so the behaviour is continuous all the way down.
 
 The `2N7002` inverter specified in §4.2 produces exactly the active-high signal
 needed; **it lands on PR1, not CP2.** CP2 is never switched — it is a static
-bias whose only job is to keep XCOMP mode armed and to set the threshold PR1
-must cross.
+bias that arms XCOMP and sets the threshold PR1 must cross.
 
-Pin leakage on both pins is ±0.1 µA max, so the 24 k/10 k and 100 k/150 k
-dividers see ≤ 10 mV of leakage error — negligible against the 1.53 V margin.
+Pin leakage on both pins is ±0.1 µA max against Thevenin impedances of 7.13 kΩ
+(CP2) and 6.4 kΩ (PR1) ⇒ ≤ 0.8 mV of error. 1 % resistors are sufficient:
+±1 % on both dividers moves the switchback threshold ~±2 %, already inside the
+4.03–4.43 V band quoted above.
+
+**One residual window, worth a bring-up check.** While the converter is
+soft-starting, `ISO_5V_PRE` passes through the range where IN2 is above `V_UV`
+(2.8 V) but CP2 has not yet crossed `V_REF` (i.e. IN2 below ≈ 3.66 V). In that
+window, with an external supply present and 3 A *not* confirmed, CP2 = 0 and
+PR1 = 0 ⇒ VCOMP ⇒ the higher input (the external supply) is selected. It closes
+within the TPS63070's soft-start, the hub has not enumerated yet so the load is
+negligible, and the TPS2121's `SS` pin sets an input-setting delay that
+deglitches it — but set `SS` deliberately rather than by default, and confirm
+on the bench.
 
 **Action outside this task:** the spec's DR-06 paragraph
 (`docs/superpowers/specs/2026-08-08-isolated-hub-revb-design.md`, "Priority
@@ -655,8 +802,8 @@ sourcing flag: < 1000 units.
 
 | Part | MPN | Package | Distributor | Stock | Price (1) | Price (100) | Status | Flag |
 |---|---|---|---|---|---|---|---|---|
-| Buck-boost converter | `TPS63070RNMR` | VQFN-HR-15 | DigiKey | **26,889** | $3.37 | $2.09 | Active | — |
-| — fixed-5 V alternate | `TPS630701RNMR` | VQFN-HR-15 | DigiKey | 1,740 | $3.37 | $2.09 | Active | thin |
+| Buck-boost converter | `TPS630701RNMR` (fixed 5 V) | VQFN-HR-15 | DigiKey | **1,740** | $3.37 | $2.09 | Active | **thin — see below** |
+| — adjustable fallback | `TPS63070RNMR` | VQFN-HR-15 | DigiKey | 26,889 | $3.37 | $2.09 | Active | — |
 | 3.3 V buck | `TPS62203DBVR` | SOT-23-5 | DigiKey | 2,205 | $1.62 | $0.954 | Active | — |
 | " | `TPS62203DBVR` | SOT-23-5 | LCSC C9051 | 8,180 | $1.41 | $0.821 (1k) | Active | — |
 | Comparator (dual) | `TLV7042DDFR` | SOT-23-8 | DigiKey | **1,220** | $1.64 | $0.970 | Active | **thin** |
@@ -673,9 +820,10 @@ sourcing flag: < 1000 units.
 | 10 µF 25 V X5R | `CL21A106KAYNNNE` (Samsung) | 0805 | LCSC C15850 | **330,660** | $0.106 | C_IN ×2, 3.3 V rail |
 | 22 µF 16 V X5R | `CL21A226MOQNNNE` (Samsung) | 0805 | LCSC C98190 | **597,740** | $0.139 / $0.082 (10k) | C_OUT ×3 |
 | 100 nF 16 V X7R | `CL05B104KO5NNNC` (Samsung) | 0402 | LCSC C1525 | **1,310,700** | $0.0055 | C_VAUX, pin-adjacent HF caps, comparator decoupling |
-| 100 kΩ 1 % | `RC0402FR-07100KL` (Yageo) | 0402 | LCSC C60491 | **3,594,500** | ~$0.0007 | FB bottom, R4, PG pull-up, `CC_DET_L` pull-ups ×2, PR1 divider top |
-| 523 kΩ 1 % | `RC0402FR-07523KL` (Yageo) | 0402 | Heisener / DigiKey | 599,928 | ~$0.001 | FB top |
-| 150 kΩ, 24 kΩ, 10 kΩ 1 % | `RC0402FR-07150KL`, `-0724KL`, `-0710KL` (Yageo) | 0402 | LCSC / DigiKey | same series as C60491 (>10⁵ each) | ~$0.0007 | PR1 divider bottom; CP2 divider; `R_EN` and CC series ×4 |
+| 100 kΩ 1 % | `RC0402FR-07100KL` (Yageo) | 0402 | LCSC C60491 | **3,594,500** | ~$0.0007 | `R_PSS`, `R_PG`, `CC_DET_L` pull-ups ×2 |
+| 23.7 kΩ, 17.8 kΩ, 10.2 kΩ, 10 kΩ 1 % | `RC0402FR-0723K7L`, `-0717K8L`, `-0710K2L`, `-0710KL` (Yageo) | 0402 | LCSC / DigiKey | same series as C60491 (>10⁵ each) | ~$0.0007 | CP2 divider (23.7 k/10.2 k); PR1 divider (17.8 k/10 k); `R_EN`; CC series ×4 |
+| 0 Ω jumper | `RC0402JR-070RL` (Yageo) | 0402 | LCSC C106231 | >10⁶ | ~$0.0004 | `R_FB0`; 3.3 V rail LDO build option |
+| 523 kΩ 1 % **(DNP)** | `RC0402FR-07523KL` (Yageo) | 0402 | Heisener / DigiKey | 599,928 | ~$0.001 | adjustable-converter fallback only |
 
 **Sourcing risks:**
 
@@ -686,9 +834,17 @@ sourcing flag: < 1000 units.
 2. **`744043100` carries a 24-week manufacturer lead time.** 3,922 in stock
    covers prototypes; any 10 µH / ≥ 0.5 A / ≤ 200 mΩ shielded inductor in a
    ≤ 5 × 5 mm body substitutes without change.
-3. **`TPS630701RNMR` at 1,740** is why the adjustable `TPS63070RNMR` was
-   chosen. Recorded so the fixed version is not "simplified" back in later.
-4. `XFL4020-152MEC` no longer appears in DigiKey's own catalogue (it moved to
+3. **`TPS630701RNMR` at 1,740 units** — the thinnest line on the board, and
+   deliberately accepted. The fixed output is worth ~80 mV of port-voltage
+   margin that no sourceable resistor divider can buy back (§2.4). Mitigation
+   is the DNP divider footprints: `TPS63070RNMR` (26,889) is pin-identical and
+   drops in as a stuff change, at the cost of that margin. Buy the fixed part
+   ahead of the board for anything past prototypes.
+4. **0.1 % 0402 resistors are not a design option here.** `ERA-2AEB5362X`
+   (53.6 kΩ) shows 21 units on a 33-week lead, and 10.2 kΩ at 0.1 % is not
+   reliably stocked. Recorded so a later reader does not "fix" the port-voltage
+   margin by specifying them.
+5. `XFL4020-152MEC` no longer appears in DigiKey's own catalogue (it moved to
    DigiKey Marketplace). Source from LCSC or Coilcraft direct.
 
 ---
@@ -702,19 +858,32 @@ pull-up to `VBUS_HOST` forming `CC_DET_L`, one `2N7002` inverting that node
 onto `SN6505B.EN` with a **10 kΩ** pull-up to `VBUS_HOST` (not 100 kΩ — see
 §4.2). Do **not** implement the spec's "pull-down" wording.
 
-**Task 5 (isolated power chain, GND2)** — `TPS63070RNMR` per §2.4, capacitor
-and resistor set per §2.4, FB divider 523 k/100 k for 4.98 V, `EN` tied to
-`DCDC_RAW`, **`PS/SYNC` tied high** with a DNP 0 Ω pad to GND2, `VSEL` low,
-`PG` pulled up with a test point. Output net `ISO_5V_PRE` → TPS2121 `IN2`.
-Everything in §2.5 goes inside Shield B. For port-drop budgeting use
-**TPS2553 DBV 135 mΩ max** and **TPS2121 90 mΩ max**, not the 25 °C typicals.
+**Task 5 (isolated power chain, GND2)** — **`TPS630701RNMR`** (fixed 5 V) per
+§2.4, capacitor set per §2.4, `FB` tied to `ISO_5V_PRE` through `R_FB0` = 0 Ω
+with `R1`/`R2` footprints laid out DNP for the adjustable fallback, `EN` tied to
+`DCDC_RAW`, `VSEL` low, `FB2` open, `PG` pulled up with a test point. Output net
+`ISO_5V_PRE` → TPS2121 `IN2`. Everything in §2.5 goes inside Shield B. For
+port-drop budgeting use **TPS2553 DBV 135 mΩ max** and **TPS2121 90 mΩ max**,
+not the 25 °C typicals.
+
+**`PS/SYNC` is `100 kΩ` to `ISO_5V_PRE` with a DNP 0 Ω pad from the pin to
+GND2** — *not* a hard tie plus a DNP 0 Ω, which rev 2 of this record wrongly
+specified and which would short `ISO_5V_PRE` to GND2 if that 0 Ω were ever
+fitted. The series resistor is also TI's own requirement (SLVSC58B §8.4.5,
+1 kΩ–1 MΩ).
+
+Also add a `TPS2121 SS` capacitor deliberately — it sets the input-setting
+delay that covers the converter-startup window described at the end of §4.3.
 
 **Task 6 (external input, GND2)** — one `TLV7042DDFR`, VCC = **J2 VBUS**,
 `V_REF` = 1.23 V, inverting, wire-ORed over a 100 kΩ pull-up, inverted by a
-`2N7002` onto TPS2121 **`PR1`** (100 kΩ to IN1 / 150 kΩ to GND2). **`CP2` is a
-static bias from IN1 via 24 kΩ / 10 kΩ — it is not driven by the detect.** See
-§4.3 for the truth-table derivation and note that the spec's DR-06 wording is
-wrong.
+`2N7002` onto TPS2121 **`PR1`** (**17.8 kΩ to IN1 / 10.0 kΩ to GND2**).
+**`CP2` is a static bias from `IN2` (`ISO_5V_PRE`) via 23.7 kΩ / 10.2 kΩ — not
+from IN1, and not driven by the detect.** Biasing it from IN1 makes both XCOMP
+inputs scale together and leaves no switchback threshold. As specified, the
+external supply is handed back to the converter at **IN1 ≈ 4.19 V**
+(band 4.03–4.43 V). See §4.3 for the full six-state truth-table check, and note
+that the spec's DR-06 wording is wrong.
 
 **Task 7 (hub rails)** — `TPS62203DBVR` + `744043100` per §3.4, laid out as a
 stuff option against `AP2112K-3.3` + 0 Ω per §3.5. Budget the hub at
@@ -754,8 +923,18 @@ stuff option against `AP2112K-3.3` + 0 Ω per §3.5. Budget the hub at
    ports at 373 mA.
 8. Confirm `SN6505B.EN` polarity end-to-end through the corrected wire-OR and
    the `2N7002` inverter, on a Default, a 1.5 A, and a 3 A advertisement.
-9. **Confirm mux selection on the bench in all four states** (external absent /
-   present-not-3 A / present-3 A, converter running or not) before trusting
-   §4.3. This is the correction with the least field evidence behind it.
-10. Check converter start-up against the SN6505B's 1.42 A minimum current clamp
+9. **Confirm mux selection on the bench in all six states of §4.3's table**
+   before trusting it. This is the correction with the least field evidence
+   behind it.
+10. **Measure the switchback threshold**: with 3 A confirmed and the ports
+    loaded, ramp the external supply down and confirm the handover to the
+    converter occurs in the **4.03–4.43 V** band and not at `V_UV` (2.8 V).
+11. **Check the converter-startup window** (end of §4.3): with an external
+    supply present but 3 A *not* confirmed, power-cycle and confirm the mux
+    does not linger on IN1 once `ISO_5V_PRE` is up. Size the TPS2121 `SS`
+    capacitor from this measurement.
+12. **Measure the port voltage at both extremes** — full 414 mA on one port
+    (expect ≈ 4.84 V) and near-zero load (expect ≈ 5.15 V) — and confirm the
+    89 mV / 100 mV margins of §3.3 survive real PCB and connector drop.
+13. Check converter start-up against the SN6505B's 1.42 A minimum current clamp
     with all output capacitance present (T1 soft-start 4.25 ms typ).
