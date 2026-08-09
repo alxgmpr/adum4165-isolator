@@ -138,8 +138,19 @@ class TextItem:
         collisions and merely risks a few extra false positives, which is
         the accepted tradeoff here.
         """
-        width = max(len(self.text), 1) * 0.85 * self.size
-        height = self.size
+        # Multi-line text: width is the LONGEST line, not the sum of every
+        # character. Summing made a wrapped note span the whole page and
+        # collide with everything, which cost Task 4 several fix iterations
+        # chasing false positives.
+        #
+        # Note that KiCad's own parser rejects raw newlines inside a
+        # (text ...) value -- kicad-cli fails with "Failed to load schematic"
+        # even though direct SVG rasterisation renders it fine. The working
+        # convention on this project is one single-line text node per line,
+        # so multi-line values should be rare; this stays correct either way.
+        lines = self.text.split("\n") or [""]
+        width = max(max(len(ln) for ln in lines), 1) * 0.85 * self.size
+        height = self.size * len(lines)
 
         if self.angle in (90, 270):
             width, height = height, width
