@@ -875,7 +875,7 @@
         "uuid": "00000000-0000-0000-0000-000000000001"
       }
     ],
-    "used_designators": "T1,J1-2,Q1,FID1-4,CY1,#FLG1-3,U1-6,C1-18,C50,Y1,D1-6,#PWR1-47,R1-10,H1-4,TP1-19",
+    "used_designators": "T1,J1-2,Q1,FID1-4,CY1,#FLG1-3,U1-6,C1-18,C50,Y1,#PWR1-47,D1-6,R1-10,H1-4,TP1-19",
     "variants": []
   },
   "sheets": [

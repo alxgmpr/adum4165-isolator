@@ -9619,7 +9619,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C228101"
+		(property "LCSC" "C273780"
 			(at 317.5 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9630,7 +9630,7 @@
 				)
 			)
 		)
-		(property "MPN" "AC0603FR-0793K1L"
+		(property "MPN" "RC0603FR-0793K1L"
 			(at 317.5 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -10381,7 +10381,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1.5mm"
+		(property "Footprint" "Fiducial:Fiducial_1mm_Mask2mm"
 			(at 33.02 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -12689,7 +12689,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1.5mm"
+		(property "Footprint" "Fiducial:Fiducial_1mm_Mask2mm"
 			(at 33.02 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -18715,7 +18715,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1.5mm"
+		(property "Footprint" "Fiducial:Fiducial_1mm_Mask2mm"
 			(at 33.02 209.55 0)
 			(hide yes)
 			(show_name no)
