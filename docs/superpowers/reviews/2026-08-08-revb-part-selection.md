@@ -257,6 +257,14 @@ resistors recover it, but the E96 values the ratio needs are not sourceable:
 lead**, and 10.2 kΩ at 0.1 % is not reliably stocked at all. Only the E24-ish
 0.1 % values (10 k, 22 k, 100 k) are, and none of them form the required ratio.
 
+For completeness, since "0.1 % or nothing" overstates the search: **±0.5 %
+resistors would also have worked** — 523 k/100 k at ±0.5 % gives `V_OUT` =
+4.893–5.177 V and a worst-case port of **4.782 V, +32 mV** over the floor. That
+is a legal design. The fixed part is still chosen because +89 mV is nearly
+three times the margin for one fewer BOM line and no tolerance-class
+constraint, but the decision is "fixed part beats ±0.5 %", not "no divider
+could work".
+
 The fixed part removes the divider term entirely and beats even the 0.1 %
 divider. **Take the 1,740-unit stock and manage it as a build option** (below)
 rather than buying the accuracy back with a 33-week resistor.
@@ -610,22 +618,10 @@ their *low-asserted* states. So:
 From a 4.75 V rail the pull-up must satisfy
 `V_BUS − I_IH(max) × R_EN ≥ 0.7 × V_BUS`, i.e. `R_EN ≤ 0.3 × 4.75 / 20 µA =
 71 kΩ`. **The 100 kΩ used for `CC_DET_L` would put `EN` at ≈ 2.75 V against a
-3.33 V threshold — it would not turn the converter on.** At 10 kΩ:
-
-```
-drop     = 20 µA × 10 kΩ      = 0.2 mV
-EN       = 4.75 − 0.0002      = 4.7498 V
-V_IN(ON) = 0.7 × 4.75         = 3.325 V
-margin   = 4.7498 − 3.325     = 1.425 V
-```
-
-Static loss when `EN` is held low is `4.75² / 10 kΩ` = 2.3 mW.
-
-*(Review round 2 suggested these should read 0.2 V and 1.23 V. Recomputed above
-and left at 0.2 mV / 1.425 V: `I_IH` is 20 **µA**, so 20 µA × 10 kΩ = 200 µV.
-A 0.2 V drop would need 20 µA into 10 MΩ, or 20 mA into 10 kΩ — neither is the
-spec. The 10 kΩ choice is unaffected either way; only the stated margin differs.
-Arithmetic shown so it can be re-checked rather than re-argued.)*
+3.33 V threshold — it would not turn the converter on.** At 10 kΩ the drop is
+`20 µA × 10 kΩ` = **0.2 V**, so `EN` sits at **4.55 V** against the 3.325 V
+threshold — a margin of **1.225 V**. Static loss when `EN` is held low is
+`4.75² / 10 kΩ` = 2.3 mW.
 
 If a non-inverting connection is wanted instead, the alternative is `TLV7032`
 (push-pull dual) with a `BAT54S` diode-OR and a pull-down — same part count,
@@ -679,18 +675,43 @@ switchback voltage** and satisfies every row identically.
 **Switchback threshold** — the thing the IN1-biased version did not have:
 
 ```
-IN1_switchback = V_CP2 / 0.3597 = 1.506 / 0.3597 = 4.19 V
+IN1_switchback(nominal) = V_CP2 / a = 1.504 / 0.35971 = 4.18 V
 ```
 
-Band, stacking `ISO_5V_PRE`'s tolerance (1.488–1.554 V) and the TPS2121's
-`V_OFST` of 5–40 mV (±0.111 V referred to IN1): **4.03–4.43 V**. That sits
-≥ 0.32 V clear of the 4.75 V legal minimum for a healthy external supply, so a
-compliant brick is never handed back by mistake, and a failing one is handed
-back well before it drags the ports out of spec. **Task 6 implements this;
-bring-up measures it by ramping the external supply down under load.**
+**Worst-case band — every term at its extreme simultaneously**, consistent with
+the rest of this record. Three contributions, not two: rev 2 stacked only
+`ISO_5V_PRE`'s tolerance and `V_OFST`, and then wrongly described the resistor
+tolerance as "already inside" that band. It is an *additional* term.
 
-Comparator margin `PR1 − CP2` when 3 A is detected: 293 mV at IN1 = 5.00 V,
-202 mV at IN1 = 4.75 V — both ≫ the 40 mV max offset.
+```
+CP2 ratio  b = 10.2/(23.7+10.2)   nom 0.30089, ±1 % parts → 0.29669 … 0.30511
+PR1 ratio  a = 10.0/(17.8+10.0)   nom 0.35971, ±1 % parts → 0.35512 … 0.36433
+ISO_5V_PRE                        4.950 … 5.150 V   (fixed part, −1 %/+3 %)
+V_CP2 = b × ISO_5V_PRE            1.469 … 1.571 V   (nom 1.504 V)
+V_OFST (TPS2121)                  up to ±40 mV
+
+IN1_sw(max) = (1.571 + 0.040) / 0.35512 = 4.54 V
+IN1_sw(nom) =  1.504          / 0.35971 = 4.18 V
+IN1_sw(min) = (1.469 − 0.040) / 0.36433 = 3.92 V
+```
+
+**Band 3.92 – 4.54 V, nominal 4.18 V.** Clearance below the 4.75 V legal
+minimum is therefore **≈ 0.21 V**, not the ≥ 0.32 V rev 2 claimed.
+
+That clearance is real but not generous. A brick sitting at exactly 4.75 V has
+0.21 V of headroom; add cable and connector drop and IN1 can reach ≈ 4.6 V,
+leaving ≈ 0.06 V. **If it does hand back, the outcome is benign** — the mux
+selects a converter that is regulating 5.00 V, which is what the board runs on
+in bus-powered mode anyway. The failure direction is "hands back slightly
+early", never "holds a collapsing supply", which is the behaviour that
+mattered. Tightening it further would need 0.5 % divider resistors, which is
+not worth spending for a benign edge. **Task 6 implements this; bring-up item
+10 measures it by ramping the external supply down under load.**
+
+Comparator margin `PR1 − CP2` when 3 A is detected, worst case at IN1 = 4.75 V:
+`4.75 × 0.35512 − 1.571` = 115 mV, of which 40 mV is the offset budget — the
+75 mV that remains is the same statement as the 0.21 V of IN1 headroom above,
+referred through the divider.
 
 **Re-verified against Table 9-3, all states:**
 
@@ -701,7 +722,7 @@ Comparator margin `PR1 − CP2` when 3 A is detected: 293 mV at IN1 = 5.00 V,
 | 3 | present, 3 A confirmed | running | 1.51 V (1) | 1.80 V (1) | `(0,0,1,1)` XCOMP, `PR1 > CP2` | **IN1** ✓ |
 | 4 | present | off (host Default) | ≈ 0 (0) | either | `(0,1,X,X)` invalid input | **IN1** ✓ |
 | 5 | absent | off | 0 | 0 | `(1,1,X,X)` | Hi-Z ✓ |
-| 6 | 3 A confirmed, then sags < 4.19 V | running | 1.51 V (1) | < 1.51 V (1) | `(0,0,1,1)` XCOMP, `PR1 ≤ CP2` | **IN2** ✓ switchback |
+| 6 | 3 A confirmed, then sags < 4.18 V nom | running | 1.51 V (1) | < 1.51 V (1) | `(0,0,1,1)` XCOMP, `PR1 ≤ CP2` | **IN2** ✓ switchback |
 
 State 2 is the one DR-06 exists for, and it is now a *deterministic* table row
 rather than VCOMP — a weak supply sitting above the converter output can never
@@ -714,9 +735,17 @@ needed; **it lands on PR1, not CP2.** CP2 is never switched — it is a static
 bias that arms XCOMP and sets the threshold PR1 must cross.
 
 Pin leakage on both pins is ±0.1 µA max against Thevenin impedances of 7.13 kΩ
-(CP2) and 6.4 kΩ (PR1) ⇒ ≤ 0.8 mV of error. 1 % resistors are sufficient:
-±1 % on both dividers moves the switchback threshold ~±2 %, already inside the
-4.03–4.43 V band quoted above.
+(CP2) and 6.4 kΩ (PR1) ⇒ ≤ 0.8 mV of error, small enough to ignore beside the
+±40 mV offset. 1 % resistors are sufficient — their contribution is already
+inside the 3.92–4.54 V band computed above, which is where it belongs.
+
+**On state 4** (external present, converter off): IN1 is selected through the
+invalid-input row *without* a 3 A confirmation. That is not a DR-06 violation —
+it is the only source available, since the converter is off precisely because
+the host advertised Default. What bounds a weak supply in that state is the
+per-port `TPS2553` `ILIM` and the downstream ports' Default (500 mA)
+advertisement, not the mux. Recorded because the six-row table makes the state
+visible for the first time.
 
 **One residual window, worth a bring-up check.** While the converter is
 soft-starting, `ISO_5V_PRE` passes through the range where IN2 is above `V_UV`
@@ -802,7 +831,8 @@ sourcing flag: < 1000 units.
 
 | Part | MPN | Package | Distributor | Stock | Price (1) | Price (100) | Status | Flag |
 |---|---|---|---|---|---|---|---|---|
-| Buck-boost converter | `TPS630701RNMR` (fixed 5 V) | VQFN-HR-15 | DigiKey | **1,740** | $3.37 | $2.09 | Active | **thin — see below** |
+| Buck-boost converter | `TPS630701RNMR` (fixed 5 V) | VQFN-HR-15 | DigiKey | **1,740** | $3.37 | $2.09 | Active, **9 wk factory lead** | **thin — see below** |
+| — second source | `TPS630701RNMR` | VQFN-HR-15 | LCSC C2876599 | 520 | — | $1.11 | Active | also thin |
 | — adjustable fallback | `TPS63070RNMR` | VQFN-HR-15 | DigiKey | 26,889 | $3.37 | $2.09 | Active | — |
 | 3.3 V buck | `TPS62203DBVR` | SOT-23-5 | DigiKey | 2,205 | $1.62 | $0.954 | Active | — |
 | " | `TPS62203DBVR` | SOT-23-5 | LCSC C9051 | 8,180 | $1.41 | $0.821 (1k) | Active | — |
@@ -834,12 +864,14 @@ sourcing flag: < 1000 units.
 2. **`744043100` carries a 24-week manufacturer lead time.** 3,922 in stock
    covers prototypes; any 10 µH / ≥ 0.5 A / ≤ 200 mΩ shielded inductor in a
    ≤ 5 × 5 mm body substitutes without change.
-3. **`TPS630701RNMR` at 1,740 units** — the thinnest line on the board, and
-   deliberately accepted. The fixed output is worth ~80 mV of port-voltage
-   margin that no sourceable resistor divider can buy back (§2.4). Mitigation
-   is the DNP divider footprints: `TPS63070RNMR` (26,889) is pin-identical and
-   drops in as a stuff change, at the cost of that margin. Buy the fixed part
-   ahead of the board for anything past prototypes.
+3. **`TPS630701RNMR` at 1,740 units (DigiKey) + 520 (LCSC), 9-week factory
+   lead** — the thinnest line on the board, and deliberately accepted. The
+   fixed output is worth ~57 mV of port-voltage margin over the best divider
+   that is actually sourceable (§2.4). Two mitigations: the LCSC second source
+   above, and the DNP divider footprints — `TPS63070RNMR` (26,889) is
+   pin-identical and drops in as a stuff change, at the cost of that margin.
+   Given the 9-week lead, **buy the fixed part ahead of the board** for
+   anything past a first prototype run.
 4. **0.1 % 0402 resistors are not a design option here.** `ERA-2AEB5362X`
    (53.6 kΩ) shows 21 units on a 33-week lead, and 10.2 kΩ at 0.1 % is not
    reliably stocked. Recorded so a later reader does not "fix" the port-voltage
@@ -881,8 +913,8 @@ delay that covers the converter-startup window described at the end of §4.3.
 **`CP2` is a static bias from `IN2` (`ISO_5V_PRE`) via 23.7 kΩ / 10.2 kΩ — not
 from IN1, and not driven by the detect.** Biasing it from IN1 makes both XCOMP
 inputs scale together and leaves no switchback threshold. As specified, the
-external supply is handed back to the converter at **IN1 ≈ 4.19 V**
-(band 4.03–4.43 V). See §4.3 for the full six-state truth-table check, and note
+external supply is handed back to the converter at **IN1 ≈ 4.18 V nominal,
+worst-case band 3.92–4.54 V** (≈ 0.21 V clear of the 4.75 V legal minimum). See §4.3 for the full six-state truth-table check, and note
 that the spec's DR-06 wording is wrong.
 
 **Task 7 (hub rails)** — `TPS62203DBVR` + `744043100` per §3.4, laid out as a
@@ -928,7 +960,7 @@ stuff option against `AP2112K-3.3` + 0 Ω per §3.5. Budget the hub at
    behind it.
 10. **Measure the switchback threshold**: with 3 A confirmed and the ports
     loaded, ramp the external supply down and confirm the handover to the
-    converter occurs in the **4.03–4.43 V** band and not at `V_UV` (2.8 V).
+    converter occurs in the **3.92–4.54 V** band and not at `V_UV` (2.8 V).
 11. **Check the converter-startup window** (end of §4.3): with an external
     supply present but 3 A *not* confirmed, power-cycle and confirm the mux
     does not linger on IN1 once `ISO_5V_PRE` is up. Size the TPS2121 `SS`
