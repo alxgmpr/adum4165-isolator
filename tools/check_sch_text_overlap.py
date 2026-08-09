@@ -213,7 +213,23 @@ def parse_size(effects_node, default=1.27):
 
 
 def is_hidden(prop_node):
-    return find_one(prop_node, "hide") is not None
+    # Normally `(hide yes)` is a direct child of the property node, e.g.
+    # (property "Reference" "#PWR1" (at ...) (hide yes) (effects ...)).
+    # At least one MCP tool used on this project (kicad's
+    # batch_set_schematic_property_positions with visible=false) instead
+    # nests it one level down, inside `effects`:
+    #   (effects (font ...) (hide yes))
+    # KiCad's own parser accepts both placements and hides the field either
+    # way (confirmed by rendering: text hidden this way does not appear in
+    # `kicad-cli sch export svg` output). Check both spots so this checker
+    # doesn't report false-positive overlaps against text that is actually
+    # invisible on the real schematic.
+    if find_one(prop_node, "hide") is not None:
+        return True
+    effects = find_one(prop_node, "effects")
+    if effects is not None and find_one(effects, "hide") is not None:
+        return True
+    return False
 
 
 def extract_property_items(symbol_node, owner_ref):
