@@ -24,6 +24,15 @@ datasheets/manifest.json
 # ARE tracked; only the upstream vendor packages are ignored.
 lib/
 *.rpt
+# Fabrication outputs regenerate from the board in one click (Fabrication
+# Toolkit / kicad-cli). The toolkit's options file IS tracked -- it is the
+# config that makes those outputs reproducible, not an output itself.
+production/
+# Freerouting session intermediates. Regenerate with export_dsn; the routed
+# result lives in the .kicad_pcb, which is what matters.
+freerouting.dsn
+temp-freerouting.dsn
+*_drc_violations.json
 tools/*.jar
 tools/ar_work/
 __pycache__/
