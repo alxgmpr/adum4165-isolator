@@ -8,7 +8,9 @@
   (lib_symbols
     (symbol "Connector:USB_C_Receptacle_USB2.0_16P"
       (pin_names
-        (offset 1.016))
+        (offset 1.016)
+				(hide yes)
+			)
       (exclude_from_sim no)
       (in_bom yes)
       (on_board yes)
@@ -1024,6 +1026,10 @@
                 (size 0.762 0.762))))))
       (embedded_fonts no))
     (symbol "Isolator:ADUM4165"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
       (exclude_from_sim no)
       (in_bom yes)
       (on_board yes)
@@ -3516,12 +3522,6 @@
       (xy 110.49 100.33))
     (uuid "84ae84bd-89d6-4552-8301-7271d1b2abf9"))
 
-  (text "UPSTREAM HOST (GND1)"
-    (at 32 36 0)
-    (effects
-      (font
-        (size 2.54 2.54)))
-    (uuid "db7aca63-cc70-471b-b311-1aae044310b4"))
 
   (label "HOST_D+"
     (at 130 102.87 0)
@@ -3564,12 +3564,12 @@
     (dnp no)
     (uuid "90b3b053-282c-4c0d-946c-82d497a595b9")
     (property "Reference" "J1"
-      (at 49.53 96.52 0)
+      (at 49.53 81.28 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "USB_C_Receptacle_USB2.0_16P"
-      (at 49.53 104.14 0)
+      (at 49.53 76 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3605,7 +3605,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "24MHz"
-      (at 149.86 124.46 0)
+      (at 149.86 115.57000000000001 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3641,7 +3641,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "ADuM4165"
-      (at 185.42 109.22 0)
+      (at 185.42 100.33 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3672,12 +3672,12 @@
     (dnp no)
     (uuid "6b63c73f-0676-4eab-af14-c16f295526ed")
     (property "Reference" "R1"
-      (at 90.17 81.28 0)
+      (at 93.98 85.09 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "5.1k"
-      (at 90.17 88.9 0)
+      (at 93.98 86.36 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3708,12 +3708,12 @@
     (dnp no)
     (uuid "4feb0bc8-57bb-4ccb-a010-9d31fa5504ff")
     (property "Reference" "R2"
-      (at 90.17 100.33 0)
+      (at 93.98 104.14 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "5.1k"
-      (at 90.17 107.95 0)
+      (at 93.98 105.41 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3744,12 +3744,12 @@
     (dnp no)
     (uuid "9d21e7e3-b72d-42e0-a13b-f289fe7c8ce0")
     (property "Reference" "D1"
-      (at 66.04 54.61 0)
+      (at 69.85 56.5 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "TVS"
-      (at 66.04 62.23 0)
+      (at 69.85 60.5 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3780,12 +3780,12 @@
     (dnp no)
     (uuid "567e44cf-bb04-4cb1-b9d6-4c64dd9493a7")
     (property "Reference" "C1"
-      (at 76.2 54.61 0)
+      (at 80.01 58.42 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "0.1uF"
-      (at 76.2 62.23 0)
+      (at 80.01 59.690000000000005 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3816,12 +3816,12 @@
     (dnp no)
     (uuid "1a1355c9-65b6-4b94-a465-9e1154ed16b2")
     (property "Reference" "C2"
-      (at 86.36 54.61 0)
+      (at 90.17 58.42 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "4.7uF"
-      (at 86.36 62.23 0)
+      (at 90.17 59.690000000000005 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3852,12 +3852,12 @@
     (dnp no)
     (uuid "572f4fae-a63b-4428-90f2-fecf31e5c8ed")
     (property "Reference" "C4"
-      (at 171.45 71.12 0)
+      (at 175.26 74.93 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "0.1uF"
-      (at 171.45 78.74 0)
+      (at 175.26 76.2 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3888,12 +3888,12 @@
     (dnp no)
     (uuid "6ca32b26-c9c0-4816-9cba-de608bd59a67")
     (property "Reference" "C3"
-      (at 180.34 71.12 0)
+      (at 184.15 74.93 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "0.1uF"
-      (at 180.34 78.74 0)
+      (at 184.15 76.2 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3924,12 +3924,12 @@
     (dnp no)
     (uuid "f6eb7b93-5528-4903-bc2c-15892be60299")
     (property "Reference" "C5"
-      (at 143.51 130.81 0)
+      (at 147.32 134.62 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "8pF"
-      (at 143.51 138.43 0)
+      (at 147.32 135.89000000000001 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3960,12 +3960,12 @@
     (dnp no)
     (uuid "ada3971a-a553-4bec-a859-6a87bca9f2dc")
     (property "Reference" "C6"
-      (at 157.48 130.81 0)
+      (at 161.29 134.62 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "8pF"
-      (at 157.48 138.43 0)
+      (at 161.29 135.89000000000001 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4261,7 +4261,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "VBUS_HOST"
-      (at 180.34 76.2 0)
+      (at 180.34 69 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4298,7 +4298,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "VDD1"
-      (at 171.45 76.2 0)
+      (at 171.45 69 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4329,12 +4329,12 @@
     (dnp no)
     (uuid "c40ddb6d-2005-403a-aab6-40fbb8443d87")
     (property "Reference" "U2"
-      (at 105.41 96.52 0)
+      (at 105.41 91.44 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "USBLC6-2SC6"
-      (at 105.41 104.14 0)
+      (at 105.41 90.17 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4725,4 +4725,15 @@
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9"
           (reference "#PWR017")
           (unit 1)))))
+	(text "UPSTREAM HOST (GND1)"
+		(exclude_from_sim no)
+		(at 24 40 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left bottom)
+		)
+		(uuid "69242bf1-9355-4f6b-be8f-941abf024a03")
+	)
 )
