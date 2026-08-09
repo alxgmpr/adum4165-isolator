@@ -3569,7 +3569,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "USB_C_Receptacle_USB2.0_16P"
-      (at 49.53 76 0)
+      (at 49.53 77 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3605,7 +3605,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "24MHz"
-      (at 149.86 115.57000000000001 0)
+      (at 149.86 112.84 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3641,7 +3641,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "ADuM4165"
-      (at 185.42 100.33 0)
+      (at 185.42 97.2 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3677,7 +3677,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "5.1k"
-      (at 93.98 86.36 0)
+      (at 93.98 89.09 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3713,7 +3713,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "5.1k"
-      (at 93.98 105.41 0)
+      (at 93.98 108.14 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3785,7 +3785,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "0.1uF"
-      (at 80.01 59.690000000000005 0)
+      (at 80.01 62.5 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3821,7 +3821,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "4.7uF"
-      (at 90.17 59.690000000000005 0)
+      (at 90.17 62.5 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3857,7 +3857,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "0.1uF"
-      (at 175.26 76.2 0)
+      (at 175.26 79.2 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3893,7 +3893,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "0.1uF"
-      (at 184.15 76.2 0)
+      (at 184.15 79.2 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3929,7 +3929,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "8pF"
-      (at 147.32 135.89000000000001 0)
+      (at 147.32 138.7 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -3965,7 +3965,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "8pF"
-      (at 161.29 135.89000000000001 0)
+      (at 161.29 138.7 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4076,7 +4076,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "GND1"
-      (at 90.17 91.44 0)
+      (at 90.17 94.44 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4113,7 +4113,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "GND1"
-      (at 90.17 110.49 0)
+      (at 90.17 113.49 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4224,7 +4224,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "GND1"
-      (at 180.34 81.28 0)
+      (at 180.34 84.28 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4329,12 +4329,12 @@
     (dnp no)
     (uuid "c40ddb6d-2005-403a-aab6-40fbb8443d87")
     (property "Reference" "U2"
-      (at 105.41 91.44 0)
+      (at 115 96.2 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "USBLC6-2SC6"
-      (at 105.41 90.17 0)
+      (at 115 92 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4408,7 +4408,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "GND1"
-      (at 171.45 81.28 0)
+      (at 171.45 84.28 0)
       (effects
         (font
           (size 1.27 1.27))))
@@ -4704,7 +4704,7 @@
         (font
           (size 1.27 1.27))))
     (property "Value" "VDD1"
-      (at 177.8 67.31 0)
+      (at 177.8 65.5 0)
       (effects
         (font
           (size 1.27 1.27))))
