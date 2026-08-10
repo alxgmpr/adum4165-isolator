@@ -5875,16 +5875,6 @@
 		)
 		(uuid "23ff8be0-67b9-4e87-8fdb-b9128772fbe8")
 	)
-	(text "UPSTREAM HOST (GND1)"
-		(at 24 40 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-			)
-			(justify left bottom)
-		)
-		(uuid "69242bf1-9355-4f6b-be8f-941abf024a03")
-	)
 	(text "Task 4: Upstream CC current-advertisement sensing (GND1)"
 		(at 198 50 0)
 		(effects
@@ -8904,186 +8894,6 @@
 				)
 			)
 		)
-	)
-	(text "CC current-advertisement sensing (GND1) -- design notes:"
-		(at 45 10.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "0164eb4b-83ca-4b52-827d-eba278dc85b7")
-	)
-	(text "- V_REF = 0.66 V, from a VBUS_HOST divider (R3/R4). This is the USB Type-C sink threshold for a 1.5 A source"
-		(at 45 13.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "0c335abd-9c39-4131-bb41-4edc136be9bb")
-	)
-	(text "  advertisement (Rp/CC voltage band per USB-PD/Type-C spec). CC1/CC2 above this level means the host is advertising"
-		(at 45 15.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "00772547-5ba9-4402-a3c0-167e06acc44c")
-	)
-	(text "  >=1.5 A."
-		(at 45 18.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5c9b3ae6-f09b-4ebd-9fb1-2732dc3a1b4f")
-	)
-	(text "- The reference MUST stay on VBUS_HOST, never on an isolated rail or anything downstream of EN/HOST_PWR_OK. The"
-		(at 45 21.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "fcf7ca51-0899-4a00-824d-09416dab48eb")
-	)
-	(text "  comparison result is what starts the converter; a reference derived from the converter's own output is a latch-up by"
-		(at 45 23.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "76d4cb17-23eb-40e5-84a2-c0d7eb6a02ed")
-	)
-	(text "  construction."
-		(at 45 26.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "e88f9f84-a907-4761-bc16-07d9f8a36c5e")
-	)
-	(text "- On an e-marked cable, one CC line carries VCONN at ~5 V, which reads as a false high (>0.66 V) at the unused"
-		(at 45 29 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "ad0910e3-395f-48b6-99c0-ed3e910dbb56")
-	)
-	(text "  comparator input. This is benign: VCONN only appears alongside cables/sources rated for high current, and the wire-"
-		(at 45 31.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "0518bf7f-8217-4c6c-a42d-cbc4ed2822ae")
-	)
-	(text "  OR only needs ONE CC line correct to assert. A false trigger here never asserts on a low-power host."
-		(at 45 34.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1ba1b6da-2144-454a-87a5-dfeb2f926d8e")
-	)
-	(text "- Q1 (2N7002) inverts CC_DET_L to drive HOST_PWR_OK active-high: gate=CC_DET_L, source=GND1, drain=HOST_PWR_OK, pulled"
-		(at 45 151.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "d65cc424-f27f-4e48-8c99-2c68750ce504")
-	)
-	(text "  up by R_EN (R6) to VBUS_HOST. HOST_PWR_OK feeds SN6505B.EN in Task 5."
-		(at 45 153.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "b97f3f80-49c9-4dda-b706-dcc43c3b99f4")
-	)
-	(text "- R_EN sizing is not a guess: SN6505B EN leakage is 20 uA max against a 0.7*VCC threshold, so R_EN <="
-		(at 45 156.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "9c0b62a9-5a6f-43db-b3ed-ab2608e042a6")
-	)
-	(text "  0.3*VBUS(min)/20uA = 71k. R6 = 10k gives EN ~4.55 V against a 3.325 V threshold (1.225 V margin). 100k here would"
-		(at 45 167.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "7de9eea6-5cf3-4371-8496-c63112e6d4b6")
-	)
-	(text "  fail (~2.75 V, below threshold)."
-		(at 45 174.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a4da9ffd-e206-4309-a3a9-1db692360eda")
-	)
-	(text "- Status LED D2 lights on INSUFFICIENT host power: Q2's gate reads CC_DET_L directly (already active-high for"
-		(at 45 177.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5b766f6a-3c6e-45d7-87f8-2212dce29b0d")
-	)
-	(text "  insufficient, no extra inverter needed) and sinks D2+R9 from VBUS_HOST when on."
-		(at 45 180.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "2306adcd-6a2c-4552-bc83-da29ac35353a")
-	)
-	(text "- Comparators (U3, TLV7042) are wired INVERTING: CC -> IN-, V_REF -> IN+. Open-drain outputs OUTA/OUTB wire-OR onto"
-		(at 45 42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "bb3a4650-4a2c-424b-8f0d-303e24c2b45d")
-	)
-	(text "  CC_DET_L through R5 (100k to VBUS_HOST): CC_DET_L is LOW when EITHER CC line exceeds 0.66 V (adequate host power),"
-		(at 45 44.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "497ac9fe-ba04-465b-87a2-a996ad58cc09")
-	)
-	(text "  HIGH otherwise."
-		(at 45 47.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "fbffe4e8-da09-46b6-86e0-8658ceb8e6e5")
 	)
 	(symbol
 		(lib_id "Power_Management:SN6505BDBV")
@@ -14565,7 +14375,7 @@
 		(dnp no)
 		(uuid "be8f6c0f-6f96-44f9-aaec-9b5fcc763dd3")
 		(property "Reference" "D5"
-			(at 220.56 13.84 0)
+			(at 284 53.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14644,7 +14454,7 @@
 		(dnp no)
 		(uuid "7332476e-e569-4e0d-be31-aa7057fb06ee")
 		(property "Reference" "C23"
-			(at 226.06 13.5 0)
+			(at 211 53.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14655,7 +14465,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 226.06 9 0)
+			(at 226 53.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14725,7 +14535,7 @@
 		(dnp no)
 		(uuid "054b4a14-9b5c-490e-b431-302d861ff5a5")
 		(property "Reference" "C24"
-			(at 238.76 16.0 0)
+			(at 241 53.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15361,7 +15171,7 @@
 		(dnp no)
 		(uuid "b6994a5a-0195-4a8e-8130-5503abc27f7c")
 		(property "Reference" "U7"
-			(at 251.46 13.590000000000003 0)
+			(at 256 53.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15371,7 +15181,7 @@
 			)
 		)
 		(property "Value" "TLV7042DDFR"
-			(at 251.46 9.39 0)
+			(at 271 53.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15458,7 +15268,7 @@
 		(dnp no)
 		(uuid "724ee707-dc46-4cba-8884-49edb45eaa89")
 		(property "Reference" "C26"
-			(at 256.54 13.97 0)
+			(at 188 60.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15469,7 +15279,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 256.54 18.17 0)
+			(at 203 60.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15628,7 +15438,7 @@
 			)
 		)
 		(property "Value" "2N7002"
-			(at 279.4 17.01 0)
+			(at 218 60.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16533,7 +16343,7 @@
 			)
 		)
 		(property "Value" "EXT_5V"
-			(at 213.36 16.256 0)
+			(at 233 60.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16731,7 +16541,7 @@
 			)
 		)
 		(property "Value" "EXT_5V"
-			(at 233.68 17 0)
+			(at 290 60.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17259,7 +17069,7 @@
 			)
 		)
 		(property "Value" "GND2"
-			(at 218 10.5 0)
+			(at 263 60.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18616,39 +18426,6 @@
 		)
 		(uuid "c0f866b1-0676-4970-9ca3-0a5def8b31cc")
 	)
-	(text "Task 6: External supply, 3A detect, TPS2121 priority mux (GND2)"
-		(exclude_from_sim no)
-		(at 185 1.8 0)
-		(effects
-			(font
-				(size 1.3 1.3)
-			)
-			(justify left bottom)
-		)
-		(uuid "b662c120-17b0-4606-9b0a-22f225a42452")
-	)
-	(text "CP2 rule (Table 9-3): CP2=hi,PR1=lo selects IN2; CP2=PR1=lo selects VCOMP (higher wins). CP2(pin3)=STATIC bias from ISO_5V_PRE, 23.7k/10.2k to GND2, never the 3A detect."
-		(exclude_from_sim no)
-		(at 185 4.3 0)
-		(effects
-			(font
-				(size 0.75 0.75)
-			)
-			(justify left bottom)
-		)
-		(uuid "3136592c-7f02-42ea-829d-395d7e1622da")
-	)
-	(text "PR1(pin6)=driven by 3A-detect 2N7002 inverter, 17.8k/10.0k EXT_5V to GND2. Switchback: approx 4.18V nominal, worst-case 3.92-4.54V -- measure at bring-up."
-		(exclude_from_sim no)
-		(at 185 6.8 0)
-		(effects
-			(font
-				(size 0.75 0.75)
-			)
-			(justify left bottom)
-		)
-		(uuid "3beb0a16-9fca-4754-b63e-c3a161696d18")
-	)
 	(wire
 		(pts
 			(xy 234.54 34.0) (xy 234.54 26.29)
@@ -19350,7 +19127,7 @@
 			)
 		)
 		(property "Value" "GND2"
-			(at 268 17 0)
+			(at 278 60.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19392,5 +19169,269 @@
 				)
 			)
 		)
+	)
+	(text "UPSTREAM HOST (GND1)"
+		(exclude_from_sim no)
+		(at 24 45 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left bottom)
+		)
+		(uuid "b90449f1-35e2-4e5f-99b3-134092e1758e")
+	)
+	(text "CC current-advertisement sensing (GND1) -- design notes:"
+		(exclude_from_sim no)
+		(at 15 12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b21749e4-e7d7-4e85-9c92-c8c1cfcda989")
+	)
+	(text "- V_REF = 0.66 V, from a VBUS_HOST divider (R3/R4). This is the USB Type-C sink threshold for a 1.5 A source"
+		(exclude_from_sim no)
+		(at 15 15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be8434bf-41f4-4c6f-8e86-a46cfbc7a6de")
+	)
+	(text "  advertisement (Rp/CC voltage band per USB-PD/Type-C spec). CC1/CC2 above this level means the host is advertising"
+		(exclude_from_sim no)
+		(at 15 18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0a6679a0-81b6-4794-bee2-6d187a1f0a73")
+	)
+	(text "  >=1.5 A."
+		(exclude_from_sim no)
+		(at 15 21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "90a85de0-cef3-42d8-815e-7c7e893f324c")
+	)
+	(text "- The reference MUST stay on VBUS_HOST, never on an isolated rail or anything downstream of EN/HOST_PWR_OK. The"
+		(exclude_from_sim no)
+		(at 15 24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5fc2f1b3-e1ce-4d18-93cc-612cdffcd181")
+	)
+	(text "  comparison result is what starts the converter; a reference derived from the converter's own output is a latch-up by"
+		(exclude_from_sim no)
+		(at 15 27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ead6abf4-69ab-4981-bb7a-3cb6b0e7fe7d")
+	)
+	(text "  construction."
+		(exclude_from_sim no)
+		(at 15 30 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "427e0b25-e6d6-4259-ac03-59817206e92f")
+	)
+	(text "- On an e-marked cable, one CC line carries VCONN at ~5 V, which reads as a false high (>0.66 V) at the unused"
+		(exclude_from_sim no)
+		(at 15 33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "77719be2-8a31-4844-8630-ffad3da4f358")
+	)
+	(text "  comparator input. This is benign: VCONN only appears alongside cables/sources rated for high current, and the wire-"
+		(exclude_from_sim no)
+		(at 15 36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b229aabd-3dda-4aca-872e-9a375aeadc9f")
+	)
+	(text "  OR only needs ONE CC line correct to assert. A false trigger here never asserts on a low-power host."
+		(exclude_from_sim no)
+		(at 15 39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "764c62af-afb9-48c1-a728-189902e6500e")
+	)
+	(text "- Comparators (U3, TLV7042) are wired INVERTING: CC -> IN-, V_REF -> IN+. Open-drain outputs OUTA/OUTB wire-OR onto"
+		(exclude_from_sim no)
+		(at 15 48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3106a329-3468-4554-86c1-391eb4f834be")
+	)
+	(text "  CC_DET_L through R5 (100k to VBUS_HOST): CC_DET_L is LOW when EITHER CC line exceeds 0.66 V (adequate host power),"
+		(exclude_from_sim no)
+		(at 15 51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fa5e7e1d-8698-49bb-8745-40c9fdb859ac")
+	)
+	(text "  HIGH otherwise."
+		(exclude_from_sim no)
+		(at 15 54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "080203ce-55c0-4893-a16d-acfa45fabcae")
+	)
+	(text "- Q1 (2N7002) inverts CC_DET_L to drive HOST_PWR_OK active-high: gate=CC_DET_L, source=GND1, drain=HOST_PWR_OK, pulled"
+		(exclude_from_sim no)
+		(at 15 230 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4a2145df-bc8c-490a-980e-708d624fc912")
+	)
+	(text "  up by R_EN (R6) to VBUS_HOST. HOST_PWR_OK feeds SN6505B.EN in Task 5."
+		(exclude_from_sim no)
+		(at 15 233 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4d2e38f8-98d9-4268-921d-9470f1adfbef")
+	)
+	(text "- R_EN sizing is not a guess: SN6505B EN leakage is 20 uA max against a 0.7*VCC threshold, so R_EN <="
+		(exclude_from_sim no)
+		(at 15 236 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2452fdbe-1597-4f94-b0c7-a4070be1d7fd")
+	)
+	(text "  0.3*VBUS(min)/20uA = 71k. R6 = 10k gives EN ~4.55 V against a 3.325 V threshold (1.225 V margin). 100k here would"
+		(exclude_from_sim no)
+		(at 15 241 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3c727086-f304-4651-b42b-b1410f24c982")
+	)
+	(text "  fail (~2.75 V, below threshold)."
+		(exclude_from_sim no)
+		(at 15 244 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ec96de64-ab74-43a0-888b-c4c52b0280b2")
+	)
+	(text "- Status LED D2 lights on INSUFFICIENT host power: Q2's gate reads CC_DET_L directly (already active-high for"
+		(exclude_from_sim no)
+		(at 15 249 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3002c04b-3e3e-4b72-bd40-719196c3e12c")
+	)
+	(text "  insufficient, no extra inverter needed) and sinks D2+R9 from VBUS_HOST when on."
+		(exclude_from_sim no)
+		(at 15 252 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bdbbcbbf-4ec5-44b5-b1c6-096a68226388")
+	)
+	(text "Task 6: External supply, 3A detect, TPS2121 priority mux (GND2)"
+		(exclude_from_sim no)
+		(at 185 12 0)
+		(effects
+			(font
+				(size 1.3 1.3)
+			)
+			(justify left bottom)
+		)
+		(uuid "d62ca819-faf1-4db4-a36b-688197eaf558")
+	)
+	(text "CP2 rule (Table 9-3): CP2=hi,PR1=lo selects IN2; CP2=PR1=lo selects VCOMP (higher wins). CP2(pin3)=STATIC bias from ISO_5V_PRE, 23.7k/10.2k to GND2, never the 3A detect."
+		(exclude_from_sim no)
+		(at 185 15 0)
+		(effects
+			(font
+				(size 0.75 0.75)
+			)
+			(justify left bottom)
+		)
+		(uuid "2b6f9285-d94b-4811-b3ec-61e4647b5dfd")
+	)
+	(text "PR1(pin6)=driven by 3A-detect 2N7002 inverter, 17.8k/10.0k EXT_5V to GND2. Switchback: approx 4.18V nominal, worst-case 3.92-4.54V -- measure at bring-up."
+		(exclude_from_sim no)
+		(at 185 18 0)
+		(effects
+			(font
+				(size 0.75 0.75)
+			)
+			(justify left bottom)
+		)
+		(uuid "08d90ab0-af6f-4805-9799-0e16129ccf8c")
 	)
 )
