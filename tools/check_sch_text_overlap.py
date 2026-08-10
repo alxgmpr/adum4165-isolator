@@ -349,6 +349,59 @@ def required_clearance(a, b):
     return GENERAL_CLEARANCE_MM
 
 
+# Page sizes in mm, landscape. KiCad draws a frame inset from the sheet edge
+# and reserves the bottom-right corner for the title block; TITLE_BLOCK_MM is
+# a conservative rectangle covering it.
+PAGE_SIZES_MM = {
+    "A5": (210.0, 148.0), "A4": (297.0, 210.0), "A3": (420.0, 297.0),
+    "A2": (594.0, 420.0), "A1": (841.0, 594.0), "A0": (1189.0, 841.0),
+    "A": (279.4, 215.9), "B": (431.8, 279.4), "C": (558.8, 431.8),
+    "D": (863.6, 558.8), "E": (1117.6, 863.6),
+}
+FRAME_INSET_MM = 10.0
+TITLE_BLOCK_W_MM = 105.0
+TITLE_BLOCK_H_MM = 30.0
+
+
+def get_paper(tree):
+    """Return (width_mm, height_mm) for the sheet's (paper "...") setting."""
+    for expr in tree:
+        for node in find_all(expr, "paper"):
+            name = node[1] if len(node) > 1 else "A4"
+            portrait = len(node) > 2 and node[2] == "portrait"
+            dims = PAGE_SIZES_MM.get(name)
+            if dims is None:
+                return None
+            return (dims[1], dims[0]) if portrait else dims
+    return PAGE_SIZES_MM["A4"]
+
+
+def check_page_bounds(items, paper):
+    """Text outside the drawable frame, or under the title block.
+
+    This is the failure the pairwise overlap test cannot see: a note whose
+    anchor is on-page but which is centre- or right-justified extends left of
+    that anchor and runs off the sheet, where it is silently clipped on plot.
+    An A4 sheet on this project accumulated several of these while the
+    pairwise check reported zero problems.
+    """
+    if paper is None:
+        return []
+    w, h = paper
+    xlo, xhi = FRAME_INSET_MM, w - FRAME_INSET_MM
+    ylo, yhi = FRAME_INSET_MM, h - FRAME_INSET_MM
+    tb_x, tb_y = xhi - TITLE_BLOCK_W_MM, yhi - TITLE_BLOCK_H_MM
+
+    bad = []
+    for it in items:
+        x0, x1, y0, y1 = it.bbox()
+        if x0 < xlo or x1 > xhi or y0 < ylo or y1 > yhi:
+            bad.append((it, "outside the frame"))
+        elif x1 > tb_x and y1 > tb_y:
+            bad.append((it, "under the title block"))
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("sch_file")
@@ -375,9 +428,25 @@ def main():
             if ov is not None:
                 overlaps.append((a, b, ov))
 
-    if not overlaps:
+    paper = get_paper(tree)
+    offpage = check_page_bounds(items, paper)
+    if paper:
+        print(f"Page {paper[0]:.0f}x{paper[1]:.0f} mm")
+
+    if offpage:
+        print(f"\n{len(offpage)} item(s) off-page or under the title block:\n")
+        for it, why in offpage:
+            x0, x1, y0, y1 = it.bbox()
+            print(f"  {it.label()} @ ({it.x:.2f},{it.y:.2f}) "
+                  f"box=({x0:.2f},{y0:.2f})-({x1:.2f},{y1:.2f}) -- {why}")
+        print()
+
+    if not overlaps and not offpage:
         print("No overlaps found.")
         return 0
+
+    if not overlaps:
+        return 1
 
     print(f"\n{len(overlaps)} overlap(s) found:\n")
     for a, b, (ox, oy) in overlaps:
