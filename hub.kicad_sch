@@ -13366,7 +13366,7 @@
 		(fields_autoplaced yes)
 		(uuid "38f81b60-cfdf-4668-aaad-35b717920a2e")
 		(property "Reference" "J2"
-			(at 198.12 2.54 0)
+			(at 198.12 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13376,7 +13376,7 @@
 			)
 		)
 		(property "Value" "USB_C_Receptacle_PowerOnly_6P"
-			(at 198.12 5.08 0)
+			(at 198.12 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19030,7 +19030,7 @@
 		(fields_autoplaced yes)
 		(uuid "830760f6-3d2a-4f9d-983a-078d89321cf6")
 		(property "Reference" "U11"
-			(at 211.6933 285.75 0)
+			(at 211.6933 280.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19041,7 +19041,7 @@
 			)
 		)
 		(property "Value" "USB2514B"
-			(at 211.6933 288.29 0)
+			(at 211.6933 283.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -27036,7 +27036,7 @@
 			)
 		)
 		(property "Value" "EXT_5V"
-			(at 254 10.1599 0)
+			(at 254 13.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
