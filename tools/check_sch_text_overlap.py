@@ -232,7 +232,15 @@ def is_hidden(prop_node):
     return False
 
 
-def extract_property_items(symbol_node, owner_ref):
+def extract_property_items(symbol_node, owner_ref, symbol_angle=0):
+    """Extract a symbol's visible Reference/Value/... fields.
+
+    `symbol_angle` is the placed symbol's own rotation. KiCad draws a field at
+    the SUM of the symbol's rotation and the field's stored angle, so a field
+    stored at 90 deg on a symbol placed at 90 deg reads *horizontally*. Judging
+    such a field as vertical gets its bounding box exactly backwards, which
+    both hides real collisions on rotated parts and invents false ones.
+    """
     items = []
     for prop in find_all(symbol_node, "property"):
         # (property "Name" "Value" (at x y angle) (hide yes)? (effects ...)?)
@@ -251,7 +259,8 @@ def extract_property_items(symbol_node, owner_ref):
         effects = find_one(prop, "effects")
         size = parse_size(effects)
         just_h, just_v = parse_justify(effects)
-        items.append(TextItem(owner_ref, name, value, x, y, size, just_h, just_v, angle))
+        drawn_angle = (int(symbol_angle) + int(angle)) % 360
+        items.append(TextItem(owner_ref, name, value, x, y, size, just_h, just_v, drawn_angle))
     return items
 
 
@@ -283,7 +292,9 @@ def extract_items(tree):
             # (lib_symbols (symbol "Name" ...) ...), so they never appear
             # here as direct children of kicad_sch with tag=="symbol".)
             ref = get_reference(child)
-            items.extend(extract_property_items(child, ref))
+            sym_at = find_one(child, "at")
+            sym_angle = parse_at(sym_at)[2] if sym_at is not None else 0
+            items.extend(extract_property_items(child, ref, sym_angle))
 
         elif tag == "label":
             # (label "TEXT" (at x y angle) (effects ...))
