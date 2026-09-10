@@ -42,7 +42,7 @@ def local_models():
             'Laird_Technologies_BMI-S-209-F_29.36x18.50mm':(29.46,18.60,7.13)}
     aliases={
       'Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm':model_root/'Package_SON.3dshapes/WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm.step',
-      'USB_C_Receptacle_HRO_TYPE-C-31-M-12':ROOT/'build/revc/models/HRO.step',
+      'USB_C_Receptacle_HRO_TYPE-C-31-M-12':MODELS/'HRO.step',
     }
     for file in OUT.glob('*.kicad_mod'):
         f=read(file)
@@ -51,11 +51,17 @@ def local_models():
             src=Path(m[1].replace('${KICAD10_3DMODEL_DIR}',str(model_root)).replace('${KIPRJMOD}',str(ROOT)))
             if file.stem in aliases:src=aliases[file.stem]
             if not src.exists() and m[1].startswith('${KICAD10_3DMODEL_DIR}'):
-                src=ROOT/'build/revc/models'/m[1].split('}/')[1]
+                src=MODELS/src.name
             assert src.exists(),src
             dst=MODELS/src.name
             if src!=dst:shutil.copyfile(src,dst)
             m[1]='${KIPRJMOD}/hub-lib.3dshapes/'+dst.name
+            if file.stem=='WE_750313638':
+                child(child(m,'rotate'),'xyz')[1:]=[-90,0,0]
+                child(child(m,'offset'),'xyz')[1:]=[-6.120114543,8.591146647,-3.475710646]
+            if file.stem=='USB_C_Receptacle_HRO_TYPE-C-31-M-12':
+                child(child(m,'rotate'),'xyz')[1:]=[-90,0,0]
+                child(child(m,'offset'),'xyz')[1:]=[-4.47,-3.65,0]
         if file.stem in envelopes:
             f[:]=[x for x in f if not(isinstance(x,list) and str(x[0])=='model')]
             x,y,z=envelopes[file.stem];cx=-2.68 if file.stem.startswith('USB_A_') else 0
@@ -93,6 +99,28 @@ def pad(f,num,x,y,w,h,layers=None):
         layers=layers or Pad.LAYERS_SMT,round_radius_handler=RoundRadiusHandler(radius_ratio=min(.25,.05/min(w,h)),maximum_radius=.05)))
 
 def save(f): KicadFileHandler(f).writeFile(str(OUT/(f.name+'.kicad_mod')))
+
+def placement_silk():
+    # Retain exact copper/Fab geometry. Connector bodies intentionally overhang
+    # the board by 0.5 mm; keep their ink inside that defined board edge.
+    for name,axis,limit,lower in [('USB_C_Receptacle_HRO_TYPE-C-31-M-12',1,2.9,False),
+            ('USB_A_Wuerth_614004134726_Horizontal',0,-11.58,True)]:
+        path=OUT/(name+'.kicad_mod');f=read(path);remove=[]
+        for a in children(f,'fp_line'):
+            if value(a,'layer')!='F.SilkS':continue
+            start=child(a,'start');end=child(a,'end');i=axis+1
+            outside=lambda p:p[i]<limit if lower else p[i]>limit
+            if outside(start) and outside(end):remove.append(a)
+            elif outside(start) or outside(end):
+                p,q=(start,end) if outside(start) else (end,start)
+                t=(limit-q[i])/(p[i]-q[i]);j=2 if i==1 else 1
+                p[j]=round(q[j]+t*(p[j]-q[j]),6);p[i]=limit
+        for a in remove:f.remove(a)
+        write(path,f);PROVENANCE[name]['silkscreen_adjustment']='Clipped mating end to provisional board edge; copper/Fab unchanged'
+    name='TPS630701RNM_VQFN-HR-15';path=OUT/(name+'.kicad_mod');f=read(path)
+    f[:]=[a for a in f if not(isinstance(a,list) and str(a[0])=='fp_rect' and value(a,'layer')=='F.SilkS')]
+    f.append(n('fp_circle',n('center',-2.2,1.95),n('end',-2.1,1.95),n('stroke',n('width',.12),n('type',S('default'))),n('fill',S('yes')),n('layer','F.SilkS')))
+    write(path,f);PROVENANCE[name]['silkscreen_adjustment']='Replaced pad-crossing body rectangle with pin-1 dot; copper/Fab unchanged'
 
 def custom():
     f=base('Microchip_SQFN36_6x6mm_EP3.7mm',[6.1,6.1],[7,7],
@@ -155,6 +183,7 @@ def main():
         assert not missing,(p['ref'],'symbol pins not present in land',missing,pads)
         assert not children(f,'via'),p['ref']
     local_models()
+    placement_silk()
     (ROOT/'docs/revc/footprint-provenance.json').write_text(json.dumps(PROVENANCE,indent=2)+'\n')
     print(f'Assigned {len(PARTS)} components; {len(list(OUT.glob("*.kicad_mod")))} project-local footprints')
 

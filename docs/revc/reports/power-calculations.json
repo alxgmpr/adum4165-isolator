@@ -1,0 +1,38 @@
+{
+  "core_3V3_mA": 290.0,
+  "core_5V_A_at_4_75V": 0.24702786377708977,
+  "U46_input_trip": {
+    "nominal_A": 2.87,
+    "minimum_A": 2.77166467471661,
+    "maximum_A": 2.971338216641298
+  },
+  "U47_port_trip": {
+    "nominal_A": 2.15,
+    "minimum_A": 2.0266204041399707,
+    "maximum_A": 2.2770638254693045
+  },
+  "ext_setpoint_V": {
+    "nominal": 5.2,
+    "minimum": 5.134282559861556,
+    "maximum": 5.268958717948718
+  },
+  "port_minimum_V_at_2A_and_mux_Tj_85C_with_20mV_ripple": 4.758495191440503,
+  "port_maximum_V_with_20mV_ripple": 5.288958717948717,
+  "losses": {
+    "U8_W": 0.4291764087502038,
+    "U30_W": 0.124,
+    "R116_W": 0.04058,
+    "each_port_switch_W": 0.03375,
+    "R110_W": 0.18261,
+    "U28_at_90pct_W": 1.2806535947712423,
+    "U10_at_85pct_W": 0.16888235294117648
+  },
+  "loop_screen": {
+    "corners": 432,
+    "minimum_phase_margin_deg": 56.52629084511577,
+    "minimum_gain_margin_dB": 16.64501843998074,
+    "maximum_fc_Hz": 11770.829817060192,
+    "corners_above_TI_fc_limit": 0
+  },
+  "limits": "DC calculation and ideal averaged-loop screening only. Efficiency, distributed capacitance, noise, transient response, thermal rise and physical USB compliance require hardware tests."
+}

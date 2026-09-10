@@ -1,0 +1,110 @@
+Reference,Value,Owning pin / purpose,X mm,Y mm,Angle deg
+CY1,1nF Y1,"1nF 400VAC Y1, 14mm lead spacing; sole intentional inter-ground capacitance",35,104,0
+C10,100nF,U5 primary current loop,26,25,90
+C11,4.7uF,U5 primary current loop,29,24.8,0
+C12,100nF,U5 primary current loop,29,31,0
+C13,22uF,Rectifier/U6 input; voltage up to 7.2V,66,33.5,0
+C15,22uF,Rectifier/U6 input; voltage up to 7.2V,71,33.5,0
+C16,22uF,Rectifier/U6 input; voltage up to 7.2V,76,33.5,0
+C14,100nF,Rectifier/U6 input; voltage up to 7.2V,60,25,90
+C17,100nF,Rectifier/U6 input; voltage up to 7.2V,69.5,30.9,0
+C18,22uF,U6 output bank,66,22,0
+C19,22uF,U6 output bank,71,22,0
+C20,22uF,U6 output bank,76,22,0
+C21,100nF,U6 output bank,70,24.5,0
+C22,100nF,U6.3; no external load,66,28,90
+C67,10nF,U1.4 to U1.3; top-layer loop; smallest capacitor closest,35,73.4,90
+C66,100nF,U1.4 to U1.3; top-layer loop; smallest capacitor closest,33.5,73.4,90
+C65,4.7uF,U1.4 to U1.3; top-layer loop; smallest capacitor closest,31.6,73.4,90
+C70,10nF,U1.11 to U1.12; top-layer loop; smallest capacitor closest,35,78.6,90
+C69,100nF,U1.11 to U1.12; top-layer loop; smallest capacitor closest,33.5,78.6,90
+C68,4.7uF,U1.11 to U1.12; top-layer loop; smallest capacitor closest,31.6,78.6,90
+C73,10nF,U1.25 to U1.26; top-layer loop; smallest capacitor closest,49,73.4,270
+C72,100nF,U1.25 to U1.26; top-layer loop; smallest capacitor closest,50.5,73.4,270
+C71,4.7uF,U1.25 to U1.26; top-layer loop; smallest capacitor closest,52.4,73.4,270
+C76,10nF,U1.18 to U1.17; top-layer loop; smallest capacitor closest,49,78.6,270
+C75,100nF,U1.18 to U1.17; top-layer loop; smallest capacitor closest,50.5,78.6,270
+C74,4.7uF,U1.18 to U1.17; top-layer loop; smallest capacitor closest,52.4,78.6,270
+C3,1uF,U1.1 to U1.3,34,69.3,0
+C4,100nF,U1.2 to U1.3,34.6,70.9,0
+C63,100nF,U1.5 to U1.3,32,70.9,0
+C28,1uF,U1.28 to U1.26,50,69.3,180
+C29,100nF,U1.27 to U1.26,49.4,70.9,180
+C64,1uF,U1.24 to U1.26,52,70.9,180
+C79,22uF,U28 input,92,21,90
+C80,22uF,U28 input,92,26,90
+C81,100nF,U28 input,96.5,32.9,0
+C82,100nF,U28.20 boot,96,27.4,0
+C83,100nF,U28.19 boot,99.5,27.4,0
+C84,10uF,U28.18; effective capacitance >4.7uF,103.4,25.8,90
+C85,22uF,U28 output bank,106,30,0
+C86,22uF,U28 output bank,106,33.5,0
+C87,22uF,U28 output bank,106,37,0
+C88,22uF,U28 output bank,111,33.5,0
+C89,100nF,U28.11,99.5,33.1,90
+C92,220uF,Logic hold-up during source switch and load shedding,68,44,0
+C44,220uF,Port 1 VBUS bypass,124,31,0
+C47,220uF,Port 2 VBUS bypass,124,56,0
+C113,4.7uF,U45.4 input; part of direct attach capacitance,20,81.5,90
+C114,22uF,U45 output in addition to the local U1 bypass groups,29,90,0
+C30,10uF,U10.2,61.6,52,90
+C31,22uF,U10.6 output bank,53.5,57,0
+C35,100nF,U11.5 to EP37,91.7,79,0
+C36,100nF,U11.10 to EP37,89,74.3,90
+C37,100nF,U11.15 to EP37,86.5,74.3,90
+C38,100nF,U11.23 to EP37,82.3,79,180
+C39,100nF,U11.29 to EP37,85.5,83.7,270
+C40,100nF,U11.36 to EP37,89.3,83.7,270
+C34,100nF,U11.14; datasheet allows 0.1uF nominal maximum,87.5,72,90
+C59,100nF,U11.34; no added parallel 10nF,87.7,83.7,270
+C32,27pF,"CL18pF: 27pF external + 6pF IC + 3pF PCB per pin, divided by two; verify frequency",83.8,87.5,90
+C33,27pF,Matched to C32; adjust after measuring stray capacitance/frequency,90.2,87.5,90
+C50,10uF,Port 3 VBUS bypass,119.0,65.25,0
+C56,10uF,Port 4 VBUS bypass,119.25,93.0,90
+C2,1uF,U22 input,21.0,61.25,0
+C24,1uF,U23 input,84.0,9.25,0
+C41,4.7uF,Shared hub bulk,72.0,54.75,0
+C61,1uF,U22 output; Ceff >= 0.47uF,18.25,66.5,0
+C77,1uF,U23 output,84.0,14.75,0
+C1,100nF,J1 local bypass,3.25,70.0,0
+C100,100nF,U20 and port logic bypass 2,121.25,70.75,90
+C101,100nF,U20 and port logic bypass 3,124.75,67.25,90
+C102,100nF,U20 and port logic bypass 4,124.75,70.75,90
+C103,100nF,U21 and port logic bypass 1,121.25,92.25,90
+C104,100nF,U21 and port logic bypass 2,121.25,95.75,90
+C105,100nF,U21 and port logic bypass 3,124.75,92.25,90
+C106,100nF,U21 and port logic bypass 4,124.75,95.75,90
+C107,100nF,U41.5,86.25,59.75,0
+C108,100nF,U42.5,75.25,58.5,0
+C109,100nF,U43.5,79.25,64.75,0
+C110,100nF,U46.9,82.25,31.5,90
+C112,100nF,U47.9,97.75,52.5,90
+C115,22nF,U30 controlled ramp avoids simultaneous USB-A reservoir inrush,85.0,50.0,0
+C23,100nF,J2 bypass,92.0,9.25,0
+C25,100nF,U7.12,89.25,14.75,0
+C26,100nF,U25.5,100.25,11.75,0
+C27,100nF,,74.75,44.75,90
+C42,100nF,U33.6,63.25,83.75,0
+C43,100nF,Port 1 VBUS bypass,104.75,23.25,0
+C45,100nF,Port 1 VBUS bypass,109.25,23.75,0
+C46,100nF,Port 2 VBUS bypass,106.75,23.5,0
+C48,100nF,Port 2 VBUS bypass,109.25,38.75,0
+C49,100nF,Port 3 VBUS bypass,113.75,65.75,0
+C51,100nF,Port 3 VBUS bypass,118.75,67.5,90
+C55,100nF,Port 4 VBUS bypass,113.75,91.75,0
+C57,100nF,Port 4 VBUS bypass,117.0,91.5,0
+C62,100nF,U26.1,24.25,44.25,0
+C7,100nF,U3.12,15.75,68.75,90
+C78,10nF,U27 controlled input inrush,88.0,25.0,0
+C8,100nF,U24.5,23.25,66.75,0
+C90,220nF,,96.0,35.0,0
+C91,100pF,,101.75,30.25,90
+C93,100nF,U8 OUT bypass,79.25,46.0,90
+C94,100nF,U31.6,81.25,54.75,0
+C95,100nF,U32.5,94.25,58.75,0
+C96,100nF,U29.1/U30.1,82.75,43.75,0
+C97,100nF,Port distribution,87.25,43.75,0
+C98,100nF,U34.8,59.5,100.25,0
+C99,100nF,U20 and port logic bypass 1,121.0,67.0,0
+C116,22uF,U48 fault delay; capacitor returns to 3.3V so fresh startup initially reports healthy,97.0,41.5,0
+C117,100nF,U48.5,99.75,44.25,90

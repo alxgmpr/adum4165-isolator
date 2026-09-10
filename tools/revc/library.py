@@ -71,24 +71,27 @@ def boxed(name, table):
     for num,p in table.items():
         pname=p['name']; typ=p['type']
         if typ=='power_in' or pname in ['EP','GND','GND1','GND2','PGND','AGND']:
-            (bottom if any(t in pname for t in ['GND','VSS','EP']) else top).append(num)
+            grounded_selector=(name.startswith('TPS62162') and pname=='FB') or (name.startswith('TPS63070') and pname=='VSEL')
+            (bottom if grounded_selector or any(t in pname for t in ['GND','VSS','EP']) or pname=='PAD' else top).append(num)
         elif typ=='power_out':right.append(num)
         elif name.startswith('USB2514'):
             (right if num in ['1','2','3','4','6','7','8','9','12','13','16','17','18','19','20','21'] else left).append(num)
         elif typ in ['output','open_collector','open_emitter']:right.append(num)
         else:left.append(num)
-    width=max(35.56,5.08*(max(len(top),len(bottom))+1))
-    h=max(25.4,5.08*(max(len(left),len(right))+3))
+    left_text=max([len(table[k]['name']) for k in left] or [0])
+    right_text=max([len(table[k]['name']) for k in right] or [0])
+    width=max(17.78,2.54*(max(len(top),len(bottom))+1),2.54*int((.65*(left_text+right_text)+7.61)/2.54))
+    h=max(12.7,2.54*(max(len(left),len(right))+4))
     sym.append(n('symbol',name+'_0_1',n('rectangle',n('start',-width/2,h/2),n('end',width/2,-h/2),
               n('stroke',n('width',0),n('type',S('default'))),n('fill',n('type',S('background'))))))
     unit=n('symbol',name+'_1_1')
     for side,nums in [('left',left),('right',right),('top',top),('bottom',bottom)]:
         for i,num in enumerate(nums):
-            pos=(i-(len(nums)-1)/2)*5.08
-            x,y,angle={'left':(-width/2-5.08,-pos,0),'right':(width/2+5.08,-pos,180),
-                       'top':(pos,h/2+5.08,270),'bottom':(pos,-h/2-5.08,90)}[side]
+            pos=(i-(len(nums)-1)/2)*2.54
+            x,y,angle={'left':(-width/2-2.54,-pos,0),'right':(width/2+2.54,-pos,180),
+                       'top':(pos,h/2+2.54,270),'bottom':(pos,-h/2-2.54,90)}[side]
             p=table[num]
-            unit.append(n('pin',S(p['type']),S('line'),n('at',x,y,angle),n('length',5.08),
+            unit.append(n('pin',S(p['type']),S('line'),n('at',x,y,angle),n('length',2.54),
                           n('name',p['name'],fx(1.016)),n('number',str(num),fx(1.016))))
     sym.append(unit)
     return sym
@@ -99,6 +102,11 @@ def get_symbol(identifier):
     if lib=='hub-custom':
         return boxed(name,{str(i+1):{'name':a,'type':b} for i,(a,b) in enumerate(CUSTOM[name])})
     s=source_symbol(identifier)
+    if name.startswith('USB2514'):
+        for prop in children(s,'property'):
+            if prop[1]=='ki_fp_filters':prop[2]='Microchip_SQFN36_6x6mm_EP3.7mm'
+        return s
+    if lib=='74xGxx':return s
     if lib not in ['Device','Transistor_FET','Diode','Connector','Mechanical','hub-isolator','power']:
         old=pin_table(s);s2=boxed(name,old)
         assert {(k,v['name'],v['type']) for k,v in old.items()}=={(k,v['name'],v['type']) for k,v in pin_table(s2).items()}

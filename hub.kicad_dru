@@ -1,0 +1,19 @@
+(version 1)
+# Nominal JLC04161H-3313, 90 ohm differential target. See routing guide.
+(rule "USB pair geometry"
+  (condition "A.hasNetclass('USB90')")
+  (constraint track_width (opt 0.15mm))
+  (constraint diff_pair_gap (opt 0.15mm))
+  (constraint diff_pair_uncoupled (max 5mm))
+  (constraint skew (max 0.25mm) (within_diff_pairs))
+  (constraint length (max 80mm)))
+(rule "Isolation barrier: independent ground domains"
+  (condition "(A.hasNetclass('Primary') && B.hasNetclass('Secondary')) || (A.hasNetclass('Secondary') && B.hasNetclass('Primary'))")
+  (constraint clearance (min 8.30mm))
+  (constraint creepage (min 8.30mm)))
+# Exact TI DP0028A-C02 HV land pattern: 8.20 mm nominal copper gap.
+# This is a local manufacturer geometry, not a blanket board safety rating.
+(rule "ISOUSB211 manufacturer HV lands"
+  (condition "A.memberOfFootprint('U1') && B.memberOfFootprint('U1') && ((A.hasNetclass('Primary') && B.hasNetclass('Secondary')) || (A.hasNetclass('Secondary') && B.hasNetclass('Primary')))")
+  (constraint clearance (min 8.20mm))
+  (constraint creepage (min 8.20mm)))

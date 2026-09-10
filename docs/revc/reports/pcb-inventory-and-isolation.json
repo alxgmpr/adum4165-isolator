@@ -1,0 +1,52 @@
+{
+  "schematic_components": 291,
+  "pcb_footprints": 295,
+  "board_only_mechanicals": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "pad_rows_including_duplicate_lands": 987,
+  "tracks": 0,
+  "vias": 0,
+  "unfilled_rule_areas": 5,
+  "copper_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "minimum_cross_domain_copper_mm": [
+    8.199999999999989,
+    [
+      [
+        "U1",
+        "1",
+        "VBUS_HOST"
+      ],
+      [
+        "U1",
+        "28",
+        "ISO_3V3"
+      ]
+    ]
+  ],
+  "minimum_cross_domain_copper_outside_U1_mm": [
+    9.409999999999997,
+    [
+      [
+        "T1",
+        "1",
+        "PRI_A"
+      ],
+      [
+        "T1",
+        "6",
+        "SEC_A"
+      ]
+    ]
+  ],
+  "errors": [],
+  "limits": "Conservative pad bounding geometry, inventory and net mapping only. KiCad DRC checks detailed shapes/courtyards/edges. This is not a routed-board or certified insulation test."
+}

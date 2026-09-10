@@ -171,7 +171,7 @@ r('R19','100kR','EXT_3A_OK','GND2','external')
 ic('U27','TPS22975DSGR','hub-custom:TPS22975',{1:'EXT_SENSED_5V',2:'EXT_SENSED_5V',3:'EXT_3A_OK',4:'EXT_5V',5:'GND2',6:'EXT_SLEW',7:'EXT_SW_5V',8:'EXT_SW_5V',9:'GND2'},'external')
 # Input current monitor sheds port load without interrupting the hub supply.
 # The 3A qualification switch remains on; board-internal faults use U28/source protection.
-r('R110','20mR','EXT_5V','EXT_SENSED_5V','external','1% 0.5W current shunt; Kelvin sense U46 inputs')
+r('R110','20mR','EXT_5V','EXT_SENSED_5V','external','1% 1W current shunt; Kelvin sense U46 inputs')
 ic('U46','INA300AIDGSR','hub-custom:INA300',
    {1:'EXT_5V',2:'EXT_SENSED_5V',3:'EXT_TRIP',4:'ISO_3V3',5:'EXT_CURRENT_OK',
     6:'PORT_ANY_ON',7:'ISO_3V3',8:'GND2',9:'ISO_3V3',10:None},'external',
@@ -193,7 +193,7 @@ for ref in ['C85','C86','C87','C88']:c(ref,'22uF','EXT_REG_5V','GND2','external'
 c('C89','100nF','EXT_REG_5V','GND2','external','U28.11')
 r('R20','10kR','EXT_REG_5V','EXT_FB','external','0.1% feedback upper')
 r('R21','3kR','EXT_FB','EXT_FB_LOW','external','0.1% feedback lower series part')
-r('R22','15R','EXT_FB_LOW','GND2','external','0.1%: Vout = 1.2*(1+10000/3015) = 5.1801V')
+r('R22','0R','EXT_FB_LOW','GND2','external','Feedback return link: Vout = 1.2*(1+10000/3000) = 5.20V; USB VBUS 5.5V maximum ECN')
 r('R59','49.9kR','EXT_FSW','GND2','external','400kHz; L > 3uH')
 r('R60','2.7kR','EXT_COMP','EXT_COMP_ZERO','external','Loop compensation; see power calculation')
 c('C90','220nF','EXT_COMP_ZERO','GND2','external');c('C91','100pF','EXT_COMP','GND2','external')
@@ -211,17 +211,24 @@ r('R28','10kR','ISO_3V3','EXT_SELECTED','distribution','ST high means IN1 or Hi-
 c('C27','100nF','MUX_SS','GND2','distribution')
 c('C92','220uF','ISO_5V','GND2','distribution','Logic hold-up during source switch and load shedding')
 c('C93','100nF','ISO_5V','GND2','distribution','U8 OUT bypass')
-ic('U29','TPS2553DBVR-1','isolator-lib:TPS2553DBV',
-   {1:'ISO_5V',2:'GND2',3:'BUS_FEED_EN',4:'PORT_LIMIT_N',5:'PORT_ILIM',6:'PORT_SUPPLY'},'distribution',
-   'Latch-off aggregate bus-mode limiter; 300mA intended shared load')
+ic('U29','TPS2553DBVR','isolator-lib:TPS2553DBV',
+   {1:'ISO_5V',2:'GND2',3:'BUS_FEED_EN',4:'BUS_LIMIT_RAW_N',5:'PORT_ILIM',6:'PORT_SUPPLY'},'distribution',
+   'Constant-current aggregate bus limiter; 300mA shared; delayed fault report permits reservoir charging')
 r('R62','75kR','PORT_ILIM','GND2','distribution')
-r('R63','10kR','ISO_3V3','PORT_LIMIT_N','distribution')
+r('R63','10kR','ISO_3V3','BUS_LIMIT_RAW_N','distribution')
+r('R121','47kR','BUS_LIMIT_RAW_N','BUS_FAULT_FILTER_N','bus_start','U48.2; delay persistent bus overload report, not current limiting')
+r('R122','1kR','BUS_FAULT_FILTER_N','BUS_FAULT_CAP','bus_start','Limits U48 input-clamp current during power-down to <5.5mA')
+c('C116','22uF','ISO_3V3','BUS_FAULT_CAP','bus_start','U48 fault delay; capacitor returns to 3.3V so fresh startup initially reports healthy')
+ic('U48','SN74LVC1G17DBVR','74xGxx:74LVC1G17',
+   {1:None,2:'BUS_FAULT_FILTER_N',3:'GND2',4:'PORT_LIMIT_N',5:'ISO_3V3'},'bus_start',
+   'Schmitt input; delayed aggregate-bus FAULT only. Fast current limiting and core UV shedding remain independent.')
+c('C117','100nF','ISO_3V3','GND2','bus_start','U48.5')
 and_gate('U32','EXT_SELECTED','PORT_FEED_EN','EXT_BYPASS_EN','distribution')
 ic('U30','TPS22975NDSGR','hub-custom:TPS22975',
    {1:'ISO_5V',2:'ISO_5V',3:'EXT_BYPASS_EN',4:'ISO_5V',5:'GND2',6:'EXT_PORT_SLEW',7:'EXT_PORT_FEED',8:'EXT_PORT_FEED',9:'GND2'},
    'distribution','No-QOD N variant: external-mode path; no discharge of live shared rail')
 c('C115','22nF','EXT_PORT_SLEW','GND2','distribution','U30 controlled ramp avoids simultaneous USB-A reservoir inrush')
-r('R116','10mR','EXT_PORT_FEED','PORT_SUPPLY','distribution','1% 0.5W shunt; Kelvin sense U47; maximum routing drop in power report')
+r('R116','10mR','EXT_PORT_FEED','PORT_SUPPLY','distribution','1% 1W shunt; Kelvin sense U47; maximum routing drop in power report')
 ic('U47','INA300AIDGSR','hub-custom:INA300',
    {1:'EXT_PORT_FEED',2:'PORT_SUPPLY',3:'EXT_PORT_TRIP',4:'ISO_3V3',5:'PORT_RAIL_OK',
     6:'PORT_ANY_ON',7:None,8:'GND2',9:'ISO_3V3',10:None},'distribution',

@@ -36,7 +36,7 @@ for mpn in ['TPS22975DSGR','TPS22975NDSGR']:
  IC_FP[mpn]='Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm'
 for mpn in ['TPS2553DBVR','TPS2553DBVR-1','TPS3808G01DBVR','TPS3808G33DBVR']:
  IC_FP[mpn]='Package_TO_SOT_SMD:SOT-23-6'
-for mpn in ['SN74LVC1G02DBVR','SN74LVC1G04DBVR','SN74LVC1G08DBVR','TLV75533PDBVR','TLV62568DBVR']:
+for mpn in ['SN74LVC1G02DBVR','SN74LVC1G04DBVR','SN74LVC1G08DBVR','SN74LVC1G17DBVR','TLV75533PDBVR','TLV62568DBVR']:
  IC_FP[mpn]='Package_TO_SOT_SMD:SOT-23-5'
 PRECISION={'R20','R21','R22','R64','R65','R111','R117'}
 SOURCES={
@@ -80,7 +80,7 @@ def yageo_value(r):
 
 def assign(parts):
     indexed={}
-    for file in ['part-availability.json','passive-availability.json','supporting-availability.json','resistor-availability.json']:
+    for file in ['part-availability.json','passive-availability.json','supporting-availability.json','resistor-availability.json','startup-availability.json']:
         path=ROOT/'docs/revc'/file
         if not path.exists():continue
         for q in json.loads(path.read_text()).get('queries',[]):

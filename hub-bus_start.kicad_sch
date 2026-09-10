@@ -1,0 +1,1967 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid "e6d4c444-175a-5ee2-b3ae-113447e79a2a")
+  (paper "A3")
+  (title_block
+    (title "Bus-power capacitor charging and fault timing")
+    (rev "C")
+    (date "2026-09-10")
+  )
+  (lib_symbols
+    (symbol "hub-lib:Device_R_Small_US"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0.254)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "R"
+        (at 0.762 0.508 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "R_Small_US"
+        (at 0.762 -1.016 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Resistor, small US symbol"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "r resistor"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Device_R_Small_US_1_1"
+        (polyline
+          (pts
+            (xy 0 1.524)
+            (xy 1.016 1.143)
+            (xy 0 0.762)
+            (xy -1.016 0.381)
+            (xy 0 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 1.016 -0.381)
+            (xy 0 -0.762)
+            (xy -1.016 -1.143)
+            (xy 0 -1.524)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (pin passive line
+          (at 0 2.54 270)
+          (length 1.016)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -2.54 90)
+          (length 1.016)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:Device_C"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0.254)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Device_C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Device_C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:74xGxx_74LVC1G17"
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "U"
+        (at 0 3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "74LVC1G17"
+        (at 0 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" ""
+        (at -2.54 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf"
+        (at 0 -6.35 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Description" "Single Schmitt Buffer Gate, Low-Voltage CMOS"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "Single Gate Buff Schmitt LVC CMOS"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "SOT?23* SOT?553* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "74xGxx_74LVC1G17_0_1"
+        (polyline
+          (pts
+            (xy -7.62 6.35)
+            (xy -7.62 -6.35)
+            (xy 5.08 0)
+            (xy -7.62 6.35)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type background)
+          )
+        )
+        (polyline
+          (pts
+            (xy -3.81 -1.27)
+            (xy -2.54 -1.27)
+            (xy -2.54 1.27)
+            (xy -1.27 1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type background)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.54 -1.27)
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+            (xy 0 1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type background)
+          )
+        )
+      )
+      (symbol "74xGxx_74LVC1G17_1_1"
+        (pin no_connect line
+          (at -7.62 5.08 180)
+          (length 5.08)
+          (hide yes)
+          (name "NC"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin input line
+          (at -12.7 0 0)
+          (length 5.08)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at -5.08 -10.16 90)
+          (length 5.08)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin output line
+          (at 10.16 0 180)
+          (length 5.08)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at -5.08 10.16 270)
+          (length 5.08)
+          (name "VCC"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:power_GND2"
+      (power global)
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "GND2"
+        (at 0 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Global supply GND2"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "power_GND2_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "power_GND2_1_1"
+        (pin power_in line
+          (at 0 0 270)
+          (length 0)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:power_ISO_3V3"
+      (power global)
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "ISO_3V3"
+        (at 0 3.556 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Global supply ISO_3V3"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "power_ISO_3V3_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "power_ISO_3V3_1_1"
+        (pin power_in line
+          (at 0 0 90)
+          (length 0)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+  )
+  (text "Bus-power capacitor charging and fault timing"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left)
+    )
+    (uuid "a6c3cdd3-6935-5b49-a838-96e09569ff68")
+  )
+  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placement and routing review pending"
+    (at 20.32 27.94 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "3cbc9f9d-1567-5e7b-b543-279c7cd79191")
+  )
+  (text "Bus current limit is immediate; report sustained faults after capacitor charging"
+    (at 20.32 43.18 0)
+    (effects
+      (font
+        (size 1.778 1.778)
+      )
+      (justify left)
+    )
+    (uuid "cd4ee672-3ae9-5df0-97ee-24eedc2e4efd")
+  )
+  (symbol
+    (lib_id "hub-lib:74xGxx_74LVC1G17")
+    (at 55.88 71.12 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a7183419-445f-54ff-8c03-18a5477919e4")
+    (property "Reference" "U48"
+      (at 40.64000000000001 55.88000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+    )
+    (property "Value" "SN74LVC1G17DBVR"
+      (at 40.64000000000001 58.42000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+    )
+    (property "Footprint" "hub-lib:SOT-23-5"
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf"
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Description" "Schmitt input; delayed aggregate-bus FAULT only. Fast current limiting and core UV shedding remain independent."
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "MPN" "SN74LVC1G17DBVR"
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Manufacturer" "Texas Instruments"
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "LCSC" "C7836"
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverMPN" ""
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 55.88 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin "1"
+      (uuid "91da8f43-d3e1-5a94-a37a-c78a5ba4b2f2")
+    )
+    (pin "2"
+      (uuid "442477c7-7d7b-5a25-b10c-fb47036794f5")
+    )
+    (pin "3"
+      (uuid "4a2af509-ab23-503a-8e3b-d71b4b0ead2b")
+    )
+    (pin "4"
+      (uuid "a3a6533c-db78-5733-9d92-1669693087bc")
+    )
+    (pin "5"
+      (uuid "4b60b9e8-0139-5cb8-9371-ffbfbaa30e9d")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "U48")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (no_connect
+    (at 48.26 66.04)
+    (uuid "cd308f96-6719-590d-9c7e-f73d79de83d7")
+  )
+  (wire
+    (pts
+      (xy 43.18 71.12)
+      (xy 39.37 71.12)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "18cbc0a7-8e3e-5f0f-9cee-139b712cbffe")
+  )
+  (global_label "BUS_FAULT_FILTER_N"
+    (shape bidirectional)
+    (at 39.37 71.12 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "8e44b7fd-4985-5ef7-a3fb-e759d0552a64")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 39.37 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 50.8 81.28)
+      (xy 50.8 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "df34d6a8-693e-5904-b5f0-f085745c0ec7")
+  )
+  (wire
+    (pts
+      (xy 66.04 71.12)
+      (xy 69.85 71.12)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b6c0ed52-6093-5706-ab65-70a6c5b4d7b3")
+  )
+  (global_label "PORT_LIMIT_N"
+    (shape bidirectional)
+    (at 69.85 71.12 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "d9e82ecf-cda4-53c7-a4ca-22cd538db884")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 69.85 71.12 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 50.8 60.96)
+      (xy 50.8 57.15)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "0cc19514-5865-5137-80fb-835f18309dcd")
+  )
+  (symbol
+    (lib_id "hub-lib:power_GND2")
+    (at 50.8 85.09 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "bcc6723e-0e32-54d3-b87e-43eeca44334c")
+    (property "Reference" "#PWR7001"
+      (at 50.8 85.09 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "GND2"
+      (at 50.8 88.9 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "73ed4816-8ba2-531c-9c98-68c9c9e3f237")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "#PWR7001")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_ISO_3V3")
+    (at 50.8 57.15 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "9802497a-af4c-5b60-b5bc-b0566874be82")
+    (property "Reference" "#PWR7002"
+      (at 50.8 57.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "ISO_3V3"
+      (at 50.8 53.339999999999996 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "2b1f514b-0449-538c-bfee-c9fc9b2fb7cb")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "#PWR7002")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_C")
+    (at 33.02 116.84 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9403ee08-e15f-557b-a4fb-cf1cca5f5afa")
+    (property "Reference" "C116"
+      (at 36.830000000000005 115.57000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "22uF"
+      (at 36.830000000000005 118.11 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:C_1210_3225Metric"
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23"
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "U48 fault delay; capacitor returns to 3.3V so fresh startup initially reports healthy"
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "GRM32ER71E226KE15L"
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Murata Manufacturing"
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C21397"
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "25V X7R 10%"
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 33.02 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "5b565e2f-e849-52e1-9653-4bcfbbcfc93c")
+    )
+    (pin "2"
+      (uuid "58e2e6f8-ee81-5e51-8e24-74655286e0dd")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "C116")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 33.02 113.03)
+      (xy 33.02 109.22)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a3d5a3e5-7cdc-56ec-9d44-90bda8dc18e9")
+  )
+  (wire
+    (pts
+      (xy 33.02 120.65)
+      (xy 33.02 124.46)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "c321e4c2-3785-5454-9714-b39fe5b9cdd5")
+  )
+  (symbol
+    (lib_id "hub-lib:power_ISO_3V3")
+    (at 33.02 109.22 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "8abf3abf-21a1-5487-8f42-a518842ea5cc")
+    (property "Reference" "#PWR7003"
+      (at 33.02 109.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "ISO_3V3"
+      (at 33.02 105.41 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "a0cdf785-58a1-55e5-9d8d-cdaf557e5ba7")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "#PWR7003")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (global_label "BUS_FAULT_CAP"
+    (shape bidirectional)
+    (at 33.02 124.46 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "4ac46c77-63d6-599f-bee2-71c63cf13848")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 33.02 124.46 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_C")
+    (at 66.04 116.84 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "953a5e08-bde7-5189-a2c8-ca6b70144e0c")
+    (property "Reference" "C117"
+      (at 69.85000000000001 115.57000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100nF"
+      (at 69.85000000000001 118.11 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:C_0402_1005Metric"
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H104KE14%23"
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "U48.5"
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "GRM155R71H104KE14D"
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Murata Manufacturing"
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C77020"
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "50V X7R 10%"
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 66.04 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "db1eac95-d66a-50f0-b38a-3083845f3708")
+    )
+    (pin "2"
+      (uuid "67c5c781-3ef2-5182-b396-8997d212b040")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "C117")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 66.04 113.03)
+      (xy 66.04 109.22)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "51c2208c-a6cd-55b5-b9ea-5c2d63362a05")
+  )
+  (wire
+    (pts
+      (xy 66.04 120.65)
+      (xy 66.04 124.46)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "c46de4c5-2751-5f08-af82-0cd4a3fdab58")
+  )
+  (symbol
+    (lib_id "hub-lib:power_ISO_3V3")
+    (at 66.04 109.22 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "ece09602-6940-5848-ad2f-1d1111aca439")
+    (property "Reference" "#PWR7004"
+      (at 66.04 109.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "ISO_3V3"
+      (at 66.04 105.41 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "d081a6e7-f7c3-5e56-af34-1e2a46f04056")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "#PWR7004")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_GND2")
+    (at 66.04 124.46 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "f71093ff-9a37-51a9-a9cd-b739e1d1c479")
+    (property "Reference" "#PWR7005"
+      (at 66.04 124.46 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "GND2"
+      (at 66.04 128.26999999999998 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "d994e168-b831-5cdc-8828-b9155e1eb5db")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "#PWR7005")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 100.33 116.84 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "771df493-2bd0-5365-b595-3324f2421787")
+    (property "Reference" "R121"
+      (at 104.14 115.57000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "47kR"
+      (at 104.14 118.11 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "U48.2; delay persistent bus overload report, not current limiting"
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "ERJ2RKF4702X"
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Panasonic Industry"
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 100.33 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "a65ccff4-1691-5097-84f3-8be0c27f7af7")
+    )
+    (pin "2"
+      (uuid "c4cfe302-ffec-5dd1-8379-179f7915b7c1")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "R121")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 100.33 114.3)
+      (xy 100.33 110.49)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f33e5d25-2dd9-576a-ba8c-9371df51d133")
+  )
+  (global_label "BUS_LIMIT_RAW_N"
+    (shape bidirectional)
+    (at 100.33 110.49 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "7d2faad9-3e4b-54f6-91fe-0c46917c0d9c")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 100.33 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 100.33 119.38)
+      (xy 100.33 123.19)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "53beacb6-6394-59c1-8f30-c287f8688721")
+  )
+  (global_label "BUS_FAULT_FILTER_N"
+    (shape bidirectional)
+    (at 100.33 123.19 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "c69ac36c-c236-5445-bdad-83cc6e049b68")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 100.33 123.19 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 134.62 116.84 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "835f630e-dade-5919-acd7-d62326114f42")
+    (property "Reference" "R122"
+      (at 138.43 115.57000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "1kR"
+      (at 138.43 118.11 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Limits U48 input-clamp current during power-down to <5.5mA"
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "ERJ2RKF1001X"
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Panasonic Industry"
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C242161"
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 134.62 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "669aabad-8b07-5931-855e-6b425c5c14e0")
+    )
+    (pin "2"
+      (uuid "4441a5ac-6d5e-50a9-af3a-b848e024ad70")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "R122")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 134.62 114.3)
+      (xy 134.62 110.49)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "701c8e39-3207-5235-838a-e95a409a0003")
+  )
+  (global_label "BUS_FAULT_FILTER_N"
+    (shape bidirectional)
+    (at 134.62 110.49 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "3a86ee6c-ea46-5c6e-9d21-c5b96fcab05a")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 134.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 134.62 119.38)
+      (xy 134.62 123.19)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "720d4b1f-97b1-5232-ae63-3ce4965ba502")
+  )
+  (global_label "BUS_FAULT_CAP"
+    (shape bidirectional)
+    (at 134.62 123.19 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "fb8eb052-9c35-5d70-8919-d830bda21ef0")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 134.62 123.19 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (embedded_fonts no)
+)

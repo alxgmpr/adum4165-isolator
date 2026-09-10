@@ -50,7 +50,8 @@
   "USB_C_Receptacle_HRO_TYPE-C-31-M-12": {
     "source": "KiCad 10.99 stock Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12",
     "origin": "unchanged copy",
-    "sha256": "c562a7f9713a8b754c4d2305a2ea15453469a1c8c48a9b17973383e8993fc750"
+    "sha256": "c562a7f9713a8b754c4d2305a2ea15453469a1c8c48a9b17973383e8993fc750",
+    "silkscreen_adjustment": "Clipped mating end to provisional board edge; copper/Fab unchanged"
   },
   "SOT-23-6": {
     "source": "KiCad 10.99 stock Package_TO_SOT_SMD:SOT-23-6",
@@ -115,7 +116,8 @@
   "TPS630701RNM_VQFN-HR-15": {
     "source": "isolator-lib.pretty/TPS630701RNM_VQFN-HR-15.kicad_mod",
     "origin": "unchanged copy",
-    "sha256": "4faab8bf51c3f9408db9ade8a4a5706ce2e0556742f07b2530e7e1cebe0293cd"
+    "sha256": "4faab8bf51c3f9408db9ade8a4a5706ce2e0556742f07b2530e7e1cebe0293cd",
+    "silkscreen_adjustment": "Replaced pad-crossing body rectangle with pin-1 dot; copper/Fab unchanged"
   },
   "Laird_Technologies_BMI-S-201-F_13.66x12.70mm": {
     "source": "KiCad 10.99 stock RF_Shielding:Laird_Technologies_BMI-S-201-F_13.66x12.70mm",
@@ -180,7 +182,8 @@
   "USB_A_Wuerth_614004134726_Horizontal": {
     "source": "KiCad 10.99 stock Connector_USB:USB_A_Wuerth_614004134726_Horizontal",
     "origin": "unchanged copy",
-    "sha256": "e22f331d23d4046f11863bbdb8d41641018ec6c8e1b07d3c9dfe8b22fde1d864"
+    "sha256": "e22f331d23d4046f11863bbdb8d41641018ec6c8e1b07d3c9dfe8b22fde1d864",
+    "silkscreen_adjustment": "Clipped mating end to provisional board edge; copper/Fab unchanged"
   },
   "R_0805_2012Metric": {
     "source": "KiCad 10.99 stock Resistor_SMD:R_0805_2012Metric",

@@ -161,13 +161,13 @@
   (embedded_fonts no)
   (model "${KIPRJMOD}/hub-lib.3dshapes/WE-PPTI_1209.step"
     (offset
-      (xyz 0 0 0)
+      (xyz -6.120114543 8.591146647 -3.475710646)
     )
     (scale
       (xyz 1 1 1)
     )
     (rotate
-      (xyz 0 0 0)
+      (xyz -90 0 0)
     )
   )
 )

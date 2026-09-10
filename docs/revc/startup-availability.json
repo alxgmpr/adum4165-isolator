@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-10",
+  "source": "PCBParts indexed JLC/LCSC search; not a reservation",
+  "queries": [
+    {
+      "query": "SN74LVC1G17DBVR",
+      "result": {
+        "results": [
+          {
+            "model": "SN74LVC1G17DBVR",
+            "manufacturer": "Texas Instruments",
+            "lcsc": "C7836",
+            "stock": 6123,
+            "package": "SOT-23-5"
+          }
+        ]
+      }
+    }
+  ]
+}

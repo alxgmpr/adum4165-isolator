@@ -1,7 +1,7 @@
 {
-  "physical_symbols": 286,
-  "exported_components": 286,
-  "pad_rows_including_duplicate_lands": 974,
+  "physical_symbols": 291,
+  "exported_components": 291,
+  "pad_rows_including_duplicate_lands": 987,
   "connected_pin_net_differences": [],
   "purchase_bom_exceptions": {
     "PCB test pads": [

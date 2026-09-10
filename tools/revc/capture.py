@@ -20,6 +20,7 @@ TITLE={
  'converter':'Isolated host power and separate shield frames',
  'external':'Qualified external 5 V input and voltage regulation',
  'distribution':'Supply selection and protected port distribution',
+ 'bus_start':'Bus-power capacitor charging and fault timing',
  'hub':'USB2514B hub, 3.3 V supply, clock and configuration',
  'ports_a':'Downstream USB-A ports 1 and 2',
  'port_c3':'Downstream USB-C port 3',
@@ -134,6 +135,7 @@ def make_page(page,parts,number):
 
 
 def main():
+    from schematic_layout import make_page as layout_page
     syms=build_library(PARTS)
     syms['power_PWR_FLAG']=renamed(source_symbol('power:PWR_FLAG'),'power_PWR_FLAG')
     write(ROOT/'hub-lib.kicad_sym',n('kicad_symbol_lib',n('version',20250114),n('generator','kicad_symbol_editor'),*syms.values()))
@@ -145,7 +147,7 @@ def main():
             uri='${KIPRJMOD}/hub-lib.kicad_sym' if kind=='symbol' else '${KIPRJMOD}/hub-lib.pretty'
             table.append(n('lib',n('name','hub-lib'),n('type','KiCad'),n('uri',uri),n('options',''),n('descr','Rev C project-local verified library')))
             write(ROOT/filename,table)
-    root=n('kicad_sch',n('version',20250114),n('generator','eeschema'),n('uuid',ROOT_UUID),n('paper','A3'),
+    root=n('kicad_sch',n('version',20250114),n('generator','eeschema'),n('uuid',ROOT_UUID),n('paper','A2'),
            n('title_block',n('title','Rev C — Isolated four-port USB 2.0 hub'),n('rev','C — verification in progress'),n('date','2026-09-10')),
            n('lib_symbols'))
     root.append(text('ISOLATED FOUR-PORT USB 2.0 HUB',15.24,17.78,3.81))
@@ -154,15 +156,18 @@ def main():
     placements={}
     for i,(page,title) in enumerate(TITLE.items()):
         subset=[p for p in PARTS.values() if p['page']==page]
-        sheet_id,pos=make_page(page,subset,i+2);placements.update(pos)
-        x=20.32+(i%3)*129.54;y=55.88+(i//3)*63.5
+        sheet_id,pos,powerlibs=layout_page(page,subset,i+2);placements.update(pos);syms.update(powerlibs)
+        x=20.32+(i%4)*129.54;y=55.88+(i//4)*63.5
         root.append(n('sheet',n('at',x,y),n('size',111.76,40.64),n('stroke',n('width',0.254),n('type',S('default'))),
                       n('fill',n('color',0,0,0,0)),n('uuid',sheet_id),
-                      n('property','Sheetname',title,n('at',x,y-2.54,0),fx(justify='left')),
+                      n('property','Sheetname',page.replace('_',' ').upper(),n('at',x,y-2.54,0),fx(justify='left')),
                       n('property','Sheetfile',f'hub-{page}.kicad_sch',n('at',x,y+43.18,0),fx(justify='left')),
                       n('instances',n('project','hub',n('path','/'+ROOT_UUID,n('page',str(i+2)))))))
+        import textwrap
+        root.append(text('\n'.join(textwrap.wrap(title,37)),x+5.08,y+12.7,1.524))
     root.append(n('sheet_instances',n('path','/',n('page','1'))));root.append(n('embedded_fonts',S('no')))
     write(ROOT/'hub.kicad_sch',root)
+    write(ROOT/'hub-lib.kicad_sym',n('kicad_symbol_lib',n('version',20250114),n('generator','kicad_symbol_editor'),*syms.values()))
     (ROOT/'build/revc/schematic-positions.json').write_text(json.dumps(placements,indent=2)+'\n')
     print(f'Captured {len(PARTS)} physical parts in {len(TITLE)} functional sheets')
 

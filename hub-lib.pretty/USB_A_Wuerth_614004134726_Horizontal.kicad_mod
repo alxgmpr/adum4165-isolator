@@ -56,17 +56,7 @@
   (attr through_hole)
   (duplicate_pad_numbers_are_jumpers no)
   (fp_line
-    (start -12.43 -3.65)
-    (end -12.43 3.65)
-    (stroke
-      (width 0.12)
-      (type solid)
-    )
-    (layer "F.SilkS")
-    (uuid "86cc69e2-fee4-4483-9b34-61d20e553a49")
-  )
-  (fp_line
-    (start -12.43 -3.65)
+    (start -11.58 -3.65)
     (end -1.98 -3.65)
     (stroke
       (width 0.12)
@@ -76,7 +66,7 @@
     (uuid "eb792834-82d2-491d-aba2-436e977148c6")
   )
   (fp_line
-    (start -12.43 3.65)
+    (start -11.58 3.65)
     (end -1.98 3.65)
     (stroke
       (width 0.12)

@@ -2,7 +2,7 @@
   (version 20250114)
   (generator "eeschema")
   (uuid "c86df239-2775-4bfb-906f-796343d9aaf9")
-  (paper "A3")
+  (paper "A2")
   (title_block
     (title "Rev C — Isolated four-port USB 2.0 hub")
     (rev "C — verification in progress")
@@ -50,7 +50,7 @@
       (color 0 0 0 0)
     )
     (uuid "5d774a76-deba-5db0-bf32-b19a1d2ddefd")
-    (property "Sheetname" "Host USB-C input and current qualification"
+    (property "Sheetname" "HOST"
       (at 20.32 53.34 0)
       (effects
         (font
@@ -76,6 +76,16 @@
       )
     )
   )
+  (text "Host USB-C input and current\nqualification"
+    (at 25.4 68.58 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "220d093c-b780-57cb-8fac-deb894193f13")
+  )
   (sheet
     (at 149.85999999999999 55.88)
     (size 111.76 40.64)
@@ -87,7 +97,7 @@
       (color 0 0 0 0)
     )
     (uuid "792be433-2b74-58de-babf-a6aef3017e56")
-    (property "Sheetname" "ISOUSB211 isolated 480 Mbps USB link"
+    (property "Sheetname" "ISOLATION"
       (at 149.85999999999999 53.34 0)
       (effects
         (font
@@ -113,6 +123,16 @@
       )
     )
   )
+  (text "ISOUSB211 isolated 480 Mbps USB link"
+    (at 154.94 68.58 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "4f094a99-4227-5147-8e0c-0000db119d78")
+  )
   (sheet
     (at 279.4 55.88)
     (size 111.76 40.64)
@@ -124,7 +144,7 @@
       (color 0 0 0 0)
     )
     (uuid "4307be80-e4b1-597b-88ad-656eebe4aa35")
-    (property "Sheetname" "Isolated host power and separate shield frames"
+    (property "Sheetname" "CONVERTER"
       (at 279.4 53.34 0)
       (effects
         (font
@@ -150,8 +170,18 @@
       )
     )
   )
+  (text "Isolated host power and separate\nshield frames"
+    (at 284.47999999999996 68.58 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "f759cdd4-9ea2-586d-ae39-603614e82a17")
+  )
   (sheet
-    (at 20.32 119.38)
+    (at 408.94 55.88)
     (size 111.76 40.64)
     (stroke
       (width 0.254)
@@ -161,8 +191,8 @@
       (color 0 0 0 0)
     )
     (uuid "92d163e6-5358-55e6-bfd4-e024a8466aa0")
-    (property "Sheetname" "Qualified external 5 V input and voltage regulation"
-      (at 20.32 116.83999999999999 0)
+    (property "Sheetname" "EXTERNAL"
+      (at 408.94 53.34 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -171,7 +201,7 @@
       )
     )
     (property "Sheetfile" "hub-external.kicad_sch"
-      (at 20.32 162.56 0)
+      (at 408.94 99.06 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -187,8 +217,18 @@
       )
     )
   )
+  (text "Qualified external 5 V input and\nvoltage regulation"
+    (at 414.02 68.58 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "fe137f93-0a28-566b-a9ad-02bdb6edd453")
+  )
   (sheet
-    (at 149.85999999999999 119.38)
+    (at 20.32 119.38)
     (size 111.76 40.64)
     (stroke
       (width 0.254)
@@ -198,8 +238,8 @@
       (color 0 0 0 0)
     )
     (uuid "52a1b8ca-77be-5d95-bbe2-de6ca1fbd0bd")
-    (property "Sheetname" "Supply selection and protected port distribution"
-      (at 149.85999999999999 116.83999999999999 0)
+    (property "Sheetname" "DISTRIBUTION"
+      (at 20.32 116.83999999999999 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -208,7 +248,7 @@
       )
     )
     (property "Sheetfile" "hub-distribution.kicad_sch"
-      (at 149.85999999999999 162.56 0)
+      (at 20.32 162.56 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -224,6 +264,63 @@
       )
     )
   )
+  (text "Supply selection and protected port\ndistribution"
+    (at 25.4 132.07999999999998 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "d52b2096-95ea-5d6d-a8e4-61f652ab63dd")
+  )
+  (sheet
+    (at 149.85999999999999 119.38)
+    (size 111.76 40.64)
+    (stroke
+      (width 0.254)
+      (type default)
+    )
+    (fill
+      (color 0 0 0 0)
+    )
+    (uuid "c92b95a8-149c-5d3e-9aff-31a7efa21864")
+    (property "Sheetname" "BUS START"
+      (at 149.85999999999999 116.83999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Sheetfile" "hub-bus_start.kicad_sch"
+      (at 149.85999999999999 162.56 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9"
+          (page "7")
+        )
+      )
+    )
+  )
+  (text "Bus-power capacitor charging and\nfault timing"
+    (at 154.94 132.07999999999998 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "cdda5e14-14c3-5c3a-b91c-b4933e11d10e")
+  )
   (sheet
     (at 279.4 119.38)
     (size 111.76 40.64)
@@ -235,7 +332,7 @@
       (color 0 0 0 0)
     )
     (uuid "72d657eb-dd80-5362-9dec-d386a828666e")
-    (property "Sheetname" "USB2514B hub, 3.3 V supply, clock and configuration"
+    (property "Sheetname" "HUB"
       (at 279.4 116.83999999999999 0)
       (effects
         (font
@@ -256,13 +353,23 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9"
-          (page "7")
+          (page "8")
         )
       )
     )
   )
+  (text "USB2514B hub, 3.3 V supply, clock and\nconfiguration"
+    (at 284.47999999999996 132.07999999999998 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "5ab4702d-c373-50b0-8396-9b42ca018273")
+  )
   (sheet
-    (at 20.32 182.88)
+    (at 408.94 119.38)
     (size 111.76 40.64)
     (stroke
       (width 0.254)
@@ -272,8 +379,8 @@
       (color 0 0 0 0)
     )
     (uuid "561ebe21-a25d-5c36-8234-dc8f18f9441b")
-    (property "Sheetname" "Downstream USB-A ports 1 and 2"
-      (at 20.32 180.34 0)
+    (property "Sheetname" "PORTS A"
+      (at 408.94 116.83999999999999 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -282,44 +389,7 @@
       )
     )
     (property "Sheetfile" "hub-ports_a.kicad_sch"
-      (at 20.32 226.06 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9"
-          (page "8")
-        )
-      )
-    )
-  )
-  (sheet
-    (at 149.85999999999999 182.88)
-    (size 111.76 40.64)
-    (stroke
-      (width 0.254)
-      (type default)
-    )
-    (fill
-      (color 0 0 0 0)
-    )
-    (uuid "cd2bbc9e-814b-5a7e-88ec-0bccb8d1e4d3")
-    (property "Sheetname" "Downstream USB-C port 3"
-      (at 149.85999999999999 180.34 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (property "Sheetfile" "hub-port_c3.kicad_sch"
-      (at 149.85999999999999 226.06 0)
+      (at 408.94 162.56 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -335,8 +405,18 @@
       )
     )
   )
+  (text "Downstream USB-A ports 1 and 2"
+    (at 414.02 132.07999999999998 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "1ceab08a-9d3d-5b9f-ba49-e50d637ad17c")
+  )
   (sheet
-    (at 279.4 182.88)
+    (at 20.32 182.88)
     (size 111.76 40.64)
     (stroke
       (width 0.254)
@@ -345,9 +425,9 @@
     (fill
       (color 0 0 0 0)
     )
-    (uuid "1459993a-cf95-5326-858d-6452b52a6a92")
-    (property "Sheetname" "Downstream USB-C port 4"
-      (at 279.4 180.34 0)
+    (uuid "cd2bbc9e-814b-5a7e-88ec-0bccb8d1e4d3")
+    (property "Sheetname" "PORT C3"
+      (at 20.32 180.34 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -355,8 +435,8 @@
         (justify left)
       )
     )
-    (property "Sheetfile" "hub-port_c4.kicad_sch"
-      (at 279.4 226.06 0)
+    (property "Sheetfile" "hub-port_c3.kicad_sch"
+      (at 20.32 226.06 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -371,6 +451,63 @@
         )
       )
     )
+  )
+  (text "Downstream USB-C port 3"
+    (at 25.4 195.57999999999998 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "47dc02e5-7cb5-5946-9348-046fa26bbf49")
+  )
+  (sheet
+    (at 149.85999999999999 182.88)
+    (size 111.76 40.64)
+    (stroke
+      (width 0.254)
+      (type default)
+    )
+    (fill
+      (color 0 0 0 0)
+    )
+    (uuid "1459993a-cf95-5326-858d-6452b52a6a92")
+    (property "Sheetname" "PORT C4"
+      (at 149.85999999999999 180.34 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Sheetfile" "hub-port_c4.kicad_sch"
+      (at 149.85999999999999 226.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9"
+          (page "11")
+        )
+      )
+    )
+  )
+  (text "Downstream USB-C port 4"
+    (at 154.94 195.57999999999998 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "21bff8fb-6349-5eb2-9405-12bd6669b5be")
   )
   (sheet_instances
     (path "/"

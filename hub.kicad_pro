@@ -232,7 +232,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.15,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -241,11 +241,11 @@
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.0,
+        "min_silk_clearance": 0.1,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
+        "min_track_width": 0.15,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
@@ -599,16 +599,92 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.15,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.15,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.15,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.15,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "USB90",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.15,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.15,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.15,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.15,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.15,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Primary",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.15,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.15,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Secondary",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "tuning_profile": "",
@@ -623,8 +699,901 @@
     "net_chain_classes": {},
     "net_chain_netclasses": {},
     "net_colors": null,
-    "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_assignments": {},
+    "netclass_patterns": [
+      {
+        "netclass": "Secondary",
+        "pattern": "BB_FB"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BB_L1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BB_L2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BB_PG"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BB_PS"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BB_VAUX"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BUCK33_PG"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BUCK33_SW"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BUS_FAULT_CAP"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BUS_FAULT_FILTER_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BUS_FEED_EN"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BUS_LIMIT_RAW_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "BUS_SELECTED"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "D2_A"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "D2_K"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "D6_A"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "D6_K"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "D7_A"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "D7_K"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "DCDC_RAW"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "DCDC_RAW"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "EQ10"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "EQ11"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EQ20"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EQ21"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_3A_OK"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_3V3"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "EXT_5V"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_BOOT1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_BOOT2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_BYPASS_EN"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_CC1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_CC2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_COMP"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_COMP_ZERO"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_CURRENT_OK"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_FB"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_FB_LOW"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_FSW"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_OUT1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_OUT2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_PORT_FEED"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "EXT_PORT_FEED"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_PORT_SLEW"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_PORT_TRIP"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_REG_5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "EXT_REG_5V"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_REG_PG"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_REG_VCC"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_SELECTED"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_SENSED_5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "EXT_SENSED_5V"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_SLEW"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_SW1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_SW2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_SW_5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "EXT_SW_5V"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_TRIP"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "EXT_VDET"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "GND1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "GND2"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST18_FB"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST18_SW"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_3V3"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_CC1"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_CC2"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_CONVERTER_5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "HOST_CONVERTER_5V"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_D+"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "HOST_D+"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_D-"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "HOST_D-"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_ILIM"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_LIMIT_N"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_OUT1"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_OUT2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HOST_PRESENT"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_PWR_OK"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "HOST_VDET"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_CFG1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_CRFILT"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_PLLFILT"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_RBIAS"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_RESET_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_SCL"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_SDA"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_UP_D+"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "HUB_UP_D+"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_UP_D-"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "HUB_UP_D-"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_VBUS_DET"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_XI"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "HUB_XO"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "ISO_3V3"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "ISO_3V3"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "ISO_5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "ISO_5V"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "ISO_5V_PRE"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "ISO_5V_PRE"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "ISO_SIDE_OK"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "MUX_CP2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "MUX_ILIM"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "MUX_PR1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "MUX_SS"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "OCS1_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "OCS2_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "OCS3_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "OCS4_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT1_D+"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "PORT1_D+"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT1_D-"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "PORT1_D-"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT1_ILIM"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT1_VBUS"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "PORT1_VBUS"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT2_D+"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "PORT2_D+"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT2_D-"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "PORT2_D-"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT2_ILIM"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT2_VBUS"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "PORT2_VBUS"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_ATTACHED"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_CC1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_CC2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_D+"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "PORT3_D+"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_D-"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "PORT3_D-"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_DISCHARGE"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_DISCHARGE_D"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_EN"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_ID_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_ILIM"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_VBUS"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "PORT3_VBUS"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT3_VDET"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_ATTACHED"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_CC1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_CC2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_D+"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "PORT4_D+"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_D-"
+      },
+      {
+        "netclass": "USB90",
+        "pattern": "PORT4_D-"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_DISCHARGE"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_DISCHARGE_D"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_EN"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_ID_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_ILIM"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_VBUS"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "PORT4_VBUS"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT4_VDET"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT_ANY_ON"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT_FEED_EN"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT_ILIM"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT_LIMIT_N"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT_RAIL_OK"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT_SENSE"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PORT_SUPPLY"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "PORT_SUPPLY"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "PRI_A"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "PRI_B"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PRTPWR1"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PRTPWR2"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PRTPWR3"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "PRTPWR4"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "SEC_A"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "SEC_B"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "U1_1V8_HOST"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "U1_1V8_HOST"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "U1_1V8_ISO"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "U1_3V3_HOST"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "U20_PORT"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "U21_PORT"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "VBUS_HOST"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VBUS_HOST"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J2-D+-PadA6)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J2-D+-PadB6)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J2-D--PadA7)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J2-D--PadB7)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J2-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J2-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J5-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J5-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J6-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(J6-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "unconnected-(U1-NC-Pad14)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U20-ADDR-Pad5)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U20-OUT1-Pad7)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U20-OUT2-Pad8)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U20-OUT3-Pad6)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U21-ADDR-Pad5)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U21-OUT1-Pad7)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U21-OUT2-Pad8)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U21-OUT3-Pad6)"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "unconnected-(U22-NC-Pad4)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U23-NC-Pad4)"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "unconnected-(U24-NC-Pad1)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U28-CC-Pad4)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U28-CDC-Pad16)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U28-EXTVCC-Pad21)"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "unconnected-(U3-ADDR-Pad5)"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "unconnected-(U3-ID-Pad9)"
+      },
+      {
+        "netclass": "Primary",
+        "pattern": "unconnected-(U3-OUT3-Pad6)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U31-CT-Pad4)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U33-CT-Pad4)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U35-NC-Pad1)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U36-NC-Pad1)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U39-NC-Pad1)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U40-NC-Pad1)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U42-NC-Pad1)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U46-HYS-Pad10)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U47-DELAY-Pad7)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U47-HYS-Pad10)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U48-NC-Pad1)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U6-FB2-Pad6)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U7-ADDR-Pad5)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U7-ID-Pad9)"
+      },
+      {
+        "netclass": "Secondary",
+        "pattern": "unconnected-(U7-OUT3-Pad6)"
+      }
+    ]
   },
   "pcbnew": {
     "find_by_properties": {

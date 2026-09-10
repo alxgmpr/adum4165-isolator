@@ -775,8 +775,8 @@
     )
     (symbol "Power_Protection_USBLC6-2SC6_0_1"
       (rectangle
-        (start -17.78 20.32)
-        (end 17.78 -20.32)
+        (start -8.89 11.43)
+        (end 8.89 -11.43)
         (stroke
           (width 0)
           (type default)
@@ -788,8 +788,8 @@
     )
     (symbol "Power_Protection_USBLC6-2SC6_1_1"
       (pin passive line
-        (at -22.86 10.16 0)
-        (length 5.08)
+        (at -11.43 5.08 0)
+        (length 2.54)
         (name "I/O1"
           (effects
             (font
@@ -806,8 +806,8 @@
         )
       )
       (pin passive line
-        (at -22.86 5.08 0)
-        (length 5.08)
+        (at -11.43 2.54 0)
+        (length 2.54)
         (name "I/O2"
           (effects
             (font
@@ -824,8 +824,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -0.0 0)
-        (length 5.08)
+        (at -11.43 -0.0 0)
+        (length 2.54)
         (name "I/O2"
           (effects
             (font
@@ -842,8 +842,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -5.08 0)
-        (length 5.08)
+        (at -11.43 -2.54 0)
+        (length 2.54)
         (name "VBUS"
           (effects
             (font
@@ -860,8 +860,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -10.16 0)
-        (length 5.08)
+        (at -11.43 -5.08 0)
+        (length 2.54)
         (name "I/O1"
           (effects
             (font
@@ -878,8 +878,8 @@
         )
       )
       (pin passive line
-        (at 0.0 -25.4 90)
-        (length 5.08)
+        (at 0.0 -13.969999999999999 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -1105,8 +1105,8 @@
     )
     (symbol "Regulator_Linear_TLV75533PDBV_0_1"
       (rectangle
-        (start -17.78 12.7)
-        (end 17.78 -12.7)
+        (start -8.89 7.62)
+        (end 8.89 -7.62)
         (stroke
           (width 0)
           (type default)
@@ -1118,8 +1118,8 @@
     )
     (symbol "Regulator_Linear_TLV75533PDBV_1_1"
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "EN"
           (effects
             (font
@@ -1136,8 +1136,8 @@
         )
       )
       (pin no_connect line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "NC"
           (effects
             (font
@@ -1154,8 +1154,8 @@
         )
       )
       (pin power_out line
-        (at 22.86 -0.0 180)
-        (length 5.08)
+        (at 11.43 -0.0 180)
+        (length 2.54)
         (name "OUT"
           (effects
             (font
@@ -1172,8 +1172,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 17.78 270)
-        (length 5.08)
+        (at 0.0 10.16 270)
+        (length 2.54)
         (name "IN"
           (effects
             (font
@@ -1190,8 +1190,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -17.78 90)
-        (length 5.08)
+        (at 0.0 -10.16 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -1260,8 +1260,8 @@
     )
     (symbol "hub-custom_TUSB320LAI_0_1"
       (rectangle
-        (start -17.78 22.86)
-        (end 17.78 -22.86)
+        (start -8.89 12.7)
+        (end 8.89 -12.7)
         (stroke
           (width 0)
           (type default)
@@ -1273,8 +1273,8 @@
     )
     (symbol "hub-custom_TUSB320LAI_1_1"
       (pin bidirectional line
-        (at -22.86 12.7 0)
-        (length 5.08)
+        (at -11.43 6.35 0)
+        (length 2.54)
         (name "CC1"
           (effects
             (font
@@ -1291,8 +1291,8 @@
         )
       )
       (pin bidirectional line
-        (at -22.86 7.62 0)
-        (length 5.08)
+        (at -11.43 3.81 0)
+        (length 2.54)
         (name "CC2"
           (effects
             (font
@@ -1309,8 +1309,8 @@
         )
       )
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "PORT"
           (effects
             (font
@@ -1327,8 +1327,8 @@
         )
       )
       (pin input line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "VBUS_DET"
           (effects
             (font
@@ -1345,8 +1345,8 @@
         )
       )
       (pin input line
-        (at -22.86 -7.62 0)
-        (length 5.08)
+        (at -11.43 -3.81 0)
+        (length 2.54)
         (name "ADDR"
           (effects
             (font
@@ -1363,8 +1363,8 @@
         )
       )
       (pin input line
-        (at -22.86 -12.7 0)
-        (length 5.08)
+        (at -11.43 -6.35 0)
+        (length 2.54)
         (name "EN_N"
           (effects
             (font
@@ -1381,8 +1381,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 7.62 180)
-        (length 5.08)
+        (at 11.43 3.81 180)
+        (length 2.54)
         (name "OUT3"
           (effects
             (font
@@ -1399,8 +1399,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 2.54 180)
-        (length 5.08)
+        (at 11.43 1.27 180)
+        (length 2.54)
         (name "OUT1"
           (effects
             (font
@@ -1417,8 +1417,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 -2.54 180)
-        (length 5.08)
+        (at 11.43 -1.27 180)
+        (length 2.54)
         (name "OUT2"
           (effects
             (font
@@ -1435,8 +1435,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 -7.62 180)
-        (length 5.08)
+        (at 11.43 -3.81 180)
+        (length 2.54)
         (name "ID"
           (effects
             (font
@@ -1453,8 +1453,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 27.939999999999998 270)
-        (length 5.08)
+        (at 0.0 15.239999999999998 270)
+        (length 2.54)
         (name "VDD"
           (effects
             (font
@@ -1471,8 +1471,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -27.939999999999998 90)
-        (length 5.08)
+        (at 0.0 -15.239999999999998 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -1653,13 +1653,15 @@
     (embedded_fonts no)
   )
   (symbol "74xGxx_74LVC1G04"
-    (pin_names
-      (offset 1.016)
-    )
+    (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
     (property "Reference" "U"
-      (at 0 0 0)
+      (at 0 7.62 0)
+      (show_name no)
+      (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27)
@@ -1667,7 +1669,9 @@
       )
     )
     (property "Value" "74LVC1G04"
-      (at 0 0 0)
+      (at 5.08 -7.62 0)
+      (show_name no)
+      (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27)
@@ -1676,37 +1680,69 @@
     )
     (property "Footprint" ""
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf"
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
       )
     )
-    (property "Description" "74LVC1G04"
+    (property "Description" "Single NOT Gate, Low-Voltage CMOS"
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
+      )
+    )
+    (property "ki_keywords" "Single Gate NOT LVC CMOS"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_fp_filters" "SOT?23* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
       )
     )
     (symbol "74xGxx_74LVC1G04_0_1"
-      (rectangle
-        (start -17.78 12.7)
-        (end 17.78 -12.7)
+      (polyline
+        (pts
+          (xy -7.62 6.35)
+          (xy -7.62 -6.35)
+          (xy 5.08 0)
+          (xy -7.62 6.35)
+        )
         (stroke
-          (width 0)
+          (width 0.254)
           (type default)
         )
         (fill
@@ -1716,96 +1752,98 @@
     )
     (symbol "74xGxx_74LVC1G04_1_1"
       (pin no_connect line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -7.62 2.54 0)
+        (length 2.54)
+        (hide yes)
         (name "NC"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "1"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin input line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -15.24 0 0)
+        (length 7.62)
         (name ""
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "2"
           (effects
             (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin output line
-        (at 22.86 -0.0 180)
-        (length 5.08)
-        (name ""
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "4"
-          (effects
-            (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at 0.0 17.78 270)
-        (length 5.08)
-        (name "VCC"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "5"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin power_in line
-        (at 0.0 -17.78 90)
+        (at -5.08 -10.16 90)
         (length 5.08)
         (name "GND"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "3"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin output inverted
+        (at 12.7 0 180)
+        (length 7.62)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "4"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -5.08 10.16 270)
+        (length 5.08)
+        (name "VCC"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "5"
+          (effects
+            (font
+              (size 1.27 1.27)
             )
           )
         )
       )
     )
+    (embedded_fonts no)
   )
   (symbol "isolator-lib_TPS2553DBV"
     (pin_names
@@ -1858,8 +1896,8 @@
     )
     (symbol "isolator-lib_TPS2553DBV_0_1"
       (rectangle
-        (start -17.78 12.7)
-        (end 17.78 -12.7)
+        (start -8.89 7.62)
+        (end 8.89 -7.62)
         (stroke
           (width 0)
           (type default)
@@ -1871,8 +1909,8 @@
     )
     (symbol "isolator-lib_TPS2553DBV_1_1"
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "EN"
           (effects
             (font
@@ -1889,8 +1927,8 @@
         )
       )
       (pin input line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "ILIM"
           (effects
             (font
@@ -1907,8 +1945,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 2.54 180)
-        (length 5.08)
+        (at 11.43 1.27 180)
+        (length 2.54)
         (name "~{FAULT}"
           (effects
             (font
@@ -1925,8 +1963,8 @@
         )
       )
       (pin power_out line
-        (at 22.86 -2.54 180)
-        (length 5.08)
+        (at 11.43 -1.27 180)
+        (length 2.54)
         (name "OUT"
           (effects
             (font
@@ -1943,8 +1981,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 17.78 270)
-        (length 5.08)
+        (at 0.0 10.16 270)
+        (length 2.54)
         (name "IN"
           (effects
             (font
@@ -1961,8 +1999,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -17.78 90)
-        (length 5.08)
+        (at 0.0 -10.16 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -2154,8 +2192,8 @@
     )
     (symbol "Regulator_Switching_TLV62568DBV_0_1"
       (rectangle
-        (start -17.78 12.7)
-        (end 17.78 -12.7)
+        (start -8.89 7.62)
+        (end 8.89 -7.62)
         (stroke
           (width 0)
           (type default)
@@ -2167,8 +2205,8 @@
     )
     (symbol "Regulator_Switching_TLV62568DBV_1_1"
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "EN"
           (effects
             (font
@@ -2185,8 +2223,8 @@
         )
       )
       (pin input line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "FB"
           (effects
             (font
@@ -2203,8 +2241,8 @@
         )
       )
       (pin power_out line
-        (at 22.86 -0.0 180)
-        (length 5.08)
+        (at 11.43 -0.0 180)
+        (length 2.54)
         (name "SW"
           (effects
             (font
@@ -2221,8 +2259,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 17.78 270)
-        (length 5.08)
+        (at 0.0 10.16 270)
+        (length 2.54)
         (name "VIN"
           (effects
             (font
@@ -2239,8 +2277,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -17.78 90)
-        (length 5.08)
+        (at 0.0 -10.16 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -3088,8 +3126,8 @@
     )
     (symbol "Power_Management_SN6505BDBV_0_1"
       (rectangle
-        (start -17.78 12.7)
-        (end 17.78 -12.7)
+        (start -8.89 7.62)
+        (end 8.89 -7.62)
         (stroke
           (width 0)
           (type default)
@@ -3101,8 +3139,8 @@
     )
     (symbol "Power_Management_SN6505BDBV_1_1"
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "EN"
           (effects
             (font
@@ -3119,8 +3157,8 @@
         )
       )
       (pin input line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "CLK"
           (effects
             (font
@@ -3137,8 +3175,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 2.54 180)
-        (length 5.08)
+        (at 11.43 1.27 180)
+        (length 2.54)
         (name "D1"
           (effects
             (font
@@ -3155,8 +3193,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 -2.54 180)
-        (length 5.08)
+        (at 11.43 -1.27 180)
+        (length 2.54)
         (name "D2"
           (effects
             (font
@@ -3173,8 +3211,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 17.78 270)
-        (length 5.08)
+        (at 0.0 10.16 270)
+        (length 2.54)
         (name "VCC"
           (effects
             (font
@@ -3191,8 +3229,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -17.78 90)
-        (length 5.08)
+        (at 0.0 -10.16 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -3261,8 +3299,8 @@
     )
     (symbol "isolator-lib_750313638_0_1"
       (rectangle
-        (start -17.78 22.86)
-        (end 17.78 -22.86)
+        (start -8.89 12.7)
+        (end 8.89 -12.7)
         (stroke
           (width 0)
           (type default)
@@ -3274,8 +3312,8 @@
     )
     (symbol "isolator-lib_750313638_1_1"
       (pin passive line
-        (at -22.86 12.7 0)
-        (length 5.08)
+        (at -11.43 6.35 0)
+        (length 2.54)
         (name "N1"
           (effects
             (font
@@ -3292,8 +3330,8 @@
         )
       )
       (pin passive line
-        (at -22.86 7.62 0)
-        (length 5.08)
+        (at -11.43 3.81 0)
+        (length 2.54)
         (name "CT1"
           (effects
             (font
@@ -3310,8 +3348,8 @@
         )
       )
       (pin passive line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "N2"
           (effects
             (font
@@ -3328,8 +3366,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "N4"
           (effects
             (font
@@ -3346,8 +3384,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -7.62 0)
-        (length 5.08)
+        (at -11.43 -3.81 0)
+        (length 2.54)
         (name "CT2"
           (effects
             (font
@@ -3364,8 +3402,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -12.7 0)
-        (length 5.08)
+        (at -11.43 -6.35 0)
+        (length 2.54)
         (name "N3"
           (effects
             (font
@@ -3609,8 +3647,8 @@
     )
     (symbol "isolator-lib_TPS630701RNM_0_1"
       (rectangle
-        (start -17.78 25.4)
-        (end 17.78 -25.4)
+        (start -8.89 13.97)
+        (end 8.89 -13.97)
         (stroke
           (width 0)
           (type default)
@@ -3622,8 +3660,8 @@
     )
     (symbol "isolator-lib_TPS630701RNM_1_1"
       (pin input line
-        (at -22.86 15.24 0)
-        (length 5.08)
+        (at -11.43 7.62 0)
+        (length 2.54)
         (name "PS/SYNC"
           (effects
             (font
@@ -3640,8 +3678,8 @@
         )
       )
       (pin input line
-        (at -22.86 10.16 0)
-        (length 5.08)
+        (at -11.43 5.08 0)
+        (length 2.54)
         (name "FB"
           (effects
             (font
@@ -3658,8 +3696,8 @@
         )
       )
       (pin passive line
-        (at -22.86 5.08 0)
-        (length 5.08)
+        (at -11.43 2.54 0)
+        (length 2.54)
         (name "VOUT"
           (effects
             (font
@@ -3676,8 +3714,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -0.0 0)
-        (length 5.08)
+        (at -11.43 -0.0 0)
+        (length 2.54)
         (name "L2"
           (effects
             (font
@@ -3694,8 +3732,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -5.08 0)
-        (length 5.08)
+        (at -11.43 -2.54 0)
+        (length 2.54)
         (name "L1"
           (effects
             (font
@@ -3712,8 +3750,8 @@
         )
       )
       (pin input line
-        (at -22.86 -10.16 0)
-        (length 5.08)
+        (at -11.43 -5.08 0)
+        (length 2.54)
         (name "EN"
           (effects
             (font
@@ -3730,8 +3768,8 @@
         )
       )
       (pin input line
-        (at -22.86 -15.24 0)
-        (length 5.08)
+        (at -11.43 -7.62 0)
+        (length 2.54)
         (name "VSEL"
           (effects
             (font
@@ -3748,8 +3786,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 7.62 180)
-        (length 5.08)
+        (at 11.43 3.81 180)
+        (length 2.54)
         (name "PG"
           (effects
             (font
@@ -3766,8 +3804,8 @@
         )
       )
       (pin output line
-        (at 22.86 2.54 180)
-        (length 5.08)
+        (at 11.43 1.27 180)
+        (length 2.54)
         (name "VAUX"
           (effects
             (font
@@ -3784,8 +3822,8 @@
         )
       )
       (pin output line
-        (at 22.86 -2.54 180)
-        (length 5.08)
+        (at 11.43 -1.27 180)
+        (length 2.54)
         (name "FB2"
           (effects
             (font
@@ -3802,8 +3840,8 @@
         )
       )
       (pin power_out line
-        (at 22.86 -7.62 180)
-        (length 5.08)
+        (at 11.43 -3.81 180)
+        (length 2.54)
         (name "VOUT"
           (effects
             (font
@@ -3820,8 +3858,8 @@
         )
       )
       (pin power_in line
-        (at -2.54 30.479999999999997 270)
-        (length 5.08)
+        (at -1.27 16.51 270)
+        (length 2.54)
         (name "VIN"
           (effects
             (font
@@ -3838,8 +3876,8 @@
         )
       )
       (pin power_in line
-        (at 2.54 30.479999999999997 270)
-        (length 5.08)
+        (at 1.27 16.51 270)
+        (length 2.54)
         (name "VIN"
           (effects
             (font
@@ -3856,8 +3894,8 @@
         )
       )
       (pin power_in line
-        (at -2.54 -30.479999999999997 90)
-        (length 5.08)
+        (at -1.27 -16.51 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -3874,8 +3912,8 @@
         )
       )
       (pin power_in line
-        (at 2.54 -30.479999999999997 90)
-        (length 5.08)
+        (at 1.27 -16.51 90)
+        (length 2.54)
         (name "PGND"
           (effects
             (font
@@ -3944,8 +3982,8 @@
     )
     (symbol "hub-custom_Shield_Frame_0_1"
       (rectangle
-        (start -17.78 12.7)
-        (end 17.78 -12.7)
+        (start -8.89 6.35)
+        (end 8.89 -6.35)
         (stroke
           (width 0)
           (type default)
@@ -3957,8 +3995,8 @@
     )
     (symbol "hub-custom_Shield_Frame_1_1"
       (pin passive line
-        (at -22.86 -0.0 0)
-        (length 5.08)
+        (at -11.43 -0.0 0)
+        (length 2.54)
         (name "FRAME"
           (effects
             (font
@@ -3977,13 +4015,15 @@
     )
   )
   (symbol "74xGxx_74LVC1G02"
-    (pin_names
-      (offset 1.016)
-    )
+    (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
     (property "Reference" "U"
-      (at 0 0 0)
+      (at -5.08 7.62 0)
+      (show_name no)
+      (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27)
@@ -3991,7 +4031,9 @@
       )
     )
     (property "Value" "74LVC1G02"
-      (at 0 0 0)
+      (at 7.62 -7.62 0)
+      (show_name no)
+      (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27)
@@ -4000,37 +4042,142 @@
     )
     (property "Footprint" ""
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g02.pdf"
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
       )
     )
-    (property "Description" "74LVC1G02"
+    (property "Description" "Single NOR Gate, Low-Voltage CMOS"
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
+      )
+    )
+    (property "ki_keywords" "Single Gate NOR LVC CMOS"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_fp_filters" "SOT?23* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
       )
     )
     (symbol "74xGxx_74LVC1G02_0_1"
-      (rectangle
-        (start -17.78 12.7)
-        (end 17.78 -12.7)
+      (arc
+        (start -7.62 5.08)
+        (mid -5.838 0)
+        (end -7.62 -5.08)
         (stroke
-          (width 0)
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy -7.62 2.54)
+          (xy -6.35 2.54)
+        )
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (polyline
+        (pts
+          (xy -7.62 -2.54)
+          (xy -6.35 -2.54)
+        )
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (arc
+        (start 5.08 0)
+        (mid 3.202 -3.202)
+        (end 0 -5.08)
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (arc
+        (start 0 5.08)
+        (mid 3.2271 3.2271)
+        (end 5.08 0)
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 5.08)
+          (xy -7.62 5.08)
+        )
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 -5.08)
+          (xy -7.62 -5.08)
+        )
+        (stroke
+          (width 0.254)
           (type default)
         )
         (fill
@@ -4040,96 +4187,97 @@
     )
     (symbol "74xGxx_74LVC1G02_1_1"
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -15.24 2.54 0)
+        (length 7.62)
         (name ""
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "1"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin input line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -15.24 -2.54 0)
+        (length 7.62)
         (name ""
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "2"
           (effects
             (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin output line
-        (at 22.86 -0.0 180)
-        (length 5.08)
-        (name ""
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "4"
-          (effects
-            (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at 0.0 17.78 270)
-        (length 5.08)
-        (name "VCC"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "5"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin power_in line
-        (at 0.0 -17.78 90)
+        (at 0 -10.16 90)
         (length 5.08)
         (name "GND"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "3"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin output inverted
+        (at 12.7 0 180)
+        (length 7.62)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "4"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at 0 10.16 270)
+        (length 5.08)
+        (name "VCC"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "5"
+          (effects
+            (font
+              (size 1.27 1.27)
             )
           )
         )
       )
     )
+    (embedded_fonts no)
   )
   (symbol "hub-custom_TPS22975"
     (pin_names
@@ -4182,8 +4330,8 @@
     )
     (symbol "hub-custom_TPS22975_0_1"
       (rectangle
-        (start -17.78 22.86)
-        (end 17.78 -22.86)
+        (start -8.89 12.7)
+        (end 8.89 -12.7)
         (stroke
           (width 0)
           (type default)
@@ -4195,8 +4343,8 @@
     )
     (symbol "hub-custom_TPS22975_1_1"
       (pin passive line
-        (at -22.86 12.7 0)
-        (length 5.08)
+        (at -11.43 6.35 0)
+        (length 2.54)
         (name "VIN"
           (effects
             (font
@@ -4213,8 +4361,8 @@
         )
       )
       (pin passive line
-        (at -22.86 7.62 0)
-        (length 5.08)
+        (at -11.43 3.81 0)
+        (length 2.54)
         (name "VIN"
           (effects
             (font
@@ -4231,8 +4379,8 @@
         )
       )
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "ON"
           (effects
             (font
@@ -4249,8 +4397,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "CT"
           (effects
             (font
@@ -4267,8 +4415,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -7.62 0)
-        (length 5.08)
+        (at -11.43 -3.81 0)
+        (length 2.54)
         (name "VOUT"
           (effects
             (font
@@ -4285,8 +4433,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -12.7 0)
-        (length 5.08)
+        (at -11.43 -6.35 0)
+        (length 2.54)
         (name "VOUT"
           (effects
             (font
@@ -4303,8 +4451,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 27.939999999999998 270)
-        (length 5.08)
+        (at 0.0 15.239999999999998 270)
+        (length 2.54)
         (name "VBIAS"
           (effects
             (font
@@ -4321,8 +4469,8 @@
         )
       )
       (pin power_in line
-        (at -2.54 -27.939999999999998 90)
-        (length 5.08)
+        (at -1.27 -15.239999999999998 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -4339,8 +4487,8 @@
         )
       )
       (pin power_in line
-        (at 2.54 -27.939999999999998 90)
-        (length 5.08)
+        (at 1.27 -15.239999999999998 90)
+        (length 2.54)
         (name "EP"
           (effects
             (font
@@ -4409,8 +4557,8 @@
     )
     (symbol "hub-custom_INA300_0_1"
       (rectangle
-        (start -17.78 25.4)
-        (end 17.78 -25.4)
+        (start -8.89 13.97)
+        (end 8.89 -13.97)
         (stroke
           (width 0)
           (type default)
@@ -4422,8 +4570,8 @@
     )
     (symbol "hub-custom_INA300_1_1"
       (pin input line
-        (at -22.86 15.24 0)
-        (length 5.08)
+        (at -11.43 7.62 0)
+        (length 2.54)
         (name "IN+"
           (effects
             (font
@@ -4440,8 +4588,8 @@
         )
       )
       (pin input line
-        (at -22.86 10.16 0)
-        (length 5.08)
+        (at -11.43 5.08 0)
+        (length 2.54)
         (name "IN-"
           (effects
             (font
@@ -4458,8 +4606,8 @@
         )
       )
       (pin input line
-        (at -22.86 5.08 0)
-        (length 5.08)
+        (at -11.43 2.54 0)
+        (length 2.54)
         (name "LIMIT"
           (effects
             (font
@@ -4476,8 +4624,8 @@
         )
       )
       (pin input line
-        (at -22.86 -0.0 0)
-        (length 5.08)
+        (at -11.43 -0.0 0)
+        (length 2.54)
         (name "ENABLE"
           (effects
             (font
@@ -4494,8 +4642,8 @@
         )
       )
       (pin input line
-        (at -22.86 -5.08 0)
-        (length 5.08)
+        (at -11.43 -2.54 0)
+        (length 2.54)
         (name "LATCH"
           (effects
             (font
@@ -4512,8 +4660,8 @@
         )
       )
       (pin input line
-        (at -22.86 -10.16 0)
-        (length 5.08)
+        (at -11.43 -5.08 0)
+        (length 2.54)
         (name "DELAY"
           (effects
             (font
@@ -4530,8 +4678,8 @@
         )
       )
       (pin input line
-        (at -22.86 -15.24 0)
-        (length 5.08)
+        (at -11.43 -7.62 0)
+        (length 2.54)
         (name "HYS"
           (effects
             (font
@@ -4548,8 +4696,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 -0.0 180)
-        (length 5.08)
+        (at 11.43 -0.0 180)
+        (length 2.54)
         (name "ALERT_N"
           (effects
             (font
@@ -4566,8 +4714,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 30.479999999999997 270)
-        (length 5.08)
+        (at 0.0 16.51 270)
+        (length 2.54)
         (name "VS"
           (effects
             (font
@@ -4584,8 +4732,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -30.479999999999997 90)
-        (length 5.08)
+        (at 0.0 -16.51 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -4654,8 +4802,8 @@
     )
     (symbol "hub-custom_TPS552892_0_1"
       (rectangle
-        (start -17.78 33.02)
-        (end 17.78 -33.02)
+        (start -8.89 17.78)
+        (end 8.89 -17.78)
         (stroke
           (width 0)
           (type default)
@@ -4667,8 +4815,8 @@
     )
     (symbol "hub-custom_TPS552892_1_1"
       (pin input line
-        (at -22.86 22.86 0)
-        (length 5.08)
+        (at -11.43 11.43 0)
+        (length 2.54)
         (name "EN_UVLO"
           (effects
             (font
@@ -4685,8 +4833,8 @@
         )
       )
       (pin input line
-        (at -22.86 17.78 0)
-        (length 5.08)
+        (at -11.43 8.89 0)
+        (length 2.54)
         (name "MODE"
           (effects
             (font
@@ -4703,8 +4851,8 @@
         )
       )
       (pin input line
-        (at -22.86 12.7 0)
-        (length 5.08)
+        (at -11.43 6.35 0)
+        (length 2.54)
         (name "DITH_SYNC"
           (effects
             (font
@@ -4721,8 +4869,8 @@
         )
       )
       (pin passive line
-        (at -22.86 7.62 0)
-        (length 5.08)
+        (at -11.43 3.81 0)
+        (length 2.54)
         (name "FSW"
           (effects
             (font
@@ -4739,8 +4887,8 @@
         )
       )
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "ISP"
           (effects
             (font
@@ -4757,8 +4905,8 @@
         )
       )
       (pin input line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "ISN"
           (effects
             (font
@@ -4775,8 +4923,8 @@
         )
       )
       (pin input line
-        (at -22.86 -7.62 0)
-        (length 5.08)
+        (at -11.43 -3.81 0)
+        (length 2.54)
         (name "FB"
           (effects
             (font
@@ -4793,8 +4941,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -12.7 0)
-        (length 5.08)
+        (at -11.43 -6.35 0)
+        (length 2.54)
         (name "BOOT2"
           (effects
             (font
@@ -4811,8 +4959,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -17.78 0)
-        (length 5.08)
+        (at -11.43 -8.89 0)
+        (length 2.54)
         (name "BOOT1"
           (effects
             (font
@@ -4829,8 +4977,8 @@
         )
       )
       (pin input line
-        (at -22.86 -22.86 0)
-        (length 5.08)
+        (at -11.43 -11.43 0)
+        (length 2.54)
         (name "EXTVCC"
           (effects
             (font
@@ -4847,8 +4995,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 17.78 180)
-        (length 5.08)
+        (at 11.43 8.89 180)
+        (length 2.54)
         (name "PG"
           (effects
             (font
@@ -4865,8 +5013,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 12.7 180)
-        (length 5.08)
+        (at 11.43 6.35 180)
+        (length 2.54)
         (name "CC"
           (effects
             (font
@@ -4883,8 +5031,8 @@
         )
       )
       (pin output line
-        (at 22.86 7.62 180)
-        (length 5.08)
+        (at 11.43 3.81 180)
+        (length 2.54)
         (name "SW1"
           (effects
             (font
@@ -4901,8 +5049,8 @@
         )
       )
       (pin output line
-        (at 22.86 2.54 180)
-        (length 5.08)
+        (at 11.43 1.27 180)
+        (length 2.54)
         (name "SW2"
           (effects
             (font
@@ -4919,8 +5067,8 @@
         )
       )
       (pin power_out line
-        (at 22.86 -2.54 180)
-        (length 5.08)
+        (at 11.43 -1.27 180)
+        (length 2.54)
         (name "VOUT"
           (effects
             (font
@@ -4937,8 +5085,8 @@
         )
       )
       (pin output line
-        (at 22.86 -7.62 180)
-        (length 5.08)
+        (at 11.43 -3.81 180)
+        (length 2.54)
         (name "COMP"
           (effects
             (font
@@ -4955,8 +5103,8 @@
         )
       )
       (pin output line
-        (at 22.86 -12.7 180)
-        (length 5.08)
+        (at 11.43 -6.35 180)
+        (length 2.54)
         (name "CDC"
           (effects
             (font
@@ -4973,8 +5121,8 @@
         )
       )
       (pin power_out line
-        (at 22.86 -17.78 180)
-        (length 5.08)
+        (at 11.43 -8.89 180)
+        (length 2.54)
         (name "VCC"
           (effects
             (font
@@ -4991,8 +5139,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 38.1 270)
-        (length 5.08)
+        (at 0.0 20.32 270)
+        (length 2.54)
         (name "VIN"
           (effects
             (font
@@ -5009,8 +5157,8 @@
         )
       )
       (pin power_in line
-        (at -2.54 -38.1 90)
-        (length 5.08)
+        (at -1.27 -20.32 90)
+        (length 2.54)
         (name "PGND"
           (effects
             (font
@@ -5027,8 +5175,8 @@
         )
       )
       (pin power_in line
-        (at 2.54 -38.1 90)
-        (length 5.08)
+        (at 1.27 -20.32 90)
+        (length 2.54)
         (name "AGND"
           (effects
             (font
@@ -5097,8 +5245,8 @@
     )
     (symbol "isolator-lib_TPS2121_0_1"
       (rectangle
-        (start -17.78 25.4)
-        (end 17.78 -25.4)
+        (start -8.89 13.97)
+        (end 8.89 -13.97)
         (stroke
           (width 0)
           (type default)
@@ -5110,8 +5258,8 @@
     )
     (symbol "isolator-lib_TPS2121_1_1"
       (pin passive line
-        (at -22.86 15.24 0)
-        (length 5.08)
+        (at -11.43 7.62 0)
+        (length 2.54)
         (name "OUT"
           (effects
             (font
@@ -5128,8 +5276,8 @@
         )
       )
       (pin input line
-        (at -22.86 10.16 0)
-        (length 5.08)
+        (at -11.43 5.08 0)
+        (length 2.54)
         (name "PR1"
           (effects
             (font
@@ -5146,8 +5294,8 @@
         )
       )
       (pin input line
-        (at -22.86 5.08 0)
-        (length 5.08)
+        (at -11.43 2.54 0)
+        (length 2.54)
         (name "OV1"
           (effects
             (font
@@ -5164,8 +5312,8 @@
         )
       )
       (pin input line
-        (at -22.86 -0.0 0)
-        (length 5.08)
+        (at -11.43 -0.0 0)
+        (length 2.54)
         (name "OV2"
           (effects
             (font
@@ -5182,8 +5330,8 @@
         )
       )
       (pin input line
-        (at -22.86 -5.08 0)
-        (length 5.08)
+        (at -11.43 -2.54 0)
+        (length 2.54)
         (name "CP2"
           (effects
             (font
@@ -5200,8 +5348,8 @@
         )
       )
       (pin input line
-        (at -22.86 -10.16 0)
-        (length 5.08)
+        (at -11.43 -5.08 0)
+        (length 2.54)
         (name "ILIM"
           (effects
             (font
@@ -5218,8 +5366,8 @@
         )
       )
       (pin input line
-        (at -22.86 -15.24 0)
-        (length 5.08)
+        (at -11.43 -7.62 0)
+        (length 2.54)
         (name "SS"
           (effects
             (font
@@ -5236,8 +5384,8 @@
         )
       )
       (pin power_out line
-        (at 22.86 2.54 180)
-        (length 5.08)
+        (at 11.43 1.27 180)
+        (length 2.54)
         (name "OUT"
           (effects
             (font
@@ -5254,8 +5402,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 -2.54 180)
-        (length 5.08)
+        (at 11.43 -1.27 180)
+        (length 2.54)
         (name "ST"
           (effects
             (font
@@ -5272,8 +5420,8 @@
         )
       )
       (pin power_in line
-        (at -2.54 30.479999999999997 270)
-        (length 5.08)
+        (at -1.27 16.51 270)
+        (length 2.54)
         (name "IN1"
           (effects
             (font
@@ -5290,8 +5438,8 @@
         )
       )
       (pin power_in line
-        (at 2.54 30.479999999999997 270)
-        (length 5.08)
+        (at 1.27 16.51 270)
+        (length 2.54)
         (name "IN2"
           (effects
             (font
@@ -5308,8 +5456,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -30.479999999999997 90)
-        (length 5.08)
+        (at 0.0 -16.51 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -5506,14 +5654,242 @@
     )
     (embedded_fonts no)
   )
-  (symbol "74xGxx_74LVC1G08"
-    (pin_names
-      (offset 1.016)
-    )
+  (symbol "74xGxx_74LVC1G17"
+    (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
     (property "Reference" "U"
+      (at 0 3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "74LVC1G17"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at -2.54 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf"
+      (at 0 -6.35 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Description" "Single Schmitt Buffer Gate, Low-Voltage CMOS"
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "Single Gate Buff Schmitt LVC CMOS"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_fp_filters" "SOT?23* SOT?553* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "74xGxx_74LVC1G17_0_1"
+      (polyline
+        (pts
+          (xy -7.62 6.35)
+          (xy -7.62 -6.35)
+          (xy 5.08 0)
+          (xy -7.62 6.35)
+        )
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (polyline
+        (pts
+          (xy -3.81 -1.27)
+          (xy -2.54 -1.27)
+          (xy -2.54 1.27)
+          (xy -1.27 1.27)
+        )
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (polyline
+        (pts
+          (xy -2.54 -1.27)
+          (xy -1.27 -1.27)
+          (xy -1.27 1.27)
+          (xy 0 1.27)
+        )
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+    )
+    (symbol "74xGxx_74LVC1G17_1_1"
+      (pin no_connect line
+        (at -7.62 5.08 180)
+        (length 5.08)
+        (hide yes)
+        (name "NC"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -12.7 0 0)
+        (length 5.08)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "2"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -5.08 -10.16 90)
+        (length 5.08)
+        (name "GND"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "3"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin output line
+        (at 10.16 0 180)
+        (length 5.08)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "4"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -5.08 10.16 270)
+        (length 5.08)
+        (name "VCC"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "5"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "74xGxx_74LVC1G08"
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "U"
+      (at -5.08 7.62 0)
+      (show_name no)
+      (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27)
@@ -5521,7 +5897,9 @@
       )
     )
     (property "Value" "74LVC1G08"
-      (at 0 0 0)
+      (at 7.62 -7.62 0)
+      (show_name no)
+      (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27)
@@ -5530,37 +5908,81 @@
     )
     (property "Footprint" ""
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf"
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
       )
     )
-    (property "Description" "74LVC1G08"
+    (property "Description" "Single AND Gate, Low-Voltage CMOS"
       (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
       (effects
         (font
           (size 1.27 1.27)
         )
-        hide
+      )
+    )
+    (property "ki_keywords" "Single Gate AND LVC CMOS"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_fp_filters" "SOT?23* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
       )
     )
     (symbol "74xGxx_74LVC1G08_0_1"
-      (rectangle
-        (start -17.78 12.7)
-        (end 17.78 -12.7)
+      (arc
+        (start 0 5.08)
+        (mid 5.0579 0)
+        (end 0 -5.08)
         (stroke
-          (width 0)
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 -5.08)
+          (xy -7.62 -5.08)
+          (xy -7.62 5.08)
+          (xy 0 5.08)
+        )
+        (stroke
+          (width 0.254)
           (type default)
         )
         (fill
@@ -5570,96 +5992,97 @@
     )
     (symbol "74xGxx_74LVC1G08_1_1"
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -15.24 2.54 0)
+        (length 7.62)
         (name ""
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "1"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin input line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -15.24 -2.54 0)
+        (length 7.62)
         (name ""
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "2"
           (effects
             (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin output line
-        (at 22.86 -0.0 180)
-        (length 5.08)
-        (name ""
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "4"
-          (effects
-            (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at 0.0 17.78 270)
-        (length 5.08)
-        (name "VCC"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "5"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin power_in line
-        (at 0.0 -17.78 90)
+        (at 0 -10.16 90)
         (length 5.08)
         (name "GND"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "3"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin output line
+        (at 12.7 0 180)
+        (length 7.62)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "4"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at 0 10.16 270)
+        (length 5.08)
+        (name "VCC"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "5"
+          (effects
+            (font
+              (size 1.27 1.27)
             )
           )
         )
       )
     )
+    (embedded_fonts no)
   )
   (symbol "hub-custom_TPS3808"
     (pin_names
@@ -5712,8 +6135,8 @@
     )
     (symbol "hub-custom_TPS3808_0_1"
       (rectangle
-        (start -17.78 15.24)
-        (end 17.78 -15.24)
+        (start -8.89 8.89)
+        (end 8.89 -8.89)
         (stroke
           (width 0)
           (type default)
@@ -5725,8 +6148,8 @@
     )
     (symbol "hub-custom_TPS3808_1_1"
       (pin input line
-        (at -22.86 5.08 0)
-        (length 5.08)
+        (at -11.43 2.54 0)
+        (length 2.54)
         (name "MR_N"
           (effects
             (font
@@ -5743,8 +6166,8 @@
         )
       )
       (pin passive line
-        (at -22.86 -0.0 0)
-        (length 5.08)
+        (at -11.43 -0.0 0)
+        (length 2.54)
         (name "CT"
           (effects
             (font
@@ -5761,8 +6184,8 @@
         )
       )
       (pin input line
-        (at -22.86 -5.08 0)
-        (length 5.08)
+        (at -11.43 -2.54 0)
+        (length 2.54)
         (name "SENSE"
           (effects
             (font
@@ -5779,8 +6202,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 -0.0 180)
-        (length 5.08)
+        (at 11.43 -0.0 180)
+        (length 2.54)
         (name "RESET_N"
           (effects
             (font
@@ -5797,8 +6220,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 20.32 270)
-        (length 5.08)
+        (at 0.0 11.43 270)
+        (length 2.54)
         (name "VDD"
           (effects
             (font
@@ -5815,8 +6238,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -20.32 90)
-        (length 5.08)
+        (at 0.0 -11.43 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -6242,8 +6665,8 @@
     )
     (symbol "Regulator_Switching_TPS62162DSG_0_1"
       (rectangle
-        (start -17.78 15.24)
-        (end 17.78 -15.24)
+        (start -8.89 8.89)
+        (end 8.89 -8.89)
         (stroke
           (width 0)
           (type default)
@@ -6255,8 +6678,8 @@
     )
     (symbol "Regulator_Switching_TPS62162DSG_1_1"
       (pin input line
-        (at -22.86 5.08 0)
-        (length 5.08)
+        (at -11.43 2.54 0)
+        (length 2.54)
         (name "EN"
           (effects
             (font
@@ -6273,8 +6696,8 @@
         )
       )
       (pin input line
-        (at -22.86 -0.0 0)
-        (length 5.08)
+        (at -11.43 -0.0 0)
+        (length 2.54)
         (name "FB"
           (effects
             (font
@@ -6291,8 +6714,8 @@
         )
       )
       (pin input line
-        (at -22.86 -5.08 0)
-        (length 5.08)
+        (at -11.43 -2.54 0)
+        (length 2.54)
         (name "VOS"
           (effects
             (font
@@ -6309,8 +6732,8 @@
         )
       )
       (pin output line
-        (at 22.86 2.54 180)
-        (length 5.08)
+        (at 11.43 1.27 180)
+        (length 2.54)
         (name "SW"
           (effects
             (font
@@ -6327,8 +6750,8 @@
         )
       )
       (pin open_collector line
-        (at 22.86 -2.54 180)
-        (length 5.08)
+        (at 11.43 -1.27 180)
+        (length 2.54)
         (name "PG"
           (effects
             (font
@@ -6345,8 +6768,8 @@
         )
       )
       (pin power_in line
-        (at -2.54 20.32 270)
-        (length 5.08)
+        (at 0.0 11.43 270)
+        (length 2.54)
         (name "VIN"
           (effects
             (font
@@ -6363,26 +6786,8 @@
         )
       )
       (pin power_in line
-        (at 2.54 20.32 270)
-        (length 5.08)
-        (name "PAD"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "9"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin power_in line
-        (at -2.54 -20.32 90)
-        (length 5.08)
+        (at -2.54 -11.43 90)
+        (length 2.54)
         (name "PGND"
           (effects
             (font
@@ -6399,8 +6804,8 @@
         )
       )
       (pin power_in line
-        (at 2.54 -20.32 90)
-        (length 5.08)
+        (at 0.0 -11.43 90)
+        (length 2.54)
         (name "AGND"
           (effects
             (font
@@ -6416,453 +6821,10 @@
           )
         )
       )
-    )
-  )
-  (symbol "Interface_USB_USB2514B_Bi"
-    (pin_names
-      (offset 1.016)
-    )
-    (in_bom yes)
-    (on_board yes)
-    (property "Reference" "U"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "USB2514B_Bi"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Footprint" ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Datasheet" ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Description" "USB2514B_Bi"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (symbol "Interface_USB_USB2514B_Bi_0_1"
-      (rectangle
-        (start -17.78 48.26)
-        (end 17.78 -48.26)
-        (stroke
-          (width 0)
-          (type default)
-        )
-        (fill
-          (type background)
-        )
-      )
-    )
-    (symbol "Interface_USB_USB2514B_Bi_1_1"
-      (pin input line
-        (at -22.86 33.02 0)
-        (length 5.08)
-        (name "TEST"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "11"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at -22.86 27.94 0)
-        (length 5.08)
-        (name "CRFILT"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "14"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at -22.86 22.86 0)
-        (length 5.08)
-        (name "SDA/SMBDATA/NON_REM1"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "22"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at -22.86 17.78 0)
-        (length 5.08)
-        (name "SCL/SMBCLK/CFG_SEL0"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "24"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at -22.86 12.7 0)
-        (length 5.08)
-        (name "HS_IND/CFG_SEL1"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "25"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at -22.86 7.62 0)
-        (length 5.08)
-        (name "RESET_N"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "26"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
-        (name "VBUS_DET"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "27"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at -22.86 -2.54 0)
-        (length 5.08)
-        (name "SUSP_IND/LOCAL_PWR/NON_REM0"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "28"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at -22.86 -7.62 0)
-        (length 5.08)
-        (name "USBDM_UP"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "30"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at -22.86 -12.7 0)
-        (length 5.08)
-        (name "USBDP_UP"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "31"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin output line
-        (at -22.86 -17.78 0)
-        (length 5.08)
-        (name "XTALOUT"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "32"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at -22.86 -22.86 0)
-        (length 5.08)
-        (name "XTALIN/CLKIN"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "33"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at -22.86 -27.94 0)
-        (length 5.08)
-        (name "PLLFILT"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "34"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at -22.86 -33.02 0)
-        (length 5.08)
-        (name "RBIAS"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "35"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at 22.86 38.1 180)
-        (length 5.08)
-        (name "USBDM_DN1/PRT_DIS_M1"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "1"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at 22.86 33.02 180)
-        (length 5.08)
-        (name "USBDP_DN1/PRT_DIS_P1"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "2"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at 22.86 27.94 180)
-        (length 5.08)
-        (name "USBDM_DN2/PRT_DIS_M2"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "3"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at 22.86 22.86 180)
-        (length 5.08)
-        (name "USBDP_DN2/PRT_DIS_P2"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "4"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at 22.86 17.78 180)
-        (length 5.08)
-        (name "USBDM_DN3/PRT_DIS_M3"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "6"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at 22.86 12.7 180)
-        (length 5.08)
-        (name "USBDP_DN3/PRT_DIS_P3"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "7"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at 22.86 7.62 180)
-        (length 5.08)
-        (name "USBDM_DN4/PRT_DIS_M4"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "8"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin bidirectional line
-        (at 22.86 2.54 180)
-        (length 5.08)
-        (name "USBDP_DN4/PRT_DIS_P4"
+      (pin power_in line
+        (at 2.54 -11.43 90)
+        (length 2.54)
+        (name "PAD"
           (effects
             (font
               (size 1.016 1.016)
@@ -6877,277 +6839,774 @@
           )
         )
       )
+    )
+  )
+  (symbol "Interface_USB_USB2514B_Bi"
+    (pin_names
+      (offset 1.016)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "U"
+      (at -17.78 40.64 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "USB2514B_Bi"
+      (at -20.32 38.1 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP3.7x3.7mm"
+      (at 33.02 -38.1 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/00001692C.pdf"
+      (at 40.64 -40.64 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "USB 2.0 Hi-Speed Hub Controller"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "USB2.0 Hi-Speed-USB-Hub Hub-Controller"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_fp_filters" "Microchip_SQFN36_6x6mm_EP3.7mm"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "Interface_USB_USB2514B_Bi_0_1"
+      (rectangle
+        (start -25.4 35.56)
+        (end 25.4 -35.56)
+        (stroke
+          (width 0.254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+    )
+    (symbol "Interface_USB_USB2514B_Bi_1_1"
       (pin bidirectional line
-        (at 22.86 -2.54 180)
-        (length 5.08)
-        (name "PRTPWR1/BC_EN1"
+        (at 27.94 22.86 180)
+        (length 2.54)
+        (name "USBDM_DN1/PRT_DIS_M1"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
-        (number "12"
+        (number "1"
           (effects
             (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at 22.86 -7.62 180)
-        (length 5.08)
-        (name "OCS_N1"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "13"
-          (effects
-            (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin bidirectional line
-        (at 22.86 -12.7 180)
-        (length 5.08)
-        (name "PRTPWR2/BC_EN2"
+        (at 27.94 20.32 180)
+        (length 2.54)
+        (name "USBDP_DN1/PRT_DIS_P1"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
-        (number "16"
+        (number "2"
           (effects
             (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at 22.86 -17.78 180)
-        (length 5.08)
-        (name "OCS_N2"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "17"
-          (effects
-            (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin bidirectional line
-        (at 22.86 -22.86 180)
-        (length 5.08)
-        (name "PRTPWR3/BC_EN3"
+        (at 27.94 10.16 180)
+        (length 2.54)
+        (name "USBDM_DN2/PRT_DIS_M2"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
-        (number "18"
+        (number "3"
           (effects
             (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at 22.86 -27.94 180)
-        (length 5.08)
-        (name "OCS_N3"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "19"
-          (effects
-            (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin bidirectional line
-        (at 22.86 -33.02 180)
-        (length 5.08)
-        (name "PRTPWR4/BC_EN4"
+        (at 27.94 7.62 180)
+        (length 2.54)
+        (name "USBDP_DN2/PRT_DIS_P2"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
-        (number "20"
+        (number "4"
           (effects
             (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-      )
-      (pin input line
-        (at 22.86 -38.1 180)
-        (length 5.08)
-        (name "OCS_N4"
-          (effects
-            (font
-              (size 1.016 1.016)
-            )
-          )
-        )
-        (number "21"
-          (effects
-            (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at -12.7 53.339999999999996 270)
-        (length 5.08)
+        (at -7.62 38.1 270)
+        (length 2.54)
         (name "VDDA33"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "5"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 27.94 -2.54 180)
+        (length 2.54)
+        (name "USBDM_DN3/PRT_DIS_M3"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "6"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 27.94 -5.08 180)
+        (length 2.54)
+        (name "USBDP_DN3/PRT_DIS_P3"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "7"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 27.94 -15.24 180)
+        (length 2.54)
+        (name "USBDM_DN4/PRT_DIS_M4"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "8"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 27.94 -17.78 180)
+        (length 2.54)
+        (name "USBDP_DN4/PRT_DIS_P4"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "9"
+          (effects
+            (font
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at -7.62 53.339999999999996 270)
-        (length 5.08)
+        (at -5.08 38.1 270)
+        (length 2.54)
         (name "VDDA33"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "10"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -27.94 7.62 0)
+        (length 2.54)
+        (name "TEST"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "11"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 27.94 17.78 180)
+        (length 2.54)
+        (name "PRTPWR1/BC_EN1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "12"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at 27.94 15.24 180)
+        (length 2.54)
+        (name "OCS_N1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "13"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -27.94 -12.7 0)
+        (length 2.54)
+        (name "CRFILT"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "14"
+          (effects
+            (font
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at -2.54 53.339999999999996 270)
-        (length 5.08)
+        (at 5.08 38.1 270)
+        (length 2.54)
         (name "VDD33"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "15"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 27.94 5.08 180)
+        (length 2.54)
+        (name "PRTPWR2/BC_EN2"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "16"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at 27.94 2.54 180)
+        (length 2.54)
+        (name "OCS_N2"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "17"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 27.94 -7.62 180)
+        (length 2.54)
+        (name "PRTPWR3/BC_EN3"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "18"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at 27.94 -10.16 180)
+        (length 2.54)
+        (name "OCS_N3"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "19"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 27.94 -20.32 180)
+        (length 2.54)
+        (name "PRTPWR4/BC_EN4"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "20"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at 27.94 -22.86 180)
+        (length 2.54)
+        (name "OCS_N4"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "21"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at -27.94 -22.86 0)
+        (length 2.54)
+        (name "SDA/SMBDATA/NON_REM1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "22"
+          (effects
+            (font
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at 2.54 53.339999999999996 270)
-        (length 5.08)
+        (at 7.62 38.1 270)
+        (length 2.54)
         (name "VDD33"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "23"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at -27.94 -20.32 0)
+        (length 2.54)
+        (name "SCL/SMBCLK/CFG_SEL0"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "24"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at -27.94 -27.94 0)
+        (length 2.54)
+        (name "HS_IND/CFG_SEL1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "25"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -27.94 10.16 0)
+        (length 2.54)
+        (name "RESET_N"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "26"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -27.94 22.86 0)
+        (length 2.54)
+        (name "VBUS_DET"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "27"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at -27.94 -25.4 0)
+        (length 2.54)
+        (name "SUSP_IND/LOCAL_PWR/NON_REM0"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "28"
+          (effects
+            (font
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at 7.62 53.339999999999996 270)
-        (length 5.08)
+        (at -2.54 38.1 270)
+        (length 2.54)
         (name "VDDA33"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "29"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at -27.94 17.78 0)
+        (length 2.54)
+        (name "USBDM_UP"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "30"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at -27.94 15.24 0)
+        (length 2.54)
+        (name "USBDP_UP"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "31"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin output line
+        (at -27.94 -5.08 0)
+        (length 2.54)
+        (name "XTALOUT"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "32"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input clock
+        (at -27.94 -2.54 0)
+        (length 2.54)
+        (name "XTALIN/CLKIN"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "33"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -27.94 -10.16 0)
+        (length 2.54)
+        (name "PLLFILT"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "34"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -27.94 2.54 0)
+        (length 2.54)
+        (name "RBIAS"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "35"
+          (effects
+            (font
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at 12.7 53.339999999999996 270)
-        (length 5.08)
+        (at 0 38.1 270)
+        (length 2.54)
         (name "VDDA33"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "36"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
       (pin power_in line
-        (at 0.0 -53.339999999999996 90)
-        (length 5.08)
+        (at 0 -38.1 90)
+        (length 2.54)
         (name "VSS"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
         (number "37"
           (effects
             (font
-              (size 1.016 1.016)
+              (size 1.27 1.27)
             )
           )
         )
       )
     )
+    (embedded_fonts no)
   )
   (symbol "Device_Crystal_GND24_Small"
     (pin_names
@@ -7455,8 +7914,8 @@
     )
     (symbol "Memory_EEPROM_24LC02B_0_1"
       (rectangle
-        (start -17.78 22.86)
-        (end 17.78 -22.86)
+        (start -8.89 12.7)
+        (end 8.89 -12.7)
         (stroke
           (width 0)
           (type default)
@@ -7468,8 +7927,8 @@
     )
     (symbol "Memory_EEPROM_24LC02B_1_1"
       (pin input line
-        (at -22.86 12.7 0)
-        (length 5.08)
+        (at -11.43 6.35 0)
+        (length 2.54)
         (name "A0"
           (effects
             (font
@@ -7486,8 +7945,8 @@
         )
       )
       (pin input line
-        (at -22.86 7.62 0)
-        (length 5.08)
+        (at -11.43 3.81 0)
+        (length 2.54)
         (name "A1"
           (effects
             (font
@@ -7504,8 +7963,8 @@
         )
       )
       (pin input line
-        (at -22.86 2.54 0)
-        (length 5.08)
+        (at -11.43 1.27 0)
+        (length 2.54)
         (name "A2"
           (effects
             (font
@@ -7522,8 +7981,8 @@
         )
       )
       (pin bidirectional line
-        (at -22.86 -2.54 0)
-        (length 5.08)
+        (at -11.43 -1.27 0)
+        (length 2.54)
         (name "SDA"
           (effects
             (font
@@ -7540,8 +7999,8 @@
         )
       )
       (pin input line
-        (at -22.86 -7.62 0)
-        (length 5.08)
+        (at -11.43 -3.81 0)
+        (length 2.54)
         (name "SCL"
           (effects
             (font
@@ -7558,8 +8017,8 @@
         )
       )
       (pin input line
-        (at -22.86 -12.7 0)
-        (length 5.08)
+        (at -11.43 -6.35 0)
+        (length 2.54)
         (name "WP"
           (effects
             (font
@@ -7576,8 +8035,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 27.939999999999998 270)
-        (length 5.08)
+        (at 0.0 15.239999999999998 270)
+        (length 2.54)
         (name "VCC"
           (effects
             (font
@@ -7594,8 +8053,8 @@
         )
       )
       (pin power_in line
-        (at 0.0 -27.939999999999998 90)
-        (length 5.08)
+        (at 0.0 -15.239999999999998 90)
+        (length 2.54)
         (name "GND"
           (effects
             (font
@@ -8797,6 +9256,3370 @@
         )
         (fill
           (type none)
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_GND1"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -6.35 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "GND1"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply GND1"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_GND1_0_1"
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 -1.27)
+          (xy 1.27 -1.27)
+          (xy 0 -2.54)
+          (xy -1.27 -1.27)
+          (xy 0 -1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_GND1_1_1"
+      (pin power_in line
+        (at 0 0 270)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_VBUS_HOST"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "VBUS_HOST"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply VBUS_HOST"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_VBUS_HOST_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_VBUS_HOST_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_HOST_3V3"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "HOST_3V3"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply HOST_3V3"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_HOST_3V3_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_HOST_3V3_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_U1_1V8_HOST"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "U1_1V8_HOST"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply U1_1V8_HOST"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_U1_1V8_HOST_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_U1_1V8_HOST_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_U1_3V3_HOST"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "U1_3V3_HOST"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply U1_3V3_HOST"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_U1_3V3_HOST_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_U1_3V3_HOST_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_ISO_3V3"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "ISO_3V3"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply ISO_3V3"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_ISO_3V3_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_ISO_3V3_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_GND2"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -6.35 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "GND2"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply GND2"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_GND2_0_1"
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 -1.27)
+          (xy 1.27 -1.27)
+          (xy 0 -2.54)
+          (xy -1.27 -1.27)
+          (xy 0 -1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_GND2_1_1"
+      (pin power_in line
+        (at 0 0 270)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_U1_1V8_ISO"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "U1_1V8_ISO"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply U1_1V8_ISO"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_U1_1V8_ISO_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_U1_1V8_ISO_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_HOST_CONVERTER_5V"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "HOST_CONVERTER_5V"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply HOST_CONVERTER_5V"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_HOST_CONVERTER_5V_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_HOST_CONVERTER_5V_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_DCDC_RAW"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "DCDC_RAW"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply DCDC_RAW"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_DCDC_RAW_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_DCDC_RAW_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_ISO_5V_PRE"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "ISO_5V_PRE"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply ISO_5V_PRE"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_ISO_5V_PRE_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_ISO_5V_PRE_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_EXT_5V"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "EXT_5V"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply EXT_5V"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_EXT_5V_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_EXT_5V_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_EXT_3V3"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "EXT_3V3"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply EXT_3V3"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_EXT_3V3_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_EXT_3V3_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_EXT_SENSED_5V"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "EXT_SENSED_5V"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply EXT_SENSED_5V"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_EXT_SENSED_5V_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_EXT_SENSED_5V_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_EXT_SW_5V"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "EXT_SW_5V"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply EXT_SW_5V"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_EXT_SW_5V_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_EXT_SW_5V_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_EXT_REG_VCC"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "EXT_REG_VCC"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply EXT_REG_VCC"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_EXT_REG_VCC_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_EXT_REG_VCC_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_EXT_REG_5V"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "EXT_REG_5V"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply EXT_REG_5V"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_EXT_REG_5V_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_EXT_REG_5V_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_ISO_5V"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "ISO_5V"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply ISO_5V"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_ISO_5V_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_ISO_5V_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_PORT_SUPPLY"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "PORT_SUPPLY"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply PORT_SUPPLY"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_PORT_SUPPLY_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_PORT_SUPPLY_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_EXT_PORT_FEED"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "EXT_PORT_FEED"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply EXT_PORT_FEED"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_EXT_PORT_FEED_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_EXT_PORT_FEED_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_PORT1_VBUS"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "PORT1_VBUS"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply PORT1_VBUS"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_PORT1_VBUS_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_PORT1_VBUS_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_PORT2_VBUS"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "PORT2_VBUS"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply PORT2_VBUS"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_PORT2_VBUS_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_PORT2_VBUS_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_PORT3_VBUS"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "PORT3_VBUS"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply PORT3_VBUS"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_PORT3_VBUS_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_PORT3_VBUS_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+      )
+    )
+    (embedded_fonts no)
+  )
+  (symbol "power_PORT4_VBUS"
+    (power global)
+    (pin_numbers
+      (hide yes)
+    )
+    (pin_names
+      (offset 0)
+      (hide yes)
+    )
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (in_pos_files yes)
+    (duplicate_pin_numbers_are_jumpers no)
+    (property "Reference" "#PWR"
+      (at 0 -3.81 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "PORT4_VBUS"
+      (at 0 3.556 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Description" "Global supply PORT4_VBUS"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "ki_keywords" "global power"
+      (at 0 0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (hide yes)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "power_PORT4_VBUS_0_1"
+      (polyline
+        (pts
+          (xy -0.762 1.27)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0.762 1.27)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 2.54)
+        )
+        (stroke
+          (width 0)
+          (type default)
+        )
+        (fill
+          (type none)
+        )
+      )
+    )
+    (symbol "power_PORT4_VBUS_1_1"
+      (pin power_in line
+        (at 0 0 90)
+        (length 0)
+        (name ""
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size 1.27 1.27)
+            )
+          )
         )
       )
     )
