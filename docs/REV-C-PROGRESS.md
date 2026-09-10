@@ -33,3 +33,15 @@
 
 No tracks, vias, autorouter runs, fabrication outputs, main merge, or hardware
 orders are authorized. Unrouted connections will be reported separately.
+
+## Checkpoint 2 — electrical capture (2026-09-10)
+
+- Captured Rev C as nine functional child sheets plus an overview: 286 physical parts, 190 named nets. The current export has zero pin/net differences from the electrical source. ERC pass 4: zero errors, zero warnings, no exclusions. This is an electrical checkpoint, **not** a visual or PCB completion claim.
+- Replaced the isolator and removed its clock. Verified TI DP0028A-C02 HV lands (8.2 mm nominal clearance). Retained the hub clock and corrected its bypass/filter and configuration circuits.
+- Added a 1 A shared 3.3 V buck, GPIO Type-C qualification/attachment controllers, source-aware reset/EEPROM wiring, independent port control, passive and active USB-C discharge, and separate shield-frame symbols.
+- The original all-linear host isolator supply could exceed 100 mA on a default-current host. Used TI's documented external 1.8 V buck option on the host core while keeping VBUS1 at 5 V. The isolated side retains internal 1.8 V regulation from 3.3 V. This is a justified departure from the planning default.
+- Added a regulated external input to allow for downstream switch drops. Port overload monitors now shed downstream load without shutting off the core supply; the external aggregate switch has a controlled startup ramp. Exact tolerance, compensation and thermal calculations remain to be documented and checked.
+- Repaired the shorted configuration-link nets, TVS polarity/part identity, DNP state, missing power declarations, host-converter enable voltage, and mutually exclusive bus/external port paths.
+- Started manufacturer/package and indexed availability checks. Exact supporting-part fields and most footprints remain incomplete.
+- KiCad was updated by the user's other task; CLI verification now runs on 10.99.0-3770-gd7e34de179. No unrelated open PCB was edited.
+- Next: finish BOM/footprints and quantitative power checks, redraw and visually inspect the schematic, synchronize/place every PCB part, then verify geometry and deliver routing/bring-up evidence. PCB remains the original one-transformer placeholder with no tracks or vias.

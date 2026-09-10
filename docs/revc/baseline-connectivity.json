@@ -1,0 +1,2436 @@
+{
+  "U8": {
+    "lib_id": "isolator-lib:TPS2121",
+    "uuid": "02b6af3e-11c3-4de4-9caf-fcf2be451a3e",
+    "properties": {
+      "Reference": "U8",
+      "Value": "TPS2121",
+      "Footprint": "",
+      "Datasheet": "${KIPRJMOD}/datasheets/TPS2121RUXR.pdf",
+      "Description": "Dual-Input Priority Power Mux with Ideal Diode, VQFN-HR-12"
+    },
+    "pins": {
+      "6": "/PR1_NODE",
+      "7": "EXT_5V",
+      "12": "GND2",
+      "4": "GND2",
+      "5": "GND2",
+      "1": "ISO_5V",
+      "8": "ISO_5V",
+      "2": "ISO_5V_PRE",
+      "3": "Net-(U8-CP2)",
+      "10": "Net-(U8-ILIM)",
+      "11": "Net-(U8-SS)",
+      "9": "Net-(U8-ST)"
+    }
+  },
+  "C56": {
+    "lib_id": "Device:C_Small",
+    "uuid": "04caea58-98a9-4d42-8043-7c92dbdb16a3",
+    "properties": {
+      "Reference": "C56",
+      "Value": "22uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT4_VBUS",
+      "2": "GND2"
+    }
+  },
+  "C24": {
+    "lib_id": "Device:C_Small",
+    "uuid": "054b4a14-9b5c-490e-b431-302d861ff5a5",
+    "properties": {
+      "Reference": "C24",
+      "Value": "4.7uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "EXT_5V",
+      "2": "GND2"
+    }
+  },
+  "D9": {
+    "lib_id": "Device:D_TVS",
+    "uuid": "09ed91c4-6d32-4d8b-bdc8-616bf26f80af",
+    "properties": {
+      "Reference": "D9",
+      "Value": "TVS",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/PORT2_VBUS",
+      "1": "GND2"
+    }
+  },
+  "L2": {
+    "lib_id": "Device:L_Small",
+    "uuid": "0a01def2-e47f-409b-bdd4-4726b17f1ddc",
+    "properties": {
+      "Reference": "L2",
+      "Value": "10uH",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Inductor, small symbol"
+    },
+    "pins": {
+      "2": "ISO_3V3",
+      "1": "Net-(U10-SW)"
+    }
+  },
+  "R29": {
+    "lib_id": "Device:R_Small",
+    "uuid": "0a44fbdc-ff03-4fb6-8c02-95972870670d",
+    "properties": {
+      "Reference": "R29",
+      "Value": "1k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "Net-(D6-A)",
+      "1": "Net-(U8-ST)"
+    }
+  },
+  "C37": {
+    "lib_id": "Device:C_Small",
+    "uuid": "0a9ddd28-9a85-4e9b-abcf-05c7538df919",
+    "properties": {
+      "Reference": "C37",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_3V3"
+    }
+  },
+  "C27": {
+    "lib_id": "Device:C_Small",
+    "uuid": "0ee3a4ca-ff68-4150-b777-659ec8dbcc2f",
+    "properties": {
+      "Reference": "C27",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(U8-SS)"
+    }
+  },
+  "R16": {
+    "lib_id": "Device:R_Small",
+    "uuid": "13a2cb42-b1de-4bee-a1bd-47ff27d86ec5",
+    "properties": {
+      "Reference": "R16",
+      "Value": "5.1k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(J2-CC1)"
+    }
+  },
+  "C59": {
+    "lib_id": "Device:C_Small",
+    "uuid": "14c07675-35a8-4583-8b22-9470625b810e",
+    "properties": {
+      "Reference": "C59",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "Net-(U11-PLLFILT)"
+    }
+  },
+  "R50": {
+    "lib_id": "Device:R_Small",
+    "uuid": "161492df-4519-4152-93e1-d8319c8cabec",
+    "properties": {
+      "Reference": "R50",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/OCS4",
+      "2": "ISO_3V3"
+    }
+  },
+  "C43": {
+    "lib_id": "Device:C_Small",
+    "uuid": "17885cea-55ad-471c-8b4b-9bb7e24b764c",
+    "properties": {
+      "Reference": "C43",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V"
+    }
+  },
+  "C29": {
+    "lib_id": "Device:C_Small",
+    "uuid": "17a6ca82-46da-4a34-b19f-9453e9f584b6",
+    "properties": {
+      "Reference": "C29",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "ISO_3V3"
+    }
+  },
+  "R23": {
+    "lib_id": "Device:R_Small",
+    "uuid": "18d10eb0-2229-46a0-bdd5-7e6c2dd6616f",
+    "properties": {
+      "Reference": "R23",
+      "Value": "17.8k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "/PR1_NODE",
+      "1": "EXT_5V"
+    }
+  },
+  "C2": {
+    "lib_id": "Device:C_Small",
+    "uuid": "1a1355c9-65b6-4b94-a465-9e1154ed16b2",
+    "properties": {
+      "Reference": "C2",
+      "Value": "4.7uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "VBUS_HOST"
+    }
+  },
+  "C39": {
+    "lib_id": "Device:C_Small",
+    "uuid": "1a20dc85-35ab-4a60-b158-8e479f63c88a",
+    "properties": {
+      "Reference": "C39",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_3V3"
+    }
+  },
+  "C58": {
+    "lib_id": "Device:C_Small",
+    "uuid": "1aafd079-b532-4fbe-87a6-55979a5ad5d2",
+    "properties": {
+      "Reference": "C58",
+      "Value": "0.01uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "Net-(U11-PLLFILT)"
+    }
+  },
+  "R37": {
+    "lib_id": "Device:R_Small",
+    "uuid": "1f0962ce-55e5-40e6-808c-d6d45e964918",
+    "properties": {
+      "Reference": "R37",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "/NON_REM1",
+      "2": "GND2"
+    }
+  },
+  "C17": {
+    "lib_id": "Device:C_Small",
+    "uuid": "21dd7b05-c284-4174-957d-eacf9be6de16",
+    "properties": {
+      "Reference": "C17",
+      "Value": "100nF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "DCDC_RAW",
+      "2": "GND2"
+    }
+  },
+  "T1": {
+    "lib_id": "isolator-lib:750313638",
+    "uuid": "2508c4d1-0162-44a5-9cfd-1aca2a0f0e71",
+    "properties": {
+      "Reference": "T1",
+      "Value": "750313638",
+      "Footprint": "isolator-lib:WE_750313638",
+      "Datasheet": "${KIPRJMOD}/datasheets/750313638.pdf",
+      "Description": "WE-PPTI push-pull isolation transformer, 1:1.3, center-tapped pri/sec, 5kVrms"
+    },
+    "pins": {
+      "5": "GND2",
+      "6": "Net-(D3-A)",
+      "4": "Net-(D4-A)",
+      "1": "Net-(T1-N1)",
+      "3": "Net-(T1-N2)",
+      "2": "VBUS_HOST"
+    }
+  },
+  "R33": {
+    "lib_id": "Device:R_Small",
+    "uuid": "266acb97-ede2-4ed0-96dc-c6593042d7ca",
+    "properties": {
+      "Reference": "R33",
+      "Value": "10k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "/RESET_N_HUB",
+      "1": "ISO_3V3"
+    }
+  },
+  "R22": {
+    "lib_id": "Device:R_Small",
+    "uuid": "2a4ec657-666f-49d9-8211-b7274e31f1d5",
+    "properties": {
+      "Reference": "R22",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "EXT_5V",
+      "2": "Net-(Q3-G)"
+    }
+  },
+  "R13": {
+    "lib_id": "Device:R_Small",
+    "uuid": "341be0ab-d527-476a-972d-efce512150d9",
+    "properties": {
+      "Reference": "R13",
+      "Value": "523k DNP",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "ISO_5V_PRE",
+      "2": "Net-(R13-Pad2)"
+    }
+  },
+  "C48": {
+    "lib_id": "Device:C_Small",
+    "uuid": "3846d971-500c-4973-a2b0-a42add657471",
+    "properties": {
+      "Reference": "C48",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT2_VBUS",
+      "2": "GND2"
+    }
+  },
+  "J2": {
+    "lib_id": "Connector:USB_C_Receptacle_PowerOnly_6P",
+    "uuid": "38f81b60-cfdf-4668-aaad-35b717920a2e",
+    "properties": {
+      "Reference": "J2",
+      "Value": "USB_C_Receptacle_PowerOnly_6P",
+      "Footprint": "",
+      "Datasheet": "https://www.usb.org/sites/default/files/documents/usb_type-c.zip",
+      "Description": "USB Power-Only 6P Type-C Receptacle connector"
+    },
+    "pins": {
+      "A9": "EXT_5V",
+      "B9": "EXT_5V",
+      "A12": "GND2",
+      "B12": "GND2",
+      "SH": "GND2",
+      "A5": "Net-(J2-CC1)",
+      "B5": "Net-(J2-CC2)"
+    }
+  },
+  "D13": {
+    "lib_id": "Device:D_TVS",
+    "uuid": "3ae9eae3-c8c7-4b2d-9ee1-7002fe2d17ca",
+    "properties": {
+      "Reference": "D13",
+      "Value": "TVS",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/PORT4_VBUS",
+      "1": "GND2"
+    }
+  },
+  "C21": {
+    "lib_id": "Device:C_Small",
+    "uuid": "3c038f69-74e2-4b4f-85fe-ee94c64fa35a",
+    "properties": {
+      "Reference": "C21",
+      "Value": "100nF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V_PRE"
+    }
+  },
+  "Q3": {
+    "lib_id": "isolator-lib:2N7002",
+    "uuid": "3c06cfcb-9228-495c-b60c-480e7cbf052a",
+    "properties": {
+      "Reference": "Q3",
+      "Value": "2N7002",
+      "Footprint": "",
+      "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/a141b8bd86b14475955ac8c4d3eea0a8.pdf",
+      "Description": "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+    },
+    "pins": {
+      "3": "/PR1_NODE",
+      "2": "GND2",
+      "1": "Net-(Q3-G)"
+    }
+  },
+  "C20": {
+    "lib_id": "Device:C_Small",
+    "uuid": "3db08222-8946-469d-9a3a-b4666d9f813f",
+    "properties": {
+      "Reference": "C20",
+      "Value": "22uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V_PRE"
+    }
+  },
+  "R42": {
+    "lib_id": "Device:R_Small",
+    "uuid": "3e916fd8-49e6-4d7a-a1ea-2759cd8de4a7",
+    "properties": {
+      "Reference": "R42",
+      "Value": "56k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/PORT3_VBUS",
+      "1": "Net-(J5-CC1)"
+    }
+  },
+  "C14": {
+    "lib_id": "Device:C_Small",
+    "uuid": "3ef3185e-7497-46fb-ad08-d91bb7fe90de",
+    "properties": {
+      "Reference": "C14",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "DCDC_RAW",
+      "2": "GND2"
+    }
+  },
+  "C51": {
+    "lib_id": "Device:C_Small",
+    "uuid": "3fbd5898-ae95-4a02-a03f-bd8997c184c4",
+    "properties": {
+      "Reference": "C51",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT3_VBUS",
+      "2": "GND2"
+    }
+  },
+  "R34": {
+    "lib_id": "Device:R_Small",
+    "uuid": "40211095-0e7b-4eb0-9f32-4ddddf15782e",
+    "properties": {
+      "Reference": "R34",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "/CFG_SEL0",
+      "2": "GND2"
+    }
+  },
+  "Q4": {
+    "lib_id": "isolator-lib:2N7002",
+    "uuid": "42c4c162-108a-4015-829a-0a8d6f3f7246",
+    "properties": {
+      "Reference": "Q4",
+      "Value": "2N7002",
+      "Footprint": "",
+      "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/a141b8bd86b14475955ac8c4d3eea0a8.pdf",
+      "Description": "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+    },
+    "pins": {
+      "1": "/PGOOD2",
+      "2": "GND2",
+      "3": "Net-(D7-K)"
+    }
+  },
+  "C7": {
+    "lib_id": "Device:C_Small",
+    "uuid": "46aef49d-fb62-4962-b69a-f52c5bed82e8",
+    "properties": {
+      "Reference": "C7",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/V_REF",
+      "2": "GND1"
+    }
+  },
+  "D7": {
+    "lib_id": "Device:LED",
+    "uuid": "47555dfc-8cf0-4093-9755-3af499615b79",
+    "properties": {
+      "Reference": "D7",
+      "Value": "LED",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Light emitting diode"
+    },
+    "pins": {
+      "2": "Net-(D7-A)",
+      "1": "Net-(D7-K)"
+    }
+  },
+  "R36": {
+    "lib_id": "Device:R_Small",
+    "uuid": "4788ced4-3a7c-45e9-9782-fc983b301f2c",
+    "properties": {
+      "Reference": "R36",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "/NON_REM0",
+      "2": "GND2"
+    }
+  },
+  "C16": {
+    "lib_id": "Device:C_Small",
+    "uuid": "4a878a11-b538-42d8-bf2d-3acad84b7464",
+    "properties": {
+      "Reference": "C16",
+      "Value": "10uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "DCDC_RAW",
+      "2": "GND2"
+    }
+  },
+  "R45": {
+    "lib_id": "Device:R_Small",
+    "uuid": "4aaa896f-7e5d-472d-83e8-f4aa6fc99a91",
+    "properties": {
+      "Reference": "R45",
+      "Value": "56k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/PORT4_VBUS",
+      "1": "Net-(J6-CC1)"
+    }
+  },
+  "U1": {
+    "lib_id": "Isolator:ADUM4165",
+    "uuid": "4e4082d8-b0b1-430d-a0a9-d81160269ddf",
+    "properties": {
+      "Reference": "U1",
+      "Value": "ADuM4165",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "8": "/HOST_D+",
+      "9": "/HOST_D-",
+      "14": "/PGOOD2",
+      "12": "/PORT_D+",
+      "13": "/PORT_D-",
+      "10": "GND1",
+      "2": "GND1",
+      "4": "GND1",
+      "7": "GND1",
+      "11": "GND2",
+      "15": "GND2",
+      "16": "GND2",
+      "17": "GND2",
+      "19": "GND2",
+      "18": "ISO_3V3",
+      "20": "ISO_5V",
+      "5": "Net-(U1-XI1)",
+      "6": "Net-(U1-XO1)",
+      "1": "VBUS_HOST",
+      "3": "VDD1"
+    }
+  },
+  "C11": {
+    "lib_id": "Device:C_Small",
+    "uuid": "4ef24a00-35eb-4f38-bf9d-cd035664fb6c",
+    "properties": {
+      "Reference": "C11",
+      "Value": "4.7uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "VBUS_HOST"
+    }
+  },
+  "R2": {
+    "lib_id": "Device:R_Small",
+    "uuid": "4feb0bc8-57bb-4ccb-a010-9d31fa5504ff",
+    "properties": {
+      "Reference": "R2",
+      "Value": "5.1k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/CC2_HOST",
+      "2": "GND1"
+    }
+  },
+  "C13": {
+    "lib_id": "Device:C_Small",
+    "uuid": "50815b36-5082-4370-9063-7fde2c67a0e2",
+    "properties": {
+      "Reference": "C13",
+      "Value": "47uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "DCDC_RAW",
+      "2": "GND2"
+    }
+  },
+  "C44": {
+    "lib_id": "Device:C_Small",
+    "uuid": "558dc47f-7f01-4be3-b637-05d235d7ea7e",
+    "properties": {
+      "Reference": "C44",
+      "Value": "22uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT1_VBUS",
+      "2": "GND2"
+    }
+  },
+  "U12": {
+    "lib_id": "isolator-lib:TPS2553DBV",
+    "uuid": "55d96b06-7c75-462e-a975-d8720f7232d8",
+    "properties": {
+      "Reference": "U12",
+      "Value": "TPS2553DBV",
+      "Footprint": "",
+      "Datasheet": "${KIPRJMOD}/datasheets/TPS2553DBVR.pdf",
+      "Description": "1.5-A Overcurrent Protected Power-Distribution Switch, SOT-23-6"
+    },
+    "pins": {
+      "5": "/ILIM1",
+      "4": "/OCS1",
+      "6": "/PORT1_VBUS",
+      "3": "/PRTPWR1",
+      "2": "GND2",
+      "1": "ISO_5V"
+    }
+  },
+  "C1": {
+    "lib_id": "Device:C_Small",
+    "uuid": "567e44cf-bb04-4cb1-b9d6-4c64dd9493a7",
+    "properties": {
+      "Reference": "C1",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "VBUS_HOST"
+    }
+  },
+  "C8": {
+    "lib_id": "Device:C_Small",
+    "uuid": "56c103d0-8af8-49e9-8ef6-f3bd43b82813",
+    "properties": {
+      "Reference": "C8",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "GND1",
+      "2": "VBUS_HOST"
+    }
+  },
+  "C4": {
+    "lib_id": "Device:C_Small",
+    "uuid": "572f4fae-a63b-4428-90f2-fecf31e5c8ed",
+    "properties": {
+      "Reference": "C4",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "VDD1"
+    }
+  },
+  "R6": {
+    "lib_id": "Device:R_Small",
+    "uuid": "58b962d8-c298-41c9-8fe0-d1aefe24f16f",
+    "properties": {
+      "Reference": "R6",
+      "Value": "10k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/HOST_PWR_OK",
+      "1": "VBUS_HOST"
+    }
+  },
+  "Y1": {
+    "lib_id": "Device:Crystal_GND24_Small",
+    "uuid": "59711e5f-766f-4a67-98c3-baf3891d7ac3",
+    "properties": {
+      "Reference": "Y1",
+      "Value": "24MHz",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND1",
+      "4": "GND1",
+      "3": "Net-(U1-XI1)",
+      "1": "Net-(U1-XO1)"
+    }
+  },
+  "U16": {
+    "lib_id": "Power_Protection:USBLC6-2SC6",
+    "uuid": "5b580137-386a-4a0f-9800-bfc825faf084",
+    "properties": {
+      "Reference": "U16",
+      "Value": "USBLC6-2SC6",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "3": "/PORT1_D+",
+      "1": "/PORT1_D-",
+      "5": "/PORT1_VBUS",
+      "2": "GND2",
+      "4": "Net-(J3-D+)",
+      "6": "Net-(J3-D-)"
+    }
+  },
+  "C18": {
+    "lib_id": "Device:C_Small",
+    "uuid": "5ed20eb9-7d74-466c-927e-3a8d7cd3f734",
+    "properties": {
+      "Reference": "C18",
+      "Value": "22uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V_PRE"
+    }
+  },
+  "C35": {
+    "lib_id": "Device:C_Small",
+    "uuid": "6016be85-0cd2-4fe1-864c-13035e87c9ad",
+    "properties": {
+      "Reference": "C35",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_3V3"
+    }
+  },
+  "R40": {
+    "lib_id": "Device:R_Small",
+    "uuid": "60cd3be4-59bc-4b39-8774-0ebf1a6b5915",
+    "properties": {
+      "Reference": "R40",
+      "Value": "46.4k 1%",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/ILIM3",
+      "2": "GND2"
+    }
+  },
+  "R35": {
+    "lib_id": "Device:R_Small",
+    "uuid": "62fe1e0a-6624-48df-a208-c0e2893d5e7c",
+    "properties": {
+      "Reference": "R35",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "/CFG_SEL1",
+      "2": "GND2"
+    }
+  },
+  "R21": {
+    "lib_id": "Device:R_Small",
+    "uuid": "633bd90a-43ef-4b1a-ab04-0b31d0dd2c6a",
+    "properties": {
+      "Reference": "R21",
+      "Value": "10k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "Net-(J2-CC2)",
+      "2": "Net-(U7-INB-)"
+    }
+  },
+  "C46": {
+    "lib_id": "Device:C_Small",
+    "uuid": "65dc6217-384e-4566-82b1-625b813ae184",
+    "properties": {
+      "Reference": "C46",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V"
+    }
+  },
+  "R47": {
+    "lib_id": "Device:R_Small",
+    "uuid": "67907526-5a42-47de-860b-1f9f7792bcd2",
+    "properties": {
+      "Reference": "R47",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/OCS1",
+      "2": "ISO_3V3"
+    }
+  },
+  "U10": {
+    "lib_id": "Regulator_Switching:TPS62203DBV",
+    "uuid": "698ae538-8533-4d09-9128-f19770b7f229",
+    "properties": {
+      "Reference": "U10",
+      "Value": "TPS62203DBVR",
+      "Footprint": "",
+      "Datasheet": "http://www.ti.com/lit/ds/symlink/tps62201.pdf",
+      "Description": "300mA High-Efficiency Step-Down DC-DC Converter, fixed 3.3V output voltage, 2.5-6V input voltage, SOT-23-5"
+    },
+    "pins": {
+      "2": "GND2",
+      "4": "ISO_3V3",
+      "1": "ISO_5V",
+      "3": "ISO_5V",
+      "5": "Net-(U10-SW)"
+    }
+  },
+  "R44": {
+    "lib_id": "Device:R_Small",
+    "uuid": "6a5bc972-1574-46db-b18b-b7eb4d30604d",
+    "properties": {
+      "Reference": "R44",
+      "Value": "46.4k 1%",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "Net-(U15-ILIM)"
+    }
+  },
+  "J6": {
+    "lib_id": "Connector:USB_C_Receptacle_USB2.0_16P",
+    "uuid": "6b1950f9-11c5-444a-b7d3-1124cc4a3ad1",
+    "properties": {
+      "Reference": "J6",
+      "Value": "USB_C_Receptacle_USB2.0_16P",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "A4": "/PORT4_VBUS",
+      "A9": "/PORT4_VBUS",
+      "B4": "/PORT4_VBUS",
+      "B9": "/PORT4_VBUS",
+      "A1": "GND2",
+      "A12": "GND2",
+      "B1": "GND2",
+      "B12": "GND2",
+      "SH": "GND2",
+      "A5": "Net-(J6-CC1)",
+      "B5": "Net-(J6-CC2)",
+      "A6": "Net-(J6-D+-PadA6)",
+      "B6": "Net-(J6-D+-PadA6)",
+      "A7": "Net-(J6-D--PadA7)",
+      "B7": "Net-(J6-D--PadA7)",
+      "A8": "unconnected-(J6-SBU1-PadA8)",
+      "B8": "unconnected-(J6-SBU2-PadB8)"
+    }
+  },
+  "R1": {
+    "lib_id": "Device:R_Small",
+    "uuid": "6b63c73f-0676-4eab-af14-c16f295526ed",
+    "properties": {
+      "Reference": "R1",
+      "Value": "5.1k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/CC1_HOST",
+      "2": "GND1"
+    }
+  },
+  "C3": {
+    "lib_id": "Device:C_Small",
+    "uuid": "6ca32b26-c9c0-4816-9cba-de608bd59a67",
+    "properties": {
+      "Reference": "C3",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "VBUS_HOST"
+    }
+  },
+  "Q1": {
+    "lib_id": "isolator-lib:2N7002",
+    "uuid": "6dbb61c1-83c3-44af-a284-8c6d0f57448a",
+    "properties": {
+      "Reference": "Q1",
+      "Value": "2N7002",
+      "Footprint": "",
+      "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/a141b8bd86b14475955ac8c4d3eea0a8.pdf",
+      "Description": "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+    },
+    "pins": {
+      "1": "/CC_DET_L",
+      "3": "/HOST_PWR_OK",
+      "2": "GND1"
+    }
+  },
+  "C15": {
+    "lib_id": "Device:C_Small",
+    "uuid": "6e221857-e15a-470d-9ab9-69bc39b0a6f8",
+    "properties": {
+      "Reference": "C15",
+      "Value": "10uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "DCDC_RAW",
+      "2": "GND2"
+    }
+  },
+  "D4": {
+    "lib_id": "Device:D_Schottky",
+    "uuid": "72118869-6b96-407e-b73f-74a1ef04e735",
+    "properties": {
+      "Reference": "D4",
+      "Value": "SS34",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Schottky diode"
+    },
+    "pins": {
+      "1": "DCDC_RAW",
+      "2": "Net-(D4-A)"
+    }
+  },
+  "C26": {
+    "lib_id": "Device:C_Small",
+    "uuid": "724ee707-dc46-4cba-8884-49edb45eaa89",
+    "properties": {
+      "Reference": "C26",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "EXT_5V",
+      "2": "GND2"
+    }
+  },
+  "C55": {
+    "lib_id": "Device:C_Small",
+    "uuid": "72ce42bf-f813-40d2-9e18-1d83c4d3cdd0",
+    "properties": {
+      "Reference": "C55",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V"
+    }
+  },
+  "C23": {
+    "lib_id": "Device:C_Small",
+    "uuid": "7332476e-e569-4e0d-be31-aa7057fb06ee",
+    "properties": {
+      "Reference": "C23",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "EXT_5V",
+      "2": "GND2"
+    }
+  },
+  "U5": {
+    "lib_id": "Power_Management:SN6505BDBV",
+    "uuid": "76acc274-73fd-4a12-815e-7a912596a3d6",
+    "properties": {
+      "Reference": "U5",
+      "Value": "SN6505BDBV",
+      "Footprint": "",
+      "Datasheet": "http://www.ti.com/lit/ds/symlink/sn6505b.pdf",
+      "Description": "Low Noise, 1A, Transformer Drivers for Isolated Power Supplies, 420 kHz, SOT-23-6"
+    },
+    "pins": {
+      "5": "/HOST_PWR_OK",
+      "4": "GND1",
+      "6": "GND1",
+      "3": "Net-(T1-N1)",
+      "1": "Net-(T1-N2)",
+      "2": "VBUS_HOST"
+    }
+  },
+  "R14": {
+    "lib_id": "Device:R_Small",
+    "uuid": "7728ef03-9e1c-4b1b-a9e0-b1e8a62a5eb2",
+    "properties": {
+      "Reference": "R14",
+      "Value": "100k DNP",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(R13-Pad2)"
+    }
+  },
+  "R25": {
+    "lib_id": "Device:R_Small",
+    "uuid": "779b8f4f-7ef9-4f8e-a0b6-3b674f8c2401",
+    "properties": {
+      "Reference": "R25",
+      "Value": "23.7k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "ISO_5V_PRE",
+      "2": "Net-(U8-CP2)"
+    }
+  },
+  "R28": {
+    "lib_id": "Device:R_Small",
+    "uuid": "780643b9-ef3a-4e79-afb7-cd30681d8ced",
+    "properties": {
+      "Reference": "R28",
+      "Value": "10k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "ISO_5V",
+      "2": "Net-(U8-ST)"
+    }
+  },
+  "Y2": {
+    "lib_id": "Device:Crystal_GND24_Small",
+    "uuid": "78e3a045-230d-4809-9fb8-2413150bba89",
+    "properties": {
+      "Reference": "Y2",
+      "Value": "24MHz",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Four pin crystal, GND on pins 2 and 4, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "4": "GND2",
+      "3": "Net-(U11-XTALIN/CLKIN)",
+      "1": "Net-(U11-XTALOUT)"
+    }
+  },
+  "R26": {
+    "lib_id": "Device:R_Small",
+    "uuid": "7adc6e30-2256-4e94-befe-56326ad37045",
+    "properties": {
+      "Reference": "R26",
+      "Value": "10.2k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(U8-CP2)"
+    }
+  },
+  "C36": {
+    "lib_id": "Device:C_Small",
+    "uuid": "7ba0d1b7-2889-4b4a-8859-2cac84984c48",
+    "properties": {
+      "Reference": "C36",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_3V3"
+    }
+  },
+  "C49": {
+    "lib_id": "Device:C_Small",
+    "uuid": "7d18c14d-89a6-4590-8cc8-0b15909667b6",
+    "properties": {
+      "Reference": "C49",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V"
+    }
+  },
+  "J3": {
+    "lib_id": "Connector:USB_A",
+    "uuid": "7d4bcf17-29fa-4438-83f0-8d93ed5c4b23",
+    "properties": {
+      "Reference": "J3",
+      "Value": "USB_A",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT1_VBUS",
+      "4": "GND2",
+      "SH": "GND2",
+      "3": "Net-(J3-D+)",
+      "2": "Net-(J3-D-)"
+    }
+  },
+  "U6": {
+    "lib_id": "isolator-lib:TPS630701RNM",
+    "uuid": "7d889a87-7df7-41c7-8a2c-9662cc2ff2f9",
+    "properties": {
+      "Reference": "U6",
+      "Value": "TPS630701RNM",
+      "Footprint": "",
+      "Datasheet": "https://www.ti.com/lit/ds/symlink/tps630701.pdf",
+      "Description": "TPS630701RNMR \u2014 fixed 5.0V buck-boost converter, VQFN-HR-15 (RNM). FB tied internally requires external tie to VOUT (R_FB0=0R) on this fixed version."
+    },
+    "pins": {
+      "12": "DCDC_RAW",
+      "13": "DCDC_RAW",
+      "14": "DCDC_RAW",
+      "10": "GND2",
+      "15": "GND2",
+      "4": "GND2",
+      "1": "ISO_5V_PRE",
+      "5": "ISO_5V_PRE",
+      "7": "ISO_5V_PRE",
+      "8": "ISO_5V_PRE",
+      "11": "Net-(U6-L1)",
+      "9": "Net-(U6-L2)",
+      "2": "Net-(U6-PG)",
+      "3": "Net-(U6-VAUX)",
+      "6": "unconnected-(U6-FB2-Pad6)"
+    }
+  },
+  "U11": {
+    "lib_id": "Interface_USB:USB2514B_Bi",
+    "uuid": "830760f6-3d2a-4f9d-983a-078d89321cf6",
+    "properties": {
+      "Reference": "U11",
+      "Value": "USB2514B",
+      "Footprint": "",
+      "Datasheet": "http://ww1.microchip.com/downloads/en/DeviceDoc/00001692C.pdf",
+      "Description": "USB 2.0 Hi-Speed Hub Controller"
+    },
+    "pins": {
+      "24": "/CFG_SEL0",
+      "25": "/CFG_SEL1",
+      "14": "/CRFILT_NODE",
+      "28": "/NON_REM0",
+      "22": "/NON_REM1",
+      "13": "/OCS1",
+      "17": "/OCS2",
+      "19": "/OCS3",
+      "21": "/OCS4",
+      "2": "/PORT1_D+",
+      "1": "/PORT1_D-",
+      "4": "/PORT2_D+",
+      "3": "/PORT2_D-",
+      "7": "/PORT3_D+",
+      "6": "/PORT3_D-",
+      "9": "/PORT4_D+",
+      "8": "/PORT4_D-",
+      "31": "/PORT_D+",
+      "30": "/PORT_D-",
+      "12": "/PRTPWR1",
+      "16": "/PRTPWR2",
+      "18": "/PRTPWR3",
+      "20": "/PRTPWR4",
+      "35": "/RBIAS_NODE",
+      "26": "/RESET_N_HUB",
+      "11": "GND2",
+      "37": "GND2",
+      "10": "ISO_3V3",
+      "15": "ISO_3V3",
+      "23": "ISO_3V3",
+      "27": "ISO_3V3",
+      "29": "ISO_3V3",
+      "36": "ISO_3V3",
+      "5": "ISO_3V3",
+      "34": "Net-(U11-PLLFILT)",
+      "33": "Net-(U11-XTALIN/CLKIN)",
+      "32": "Net-(U11-XTALOUT)"
+    }
+  },
+  "L1": {
+    "lib_id": "Device:L_Small",
+    "uuid": "83c6217b-25d0-46ce-b52f-e122cdbfddc3",
+    "properties": {
+      "Reference": "L1",
+      "Value": "1.5uH",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Inductor, small symbol"
+    },
+    "pins": {
+      "1": "Net-(U6-L1)",
+      "2": "Net-(U6-L2)"
+    }
+  },
+  "R27": {
+    "lib_id": "Device:R_Small",
+    "uuid": "879c32b3-5751-4357-a2a5-4a27a4f6b5fd",
+    "properties": {
+      "Reference": "R27",
+      "Value": "35.7k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(U8-ILIM)"
+    }
+  },
+  "C32": {
+    "lib_id": "Device:C_Small",
+    "uuid": "880ea3b0-a401-4a6a-9e89-b2f00b4cde1f",
+    "properties": {
+      "Reference": "C32",
+      "Value": "18pF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "Net-(U11-XTALOUT)"
+    }
+  },
+  "C42": {
+    "lib_id": "Device:C_Small",
+    "uuid": "88542c53-f979-46ae-83e5-2572deaff00e",
+    "properties": {
+      "Reference": "C42",
+      "Value": "1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "/RESET_N_HUB",
+      "2": "GND2"
+    }
+  },
+  "C22": {
+    "lib_id": "Device:C_Small",
+    "uuid": "8b12c8aa-468c-4328-8376-bbaeb50eef94",
+    "properties": {
+      "Reference": "C22",
+      "Value": "100nF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(U6-VAUX)"
+    }
+  },
+  "C38": {
+    "lib_id": "Device:C_Small",
+    "uuid": "8bebc725-bbcd-42d1-b5a0-208c9b55cbff",
+    "properties": {
+      "Reference": "C38",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_3V3"
+    }
+  },
+  "C47": {
+    "lib_id": "Device:C_Small",
+    "uuid": "8d26d394-a331-4b0f-85ae-8ae1b49a6872",
+    "properties": {
+      "Reference": "C47",
+      "Value": "22uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT2_VBUS",
+      "2": "GND2"
+    }
+  },
+  "J1": {
+    "lib_id": "Connector:USB_C_Receptacle_USB2.0_16P",
+    "uuid": "90b3b053-282c-4c0d-946c-82d497a595b9",
+    "properties": {
+      "Reference": "J1",
+      "Value": "USB_C_Receptacle_USB2.0_16P",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "A5": "/CC1_HOST",
+      "B5": "/CC2_HOST",
+      "A6": "/HOST_D+",
+      "B6": "/HOST_D+",
+      "A7": "/HOST_D-",
+      "B7": "/HOST_D-",
+      "A1": "GND1",
+      "A12": "GND1",
+      "B1": "GND1",
+      "B12": "GND1",
+      "SH": "GND1",
+      "A4": "VBUS_HOST",
+      "A9": "VBUS_HOST",
+      "B4": "VBUS_HOST",
+      "B9": "VBUS_HOST",
+      "A8": "unconnected-(J1-SBU1-PadA8)",
+      "B8": "unconnected-(J1-SBU2-PadB8)"
+    }
+  },
+  "J4": {
+    "lib_id": "Connector:USB_A",
+    "uuid": "94380155-296f-4940-8e3a-b65c5d560793",
+    "properties": {
+      "Reference": "J4",
+      "Value": "USB_A",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT2_VBUS",
+      "4": "GND2",
+      "SH": "GND2",
+      "3": "Net-(J4-D+)",
+      "2": "Net-(J4-D-)"
+    }
+  },
+  "U13": {
+    "lib_id": "isolator-lib:TPS2553DBV",
+    "uuid": "95e67fdc-8afb-4fc8-9e41-49bf7793e1d1",
+    "properties": {
+      "Reference": "U13",
+      "Value": "TPS2553DBV",
+      "Footprint": "",
+      "Datasheet": "${KIPRJMOD}/datasheets/TPS2553DBVR.pdf",
+      "Description": "1.5-A Overcurrent Protected Power-Distribution Switch, SOT-23-6"
+    },
+    "pins": {
+      "5": "/ILIM2",
+      "4": "/OCS2",
+      "6": "/PORT2_VBUS",
+      "3": "/PRTPWR2",
+      "2": "GND2",
+      "1": "ISO_5V"
+    }
+  },
+  "C28": {
+    "lib_id": "Device:C_Small",
+    "uuid": "9a42be03-015f-4ad4-b49f-ed702ee7f0d0",
+    "properties": {
+      "Reference": "C28",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "ISO_5V"
+    }
+  },
+  "R3": {
+    "lib_id": "Device:R_Small",
+    "uuid": "9b7d05ca-7713-4cd4-8de7-95b33222c523",
+    "properties": {
+      "Reference": "R3",
+      "Value": "66.5k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/V_REF",
+      "1": "VBUS_HOST"
+    }
+  },
+  "D1": {
+    "lib_id": "Device:D_TVS",
+    "uuid": "9d21e7e3-b72d-42e0-a13b-f289fe7c8ce0",
+    "properties": {
+      "Reference": "D1",
+      "Value": "TVS",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "GND1",
+      "2": "VBUS_HOST"
+    }
+  },
+  "C10": {
+    "lib_id": "Device:C_Small",
+    "uuid": "9ed18be8-a68e-4bf5-a77c-403381851657",
+    "properties": {
+      "Reference": "C10",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "VBUS_HOST"
+    }
+  },
+  "C34": {
+    "lib_id": "Device:C_Small",
+    "uuid": "a637466e-34db-4fd5-94d6-59c9bea20fb3",
+    "properties": {
+      "Reference": "C34",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "/CRFILT_NODE",
+      "2": "GND2"
+    }
+  },
+  "R24": {
+    "lib_id": "Device:R_Small",
+    "uuid": "ac03162e-e950-4527-b175-35aff718ca50",
+    "properties": {
+      "Reference": "R24",
+      "Value": "10.0k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "/PR1_NODE",
+      "2": "GND2"
+    }
+  },
+  "R12": {
+    "lib_id": "Device:R_Small",
+    "uuid": "ace561c3-94b2-43fe-be0f-06ad33bb2fb9",
+    "properties": {
+      "Reference": "R12",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "ISO_5V_PRE",
+      "2": "Net-(U6-PG)"
+    }
+  },
+  "C6": {
+    "lib_id": "Device:C_Small",
+    "uuid": "ada3971a-a553-4bec-a859-6a87bca9f2dc",
+    "properties": {
+      "Reference": "C6",
+      "Value": "8pF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "Net-(U1-XI1)"
+    }
+  },
+  "R11": {
+    "lib_id": "Device:R_Small",
+    "uuid": "af0e1391-9cbf-41a9-a791-968089d42c98",
+    "properties": {
+      "Reference": "R11",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "ISO_5V_PRE",
+      "2": "ISO_5V_PRE"
+    }
+  },
+  "U14": {
+    "lib_id": "isolator-lib:TPS2553DBV",
+    "uuid": "b2eaf2f2-f28f-4b3d-bbc8-ed220f7cf368",
+    "properties": {
+      "Reference": "U14",
+      "Value": "TPS2553DBV",
+      "Footprint": "",
+      "Datasheet": "${KIPRJMOD}/datasheets/TPS2553DBVR.pdf",
+      "Description": "1.5-A Overcurrent Protected Power-Distribution Switch, SOT-23-6"
+    },
+    "pins": {
+      "5": "/ILIM3",
+      "4": "/OCS3",
+      "6": "/PORT3_VBUS",
+      "3": "/PRTPWR3",
+      "2": "GND2",
+      "1": "ISO_5V"
+    }
+  },
+  "C19": {
+    "lib_id": "Device:C_Small",
+    "uuid": "b457214e-476a-4af7-8777-7d29a80c3744",
+    "properties": {
+      "Reference": "C19",
+      "Value": "22uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V_PRE"
+    }
+  },
+  "R15": {
+    "lib_id": "Device:R_Small",
+    "uuid": "b4d98495-ad53-4b54-a09e-159f1c105bb6",
+    "properties": {
+      "Reference": "R15",
+      "Value": "0 DNP",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "ISO_5V_PRE"
+    }
+  },
+  "J5": {
+    "lib_id": "Connector:USB_C_Receptacle_USB2.0_16P",
+    "uuid": "b518225f-8a8e-4937-bb93-e6eb50a02f78",
+    "properties": {
+      "Reference": "J5",
+      "Value": "USB_C_Receptacle_USB2.0_16P",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "A4": "/PORT3_VBUS",
+      "A9": "/PORT3_VBUS",
+      "B4": "/PORT3_VBUS",
+      "B9": "/PORT3_VBUS",
+      "A1": "GND2",
+      "A12": "GND2",
+      "B1": "GND2",
+      "B12": "GND2",
+      "SH": "GND2",
+      "A5": "Net-(J5-CC1)",
+      "B5": "Net-(J5-CC2)",
+      "A6": "Net-(J5-D+-PadA6)",
+      "B6": "Net-(J5-D+-PadA6)",
+      "A7": "Net-(J5-D--PadA7)",
+      "B7": "Net-(J5-D--PadA7)",
+      "A8": "unconnected-(J5-SBU1-PadA8)",
+      "B8": "unconnected-(J5-SBU2-PadB8)"
+    }
+  },
+  "R18": {
+    "lib_id": "Device:R_Small",
+    "uuid": "b5e6cedd-54d5-49db-86d0-af2fda7c7544",
+    "properties": {
+      "Reference": "R18",
+      "Value": "30.1k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "EXT_5V",
+      "2": "Net-(U7-INA+)"
+    }
+  },
+  "U7": {
+    "lib_id": "isolator-lib:TLV7042DDFR",
+    "uuid": "b6994a5a-0195-4a8e-8130-5503abc27f7c",
+    "properties": {
+      "Reference": "U7",
+      "Value": "TLV7042DDFR",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "8": "EXT_5V",
+      "4": "GND2",
+      "1": "Net-(Q3-G)",
+      "7": "Net-(Q3-G)",
+      "3": "Net-(U7-INA+)",
+      "5": "Net-(U7-INA+)",
+      "2": "Net-(U7-INA-)",
+      "6": "Net-(U7-INB-)"
+    }
+  },
+  "U17": {
+    "lib_id": "Power_Protection:USBLC6-2SC6",
+    "uuid": "b85595ec-7075-4d1f-9b90-d70de33e0db7",
+    "properties": {
+      "Reference": "U17",
+      "Value": "USBLC6-2SC6",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "3": "/PORT2_D+",
+      "1": "/PORT2_D-",
+      "5": "/PORT2_VBUS",
+      "2": "GND2",
+      "4": "Net-(J4-D+)",
+      "6": "Net-(J4-D-)"
+    }
+  },
+  "D8": {
+    "lib_id": "Device:D_TVS",
+    "uuid": "b9bee6bc-ec0b-49b7-a9bb-846a4af09f06",
+    "properties": {
+      "Reference": "D8",
+      "Value": "TVS",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/PORT1_VBUS",
+      "1": "GND2"
+    }
+  },
+  "R17": {
+    "lib_id": "Device:R_Small",
+    "uuid": "b9f9f0b2-4181-4aa9-a6f6-1022a948b2f2",
+    "properties": {
+      "Reference": "R17",
+      "Value": "5.1k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(J2-CC2)"
+    }
+  },
+  "R8": {
+    "lib_id": "Device:R_Small",
+    "uuid": "bab51dd3-c190-4ece-b3a7-a40ab357b6a3",
+    "properties": {
+      "Reference": "R8",
+      "Value": "10k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/CC2_HOST",
+      "2": "Net-(U3-INB-)"
+    }
+  },
+  "CY1": {
+    "lib_id": "Device:C_Small",
+    "uuid": "bc23a889-3979-44ec-8734-0f3f45588847",
+    "properties": {
+      "Reference": "CY1",
+      "Value": "1nF Y1",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Y1-rated safety capacitor, 1 nF, 400 VAC. Sole intentional GND1-GND2 bridge. Do NOT substitute a non-safety-rated part."
+    },
+    "pins": {
+      "1": "GND1",
+      "2": "GND2"
+    }
+  },
+  "R5": {
+    "lib_id": "Device:R_Small",
+    "uuid": "bc7581ec-21fc-4ba7-8b6f-e4434ca36638",
+    "properties": {
+      "Reference": "R5",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/CC_DET_L",
+      "1": "VBUS_HOST"
+    }
+  },
+  "D5": {
+    "lib_id": "Device:D_TVS",
+    "uuid": "be8f6c0f-6f96-44f9-aaec-9b5fcc763dd3",
+    "properties": {
+      "Reference": "D5",
+      "Value": "TVS",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Bidirectional transient-voltage-suppression diode"
+    },
+    "pins": {
+      "1": "EXT_5V",
+      "2": "GND2"
+    }
+  },
+  "C30": {
+    "lib_id": "Device:C_Small",
+    "uuid": "bf74761f-4c71-4bc5-aea2-4e33a57e1d0e",
+    "properties": {
+      "Reference": "C30",
+      "Value": "10uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_5V"
+    }
+  },
+  "C31": {
+    "lib_id": "Device:C_Small",
+    "uuid": "bfb1784b-f1a6-4caf-9ae8-714f0857a0c4",
+    "properties": {
+      "Reference": "C31",
+      "Value": "10uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_3V3"
+    }
+  },
+  "R39": {
+    "lib_id": "Device:R_Small",
+    "uuid": "c0cfd703-d8d0-4de6-8054-84c4b0e6eb3f",
+    "properties": {
+      "Reference": "R39",
+      "Value": "46.4k 1%",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/ILIM2",
+      "2": "GND2"
+    }
+  },
+  "C50": {
+    "lib_id": "Device:C_Small",
+    "uuid": "c33dbcf2-a141-42ab-ba59-70974beab04f",
+    "properties": {
+      "Reference": "C50",
+      "Value": "22uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT3_VBUS",
+      "2": "GND2"
+    }
+  },
+  "U2": {
+    "lib_id": "Power_Protection:USBLC6-2SC6",
+    "uuid": "c40ddb6d-2005-403a-aab6-40fbb8443d87",
+    "properties": {
+      "Reference": "U2",
+      "Value": "USBLC6-2SC6",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "3": "/HOST_D+",
+      "4": "/HOST_D+",
+      "1": "/HOST_D-",
+      "6": "/HOST_D-",
+      "2": "GND1",
+      "5": "VBUS_HOST"
+    }
+  },
+  "C40": {
+    "lib_id": "Device:C_Small",
+    "uuid": "c724d7ab-ae25-47d1-95d4-edfa19589e49",
+    "properties": {
+      "Reference": "C40",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_3V3"
+    }
+  },
+  "U18": {
+    "lib_id": "Power_Protection:USBLC6-2SC6",
+    "uuid": "c9b88ea5-1d86-4116-8680-08850dc50c8c",
+    "properties": {
+      "Reference": "U18",
+      "Value": "USBLC6-2SC6",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "3": "/PORT3_D+",
+      "1": "/PORT3_D-",
+      "5": "/PORT3_VBUS",
+      "2": "GND2",
+      "4": "Net-(J5-D+-PadA6)",
+      "6": "Net-(J5-D--PadA7)"
+    }
+  },
+  "R9": {
+    "lib_id": "Device:R_Small",
+    "uuid": "cb14c0b7-3930-4648-8a58-254e55c008f6",
+    "properties": {
+      "Reference": "R9",
+      "Value": "3.3k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "Net-(D2-A)",
+      "1": "VBUS_HOST"
+    }
+  },
+  "R49": {
+    "lib_id": "Device:R_Small",
+    "uuid": "cc1b75b8-fff9-4090-a29a-396918267572",
+    "properties": {
+      "Reference": "R49",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/OCS3",
+      "2": "ISO_3V3"
+    }
+  },
+  "R4": {
+    "lib_id": "Device:R_Small",
+    "uuid": "cc390f59-c73d-48c1-a1d5-35ccec4a185d",
+    "properties": {
+      "Reference": "R4",
+      "Value": "10.2k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/V_REF",
+      "2": "GND1"
+    }
+  },
+  "Q2": {
+    "lib_id": "isolator-lib:2N7002",
+    "uuid": "cdec55c0-b050-456e-91b2-2b068757f864",
+    "properties": {
+      "Reference": "Q2",
+      "Value": "2N7002",
+      "Footprint": "",
+      "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/a141b8bd86b14475955ac8c4d3eea0a8.pdf",
+      "Description": "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+    },
+    "pins": {
+      "1": "/CC_DET_L",
+      "2": "GND1",
+      "3": "Net-(D2-K)"
+    }
+  },
+  "R20": {
+    "lib_id": "Device:R_Small",
+    "uuid": "ce571359-de97-4b3a-a423-dea747c406ad",
+    "properties": {
+      "Reference": "R20",
+      "Value": "10k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "Net-(J2-CC1)",
+      "2": "Net-(U7-INA-)"
+    }
+  },
+  "R46": {
+    "lib_id": "Device:R_Small",
+    "uuid": "cf806112-1561-42cf-a551-cccb65583a7c",
+    "properties": {
+      "Reference": "R46",
+      "Value": "56k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/PORT4_VBUS",
+      "1": "Net-(J6-CC2)"
+    }
+  },
+  "C33": {
+    "lib_id": "Device:C_Small",
+    "uuid": "d2b3104a-2f61-4260-a315-cb93b45b638c",
+    "properties": {
+      "Reference": "C33",
+      "Value": "18pF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "Net-(U11-XTALIN/CLKIN)"
+    }
+  },
+  "D2": {
+    "lib_id": "Device:LED",
+    "uuid": "d4d815ab-ac77-4b4a-a180-815a46f2dcc6",
+    "properties": {
+      "Reference": "D2",
+      "Value": "LED",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "Net-(D2-A)",
+      "1": "Net-(D2-K)"
+    }
+  },
+  "R30": {
+    "lib_id": "Device:R_Small",
+    "uuid": "d50891a6-8c4b-44e9-88d2-010239eeb5f6",
+    "properties": {
+      "Reference": "R30",
+      "Value": "3.3k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "ISO_5V",
+      "2": "Net-(D7-A)"
+    }
+  },
+  "C60": {
+    "lib_id": "Device:C_Small",
+    "uuid": "d52a010c-5272-498d-9840-ff9fd7bb0569",
+    "properties": {
+      "Reference": "C60",
+      "Value": "0.01uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/CRFILT_NODE",
+      "1": "GND2"
+    }
+  },
+  "R38": {
+    "lib_id": "Device:R_Small",
+    "uuid": "d55379ef-9bcb-4612-84c9-c275589d502d",
+    "properties": {
+      "Reference": "R38",
+      "Value": "46.4k 1%",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/ILIM1",
+      "2": "GND2"
+    }
+  },
+  "D3": {
+    "lib_id": "Device:D_Schottky",
+    "uuid": "d57b8bf4-054d-4598-a4d3-7049a4ce5638",
+    "properties": {
+      "Reference": "D3",
+      "Value": "SS34",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Schottky diode"
+    },
+    "pins": {
+      "1": "DCDC_RAW",
+      "2": "Net-(D3-A)"
+    }
+  },
+  "R32": {
+    "lib_id": "Device:R_Small",
+    "uuid": "d8498ccb-98bd-40ba-bd3e-5fdcb4ce28ce",
+    "properties": {
+      "Reference": "R32",
+      "Value": "12.0k 1%",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "/RBIAS_NODE",
+      "2": "GND2"
+    }
+  },
+  "C12": {
+    "lib_id": "Device:C_Small",
+    "uuid": "d9a978b8-ae67-4ec2-8bb7-5a90b4e493ba",
+    "properties": {
+      "Reference": "C12",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "VBUS_HOST"
+    }
+  },
+  "C57": {
+    "lib_id": "Device:C_Small",
+    "uuid": "dea9dd5e-b06f-40d2-8be0-50a77f326b44",
+    "properties": {
+      "Reference": "C57",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT4_VBUS",
+      "2": "GND2"
+    }
+  },
+  "R19": {
+    "lib_id": "Device:R_Small",
+    "uuid": "e0c80e3f-9468-4ecf-a175-f7c7e5070846",
+    "properties": {
+      "Reference": "R19",
+      "Value": "9.76k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(U7-INA+)"
+    }
+  },
+  "U19": {
+    "lib_id": "Power_Protection:USBLC6-2SC6",
+    "uuid": "e440df7d-1d0d-4247-9bbd-922bc40c23ab",
+    "properties": {
+      "Reference": "U19",
+      "Value": "USBLC6-2SC6",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "3": "/PORT4_D+",
+      "1": "/PORT4_D-",
+      "5": "/PORT4_VBUS",
+      "2": "GND2",
+      "4": "Net-(J6-D+-PadA6)",
+      "6": "Net-(J6-D--PadA7)"
+    }
+  },
+  "U15": {
+    "lib_id": "isolator-lib:TPS2553DBV",
+    "uuid": "e4aaab00-e9c5-4ff1-bde3-cd6377f4e362",
+    "properties": {
+      "Reference": "U15",
+      "Value": "TPS2553DBV",
+      "Footprint": "",
+      "Datasheet": "${KIPRJMOD}/datasheets/TPS2553DBVR.pdf",
+      "Description": "1.5-A Overcurrent Protected Power-Distribution Switch, SOT-23-6"
+    },
+    "pins": {
+      "4": "/OCS4",
+      "6": "/PORT4_VBUS",
+      "3": "/PRTPWR4",
+      "2": "GND2",
+      "1": "ISO_5V",
+      "5": "Net-(U15-ILIM)"
+    }
+  },
+  "C25": {
+    "lib_id": "Device:C_Small",
+    "uuid": "e55cd4bc-f923-4ca9-905c-4f1b01239f10",
+    "properties": {
+      "Reference": "C25",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "Net-(U7-INA+)"
+    }
+  },
+  "D6": {
+    "lib_id": "Device:LED",
+    "uuid": "ea7afbdd-dfa2-4bc5-9127-3976785d5208",
+    "properties": {
+      "Reference": "D6",
+      "Value": "LED",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Light emitting diode"
+    },
+    "pins": {
+      "1": "GND2",
+      "2": "Net-(D6-A)"
+    }
+  },
+  "R10": {
+    "lib_id": "Device:R_Small",
+    "uuid": "ebe7d97b-e459-4850-ab73-4ceb2cb6f147",
+    "properties": {
+      "Reference": "R10",
+      "Value": "0",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "ISO_5V_PRE",
+      "2": "ISO_5V_PRE"
+    }
+  },
+  "R43": {
+    "lib_id": "Device:R_Small",
+    "uuid": "ef51962d-77c1-4b8f-a68b-2205e4e607a2",
+    "properties": {
+      "Reference": "R43",
+      "Value": "56k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/PORT3_VBUS",
+      "1": "Net-(J5-CC2)"
+    }
+  },
+  "C41": {
+    "lib_id": "Device:C_Small",
+    "uuid": "f0403352-7e41-476a-bc5b-0e7e4dbba661",
+    "properties": {
+      "Reference": "C41",
+      "Value": "4.7uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Unpolarized capacitor, small symbol"
+    },
+    "pins": {
+      "2": "GND2",
+      "1": "ISO_3V3"
+    }
+  },
+  "R31": {
+    "lib_id": "Device:R_Small",
+    "uuid": "f6dfd173-977c-449c-9993-b2536cd1e303",
+    "properties": {
+      "Reference": "R31",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": "Resistor, small symbol"
+    },
+    "pins": {
+      "1": "/PGOOD2",
+      "2": "GND2"
+    }
+  },
+  "C5": {
+    "lib_id": "Device:C_Small",
+    "uuid": "f6eb7b93-5528-4903-bc2c-15892be60299",
+    "properties": {
+      "Reference": "C5",
+      "Value": "8pF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "GND1",
+      "1": "Net-(U1-XO1)"
+    }
+  },
+  "R48": {
+    "lib_id": "Device:R_Small",
+    "uuid": "f7a84072-4b24-42e4-9954-fc4d339a7d56",
+    "properties": {
+      "Reference": "R48",
+      "Value": "100k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/OCS2",
+      "2": "ISO_3V3"
+    }
+  },
+  "D10": {
+    "lib_id": "Device:D_TVS",
+    "uuid": "f7aa70f7-1942-4ee6-85d0-da81717be01c",
+    "properties": {
+      "Reference": "D10",
+      "Value": "TVS",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "2": "/PORT3_VBUS",
+      "1": "GND2"
+    }
+  },
+  "U3": {
+    "lib_id": "isolator-lib:TLV7042DDFR",
+    "uuid": "f8a7a305-5bd6-4e9f-ac51-f73df57c9579",
+    "properties": {
+      "Reference": "U3",
+      "Value": "TLV7042DDFR",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/CC_DET_L",
+      "7": "/CC_DET_L",
+      "3": "/V_REF",
+      "5": "/V_REF",
+      "4": "GND1",
+      "2": "Net-(U3-INA-)",
+      "6": "Net-(U3-INB-)",
+      "8": "VBUS_HOST"
+    }
+  },
+  "R7": {
+    "lib_id": "Device:R_Small",
+    "uuid": "fa6f3442-2c8a-4765-a476-1c583a31fddf",
+    "properties": {
+      "Reference": "R7",
+      "Value": "10k",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/CC1_HOST",
+      "2": "Net-(U3-INA-)"
+    }
+  },
+  "C45": {
+    "lib_id": "Device:C_Small",
+    "uuid": "fbc38d52-9888-4145-9b36-41f601f82c22",
+    "properties": {
+      "Reference": "C45",
+      "Value": "0.1uF",
+      "Footprint": "",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pins": {
+      "1": "/PORT1_VBUS",
+      "2": "GND2"
+    }
+  }
+}

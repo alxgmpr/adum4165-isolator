@@ -1,0 +1,5342 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid "bf6618b4-5931-59e2-9f6f-5442c055bfca")
+  (paper "A3")
+  (title_block
+    (title "Downstream USB-A ports 1 and 2")
+    (rev "C — design verification in progress")
+    (date "2026-09-10")
+  )
+  (lib_symbols
+    (symbol "hub-lib:Connector_USB_A"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "J"
+        (at -5.08 11.43 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "USB_A"
+        (at -5.08 8.89 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" ""
+        (at 3.81 -1.27 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 3.81 -1.27 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "USB Type A connector"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "connector USB"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "USB*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Connector_USB_A_0_1"
+        (rectangle
+          (start -5.08 -7.62)
+          (end 5.08 7.62)
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type background)
+          )
+        )
+        (circle
+          (center -3.81 2.159)
+          (radius 0.635)
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (polyline
+          (pts
+            (xy -3.175 2.159)
+            (xy -2.54 2.159)
+            (xy -1.27 3.429)
+            (xy -0.635 3.429)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.54 2.159)
+            (xy -1.905 2.159)
+            (xy -1.27 0.889)
+            (xy 0 0.889)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start -1.524 4.826)
+          (end -4.318 5.334)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (rectangle
+          (start -1.27 4.572)
+          (end -4.572 5.842)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (circle
+          (center -0.635 3.429)
+          (radius 0.381)
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (rectangle
+          (start -0.127 -7.62)
+          (end 0.127 -6.858)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start 0.254 1.27)
+          (end -0.508 0.508)
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.635 2.794)
+            (xy 0.635 1.524)
+            (xy 1.905 2.159)
+            (xy 0.635 2.794)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (rectangle
+          (start 5.08 4.953)
+          (end 4.318 5.207)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start 5.08 -0.127)
+          (end 4.318 0.127)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start 5.08 -2.667)
+          (end 4.318 -2.413)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Connector_USB_A_1_1"
+        (polyline
+          (pts
+            (xy -1.905 2.159)
+            (xy 0.635 2.159)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (pin power_in line
+          (at 7.62 5.08 180)
+          (length 2.54)
+          (name "VBUS"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin bidirectional line
+          (at 7.62 -2.54 180)
+          (length 2.54)
+          (name "D-"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin bidirectional line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "D+"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at 0 -10.16 90)
+          (length 2.54)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -2.54 -10.16 90)
+          (length 2.54)
+          (name "Shield"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "SH"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:isolator-lib_TPS2553DBV"
+      (pin_names
+        (offset 1.016)
+      )
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "TPS2553DBV"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          hide
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          hide
+        )
+      )
+      (property "Description" "TPS2553DBV"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          hide
+        )
+      )
+      (symbol "isolator-lib_TPS2553DBV_0_1"
+        (rectangle
+          (start -17.78 12.7)
+          (end 17.78 -12.7)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type background)
+          )
+        )
+      )
+      (symbol "isolator-lib_TPS2553DBV_1_1"
+        (pin input line
+          (at -22.86 2.54 0)
+          (length 5.08)
+          (name "EN"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin input line
+          (at -22.86 -2.54 0)
+          (length 5.08)
+          (name "ILIM"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "5"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin open_collector line
+          (at 22.86 2.54 180)
+          (length 5.08)
+          (name "~{FAULT}"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "4"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin power_out line
+          (at 22.86 -2.54 180)
+          (length 5.08)
+          (name "OUT"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "6"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at 0.0 17.78 270)
+          (length 5.08)
+          (name "IN"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at 0.0 -17.78 90)
+          (length 5.08)
+          (name "GND"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "hub-lib:Device_R_Small_US"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0.254)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "R"
+        (at 0.762 0.508 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "R_Small_US"
+        (at 0.762 -1.016 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Resistor, small US symbol"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "r resistor"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Device_R_Small_US_1_1"
+        (polyline
+          (pts
+            (xy 0 1.524)
+            (xy 1.016 1.143)
+            (xy 0 0.762)
+            (xy -1.016 0.381)
+            (xy 0 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 1.016 -0.381)
+            (xy 0 -0.762)
+            (xy -1.016 -1.143)
+            (xy 0 -1.524)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (pin passive line
+          (at 0 2.54 270)
+          (length 1.016)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -2.54 90)
+          (length 1.016)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:Power_Protection_USBLC6-2SC6"
+      (pin_names
+        (offset 1.016)
+      )
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "USBLC6-2SC6"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          hide
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          hide
+        )
+      )
+      (property "Description" "USBLC6-2SC6"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          hide
+        )
+      )
+      (symbol "Power_Protection_USBLC6-2SC6_0_1"
+        (rectangle
+          (start -17.78 20.32)
+          (end 17.78 -20.32)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type background)
+          )
+        )
+      )
+      (symbol "Power_Protection_USBLC6-2SC6_1_1"
+        (pin passive line
+          (at -22.86 10.16 0)
+          (length 5.08)
+          (name "I/O1"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -22.86 5.08 0)
+          (length 5.08)
+          (name "I/O2"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -22.86 -0.0 0)
+          (length 5.08)
+          (name "I/O2"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "4"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -22.86 -5.08 0)
+          (length 5.08)
+          (name "VBUS"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "5"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -22.86 -10.16 0)
+          (length 5.08)
+          (name "I/O1"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "6"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0.0 -25.4 90)
+          (length 5.08)
+          (name "GND"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.016 1.016)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "hub-lib:Device_C"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0.254)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Device_C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Device_C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:Device_C_Polarized"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0.254)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "C_Polarized"
+        (at 0.635 -2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Polarized capacitor"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "CP_*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Device_C_Polarized_0_1"
+        (rectangle
+          (start -2.286 0.508)
+          (end 2.286 1.016)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.778 2.286)
+            (xy -0.762 2.286)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 2.794)
+            (xy -1.27 1.778)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start 2.286 -0.508)
+          (end -2.286 -1.016)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+      )
+      (symbol "Device_C_Polarized_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:Device_D_Zener"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 1.016)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "D_Zener"
+        (at 0 -2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Zener diode"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "diode"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Device_D_Zener_0_1"
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+            (xy -0.762 1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 0)
+            (xy -1.27 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Device_D_Zener_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+  )
+  (text "Downstream USB-A ports 1 and 2"
+    (at 15.24 17.78 0)
+    (effects
+      (font
+        (size 2.032 2.032)
+      )
+      (justify left)
+    )
+    (uuid "af8dc952-db04-5ca9-b218-2d79fa9de0db")
+  )
+  (text "Rev C | all routing reserved for Alex | electrical draft under review"
+    (at 15.24 24.13 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "4fae9450-117f-5464-87cb-b39697fdaaa8")
+  )
+  (symbol
+    (lib_id "hub-lib:Connector_USB_A")
+    (at 34.29 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7d4bcf17-29fa-4438-83f0-8d93ed5c4b23")
+    (property "Reference" "J3"
+      (at 34.29 34.290000000000006 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "USB-A"
+      (at 34.29 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Connector_USB:USB_A_Wuerth_614004134726_Horizontal"
+      (at 34.29 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Datasheet" ""
+      (at 34.29 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Description" ""
+      (at 34.29 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "MPN" "614004134726"
+      (at 34.29 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Manufacturer" "Wurth Elektronik"
+      (at 34.29 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "LCSC" ""
+      (at 34.29 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin "1"
+      (uuid "d24a4c4a-a24a-580e-a260-542469318c48")
+    )
+    (pin "2"
+      (uuid "89b9abd4-7e1c-5ed6-a436-1765dd8154fe")
+    )
+    (pin "3"
+      (uuid "c586d540-90cb-5ddc-8295-109c98745108")
+    )
+    (pin "4"
+      (uuid "f37ac96d-c081-5430-b2ff-8a2fcbe578c2")
+    )
+    (pin "SH"
+      (uuid "9f9a19de-7353-5aba-8e73-0f81d754ac1c")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "J3")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 41.91 49.53)
+      (xy 46.99 49.53)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "4cfd33b7-de65-5f6c-9fc6-680d01f5a21d")
+  )
+  (global_label "PORT1_VBUS"
+    (shape bidirectional)
+    (at 46.99 49.53 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "0ccf5763-2cd3-57fe-9e10-a2ab344dec98")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 46.99 49.53 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 41.91 57.15)
+      (xy 46.99 57.15)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f95c0939-c68a-53a3-9488-1081d39ac882")
+  )
+  (global_label "PORT1_D-"
+    (shape bidirectional)
+    (at 46.99 57.15 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "e7f1c513-ef48-50c8-929e-b931b4532879")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 46.99 57.15 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 41.91 54.61)
+      (xy 46.99 54.61)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d0582235-0675-51da-a980-7d9af945c341")
+  )
+  (global_label "PORT1_D+"
+    (shape bidirectional)
+    (at 46.99 54.61 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "d023ec40-2035-5ac3-bb99-0ed7fc0fb8cd")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 46.99 54.61 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 34.29 64.77)
+      (xy 34.29 69.85)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "8fc8e532-a57e-5ae5-b41e-5e5821bf8732")
+  )
+  (wire
+    (pts
+      (xy 31.75 64.77)
+      (xy 31.75 69.85)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "53a6fd7f-64d3-5be7-9541-2247decc16ed")
+  )
+  (wire
+    (pts
+      (xy 31.75 69.85)
+      (xy 34.29 69.85)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "6de89141-0456-580a-bfbe-ee4a702f7b9e")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 31.75 69.85 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "bc9aa01a-b1ec-530a-99f9-fd1168168699")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 31.75 69.85 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:isolator-lib_TPS2553DBV")
+    (at 107.95 64.77 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "55d96b06-7c75-462e-a975-d8720f7232d8")
+    (property "Reference" "U12"
+      (at 107.95 34.28999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "TPS2553DBVR"
+      (at 107.95 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 107.95 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Datasheet" ""
+      (at 107.95 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Description" ""
+      (at 107.95 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "MPN" "TPS2553DBVR"
+      (at 107.95 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Manufacturer" "Texas Instruments"
+      (at 107.95 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "LCSC" ""
+      (at 107.95 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin "3"
+      (uuid "e4918c3c-2b62-5ba5-975f-8a95880c8297")
+    )
+    (pin "5"
+      (uuid "bb8c1d3c-7d76-5ed8-9fce-92b5850df94e")
+    )
+    (pin "4"
+      (uuid "c58b82ed-6272-5ac2-b43e-e531900ab096")
+    )
+    (pin "6"
+      (uuid "ad059d73-8a04-5a96-b29a-e3b21aad114a")
+    )
+    (pin "1"
+      (uuid "3b5c53df-be8e-52df-bd6b-9b32a00df53b")
+    )
+    (pin "2"
+      (uuid "e408a0cd-e500-57d0-a0fd-7c624cc36201")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "U12")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 85.09 62.23)
+      (xy 80.01 62.23)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "56f1780a-5f78-5682-897e-aa26f45f6012")
+  )
+  (global_label "PRTPWR1"
+    (shape bidirectional)
+    (at 80.01 62.23 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "26519624-99f4-50d4-8529-1102a64c1fb4")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 80.01 62.23 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 85.09 67.31)
+      (xy 80.01 67.31)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "e0bc5fb9-64ee-53a2-8cb9-6bb1e8b92f87")
+  )
+  (global_label "PORT1_ILIM"
+    (shape bidirectional)
+    (at 80.01 67.31 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "ca062737-f497-542b-9845-4300f6d2b0ba")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 80.01 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 130.81 62.23)
+      (xy 135.89 62.23)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "666b133f-12f7-5062-9a4a-613040d3663d")
+  )
+  (global_label "OCS1_N"
+    (shape bidirectional)
+    (at 135.89 62.23 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "57962331-8415-523d-ae48-367934f2cc4d")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 135.89 62.23 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 130.81 67.31)
+      (xy 135.89 67.31)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "66d6d6bf-7b66-5bb8-9e6e-393070679f12")
+  )
+  (global_label "PORT1_VBUS"
+    (shape bidirectional)
+    (at 135.89 67.31 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "5cd3b0b5-8336-5dc4-84ed-608153e57bfb")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 135.89 67.31 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 107.95 46.989999999999995)
+      (xy 107.95 41.91)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "8ba8da7d-1108-52c4-b11c-59363b0bffd7")
+  )
+  (wire
+    (pts
+      (xy 107.95 82.55)
+      (xy 107.95 87.63)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "9dabed23-b2a1-5c9d-9e2b-39646f2de4b1")
+  )
+  (global_label "PORT_SUPPLY"
+    (shape bidirectional)
+    (at 107.95 41.91 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "94714a75-49c1-5153-b7a4-2a60505ee537")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 107.95 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 107.95 87.63 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "2ea7d334-ac79-5473-8574-bb0c6f20dc5d")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 107.95 87.63 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Power_Protection_USBLC6-2SC6")
+    (at 196.85 67.31 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5b580137-386a-4a0f-9800-bfc825faf084")
+    (property "Reference" "U16"
+      (at 196.85 34.290000000000006 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "USBLC6-2SC6"
+      (at 196.85 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+      (at 196.85 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Datasheet" ""
+      (at 196.85 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Description" "Flow-through: 1/6 D-, 3/4 D+. Place at connector; no data stubs."
+      (at 196.85 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "MPN" "USBLC6-2SC6"
+      (at 196.85 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Manufacturer" "STMicroelectronics"
+      (at 196.85 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "LCSC" ""
+      (at 196.85 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin "1"
+      (uuid "57d2c74b-a395-52e9-bbd9-6969a7d0bd86")
+    )
+    (pin "3"
+      (uuid "d42eface-0be8-51f0-b07f-b736c25ed167")
+    )
+    (pin "4"
+      (uuid "ac406822-46cf-5662-a539-f64451321317")
+    )
+    (pin "5"
+      (uuid "064183b8-31ca-582a-93cc-7c110054122d")
+    )
+    (pin "6"
+      (uuid "552e999c-2028-5c1b-a1cd-09be1c06174a")
+    )
+    (pin "2"
+      (uuid "caec66dd-3150-5282-84b4-84b1cace3bec")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "U16")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 173.99 57.150000000000006)
+      (xy 168.91 57.15)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "3ae5c0e2-1e4b-50bb-92d3-e4338f18986d")
+  )
+  (global_label "PORT1_D-"
+    (shape bidirectional)
+    (at 168.91 57.15 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "e2f54833-28b4-5272-873d-5b76d3f65cce")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 168.91 57.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 173.99 62.230000000000004)
+      (xy 168.91 62.23)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a274dad3-fe4a-5e30-a347-ef331f3fc327")
+  )
+  (global_label "PORT1_D+"
+    (shape bidirectional)
+    (at 168.91 62.23 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "1720bb9d-9baa-5f7b-ad44-45672bc08494")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 168.91 62.23 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 173.99 67.31)
+      (xy 168.91 67.31)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "772a45c1-9567-5a52-a1b8-f5a7587d34e3")
+  )
+  (global_label "PORT1_D+"
+    (shape bidirectional)
+    (at 168.91 67.31 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "58c2e5c2-fe66-5831-9abc-bb2a1b49c421")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 168.91 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 173.99 72.39)
+      (xy 168.91 72.39)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "acc580ec-a78b-516a-9f8c-77c1066ac184")
+  )
+  (global_label "PORT1_VBUS"
+    (shape bidirectional)
+    (at 168.91 72.39 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "3faed3d4-d5fe-5e84-9a03-c1a3e1a1ce37")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 168.91 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 173.99 77.47)
+      (xy 168.91 77.47)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "e0b26d6e-02da-5290-8328-08d3ff81a370")
+  )
+  (global_label "PORT1_D-"
+    (shape bidirectional)
+    (at 168.91 77.47 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "b5c6bc88-b78e-59d4-acc4-875a97843c2b")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 168.91 77.47 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 196.85 92.71000000000001)
+      (xy 196.85 97.79)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d7fd9734-51f6-5045-a14c-c9e3e9a3eb1e")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 196.85 97.79 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "5c8886cc-81bc-5c0e-b9fd-ec5897287a4d")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 196.85 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Connector_USB_A")
+    (at 262.89 54.61 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "94380155-296f-4940-8e3a-b65c5d560793")
+    (property "Reference" "J4"
+      (at 262.89 34.290000000000006 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "USB-A"
+      (at 262.89 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Connector_USB:USB_A_Wuerth_614004134726_Horizontal"
+      (at 262.89 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Datasheet" ""
+      (at 262.89 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Description" ""
+      (at 262.89 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "MPN" "614004134726"
+      (at 262.89 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Manufacturer" "Wurth Elektronik"
+      (at 262.89 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "LCSC" ""
+      (at 262.89 54.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin "1"
+      (uuid "ee2d949e-7a1d-5088-a1d0-f501fb508113")
+    )
+    (pin "2"
+      (uuid "7f0da49f-d003-56f1-8e9c-7b7a60376177")
+    )
+    (pin "3"
+      (uuid "a06f536d-b8fc-5ec6-89c1-557942164e3d")
+    )
+    (pin "4"
+      (uuid "4bdbe31b-9e40-51d3-9692-f7ea9d49cc4f")
+    )
+    (pin "SH"
+      (uuid "eeb07d02-ac29-5f79-8947-84bf22e99953")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "J4")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 270.51 49.53)
+      (xy 275.59 49.53)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "e74631d5-41d1-5483-ab4c-1a1cccff424a")
+  )
+  (global_label "PORT2_VBUS"
+    (shape bidirectional)
+    (at 275.59 49.53 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "d297aa59-ba8d-59f9-a1a6-512418804f99")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 275.59 49.53 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 270.51 57.15)
+      (xy 275.59 57.15)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "33096907-336e-5b40-8f4d-d6f3ef86bc2b")
+  )
+  (global_label "PORT2_D-"
+    (shape bidirectional)
+    (at 275.59 57.15 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "33313407-b034-5c4e-a60a-a6cc0f55f682")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 275.59 57.15 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 270.51 54.61)
+      (xy 275.59 54.61)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "06ffbc58-67f3-58df-b2c4-625675b8ee7a")
+  )
+  (global_label "PORT2_D+"
+    (shape bidirectional)
+    (at 275.59 54.61 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "c5da6cc4-f28c-51d3-88a5-44a5a4848c41")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 275.59 54.61 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 262.89 64.77)
+      (xy 262.89 69.85)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "2fe75dbf-e13f-5821-acf1-59ef6ca50e5d")
+  )
+  (wire
+    (pts
+      (xy 260.34999999999997 64.77)
+      (xy 260.35 69.85)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d41bf5dd-4369-5c0f-bfc6-2cde8254c316")
+  )
+  (wire
+    (pts
+      (xy 260.35 69.85)
+      (xy 262.89 69.85)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "fbe00d74-65e0-5df1-a1d6-53e8304935e8")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 260.35 69.85 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "312ed4e4-a73a-5ca1-a21e-8a64abbd6bea")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 260.35 69.85 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:isolator-lib_TPS2553DBV")
+    (at 336.55 64.77 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "95e67fdc-8afb-4fc8-9e41-49bf7793e1d1")
+    (property "Reference" "U13"
+      (at 336.55 34.28999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "TPS2553DBVR"
+      (at 336.55 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" ""
+      (at 336.55 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Datasheet" ""
+      (at 336.55 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Description" ""
+      (at 336.55 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "MPN" "TPS2553DBVR"
+      (at 336.55 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Manufacturer" "Texas Instruments"
+      (at 336.55 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "LCSC" ""
+      (at 336.55 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin "3"
+      (uuid "ae968524-fb89-52c2-99c4-9a57e665817b")
+    )
+    (pin "5"
+      (uuid "1298ea20-1a31-5476-a3cf-9205e5ceb8e1")
+    )
+    (pin "4"
+      (uuid "a8edcd58-092d-5755-a34c-ec539310c698")
+    )
+    (pin "6"
+      (uuid "0c0a51f1-de56-5d7f-a670-595f4ea1588f")
+    )
+    (pin "1"
+      (uuid "c40d4a48-8e94-5268-bd9b-1df6dab84af6")
+    )
+    (pin "2"
+      (uuid "98a46bba-d375-57f2-9203-4a60fda39a72")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "U13")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 313.69 62.23)
+      (xy 308.61 62.23)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "57d88086-581b-58e8-b38b-8485b8f114c3")
+  )
+  (global_label "PRTPWR2"
+    (shape bidirectional)
+    (at 308.61 62.23 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "b475c76f-64fa-5e9c-86b4-6c2429cad151")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 308.61 62.23 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 313.69 67.31)
+      (xy 308.61 67.31)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "670b42bb-29fa-50dc-a859-e94494f67e09")
+  )
+  (global_label "PORT2_ILIM"
+    (shape bidirectional)
+    (at 308.61 67.31 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "26684c3d-686a-50dc-b54b-e87fd02fe604")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 308.61 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 359.41 62.23)
+      (xy 364.49 62.23)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b451b9e7-ce96-5566-906f-63d44b93b41d")
+  )
+  (global_label "OCS2_N"
+    (shape bidirectional)
+    (at 364.49 62.23 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "9bbd44b6-0c55-54a8-aa7c-5804fad5996b")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 364.49 62.23 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 359.41 67.31)
+      (xy 364.49 67.31)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f97af150-876c-53fd-a274-45e12534b2b0")
+  )
+  (global_label "PORT2_VBUS"
+    (shape bidirectional)
+    (at 364.49 67.31 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "3ab530b5-5ad5-56fa-add2-4ff551de4ed3")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 364.49 67.31 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 336.55 46.989999999999995)
+      (xy 336.55 41.91)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f96b13dd-68e7-55fe-8d38-43fc43cd9ed2")
+  )
+  (wire
+    (pts
+      (xy 336.55 82.55)
+      (xy 336.55 87.63)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "dc721432-9971-5402-b6f1-d67f4cdc36a9")
+  )
+  (global_label "PORT_SUPPLY"
+    (shape bidirectional)
+    (at 336.55 41.91 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "fcec1aea-1c43-59c5-ad06-bd45c37c6492")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 336.55 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 336.55 87.63 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "d75b838a-a306-56dc-880d-ae985deca34c")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 336.55 87.63 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Power_Protection_USBLC6-2SC6")
+    (at 52.07 151.13 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b85595ec-7075-4d1f-9b90-d70de33e0db7")
+    (property "Reference" "U17"
+      (at 52.07 118.11 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "USBLC6-2SC6"
+      (at 52.07 120.65 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+      (at 52.07 151.13 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Datasheet" ""
+      (at 52.07 151.13 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Description" "Flow-through: 1/6 D-, 3/4 D+. Place at connector; no data stubs."
+      (at 52.07 151.13 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "MPN" "USBLC6-2SC6"
+      (at 52.07 151.13 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Manufacturer" "STMicroelectronics"
+      (at 52.07 151.13 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "LCSC" ""
+      (at 52.07 151.13 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin "1"
+      (uuid "a8a09908-ca83-50e4-a60e-e73b55ec8964")
+    )
+    (pin "3"
+      (uuid "ac1685d4-746f-53f5-b3f5-141d50ec2904")
+    )
+    (pin "4"
+      (uuid "17e9d9c0-2968-5511-9840-c7558bb9241f")
+    )
+    (pin "5"
+      (uuid "85c5bbbd-1b43-50a8-a53c-79101f2a8b6d")
+    )
+    (pin "6"
+      (uuid "b8b28849-77bb-55fc-8fc4-a779e25d88bf")
+    )
+    (pin "2"
+      (uuid "baef22c7-0310-58a3-879b-f91316490a73")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "U17")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 29.21 140.97)
+      (xy 24.13 140.97)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "edf385fa-79bd-5fc9-941c-8cfdbed90591")
+  )
+  (global_label "PORT2_D-"
+    (shape bidirectional)
+    (at 24.13 140.97 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "21a79c3c-abc6-5a7b-9bd9-a68c6d1eb0db")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 24.13 140.97 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 29.21 146.04999999999998)
+      (xy 24.13 146.05)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "46692e69-dd3c-51ef-9bfa-e44b4c02f545")
+  )
+  (global_label "PORT2_D+"
+    (shape bidirectional)
+    (at 24.13 146.05 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "f2a211a6-29b5-597e-8ad3-575408c965d5")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 24.13 146.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 29.21 151.13)
+      (xy 24.13 151.13)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "25840a35-2590-55d1-801b-3d4d42baa142")
+  )
+  (global_label "PORT2_D+"
+    (shape bidirectional)
+    (at 24.13 151.13 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "17335e14-26cf-5d44-92e3-119946da78cb")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 24.13 151.13 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 29.21 156.21)
+      (xy 24.13 156.21)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "03985a06-ca89-5cde-adb6-bbb7ea540a42")
+  )
+  (global_label "PORT2_VBUS"
+    (shape bidirectional)
+    (at 24.13 156.21 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "290f435b-3cc5-5dd7-81ef-33d1a479db78")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 24.13 156.21 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 29.21 161.29)
+      (xy 24.13 161.29)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b66ee3a5-5e2b-5f32-a37c-bff35f8b228e")
+  )
+  (global_label "PORT2_D-"
+    (shape bidirectional)
+    (at 24.13 161.29 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "ab9de99a-9ee7-5184-9bcf-58085fce2da5")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 24.13 161.29 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 52.07 176.53)
+      (xy 52.07 181.61)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "fab80437-d1d5-596a-bbcc-52e1bce56f61")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 52.07 181.61 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "d800d1be-1e68-5dfa-8456-a8feb75f74b2")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 52.07 181.61 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 35.56 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "d55379ef-9bcb-4612-84c9-c275589d502d")
+    (property "Reference" "R38"
+      (at 39.370000000000005 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "46.4kR"
+      (at 39.370000000000005 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Guarantee >=500mA; see tolerance report"
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "a0951ae7-7df1-5c32-85c3-b4a9fb5a2a31")
+    )
+    (pin "2"
+      (uuid "a69ff567-e510-5616-9ed1-38cf2e862a13")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "R38")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 35.56 207.01000000000002)
+      (xy 35.56 201.93)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d02ef633-ead6-5aad-86dc-3c7651c2286b")
+  )
+  (global_label "PORT1_ILIM"
+    (shape bidirectional)
+    (at 35.56 201.93 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "5bcd3320-59d8-551c-8c33-615a6938aa3a")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 35.56 201.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 35.56 212.09)
+      (xy 35.56 217.17)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "ac70128c-2baf-57fe-889c-265897714782")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 35.56 217.17 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "580fc475-19f6-577a-8c05-90fe24cc4e3c")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 35.56 217.17 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 78.74 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "67907526-5a42-47de-860b-1f9f7792bcd2")
+    (property "Reference" "R47"
+      (at 82.55 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100kR"
+      (at 82.55 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" ""
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "d12f9aab-d3e0-5a3d-bf27-c5a8debb16da")
+    )
+    (pin "2"
+      (uuid "0c04e736-829b-564a-b874-66ebfa99fa7e")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "R47")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 78.74 207.01000000000002)
+      (xy 78.74 201.93)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "c6923ce7-ecc3-538f-9623-8419c4c624a5")
+  )
+  (global_label "ISO_3V3"
+    (shape bidirectional)
+    (at 78.74 201.93 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "3709db7b-644e-54aa-8825-e6b960faa4d9")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 78.74 201.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 78.74 212.09)
+      (xy 78.74 217.17)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "1eccca97-bf41-508b-bbe9-fa401495c7b9")
+  )
+  (global_label "OCS1_N"
+    (shape bidirectional)
+    (at 78.74 217.17 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "53f78e3b-0eb1-5562-b50c-f065a5bb62ae")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 78.74 217.17 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_C")
+    (at 121.92 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "17885cea-55ad-471c-8b4b-9bb7e24b764c")
+    (property "Reference" "C43"
+      (at 125.73 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100nF"
+      (at 125.73 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Port 1 VBUS bypass"
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "73c4607c-3e0c-51e8-8e98-5858cb567db4")
+    )
+    (pin "2"
+      (uuid "903fac22-0d4a-5773-a2d7-b6b3a0079bbd")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "C43")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 121.92 205.74)
+      (xy 121.92 200.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "81a35bab-08e3-5663-afdd-d59de808dccf")
+  )
+  (global_label "PORT_SUPPLY"
+    (shape bidirectional)
+    (at 121.92 200.66 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "ab648985-518b-5081-9785-27e6e310043f")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 121.92 200.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 121.92 213.36)
+      (xy 121.92 218.44)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "2933cfff-4da5-53c7-92cf-6009ad9ecfda")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 121.92 218.44 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "f3a2674d-e2aa-5ff2-984c-9672124c011d")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 121.92 218.44 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_C_Polarized")
+    (at 165.1 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "558dc47f-7f01-4be3-b637-05d235d7ea7e")
+    (property "Reference" "C44"
+      (at 168.91 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "220uF"
+      (at 168.91 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Port 1 VBUS bypass"
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "cb91fc72-9f8f-5170-83cb-43ba5ee71586")
+    )
+    (pin "2"
+      (uuid "415ba76b-58f9-5f6c-aec9-74b256d3965f")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "C44")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 165.1 205.74)
+      (xy 165.1 200.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "fd251a2a-4d39-5c64-89d9-ae50e39e9b53")
+  )
+  (global_label "PORT1_VBUS"
+    (shape bidirectional)
+    (at 165.1 200.66 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "fd963831-d7dc-5c5f-81c3-5b1a0871d203")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 165.1 200.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 165.1 213.36)
+      (xy 165.1 218.44)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "3e4299d1-85c7-554b-b3ed-b58e4e28275e")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 165.1 218.44 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "b882116b-dc5d-594b-8e6c-efe7d7cc2bac")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 165.1 218.44 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_C")
+    (at 208.28 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fbc38d52-9888-4145-9b36-41f601f82c22")
+    (property "Reference" "C45"
+      (at 212.09 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100nF"
+      (at 212.09 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Port 1 VBUS bypass"
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "8a1de4c0-018e-511a-b67a-c497946091ae")
+    )
+    (pin "2"
+      (uuid "e254ffa6-5e42-5a63-abc2-3d29db181757")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "C45")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 208.28 205.74)
+      (xy 208.28 200.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b1f01a9d-443e-5c90-b5fb-5bd74903ee84")
+  )
+  (global_label "PORT1_VBUS"
+    (shape bidirectional)
+    (at 208.28 200.66 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "aca46c5b-3fb4-59ba-8495-56e7cdb6fa00")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 208.28 200.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 208.28 213.36)
+      (xy 208.28 218.44)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "111e4aa9-4030-5351-9a0b-d2545c9afd19")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 208.28 218.44 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "33c9cb92-43db-592a-a2c6-0c3c0e1070a1")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 208.28 218.44 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 251.46 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "63f5d38a-18d2-511a-9f56-16f2daf40720")
+    (property "Reference" "R101"
+      (at 255.27 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100kR"
+      (at 255.27 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Switch default off during reset"
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "4567a6bd-bf69-507e-abdf-c566a25f016f")
+    )
+    (pin "2"
+      (uuid "5dc3a359-50cf-53c4-a5f1-9bc9a79f0f89")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "R101")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 251.46 207.01000000000002)
+      (xy 251.46 201.93)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "68eaffd6-b325-5a42-a13a-639a54c81cf6")
+  )
+  (global_label "PRTPWR1"
+    (shape bidirectional)
+    (at 251.46 201.93 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "5d4e357c-e068-5b1e-8fd2-bff58c85c8f2")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 251.46 201.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 251.46 212.09)
+      (xy 251.46 217.17)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "7dac2e59-0bbc-5ee8-821e-4ba0c93397f2")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 251.46 217.17 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "66fe8535-53a5-5b7c-a9d5-46d04ea4e7ee")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 251.46 217.17 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 294.64 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c0cfd703-d8d0-4de6-8054-84c4b0e6eb3f")
+    (property "Reference" "R39"
+      (at 298.45 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "46.4kR"
+      (at 298.45 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Guarantee >=500mA; see tolerance report"
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "eb1c17f7-97fc-5618-ab9d-195b710a770a")
+    )
+    (pin "2"
+      (uuid "93e33eed-3ff8-5454-8c1d-8e8067ef1c45")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "R39")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 294.64 207.01000000000002)
+      (xy 294.64 201.93)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f5bf4281-ada6-5463-8112-512670da9011")
+  )
+  (global_label "PORT2_ILIM"
+    (shape bidirectional)
+    (at 294.64 201.93 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "5458982e-e7ae-5a03-9093-b6a128c261d9")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 294.64 201.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 294.64 212.09)
+      (xy 294.64 217.17)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "8d932850-ba01-56e0-98ad-e140771d5f17")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 294.64 217.17 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "e9b364af-353a-5928-9122-7367d09d5dcc")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 294.64 217.17 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 337.82 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f7a84072-4b24-42e4-9954-fc4d339a7d56")
+    (property "Reference" "R48"
+      (at 341.63 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100kR"
+      (at 341.63 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" ""
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "f70a313e-498d-5b63-8997-39116941117f")
+    )
+    (pin "2"
+      (uuid "60de5393-ebde-5523-a56a-4998190ecdcc")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "R48")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 337.82 207.01000000000002)
+      (xy 337.82 201.93)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d334c83a-3134-55ae-abfe-accefcccc2f3")
+  )
+  (global_label "ISO_3V3"
+    (shape bidirectional)
+    (at 337.82 201.93 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "18fed8bd-6efb-5034-bf11-cda4149034fd")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 337.82 201.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 337.82 212.09)
+      (xy 337.82 217.17)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d077e549-a368-5413-9044-27e51da6972d")
+  )
+  (global_label "OCS2_N"
+    (shape bidirectional)
+    (at 337.82 217.17 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "21cd1718-bcbc-5618-b5bc-af116c4f8cc0")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 337.82 217.17 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_C")
+    (at 381.0 209.55 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "65dc6217-384e-4566-82b1-625b813ae184")
+    (property "Reference" "C46"
+      (at 384.81 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100nF"
+      (at 384.81 210.82000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Port 2 VBUS bypass"
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "421c882b-c8eb-56d4-b796-7bb649cb3e19")
+    )
+    (pin "2"
+      (uuid "89303d3a-207d-52e3-a588-b3807170730a")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "C46")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 381.0 205.74)
+      (xy 381.0 200.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d9872852-dbb1-5ef9-bee9-3ad3deb80fbd")
+  )
+  (global_label "PORT_SUPPLY"
+    (shape bidirectional)
+    (at 381.0 200.66 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "561a4a95-ed9e-5d32-ba34-87d60b19a694")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 381.0 200.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 381.0 213.36)
+      (xy 381.0 218.44)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b89ed15a-bf36-5119-b2dc-702850afb003")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 381.0 218.44 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "81df28ed-c1c2-55b3-a32a-5f58c951e2df")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 381.0 218.44 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_C_Polarized")
+    (at 35.56 234.95 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8d26d394-a331-4b0f-85ae-8ae1b49a6872")
+    (property "Reference" "C47"
+      (at 39.370000000000005 233.67999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "220uF"
+      (at 39.370000000000005 236.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Port 2 VBUS bypass"
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "011fd1e4-6e05-51e3-8358-a92d5e4e211e")
+    )
+    (pin "2"
+      (uuid "006a87bf-cfc9-576b-ae98-5b87bad8aac2")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "C47")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 35.56 231.14)
+      (xy 35.56 226.06)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "ef10741e-6b9d-53b7-afdc-baa72902c590")
+  )
+  (global_label "PORT2_VBUS"
+    (shape bidirectional)
+    (at 35.56 226.06 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "cc9f664a-cb39-57d5-ad13-9c1f1afe86cc")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 35.56 226.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 35.56 238.76)
+      (xy 35.56 243.84)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "375fb4af-7a17-5cd8-bcc3-082efbf05bb0")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 35.56 243.84 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "192a9205-99fd-5c4f-b24b-35bb03971ea4")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 35.56 243.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_C")
+    (at 78.74 234.95 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "3846d971-500c-4973-a2b0-a42add657471")
+    (property "Reference" "C48"
+      (at 82.55 233.67999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100nF"
+      (at 82.55 236.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Port 2 VBUS bypass"
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "e2e86922-7980-5f4a-9479-af72843b1c78")
+    )
+    (pin "2"
+      (uuid "e4d22847-28cd-541c-96e7-6c56fa294973")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "C48")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 78.74 231.14)
+      (xy 78.74 226.06)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d4681d79-4b6a-5783-9bfd-9af44df52cbd")
+  )
+  (global_label "PORT2_VBUS"
+    (shape bidirectional)
+    (at 78.74 226.06 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "f92d1a13-dff1-587a-9a9b-65b91dbfee01")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 78.74 226.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 78.74 238.76)
+      (xy 78.74 243.84)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "befadf56-424f-52f8-956d-5ce10bd7e22d")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 78.74 243.84 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "96a047c8-a5f0-557b-8ff0-d94c38003cf9")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 78.74 243.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 121.92 234.95 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "1586ca52-8e01-5f43-a72d-514a2a3dd148")
+    (property "Reference" "R102"
+      (at 125.73 233.67999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100kR"
+      (at 125.73 236.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" ""
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Switch default off during reset"
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" ""
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" ""
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "918619f8-a2a3-52bb-aeea-8d2d3ef95638")
+    )
+    (pin "2"
+      (uuid "05d981c5-fc34-5e6f-a8b8-28b0c6e6ddce")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "R102")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 121.92 232.41)
+      (xy 121.92 227.33)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "c68a3a8e-fce9-5193-8fd3-304eea7d7020")
+  )
+  (global_label "PRTPWR2"
+    (shape bidirectional)
+    (at 121.92 227.33 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "0134bf33-8803-52ea-8286-2a66543f2873")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 121.92 227.33 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 121.92 237.48999999999998)
+      (xy 121.92 242.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "dda40892-edf5-53b4-9abe-a39eb0da1244")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 121.92 242.57 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "090043be-b37a-54c7-bd54-1785e3a8d879")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 121.92 242.57 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_D_Zener")
+    (at 165.1 234.95 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b9bee6bc-ec0b-49b7-a9bb-846a4af09f06")
+    (property "Reference" "D8"
+      (at 168.91 233.67999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "T6V0S5A-7"
+      (at 168.91 236.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "Diode_SMD:D_SOD-523"
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Unidirectional TVS: physical cathode/band pad 1 to VBUS, anode pad 2 to ground"
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "T6V0S5A-7"
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Diodes Incorporated"
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "bf8af5b6-acec-58e6-9f8c-1c0d334fe869")
+    )
+    (pin "2"
+      (uuid "c1a75ee3-2d97-5a83-bd59-999e01717255")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "D8")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 161.29 234.95)
+      (xy 156.21 234.95)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "907ced9a-c022-55ca-a047-efc99f6004a0")
+  )
+  (global_label "PORT1_VBUS"
+    (shape bidirectional)
+    (at 156.21 234.95 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "e3f7ee07-f052-5b43-a7d5-86f0557c1b4d")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 156.21 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 168.91 234.95)
+      (xy 173.99 234.95)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "3349dfc6-a5bb-5ce5-9a24-c1acdeac4014")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 173.99 234.95 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "0d73600e-62ae-5e27-9321-384f8a69a511")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 173.99 234.95 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_D_Zener")
+    (at 208.28 234.95 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "09ed91c4-6d32-4d8b-bdc8-616bf26f80af")
+    (property "Reference" "D9"
+      (at 212.09 233.67999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "T6V0S5A-7"
+      (at 212.09 236.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "Diode_SMD:D_SOD-523"
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" ""
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Unidirectional TVS: physical cathode/band pad 1 to VBUS, anode pad 2 to ground"
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "T6V0S5A-7"
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Diodes Incorporated"
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" ""
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "5a315cbe-2202-5478-b611-79a632979a17")
+    )
+    (pin "2"
+      (uuid "35d5be2a-4278-5061-bf08-6925b525cf79")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "D9")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 204.47 234.95)
+      (xy 199.39 234.95)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "abedc0b5-00d6-5461-b51f-46b91e5dea64")
+  )
+  (global_label "PORT2_VBUS"
+    (shape bidirectional)
+    (at 199.39 234.95 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "aac3f1bb-5780-5626-9ee0-51a621dcec5a")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 199.39 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 212.09 234.95)
+      (xy 217.17 234.95)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f8567a7d-d47d-5170-ba88-5213d085d578")
+  )
+  (global_label "GND2"
+    (shape bidirectional)
+    (at 217.17 234.95 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "b7d389b4-ab78-5e7a-9ca2-15cc687a3a94")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 217.17 234.95 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (embedded_fonts no)
+)

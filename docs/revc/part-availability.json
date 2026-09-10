@@ -1,0 +1,3057 @@
+{
+  "date": "2026-09-10",
+  "note": "Indexed PCBParts inventory, not a live quote. Exact manufacturer must match; similarly named substitutes are not approved.",
+  "queries": [
+    {
+      "mpn": "24LC02B-I/SN",
+      "result": {
+        "mpn": "24LC02B-I/SN",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C1348870",
+            "model": "24LC02B-I/SN",
+            "manufacturer": "Microchip Tech",
+            "package": "SOIC-8",
+            "stock": 91,
+            "price": 0.3643,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Memory",
+            "subcategory": "EEPROM",
+            "subcategory_id": 3019,
+            "mounting_type": "smd",
+            "description": "-40℃~+85℃ 1,000,000 cycles 2.5V~5.5V 200 Years 2Kbit 400kHz 5ms Hardware write protection function、Noise suppression function I2C SOIC-8 EEPROM ROHS",
+            "specs": {
+              "Data Retention - TDR (Year)": "200 Years",
+              "Clock Frequency": "400kHz",
+              "Operating Temperature": "-40℃~+85℃",
+              "Write Cycle Endurance": "1,000,000 cycles",
+              "Access Time": "-",
+              "Standby Current": "1uA",
+              "Memory Size": "2Kbit",
+              "Voltage - Supply": "2.5V~5.5V",
+              "Features": "Hardware write protection function、Noise suppression function",
+              "Write Cycle Time(Tw)": "5ms",
+              "Operating Current": "3mA",
+              "Interface": "I2C"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "2N7002,215",
+      "result": {
+        "mpn": "2N7002,215",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C65189",
+            "model": "2N7002,215",
+            "manufacturer": "Nexperia",
+            "package": "SOT-23",
+            "stock": 430154,
+            "price": 0.0189,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Transistors/Thyristors",
+            "subcategory": "MOSFETs",
+            "subcategory_id": 2954,
+            "mounting_type": "smd",
+            "description": "-65℃~+150℃ 1 N-channel 2.5V 300mA 50pF 5Ω@10V 60V 830mW SOT-23 MOSFETs ROHS",
+            "specs": {
+              "Operating Temperature": "-65℃~+150℃",
+              "Vgs": "±30V",
+              "Configuration": "-",
+              "Gate Charge(Qg)": "-",
+              "Reverse Transfer Capacitance (Crss@Vds)": "3.5pF",
+              "Current - Continuous Drain(Id)": "300mA",
+              "Drain to Source Voltage": "60V",
+              "Output Capacitance(Coss)": "6.8pF",
+              "RDS(on)": "5Ω@10V",
+              "Type": "N-Channel",
+              "Input Capacitance(Ciss)": "50pF",
+              "Number": "1 N-channel",
+              "Gate Threshold Voltage (Vgs(th))": "2.5V",
+              "Pd - Power Dissipation": "830mW"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "614004134726",
+      "result": {
+        "error": "No JLCPCB parts found for MPN '614004134726'",
+        "mpn": "614004134726",
+        "results": []
+      }
+    },
+    {
+      "mpn": "750313638",
+      "result": {
+        "error": "No JLCPCB parts found for MPN '750313638'",
+        "mpn": "750313638",
+        "results": []
+      }
+    },
+    {
+      "mpn": "ABM8G-24.000MHZ-18-D2Y-T",
+      "result": {
+        "mpn": "ABM8G-24.000MHZ-18-D2Y-T",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C596911",
+            "model": "ABM8G-24.000MHZ-18-D2Y-T",
+            "manufacturer": "Abracon LLC",
+            "package": "SMD3225-4P",
+            "stock": 2810,
+            "price": 0.3749,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Crystals, Oscillators, Resonators",
+            "subcategory": "Crystals",
+            "subcategory_id": 3043,
+            "mounting_type": "smd",
+            "description": "-40℃~+85℃ 18pF 24MHz 60Ω ±20ppm ±30ppm SMD3225-4P Crystals ROHS",
+            "specs": {
+              "Load Capacitance": "18pF",
+              "Operating Temperature": "-40℃~+85℃",
+              "Normal temperature Frequency Tolerance": "±20ppm",
+              "Equivalent Series Resistance(ESR)": "60Ω",
+              "Frequency Stability": "±30ppm",
+              "Frequency": "24MHz"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "BAT54C,215",
+      "result": {
+        "mpn": "BAT54C,215",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C37704",
+            "model": "BAT54C,215",
+            "manufacturer": "Nexperia",
+            "package": "SOT-23",
+            "stock": 26099,
+            "price": 0.0182,
+            "price_10": null,
+            "library_type": "preferred",
+            "preferred": true,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "1 Pair Common Cathode 200mA 2uA@25V 30V 600mA 800mV@100mA SOT-23 Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "800mV@100mA",
+              "Non-Repetitive Peak Forward Surge Current": "600mA",
+              "Voltage - DC Reverse(Vr)": "30V",
+              "Diode Configuration": "1 Pair Common Cathode",
+              "Current - Rectified": "200mA",
+              "Reverse Leakage Current (Ir)": "2uA@25V"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "BAT54WS-7-F",
+      "result": {
+        "mpn": "BAT54WS-7-F",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C124205",
+            "model": "BAT54WS-7-F",
+            "manufacturer": "Diodes Incorporated",
+            "package": "SOD-323",
+            "stock": 103695,
+            "price": 0.0626,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "1 Independent 100mA 1V@100mA 2uA@25V 30V 600mA SOD-323 Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "1V@100mA",
+              "Non-Repetitive Peak Forward Surge Current": "600mA",
+              "Voltage - DC Reverse(Vr)": "30V",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "100mA",
+              "Reverse Leakage Current (Ir)": "2uA@25V"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "BMI-S-201-F",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'BMI-S-201-F'",
+        "mpn": "BMI-S-201-F",
+        "results": []
+      }
+    },
+    {
+      "mpn": "BMI-S-209-F",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'BMI-S-209-F'",
+        "mpn": "BMI-S-209-F",
+        "results": []
+      }
+    },
+    {
+      "mpn": "INA300AIDGSR",
+      "result": {
+        "mpn": "INA300AIDGSR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C529558",
+            "model": "INA300AIDGSR",
+            "manufacturer": "Texas Instruments",
+            "package": "VSSOP-10-0.5mm",
+            "stock": 998,
+            "price": 1.0593,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Amplifiers/Comparators",
+            "subcategory": "Comparators",
+            "subcategory_id": 3030,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃ 0.1uA 0.5uV/℃ 1 10us 115uA 120dB 2.7V~5.5V 2mV 5uA 75uV Built-in hysteresis、Latch function、Programmable response time、Enable/shutdown function Open-drain VSSOP-10-0.5mm Comparators ROHS",
+            "specs": {
+              "Common Mode Rejection Ratio(CMRR)": "120dB",
+              "Operating Temperature": "-40℃~+125℃",
+              "Number of Channels": "1",
+              "Vos - Input Offset Voltage": "75uV",
+              "Output Type": "Open-drain",
+              "Input Offset Current(Ios)": "0.1uA",
+              "Input Offset Voltage Drift(Vos TC)": "0.5uV/℃",
+              "Quiescent Current": "115uA",
+              "Features": "Built-in hysteresis、Latch function、Programmable response time、Enable/shutdown function",
+              "Single Supply": "2.7V~5.5V",
+              "Input Hysteresis Voltage (Vhys)": "2mV",
+              "Ib - Input Bias Current": "5uA",
+              "Propagation Delay Time": "10us"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "ISOUSB211DPR",
+      "result": {
+        "mpn": "ISOUSB211DPR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C5772877",
+            "model": "ISOUSB211DPR",
+            "manufacturer": "Texas Instruments",
+            "package": "BSSOP-28-300mil",
+            "stock": 2369,
+            "price": 10.7925,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Signal Isolation Devices",
+            "subcategory": "Isolated USB ICs",
+            "subcategory_id": 2075,
+            "mounting_type": "smd",
+            "description": "USB rate adaptive、Low-Power Consumption、Isolation status monitoring BSSOP-28-300mil Isolated USB ICs ROHS",
+            "specs": {
+              "Features": "USB rate adaptation、Low-Power Consumption、Isolation status monitoring"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "LTST-C190KGKT",
+      "result": {
+        "mpn": "LTST-C190KGKT",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C125094",
+            "model": "LTST-C190KGKT",
+            "manufacturer": "Lite-On",
+            "package": "0603",
+            "stock": 241616,
+            "price": 0.0187,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Optoelectronics",
+            "subcategory": "LED Indication - Discrete",
+            "subcategory_id": 71,
+            "mounting_type": "smd",
+            "description": "-30℃~+85℃ 130° 20mA 2V 35mcd 567.5nm~576.5nm 574nm 75mW Discrete Diode Water Clear Yellow Green 0603 LED Indication - Discrete ROHS",
+            "specs": {
+              "Mounting Style": "-",
+              "Wavelength - Dominant": "567.5nm~576.5nm",
+              "Operating Temperature": "-30℃~+85℃",
+              "Color Temperature": "-",
+              "Test Current": "20mA",
+              "Viewing Angle": "130°",
+              "Lamp Holder Type": "-",
+              "Luminous Intensity": "35mcd",
+              "Power(Watts)": "75mW",
+              "Diode Configuration": "Discrete Diode",
+              "Illumination Color": "Yellow Green",
+              "Lens Color": "Water Clear",
+              "Peak Wavelength": "574nm",
+              "Voltage - Forward(Vf)": "2V"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "Q07F3Z102MA5B0S0N0",
+      "result": {
+        "mpn": "Q07F3Z102MA5B0S0N0",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C2914611",
+            "model": "Q07F3Z102MA5B0S0N0",
+            "manufacturer": "STE(Songtian Elec)",
+            "package": "Plugin,P=14mm",
+            "stock": 1729,
+            "price": 0.0485,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Safety Capacitors",
+            "subcategory_id": 2998,
+            "mounting_type": "through_hole",
+            "description": "-40℃~+125℃ 1nF 400V CQC、CUL、KTL Y1 ±20% 插件,P=14mm Safety Capacitors ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+125℃",
+              "Voltage(AC)": "400V",
+              "Tolerance": "±20%",
+              "Capacitance": "1nF",
+              "safety certification": "CQC、CUL、KTL",
+              "Ratings": "Y1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "SN6505BDBVR",
+      "result": {
+        "mpn": "SN6505BDBVR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C74518",
+            "model": "SN6505BDBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-6",
+            "stock": 5876,
+            "price": 0.6125,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Transformer Drivers",
+            "subcategory_id": 2108,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1.56mA 160mΩ 16V 1A 2.25V~5.5V SOT-23-6 Transformer Drivers ROHS",
+            "specs": {
+              "Operating Temperature": "-55℃~+125℃",
+              "Voltage - Supply": "2.25V~5.5V",
+              "Current - Continuous Drain(Id)": "1A",
+              "Quiescent Current": "1.56mA",
+              "Features": "Soft-start、Overcurrent Protection、Over temperature protection、Under-voltage lockout",
+              "Drain to Source Voltage": "16V",
+              "RDS(on)": "160mΩ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "SN74LVC1G02DBVR",
+      "result": {
+        "mpn": "SN74LVC1G02DBVR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C16360",
+            "model": "SN74LVC1G02DBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-5",
+            "stock": 223,
+            "price": 0.3061,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Logic",
+            "subcategory": "Logic Gates",
+            "subcategory_id": 2168,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃ 1 1.2V、1.9V、2.4V、3.8V 1.65V~5.5V 1.7V~2V 10uA 2 300mV、400mV、450mV、550mV 32mA 32mA 4.5ns@5V,50pF 700mV~800mV 74LVC Series NOR Gate Overvoltage-tolerant input、Rear drive protection、Local shutdown mode、Live insertion protection SOT-23-5 Logic Gates ROHS",
+            "specs": {
+              "Output Logic Level - Low": "300mV、400mV、450mV、550mV",
+              "Operating Temperature": "-40℃~+125℃",
+              "Propagation Delay": "4.5ns@5V,50pF",
+              "Output Logic Level - High": "1.2V、1.9V、2.4V、3.8V",
+              "Logic Type": "NOR Gate",
+              "Current - Output High(IOH)": "32mA",
+              "Input Logic Level - Low": "700mV~800mV",
+              "Series": "74LVC Series",
+              "Input Logic Level - High": "1.7V~2V",
+              "Voltage - Supply": "1.65V~5.5V",
+              "Number of Gates": "1",
+              "Quiescent Current": "10uA",
+              "Features": "Overvoltage-tolerant input、Rear drive protection、Local shutdown mode、Live insertion protection",
+              "Inputs per Gates": "2",
+              "Current - Output Low(IOL)": "32mA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "SN74LVC1G04DBVR",
+      "result": {
+        "mpn": "SN74LVC1G04DBVR",
+        "total": 3,
+        "results": [
+          {
+            "lcsc": "C7827",
+            "model": "SN74LVC1G04DBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-5",
+            "stock": 156253,
+            "price": 0.0857,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Logic",
+            "subcategory": "Inverters",
+            "subcategory_id": 2567,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃ 1 1 1.65V~5.5V 1.7V~2V 10uA 2.4V 3.7ns@5V,50pF 32mA 32mA 400mV 700mV~800mV 74LVC 电源关断保护 SOT-23-5 Inverters ROHS",
+            "specs": {
+              "Output Logic Level - Low": "400mV",
+              "Operating Temperature": "-40℃~+125℃",
+              "Input Type": "-",
+              "Propagation Delay": "3.7ns@5V,50pF",
+              "Output Logic Level - High": "2.4V",
+              "Current - Output High(IOH)": "32mA",
+              "Quiescent Current(Iq)": "10uA",
+              "Series": "74LVC",
+              "Input Logic Level - High": "1.7V~2V",
+              "Voltage - Supply": "1.65V~5.5V",
+              "Input Logic Level -Low": "700mV~800mV",
+              "Features": "Power shutdown protection",
+              "Number of Circuits": "1",
+              "Current - Output Low(IOL)": "32mA"
+            }
+          },
+          {
+            "lcsc": "C5250996",
+            "model": "SN74LVC1G04DBVR",
+            "manufacturer": "TWGMC",
+            "package": "SOT-23-5",
+            "stock": 6398,
+            "price": 0.0546,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Logic",
+            "subcategory": "Inverters",
+            "subcategory_id": 2567,
+            "mounting_type": "smd",
+            "description": "-40℃~+85℃ 1 1 1.47V、1.64V、2.15V、2.73V、4V 1.65V~5.5V 10mV、110mV、200mV、350mV 10uA 3.1ns@5V,15pF 32mA 32mA 74LVC 电源关断保护 SOT-23-5 Inverters ROHS",
+            "specs": {
+              "Output Logic Level - Low": "10mV、110mV、200mV、350mV",
+              "Operating Temperature": "-40℃~+85℃",
+              "Propagation Delay": "3.1ns@5V,15pF",
+              "Input Type": "-",
+              "Output Logic Level - High": "1.47V、1.64V、2.15V、2.73V、4V",
+              "Current - Output High(IOH)": "32mA",
+              "Quiescent Current(Iq)": "10uA",
+              "Series": "74LVC",
+              "Voltage - Supply": "1.65V~5.5V",
+              "Input Logic Level - High": "-",
+              "Input Logic Level -Low": "-",
+              "Features": "Power shutdown protection",
+              "Number of Circuits": "1",
+              "Current - Output Low(IOL)": "32mA"
+            }
+          },
+          {
+            "lcsc": "C19829658",
+            "model": "SN74LVC1G04DBVR",
+            "manufacturer": "TECH PUBLIC",
+            "package": "SOT-23-5",
+            "stock": 5012,
+            "price": 0.0478,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Logic",
+            "subcategory": "Inverters",
+            "subcategory_id": 2567,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃ 1 1 1.2V、1.9V、2.2V、2.3V、3.8V 1.65V~5.5V 100mV、300mV、400mV、450mV、550mV 10uA 24mA 24mA 74LVC 7ns@5V,50pF SOT-23-5 Inverters ROHS",
+            "specs": {
+              "Output Logic Level - Low": "100mV、300mV、400mV、450mV、550mV",
+              "Operating Temperature": "-40℃~+125℃",
+              "Propagation Delay": "7ns@5V,50pF",
+              "Input Type": "-",
+              "Output Logic Level - High": "1.2V、1.9V、2.2V、2.3V、3.8V",
+              "Current - Output High(IOH)": "24mA",
+              "Quiescent Current(Iq)": "10uA",
+              "Series": "74LVC",
+              "Voltage - Supply": "1.65V~5.5V",
+              "Input Logic Level - High": "-",
+              "Input Logic Level -Low": "-",
+              "Features": "Power shutdown protection、Power-off protection function",
+              "Number of Circuits": "1",
+              "Current - Output Low(IOL)": "24mA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "SN74LVC1G08DBVR",
+      "result": {
+        "mpn": "SN74LVC1G08DBVR",
+        "total": 3,
+        "results": [
+          {
+            "lcsc": "C7666",
+            "model": "SN74LVC1G08DBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-5",
+            "stock": 52164,
+            "price": 0.0512,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Logic",
+            "subcategory": "Logic Gates",
+            "subcategory_id": 2168,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃ 1 1.2V、1.9V、2.3V、3.8V 1.65V~5.5V 1.7V、2V 10uA 2 300mV、450mV、550mV 32mA 32mA 4ns@5V,50pF 700mV、800mV 74LVC Series AND Gate Overvoltage-tolerant input、Rear drive protection、Level shifting、Local shutdown mode、Live insertion protection SOT-23-5 Logic Gates ROHS",
+            "specs": {
+              "Output Logic Level - Low": "300mV、450mV、550mV",
+              "Operating Temperature": "-40℃~+125℃",
+              "Propagation Delay": "4ns@5V,50pF",
+              "Output Logic Level - High": "1.2V、1.9V、2.3V、3.8V",
+              "Logic Type": "AND Gate",
+              "Current - Output High(IOH)": "32mA",
+              "Input Logic Level - Low": "700mV、800mV",
+              "Series": "74LVC Series",
+              "Input Logic Level - High": "1.7V、2V",
+              "Voltage - Supply": "1.65V~5.5V",
+              "Number of Gates": "1",
+              "Quiescent Current": "10uA",
+              "Features": "Overvoltage-tolerant input、Rear drive protection、Local shutdown mode、Live insertion protection",
+              "Inputs per Gates": "2",
+              "Current - Output Low(IOL)": "32mA"
+            }
+          },
+          {
+            "lcsc": "C19829660",
+            "model": "SN74LVC1G08DBVR",
+            "manufacturer": "TECH PUBLIC",
+            "package": "SOT-23-5",
+            "stock": 6004,
+            "price": 0.041,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Logic",
+            "subcategory": "Logic Gates",
+            "subcategory_id": 2168,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃ 1.65V~5.5V 10uA 2 2 24mA 24mA 74LVC AND Gate SOT-23-5 Logic Gates ROHS",
+            "specs": {
+              "Output Logic Level - Low": "-",
+              "Operating Temperature": "-40℃~+125℃",
+              "Propagation Delay": "11ns@1.8V,30pF",
+              "Output Logic Level - High": "-",
+              "Logic Type": "AND Gate",
+              "Current - Output High(IOH)": "24mA",
+              "Input Logic Level - Low": "-",
+              "Series": "74LVC",
+              "Input Logic Level - High": "-",
+              "Voltage - Supply": "1.65V~5.5V",
+              "Number of Gates": "2",
+              "Quiescent Current": "10uA",
+              "Features": "Local shutdown mode",
+              "Inputs per Gates": "2",
+              "Current - Output Low(IOL)": "24mA"
+            }
+          },
+          {
+            "lcsc": "C5250997",
+            "model": "SN74LVC1G08DBVR",
+            "manufacturer": "TWGMC",
+            "package": "SOT-23-5",
+            "stock": 3988,
+            "price": 0.0657,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Logic",
+            "subcategory": "Logic Gates",
+            "subcategory_id": 2168,
+            "mounting_type": "smd",
+            "description": "-40℃~+85℃ 1 1.65V~5.5V 1.7V、2V 100nA 2 3.4ns@5V,15pF 32mA 32mA 350mV 4V 700mV、800mV 74LVC AND Gate Local shutdown mode SOT-23-5 Logic Gates ROHS",
+            "specs": {
+              "Output Logic Level - Low": "350mV",
+              "Operating Temperature": "-40℃~+85℃",
+              "Propagation Delay": "3.4ns@5V,15pF",
+              "Output Logic Level - High": "4V",
+              "Logic Type": "AND Gate",
+              "Current - Output High(IOH)": "32mA",
+              "Input Logic Level - Low": "700mV、800mV",
+              "Series": "74LVC",
+              "Input Logic Level - High": "1.7V、2V",
+              "Voltage - Supply": "1.65V~5.5V",
+              "Number of Gates": "1",
+              "Quiescent Current": "100nA",
+              "Features": "Local shutdown mode",
+              "Inputs per Gates": "2",
+              "Current - Output Low(IOL)": "32mA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "SS34",
+      "result": {
+        "mpn": "SS34",
+        "total": 58,
+        "results": [
+          {
+            "lcsc": "C8678",
+            "model": "SS34",
+            "manufacturer": "MDD(Microdiode Semiconductor)",
+            "package": "SMA(DO-214AC)",
+            "stock": 5142476,
+            "price": 0.0348,
+            "price_10": null,
+            "library_type": "basic",
+            "preferred": true,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 3A 40V 500uA@40V 550mV@3A Independent SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C7420365",
+            "model": "SS34",
+            "manufacturer": "hongjiacheng",
+            "package": "SMA(DO-214AC)",
+            "stock": 1818226,
+            "price": 0.0353,
+            "price_10": null,
+            "library_type": "preferred",
+            "preferred": true,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "200uA@40V 3A 40V 550mV@3A Independent SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "200uA@40V"
+            }
+          },
+          {
+            "lcsc": "C727060",
+            "model": "SS34",
+            "manufacturer": "TWGMC",
+            "package": "SMA(DO-214AC)",
+            "stock": 643859,
+            "price": 0.0288,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 3A 40V 500uA 550mV@3A Independent SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA"
+            }
+          },
+          {
+            "lcsc": "C2837271",
+            "model": "SS34",
+            "manufacturer": "JSMSEMI",
+            "package": "SMA(DO-214AC)",
+            "stock": 567942,
+            "price": 0.0272,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-50℃~+125℃ 1 Independent 100A 3A 40V 550mV@3A SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-50℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "-"
+            }
+          },
+          {
+            "lcsc": "C908680",
+            "model": "SS34",
+            "manufacturer": "GOODWORK",
+            "package": "SMA(DO-214AC)",
+            "stock": 507471,
+            "price": 0.04,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-65℃~+150℃ 3A 40V 50uA 550mV@3A 80A Independent SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-65℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "100uA"
+            }
+          },
+          {
+            "lcsc": "C408258",
+            "model": "SS34",
+            "manufacturer": "Slkor(SLKORMICRO Elec.)",
+            "package": "SMA(DO-214AC)",
+            "stock": 115544,
+            "price": 0.0399,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 100A 3A 40V 500mV@3A 500uA@40V SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C5155170",
+            "model": "SS34",
+            "manufacturer": "SUNMATE Elec",
+            "package": "SMA(DO-214AC)",
+            "stock": 96051,
+            "price": 0.0277,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-65℃~+150℃ 1 Independent 100A 3A 40V 500uA 550mV SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-65℃~+150℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA"
+            }
+          },
+          {
+            "lcsc": "C51898225",
+            "model": "SS34",
+            "manufacturer": "Zhengxin",
+            "package": "SMB(DO-214AA)",
+            "stock": 91608,
+            "price": 0.0254,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 1 Independent 3A 40V 550mV@3A 550uA 80A SMB(DO-214AA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "550uA"
+            }
+          },
+          {
+            "lcsc": "C266553",
+            "model": "SS34",
+            "manufacturer": "BORN",
+            "package": "SMA(DO-214AC)",
+            "stock": 71772,
+            "price": 0.0632,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40A 40V 500mV@3A SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "40A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A"
+            }
+          },
+          {
+            "lcsc": "C115205",
+            "model": "SS34",
+            "manufacturer": "Shandong Jingdao Microelectronics",
+            "package": "SMA(DO-214AC)",
+            "stock": 60280,
+            "price": 0.0382,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 550mV@3A 80A SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A"
+            }
+          },
+          {
+            "lcsc": "C83961",
+            "model": "SS34",
+            "manufacturer": "Changzhou Starsea Elec",
+            "package": "SMA(DO-214AC)",
+            "stock": 58371,
+            "price": 0.0444,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-65℃~+125℃ 1 Independent 100A 3A 40V 500uA@40V 550mV@3A SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-65℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C266556",
+            "model": "SS34",
+            "manufacturer": "BORN",
+            "package": "SMB(DO-214AA)",
+            "stock": 55981,
+            "price": 0.0551,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 100A 3A 40V 500mV@3A 500uA@40V SMB(DO-214AA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C432300",
+            "model": "SS34",
+            "manufacturer": "LGE",
+            "package": "DO-214AC(SMA)",
+            "stock": 49507,
+            "price": 0.0871,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 500mV@3A 500uA@40V 70A Independent DO-214AC(SMA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C2923966",
+            "model": "SS34",
+            "manufacturer": "Jiangsu Changjing Electronics Technology Co., Ltd.",
+            "package": "SMAG",
+            "stock": 37512,
+            "price": 0.0634,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 3A 40V 500uA@40V 550mV@3A 70A Independent SMAG Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C2891718",
+            "model": "SS34",
+            "manufacturer": "KUU",
+            "package": "SMA(DO-214AC)",
+            "stock": 35797,
+            "price": 0.0325,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "3A 40V 500uA@40V 550mV@3A Independent SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C5204952",
+            "model": "SS34",
+            "manufacturer": "TWGMC",
+            "package": "SMC",
+            "stock": 34437,
+            "price": 0.0631,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "3A 40V 500uA 550mV@3A Independent SMC Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA"
+            }
+          },
+          {
+            "lcsc": "C22448055",
+            "model": "SS34",
+            "manufacturer": "XUMAO",
+            "package": "SMA",
+            "stock": 31424,
+            "price": 0.0304,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 1 Independent 100uA@40V 3A 40V 550mV@3A SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "100uA@40V"
+            }
+          },
+          {
+            "lcsc": "C51898099",
+            "model": "SS34",
+            "manufacturer": "Zhengxin",
+            "package": "SMA",
+            "stock": 31151,
+            "price": 0.021,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 550mV@3A 550uA 80A SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "550uA"
+            }
+          },
+          {
+            "lcsc": "C2959729",
+            "model": "SS34",
+            "manufacturer": "DOWO",
+            "package": "SMB",
+            "stock": 30691,
+            "price": 0.0272,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 500uA@40V 550mV@3A 70A Independent SMB Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C2909963",
+            "model": "SS34",
+            "manufacturer": "YONGYUTAI",
+            "package": "SMA",
+            "stock": 27857,
+            "price": 0.0343,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "3A 40V 500uA@40V 550mV@3A Independent SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C47018524",
+            "model": "SS34",
+            "manufacturer": "baocheng(Shandong Baocheng Elec)",
+            "package": "SMA",
+            "stock": 22837,
+            "price": 0.0293,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 3A 40V 80A Standalone SMA Schottky Diodes ROHS",
+            "specs": {
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A"
+            }
+          },
+          {
+            "lcsc": "C52023881",
+            "model": "SS34",
+            "manufacturer": "HANGYU MICROELECTRONICS",
+            "package": "SMA",
+            "stock": 21474,
+            "price": 0.0225,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 500uA@40V 550mV@3A 80A SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C154551",
+            "model": "SS34",
+            "manufacturer": "onsemi",
+            "package": "SMC(DO-214AB)",
+            "stock": 20058,
+            "price": 0.4549,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 1 Independent 100A 3A 40V 500mV@3A 500uA@40V SMC(DO-214AB) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C3032484",
+            "model": "SS34",
+            "manufacturer": "TDD",
+            "package": "SMA",
+            "stock": 18856,
+            "price": 0.028,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 500uA@40V 700mV@3A 80A SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "700mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C7450457",
+            "model": "SS34",
+            "manufacturer": "LangJie",
+            "package": "DO-214AC(SMA)",
+            "stock": 16382,
+            "price": 0.029,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 100uA@40V 3A 40V 550mV@3A 80A Independent DO-214AC(SMA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "100uA@40V"
+            }
+          },
+          {
+            "lcsc": "C6068517",
+            "model": "SS34",
+            "manufacturer": "DOWO",
+            "package": "DO-214AC(SMA)",
+            "stock": 12149,
+            "price": 0.0361,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 100uA@40V 3A 40V 550mV@3A 70A Standalone DO-214AC(SMA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "100uA@40V"
+            }
+          },
+          {
+            "lcsc": "C5200640",
+            "model": "SS34",
+            "manufacturer": "HXY MOSFET",
+            "package": "SMB",
+            "stock": 10190,
+            "price": 0.039,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-50℃~+125℃ 3A 40V 500uA 550mV@2A 70A Independent SMB Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@2A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-50℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA"
+            }
+          },
+          {
+            "lcsc": "C330487",
+            "model": "SS34",
+            "manufacturer": "LGE",
+            "package": "SMB",
+            "stock": 8771,
+            "price": 0.0879,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 500mV@3A 500uA@40V 70A Independent SMB Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C5339848",
+            "model": "SS34",
+            "manufacturer": "Yangzhou Yangjie Elec Tech",
+            "package": "SMC(DO-214AB)",
+            "stock": 8383,
+            "price": 0.066,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 500uA@40V 700mV@3A 70A SMC(DO-214AB) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "700mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C5443963",
+            "model": "SS34",
+            "manufacturer": "RealChip",
+            "package": "SMA(DO-214AC)",
+            "stock": 8205,
+            "price": 0.0278,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-50℃~+125℃ 1 Independent 100A 3A 40V 500uA@40V 700mV@3A SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "700mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-50℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C355267",
+            "model": "SS34",
+            "manufacturer": "SINO-IC",
+            "package": "SMA",
+            "stock": 8147,
+            "price": 0.0379,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-50℃~+150℃ 1 Independent 3A 40V 500uA@40V 550mV@3A 80A SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-50℃~+150℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C489140",
+            "model": "SS34",
+            "manufacturer": "KEXIN",
+            "package": "DO-214AC(SMA)",
+            "stock": 7833,
+            "price": 0.04,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 100A 3A 40V 500uA@40V 550mV@3A DO-214AC(SMA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C3014011",
+            "model": "SS34",
+            "manufacturer": "FOSAN",
+            "package": "SMA(DO-214AC)",
+            "stock": 7632,
+            "price": 0.0259,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-65℃~+130℃ 1 Independent 100uA@40V 3A 40V 550mV@3A 80A SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-65℃~+130℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "100uA@40V"
+            }
+          },
+          {
+            "lcsc": "C2891845",
+            "model": "SS34",
+            "manufacturer": "KUU",
+            "package": "SMB(DO-214AA)",
+            "stock": 5835,
+            "price": 0.0387,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-50℃~+125℃ 100A 3A 40V 500uA@40V 550mV@3A Independent SMB(DO-214AA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-50℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C5199110",
+            "model": "SS34",
+            "manufacturer": "HXY MOSFET",
+            "package": "SMC",
+            "stock": 5829,
+            "price": 0.0545,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 100uA 3A 40V 550mV@3A 80A Independent SMC Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "100uA"
+            }
+          },
+          {
+            "lcsc": "C3003045",
+            "model": "SS34",
+            "manufacturer": "HUXN",
+            "package": "DO-214AC(SMA)",
+            "stock": 4863,
+            "price": 0.0559,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "3A 40V 500uA@40V 550mV@3A Independent DO-214AC(SMA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C2900685",
+            "model": "SS34",
+            "manufacturer": "Foshan Blue Rocket Elec",
+            "package": "SMA",
+            "stock": 4838,
+            "price": 0.0756,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 500uA@40V 550mV@3A 80A Independent SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C717457",
+            "model": "SS34",
+            "manufacturer": "LGE",
+            "package": "SMC",
+            "stock": 4665,
+            "price": 0.0595,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 100A 3A 40V 500mV@3A 500uA@40V Independent SMC Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C5200641",
+            "model": "SS34",
+            "manufacturer": "HXY MOSFET",
+            "package": "SMA",
+            "stock": 4101,
+            "price": 0.0301,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 500uA 550mV@3A 70A Independent SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA"
+            }
+          },
+          {
+            "lcsc": "C3039962",
+            "model": "SS34",
+            "manufacturer": "YFW",
+            "package": "SMA(DO-214AC)",
+            "stock": 4046,
+            "price": 0.0386,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 500uA 550mV@3A 80A Standalone SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA"
+            }
+          },
+          {
+            "lcsc": "C52191479",
+            "model": "SS34",
+            "manufacturer": "CBI",
+            "package": "SMA",
+            "stock": 3991,
+            "price": 0.0246,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 500uA@40V 600mV@3A 70A SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "600mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C20622488",
+            "model": "SS34",
+            "manufacturer": "Wild Goose",
+            "package": "SMA(DO-214AC)",
+            "stock": 3361,
+            "price": 0.0252,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 300uA@40V 3A 40V 700mV@3A 80A SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "700mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "300uA@40V"
+            }
+          },
+          {
+            "lcsc": "C98442",
+            "model": "SS34",
+            "manufacturer": "ST(Semtech)",
+            "package": "SMB(DO-214AA)",
+            "stock": 3246,
+            "price": 0.0667,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-65℃~+150℃ 1 Independent 3A 40V 500mV@3A 80A SMB(DO-214AA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-65℃~+150℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A"
+            }
+          },
+          {
+            "lcsc": "C50176384",
+            "model": "SS34",
+            "manufacturer": "SEP",
+            "package": "SMB",
+            "stock": 3012,
+            "price": 0.0291,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-65℃~+150℃ 1 Independent 3A 40V 500uA@40V 700mV@3A 70A SMB Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "700mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-65℃~+150℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C53058727",
+            "model": "SS34",
+            "manufacturer": "luJing",
+            "package": "SMA",
+            "stock": 2847,
+            "price": 0.0319,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 500uA@40V 550mV@3A 75A SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "75A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C3040628",
+            "model": "SS34",
+            "manufacturer": "TECH PUBLIC",
+            "package": "SMA(DO-214AC)",
+            "stock": 2748,
+            "price": 0.0602,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 500uA@40V 550mV@3A 80A SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C5161898",
+            "model": "SS34",
+            "manufacturer": "ZHIDE",
+            "package": "SMC",
+            "stock": 2655,
+            "price": 0.1146,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 100A 3A 40V 500uA@40V 700mV@3A SMC Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "700mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C53064713",
+            "model": "SS34",
+            "manufacturer": "luJing",
+            "package": "SMC",
+            "stock": 2326,
+            "price": 0.0615,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 100A 3A 40V 500mV@3A 500uA@40V SMC Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C1884574",
+            "model": "SS34",
+            "manufacturer": "YFW",
+            "package": "SMB",
+            "stock": 2231,
+            "price": 0.055,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 500nA 550mV 80A Independent SMB Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500nA"
+            }
+          },
+          {
+            "lcsc": "C5123305",
+            "model": "SS34",
+            "manufacturer": "Yint",
+            "package": "SMA(DO-214AC)",
+            "stock": 2201,
+            "price": 0.0606,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-65℃~+125℃ 1 Independent 100A 3A 40V 500uA@40V 550mV SMA(DO-214AC) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-65℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C3003020",
+            "model": "SS34",
+            "manufacturer": "HUXN",
+            "package": "SMAF",
+            "stock": 1031,
+            "price": 0.0593,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "3A 40V 500uA@40V 550mV@3A Independent SMAF Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C51898399",
+            "model": "SS34",
+            "manufacturer": "Zhengxin",
+            "package": "SMC(DO-214AB)",
+            "stock": 856,
+            "price": 0.0366,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 550mV@3A 550uA 80A SMC(DO-214AB) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "550uA"
+            }
+          },
+          {
+            "lcsc": "C7544698",
+            "model": "SS34",
+            "manufacturer": "ShunYe",
+            "package": "SMB(DO-214AA)",
+            "stock": 719,
+            "price": 0.0501,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 1 Independent 3A 40V 700mV@3A 80A SMB(DO-214AA) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "700mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A"
+            }
+          },
+          {
+            "lcsc": "C2891622",
+            "model": "SS34",
+            "manufacturer": "KUU",
+            "package": "SMC(DO-214AB)",
+            "stock": 677,
+            "price": 0.0772,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-50℃~+125℃ 100A 3A 40V 500uA@40V 550mV@3A Independent SMC(DO-214AB) Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "100A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-50℃~+125℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C466502",
+            "model": "SS34",
+            "manufacturer": "High Diode",
+            "package": "SMAG",
+            "stock": 324,
+            "price": 0.035,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 3A 40V 500uA@40V 550mV@3A 70A SMAG Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          },
+          {
+            "lcsc": "C50229765",
+            "model": "SS34",
+            "manufacturer": "DDF",
+            "package": "SMA",
+            "stock": 300,
+            "price": 0.023,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 1 Independent 100uA@40V 3A 40V 500mV@3A 70A SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "500mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "70A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+125℃",
+              "Diode Configuration": "1 Independent",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "100uA@40V"
+            }
+          },
+          {
+            "lcsc": "C4944939",
+            "model": "SS34",
+            "manufacturer": "ShunYe",
+            "package": "SMA",
+            "stock": 109,
+            "price": 0.0369,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 50uA@40V 550mV@3A 75A Independent SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "75A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "50uA@40V"
+            }
+          },
+          {
+            "lcsc": "C22439151",
+            "model": "SS34",
+            "manufacturer": "SINEDEVICE",
+            "package": "SMA",
+            "stock": 80,
+            "price": 0.0689,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Diodes",
+            "subcategory": "Schottky Diodes",
+            "subcategory_id": 2949,
+            "mounting_type": "smd",
+            "description": "-55℃~+150℃ 3A 40V 500uA@40V 550mV@3A 80A Standalone SMA Schottky Diodes ROHS",
+            "specs": {
+              "Voltage - Forward(Vf@If)": "550mV@3A",
+              "Non-Repetitive Peak Forward Surge Current": "80A",
+              "Voltage - DC Reverse(Vr)": "40V",
+              "Operating Junction Temperature Range": "-55℃~+150℃",
+              "Diode Configuration": "Standalone",
+              "Current - Rectified": "3A",
+              "Reverse Leakage Current (Ir)": "500uA@40V"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "T6V0S5A-7",
+      "result": {
+        "mpn": "T6V0S5A-7",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C19950551",
+            "model": "T6V0S5A-7",
+            "manufacturer": "Diodes Incorporated",
+            "package": "SOD-523",
+            "stock": 16,
+            "price": 0.1724,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "-65℃~+150℃ 110pF 260W@8/20us 50nA 6.8V 6V 8.5V、17V、20V 8.8A@8/20us、13A@8/20us IEC 61000-4-2 TVS SOD-523 ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-65℃~+150℃",
+              "Type": "TVS",
+              "Junction Capacitance": "110pF",
+              "Peak Pulse Power Dissipation (Ppp)": "260W@8/20us",
+              "level of protection": "IEC 61000-4-2",
+              "Clamping Voltage": "8.5V、17V、20V",
+              "Peak Pulse Current (Ipp)": "8.8A@8/20us、13A@8/20us",
+              "Voltage - Breakdown": "6.8V",
+              "Reverse Stand-Off Voltage (Vrwm)": "6V",
+              "Reverse Leakage Current (Ir)": "50nA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TLV62568DBVR",
+      "result": {
+        "mpn": "TLV62568DBVR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C163219",
+            "model": "TLV62568DBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-5",
+            "stock": 20024,
+            "price": 0.0868,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "DC-DC Converters",
+            "subcategory_id": 3005,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃@(TJ) 1 1.5MHz 1A 2.5V~5.5V 35uA 600mV~5.5V Adjustable Buck Buck Built-in Yes SOT-23-5 DC-DC Converters ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+125℃@(TJ)",
+              "Function": "Step-down type",
+              "Synchronous Rectifier": "Yes",
+              "Frequency - Switching": "1.5MHz",
+              "Output Type": "Adjustable",
+              "Voltage - Supply": "2.5V~5.5V",
+              "Output Current": "1A",
+              "Quiescent Current": "35uA",
+              "Features": "Overcurrent Protection、Light load efficient mode、Operating status indication",
+              "Switch tube (built-in/external)": "Built-in",
+              "Topology": "Buck",
+              "Output Voltage": "600mV~5.5V",
+              "Number of Outputs": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TLV75533PDBVR",
+      "result": {
+        "mpn": "TLV75533PDBVR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C404027",
+            "model": "TLV75533PDBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-5",
+            "stock": 49858,
+            "price": 0.1606,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Voltage Regulators - Linear, Low Drop Out (LDO) Regulators",
+            "subcategory_id": 2956,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃@(Tj) 1 238mV@(500mA) 25uA 3.3V 46dB@(100kHz) 5.5V 500mA 71.5uVrms Fixed Over Current Protection、Thermal Shutdown、Input undervoltage protection Positive SOT-23-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+            "specs": {
+              "Power Supply Rejection Ratio (PSRR)": "46dB@(100kHz)",
+              "standby current": "25uA",
+              "Operating Temperature": "-40℃~+125℃@(Tj)",
+              "Noise": "71.5uVrms",
+              "Voltage - Supply": "5.5V",
+              "Output Type": "Fixed",
+              "Output Current": "500mA",
+              "Output Configuration": "Positive",
+              "Features": "Over Current Protection、Short Circuit Protection、Thermal shutdown、Enable control、Input under-voltage protection、Output discharge、Built-in soft-start",
+              "Output Voltage": "3.3V",
+              "Voltage Dropout": "238mV@(500mA)",
+              "Number of Outputs": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS2121RUXR",
+      "result": {
+        "mpn": "TPS2121RUXR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C485916",
+            "model": "TPS2121RUXR",
+            "manufacturer": "Texas Instruments",
+            "package": "VQFN-HR-12(2x2.5)",
+            "stock": 3549,
+            "price": 1.2153,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "ORing Controllers",
+            "subcategory_id": 1640,
+            "mounting_type": "through_hole",
+            "description": "-40℃~+125℃ 2.8V~22V 200uA 56mΩ VQFN-HR-12(2x2.5) ORing Controllers ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+125℃",
+              "Number of Channels": "2",
+              "FET Type": "Integrated FET",
+              "Input Voltage (Vin)": "2.8V~22V",
+              "Quiescent Current": "200uA",
+              "Features": "Reverse current blocking、Overvoltage lockout、Under-voltage lockout、Over temperature protection、Short-Circuit  Protection",
+              "RDS(on)": "56mΩ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS22975DSGR",
+      "result": {
+        "mpn": "TPS22975DSGR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C524777",
+            "model": "TPS22975DSGR",
+            "manufacturer": "Texas Instruments",
+            "package": "WSON-8-EP(2x2)",
+            "stock": 19710,
+            "price": 0.239,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Power Distribution Switches",
+            "subcategory_id": 3231,
+            "mounting_type": "smd",
+            "description": "-40℃~+105℃ 1 16mΩ 600mV~5.7V 6A Active High Load Switch Over Temperature Protection WSON-8-EP(2x2) Power Distribution Switches ROHS",
+            "specs": {
+              "Type": "Load Switch",
+              "Number of Channels": "1",
+              "Voltage - Supply": "600mV~5.7V",
+              "Operating Temperature\t-": "-40℃~+105℃",
+              "Maximum Continuous Current": "6A",
+              "Features": "Output discharge function、Soft-start、Over temperature protection",
+              "RDS(on)": "16mΩ",
+              "Control Input Logic": "Active High"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS22975NDSGR",
+      "result": {
+        "mpn": "TPS22975NDSGR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C2149871",
+            "model": "TPS22975NDSGR",
+            "manufacturer": "Texas Instruments",
+            "package": "WSON-8-EP(2x2)",
+            "stock": 92,
+            "price": 0.3461,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Power Distribution Switches",
+            "subcategory_id": 3231,
+            "mounting_type": "smd",
+            "description": "-40℃~+105℃ 1 16mΩ 600mV~5.7V 6A Active High Load Switch Over Temperature Protection WSON-8-EP(2x2) Power Distribution Switches ROHS",
+            "specs": {
+              "Type": "Load Switch",
+              "Number of Channels": "1",
+              "Voltage - Supply": "600mV~5.7V",
+              "Operating Temperature\t-": "-40℃~+105℃",
+              "Maximum Continuous Current": "6A",
+              "Features": "Output discharge function、Soft-start、Over temperature protection",
+              "RDS(on)": "16mΩ",
+              "Control Input Logic": "Active High"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS2553DBVR",
+      "result": {
+        "mpn": "TPS2553DBVR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C55266",
+            "model": "TPS2553DBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-6",
+            "stock": 58406,
+            "price": 0.5914,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Power Distribution Switches",
+            "subcategory_id": 3231,
+            "mounting_type": "smd",
+            "description": "-40℃~+150℃ 1 1.5A 2.5V~6.5V 85mΩ Active High High Side Switch 过压保护、软启动、欠压锁定、反向电压保护、集成电荷泵、Overcurrent Protection、Over temperature protection、锁存保护、Short-Circuit  Protection SOT-23-6 Power Distribution Switches ROHS",
+            "specs": {
+              "Type": "High Side Switch",
+              "Number of Channels": "1",
+              "Voltage - Supply": "2.5V~6.5V",
+              "Operating Temperature\t-": "-40℃~+150℃",
+              "Maximum Continuous Current": "1.5A",
+              "Features": "Overvoltage protection、Soft-start、Under-voltage lockout、Reverse voltage protection、Integrated charge pump、Overcurrent Protection、Over temperature protection、Latch protection、Short-Circuit  Protection",
+              "RDS(on)": "85mΩ",
+              "Control Input Logic": "Active High"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS2553DBVR-1",
+      "result": {
+        "mpn": "TPS2553DBVR-1",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C111738",
+            "model": "TPS2553DBVR-1",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-6",
+            "stock": 13086,
+            "price": 0.2907,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Power Distribution Switches",
+            "subcategory_id": 3231,
+            "mounting_type": "smd",
+            "description": "-40℃~+150℃ 1 1.5A 2.5V~6.5V 85mΩ Active High High Side Switch 过压保护、软启动、欠压锁定、反向电压保护、集成电荷泵、Overcurrent Protection、Over temperature protection、锁存保护、Short-Circuit  Protection、反向电流阻断 SOT-23-6 Power Distribution Switches ROHS",
+            "specs": {
+              "Type": "High Side Switch",
+              "Number of Channels": "1",
+              "Voltage - Supply": "2.5V~6.5V",
+              "Operating Temperature\t-": "-40℃~+150℃",
+              "Maximum Continuous Current": "1.5A",
+              "Features": "Overvoltage protection、Soft-start、Under-voltage lockout、Reverse voltage protection、Integrated charge pump、Overcurrent Protection、Over temperature protection、Latch protection、Short-Circuit  Protection、Reverse current blocking",
+              "RDS(on)": "85mΩ",
+              "Control Input Logic": "Active High"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS3808G01DBVR",
+      "result": {
+        "mpn": "TPS3808G01DBVR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C19653",
+            "model": "TPS3808G01DBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-6",
+            "stock": 3491,
+            "price": 0.4106,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Supervisor and Reset ICs",
+            "subcategory_id": 3202,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃@(Tj) 1 1.7V~6.5V 2.4uA 20us 405mV Active Low No Open Drain Voltage Monitor Yes SOT-23-6 Supervisor and Reset ICs ROHS",
+            "specs": {
+              "Function": "Manual reset input",
+              "Number of Voltages Monitored": "1",
+              "Operating Temperature": "-40℃~+125℃",
+              "ChipType": "Voltage monitor",
+              "Reset Timeout": "20us",
+              "Threshold Voltage": "405mV",
+              "Voltage - Supply": "1.7V~6.5V",
+              "Output Type": "Open-drain",
+              "Quiescent Current": "2.4uA",
+              "Reset Active Level": "Active Low"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS3808G33DBVR",
+      "result": {
+        "mpn": "TPS3808G33DBVR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C43698",
+            "model": "TPS3808G33DBVR",
+            "manufacturer": "Texas Instruments",
+            "package": "SOT-23-6",
+            "stock": 26772,
+            "price": 0.4387,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Supervisor and Reset ICs",
+            "subcategory_id": 3202,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃@(Tj) 1 1.7V~6.5V 2.4uA 20ms 3.07V Active Low Open Drain Voltage Monitor Yes SOT-23-6 Supervisor and Reset ICs ROHS",
+            "specs": {
+              "Function": "Manual reset input",
+              "Number of Voltages Monitored": "1",
+              "Operating Temperature": "-40℃~+125℃",
+              "ChipType": "Voltage monitor",
+              "Reset Timeout": "20ms",
+              "Threshold Voltage": "3.07V",
+              "Voltage - Supply": "1.7V~6.5V",
+              "Output Type": "Open-drain",
+              "Quiescent Current": "2.4uA",
+              "Reset Active Level": "Active Low"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS552892RYQR",
+      "result": {
+        "mpn": "TPS552892RYQR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C19272254",
+            "model": "TPS552892RYQR",
+            "manufacturer": "Texas Instruments",
+            "package": "VQFN-21(3x5)",
+            "stock": 69,
+            "price": 10.9777,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "DC-DC Converters",
+            "subcategory_id": 3005,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃@(TJ) 1 200kHz~2.2MHz 3V~36V 760uA 800mV~22V 8A Adjustable Buck-Boost Buck-Boost Built-in Yes VQFN-21(3x5) DC-DC Converters ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+125℃@(TJ)",
+              "Function": "Buck-Boost",
+              "Synchronous Rectifier": "Yes",
+              "Frequency - Switching": "200kHz~2.2MHz",
+              "Output Type": "Adjustable",
+              "Voltage - Supply": "3V~36V",
+              "Output Current": "8A",
+              "Quiescent Current": "760uA",
+              "Features": "-",
+              "Switch tube (built-in/external)": "Built-in",
+              "Topology": "Buck-Boost",
+              "Output Voltage": "800mV~22V",
+              "Number of Outputs": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS62162DSGR",
+      "result": {
+        "mpn": "TPS62162DSGR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C40256",
+            "model": "TPS62162DSGR",
+            "manufacturer": "Texas Instruments",
+            "package": "WSON-8-EP(2x2)",
+            "stock": 771,
+            "price": 1.1032,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "DC-DC Converters",
+            "subcategory_id": 3005,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃@(TJ) 1 17uA 1A 2.25MHz 3.3V 3V~17V Buck Buck Built-in Fixed Yes WSON-8-EP(2x2) DC-DC Converters ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+125℃@(TJ)",
+              "Function": "Step-down type",
+              "Synchronous Rectifier": "Yes",
+              "Frequency - Switching": "2.25MHz",
+              "Voltage - Supply": "3V~17V",
+              "Output Type": "Fixed",
+              "Output Current": "1A",
+              "Quiescent Current": "17uA",
+              "Features": "Overcurrent Protection、Light load efficient mode、Operating status indication",
+              "Switch tube (built-in/external)": "Built-in",
+              "Topology": "Buck",
+              "Output Voltage": "3.3V",
+              "Number of Outputs": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TPS630701RNMR",
+      "result": {
+        "mpn": "TPS630701RNMR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C2876599",
+            "model": "TPS630701RNMR",
+            "manufacturer": "Texas Instruments",
+            "package": "VQFN-15-HR(2.5x3)",
+            "stock": 323,
+            "price": 1.6036,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "DC-DC Converters",
+            "subcategory_id": 3005,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃@(TJ) 1 2.4MHz 2A 2V~16V 50uA 5V Buck-Boost Buck-Boost Built-in Fixed Yes VQFN-15-HR(2.5x3) DC-DC Converters ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+125℃@(TJ)",
+              "Function": "Buck-Boost",
+              "Synchronous Rectifier": "Yes",
+              "Frequency - Switching": "2.4MHz",
+              "Output Type": "Fixed",
+              "Voltage - Supply": "2V~16V",
+              "Output Current": "2A",
+              "Quiescent Current": "50uA",
+              "Features": "Overcurrent Protection、Light load efficient mode、Operating status indication、Frequency synchronization",
+              "Switch tube (built-in/external)": "Built-in",
+              "Topology": "Buck-Boost",
+              "Output Voltage": "5V",
+              "Number of Outputs": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TUSB320LAIRWBR",
+      "result": {
+        "mpn": "TUSB320LAIRWBR",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C132554",
+            "model": "TUSB320LAIRWBR",
+            "manufacturer": "Texas Instruments",
+            "package": "X2-QFN-12(1.6x1.6)",
+            "stock": 386,
+            "price": 1.0691,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Power Management (PMIC)",
+            "subcategory": "Battery Management",
+            "subcategory_id": 3098,
+            "mounting_type": "smd",
+            "description": "-40℃~+85℃ 2.7V~5V 3A 70uA I2C Not supported Not supported 可编程充电电流 X2-QFN-12(1.6x1.6) Battery Management ROHS",
+            "specs": {
+              "Charging Saturation Voltage": "-",
+              "Supply Current (Iq)": "70uA",
+              "Operating Temperature": "-40℃~+85℃",
+              "Type of Battery": "-",
+              "Charge Current - Max": "3A",
+              "Number of Cells": "-",
+              "Battery Temperature Detection": "Not supported",
+              "The Chip Type": "-",
+              "Balance Current": "-",
+              "Voltage - Supply": "2.7V~5V",
+              "End-Off Voltage": "-",
+              "Features": "Programmable charging current",
+              "Interface": "I2C",
+              "0V Battery Charge": "Not supported"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "TYPE-C-31-M-12",
+      "result": {
+        "mpn": "TYPE-C-31-M-12",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C165948",
+            "model": "TYPE-C-31-M-12",
+            "manufacturer": "Korean Hroparts Elec",
+            "package": "SMD",
+            "stock": 277271,
+            "price": 0.1856,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Connectors",
+            "subcategory": "USB Connectors",
+            "subcategory_id": 2945,
+            "mounting_type": "smd",
+            "description": "-30℃~+80℃ 1 10,000 cycles 16P 20V 5A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
+            "specs": {
+              "Operating Temperature": "-30℃~+80℃",
+              "Number of Ports": "1",
+              "Length": "7.35mm",
+              "Current Rating-Power": "5A",
+              "Voltage Rating": "20V",
+              "Connector Type": "Type-C",
+              "Number of Contacts": "16P",
+              "Gender": "Female",
+              "Connect-Disconnect Life": "10,000 cycles",
+              "Mounting Type": "Surface Mount, Right Angle",
+              "Protocol Standard": "-"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "USB2514B-I/M2",
+      "result": {
+        "mpn": "USB2514B-I/M2",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C220679",
+            "model": "USB2514B-I/M2",
+            "manufacturer": "Microchip Tech",
+            "package": "SQFN-36-EP(6x6)",
+            "stock": 345,
+            "price": 2.5702,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Interface",
+            "subcategory": "USB HUB Controllers",
+            "subcategory_id": 1622,
+            "mounting_type": "smd",
+            "description": "-40℃~+85℃ 3.3V 4 Hub I2C USB 2.0 SQFN-36-EP(6x6) USB HUB Controllers ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+85℃",
+              "Memory Interface": "I2C",
+              "Number of Channels": "4",
+              "Data Rate": "480Mbps",
+              "Voltage - Supply": "3.3V",
+              "USB Protocol": "USB 2.0",
+              "Features": "Port power switch control、Internal regulator、Overcurrent Protection、ESD protection、BC1.1 protocol support",
+              "Current - Supply": "70mA",
+              "type": "Hub",
+              "Quiescent Supply Current": "550uA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "USBLC6-2SC6",
+      "result": {
+        "mpn": "USBLC6-2SC6",
+        "total": 9,
+        "results": [
+          {
+            "lcsc": "C2687116",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "UMW(Youtai Semiconductor Co., Ltd.)",
+            "package": "SOT-23-6",
+            "stock": 65891,
+            "price": 0.0475,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "0.35pF、0.8pF 100nA 150W@8/20us 15V 2 5V 6A@8/20us 6V ESD SOT-23-6 ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Type": "ESD",
+              "Junction Capacitance": "0.35pF、0.8pF",
+              "Peak Pulse Power Dissipation (Ppp)": "150W@8/20us",
+              "Number of Channels": "2",
+              "Clamping Voltage": "15V",
+              "Peak Pulse Current (Ipp)": "6A@8/20us",
+              "Voltage - Breakdown": "6V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5V",
+              "Reverse Leakage Current (Ir)": "100nA"
+            }
+          },
+          {
+            "lcsc": "C2827654",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "TECH PUBLIC",
+            "package": "SOT-23-6",
+            "stock": 55047,
+            "price": 0.0446,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 0.35pF 12V 150W 2 5V 6A 6V 80nA ESD IEC 61000-4-2、IEC 61000-4-5、IEC 61000-4-4 Unidirectional SOT-23-6 ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-55℃~+125℃",
+              "Type": "ESD",
+              "Junction Capacitance": "0.35pF",
+              "Number of Channels": "2",
+              "Peak Pulse Power Dissipation (Ppp)": "150W",
+              "level of protection": "IEC 61000-4-2、IEC 61000-4-5、IEC 61000-4-4",
+              "Clamping Voltage": "12V",
+              "Polarity": "Unidirectional",
+              "Peak Pulse Current (Ipp)": "6A",
+              "Voltage - Breakdown": "6V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5V",
+              "Reverse Leakage Current (Ir)": "80nA"
+            }
+          },
+          {
+            "lcsc": "C7519",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "STMicroelectronics",
+            "package": "SOT-23-6L",
+            "stock": 39154,
+            "price": 0.1825,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃ 150nA 17V 2 3.5pF 5.25V 5A 6V ESD IEC 61000-4-2 Unidirectional SOT-23-6L ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+125℃",
+              "Type": "ESD",
+              "Junction Capacitance": "3.5pF",
+              "Number of Channels": "2",
+              "level of protection": "IEC 61000-4-2",
+              "Clamping Voltage": "17V",
+              "Polarity": "Unidirectional",
+              "Peak Pulse Current (Ipp)": "5A",
+              "Voltage - Breakdown": "6V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5.25V",
+              "Reverse Leakage Current (Ir)": "150nA"
+            }
+          },
+          {
+            "lcsc": "C21713975",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "GOODWORK",
+            "package": "SOT-23-6",
+            "stock": 28095,
+            "price": 0.0389,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 0.6pF 14V 2 4.5A@8/20us 500nA 5V 60W@8/20us 6V IEC 61000-4-2、IEC 61000-4-5 TVS Unidirectional SOT-23-6 ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-55℃~+125℃",
+              "Type": "TVS",
+              "Junction Capacitance": "0.6pF",
+              "Peak Pulse Power Dissipation (Ppp)": "60W@8/20us",
+              "Number of Channels": "2",
+              "level of protection": "IEC 61000-4-2、IEC 61000-4-5",
+              "Clamping Voltage": "14V",
+              "Polarity": "Unidirectional",
+              "Peak Pulse Current (Ipp)": "4.5A@8/20us",
+              "Voltage - Breakdown": "6V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5V",
+              "Reverse Leakage Current (Ir)": "500nA"
+            }
+          },
+          {
+            "lcsc": "C5261088",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "HXY MOSFET",
+            "package": "SOT-23-6L",
+            "stock": 25883,
+            "price": 0.0412,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "0.5pF、0.8pF 14V 1uA 2 5V 6A 6V Bidirectional ESD IEC 61000-4-2 SOT-23-6L ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-55℃~+125℃",
+              "Type": "ESD",
+              "Junction Capacitance": "0.5pF、0.8pF",
+              "Number of Channels": "2",
+              "Peak Pulse Power Dissipation (Ppp)": "100W@8/20us",
+              "level of protection": "IEC 61000-4-2",
+              "Clamping Voltage": "14V",
+              "Polarity": "Bidirectional",
+              "Peak Pulse Current (Ipp)": "6A",
+              "Voltage - Breakdown": "6V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5V",
+              "Reverse Leakage Current (Ir)": "1uA"
+            }
+          },
+          {
+            "lcsc": "C48971164",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "Slkor(SLKORMICRO Elec.)",
+            "package": "SOT-23-6L",
+            "stock": 6185,
+            "price": 0.0361,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "-40℃~+125℃ 0.5pF、1pF 100nA 13V 2 5V 6A@8/20us 78W@8/20us 9V ESD IEC 61000-4-2 SOT-23-6L ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+125℃",
+              "Type": "ESD",
+              "Junction Capacitance": "0.5pF、1pF",
+              "Peak Pulse Power Dissipation (Ppp)": "78W@8/20us",
+              "Number of Channels": "2",
+              "level of protection": "IEC 61000-4-2",
+              "Clamping Voltage": "13V",
+              "Peak Pulse Current (Ipp)": "6A@8/20us",
+              "Voltage - Breakdown": "9V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5V",
+              "Reverse Leakage Current (Ir)": "100nA"
+            }
+          },
+          {
+            "lcsc": "C47147619",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "KUU",
+            "package": "SOT-23-6L",
+            "stock": 4259,
+            "price": 0.0343,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 0.2pF 15V 1uA 5V 60W 8A@8/20us 9V ESD Four channels IEC 61000-4-2 Unidirectional SOT-23-6L ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-55℃~+125℃",
+              "Type": "ESD",
+              "Junction Capacitance": "0.2pF",
+              "Number of Channels": "Four channels",
+              "Peak Pulse Power Dissipation (Ppp)": "60W",
+              "level of protection": "IEC 61000-4-2",
+              "Clamping Voltage": "15V",
+              "Polarity": "Unidirectional",
+              "Peak Pulse Current (Ipp)": "8A@8/20us",
+              "Voltage - Breakdown": "9V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5V",
+              "Reverse Leakage Current (Ir)": "1uA"
+            }
+          },
+          {
+            "lcsc": "C5250994",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "TWGMC",
+            "package": "SOT-23-6",
+            "stock": 903,
+            "price": 0.0904,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "-55℃~+125℃ 0.35pF、0.8pF 100nA 150W 15V 5V 6A 9V ESD IEC 61000-4-2、IEC 61000-4-5、IEC 61000-4-4 SOT-23-6 ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-55℃~+125℃",
+              "Type": "ESD",
+              "Junction Capacitance": "0.35pF、0.8pF",
+              "Peak Pulse Power Dissipation (Ppp)": "150W",
+              "level of protection": "IEC 61000-4-2、IEC 61000-4-5、IEC 61000-4-4",
+              "Clamping Voltage": "15V",
+              "Peak Pulse Current (Ipp)": "6A",
+              "Voltage - Breakdown": "9V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5V",
+              "Reverse Leakage Current (Ir)": "100nA"
+            }
+          },
+          {
+            "lcsc": "C22390014",
+            "model": "USBLC6-2SC6",
+            "manufacturer": "DOWO",
+            "package": "SOT-23-6L",
+            "stock": 780,
+            "price": 0.0395,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Circuit Protection",
+            "subcategory": "ESD and Surge Protection (TVS/ESD)",
+            "subcategory_id": 3035,
+            "mounting_type": "smd",
+            "description": "-40℃~+85℃ 0.8pF 10V、15V 1uA 2 4.5A@8/20us 5V 6V 75W@8/20us IEC 61000-4-2、IEC 61000-4-5 TVS Unidirectional SOT-23-6L ESD and Surge Protection (TVS/ESD) ROHS",
+            "specs": {
+              "Operating Temperature": "-40℃~+85℃",
+              "Type": "TVS",
+              "Junction Capacitance": "0.8pF",
+              "Number of Channels": "2",
+              "Peak Pulse Power Dissipation (Ppp)": "75W@8/20us",
+              "level of protection": "IEC 61000-4-2、IEC 61000-4-5",
+              "Clamping Voltage": "10V、15V",
+              "Polarity": "Unidirectional",
+              "Peak Pulse Current (Ipp)": "4.5A@8/20us",
+              "Voltage - Breakdown": "6V",
+              "Reverse Stand-Off Voltage (Vrwm)": "5V",
+              "Reverse Leakage Current (Ir)": "1uA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "XAL7070-472MEC",
+      "result": {
+        "mpn": "XAL7070-472MEC",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C3911513",
+            "model": "XAL7070-472MEC",
+            "manufacturer": "Coilcraft",
+            "package": "SMD",
+            "stock": 628,
+            "price": 10.31,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Inductors, Coils, Chokes",
+            "subcategory": "Power Inductors",
+            "subcategory_id": 3050,
+            "mounting_type": "smd",
+            "description": "13.6A 14.26mΩ 15.2A 4.7uH Magnetic Shielded Inductor ±20% SMD Power Inductors ROHS",
+            "specs": {
+              "Current - Saturation(Isat)": "15.2A",
+              "Inductance": "4.7uH",
+              "Type": "Magnetic Shielded Inductor",
+              "Tolerance": "±20%",
+              "Current Rating": "13.6A",
+              "DC Resistance(DCR)": "14.26mΩ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "XFL3012-222MEC",
+      "result": {
+        "mpn": "XFL3012-222MEC",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C3911432",
+            "model": "XFL3012-222MEC",
+            "manufacturer": "Coilcraft",
+            "package": "SMD,3x3mm",
+            "stock": 483,
+            "price": 5.4263,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Inductors, Coils, Chokes",
+            "subcategory": "Power Inductors",
+            "subcategory_id": 3050,
+            "mounting_type": "smd",
+            "description": "1.6A 1.9A 2.2uH 97mΩ Magnetic Shielded Inductor ±20% SMD,3x3mm Power Inductors ROHS",
+            "specs": {
+              "Current - Saturation(Isat)": "1.6A",
+              "Inductance": "2.2uH",
+              "Type": "Magnetic Shielded Inductor",
+              "Tolerance": "±20%",
+              "Current Rating": "1.9A",
+              "DC Resistance(DCR)": "97mΩ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "XFL4020-152MEC",
+      "result": {
+        "mpn": "XFL4020-152MEC",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C3033018",
+            "model": "XFL4020-152MEC",
+            "manufacturer": "Coilcraft",
+            "package": "SMD,4x4mm",
+            "stock": 1809,
+            "price": 3.1746,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Inductors, Coils, Chokes",
+            "subcategory": "Power Inductors",
+            "subcategory_id": 3050,
+            "mounting_type": "smd",
+            "description": "1.5uH 14.4mΩ 4.6A 9.1A Magnetic Shielded Inductor ±20% SMD,4x4mm Power Inductors ROHS",
+            "specs": {
+              "Current - Saturation(Isat)": "4.6A",
+              "Inductance": "1.5uH",
+              "Type": "Magnetic Shielded Inductor",
+              "Tolerance": "±20%",
+              "Current Rating": "9.1A",
+              "DC Resistance(DCR)": "14.4mΩ"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

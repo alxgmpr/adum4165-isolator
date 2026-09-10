@@ -1,0 +1,278 @@
+{
+  "date": "2026-09-10",
+  "queries": [
+    {
+      "mpn": "GRM32ER71E226KE15L",
+      "result": {
+        "mpn": "GRM32ER71E226KE15L",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C21397",
+            "model": "GRM32ER71E226KE15L",
+            "manufacturer": "Murata Electronics",
+            "package": "1210",
+            "stock": 74376,
+            "price": 0.5735,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "22uF 25V X7R ±10% 1210 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "25V",
+              "Tolerance": "±10%",
+              "Capacitance": "22uF",
+              "Temperature Coefficient": "X7R"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM21BR61E106KA73L",
+      "result": {
+        "mpn": "GRM21BR61E106KA73L",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C84416",
+            "model": "GRM21BR61E106KA73L",
+            "manufacturer": "Murata Electronics",
+            "package": "0805",
+            "stock": 5641,
+            "price": 0.1404,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "10uF 25V X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "25V",
+              "Tolerance": "±10%",
+              "Capacitance": "10uF",
+              "Temperature Coefficient": "X5R"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM21BR61E475KA12L",
+      "result": {
+        "mpn": "GRM21BR61E475KA12L",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C77077",
+            "model": "GRM21BR61E475KA12L",
+            "manufacturer": "Murata Electronics",
+            "package": "0805",
+            "stock": 33846,
+            "price": 0.0681,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "25V 4.7uF X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "25V",
+              "Tolerance": "±10%",
+              "Capacitance": "4.7uF",
+              "Temperature Coefficient": "X5R"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM188R61E475KE11D",
+      "result": {
+        "mpn": "GRM188R61E475KE11D",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C90057",
+            "model": "GRM188R61E475KE11D",
+            "manufacturer": "Murata Electronics",
+            "package": "0603",
+            "stock": 119351,
+            "price": 0.0606,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "25V 4.7uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "25V",
+              "Tolerance": "±10%",
+              "Capacitance": "4.7uF",
+              "Temperature Coefficient": "X5R"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM188R61E105KA12D",
+      "result": {
+        "mpn": "GRM188R61E105KA12D",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C77046",
+            "model": "GRM188R61E105KA12D",
+            "manufacturer": "Murata Electronics",
+            "package": "0603",
+            "stock": 152927,
+            "price": 0.0256,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "1uF 25V X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "25V",
+              "Tolerance": "±10%",
+              "Capacitance": "1uF",
+              "Temperature Coefficient": "X5R"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM155R71H104KE14D",
+      "result": {
+        "mpn": "GRM155R71H104KE14D",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C77020",
+            "model": "GRM155R71H104KE14D",
+            "manufacturer": "Murata Electronics",
+            "package": "0402",
+            "stock": 3725119,
+            "price": 0.0099,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "50V",
+              "Tolerance": "±10%",
+              "Capacitance": "100nF",
+              "Temperature Coefficient": "X7R"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM155R71H103KA88D",
+      "result": {
+        "mpn": "GRM155R71H103KA88D",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C77019",
+            "model": "GRM155R71H103KA88D",
+            "manufacturer": "Murata Electronics",
+            "package": "0402",
+            "stock": 506459,
+            "price": 0.0097,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "10nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "50V",
+              "Tolerance": "±10%",
+              "Capacitance": "10nF",
+              "Temperature Coefficient": "X7R"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "EEE-FK1A221P",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'EEE-FK1A221P'",
+        "mpn": "EEE-FK1A221P",
+        "results": []
+      }
+    },
+    {
+      "mpn": "XFL4020-222MEC",
+      "result": {
+        "mpn": "XFL4020-222MEC",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C122469",
+            "model": "XFL4020-222MEC",
+            "manufacturer": "Coilcraft",
+            "package": "SMD,4x4mm",
+            "stock": 7154,
+            "price": 4.1884,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Inductors, Coils, Chokes",
+            "subcategory": "Power Inductors",
+            "subcategory_id": 3050,
+            "mounting_type": "smd",
+            "description": "2.2uH 21.35mΩ 3.7A 8A ±20% SMD,4x4mm Power Inductors ROHS",
+            "specs": {
+              "Inductance": "2.2uH",
+              "Current - Saturation(Isat)": "3.7A",
+              "Tolerance": "±20%",
+              "Current Rating": "8A",
+              "DC Resistance(DCR)": "21.35mΩ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "XAL5030-152MEC",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'XAL5030-152MEC'",
+        "mpn": "XAL5030-152MEC",
+        "results": []
+      }
+    },
+    {
+      "mpn": "SS34-7-F",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'SS34-7-F'",
+        "mpn": "SS34-7-F",
+        "results": []
+      }
+    }
+  ]
+}
