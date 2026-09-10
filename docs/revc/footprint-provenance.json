@@ -1,0 +1,210 @@
+{
+  "Microchip_SQFN36_6x6mm_EP3.7mm": {
+    "source": "Microchip DS00001692E p48 M2 SQFN36: 0.5 pitch; 0.28x0.90 lands, 4.65 inner gap, 3.70 EP",
+    "body_mm": [
+      6.1,
+      6.1
+    ],
+    "courtyard_mm": [
+      7,
+      7
+    ],
+    "origin": "manufacturer drawing, KicadModTree"
+  },
+  "TI_RUX0012A_VQFN-HR12_2x2.5mm": {
+    "source": "TI TPS2121 SLVSEA3F p39 RUX0012A 4224010/A: 1.05x0.4 power lands and 0.2x0.6 signal lands",
+    "body_mm": [
+      2,
+      2.5
+    ],
+    "courtyard_mm": [
+      2.9,
+      3.4
+    ],
+    "origin": "manufacturer drawing, KicadModTree"
+  },
+  "TI_RYQ0021A_VQFN21_3x5mm": {
+    "source": "TI TPS552892 SLVSH28A p33-34 RYQ0021A 4226658/A; five full-height power lands, stepped PGND; segmented paste",
+    "body_mm": [
+      5.1,
+      3.1
+    ],
+    "courtyard_mm": [
+      5.9,
+      3.9
+    ],
+    "origin": "manufacturer drawing, KicadModTree"
+  },
+  "Coilcraft_XFL4020_4x4mm": {
+    "source": "Coilcraft XFL4020 document 745-3 2026-03-10: 0.98x2.37 lands on 3.40 centers; maximum body 4.3x4.3x2.1",
+    "body_mm": [
+      4.3,
+      4.3
+    ],
+    "courtyard_mm": [
+      4.9,
+      4.8
+    ],
+    "origin": "manufacturer drawing, KicadModTree"
+  },
+  "USB_C_Receptacle_HRO_TYPE-C-31-M-12": {
+    "source": "KiCad 10.99 stock Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "origin": "unchanged copy",
+    "sha256": "c562a7f9713a8b754c4d2305a2ea15453469a1c8c48a9b17973383e8993fc750"
+  },
+  "SOT-23-6": {
+    "source": "KiCad 10.99 stock Package_TO_SOT_SMD:SOT-23-6",
+    "origin": "unchanged copy",
+    "sha256": "f341c73aac9dcb553456f68bf3fee3d26eb14acf6d8a1cae82b50418fe1d71ca"
+  },
+  "C_0402_1005Metric": {
+    "source": "KiCad 10.99 stock Capacitor_SMD:C_0402_1005Metric",
+    "origin": "unchanged copy",
+    "sha256": "0403382fc4583ed510b461b1fa4a36dfaec6f4c0d9b1a67e6b0027837a54e1b5"
+  },
+  "C_0603_1608Metric": {
+    "source": "KiCad 10.99 stock Capacitor_SMD:C_0603_1608Metric",
+    "origin": "unchanged copy",
+    "sha256": "fe0dbfefbb181a0466f93a8de52d84ba7b00fcd9acdbb69575f4128a0af4e405"
+  },
+  "SOT-23-5": {
+    "source": "KiCad 10.99 stock Package_TO_SOT_SMD:SOT-23-5",
+    "origin": "unchanged copy",
+    "sha256": "455a3f7c3e5eb5b8847eaa5df23e18651e78ab9f75afd09a0883758a0d901761"
+  },
+  "Texas_X2QFN-12_1.6x1.6mm_P0.4mm": {
+    "source": "KiCad 10.99 stock Package_DFN_QFN:Texas_X2QFN-12_1.6x1.6mm_P0.4mm",
+    "origin": "unchanged copy",
+    "sha256": "59be93db128e4f5be890fd9d1af175d6050cae38307797df74b4d93e24bf31b2"
+  },
+  "R_0402_1005Metric": {
+    "source": "KiCad 10.99 stock Resistor_SMD:R_0402_1005Metric",
+    "origin": "unchanged copy",
+    "sha256": "e05c7605248c220836f642ed1f526133edf0374acdfd5bb2631e58b4e377acfb"
+  },
+  "TestPoint_Pad_D1.0mm": {
+    "source": "KiCad 10.99 stock TestPoint:TestPoint_Pad_D1.0mm",
+    "origin": "unchanged copy",
+    "sha256": "6d602c576b4ab0de29fa4cc096f419a62e828ba45ceee30c1263d86b420b2b12"
+  },
+  "C_0805_2012Metric": {
+    "source": "KiCad 10.99 stock Capacitor_SMD:C_0805_2012Metric",
+    "origin": "unchanged copy",
+    "sha256": "62775a51fe74ba7f1b572de327bdbd3fc92582721b2abcaa47787865590d89cb"
+  },
+  "C_1210_3225Metric": {
+    "source": "KiCad 10.99 stock Capacitor_SMD:C_1210_3225Metric",
+    "origin": "unchanged copy",
+    "sha256": "e1dae516e079b70c4736d001fb81bfb4ef5f9c2a37c8175223a44f83a04ff75f"
+  },
+  "C_Disc_D7.0mm_W5.5mm_P14.00mm": {
+    "source": "isolator-lib.pretty/C_Disc_D7.0mm_W5.5mm_P14.00mm.kicad_mod",
+    "origin": "unchanged copy",
+    "sha256": "6c5ca6b3f9712b32fb8f5c8be6171e2e9aed657df939b005392a48d52f73b7ed"
+  },
+  "WE_750313638": {
+    "source": "isolator-lib.pretty/WE_750313638.kicad_mod",
+    "origin": "unchanged copy",
+    "sha256": "a0c5c8b3f57f40ecfbd5e024b5a97837f6c504196c6de0e0994c9efbd2ddfac6"
+  },
+  "D_SMA": {
+    "source": "KiCad 10.99 stock Diode_SMD:D_SMA",
+    "origin": "unchanged copy",
+    "sha256": "f7cba3b52ed8b34dce89170722de58324eac04e9e61a095e0eab37b9ca93cb7f"
+  },
+  "TPS630701RNM_VQFN-HR-15": {
+    "source": "isolator-lib.pretty/TPS630701RNM_VQFN-HR-15.kicad_mod",
+    "origin": "unchanged copy",
+    "sha256": "4faab8bf51c3f9408db9ade8a4a5706ce2e0556742f07b2530e7e1cebe0293cd"
+  },
+  "Laird_Technologies_BMI-S-201-F_13.66x12.70mm": {
+    "source": "KiCad 10.99 stock RF_Shielding:Laird_Technologies_BMI-S-201-F_13.66x12.70mm",
+    "origin": "unchanged copy",
+    "sha256": "104a4a94fd7edd8e91b4e5d3cb77feff45a144025c72bb72c1addfb7c47d5282"
+  },
+  "Laird_Technologies_BMI-S-209-F_29.36x18.50mm": {
+    "source": "KiCad 10.99 stock RF_Shielding:Laird_Technologies_BMI-S-209-F_29.36x18.50mm",
+    "origin": "unchanged copy",
+    "sha256": "73ee7f31409369af71eb7ffe784ca1c35d0fad923c3a7abde6690e2775e46ab7"
+  },
+  "Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm": {
+    "source": "KiCad 10.99 stock Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm",
+    "origin": "unchanged copy",
+    "sha256": "8beb57ce756ebcab32109aa9aa075151b42ebfd5f490614407832d761d1a314d"
+  },
+  "R_1206_3216Metric": {
+    "source": "KiCad 10.99 stock Resistor_SMD:R_1206_3216Metric",
+    "origin": "unchanged copy",
+    "sha256": "c7320668dc81bbb954cb4f15e4e7a766c120059343d43551468c8f7ccc8fde37"
+  },
+  "MSOP-10_3x3mm_P0.5mm": {
+    "source": "KiCad 10.99 stock Package_SO:MSOP-10_3x3mm_P0.5mm",
+    "origin": "unchanged copy",
+    "sha256": "c179dbee33613027667b07b4dba02648f193fc65f63616c9d73d6f1162c6bb9d"
+  },
+  "R_0603_1608Metric": {
+    "source": "KiCad 10.99 stock Resistor_SMD:R_0603_1608Metric",
+    "origin": "unchanged copy",
+    "sha256": "7190ac4a00125b807e54129ef0d87d87f2a658eeb74d025a7028203419b09f23"
+  },
+  "L_Coilcraft_XAL7070-XXX": {
+    "source": "KiCad 10.99 stock Inductor_SMD:L_Coilcraft_XAL7070-XXX",
+    "origin": "unchanged copy",
+    "sha256": "817472fe0542359934edbf65cbd0926e76503a9b11fa581303fb00be76639c16"
+  },
+  "CP_Elec_8x6.2": {
+    "source": "KiCad 10.99 stock Capacitor_SMD:CP_Elec_8x6.2",
+    "origin": "unchanged copy",
+    "sha256": "5059a852a3a483e3ed747a86604d56bb0f73968fffbfc38371e6fde9bd9afdc4"
+  },
+  "D_SOD-323": {
+    "source": "KiCad 10.99 stock Diode_SMD:D_SOD-323",
+    "origin": "unchanged copy",
+    "sha256": "03669ee95335b8ad49c3458e5262e7c2fd7ace6fe481bfd00f46b6f2f32abc8a"
+  },
+  "SOT-23": {
+    "source": "KiCad 10.99 stock Package_TO_SOT_SMD:SOT-23",
+    "origin": "unchanged copy",
+    "sha256": "0d88c86c1b6d8c1aae4aa8c09386264c089d4451a128b6ccd63ed253f4300b15"
+  },
+  "Crystal_SMD_3225-4Pin_3.2x2.5mm": {
+    "source": "KiCad 10.99 stock Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+    "origin": "unchanged copy",
+    "sha256": "7648bca15399a8bd7856b5da6a1d2bc3a87049dc63958f8e8a3ab7409941a8e4"
+  },
+  "SOIC-8_3.9x4.9mm_P1.27mm": {
+    "source": "KiCad 10.99 stock Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+    "origin": "unchanged copy",
+    "sha256": "074ecb2092b24fa4b4b9cdd7c926fc587b0d7d6d21e7341e57935fd42d36894f"
+  },
+  "USB_A_Wuerth_614004134726_Horizontal": {
+    "source": "KiCad 10.99 stock Connector_USB:USB_A_Wuerth_614004134726_Horizontal",
+    "origin": "unchanged copy",
+    "sha256": "e22f331d23d4046f11863bbdb8d41641018ec6c8e1b07d3c9dfe8b22fde1d864"
+  },
+  "R_0805_2012Metric": {
+    "source": "KiCad 10.99 stock Resistor_SMD:R_0805_2012Metric",
+    "origin": "unchanged copy",
+    "sha256": "f050b6a50cc7e6f86291fb7aa8f87b0d02255e21cfbddf291cdccc87e5889794"
+  },
+  "D_SOD-523": {
+    "source": "KiCad 10.99 stock Diode_SMD:D_SOD-523",
+    "origin": "unchanged copy",
+    "sha256": "0ccbea121afcb4fdc50836ac0020ab8f2a6d958cc722d7179f7079ae38be5825"
+  },
+  "LED_0603_1608Metric": {
+    "source": "KiCad 10.99 stock LED_SMD:LED_0603_1608Metric",
+    "origin": "unchanged copy",
+    "sha256": "7931ed1efba34cb13c8d74a60eb1dca4b0be57d950c38e08c3e7f007db500a1c"
+  },
+  "MountingHole_3.2mm_M3": {
+    "source": "KiCad 10.99 stock MountingHole:MountingHole_3.2mm_M3",
+    "origin": "unchanged copy",
+    "sha256": "b83ec84428449465df3b459f1bc24b285045c812102a2052b1b7ce0f67e018f2"
+  },
+  "Fiducial_1mm_Mask2mm": {
+    "source": "KiCad 10.99 stock Fiducial:Fiducial_1mm_Mask2mm",
+    "origin": "unchanged copy",
+    "sha256": "ef0adfb15b51d4657524802277f1f3703f6d1d0f06998df4ee7dda8179dd48bd"
+  }
+}

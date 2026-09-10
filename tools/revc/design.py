@@ -331,6 +331,10 @@ for ref,rref,qref,control,rail,gnd,page in [
     mos(qref,control,gnd,ref+'_K',page)
 
 
+from sourcing import assign
+assign(PARTS)
+
+
 if __name__ == '__main__':
     target=ROOT/'build/revc/design.json'; target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(PARTS,indent=2)+'\n')

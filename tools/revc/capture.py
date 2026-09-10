@@ -61,13 +61,14 @@ def bounds(sym):
 
 def component(p,x,y,path):
     sym=p['symbol'];pins=p['symbol_pins'];b=bounds(sym)
-    obj=n('symbol',n('lib_id',p['local_lib']),n('at',x,y,0),n('unit',1),n('in_bom',S('no' if p.get('virtual') else 'yes')),n('on_board',S('no' if p.get('virtual') else 'yes')),
+    obj=n('symbol',n('lib_id',p['local_lib']),n('at',x,y,0),n('unit',1),n('in_bom',S('no' if p.get('virtual') or p.get('exclude_bom') else 'yes')),n('on_board',S('no' if p.get('virtual') else 'yes')),
           n('dnp',S('yes' if p['dnp'] else 'no')),n('uuid',p['uuid']))
     big=is_big(p)
     if big:rx,ry=x,y-b[3]-12.7;vx,vy=x,y-b[3]-10.16
     else:rx,ry=x+3.81,y-1.27;vx,vy=x+3.81,y+1.27
     fields={'Reference':p['ref'],'Value':p['value'],'Footprint':p['footprint'],'Datasheet':p.get('datasheet',''),
-            'Description':p['note'],'MPN':p['mpn'],'Manufacturer':p['manufacturer'],'LCSC':p.get('lcsc','')}
+            'Description':p['note'],'MPN':p['mpn'],'Manufacturer':p['manufacturer'],'LCSC':p.get('lcsc',''),'Ratings':p.get('ratings',''),
+            'CoverMPN':p.get('cover_mpn',''),'CoverQuantity':p.get('cover_quantity','')}
     for key,val in fields.items():
         px,py=(rx,ry) if key=='Reference' else ((vx,vy) if key=='Value' else (x,y))
         obj.append(n('property',key,val,n('at',px,py,0),fx(1.27,hide=key not in ['Reference','Value'],justify=None if big else 'left')))
@@ -75,17 +76,20 @@ def component(p,x,y,path):
     obj.append(n('instances',n('project','hub',n('path',path,n('reference',p['ref']),n('unit',1)))))
     elems=[obj]
     buses={}
+    used_wires=set()
     for number,pin in pins.items():
         net=p['pins'][number];px=x+pin['at'][0];py=y-pin['at'][1];ang=pin['at'][2]
         if net is None:
             elems.append(n('no_connect',n('at',px,py),n('uuid',uid(p['ref']+'/nc/'+number))))
             continue
         dx,dy={0:(-5.08,0),180:(5.08,0),90:(0,5.08),270:(0,-5.08)}[ang]
-        end=(round(px+dx,6),round(py+dy,6));elems.append(wire((px,py),end))
+        end=(round(px+dx,6),round(py+dy,6))
+        if ((px,py),end) not in used_wires:
+            elems.append(wire((px,py),end));used_wires.add(((px,py),end))
         if big and ang in [90,270]:buses.setdefault((ang,net),[]).append(end)
         else:elems.append(label(net,*end,180 if ang==180 else 0))
     for (angle,net),ends in buses.items():
-        ends=sorted(ends)
+        ends=sorted(set(ends))
         for a,b in zip(ends,ends[1:]):elems.append(wire(a,b))
         for end in ends[1:-1]:elems.append(n('junction',n('at',*end),n('diameter',0),n('color',0,0,0,0),n('uuid',uid(f'junc/{p["ref"]}/{net}/{end}'))))
         elems.append(label(net,*ends[0]))

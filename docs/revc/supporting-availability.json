@@ -1,0 +1,518 @@
+{
+  "date": "2026-09-10",
+  "queries": [
+    {
+      "mpn": "ERJ-2RKF1002X",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'ERJ-2RKF1002X'",
+        "mpn": "ERJ-2RKF1002X",
+        "results": []
+      }
+    },
+    {
+      "mpn": "ERA-2AEB1002X",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'ERA-2AEB1002X'",
+        "mpn": "ERA-2AEB1002X",
+        "results": []
+      }
+    },
+    {
+      "mpn": "ERA-2AEB15R0X",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'ERA-2AEB15R0X'",
+        "mpn": "ERA-2AEB15R0X",
+        "results": []
+      }
+    },
+    {
+      "mpn": "WSLP1206R0100FEA",
+      "result": {
+        "mpn": "WSLP1206R0100FEA",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C844910",
+            "model": "WSLP1206R0100FEA",
+            "manufacturer": "Vishay Intertech",
+            "package": "1206",
+            "stock": 4006,
+            "price": 0.4402,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-65℃~+170℃ 10mΩ 1W ±1% ±75ppm/℃ 1206 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "10mΩ",
+              "Operating Temperature": "-65℃~+170℃",
+              "Power(Watts)": "1W",
+              "Type": "-",
+              "Voltage-Supply(Max)": "-",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±75ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "WSLP1206R0200FEA",
+      "result": {
+        "mpn": "WSLP1206R0200FEA",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C441558",
+            "model": "WSLP1206R0200FEA",
+            "manufacturer": "Vishay Intertech",
+            "package": "1206",
+            "stock": 8369,
+            "price": 0.336,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Current Sense Resistors / Shunt Resistors",
+            "subcategory_id": 3179,
+            "mounting_type": "smd",
+            "description": "1W 20mΩ Current Sense Resistor SMD ±1% ±75ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS",
+            "specs": {
+              "Resistance": "20mΩ",
+              "Power(Watts)": "1W",
+              "Type": "Current Sense Resistor",
+              "Voltage Rating": "-",
+              "Tolerance": "±1%",
+              "Current Rating": "-",
+              "Temperature Coefficient": "±75ppm/℃",
+              "Mounting Type": "Surface Mount"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM1555C1H270JA01D",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'GRM1555C1H270JA01D'",
+        "mpn": "GRM1555C1H270JA01D",
+        "results": []
+      }
+    },
+    {
+      "mpn": "GRM1555C1H101JA01D",
+      "result": {
+        "mpn": "GRM1555C1H101JA01D",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C77177",
+            "model": "GRM1555C1H101JA01D",
+            "manufacturer": "Murata Electronics",
+            "package": "0402",
+            "stock": 1031349,
+            "price": 0.0108,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "100pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "50V",
+              "Tolerance": "±5%",
+              "Capacitance": "100pF",
+              "Temperature Coefficient": "C0G"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM155R71C224KA12D",
+      "result": {
+        "mpn": "GRM155R71C224KA12D",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C77011",
+            "model": "GRM155R71C224KA12D",
+            "manufacturer": "Murata Electronics",
+            "package": "0402",
+            "stock": 65382,
+            "price": 0.0194,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "16V",
+              "Tolerance": "±10%",
+              "Capacitance": "220nF",
+              "Temperature Coefficient": "X7R"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "ERJ-6ENF1000V",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'ERJ-6ENF1000V'",
+        "mpn": "ERJ-6ENF1000V",
+        "results": []
+      }
+    },
+    {
+      "mpn": "ERJ-2GE0R00X",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'ERJ-2GE0R00X'",
+        "mpn": "ERJ-2GE0R00X",
+        "results": []
+      }
+    },
+    {
+      "mpn": "ERJ2RKF1002X",
+      "result": {
+        "mpn": "ERJ2RKF1002X",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C191123",
+            "model": "ERJ2RKF1002X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 124333,
+            "price": 0.0051,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 10kΩ 50V Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "10kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "50V",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "ERA2AEB1002X",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'ERA2AEB1002X'",
+        "mpn": "ERA2AEB1002X",
+        "results": []
+      }
+    },
+    {
+      "mpn": "ERA2AEB15R0X",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'ERA2AEB15R0X'",
+        "mpn": "ERA2AEB15R0X",
+        "results": []
+      }
+    },
+    {
+      "mpn": "ERJ6ENF1000V",
+      "result": {
+        "mpn": "ERJ6ENF1000V",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C193990",
+            "model": "ERJ6ENF1000V",
+            "manufacturer": "PANASONIC",
+            "package": "0805",
+            "stock": 5115,
+            "price": 0.0067,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100Ω 125mW 150V Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "100Ω",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "125mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "150V",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "ERJ2GE0R00X",
+      "result": {
+        "mpn": "ERJ2GE0R00X",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C242160",
+            "model": "ERJ2GE0R00X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 662006,
+            "price": 0.0041,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-100ppm/℃~+600ppm/℃ -55℃~+155℃ 0Ω 100mW Thick Film Resistor 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "0Ω",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "-",
+              "Temperature Coefficient": "-100ppm/℃~+600ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM1555C1H270JA01D",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'GRM1555C1H270JA01D'",
+        "mpn": "GRM1555C1H270JA01D",
+        "results": []
+      }
+    },
+    {
+      "mpn": "RT0603BRB0710KL",
+      "result": {
+        "mpn": "RT0603BRB0710KL",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C860067",
+            "model": "RT0603BRB0710KL",
+            "manufacturer": "YAGEO",
+            "package": "0603",
+            "stock": 165927,
+            "price": 0.178,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 10kΩ 75V Thin Film Resistor ±0.1% ±10ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "10kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thin Film Resistor",
+              "Voltage-Supply(Max)": "75V",
+              "Tolerance": "±0.1%",
+              "Temperature Coefficient": "±10ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "RT0603BRB073KL",
+      "result": {
+        "mpn": "RT0603BRB073KL",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C860379",
+            "model": "RT0603BRB073KL",
+            "manufacturer": "YAGEO",
+            "package": "0603",
+            "stock": 3758,
+            "price": 0.1883,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 3kΩ 75V Thin Film Resistor ±0.1% ±10ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "3kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thin Film Resistor",
+              "Voltage-Supply(Max)": "75V",
+              "Tolerance": "±0.1%",
+              "Temperature Coefficient": "±10ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "RT0603BRB0715RL",
+      "result": {
+        "mpn": "RT0603BRB0715RL",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C860136",
+            "model": "RT0603BRB0715RL",
+            "manufacturer": "YAGEO",
+            "package": "0603",
+            "stock": 592,
+            "price": 0.1883,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 15Ω 75V Thin Film Resistor ±0.1% ±10ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "15Ω",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thin Film Resistor",
+              "Voltage-Supply(Max)": "75V",
+              "Tolerance": "±0.1%",
+              "Temperature Coefficient": "±10ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "RT0603BRB07100KL",
+      "result": {
+        "mpn": "RT0603BRB07100KL",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C860056",
+            "model": "RT0603BRB07100KL",
+            "manufacturer": "YAGEO",
+            "package": "0603",
+            "stock": 39159,
+            "price": 0.1671,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100kΩ 100mW 75V Thin Film Resistor ±0.1% ±10ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "100kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thin Film Resistor",
+              "Voltage-Supply(Max)": "75V",
+              "Tolerance": "±0.1%",
+              "Temperature Coefficient": "±10ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "RT0603BRB072K87L",
+      "result": {
+        "error": "No JLCPCB parts found for MPN 'RT0603BRB072K87L'",
+        "mpn": "RT0603BRB072K87L",
+        "results": []
+      }
+    },
+    {
+      "mpn": "RT0603BRB071K1L",
+      "result": {
+        "mpn": "RT0603BRB071K1L",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C860186",
+            "model": "RT0603BRB071K1L",
+            "manufacturer": "YAGEO",
+            "package": "0603",
+            "stock": 718,
+            "price": 0.1883,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 1.1kΩ 100mW 75V Thin Film Resistor ±0.1% ±10ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "1.1kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thin Film Resistor",
+              "Voltage-Supply(Max)": "75V",
+              "Tolerance": "±0.1%",
+              "Temperature Coefficient": "±10ppm/℃"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mpn": "GRM155R71H223KA12D",
+      "result": {
+        "mpn": "GRM155R71H223KA12D",
+        "total": 1,
+        "results": [
+          {
+            "lcsc": "C77023",
+            "model": "GRM155R71H223KA12D",
+            "manufacturer": "Murata Electronics",
+            "package": "0402",
+            "stock": 240240,
+            "price": 0.0134,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Capacitors",
+            "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+            "subcategory_id": 2929,
+            "mounting_type": "smd",
+            "description": "22nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+            "specs": {
+              "Voltage Rating": "50V",
+              "Tolerance": "±10%",
+              "Capacitance": "22nF",
+              "Temperature Coefficient": "X7R"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

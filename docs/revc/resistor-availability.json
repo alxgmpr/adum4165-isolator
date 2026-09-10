@@ -1,0 +1,1091 @@
+{
+  "date": "2026-09-10",
+  "note": "Indexed PCBParts inventory; no stock reservation.",
+  "queries": [
+    {
+      "query": "ERJ2RKF9093X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C2085054",
+            "model": "ERJ2RKF9093X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 42,
+            "price": 0.0056,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 50V 909kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "909kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "50V",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF9093X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF9093X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF9093X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF1003X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C192169",
+            "model": "ERJ2RKF1003X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 447750,
+            "price": 0.0082,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100kΩ 100mW 50V Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "100kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "50V",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF1003X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF1003X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF1003X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF2872X",
+      "result": {
+        "results": [],
+        "total": 0,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 0
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF2872X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 0
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF2872X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF2872X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF2003X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C413111",
+            "model": "ERJ2RKF2003X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 52784,
+            "price": 0.0096,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 200kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "200kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "-",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF2003X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF2003X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF2003X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF4992X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C409918",
+            "model": "ERJ2RKF4992X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 35517,
+            "price": 0.0054,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 49.9kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "49.9kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "-",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF4992X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF4992X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF4992X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF2701X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C413089",
+            "model": "ERJ2RKF2701X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 42806,
+            "price": 0.0043,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 2.7kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "2.7kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "-",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF2701X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF2701X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF2701X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF1782X",
+      "result": {
+        "results": [],
+        "total": 0,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 0
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF1782X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 0
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF1782X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF1782X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF2372X",
+      "result": {
+        "results": [],
+        "total": 0,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 0
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF2372X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 0
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF2372X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF2372X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF1022X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C2076944",
+            "model": "ERJ2RKF1022X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 16,
+            "price": 0.0076,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 10.2kΩ 100mW 50V Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "10.2kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "50V",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF1022X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF1022X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF1022X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF2982X",
+      "result": {
+        "results": [],
+        "total": 0,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 0
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF2982X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 0
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF2982X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF2982X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF7502X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C413105",
+            "model": "ERJ2RKF7502X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 7250,
+            "price": 0.005,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 75kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "75kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "-",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF7502X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF7502X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF7502X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF1202X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C413095",
+            "model": "ERJ2RKF1202X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 28440,
+            "price": 0.005,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 12kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "12kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "-",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF1202X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF1202X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF1202X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF4701X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C400631",
+            "model": "ERJ2RKF4701X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 26660,
+            "price": 0.0128,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 4.7kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "4.7kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF4701X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF4701X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF4701X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF1001X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C242161",
+            "model": "ERJ2RKF1001X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 165684,
+            "price": 0.0073,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 1kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "1kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "-",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF1001X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF1001X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF1001X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF4642X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C416544",
+            "model": "ERJ2RKF4642X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 3757,
+            "price": 0.0052,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100V 100mW 46.4kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "46.4kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "100V",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF4642X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF4642X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF4642X"
+        }
+      }
+    },
+    {
+      "query": "ERJ2RKF3301X",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C409909",
+            "model": "ERJ2RKF3301X",
+            "manufacturer": "PANASONIC",
+            "package": "0402",
+            "stock": 20972,
+            "price": 0.0047,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 3.3kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "3.3kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thick Film Resistor",
+              "Voltage-Supply(Max)": "-",
+              "Tolerance": "±1%",
+              "Temperature Coefficient": "±100ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "ERJ2RKF3301X",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "ERJ2RKF3301X",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "ERJ2RKF3301X"
+        }
+      }
+    },
+    {
+      "query": "RT0603BRD072K87L",
+      "result": {
+        "results": [
+          {
+            "lcsc": "C861305",
+            "model": "RT0603BRD072K87L",
+            "manufacturer": "YAGEO",
+            "package": "0603",
+            "stock": 4742,
+            "price": 0.035,
+            "price_10": null,
+            "library_type": "extended",
+            "preferred": false,
+            "category": "Resistors",
+            "subcategory": "Chip Resistor - Surface Mount",
+            "subcategory_id": 2980,
+            "mounting_type": "smd",
+            "description": "-55℃~+155℃ 100mW 2.87kΩ 75V Thin Film Resistor ±0.1% ±25ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+            "specs": {
+              "Resistance": "2.87kΩ",
+              "Operating Temperature": "-55℃~+155℃",
+              "Power(Watts)": "100mW",
+              "Type": "Thin Film Resistor",
+              "Voltage-Supply(Max)": "75V",
+              "Tolerance": "±0.1%",
+              "Temperature Coefficient": "±25ppm/℃"
+            }
+          }
+        ],
+        "total": 1,
+        "page_info": {
+          "limit": 50,
+          "offset": 0,
+          "returned": 1
+        },
+        "filters_applied": {
+          "query": "RT0603BRD072K87L",
+          "subcategory_id": null,
+          "subcategory_name": null,
+          "subcategory_resolved": null,
+          "category_id": null,
+          "category_name": null,
+          "category_resolved": null,
+          "spec_filters": [],
+          "library_type": null,
+          "prefer_no_fee": true,
+          "min_stock": 10,
+          "package": null,
+          "packages": null,
+          "manufacturer": null,
+          "match_all_terms": true
+        },
+        "library_type_counts": {
+          "basic": 0,
+          "preferred": 0,
+          "extended": 1
+        },
+        "no_fee_available": false,
+        "parsed": {
+          "original_query": "RT0603BRD072K87L",
+          "detected": {},
+          "subcategory": null,
+          "package": null,
+          "mounting_type": null,
+          "spec_filters": [],
+          "remaining_text": "RT0603BRD072K87L"
+        }
+      }
+    }
+  ]
+}

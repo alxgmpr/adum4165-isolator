@@ -1,0 +1,6 @@
+#VRML V2.0 utf8
+# Open-frame dimensional envelope; cover shown separately in assembly review.
+Transform { translation -2.48031496 0.00000000 0.52559055 children [ Shape { appearance Appearance { material Material { diffuseColor 0.7 0.7 0.7 } } geometry Box { size 0.07874016 5.41732283 1.05118110 } } ] }
+Transform { translation 2.48031496 0.00000000 0.52559055 children [ Shape { appearance Appearance { material Material { diffuseColor 0.7 0.7 0.7 } } geometry Box { size 0.07874016 5.41732283 1.05118110 } } ] }
+Transform { translation 0.00000000 -2.66929134 0.52559055 children [ Shape { appearance Appearance { material Material { diffuseColor 0.7 0.7 0.7 } } geometry Box { size 5.03937008 0.07874016 1.05118110 } } ] }
+Transform { translation 0.00000000 2.66929134 0.52559055 children [ Shape { appearance Appearance { material Material { diffuseColor 0.7 0.7 0.7 } } geometry Box { size 5.03937008 0.07874016 1.05118110 } } ] }

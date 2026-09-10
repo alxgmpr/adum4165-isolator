@@ -1,0 +1,160 @@
+(footprint "TI_RUX0012A_VQFN-HR12_2x2.5mm"
+  (version 20260206)
+  (generator "kicad-footprint-generator")
+  (layer "F.Cu")
+  (descr "TI TPS2121 SLVSEA3F p39 RUX0012A 4224010/A: 1.05x0.4 power lands and 0.2x0.6 signal lands; no thermal vias; see docs/revc/footprint-verification.md")
+  (property "Reference" "REF**"
+    (at 0 -2.5 0)
+    (layer "F.SilkS")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (property "Value" "TI_RUX0012A_VQFN-HR12_2x2.5mm"
+    (at 0 2.5 0)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (attr smd)
+  (duplicate_pad_numbers_are_jumpers no)
+  (fp_line
+    (start -1.45 -1.7)
+    (end -1.45 -1.2)
+    (stroke
+      (width 0.12)
+      (type solid)
+    )
+    (layer "F.SilkS")
+  )
+  (fp_line
+    (start -1.45 -1.7)
+    (end -0.95 -1.7)
+    (stroke
+      (width 0.12)
+      (type solid)
+    )
+    (layer "F.SilkS")
+  )
+  (fp_rect
+    (start -1.45 -1.7)
+    (end 1.45 1.7)
+    (stroke
+      (width 0.05)
+      (type solid)
+    )
+    (fill no)
+    (layer "F.CrtYd")
+  )
+  (fp_rect
+    (start -1 -1.25)
+    (end 1 1.25)
+    (stroke
+      (width 0.1)
+      (type solid)
+    )
+    (fill no)
+    (layer "F.Fab")
+  )
+  (fp_text user "${REFERENCE}"
+    (at 0 0 0)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 0.7 0.7)
+        (thickness 0.1)
+      )
+    )
+  )
+  (pad "1" smd roundrect
+    (at -0.675 -0.35)
+    (size 1.05 0.4)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.125)
+  )
+  (pad "2" smd roundrect
+    (at -0.675 0.35)
+    (size 1.05 0.4)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.125)
+  )
+  (pad "3" smd roundrect
+    (at -0.75 1.15)
+    (size 0.2 0.6)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.25)
+  )
+  (pad "4" smd roundrect
+    (at -0.25 1.15)
+    (size 0.2 0.6)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.25)
+  )
+  (pad "5" smd roundrect
+    (at 0.25 1.15)
+    (size 0.2 0.6)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.25)
+  )
+  (pad "6" smd roundrect
+    (at 0.75 1.15)
+    (size 0.2 0.6)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.25)
+  )
+  (pad "7" smd roundrect
+    (at 0.675 0.35)
+    (size 1.05 0.4)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.125)
+  )
+  (pad "8" smd roundrect
+    (at 0.675 -0.35)
+    (size 1.05 0.4)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.125)
+  )
+  (pad "9" smd roundrect
+    (at 0.75 -1.15)
+    (size 0.2 0.6)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.25)
+  )
+  (pad "10" smd roundrect
+    (at 0.25 -1.15)
+    (size 0.2 0.6)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.25)
+  )
+  (pad "11" smd roundrect
+    (at -0.25 -1.15)
+    (size 0.2 0.6)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.25)
+  )
+  (pad "12" smd roundrect
+    (at -0.75 -1.15)
+    (size 0.2 0.6)
+    (layers "F.Cu" "F.Mask" "F.Paste")
+    (roundrect_rratio 0.25)
+  )
+  (embedded_fonts no)
+  (model "${KIPRJMOD}/hub-lib.3dshapes/TI_RUX0012A_VQFN-HR12_2x2.5mm.wrl"
+    (offset
+      (xyz 0 0 0)
+    )
+    (scale
+      (xyz 1 1 1)
+    )
+    (rotate
+      (xyz 0 0 0)
+    )
+  )
+)

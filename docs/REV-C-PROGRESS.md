@@ -45,3 +45,13 @@ orders are authorized. Unrouted connections will be reported separately.
 - Started manufacturer/package and indexed availability checks. Exact supporting-part fields and most footprints remain incomplete.
 - KiCad was updated by the user's other task; CLI verification now runs on 10.99.0-3770-gd7e34de179. No unrelated open PCB was edited.
 - Next: finish BOM/footprints and quantitative power checks, redraw and visually inspect the schematic, synchronize/place every PCB part, then verify geometry and deliver routing/bring-up evidence. PCB remains the original one-transformer placeholder with no tracks or vias.
+
+## Checkpoint 3 — exact BOM and local lands (2026-09-10)
+
+- Assigned all 286 physical schematic components to project-local footprints; 37 local patterns include two future board-only mechanical patterns. Purchase fields contain exact MPN, manufacturer, rating and source. The 17 exposed test pads are documented PCB features, excluded from purchase BOM. Five DNP rework links remain explicit. Cover ordering data lives on SH1/SH2 schematic fields and exports separately.
+- Generated the Microchip M2 SQFN36, TI RUX12, TI RYQ21 and Coilcraft XFL4020 lands using official KiCad Library Tools and manufacturer dimensions. Retained the verified TI DP28 HV option. Visually reviewed the nine-pattern dimensional render; no tracks or vias were introduced.
+- Checked manufacturer connector and safety-capacitor drawings in the browser. The USB-A choice is an upright right-angle socket requiring approximately 15 mm top-side clearance. Verified the 14 mm capacitor pitch from the exact ordering code. Checked small-shield frame and assembled heights against its drawing.
+- Copied models locally. Missing detailed models have labeled dimensional envelopes; these limits and source provenance are documented, not represented as manufacturer assembly models.
+- Added reproducible review-only exports and a 974-row symbol/pad/net audit. Physical inventory and all connected pin/net comparisons pass. BOM is exported from schematic fields.
+- Enabled previously ignored footprint-filter and four-way-junction ERC checks. Removed duplicate wires caused by stacked connector pins. Fixed a verifier side effect that overwrote the library's power flags. Current ERC: **0 errors, 0 warnings, no exclusions**; only single-use global-label and SPICE checks remain intentionally inapplicable to this capture.
+- PCB is still the single-transformer placeholder. Electrical power/compensation calculations, EEPROM content, schematic visual cleanup, PCB placement/geometry and final handoff evidence remain open. This checkpoint is not a placement or final design signoff.

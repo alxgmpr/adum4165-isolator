@@ -1,0 +1,62 @@
+{
+  "bodies": {
+    "TI_DP0028A-C02_HV_SSOP28_8.2mm_Clearance": [
+      7.5,
+      10.3,
+      2.65
+    ],
+    "Microchip_SQFN36_6x6mm_EP3.7mm": [
+      6.1,
+      6.1,
+      1
+    ],
+    "TI_RUX0012A_VQFN-HR12_2x2.5mm": [
+      2,
+      2.5,
+      1
+    ],
+    "TI_RYQ0021A_VQFN21_3x5mm": [
+      5.1,
+      3.1,
+      1
+    ],
+    "Coilcraft_XFL4020_4x4mm": [
+      4.3,
+      4.3,
+      2.1
+    ],
+    "TPS630701RNM_VQFN-HR-15": [
+      3,
+      2.5,
+      1
+    ],
+    "C_1210_3225Metric": [
+      3.5,
+      2.7,
+      2.7
+    ],
+    "Texas_X2QFN-12_1.6x1.6mm_P0.4mm": [
+      1.7,
+      1.7,
+      0.4
+    ],
+    "USB_A_Wuerth_614004134726_Horizontal": [
+      19.6,
+      7.3,
+      14.8
+    ]
+  },
+  "frames": {
+    "Laird_Technologies_BMI-S-201-F_13.66x12.70mm": [
+      12.8,
+      13.76,
+      2.67
+    ],
+    "Laird_Technologies_BMI-S-209-F_29.36x18.50mm": [
+      29.46,
+      18.6,
+      7.13
+    ]
+  },
+  "notes": "Dimensioned review envelopes; connector datum and covered-frame volumes are independently checked in placement review. Not manufacturer assembly STEP models."
+}

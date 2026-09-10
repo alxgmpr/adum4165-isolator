@@ -125,5 +125,6 @@ def build_library(parts):
         # Some stock gate symbols omit the physically unused pin 1.
         assert actual<=expected,(p['ref'],'missing nets for pins',actual-expected)
         assert all(p['pins'][k] is None for k in expected-actual),(p['ref'],'nonexistent symbol pins',expected-actual)
-    write(ROOT/'hub-lib.kicad_sym',n('kicad_symbol_lib',n('version',20250114),n('generator','kicad_symbol_editor'),*symbols.values()))
+    # Pure resolver: capture.py writes the complete library, including power
+    # symbols. Verification must never overwrite that canonical library.
     return symbols

@@ -1,0 +1,3 @@
+#VRML V2.0 utf8
+# Dimensioned body envelope; not a detailed assembly model.
+Transform { translation 0.00000000 0 0.19685039 children [ Shape { appearance Appearance { material Material { diffuseColor 0.20 0.21 0.24 } } geometry Box { size 2.00787402 1.22047244 0.39370079 } } ] }

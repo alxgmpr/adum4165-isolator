@@ -3328,7 +3328,7 @@
         )
       )
     )
-    (property "Footprint" "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
+    (property "Footprint" "hub-lib:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
       (at 39.37 64.77 0)
       (effects
         (font
@@ -3337,7 +3337,7 @@
         hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/9e56b777c022540fcce7c7f67825f55e.pdf?productCode=C165948"
       (at 39.37 64.77 0)
       (effects
         (font
@@ -3373,7 +3373,34 @@
         hide
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C165948"
+      (at 39.37 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 39.37 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverMPN" ""
+      (at 39.37 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverQuantity" ""
       (at 39.37 64.77 0)
       (effects
         (font
@@ -3581,17 +3608,6 @@
     (at 54.61 77.47)
     (uuid "934b7b80-f5ec-56eb-abeb-b06f1b7c291b")
   )
-  (wire
-    (pts
-      (xy 54.61 49.529999999999994)
-      (xy 59.69 49.53)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "f5cd00db-60da-56d8-9ee4-0dec1f3cb619")
-  )
   (global_label "VBUS_HOST"
     (shape bidirectional)
     (at 59.69 49.53 180)
@@ -3611,39 +3627,6 @@
         hide
       )
     )
-  )
-  (wire
-    (pts
-      (xy 39.37 87.63)
-      (xy 39.37 92.71)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "c597e238-3337-5784-bcbe-2bfa290bd132")
-  )
-  (wire
-    (pts
-      (xy 39.37 87.63)
-      (xy 39.37 92.71)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "c597e238-3337-5784-bcbe-2bfa290bd132")
-  )
-  (wire
-    (pts
-      (xy 54.61 49.529999999999994)
-      (xy 59.69 49.53)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "f5cd00db-60da-56d8-9ee4-0dec1f3cb619")
   )
   (global_label "VBUS_HOST"
     (shape bidirectional)
@@ -3762,17 +3745,6 @@
     (at 54.61 80.00999999999999)
     (uuid "e499fb82-fe49-5a98-a63c-42b0bdd674d8")
   )
-  (wire
-    (pts
-      (xy 54.61 49.529999999999994)
-      (xy 59.69 49.53)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "f5cd00db-60da-56d8-9ee4-0dec1f3cb619")
-  )
   (global_label "VBUS_HOST"
     (shape bidirectional)
     (at 59.69 49.53 180)
@@ -3795,17 +3767,6 @@
   )
   (wire
     (pts
-      (xy 39.37 87.63)
-      (xy 39.37 92.71)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "c597e238-3337-5784-bcbe-2bfa290bd132")
-  )
-  (wire
-    (pts
       (xy 31.749999999999996 87.63)
       (xy 31.75 92.71)
     )
@@ -3825,57 +3786,6 @@
       (type default)
     )
     (uuid "0d687207-fff3-5b12-9637-e1d690c90435")
-  )
-  (wire
-    (pts
-      (xy 39.37 92.71)
-      (xy 39.37 92.71)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "2ff2ed32-0a1a-5d34-820d-1533095d5426")
-  )
-  (wire
-    (pts
-      (xy 39.37 92.71)
-      (xy 39.37 92.71)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "2ff2ed32-0a1a-5d34-820d-1533095d5426")
-  )
-  (wire
-    (pts
-      (xy 39.37 92.71)
-      (xy 39.37 92.71)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "2ff2ed32-0a1a-5d34-820d-1533095d5426")
-  )
-  (junction
-    (at 39.37 92.71)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid "e56e8d0a-4849-558e-9af6-27eaebc42c8c")
-  )
-  (junction
-    (at 39.37 92.71)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid "e56e8d0a-4849-558e-9af6-27eaebc42c8c")
-  )
-  (junction
-    (at 39.37 92.71)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid "e56e8d0a-4849-558e-9af6-27eaebc42c8c")
   )
   (global_label "GND1"
     (shape bidirectional)
@@ -3921,7 +3831,7 @@
         )
       )
     )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+    (property "Footprint" "hub-lib:SOT-23-6"
       (at 120.65 67.31 0)
       (effects
         (font
@@ -3930,7 +3840,7 @@
         hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
       (at 120.65 67.31 0)
       (effects
         (font
@@ -3966,7 +3876,34 @@
         hide
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C7519"
+      (at 120.65 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 120.65 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverMPN" ""
+      (at 120.65 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverQuantity" ""
       (at 120.65 67.31 0)
       (effects
         (font
@@ -4212,7 +4149,7 @@
         )
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:SOT-23-5"
       (at 204.47 64.77 0)
       (effects
         (font
@@ -4221,7 +4158,7 @@
         hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv755p.pdf"
       (at 204.47 64.77 0)
       (effects
         (font
@@ -4257,7 +4194,34 @@
         hide
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C404027"
+      (at 204.47 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 204.47 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverMPN" ""
+      (at 204.47 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverQuantity" ""
       (at 204.47 64.77 0)
       (effects
         (font
@@ -4442,7 +4406,7 @@
         )
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:Texas_X2QFN-12_1.6x1.6mm_P0.4mm"
       (at 293.37 74.93 0)
       (effects
         (font
@@ -4451,7 +4415,7 @@
         hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tusb320lai.pdf"
       (at 293.37 74.93 0)
       (effects
         (font
@@ -4487,7 +4451,34 @@
         hide
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C132554"
+      (at 293.37 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 293.37 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverMPN" ""
+      (at 293.37 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverQuantity" ""
       (at 293.37 74.93 0)
       (effects
         (font
@@ -4856,7 +4847,7 @@
         )
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:SOT-23-5"
       (at 52.07 158.75 0)
       (effects
         (font
@@ -4865,7 +4856,7 @@
         hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf"
       (at 52.07 158.75 0)
       (effects
         (font
@@ -4901,7 +4892,34 @@
         hide
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C7827"
+      (at 52.07 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 52.07 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverMPN" ""
+      (at 52.07 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverQuantity" ""
       (at 52.07 158.75 0)
       (effects
         (font
@@ -5086,7 +5104,7 @@
         )
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:SOT-23-6"
       (at 140.97 158.75 0)
       (effects
         (font
@@ -5095,7 +5113,7 @@
         hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2553.pdf"
       (at 140.97 158.75 0)
       (effects
         (font
@@ -5131,7 +5149,34 @@
         hide
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C55266"
+      (at 140.97 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 140.97 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverMPN" ""
+      (at 140.97 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverQuantity" ""
       (at 140.97 158.75 0)
       (effects
         (font
@@ -5377,7 +5422,7 @@
         )
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:SOT-23-5"
       (at 229.87 158.75 0)
       (effects
         (font
@@ -5386,7 +5431,7 @@
         hide
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv62568.pdf"
       (at 229.87 158.75 0)
       (effects
         (font
@@ -5422,7 +5467,34 @@
         hide
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C163219"
+      (at 229.87 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 229.87 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverMPN" ""
+      (at 229.87 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "CoverQuantity" ""
       (at 229.87 158.75 0)
       (effects
         (font
@@ -5636,7 +5708,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:C_0402_1005Metric"
       (at 35.56 209.55 0)
       (effects
         (font
@@ -5646,7 +5718,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H104KE14%23"
       (at 35.56 209.55 0)
       (effects
         (font
@@ -5666,7 +5738,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "GRM155R71H104KE14D"
       (at 35.56 209.55 0)
       (effects
         (font
@@ -5676,7 +5748,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Murata Manufacturing"
       (at 35.56 209.55 0)
       (effects
         (font
@@ -5686,7 +5758,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77020"
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "50V X7R 10%"
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 35.56 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 35.56 209.55 0)
       (effects
         (font
@@ -5799,7 +5901,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:C_0603_1608Metric"
       (at 78.74 209.55 0)
       (effects
         (font
@@ -5809,7 +5911,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61E105KA12%23"
       (at 78.74 209.55 0)
       (effects
         (font
@@ -5829,7 +5931,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "GRM188R61E105KA12D"
       (at 78.74 209.55 0)
       (effects
         (font
@@ -5839,7 +5941,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Murata Manufacturing"
       (at 78.74 209.55 0)
       (effects
         (font
@@ -5849,7 +5951,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77046"
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "25V X5R 10%"
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 78.74 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 78.74 209.55 0)
       (effects
         (font
@@ -5962,7 +6094,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:C_0603_1608Metric"
       (at 121.92 209.55 0)
       (effects
         (font
@@ -5972,7 +6104,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61E105KA12%23"
       (at 121.92 209.55 0)
       (effects
         (font
@@ -5992,7 +6124,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "GRM188R61E105KA12D"
       (at 121.92 209.55 0)
       (effects
         (font
@@ -6002,7 +6134,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Murata Manufacturing"
       (at 121.92 209.55 0)
       (effects
         (font
@@ -6012,7 +6144,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77046"
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "25V X5R 10%"
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 121.92 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 121.92 209.55 0)
       (effects
         (font
@@ -6125,7 +6287,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 165.1 209.55 0)
       (effects
         (font
@@ -6135,7 +6297,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 165.1 209.55 0)
       (effects
         (font
@@ -6155,7 +6317,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF9093X"
       (at 165.1 209.55 0)
       (effects
         (font
@@ -6165,7 +6327,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 165.1 209.55 0)
       (effects
         (font
@@ -6175,7 +6337,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C2085054"
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 165.1 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 165.1 209.55 0)
       (effects
         (font
@@ -6288,7 +6480,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 208.28 209.55 0)
       (effects
         (font
@@ -6298,7 +6490,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 208.28 209.55 0)
       (effects
         (font
@@ -6318,7 +6510,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF1002X"
       (at 208.28 209.55 0)
       (effects
         (font
@@ -6328,7 +6520,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 208.28 209.55 0)
       (effects
         (font
@@ -6338,7 +6530,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C191123"
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 208.28 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 208.28 209.55 0)
       (effects
         (font
@@ -6451,7 +6673,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 251.46 209.55 0)
       (effects
         (font
@@ -6461,7 +6683,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 251.46 209.55 0)
       (effects
         (font
@@ -6481,7 +6703,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF1002X"
       (at 251.46 209.55 0)
       (effects
         (font
@@ -6491,7 +6713,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 251.46 209.55 0)
       (effects
         (font
@@ -6501,7 +6723,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C191123"
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 251.46 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 251.46 209.55 0)
       (effects
         (font
@@ -6614,7 +6866,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:C_0402_1005Metric"
       (at 294.64 209.55 0)
       (effects
         (font
@@ -6624,7 +6876,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H104KE14%23"
       (at 294.64 209.55 0)
       (effects
         (font
@@ -6644,7 +6896,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "GRM155R71H104KE14D"
       (at 294.64 209.55 0)
       (effects
         (font
@@ -6654,7 +6906,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Murata Manufacturing"
       (at 294.64 209.55 0)
       (effects
         (font
@@ -6664,7 +6916,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77020"
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "50V X7R 10%"
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 294.64 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 294.64 209.55 0)
       (effects
         (font
@@ -6777,7 +7059,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:C_0402_1005Metric"
       (at 337.82 209.55 0)
       (effects
         (font
@@ -6787,7 +7069,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H104KE14%23"
       (at 337.82 209.55 0)
       (effects
         (font
@@ -6807,7 +7089,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "GRM155R71H104KE14D"
       (at 337.82 209.55 0)
       (effects
         (font
@@ -6817,7 +7099,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Murata Manufacturing"
       (at 337.82 209.55 0)
       (effects
         (font
@@ -6827,7 +7109,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77020"
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "50V X7R 10%"
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 337.82 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 337.82 209.55 0)
       (effects
         (font
@@ -6940,7 +7252,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 381.0 209.55 0)
       (effects
         (font
@@ -6950,7 +7262,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 381.0 209.55 0)
       (effects
         (font
@@ -6970,7 +7282,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF1003X"
       (at 381.0 209.55 0)
       (effects
         (font
@@ -6980,7 +7292,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 381.0 209.55 0)
       (effects
         (font
@@ -6990,7 +7302,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C192169"
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 381.0 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 381.0 209.55 0)
       (effects
         (font
@@ -7103,7 +7445,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 35.56 234.95 0)
       (effects
         (font
@@ -7113,7 +7455,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 35.56 234.95 0)
       (effects
         (font
@@ -7133,7 +7475,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF2872X"
       (at 35.56 234.95 0)
       (effects
         (font
@@ -7143,7 +7485,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 35.56 234.95 0)
       (effects
         (font
@@ -7154,6 +7496,36 @@
       )
     )
     (property "LCSC" ""
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 35.56 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 35.56 234.95 0)
       (effects
         (font
@@ -7266,7 +7638,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 78.74 234.95 0)
       (effects
         (font
@@ -7276,7 +7648,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 78.74 234.95 0)
       (effects
         (font
@@ -7296,7 +7668,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF1002X"
       (at 78.74 234.95 0)
       (effects
         (font
@@ -7306,7 +7678,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 78.74 234.95 0)
       (effects
         (font
@@ -7316,7 +7688,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C191123"
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 78.74 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 78.74 234.95 0)
       (effects
         (font
@@ -7429,7 +7831,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:C_0402_1005Metric"
       (at 121.92 234.95 0)
       (effects
         (font
@@ -7439,7 +7841,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H104KE14%23"
       (at 121.92 234.95 0)
       (effects
         (font
@@ -7459,7 +7861,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "GRM155R71H104KE14D"
       (at 121.92 234.95 0)
       (effects
         (font
@@ -7469,7 +7871,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Murata Manufacturing"
       (at 121.92 234.95 0)
       (effects
         (font
@@ -7479,7 +7881,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77020"
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "50V X7R 10%"
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 121.92 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 121.92 234.95 0)
       (effects
         (font
@@ -7570,7 +8002,7 @@
     (lib_id "hub-lib:Connector_TestPoint")
     (at 165.1 234.95 0)
     (unit 1)
-    (in_bom yes)
+    (in_bom no)
     (on_board yes)
     (dnp no)
     (uuid "a924bf57-b5b7-5c0b-beeb-aecf03e1eed6")
@@ -7592,7 +8024,7 @@
         (justify left)
       )
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+    (property "Footprint" "hub-lib:TestPoint_Pad_D1.0mm"
       (at 165.1 234.95 0)
       (effects
         (font
@@ -7632,7 +8064,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "PCB feature"
       (at 165.1 234.95 0)
       (effects
         (font
@@ -7643,6 +8075,36 @@
       )
     )
     (property "LCSC" ""
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "Exposed test pad; no purchased part"
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 165.1 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 165.1 234.95 0)
       (effects
         (font
@@ -7699,7 +8161,7 @@
     (lib_id "hub-lib:Connector_TestPoint")
     (at 208.28 234.95 0)
     (unit 1)
-    (in_bom yes)
+    (in_bom no)
     (on_board yes)
     (dnp no)
     (uuid "dd39a577-9aac-5fdb-ba95-57e4f8b9c152")
@@ -7721,7 +8183,7 @@
         (justify left)
       )
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+    (property "Footprint" "hub-lib:TestPoint_Pad_D1.0mm"
       (at 208.28 234.95 0)
       (effects
         (font
@@ -7761,7 +8223,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "PCB feature"
       (at 208.28 234.95 0)
       (effects
         (font
@@ -7772,6 +8234,36 @@
       )
     )
     (property "LCSC" ""
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "Exposed test pad; no purchased part"
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 208.28 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 208.28 234.95 0)
       (effects
         (font
@@ -7850,7 +8342,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:Coilcraft_XFL4020_4x4mm"
       (at 251.46 234.95 0)
       (effects
         (font
@@ -7860,7 +8352,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.coilcraft.com/getmedia/50632d43-da1b-4cdb-8ab4-3029cab51df3/xfl4020.pdf"
       (at 251.46 234.95 0)
       (effects
         (font
@@ -7900,7 +8392,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C122469"
+      (at 251.46 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 251.46 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 251.46 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 251.46 234.95 0)
       (effects
         (font
@@ -8013,7 +8535,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:C_0805_2012Metric"
       (at 294.64 234.95 0)
       (effects
         (font
@@ -8023,7 +8545,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM21BR61E475KA12%23"
       (at 294.64 234.95 0)
       (effects
         (font
@@ -8043,7 +8565,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "GRM21BR61E475KA12L"
       (at 294.64 234.95 0)
       (effects
         (font
@@ -8053,7 +8575,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Murata Manufacturing"
       (at 294.64 234.95 0)
       (effects
         (font
@@ -8063,7 +8585,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77077"
+      (at 294.64 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "25V X5R 10%"
+      (at 294.64 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 294.64 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 294.64 234.95 0)
       (effects
         (font
@@ -8176,7 +8728,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:C_1210_3225Metric"
       (at 337.82 234.95 0)
       (effects
         (font
@@ -8186,7 +8738,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23"
       (at 337.82 234.95 0)
       (effects
         (font
@@ -8206,7 +8758,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "GRM32ER71E226KE15L"
       (at 337.82 234.95 0)
       (effects
         (font
@@ -8216,7 +8768,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Murata Manufacturing"
       (at 337.82 234.95 0)
       (effects
         (font
@@ -8226,7 +8778,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C21397"
+      (at 337.82 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "25V X7R 10%"
+      (at 337.82 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 337.82 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 337.82 234.95 0)
       (effects
         (font
@@ -8339,7 +8921,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 381.0 234.95 0)
       (effects
         (font
@@ -8349,7 +8931,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 381.0 234.95 0)
       (effects
         (font
@@ -8369,7 +8951,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF2003X"
       (at 381.0 234.95 0)
       (effects
         (font
@@ -8379,7 +8961,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 381.0 234.95 0)
       (effects
         (font
@@ -8389,7 +8971,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C413111"
+      (at 381.0 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 381.0 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 381.0 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 381.0 234.95 0)
       (effects
         (font
@@ -8502,7 +9114,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 35.56 260.35 0)
       (effects
         (font
@@ -8512,7 +9124,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 35.56 260.35 0)
       (effects
         (font
@@ -8532,7 +9144,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF1003X"
       (at 35.56 260.35 0)
       (effects
         (font
@@ -8542,7 +9154,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 35.56 260.35 0)
       (effects
         (font
@@ -8552,7 +9164,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C192169"
+      (at 35.56 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 35.56 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 35.56 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 35.56 260.35 0)
       (effects
         (font
@@ -8665,7 +9307,7 @@
         (justify left)
       )
     )
-    (property "Footprint" "Diode_SMD:D_SOD-523"
+    (property "Footprint" "hub-lib:D_SOD-523"
       (at 78.74 260.35 0)
       (effects
         (font
@@ -8675,7 +9317,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/T6V0S5A.pdf"
       (at 78.74 260.35 0)
       (effects
         (font
@@ -8715,7 +9357,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C19950551"
+      (at 78.74 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 78.74 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 78.74 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 78.74 260.35 0)
       (effects
         (font
@@ -8828,7 +9500,7 @@
         (justify left)
       )
     )
-    (property "Footprint" ""
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
       (at 121.92 260.35 0)
       (effects
         (font
@@ -8838,7 +9510,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
       (at 121.92 260.35 0)
       (effects
         (font
@@ -8858,7 +9530,7 @@
         (justify left)
       )
     )
-    (property "MPN" ""
+    (property "MPN" "ERJ2RKF3301X"
       (at 121.92 260.35 0)
       (effects
         (font
@@ -8868,7 +9540,7 @@
         (justify left)
       )
     )
-    (property "Manufacturer" ""
+    (property "Manufacturer" "Panasonic Industry"
       (at 121.92 260.35 0)
       (effects
         (font
@@ -8878,7 +9550,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C409909"
+      (at 121.92 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 121.92 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 121.92 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 121.92 260.35 0)
       (effects
         (font
@@ -8991,7 +9693,7 @@
         (justify left)
       )
     )
-    (property "Footprint" "LED_SMD:LED_0603_1608Metric"
+    (property "Footprint" "hub-lib:LED_0603_1608Metric"
       (at 165.1 260.35 0)
       (effects
         (font
@@ -9001,7 +9703,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://optoelectronics.liteon.com/upload/download/DS22-2000-213/LTST-C190KGKT.pdf"
       (at 165.1 260.35 0)
       (effects
         (font
@@ -9041,7 +9743,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C125094"
+      (at 165.1 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 165.1 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 165.1 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 165.1 260.35 0)
       (effects
         (font
@@ -9154,7 +9886,7 @@
         (justify left)
       )
     )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+    (property "Footprint" "hub-lib:SOT-23"
       (at 208.28 260.35 0)
       (effects
         (font
@@ -9164,7 +9896,7 @@
         (justify left)
       )
     )
-    (property "Datasheet" ""
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf"
       (at 208.28 260.35 0)
       (effects
         (font
@@ -9204,7 +9936,37 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C65189"
+      (at 208.28 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 208.28 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 208.28 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 208.28 260.35 0)
       (effects
         (font
@@ -9411,6 +10173,36 @@
         (justify left)
       )
     )
+    (property "Ratings" ""
+      (at 251.46 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 251.46 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 251.46 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
     (pin "1"
       (uuid "763e870f-314c-5bac-a59d-cd3d85be0780")
     )
@@ -9540,6 +10332,36 @@
         (justify left)
       )
     )
+    (property "Ratings" ""
+      (at 294.64 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 294.64 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 294.64 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
     (pin "1"
       (uuid "21b9e80a-6a6a-5524-b478-8c043201f9a0")
     )
@@ -9660,6 +10482,36 @@
       )
     )
     (property "LCSC" ""
+      (at 337.82 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" ""
+      (at 337.82 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 337.82 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
       (at 337.82 260.35 0)
       (effects
         (font
