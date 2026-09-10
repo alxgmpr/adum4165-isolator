@@ -38,9 +38,10 @@ PANELS={
   ('Bus / external downstream supply paths','U29 U30 U47 R62 R63 C115 R116 R117 C112 C96 C97 TP10'),
   ('Core undervoltage sheds downstream loads','U31 R64 R65 R66 C94 TP11'),
   ('Mutually exclusive supply enables','U32 U41 U42 U43 R83 C95 C107 C108 C109 D14 D15 D16 D17'),
-  ('Aggregate fault fanout and source indicator','D20 D21 D22 D23 R29 D6 Q3')],
+ ],
  'bus_start':[
-  ('Bus current limit is immediate; report sustained faults after capacitor charging','U48 R121 R122 C116 C117')],
+  ('Delayed bus fault report; immediate current limit','U48 R121 R122 C116 C117'),
+  ('Aggregate fault fanout and external-source indicator','D20 D21 D22 D23 R29 D6 Q3')],
  'hub':[
   ('Shared 1 A rated 3.3 V buck','U10 L2 C30 C31 R67 TP12'),
   ('USB2514B core and per-port control','U11'),
@@ -96,7 +97,7 @@ class Layout:
             n('instances',n('project','hub',n('path',self.path,n('reference',ref),n('unit',1))))))
 
     def terminal(self,net,x,y,angle):
-        if angle in [90,270] and (net in POWER_NETS or net.startswith('GND')):
+        if (angle==270 and net in POWER_NETS) or (angle in [90,270] and net.startswith('GND')):
             self.power(net,x,y)
         else:self.elems.append(self.label(net,x,y,180 if angle==180 else 0))
 
@@ -108,6 +109,7 @@ class Layout:
         child(obj,'at')[3]=rotation
         for f in children(obj,'property'):
             if f[1] not in ['Reference','Value']:continue
+            if rotation:child(f,'at')[3]=rotation
             if ref.startswith('Q'):child(f,'at')[1]=x+10.16
             if ref.startswith(('D','L')) or ref=='CY1':
                 child(f,'at')[1:3]=[x-2.54,y-(8.89 if f[1]=='Reference' else 6.35)]
@@ -120,6 +122,8 @@ class Layout:
             for f in children(obj,'property'):
                 if f[1] in ['Reference','Value']:
                     child(f,'at')[1:3]=[x+b[0]-2.54,y-b[3]-(5.08 if f[1]=='Reference' else 2.54)]
+                    top_nets={p['pins'][num] for num,pin in p['symbol_pins'].items() if pin['at'][2]==270 and p['pins'][num]}
+                    if len(top_nets)>1:child(f,'at')[1]=x-25.4
                     eff=child(f,'effects');eff[:]=[a for a in eff if not(isinstance(a,list) and str(a[0])=='justify')]
                     eff.append(n('justify',S('right')))
         self.elems.append(obj)
@@ -137,11 +141,19 @@ class Layout:
             if key not in seen:self.elems.append(self.wire((px,py),end));seen.add(key)
             if ang in [90,270] and self.is_big(p):ends[(net,ang)].add(end)
             else:self.terminal(net,*end,ang)
-        for (net,ang),pts in ends.items():
+        top_groups=sum(ang==270 for net,ang in ends)
+        top_index=0
+        for (net,ang),pts in sorted(ends.items(),key=lambda item:(item[0][1],min(item[1])[0])):
             pts=sorted(pts)
             for a,b in zip(pts,pts[1:]):self.elems.append(self.wire(a,b))
             for pt in pts[1:-1]:self.junction(pt)
-            self.terminal(net,*pts[0],ang)
+            endpoint=pts[0]
+            if ang==270 and top_groups>1:
+                spread=snap(x+(top_index-(top_groups-1)/2)*30.48)
+                endpoint=(spread,pts[0][1]-3.81)
+                self.elems.extend([self.wire(pts[0],(spread,pts[0][1])),self.wire((spread,pts[0][1]),endpoint)])
+                top_index+=1
+            self.terminal(net,*endpoint,ang)
 
     def junction(self,pt):self.elems.append(n('junction',n('at',*pt),n('diameter',0),n('color',0,0,0,0),n('uuid',self.uid(f'j/{self.page}/{pt}'))))
 
@@ -201,7 +213,11 @@ class Layout:
             p=self.parts[rr[0]]
             longest=max([len(v) for v in p['pins'].values() if v] or [0])
             left=snap(max(12.7,longest*.75));w=snap(left+15.24+(12.7*(len(rr)-1) if kind=='bank' else 0))
-            if kind=='part' and (p['ref'].startswith(('Q','L')) or p['ref'] in ['D2','D6','D7']):w+=25.4
+            if kind=='part' and p['ref'].startswith('D'):
+                left=snap(max(20.32,longest*.9+6.35));w=snap(2*left+25.4)
+            if kind=='part' and p['ref'].startswith('Q'):
+                left=snap(max(25.4,longest*.8+10.16));w=snap(left+30.48)
+            if kind=='part' and p['ref'].startswith(('Q','L')):w+=25.4
             h=snap(25.4+(12.7*(len(rr)-1) if kind=='chain' else 0))
             if p['ref'].startswith('Q'):h=35.56
             if cx>x and cx+w>x+width:cx=x;cy+=rowh+3.81;rowh=0
@@ -239,7 +255,7 @@ def make_page(page,parts,number):
     for name,s in syms.items():z=deepcopy(s);z[1]=name;libs.append(z)
     sch=n('kicad_sch',n('version',20250114),n('generator','eeschema'),n('uuid',uid('document/'+page)),n('paper',paper),
         n('title_block',n('title',TITLE[page]),n('rev','C'),n('date','2026-09-10')),n('lib_symbols',*libs))
-    sch.extend([text(TITLE[page],20.32,17.78,2.54),text('USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placement and routing review pending',20.32,27.94)])
+    sch.extend([text(TITLE[page],20.32,17.78,2.54),text('USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placed PCB; all routing by Alex; hardware tests pending',20.32,27.94)])
     sch.extend(lay.elems);sch.append(n('embedded_fonts',S('no')))
     limit=paper=='A3' and 260 or 389
     assert max(ys)<limit,(page,'off-frame panel bottom',ys,limit)

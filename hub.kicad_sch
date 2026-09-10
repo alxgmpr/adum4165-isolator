@@ -5,7 +5,7 @@
   (paper "A2")
   (title_block
     (title "Rev C — Isolated four-port USB 2.0 hub")
-    (rev "C — verification in progress")
+    (rev "C")
     (date "2026-09-10")
   )
   (lib_symbols)
@@ -29,7 +29,7 @@
     )
     (uuid "17031bab-e739-5c0f-8a1f-56619e74c541")
   )
-  (text "Design verification in progress. PCB placement and all routing are unfinished."
+  (text "Schematic and placed PCB. UNROUTED: Alex routes all nets. Hardware validation pending."
     (at 15.24 38.1 0)
     (effects
       (font
@@ -37,7 +37,7 @@
       )
       (justify left)
     )
-    (uuid "17d5c7f8-60a9-5049-aef6-b57b49e2263e")
+    (uuid "2babcd5c-0908-591f-a261-8dfe62d5010c")
   )
   (sheet
     (at 20.32 55.88)
@@ -311,7 +311,7 @@
       )
     )
   )
-  (text "Bus-power capacitor charging and\nfault timing"
+  (text "Bus startup and aggregate fault\nreporting"
     (at 154.94 132.07999999999998 0)
     (effects
       (font
@@ -319,7 +319,7 @@
       )
       (justify left)
     )
-    (uuid "cdda5e14-14c3-5c3a-b91c-b4933e11d10e")
+    (uuid "abd53a73-125b-5f4e-8143-a6e9941033bc")
   )
   (sheet
     (at 279.4 119.38)
@@ -508,6 +508,66 @@
       (justify left)
     )
     (uuid "21bff8fb-6349-5eb2-9405-12bd6669b5be")
+  )
+  (text "DATA PATH"
+    (at 20.32 261.62 0)
+    (effects
+      (font
+        (size 2.032 2.032)
+      )
+      (justify left)
+    )
+    (uuid "984b20bf-99ca-5228-a771-48c4c3b20e30")
+  )
+  (text "J1 host -> ISOUSB211 -> USB2514B -> J3/J4 USB-A + J5/J6 USB-C"
+    (at 20.32 271.78 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "ba3b40cf-28d8-568b-bf78-9b8dfe67e858")
+  )
+  (text "POWER MODES"
+    (at 20.32 292.1 0)
+    (effects
+      (font
+        (size 2.032 2.032)
+      )
+      (justify left)
+    )
+    (uuid "01e5e4bf-79cd-57da-a144-a0f08778f4b5")
+  )
+  (text "Host must advertise at least 1.5 A: 300 mA shared downstream design budget.\nExternal J2 must advertise 3 A: 2 A total / 500 mA per port, subject to the power-report conditions.\nA default-current host requires qualified external power. Source changes cause re-enumeration."
+    (at 20.32 304.8 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "18f30d50-4488-5bd8-818d-4fcc9405477c")
+  )
+  (text "ROUTING HANDOFF"
+    (at 20.32 337.82 0)
+    (effects
+      (font
+        (size 2.032 2.032)
+      )
+      (justify left)
+    )
+    (uuid "abb4e461-76f7-5406-8240-68039cd7323a")
+  )
+  (text "291 physical components placed; 4-layer bench board. No tracks or vias.\nSeparate GND1 / GND2 shield frames. TI HV land gap: 8.20 mm nominal; other barrier rules: 8.30 mm.\nStart with docs/revc/README.md for power limits, routing priorities, EEPROM and pending hardware tests."
+    (at 20.32 350.52 0)
+    (effects
+      (font
+        (size 1.524 1.524)
+      )
+      (justify left)
+    )
+    (uuid "8a328814-77d0-56da-946a-71a2aaa53bcb")
   )
   (sheet_instances
     (path "/"

@@ -1,6 +1,6 @@
 # Rev C component and land review
 
-This is the library checkpoint, before schematic visual cleanup and PCB placement.
+This records the local-library review used by the completed unrouted placement.
 The original single-port library is unchanged. `tools/revc/footprints.py` copies
 stock lands into `hub-lib.pretty` and generates the four additional packages with
 the official KiCad Library Tools. The ISOUSB211 generator is separate.
@@ -8,7 +8,7 @@ the official KiCad Library Tools. The ISOUSB211 generator is separate.
 `symbol-pad-net-audit.csv` records every land number, function, expected net,
 position and size. `symbol-pad-net-audit.json` checks the exported schematic
 against the electrical source and checks that every connected pin has a land.
-All 286 physical symbols have an assigned local footprint. Test pads are PCB
+All 291 physical symbols have an assigned local footprint. Test pads are PCB
 features excluded from purchasing. Removable shield covers are specified by
 `CoverMPN` and `CoverQuantity` on the corresponding frame symbol.
 
@@ -35,7 +35,10 @@ example vias are placement references, not permission to route the board.
 - U6 `TPS630701RNM_VQFN-HR-15`: existing project-local RNM15 lands retained;
   they are independent of the new TI RYQ21 package. VSEL pin 15 remains GND2.
 - U3/U7/U20/U21: stock TI RWB12 pattern checked against TUSB320LAI p36.
-  Left/right pads are 0.70 × 0.20; top/bottom pads 0.20 × 0.50, 0.40 pitch.
+  The copied stock pattern uses 0.85 × 0.20 side lands and 0.20 × 0.65
+  top/bottom lands on 0.40 pitch. These extend the manufacturer's nominal
+  0.70/0.50 land lengths outward; pin pitch and inner copper clearance are
+  preserved. The dimensional audit records the actual stock geometry.
 - TPS62162 and TPS22975 use TI DSG0008A, including exposed pad 9. INA300
   uses DGS10/MSOP-10, 3 × 3 mm, 0.50 pitch, with **no exposed pad**.
   SOT-23-5/-6, SOT-23, SOIC-8, SMA, SOD-323/-523 and commodity passive
@@ -82,6 +85,11 @@ which attributes it to ai03's Type-C library, converted with FreeCAD/KiCadStepUp
 Its geometry is for visualization; the manufacturer drawing governs the land
 pattern and mechanical dimensions. The DSG8 model uses KiCad's geometrically
 matching generic WSON8 model under its original name.
+
+The final footprint model transforms align the HRO and transformer STEP axes
+with the PCB datum. CY1's disc model is raised 4 mm, placing its bottom 0.5 mm
+above the board; untrimmed leads remain visible underneath. See `MECHANICAL.md`
+for lead-trim assumptions. These transforms do not alter any land or drill.
 
 KiCad library copies retain upstream authorship; KiCad libraries use CC BY-SA
 4.0 with the standard design-use exception. See the

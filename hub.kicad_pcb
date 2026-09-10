@@ -61,8 +61,8 @@
       (layer "dielectric 2"
         (type "core")
         (thickness 1.265)
-        (material "FR4")
-        (epsilon_r 4.6)
+        (material "NP-155F")
+        (epsilon_r 4.43)
         (loss_tangent 0.02)
       )
       (layer "In2.Cu"
@@ -306,6 +306,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USB-C USB2.0"
       (at 0 5.1 270)
@@ -468,13 +469,13 @@
       (uuid "a12cdb4e-1e39-5ad3-86e7-c945be194db0")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (uuid "9b4dc8b4-1b81-5c17-b8c6-3923bb339e3d")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -797,6 +798,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USB-C 5V POWER"
       (at 0 5.1 180)
@@ -959,13 +961,13 @@
       (uuid "1115490c-02c8-556a-bfb4-59901e39e480")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (uuid "b35f5859-b4e4-5eee-925a-35c5642c2827")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -1288,6 +1290,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USB-A"
       (at 0 5.08 180)
@@ -1490,13 +1493,13 @@
       (uuid "f7680542-a99d-58ff-8867-2072bd10bbb2")
     )
     (fp_text user "${REFERENCE}"
-      (at -2.855 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (uuid "253f2e3d-c184-5a64-9c9b-d0bdcb80a0b3")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -1686,6 +1689,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USB-A"
       (at 0 5.08 180)
@@ -1888,13 +1892,13 @@
       (uuid "d7dc4c83-f8c5-5172-995f-99bcf2921c76")
     )
     (fp_text user "${REFERENCE}"
-      (at -2.855 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (uuid "64a4e8b9-98d1-5cdb-9118-9f9bdfbb1276")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -2084,6 +2088,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USB-C USB2.0"
       (at 0 5.1 90)
@@ -2246,13 +2251,13 @@
       (uuid "8dda1436-41e0-58a5-a2dc-80cc9daab5e0")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "91e0a84e-80bd-511e-bdb8-27122ba61a85")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -2575,6 +2580,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USB-C USB2.0"
       (at 0 5.1 90)
@@ -2737,13 +2743,13 @@
       (uuid "5887265e-4520-555b-96b1-4fd008d34440")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "fc3e5ade-6543-54c4-a723-9ee64f8f70ec")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -3065,6 +3071,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "ISOUSB211DPR"
       (at 0 6.2 0)
@@ -3140,8 +3147,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -3766,7 +3773,7 @@
     (descr "C, Disc series, Radial, pin pitch=14.00mm, diameter*width=7.0*5.5mm^2, Y1 safety-rated barrier stitching capacitor (custom pitch, no stock KiCad footprint at 14mm exists) -- see docs/superpowers/reviews/2026-07-28-v1-part-selection.md")
     (tags "C Disc series Radial pin pitch 14.00mm diameter 7mm width 5.5mm Capacitor CY1 barrier stitching safety Y1")
     (property "Reference" "CY1"
-      (at 0 0 0)
+      (at 7 0 0)
       (layer "F.Fab")
       (effects
         (font
@@ -3774,6 +3781,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1nF Y1"
       (at 7 3.75 0)
@@ -3833,8 +3841,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -3860,7 +3868,7 @@
     )
     (model "${KIPRJMOD}/hub-lib.3dshapes/CAP-TH_L7.0-W5.0-P14.0-D0.6.step"
       (offset
-        (xyz 7 0 0)
+        (xyz 7 0 4)
       )
       (scale
         (xyz 1 1 1)
@@ -3968,7 +3976,7 @@
     (descr "Laird Technologies BMI-S-201-F Shielding Cabinet Two Piece SMD 13.66x12.70mm, http://cdn.lairdtech.com/home/brandworld/files/Board%20Level%20Shields%20Catalog%20Download.pdf")
     (tags "Shielding Cabinet")
     (property "Reference" "SH1"
-      (at 0 0 0)
+      (at 0 -8.5 0)
       (layer "F.Fab")
       (effects
         (font
@@ -3976,6 +3984,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BMI-S-201-F"
       (at 0 8.18 0)
@@ -4104,12 +4113,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 -8.5 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -4351,7 +4360,7 @@
     (descr "Laird Technologies BMI-S-209-F Shielding Cabinet Two Piece SMD 29.36x18.50mm, http://cdn.lairdtech.com/home/brandworld/files/Board%20Level%20Shields%20Catalog%20Download.pdf")
     (tags "Shielding Cabinet")
     (property "Reference" "SH2"
-      (at 0 0 0)
+      (at 0 -11 0)
       (layer "F.Fab")
       (effects
         (font
@@ -4359,6 +4368,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BMI-S-209-F"
       (at 0 10.6 0)
@@ -4523,12 +4533,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 -11 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -4810,6 +4820,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN6505BDBVR"
       (at 0 2.4 180)
@@ -5026,12 +5037,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -5231,6 +5242,7 @@
           (thickness 0.15)
         )
       )
+      (hide yes)
     )
     (fp_rect
       (start -2.1 -1.8)
@@ -5520,6 +5532,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1.5uH"
       (at 0 3.2 90)
@@ -5573,12 +5586,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
           (size 0.7 0.7)
-          (thickness 0.1)
+          (thickness 0.08)
         )
       )
     )
@@ -5718,6 +5731,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USBLC6-2SC6"
       (at 0 2.4 0)
@@ -5934,12 +5948,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -6115,6 +6129,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TUSB320LAIRWBR"
       (at 0 2.1 180)
@@ -6385,12 +6400,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -6620,6 +6635,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TLV75533PDBVR"
       (at 0 2.4 0)
@@ -6881,12 +6897,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -7053,6 +7069,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G04DBVR"
       (at 0 2.4 0)
@@ -7314,12 +7331,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -7486,6 +7503,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS2553DBVR"
       (at 0 2.4 180)
@@ -7702,12 +7720,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -7883,6 +7901,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TLV62568DBVR"
       (at 0 2.4 0)
@@ -8144,12 +8163,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -8315,6 +8334,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2.2uH"
       (at 0 3.2 0)
@@ -8373,7 +8393,7 @@
       (effects
         (font
           (size 0.7 0.7)
-          (thickness 0.1)
+          (thickness 0.08)
         )
       )
     )
@@ -8513,6 +8533,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TLV75533PDBVR"
       (at 0 2.4 0)
@@ -8774,12 +8795,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -8946,6 +8967,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TUSB320LAIRWBR"
       (at 0 2.1 90)
@@ -9216,12 +9238,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -9451,6 +9473,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G02DBVR"
       (at 0 2.4 0)
@@ -9712,12 +9735,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -9884,6 +9907,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS22975DSGR"
       (at 0 1.95 0)
@@ -10068,7 +10092,7 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.7 0.7)
           (thickness 0.08)
         )
       )
@@ -10285,6 +10309,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "INA300AIDGSR"
       (at 0 2.45 180)
@@ -10501,12 +10526,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.75 0.75)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -10717,6 +10742,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS552892RYQR"
       (at 0 2.75 0)
@@ -10775,7 +10801,7 @@
       (effects
         (font
           (size 0.7 0.7)
-          (thickness 0.1)
+          (thickness 0.08)
         )
       )
     )
@@ -11185,6 +11211,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7uH"
       (at 0 4.95 0)
@@ -11271,8 +11298,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -11411,6 +11438,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS2121RUXR"
       (at 0 2.5 0)
@@ -11469,7 +11497,7 @@
       (effects
         (font
           (size 0.7 0.7)
-          (thickness 0.1)
+          (thickness 0.08)
         )
       )
     )
@@ -11699,6 +11727,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS2553DBVR"
       (at 0 2.4 0)
@@ -11915,12 +11944,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -12096,6 +12125,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS22975NDSGR"
       (at 0 1.95 0)
@@ -12280,7 +12310,7 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.7 0.7)
           (thickness 0.08)
         )
       )
@@ -12497,6 +12527,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "INA300AIDGSR"
       (at 0 2.45 0)
@@ -12717,8 +12748,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.75 0.75)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -12930,6 +12961,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS3808G01DBVR"
       (at 0 2.4 0)
@@ -13146,12 +13178,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -13327,6 +13359,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G17DBVR"
       (at 0 2.4 0)
@@ -13588,12 +13621,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -13760,6 +13793,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G08DBVR"
       (at 0 2.4 0)
@@ -14021,12 +14055,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -14193,6 +14227,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G08DBVR"
       (at 0 2.4 0)
@@ -14454,12 +14489,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -14626,6 +14661,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G04DBVR"
       (at 0 2.4 0)
@@ -14887,12 +14923,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -15059,6 +15095,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G08DBVR"
       (at 0 2.4 0)
@@ -15320,12 +15357,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -15492,6 +15529,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS62162DSGR"
       (at 0 1.95 0)
@@ -15676,7 +15714,7 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.7 0.7)
           (thickness 0.08)
         )
       )
@@ -15892,6 +15930,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2.2uH"
       (at 0 3.2 0)
@@ -15950,7 +15989,7 @@
       (effects
         (font
           (size 0.7 0.7)
-          (thickness 0.1)
+          (thickness 0.08)
         )
       )
     )
@@ -16089,6 +16128,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USB2514B-I/M2"
       (at 0 4.3 180)
@@ -16142,12 +16182,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
           (size 0.7 0.7)
-          (thickness 0.1)
+          (thickness 0.08)
         )
       )
     )
@@ -16655,6 +16695,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "24MHz"
       (at 0 2.45 0)
@@ -16728,8 +16769,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -16887,6 +16928,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS3808G33DBVR"
       (at 0 2.4 0)
@@ -17103,12 +17145,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -17284,6 +17326,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "24LC02B-I/SN"
       (at 0 3.4 180)
@@ -17500,12 +17543,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -17699,6 +17742,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS2553DBVR"
       (at 0 2.4 0)
@@ -17915,12 +17959,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -17990,7 +18034,7 @@
       )
     )
     (uuid "6d191cc3-40e5-58cf-b06c-92a741415651")
-    (at 107 26 0)
+    (at 107.0 21.0 0)
     (property "MPN" "TPS2553DBVR"
       (at 0 0 0)
       (layer "F.Fab")
@@ -18096,6 +18140,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USBLC6-2SC6"
       (at 0 2.4 0)
@@ -18312,12 +18357,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -18493,6 +18538,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS2553DBVR"
       (at 0 2.4 0)
@@ -18709,12 +18755,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -18890,6 +18936,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USBLC6-2SC6"
       (at 0 2.4 0)
@@ -19106,12 +19153,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -19287,6 +19334,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS2553DBVR"
       (at 0 2.4 0)
@@ -19503,12 +19551,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -19684,6 +19732,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USBLC6-2SC6"
       (at 0 2.4 0)
@@ -19900,12 +19949,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -20081,6 +20130,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TUSB320LAIRWBR"
       (at 0 2.1 180)
@@ -20351,12 +20401,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -20586,6 +20636,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G04DBVR"
       (at 0 2.4 0)
@@ -20847,12 +20898,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -21019,6 +21070,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G08DBVR"
       (at 0 2.4 0)
@@ -21280,12 +21332,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -21452,6 +21504,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G04DBVR"
       (at 0 2.4 0)
@@ -21713,12 +21766,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -21885,6 +21938,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2N7002"
       (at 0 2.4 0)
@@ -22146,12 +22200,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -22300,6 +22354,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TPS2553DBVR"
       (at 0 2.4 0)
@@ -22516,12 +22571,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -22697,6 +22752,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "USBLC6-2SC6"
       (at 0 2.4 0)
@@ -22913,12 +22969,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -23094,6 +23150,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "TUSB320LAIRWBR"
       (at 0 2.1 180)
@@ -23364,12 +23421,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -23599,6 +23656,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G04DBVR"
       (at 0 2.4 0)
@@ -23860,12 +23918,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -24032,6 +24090,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G08DBVR"
       (at 0 2.4 0)
@@ -24293,12 +24352,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -24465,6 +24524,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SN74LVC1G04DBVR"
       (at 0 2.4 0)
@@ -24726,12 +24786,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -24898,6 +24958,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2N7002"
       (at 0 2.4 0)
@@ -25159,12 +25220,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -25309,10 +25370,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -25377,12 +25439,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -25518,10 +25580,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7uF"
       (at 0 1.43 0)
@@ -25590,8 +25653,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -25727,10 +25790,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -25799,8 +25863,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -25941,6 +26005,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SS34"
       (at 0 2.6 180)
@@ -26153,13 +26218,13 @@
       (uuid "c706cc81-a2ae-5c23-9eb8-a1603de7659a")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -2.5 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (uuid "dbd6ccb4-c82f-5699-a247-f7757411b218")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -26280,6 +26345,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "SS34"
       (at 0 2.6 180)
@@ -26492,13 +26558,13 @@
       (uuid "d73f6fc2-a5d4-5c7f-8387-84fb7dcbde5d")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -2.5 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (uuid "4ddba3eb-45a1-5e96-8468-bfab0effe71a")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -26614,10 +26680,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -26686,8 +26753,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -26823,10 +26890,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -26895,8 +26963,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -27032,10 +27100,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -27104,8 +27173,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -27241,10 +27310,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -27309,12 +27379,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -27450,10 +27520,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -27522,8 +27593,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -27659,10 +27730,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -27731,8 +27803,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -27868,10 +27940,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -27940,8 +28013,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -28077,10 +28150,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -28149,8 +28223,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -28286,10 +28360,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -28358,8 +28433,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -28495,10 +28570,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -28563,12 +28639,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -28704,10 +28780,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 90)
@@ -28772,12 +28849,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -28913,10 +28990,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 90)
@@ -28981,12 +29059,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -29122,10 +29200,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 90)
@@ -29190,12 +29269,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -29331,10 +29410,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 90)
@@ -29399,12 +29479,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -29540,10 +29620,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10nF"
       (at 0 1.16 90)
@@ -29608,12 +29689,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -29749,10 +29830,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -29817,12 +29899,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -29958,10 +30040,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7uF"
       (at 0 1.43 90)
@@ -30026,12 +30109,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -30167,10 +30250,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10nF"
       (at 0 1.16 90)
@@ -30235,12 +30319,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -30376,10 +30460,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -30444,12 +30529,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -30585,10 +30670,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7uF"
       (at 0 1.43 90)
@@ -30653,12 +30739,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -30794,10 +30880,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10nF"
       (at 0 1.16 270)
@@ -30862,12 +30949,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -31003,10 +31090,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 270)
@@ -31071,12 +31159,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -31212,10 +31300,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7uF"
       (at 0 1.43 270)
@@ -31280,12 +31369,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -31421,10 +31510,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10nF"
       (at 0 1.16 270)
@@ -31489,12 +31579,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -31630,10 +31720,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 270)
@@ -31698,12 +31789,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -31839,10 +31930,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7uF"
       (at 0 1.43 270)
@@ -31907,12 +31999,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -32048,10 +32140,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1uF"
       (at 0 1.43 0)
@@ -32120,8 +32213,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -32257,10 +32350,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -32329,8 +32423,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -32466,10 +32560,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -32538,8 +32633,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -32675,10 +32770,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1uF"
       (at 0 1.43 180)
@@ -32743,12 +32839,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -32884,10 +32980,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 180)
@@ -32952,12 +33049,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -33093,10 +33190,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1uF"
       (at 0 1.43 180)
@@ -33161,12 +33259,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -33302,10 +33400,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 90)
@@ -33370,12 +33469,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -33511,10 +33610,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 90)
@@ -33579,12 +33679,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -33720,10 +33820,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -33792,8 +33893,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -33929,10 +34030,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -34001,8 +34103,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -34138,10 +34240,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -34210,8 +34313,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -34338,22 +34441,23 @@
     (sheetname "EXTERNAL")
     (sheetfile "hub-external.kicad_sch")
   )
-  (footprint "hub-lib:C_0805_2012Metric"
+  (footprint "hub-lib:C_1210_3225Metric"
     (layer "F.Cu")
-    (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+    (descr "Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
     (tags "capacitor")
     (property "Reference" "C84"
-      (at 0 0 90)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
-    (property "Value" "10uF"
-      (at 0 1.68 90)
+    (property "Value" "22uF"
+      (at 0 2.3 270)
       (layer "F.Fab")
       (effects
         (font
@@ -34364,7 +34468,7 @@
       (hide yes)
     )
     (property "KiLib_Generator" "SMD_2terminal_chip_molded"
-      (at 0 0 90)
+      (at 0 0 270)
       (layer "F.SilkS")
       (hide yes)
       (effects
@@ -34377,8 +34481,8 @@
     (attr smd)
     (duplicate_pad_numbers_are_jumpers no)
     (fp_line
-      (start -0.261252 -0.735)
-      (end 0.261252 -0.735)
+      (start -0.711252 -1.36)
+      (end 0.711252 -1.36)
       (stroke
         (width 0.12)
         (type solid)
@@ -34386,8 +34490,8 @@
       (layer "F.SilkS")
     )
     (fp_line
-      (start -0.261252 0.735)
-      (end 0.261252 0.735)
+      (start -0.711252 1.36)
+      (end 0.711252 1.36)
       (stroke
         (width 0.12)
         (type solid)
@@ -34395,8 +34499,8 @@
       (layer "F.SilkS")
     )
     (fp_rect
-      (start -1.7 -0.98)
-      (end 1.7 0.98)
+      (start -2.3 -1.6)
+      (end 2.3 1.6)
       (stroke
         (width 0.05)
         (type solid)
@@ -34405,8 +34509,8 @@
       (layer "F.CrtYd")
     )
     (fp_rect
-      (start -1 -0.625)
-      (end 1 0.625)
+      (start -1.6 -1.25)
+      (end 1.6 1.25)
       (stroke
         (width 0.1)
         (type solid)
@@ -34415,34 +34519,34 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.45 0.45)
           (thickness 0.08)
         )
       )
     )
     (pad "1" smd roundrect
-      (at -0.95 0)
-      (size 1 1.45)
+      (at -1.475 0)
+      (size 1.15 2.7)
       (layers "F.Cu" "F.Mask" "F.Paste")
-      (roundrect_rratio 0.25)
+      (roundrect_rratio 0.217391)
       (net 46 "EXT_REG_VCC")
       (pinfunction "")
       (pintype "passive")
     )
     (pad "2" smd roundrect
-      (at 0.95 0)
-      (size 1 1.45)
+      (at 1.475 0)
+      (size 1.15 2.7)
       (layers "F.Cu" "F.Mask" "F.Paste")
-      (roundrect_rratio 0.25)
+      (roundrect_rratio 0.217391)
       (net 56 "GND2")
       (pinfunction "")
       (pintype "passive")
     )
-    (model "${KIPRJMOD}/hub-lib.3dshapes/C_0805_2012Metric.step"
+    (model "${KIPRJMOD}/hub-lib.3dshapes/C_1210_3225Metric.wrl"
       (offset
         (xyz 0 0 0)
       )
@@ -34454,9 +34558,9 @@
       )
     )
     (uuid "d3e5aecb-c6a7-5ec3-820b-089a87747ffb")
-    (at 103.4 25.8 90)
-    (property "MPN" "GRM21BR61E106KA73L"
-      (at 0 0 90)
+    (at 104 28 270)
+    (property "MPN" "GRM32ER71E226KE15L"
+      (at 0 0 270)
       (layer "F.Fab")
       (hide yes)
       (effects
@@ -34467,7 +34571,7 @@
       )
     )
     (property "Manufacturer" "Murata Manufacturing"
-      (at 0 0 90)
+      (at 0 0 270)
       (layer "F.Fab")
       (hide yes)
       (effects
@@ -34477,8 +34581,8 @@
         )
       )
     )
-    (property "LCSC" "C84416"
-      (at 0 0 90)
+    (property "LCSC" "C21397"
+      (at 0 0 270)
       (layer "F.Fab")
       (hide yes)
       (effects
@@ -34488,8 +34592,8 @@
         )
       )
     )
-    (property "Ratings" "25V X5R 10%"
-      (at 0 0 90)
+    (property "Ratings" "25V X7R 10%"
+      (at 0 0 270)
       (layer "F.Fab")
       (hide yes)
       (effects
@@ -34499,8 +34603,8 @@
         )
       )
     )
-    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM21BR61E106KA73%23"
-      (at 0 0 90)
+    (property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23"
+      (at 0 0 270)
       (layer "F.Fab")
       (hide yes)
       (effects
@@ -34510,8 +34614,8 @@
         )
       )
     )
-    (property "Description" "U28.18; effective capacitance >4.7uF"
-      (at 0 0 90)
+    (property "Description" "U28.18; 22uF gives effective-capacitance margin above 4.7uF"
+      (at 0 0 270)
       (layer "F.Fab")
       (hide yes)
       (effects
@@ -34522,7 +34626,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 0 0 90)
+      (at 0 0 270)
       (layer "F.Fab")
       (hide yes)
       (effects
@@ -34533,7 +34637,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 0 0 90)
+      (at 0 0 270)
       (layer "F.Fab")
       (hide yes)
       (effects
@@ -34556,10 +34660,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -34628,8 +34733,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -34663,7 +34768,7 @@
       )
     )
     (uuid "321b4037-a51a-50cd-a705-ca774a76e066")
-    (at 106 30 0)
+    (at 112.75 37.0 0)
     (property "MPN" "GRM32ER71E226KE15L"
       (at 0 0 0)
       (layer "F.Fab")
@@ -34765,10 +34870,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -34837,8 +34943,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -34974,10 +35080,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -35046,8 +35153,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -35183,10 +35290,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -35255,8 +35363,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -35392,10 +35500,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -35460,12 +35569,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -35601,10 +35710,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "20mR"
       (at 0 1.83 0)
@@ -35673,8 +35783,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -35810,10 +35920,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10mR"
       (at 0 1.83 0)
@@ -35882,8 +35993,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -36019,10 +36130,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "220uF"
       (at 0 5.2 0)
@@ -36351,8 +36463,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -36488,10 +36600,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "220uF"
       (at 0 5.2 0)
@@ -36820,8 +36933,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -36957,10 +37070,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "220uF"
       (at 0 5.2 0)
@@ -37289,8 +37403,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -37426,10 +37540,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7uF"
       (at 0 1.68 90)
@@ -37494,11 +37609,11 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.45 0.45)
           (thickness 0.08)
         )
       )
@@ -37635,10 +37750,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -37707,8 +37823,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -37844,10 +37960,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "200kR"
       (at 0 1.17 90)
@@ -37912,12 +38029,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -38053,10 +38170,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 90)
@@ -38121,12 +38239,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -38262,10 +38380,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10uF"
       (at 0 1.68 90)
@@ -38330,11 +38449,11 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.45 0.45)
           (thickness 0.08)
         )
       )
@@ -38471,10 +38590,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -38543,8 +38663,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -38680,10 +38800,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -38752,8 +38873,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -38889,10 +39010,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -38957,12 +39079,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -39098,10 +39220,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -39166,12 +39289,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -39307,10 +39430,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 180)
@@ -39375,12 +39499,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 180)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -39516,10 +39640,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 270)
@@ -39584,12 +39709,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -39725,10 +39850,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 270)
@@ -39793,12 +39919,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -39934,10 +40060,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -40002,12 +40129,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -40143,10 +40270,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 270)
@@ -40211,12 +40339,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 270)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -40352,10 +40480,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "27pF"
       (at 0 1.16 90)
@@ -40420,12 +40549,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -40561,10 +40690,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "27pF"
       (at 0 1.16 90)
@@ -40629,12 +40759,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -40770,10 +40900,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "12kR"
       (at 0 1.17 0)
@@ -40842,8 +40973,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -40983,6 +41114,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "M3 NPTH"
       (at 0 4.15 0)
@@ -41033,8 +41165,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -41060,6 +41192,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "M3 NPTH"
       (at 0 4.15 0)
@@ -41110,8 +41243,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -41137,6 +41270,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "M3 NPTH"
       (at 0 4.15 0)
@@ -41187,8 +41321,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -41214,6 +41348,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "M3 NPTH"
       (at 0 4.15 0)
@@ -41264,8 +41399,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -41287,10 +41422,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10uF"
       (at 0 1.68 0)
@@ -41359,7 +41495,7 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.45 0.45)
           (thickness 0.08)
         )
       )
@@ -41496,10 +41632,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10uF"
       (at 0 1.68 90)
@@ -41564,11 +41701,11 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.45 0.45)
           (thickness 0.08)
         )
       )
@@ -41705,10 +41842,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1uF"
       (at 0 1.43 0)
@@ -41777,8 +41915,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -41914,10 +42052,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1uF"
       (at 0 1.43 0)
@@ -41986,8 +42125,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -42123,10 +42262,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7uF"
       (at 0 1.43 0)
@@ -42195,8 +42335,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -42332,10 +42472,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1uF"
       (at 0 1.43 0)
@@ -42404,8 +42545,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -42541,10 +42682,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1uF"
       (at 0 1.43 0)
@@ -42613,8 +42755,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -42750,10 +42892,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -42822,8 +42965,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -42959,10 +43102,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -43027,12 +43171,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -43168,10 +43312,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -43236,12 +43381,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -43377,10 +43522,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -43445,12 +43591,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -43586,10 +43732,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -43654,12 +43801,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -43795,10 +43942,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -43863,12 +44011,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -44004,10 +44152,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -44072,12 +44221,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -44213,10 +44362,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -44281,12 +44431,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -44422,10 +44572,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -44494,8 +44645,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -44631,10 +44782,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -44703,8 +44855,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -44840,10 +44992,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -44912,8 +45065,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -45049,10 +45202,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -45117,12 +45271,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -45258,10 +45412,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -45326,12 +45481,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -45467,10 +45622,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22nF"
       (at 0 1.16 0)
@@ -45539,8 +45695,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -45676,10 +45832,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -45748,8 +45905,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -45885,10 +46042,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -45957,8 +46115,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -46094,10 +46252,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -46166,8 +46325,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -46303,10 +46462,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -46371,12 +46531,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -46512,10 +46672,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -46584,8 +46745,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -46721,10 +46882,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -46793,8 +46955,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -46930,10 +47092,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -47002,8 +47165,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -47139,10 +47302,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -47211,8 +47375,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -47348,10 +47512,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -47420,8 +47585,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -47557,10 +47722,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -47629,8 +47795,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -47766,10 +47932,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -47834,12 +48001,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -47975,10 +48142,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -48047,8 +48215,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -48184,10 +48352,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -48256,8 +48425,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -48393,10 +48562,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -48465,8 +48635,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -48602,10 +48772,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -48670,12 +48841,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -48811,10 +48982,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10nF"
       (at 0 1.16 0)
@@ -48883,8 +49055,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -49020,10 +49192,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -49092,8 +49265,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -49229,10 +49402,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "220nF"
       (at 0 1.16 0)
@@ -49301,8 +49475,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -49438,10 +49612,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100pF"
       (at 0 1.16 90)
@@ -49506,12 +49681,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -49647,10 +49822,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -49715,12 +49891,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -49856,10 +50032,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -49928,8 +50105,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -50065,10 +50242,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -50137,8 +50315,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -50274,10 +50452,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -50346,8 +50525,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -50483,10 +50662,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -50555,8 +50735,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -50692,10 +50872,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -50764,8 +50945,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -50901,10 +51082,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 0)
@@ -50973,8 +51155,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -51114,6 +51296,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BAT54C"
       (at 0 2.4 0)
@@ -51375,12 +51558,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -51512,9 +51695,9 @@
         )
       )
     )
-    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/52a1b8ca-77be-5d95-bbe2-de6ca1fbd0bd/4724a043-f990-52ec-a28e-577979fd91d5")
-    (sheetname "DISTRIBUTION")
-    (sheetfile "hub-distribution.kicad_sch")
+    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864/4724a043-f990-52ec-a28e-577979fd91d5")
+    (sheetname "BUS_START")
+    (sheetfile "hub-bus_start.kicad_sch")
   )
   (footprint "hub-lib:SOT-23"
     (layer "F.Cu")
@@ -51529,6 +51712,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BAT54C"
       (at 0 2.4 0)
@@ -51790,12 +51974,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -51927,9 +52111,9 @@
         )
       )
     )
-    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/52a1b8ca-77be-5d95-bbe2-de6ca1fbd0bd/dc5d3654-88b6-5b86-a237-157eb118a536")
-    (sheetname "DISTRIBUTION")
-    (sheetfile "hub-distribution.kicad_sch")
+    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864/dc5d3654-88b6-5b86-a237-157eb118a536")
+    (sheetname "BUS_START")
+    (sheetfile "hub-bus_start.kicad_sch")
   )
   (footprint "hub-lib:SOT-23"
     (layer "F.Cu")
@@ -51944,6 +52128,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BAT54C"
       (at 0 2.4 0)
@@ -52205,12 +52390,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -52342,9 +52527,9 @@
         )
       )
     )
-    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/52a1b8ca-77be-5d95-bbe2-de6ca1fbd0bd/85f88244-00a3-5075-88b3-fa1d38bcfc61")
-    (sheetname "DISTRIBUTION")
-    (sheetfile "hub-distribution.kicad_sch")
+    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864/85f88244-00a3-5075-88b3-fa1d38bcfc61")
+    (sheetname "BUS_START")
+    (sheetfile "hub-bus_start.kicad_sch")
   )
   (footprint "hub-lib:SOT-23"
     (layer "F.Cu")
@@ -52359,6 +52544,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BAT54C"
       (at 0 2.4 0)
@@ -52620,12 +52806,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -52757,9 +52943,9 @@
         )
       )
     )
-    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/52a1b8ca-77be-5d95-bbe2-de6ca1fbd0bd/2c03abdb-a34c-5d88-b89a-6af45efb417c")
-    (sheetname "DISTRIBUTION")
-    (sheetfile "hub-distribution.kicad_sch")
+    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864/2c03abdb-a34c-5d88-b89a-6af45efb417c")
+    (sheetname "BUS_START")
+    (sheetfile "hub-bus_start.kicad_sch")
   )
   (footprint "hub-lib:SOT-23"
     (layer "F.Cu")
@@ -52774,6 +52960,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2N7002"
       (at 0 2.4 90)
@@ -53039,8 +53226,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -53189,6 +53376,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2N7002"
       (at 0 2.4 0)
@@ -53450,12 +53638,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 90)
+      (at 0 0 0)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -53587,9 +53775,9 @@
         )
       )
     )
-    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/52a1b8ca-77be-5d95-bbe2-de6ca1fbd0bd/3c06cfcb-9228-495c-b60c-480e7cbf052a")
-    (sheetname "DISTRIBUTION")
-    (sheetfile "hub-distribution.kicad_sch")
+    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864/3c06cfcb-9228-495c-b60c-480e7cbf052a")
+    (sheetname "BUS_START")
+    (sheetfile "hub-bus_start.kicad_sch")
   )
   (footprint "hub-lib:SOT-23"
     (layer "F.Cu")
@@ -53604,6 +53792,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2N7002"
       (at 0 2.4 90)
@@ -53869,8 +54058,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.72 0.72)
-          (thickness 0.11)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -54015,10 +54204,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100R"
       (at 0 1.65 90)
@@ -54083,11 +54273,11 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.45 0.45)
           (thickness 0.08)
         )
       )
@@ -54156,7 +54346,7 @@
         )
       )
     )
-    (property "Ratings" "100R 1%, 0.125W; 0.14mJ maximum discharge pulse"
+    (property "Ratings" "100R 1%, 0.125W; 0.20mJ maximum design discharge pulse"
       (at 0 0 90)
       (layer "F.Fab")
       (hide yes)
@@ -54224,10 +54414,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100R"
       (at 0 1.65 90)
@@ -54292,11 +54483,11 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.5 0.5)
+          (size 0.45 0.45)
           (thickness 0.08)
         )
       )
@@ -54365,7 +54556,7 @@
         )
       )
     )
-    (property "Ratings" "100R 1%, 0.125W; 0.14mJ maximum discharge pulse"
+    (property "Ratings" "100R 1%, 0.125W; 0.20mJ maximum design discharge pulse"
       (at 0 0 90)
       (layer "F.Fab")
       (hide yes)
@@ -54438,6 +54629,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BAT54WS"
       (at 0.1 1.9 90)
@@ -54650,13 +54842,13 @@
       (uuid "9e2e0b05-756d-56eb-9c5e-c778188f13f6")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.85 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "f15540ed-f646-5b24-8f1b-f328c0b6a5fd")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -54777,6 +54969,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BAT54WS"
       (at 0.1 1.9 0)
@@ -54989,13 +55182,13 @@
       (uuid "bbe6b045-25ce-5370-845b-7660b256e069")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.85 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "1c468ac0-12da-5fd4-8d16-a3a380323f0f")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -55116,6 +55309,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BAT54WS"
       (at 0.1 1.9 90)
@@ -55328,13 +55522,13 @@
       (uuid "dc65defc-bf0e-5954-a228-484ad0a9053e")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.85 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "388d2b2d-4da1-5314-9dfc-c2c3bfefd3f7")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -55455,6 +55649,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "BAT54WS"
       (at 0.1 1.9 90)
@@ -55667,13 +55862,13 @@
       (uuid "6b58f052-2760-51ee-b5f9-fdd11bf6ae40")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.85 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "c779300d-fb46-5f37-9ab8-eb84c2adb5f5")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -55793,6 +55988,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "GREEN"
       (at 0 1.43 0)
@@ -55905,8 +56101,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -56046,6 +56242,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "GREEN"
       (at 0 1.43 0)
@@ -56158,8 +56355,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -56282,9 +56479,9 @@
         )
       )
     )
-    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/52a1b8ca-77be-5d95-bbe2-de6ca1fbd0bd/ea7afbdd-dfa2-4bc5-9127-3976785d5208")
-    (sheetname "DISTRIBUTION")
-    (sheetfile "hub-distribution.kicad_sch")
+    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864/ea7afbdd-dfa2-4bc5-9127-3976785d5208")
+    (sheetname "BUS_START")
+    (sheetfile "hub-bus_start.kicad_sch")
   )
   (footprint "hub-lib:LED_0603_1608Metric"
     (layer "F.Cu")
@@ -56299,6 +56496,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "GREEN"
       (at 0 1.43 0)
@@ -56411,8 +56609,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -56548,10 +56746,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2.87kR"
       (at 0 1.43 90)
@@ -56616,12 +56815,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -56757,10 +56956,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1.1kR"
       (at 0 1.43 0)
@@ -56829,8 +57029,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -56966,10 +57166,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.43 90)
@@ -57034,12 +57235,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -57175,10 +57376,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "3kR"
       (at 0 1.43 90)
@@ -57243,12 +57445,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -57384,10 +57586,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.43 90)
@@ -57452,12 +57655,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -57593,10 +57796,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.43 0)
@@ -57665,8 +57869,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.4 0.4)
-          (thickness 0.06)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -57807,6 +58011,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "T6V0S5A-7"
       (at 0 1.4 90)
@@ -58019,13 +58224,13 @@
       (uuid "078a9597-517d-5178-a47d-fa092ffde981")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.3 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "9da4788a-7e2c-55f4-811b-e55e1dce881a")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -58146,6 +58351,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "T6V0S5A-7"
       (at 0 1.4 90)
@@ -58358,13 +58564,13 @@
       (uuid "b69b4f26-3a06-57e0-b695-bb86c11110ef")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.3 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "6cf1d390-08c9-5a46-a681-7363df275b1d")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -58485,6 +58691,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "T6V0S5A-7"
       (at 0 1.4 0)
@@ -58697,13 +58904,13 @@
       (uuid "50b65a76-e580-59a1-b5d0-ec793f5ad1f4")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.3 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "247d3cbd-a574-5617-8b7d-cf5e94c93914")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -58824,6 +59031,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "T6V0S5A-7"
       (at 0 1.4 90)
@@ -59036,13 +59244,13 @@
       (uuid "42792886-b70a-59ba-96fb-ad93ba7b8f16")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.3 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "51495564-78c8-5221-a70b-51b422472882")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -59163,6 +59371,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "T6V0S5A-7"
       (at 0 1.4 90)
@@ -59375,13 +59584,13 @@
       (uuid "07b60afb-0b7c-5986-bc71-0a60573005ab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.3 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "9ef23a60-c9e8-5c7d-b5c4-6c2533f2d50b")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -59502,6 +59711,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "T6V0S5A-7"
       (at 0 1.4 90)
@@ -59714,13 +59924,13 @@
       (uuid "847bad97-05a6-586f-9241-d5c72559fb53")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.3 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (uuid "a1435f73-592e-56a3-9bbf-9e4a564e259e")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -59841,6 +60051,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "HOST_PWR_OK"
       (at 0 1.55 0)
@@ -59905,13 +60116,13 @@
       (uuid "ba197783-01f0-5723-a9de-52d861917db3")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "1f275c0e-fcb5-5517-860e-9c3b4cad6a79")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -60010,6 +60221,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "PORT_SUPPLY"
       (at 0 1.55 0)
@@ -60074,13 +60286,13 @@
       (uuid "c0a9fe38-cbd0-5ad2-9294-148773e85d81")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "7c95209e-a5f0-53cc-9ecc-d1f03bcf70c0")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -60179,6 +60391,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "PORT_RAIL_OK"
       (at 0 1.55 0)
@@ -60243,13 +60456,13 @@
       (uuid "fe74ff7e-3aa9-566f-ada7-de0c99a91c64")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "d59f170b-8554-536f-876f-caf9a51f423f")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -60348,6 +60561,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "ISO_3V3"
       (at 0 1.55 0)
@@ -60412,13 +60626,13 @@
       (uuid "8ca8fa33-3f8a-5176-a970-26f90bf5b51e")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "0d0a3bed-fcab-5a3a-b678-1f7ffa24ec5a")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -60517,6 +60731,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "HUB_RESET_N"
       (at 0 1.55 0)
@@ -60581,13 +60796,13 @@
       (uuid "ba2f4e3c-305e-5ee3-85a1-7b27b5f7445f")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "d4df36e9-8de8-5189-ad7c-16d584bd3976")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -60686,6 +60901,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "HUB_SDA"
       (at 0 1.55 0)
@@ -60750,13 +60966,13 @@
       (uuid "91fd3b6f-470e-596c-94be-873d0ca680d5")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "50374a47-22e1-5d97-b903-718551751f94")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -60855,6 +61071,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "HUB_SCL"
       (at 0 1.55 0)
@@ -60919,13 +61136,13 @@
       (uuid "0e91eb49-cf06-5787-ba14-d0b6b9aba74a")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "e8f17c90-14c2-5e30-8acf-d8eacf18a544")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -61024,6 +61241,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "GND2"
       (at 0 1.55 0)
@@ -61088,13 +61306,13 @@
       (uuid "48a298f5-a53e-589f-99f8-a56ec1eae25a")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "748b43fa-1f2a-532f-ba6b-3fd7417d6ce6")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -61193,6 +61411,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "EXT_CURRENT_OK"
       (at 0 1.55 0)
@@ -61257,13 +61476,13 @@
       (uuid "d9b0eed2-09f0-53b9-8fdf-e028fe51503c")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "64bc20b0-cf7e-5cea-98e2-14b96b9742d4")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -61362,6 +61581,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "HOST_LIMIT_N"
       (at 0 1.55 0)
@@ -61426,13 +61646,13 @@
       (uuid "bfec6ed7-626e-595e-a2d7-bd018f74375f")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "0ec11eef-9caf-5422-8f3f-0c7271befdc5")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -61531,6 +61751,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "ISO_SIDE_OK"
       (at 0 1.55 0)
@@ -61595,13 +61816,13 @@
       (uuid "b1d79865-02fd-5daf-9f97-9bb17dc48c96")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "e1ec9c29-a1c7-5ecc-a1b9-1bda919d65b3")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -61700,6 +61921,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "HOST_PRESENT"
       (at 0 1.55 0)
@@ -61764,13 +61986,13 @@
       (uuid "7b394d2d-3e79-5ddb-81ae-9b74b9d93996")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "4db7f0b2-542a-5c98-b910-10d496f4fe31")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -61869,6 +62091,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "DCDC_RAW"
       (at 0 1.55 0)
@@ -61933,13 +62156,13 @@
       (uuid "497fa38b-4a55-55ed-8d4a-89e5be78ea8a")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "5edd9363-2a83-5999-8d81-e46558f9656a")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -62038,6 +62261,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "ISO_5V_PRE"
       (at 0 1.55 0)
@@ -62102,13 +62326,13 @@
       (uuid "4551bf8c-218f-5cc5-a0c1-1440972a52e7")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "1fee4877-da14-522b-b775-7781ed9e52c9")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -62207,6 +62431,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "EXT_3A_OK"
       (at 0 1.55 0)
@@ -62271,13 +62496,13 @@
       (uuid "0c2e790a-5a6c-5603-bdad-2096c3f892b4")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "e520fc84-d82b-5a0a-996e-9b92201ca954")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -62376,6 +62601,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "EXT_REG_5V"
       (at 0 1.55 0)
@@ -62440,13 +62666,13 @@
       (uuid "8b79e41b-ca01-55cc-bdbd-a4aac9323d2a")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "861393d4-13e3-50e5-9c33-bf56f2c73aab")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -62545,6 +62771,7 @@
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "ISO_5V"
       (at 0 1.55 0)
@@ -62609,13 +62836,13 @@
       (uuid "c7d26d13-8c87-5061-9ad4-4297eabd5b04")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 -1.45 0)
+      (at 0 0 0)
       (layer "F.Fab")
       (uuid "04f27358-07b6-5cea-bed8-285ac1135993")
       (effects
         (font
-          (size 1 1)
-          (thickness 0.15)
+          (size 0.7 0.7)
+          (thickness 0.08)
         )
       )
     )
@@ -62709,10 +62936,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "909kR"
       (at 0 1.17 0)
@@ -62781,8 +63009,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -62918,10 +63146,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 90)
@@ -62986,12 +63215,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -63025,7 +63254,7 @@
       )
     )
     (uuid "8d7e09f6-c4c8-5190-b4dc-b4dc72d5e7b7")
-    (at 103.0 29.0 90)
+    (at 101.75 28.0 90)
     (property "MPN" "ERJ2RKF1003X"
       (at 0 0 90)
       (layer "F.Fab")
@@ -63127,10 +63356,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -63199,8 +63429,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -63336,10 +63566,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -63408,8 +63639,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -63545,10 +63776,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -63617,8 +63849,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -63754,10 +63986,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 0)
@@ -63826,8 +64059,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -63963,10 +64196,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -64035,8 +64269,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -64172,10 +64406,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 90)
@@ -64240,12 +64475,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -64381,10 +64616,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "909kR"
       (at 0 1.17 90)
@@ -64449,12 +64685,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -64590,10 +64826,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -64662,8 +64899,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -64799,10 +65036,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 90)
@@ -64867,12 +65105,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -65008,10 +65246,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -65080,8 +65319,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -65217,10 +65456,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 90)
@@ -65285,12 +65525,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -65426,10 +65666,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 0)
@@ -65498,8 +65739,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -65635,10 +65876,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "17.8kR"
       (at 0 1.17 0)
@@ -65707,8 +65949,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -65844,10 +66086,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 90)
@@ -65912,12 +66155,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -66053,10 +66296,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "23.7kR"
       (at 0 1.17 0)
@@ -66125,8 +66369,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -66262,10 +66506,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10.2kR"
       (at 0 1.17 0)
@@ -66334,8 +66579,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -66471,10 +66716,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "29.8kR"
       (at 0 1.17 0)
@@ -66543,8 +66789,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -66680,10 +66926,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 90)
@@ -66748,12 +66995,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -66889,10 +67136,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "3.3kR"
       (at 0 1.17 0)
@@ -66961,8 +67209,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -67085,9 +67333,9 @@
         )
       )
     )
-    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/52a1b8ca-77be-5d95-bbe2-de6ca1fbd0bd/0a44fbdc-ff03-4fb6-8c02-95972870670d")
-    (sheetname "DISTRIBUTION")
-    (sheetfile "hub-distribution.kicad_sch")
+    (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864/0a44fbdc-ff03-4fb6-8c02-95972870670d")
+    (sheetname "BUS_START")
+    (sheetfile "hub-bus_start.kicad_sch")
   )
   (footprint "hub-lib:R_0402_1005Metric"
     (layer "F.Cu")
@@ -67098,10 +67346,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 90)
@@ -67166,12 +67415,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -67307,10 +67556,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "3.3kR"
       (at 0 1.17 0)
@@ -67379,8 +67629,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -67516,10 +67766,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -67588,8 +67839,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -67725,10 +67976,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 90)
@@ -67793,12 +68045,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -67934,10 +68186,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7kR"
       (at 0 1.17 90)
@@ -68002,12 +68255,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -68143,10 +68396,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -68215,8 +68469,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -68352,10 +68606,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7kR"
       (at 0 1.17 90)
@@ -68420,12 +68675,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -68561,10 +68816,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1kR"
       (at 0 1.17 0)
@@ -68633,8 +68889,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -68770,10 +69026,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "46.4kR"
       (at 0 1.17 90)
@@ -68838,12 +69095,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -68979,10 +69236,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "46.4kR"
       (at 0 1.17 0)
@@ -69051,8 +69309,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -69188,10 +69446,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -69260,8 +69519,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -69397,10 +69656,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "46.4kR"
       (at 0 1.17 0)
@@ -69469,8 +69729,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -69606,10 +69866,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "46.4kR"
       (at 0 1.17 0)
@@ -69678,8 +69939,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -69815,10 +70076,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -69887,8 +70149,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -70024,10 +70286,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -70096,8 +70359,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -70233,10 +70496,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -70305,8 +70569,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -70442,10 +70706,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "28.7kR"
       (at 0 1.17 90)
@@ -70510,12 +70775,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -70651,10 +70916,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100kR"
       (at 0 1.17 0)
@@ -70723,8 +70989,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -70860,10 +71126,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 0)
@@ -70932,8 +71199,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -71069,10 +71336,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 90)
@@ -71137,12 +71405,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -71278,10 +71546,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 0)
@@ -71350,8 +71619,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -71487,10 +71756,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 90)
@@ -71555,12 +71825,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -71696,10 +71966,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 0)
@@ -71768,8 +72039,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -71905,10 +72176,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 90)
@@ -71973,12 +72245,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -72114,10 +72386,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 0)
@@ -72186,8 +72459,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -72323,10 +72596,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "0R"
       (at 0 1.17 90)
@@ -72391,12 +72665,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -72532,10 +72806,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "49.9kR"
       (at 0 1.17 90)
@@ -72600,12 +72875,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -72741,10 +73016,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -72813,8 +73089,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -72950,10 +73226,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "2.7kR"
       (at 0 1.17 0)
@@ -73022,8 +73299,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -73159,10 +73436,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -73231,8 +73509,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -73368,10 +73646,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "75kR"
       (at 0 1.17 90)
@@ -73436,12 +73715,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -73577,10 +73856,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -73649,8 +73929,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -73786,10 +74066,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 90)
@@ -73854,12 +74135,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -73995,10 +74276,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -74067,8 +74349,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -74204,10 +74486,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7kR"
       (at 0 1.17 90)
@@ -74272,12 +74555,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -74413,10 +74696,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -74485,8 +74769,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -74622,10 +74906,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "909kR"
       (at 0 1.17 0)
@@ -74694,8 +74979,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -74831,10 +75116,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "4.7kR"
       (at 0 1.17 0)
@@ -74903,8 +75189,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -75040,10 +75326,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -75112,8 +75399,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -75249,10 +75536,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "909kR"
       (at 0 1.17 0)
@@ -75321,8 +75609,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -75458,10 +75746,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "10kR"
       (at 0 1.17 0)
@@ -75530,8 +75819,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -75667,10 +75956,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "3.3kR"
       (at 0 1.17 90)
@@ -75735,12 +76025,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -75876,10 +76166,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "22uF"
       (at 0 2.3 0)
@@ -75948,8 +76239,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.8 0.8)
-          (thickness 0.12)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -76085,10 +76376,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "100nF"
       (at 0 1.16 90)
@@ -76153,12 +76445,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.25 0.25)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -76294,12 +76586,13 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
-    (property "Value" "47kR"
+    (property "Value" "68kR"
       (at 0 1.17 90)
       (layer "F.Fab")
       (effects
@@ -76362,12 +76655,12 @@
       (layer "F.Fab")
     )
     (fp_text user "${REFERENCE}"
-      (at 0 0 0)
+      (at 0 0 90)
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -76402,7 +76695,7 @@
     )
     (uuid "321f0eac-1024-59e7-b7fb-6358d1bfee9f")
     (at 94.25 45.0 90)
-    (property "MPN" "ERJ2RKF4702X"
+    (property "MPN" "ERJ2RKF6802X"
       (at 0 0 90)
       (layer "F.Fab")
       (hide yes)
@@ -76424,7 +76717,7 @@
         )
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77607"
       (at 0 0 90)
       (layer "F.Fab")
       (hide yes)
@@ -76503,10 +76796,11 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.7 0.7)
+          (size 0.45 0.45)
           (thickness 0.1)
         )
       )
+      (hide yes)
     )
     (property "Value" "1kR"
       (at 0 1.17 0)
@@ -76575,8 +76869,8 @@
       (layer "F.Fab")
       (effects
         (font
-          (size 0.26 0.26)
-          (thickness 0.04)
+          (size 0.45 0.45)
+          (thickness 0.08)
         )
       )
     )
@@ -76885,6 +77179,17 @@
       )
     )
   )
+  (gr_circle
+    (center 5 5)
+    (end 6.6 5)
+    (stroke
+      (width 0.15)
+      (type default)
+    )
+    (fill none)
+    (layer "Dwgs.User")
+    (uuid "2120aee5-f692-5c35-b682-271c2b3ca60d")
+  )
   (zone
     (net 0)
     (net_name "")
@@ -76943,6 +77248,17 @@
         (xy 134.13851289729033 4.375710969548388)
       )
     )
+  )
+  (gr_circle
+    (center 131 5)
+    (end 132.6 5)
+    (stroke
+      (width 0.15)
+      (type default)
+    )
+    (fill none)
+    (layer "Dwgs.User")
+    (uuid "7227a41b-e864-5f92-bfa5-9122ce024c68")
   )
   (zone
     (net 0)
@@ -77003,6 +77319,17 @@
       )
     )
   )
+  (gr_circle
+    (center 5 111)
+    (end 6.6 111)
+    (stroke
+      (width 0.15)
+      (type default)
+    )
+    (fill none)
+    (layer "Dwgs.User")
+    (uuid "8b605fc2-2c87-544d-88c0-732d6a6c12ab")
+  )
   (zone
     (net 0)
     (net_name "")
@@ -77061,6 +77388,17 @@
         (xy 134.13851289729033 110.3757109695484)
       )
     )
+  )
+  (gr_circle
+    (center 131 111)
+    (end 132.6 111)
+    (stroke
+      (width 0.15)
+      (type default)
+    )
+    (fill none)
+    (layer "Dwgs.User")
+    (uuid "ce51ef5f-120f-575c-95fc-fd6672b9d09b")
   )
   (gr_line
     (start 37.85 0)

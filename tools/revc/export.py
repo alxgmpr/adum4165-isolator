@@ -23,7 +23,7 @@ def bom():
             p={a[1]:a[2] for a in children(symbol,'property')}
             if p.get('CoverMPN'):covers.append([p['Reference'],p['CoverMPN'],p['Manufacturer'],p['CoverQuantity'],p['Datasheet'],'Removable frame cover; order separately'])
     with (ROOT/'docs/revc/BOM-covers.csv').open('w') as f:
-        writer=csv.writer(f);writer.writerow(['Parent reference','MPN','Manufacturer','Quantity','Source','Assembly note']);writer.writerows(covers)
+        writer=csv.writer(f,lineterminator="\n");writer.writerow(['Parent reference','MPN','Manufacturer','Quantity','Source','Assembly note']);writer.writerows(covers)
 
 def main():
     OUT.mkdir(exist_ok=True)

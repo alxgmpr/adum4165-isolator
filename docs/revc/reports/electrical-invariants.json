@@ -1,0 +1,89 @@
+{
+  "critical_component_checks": 42,
+  "checks": [
+    "U1: critical pin/net assertions",
+    "U11: critical pin/net assertions",
+    "U8: critical pin/net assertions",
+    "U33: critical pin/net assertions",
+    "Y2: critical pin/net assertions",
+    "J1: critical pin/net assertions",
+    "J5: critical pin/net assertions",
+    "J6: critical pin/net assertions",
+    "U16: critical pin/net assertions",
+    "U12: critical pin/net assertions",
+    "U17: critical pin/net assertions",
+    "U13: critical pin/net assertions",
+    "U18: critical pin/net assertions",
+    "U14: critical pin/net assertions",
+    "U19: critical pin/net assertions",
+    "U15: critical pin/net assertions",
+    "U20: critical pin/net assertions",
+    "U35: critical pin/net assertions",
+    "U37: critical pin/net assertions",
+    "U39: critical pin/net assertions",
+    "Q5: critical pin/net assertions",
+    "U21: critical pin/net assertions",
+    "U36: critical pin/net assertions",
+    "U38: critical pin/net assertions",
+    "U40: critical pin/net assertions",
+    "Q6: critical pin/net assertions",
+    "U24: critical pin/net assertions",
+    "U25: critical pin/net assertions",
+    "U29: critical pin/net assertions",
+    "U48: critical pin/net assertions",
+    "C116: critical pin/net assertions",
+    "U30: critical pin/net assertions",
+    "R116: critical pin/net assertions",
+    "R110: critical pin/net assertions",
+    "R112: critical pin/net assertions",
+    "TP13: critical pin/net assertions",
+    "TP14: critical pin/net assertions",
+    "TP15: critical pin/net assertions",
+    "TP16: critical pin/net assertions",
+    "SH1: critical pin/net assertions",
+    "SH2: critical pin/net assertions",
+    "CY1: critical pin/net assertions"
+  ],
+  "only_cross_domain_components": {
+    "CY1": [
+      "Primary",
+      "Secondary"
+    ],
+    "U1": [
+      "Primary",
+      "Secondary"
+    ],
+    "T1": [
+      "Primary",
+      "Secondary"
+    ]
+  },
+  "type_c_logic_truth_table": [
+    {
+      "sink_attached": 0,
+      "hub_permission": 0,
+      "port_VBUS_enable": 0,
+      "discharge_enable": 1
+    },
+    {
+      "sink_attached": 0,
+      "hub_permission": 1,
+      "port_VBUS_enable": 0,
+      "discharge_enable": 1
+    },
+    {
+      "sink_attached": 1,
+      "hub_permission": 0,
+      "port_VBUS_enable": 0,
+      "discharge_enable": 1
+    },
+    {
+      "sink_attached": 1,
+      "hub_permission": 1,
+      "port_VBUS_enable": 1,
+      "discharge_enable": 0
+    }
+  ],
+  "errors": [],
+  "limits": "Logical/netlist checks, not analog startup, fault timing, isolation certification or hardware USB testing."
+}

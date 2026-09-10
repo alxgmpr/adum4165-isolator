@@ -17,7 +17,7 @@ for f in children(board,'footprint'):
  footprints[ref]=f;pos=child(f,'at')[1:];rot=pos[2] if len(pos)>2 else 0
  p=PARTS.get(ref)
  if p:
-  for key,expected in [('Value',p['value']),('MPN',p['mpn']),('Manufacturer',p['manufacturer']),('Datasheet',p['datasheet'])]:
+  for key,expected in [('Value',p['value']),('MPN',p['mpn']),('Manufacturer',p['manufacturer']),('Datasheet',p['datasheet']),('LCSC',p.get('lcsc','')),('Ratings',p.get('ratings',''))]:
    if props.get(key)!=expected:errors.append([ref,key,props.get(key),expected])
   if f[1]!=p['footprint']:errors.append([ref,'footprint library mismatch'])
   if not value(f,'path','').endswith('/'+p['uuid']):errors.append([ref,'schematic UUID mismatch'])
@@ -65,5 +65,5 @@ result={'schematic_components':len(PARTS),'pcb_footprints':len(footprints),'boar
  'limits':'Conservative pad bounding geometry, inventory and net mapping only. KiCad DRC checks detailed shapes/courtyards/edges. This is not a routed-board or certified insulation test.'}
 report=ROOT/'docs/revc/reports';(report/'pcb-inventory-and-isolation.json').write_text(json.dumps(result,indent=2)+'\n')
 for name,header,rows in [('pcb-pad-net-map.csv',['Reference','Pad','Net','X mm','Y mm','Width mm','Height mm','Angle deg'],padrows),('bypass-placement.csv',['Reference','Value','Owning pin / purpose','X mm','Y mm','Angle deg'],bypass)]:
- with (report/name).open('w') as f:w=csv.writer(f);w.writerow(header);w.writerows(rows)
+ with (report/name).open('w') as f:w=csv.writer(f,lineterminator="\n");w.writerow(header);w.writerows(rows)
 print(json.dumps(result,indent=2));assert not errors,errors

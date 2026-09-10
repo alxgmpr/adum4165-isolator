@@ -407,8 +407,8 @@ C82,GRM155R71H104KE14D,hub-lib:C_0402_1005Metric,1,,EXT_BOOT1,-0.48,0,0.56,0.62,
 C82,GRM155R71H104KE14D,hub-lib:C_0402_1005Metric,2,,EXT_SW1,0.48,0,0.56,0.62,https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H104KE14%23
 C83,GRM155R71H104KE14D,hub-lib:C_0402_1005Metric,1,,EXT_BOOT2,-0.48,0,0.56,0.62,https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H104KE14%23
 C83,GRM155R71H104KE14D,hub-lib:C_0402_1005Metric,2,,EXT_SW2,0.48,0,0.56,0.62,https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H104KE14%23
-C84,GRM21BR61E106KA73L,hub-lib:C_0805_2012Metric,1,,EXT_REG_VCC,-0.95,0,1,1.45,https://www.murata.com/en-global/products/productdetail?partno=GRM21BR61E106KA73%23
-C84,GRM21BR61E106KA73L,hub-lib:C_0805_2012Metric,2,,GND2,0.95,0,1,1.45,https://www.murata.com/en-global/products/productdetail?partno=GRM21BR61E106KA73%23
+C84,GRM32ER71E226KE15L,hub-lib:C_1210_3225Metric,1,,EXT_REG_VCC,-1.475,0,1.15,2.7,https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23
+C84,GRM32ER71E226KE15L,hub-lib:C_1210_3225Metric,2,,GND2,1.475,0,1.15,2.7,https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23
 C85,GRM32ER71E226KE15L,hub-lib:C_1210_3225Metric,1,,EXT_REG_5V,-1.475,0,1.15,2.7,https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23
 C85,GRM32ER71E226KE15L,hub-lib:C_1210_3225Metric,2,,GND2,1.475,0,1.15,2.7,https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23
 C86,GRM32ER71E226KE15L,hub-lib:C_1210_3225Metric,1,,EXT_REG_5V,-1.475,0,1.15,2.7,https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23
@@ -477,8 +477,8 @@ R62,ERJ2RKF7502X,hub-lib:R_0402_1005Metric,1,,PORT_ILIM,-0.51,0,0.54,0.64,https:
 R62,ERJ2RKF7502X,hub-lib:R_0402_1005Metric,2,,GND2,0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
 R63,ERJ2RKF1002X,hub-lib:R_0402_1005Metric,1,,ISO_3V3,-0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
 R63,ERJ2RKF1002X,hub-lib:R_0402_1005Metric,2,,BUS_LIMIT_RAW_N,0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
-R121,ERJ2RKF4702X,hub-lib:R_0402_1005Metric,1,,BUS_LIMIT_RAW_N,-0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
-R121,ERJ2RKF4702X,hub-lib:R_0402_1005Metric,2,,BUS_FAULT_FILTER_N,0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
+R121,ERJ2RKF6802X,hub-lib:R_0402_1005Metric,1,,BUS_LIMIT_RAW_N,-0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
+R121,ERJ2RKF6802X,hub-lib:R_0402_1005Metric,2,,BUS_FAULT_FILTER_N,0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
 R122,ERJ2RKF1001X,hub-lib:R_0402_1005Metric,1,,BUS_FAULT_FILTER_N,-0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
 R122,ERJ2RKF1001X,hub-lib:R_0402_1005Metric,2,,BUS_FAULT_CAP,0.51,0,0.54,0.64,https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf
 C116,GRM32ER71E226KE15L,hub-lib:C_1210_3225Metric,1,,ISO_3V3,-1.475,0,1.15,2.7,https://www.murata.com/en-global/products/productdetail?partno=GRM32ER71E226KE15%23

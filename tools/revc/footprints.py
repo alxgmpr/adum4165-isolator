@@ -62,6 +62,10 @@ def local_models():
             if file.stem=='USB_C_Receptacle_HRO_TYPE-C-31-M-12':
                 child(child(m,'rotate'),'xyz')[1:]=[-90,0,0]
                 child(child(m,'offset'),'xyz')[1:]=[-4.47,-3.65,0]
+            if file.stem=='C_Disc_D7.0mm_W5.5mm_P14.00mm':
+                # Model body is centered on Z=0; raise it clear of the board.
+                # Long as-supplied leads remain visible and must be trimmed.
+                child(child(m,'offset'),'xyz')[1:]=[7,0,4]
         if file.stem in envelopes:
             f[:]=[x for x in f if not(isinstance(x,list) and str(x[0])=='model')]
             x,y,z=envelopes[file.stem];cx=-2.68 if file.stem.startswith('USB_A_') else 0

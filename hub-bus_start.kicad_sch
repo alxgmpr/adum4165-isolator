@@ -4,7 +4,7 @@
   (uuid "e6d4c444-175a-5ee2-b3ae-113447e79a2a")
   (paper "A3")
   (title_block
-    (title "Bus-power capacitor charging and fault timing")
+    (title "Bus startup and aggregate fault reporting")
     (rev "C")
     (date "2026-09-10")
   )
@@ -554,6 +554,910 @@
       )
       (embedded_fonts no)
     )
+    (symbol "hub-lib:Diode_BAT54C"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "D"
+        (at 0.635 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "BAT54C"
+        (at -6.35 3.175 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+        (at 1.905 3.175 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Datasheet" "http://www.diodes.com/_files/datasheets/ds11005.pdf"
+        (at -2.032 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "dual schottky barrier diode, common cathode"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "schottky diode common cathode"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "SOT?23*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Diode_BAT54C_0_1"
+        (polyline
+          (pts
+            (xy -3.175 -1.27)
+            (xy -3.175 1.27)
+            (xy -1.27 0)
+            (xy -3.175 -1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.905 1.27)
+            (xy -1.905 1.016)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.905 0)
+            (xy 1.905 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 1.27)
+            (xy -1.905 1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy -3.81 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -0.635 -1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -0.635 -1.27)
+            (xy -0.635 -1.016)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (circle
+          (center 0 0)
+          (radius 0.254)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.635 -1.27)
+            (xy 0.635 -1.016)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.905 1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 0.635 -1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.905 1.27)
+            (xy 1.905 1.016)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 3.175 -1.27)
+            (xy 3.175 1.27)
+            (xy 1.27 0)
+            (xy 3.175 -1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 1.27 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Diode_BAT54C_1_1"
+        (pin passive line
+          (at -7.62 0 0)
+          (length 3.81)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 7.62 0 180)
+          (length 3.81)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 5.08)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:Device_LED"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 1.016)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "LED"
+        (at 0 -2.54 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Light emitting diode"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "LED diode"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Device_LED_0_1"
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Device_LED_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "hub-lib:Transistor_FET_2N7002"
+      (pin_names
+        (offset 0)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (embedded_fonts no)
+      (property "Reference" "Q"
+        (at 5.08 1.905 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "2N7002"
+        (at 5.08 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+        (at 5.08 -1.905 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+            (italic yes)
+          )
+          (justify left)
+        )
+      )
+      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+        (at 5.08 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "N-Channel Switching MOSFET"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_fp_filters" "SOT?23*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Transistor_FET_2N7002_0_1"
+        (polyline
+          (pts
+            (xy 0.254 1.905)
+            (xy 0.254 -1.905)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.254 0)
+            (xy -2.54 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.762 2.286)
+            (xy 0.762 1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.762 0.508)
+            (xy 0.762 -0.508)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.762 -1.27)
+            (xy 0.762 -2.286)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.762 -1.778)
+            (xy 3.302 -1.778)
+            (xy 3.302 1.778)
+            (xy 0.762 1.778)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.016 0)
+            (xy 2.032 0.381)
+            (xy 2.032 -0.381)
+            (xy 1.016 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (circle
+          (center 1.651 0)
+          (radius 2.794)
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 2.54 2.54)
+            (xy 2.54 1.778)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (circle
+          (center 2.54 1.778)
+          (radius 0.254)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (circle
+          (center 2.54 -1.778)
+          (radius 0.254)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (polyline
+          (pts
+            (xy 2.54 -2.54)
+            (xy 2.54 0)
+            (xy 0.762 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 2.921 0.381)
+            (xy 3.683 0.381)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 3.302 0.381)
+            (xy 2.921 -0.254)
+            (xy 3.683 -0.254)
+            (xy 3.302 0.381)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Transistor_FET_2N7002_1_1"
+        (pin input line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "G"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
     (symbol "hub-lib:power_GND2"
       (power global)
       (pin_numbers
@@ -817,7 +1721,7 @@
       (embedded_fonts no)
     )
   )
-  (text "Bus-power capacitor charging and fault timing"
+  (text "Bus startup and aggregate fault reporting"
     (at 20.32 17.78 0)
     (effects
       (font
@@ -825,9 +1729,9 @@
       )
       (justify left)
     )
-    (uuid "a6c3cdd3-6935-5b49-a838-96e09569ff68")
+    (uuid "3c15a78a-0480-5c34-a58b-c956e1b70df8")
   )
-  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placement and routing review pending"
+  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placed PCB; all routing by Alex; hardware tests pending"
     (at 20.32 27.94 0)
     (effects
       (font
@@ -835,9 +1739,9 @@
       )
       (justify left)
     )
-    (uuid "3cbc9f9d-1567-5e7b-b543-279c7cd79191")
+    (uuid "61a91aad-ec4b-5aff-a156-b2ed8ff1f549")
   )
-  (text "Bus current limit is immediate; report sustained faults after capacitor charging"
+  (text "Delayed bus fault report; immediate current limit"
     (at 20.32 43.18 0)
     (effects
       (font
@@ -845,7 +1749,7 @@
       )
       (justify left)
     )
-    (uuid "cd4ee672-3ae9-5df0-97ee-24eedc2e4efd")
+    (uuid "7f9d6e56-2585-5cd0-91bf-a918c7ea829b")
   )
   (symbol
     (lib_id "hub-lib:74xGxx_74LVC1G17")
@@ -1594,7 +2498,7 @@
         (justify left)
       )
     )
-    (property "Value" "47kR"
+    (property "Value" "68kR"
       (at 104.14 118.11 0)
       (effects
         (font
@@ -1633,7 +2537,7 @@
         (justify left)
       )
     )
-    (property "MPN" "ERJ2RKF4702X"
+    (property "MPN" "ERJ2RKF6802X"
       (at 100.33 116.84 0)
       (effects
         (font
@@ -1653,7 +2557,7 @@
         (justify left)
       )
     )
-    (property "LCSC" ""
+    (property "LCSC" "C77607"
       (at 100.33 116.84 0)
       (effects
         (font
@@ -1955,6 +2859,1571 @@
     (uuid "fb8eb052-9c35-5d70-8919-d830bda21ef0")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 134.62 123.19 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (text "Aggregate fault fanout and external-source indicator"
+    (at 226.06 43.18 0)
+    (effects
+      (font
+        (size 1.778 1.778)
+      )
+      (justify left)
+    )
+    (uuid "fde79390-4b15-56bb-99d4-509188ceaa9b")
+  )
+  (symbol
+    (lib_id "hub-lib:Diode_BAT54C")
+    (at 246.38 73.66 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "4724a043-f990-52ec-a28e-577979fd91d5")
+    (property "Reference" "D20"
+      (at 243.84 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "BAT54C"
+      (at 243.84 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:SOT-23"
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54_SER.pdf"
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Common-cathode fault fanout; preserves independent port faults"
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "BAT54C,215"
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C37704"
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 246.38 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "ca478483-03c9-577f-af28-adc2fa278865")
+    )
+    (pin "2"
+      (uuid "27f9b6f0-1381-5a5d-b8a3-1dba2e726c38")
+    )
+    (pin "3"
+      (uuid "a394df16-fff4-5b0f-b6a7-831277992ff0")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "D20")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 238.76 73.66)
+      (xy 234.95 73.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "01806411-e74d-5a01-aee9-2e89aef48c2b")
+  )
+  (global_label "OCS1_N"
+    (shape bidirectional)
+    (at 234.95 73.66 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "d2a7b43d-d389-56e5-bf02-084e8667c157")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 234.95 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 254.0 73.66)
+      (xy 257.81 73.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "837c6973-a272-5235-a827-5ab67dacf178")
+  )
+  (global_label "OCS2_N"
+    (shape bidirectional)
+    (at 257.81 73.66 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "99979e37-3c09-5a7f-bf1d-6d3e2042ddd8")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 257.81 73.66 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 246.38 78.74)
+      (xy 246.38 82.55)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f58f71d3-94d7-5dd7-8f67-e205eede4855")
+  )
+  (global_label "PORT_LIMIT_N"
+    (shape bidirectional)
+    (at 246.38 82.55 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "fffb60b9-4154-5659-8baf-b70e5ca2da11")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 246.38 82.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Diode_BAT54C")
+    (at 317.5 73.66 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "dc5d3654-88b6-5b86-a237-157eb118a536")
+    (property "Reference" "D21"
+      (at 314.96 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "BAT54C"
+      (at 314.96 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:SOT-23"
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54_SER.pdf"
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Common-cathode fault fanout; preserves independent port faults"
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "BAT54C,215"
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C37704"
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 317.5 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "3272d03e-dd56-50a0-9ed2-0887c58b00fe")
+    )
+    (pin "2"
+      (uuid "29a550f1-44e9-5e27-b24c-b04c309ab174")
+    )
+    (pin "3"
+      (uuid "fd6319f9-ccc6-5340-a789-9d20e21a4cab")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "D21")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 309.88 73.66)
+      (xy 306.07 73.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "6055326f-0a8b-5e7a-be3d-588b6e02edcf")
+  )
+  (global_label "OCS3_N"
+    (shape bidirectional)
+    (at 306.07 73.66 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "0f911ea7-f5e3-5656-ab52-4cde9b4ec140")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 306.07 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 325.12 73.66)
+      (xy 328.93 73.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "fd878329-8a14-5219-b7b5-ac2572ec322b")
+  )
+  (global_label "OCS4_N"
+    (shape bidirectional)
+    (at 328.93 73.66 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "d85c6075-d636-5d63-8ab4-9b0ecbd0c1cc")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 328.93 73.66 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 317.5 78.74)
+      (xy 317.5 82.55)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f76bbcf9-45f5-5205-94ef-6bff984f6596")
+  )
+  (global_label "PORT_LIMIT_N"
+    (shape bidirectional)
+    (at 317.5 82.55 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "1ca80428-8da2-5755-9d8c-b2298326f10d")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 317.5 82.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Diode_BAT54C")
+    (at 246.38 102.87 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "85f88244-00a3-5075-88b3-fa1d38bcfc61")
+    (property "Reference" "D22"
+      (at 243.84 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "BAT54C"
+      (at 243.84 96.52000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:SOT-23"
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54_SER.pdf"
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Common-cathode fault fanout; preserves independent port faults"
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "BAT54C,215"
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C37704"
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 246.38 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "dcdbca3b-cb0f-513f-8cc3-b7d1888656a6")
+    )
+    (pin "2"
+      (uuid "b72628e6-431c-5d15-b3c7-8e14161687f5")
+    )
+    (pin "3"
+      (uuid "57c06a9e-b58c-5735-b5ad-b009fb536bf3")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "D22")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 238.76 102.87)
+      (xy 234.95 102.87)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a56e0a86-8e3e-54d8-9ebe-c2687927e3ab")
+  )
+  (global_label "OCS1_N"
+    (shape bidirectional)
+    (at 234.95 102.87 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "26faab74-1e25-5982-9a46-6e196071c449")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 234.95 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 254.0 102.87)
+      (xy 257.81 102.87)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "316030e5-3eda-5571-86d3-9a9b7a913c9d")
+  )
+  (global_label "OCS2_N"
+    (shape bidirectional)
+    (at 257.81 102.87 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "4d6a34e0-cccf-547a-b088-bf26c1cba7a0")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 257.81 102.87 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 246.38 107.95)
+      (xy 246.38 111.76)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "73c1da30-bc81-57cf-ac04-e4e0cf7cf98e")
+  )
+  (global_label "PORT_RAIL_OK"
+    (shape bidirectional)
+    (at 246.38 111.76 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "d82db7d8-2c2f-5b8e-9c6d-5a84ec9b6e67")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 246.38 111.76 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Diode_BAT54C")
+    (at 317.5 102.87 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "2c03abdb-a34c-5d88-b89a-6af45efb417c")
+    (property "Reference" "D23"
+      (at 314.96 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "BAT54C"
+      (at 314.96 96.52000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:SOT-23"
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54_SER.pdf"
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" "Common-cathode fault fanout; preserves independent port faults"
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "BAT54C,215"
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C37704"
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 317.5 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "d8d2eba3-5bb7-5959-9f3b-42f8fd881e05")
+    )
+    (pin "2"
+      (uuid "5c290e1b-fa62-5661-a4a5-2bec7ff61c69")
+    )
+    (pin "3"
+      (uuid "9488c84b-af9e-555e-91eb-7c1451f8d01f")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "D23")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 309.88 102.87)
+      (xy 306.07 102.87)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "7fff7d98-d665-5965-a5fc-fb6e549f4cbc")
+  )
+  (global_label "OCS3_N"
+    (shape bidirectional)
+    (at 306.07 102.87 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "c099de8f-3e23-566f-948f-358c8797e732")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 306.07 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 325.12 102.87)
+      (xy 328.93 102.87)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "9e8dd74f-b6b3-50a2-a3e2-3f840530a860")
+  )
+  (global_label "OCS4_N"
+    (shape bidirectional)
+    (at 328.93 102.87 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "7ccb38ac-b021-5889-90e8-736abc5ea9ca")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 328.93 102.87 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 317.5 107.95)
+      (xy 317.5 111.76)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a81ab583-66a8-535a-9b8a-ba6e94f76c24")
+  )
+  (global_label "PORT_RAIL_OK"
+    (shape bidirectional)
+    (at 317.5 111.76 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "fe3a5436-6a4a-5edb-aff9-7dde6f6be8ce")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 317.5 111.76 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_R_Small_US")
+    (at 381.0 102.87 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0a44fbdc-ff03-4fb6-8c02-95972870670d")
+    (property "Reference" "R29"
+      (at 384.81 101.60000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "3.3kR"
+      (at 384.81 104.14 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:R_0402_1005Metric"
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" ""
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "ERJ2RKF3301X"
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Panasonic Industry"
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C409909"
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "1%, 0.1W, 50V"
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 381.0 102.87 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "ee3484a3-f9f3-5628-ba7d-c4b7adfeec1a")
+    )
+    (pin "2"
+      (uuid "2eeb803a-b0d1-5f6c-a108-7466cccf0fcb")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "R29")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 381.0 100.33)
+      (xy 381.0 96.52)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "0642b868-f652-51c3-b14c-910795aea955")
+  )
+  (symbol
+    (lib_id "hub-lib:power_ISO_3V3")
+    (at 381.0 96.52 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "0f212731-8f17-5e51-9775-f1e715cb2399")
+    (property "Reference" "#PWR7006"
+      (at 381.0 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "ISO_3V3"
+      (at 381.0 92.71 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "2c7a7eb6-0641-576c-bd43-bd2e542ff995")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "#PWR7006")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 381.0 105.41)
+      (xy 381.0 109.22)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "0f5184db-d18d-5199-a7c7-224ebc616a8e")
+  )
+  (global_label "D6_A"
+    (shape bidirectional)
+    (at 381.0 109.22 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "2e1f7a8c-6bfe-5028-be19-10ae6fb7c367")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 381.0 109.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Device_LED")
+    (at 246.38 132.08 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ea7afbdd-dfa2-4bc5-9127-3976785d5208")
+    (property "Reference" "D6"
+      (at 243.84 123.19000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "GREEN"
+      (at 243.84 125.73000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:LED_0603_1608Metric"
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://optoelectronics.liteon.com/upload/download/DS22-2000-213/LTST-C190KGKT.pdf"
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" ""
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "LTST-C190KGKT"
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Lite-On"
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C125094"
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 246.38 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "40325308-b261-53b9-90a8-67a4fcb1a42e")
+    )
+    (pin "2"
+      (uuid "3c89b20b-8bf0-5e2c-8ed5-11c0cff90a3d")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "D6")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 242.57 132.08)
+      (xy 238.76 132.08)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "4d086f58-6312-5110-b22a-2f5ae2efd255")
+  )
+  (global_label "D6_K"
+    (shape bidirectional)
+    (at 238.76 132.08 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "8a388432-fd25-57a4-8a00-b047f05f79d0")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 238.76 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 250.19 132.08)
+      (xy 254.0 132.08)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d3d31b95-bf8b-5d5e-9664-4e97b2efee71")
+  )
+  (global_label "D6_A"
+    (shape bidirectional)
+    (at 254.0 132.08 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "14489678-46a1-567b-9000-20f32c1fafa5")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 254.0 132.08 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:Transistor_FET_2N7002")
+    (at 322.58 132.08 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "3c06cfcb-9228-495c-b60c-480e7cbf052a")
+    (property "Reference" "Q3"
+      (at 332.74 130.81 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "2N7002"
+      (at 332.74 133.35000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Footprint" "hub-lib:SOT-23"
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf"
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Description" ""
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "MPN" "2N7002,215"
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "LCSC" "C65189"
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "Ratings" "See exact manufacturer datasheet"
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverMPN" ""
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (property "CoverQuantity" ""
+      (at 322.58 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "cefdd946-11db-5499-984a-7e93ee5b09a0")
+    )
+    (pin "2"
+      (uuid "1ca3d37b-e229-515c-817e-54b84b62e82c")
+    )
+    (pin "3"
+      (uuid "c7427974-fbc6-5b90-a0e0-2f6d62662269")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "Q3")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 317.5 132.08)
+      (xy 313.69 132.08)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a2236e27-04af-5c93-9d4f-b8d992b2778e")
+  )
+  (global_label "EXT_SELECTED"
+    (shape bidirectional)
+    (at 313.69 132.08 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "dd616dec-57b5-54ab-b0c4-47d520f0e9f9")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 313.69 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 325.12 137.16)
+      (xy 325.12 140.97)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "5851a5f7-9aec-5307-aa4c-0f485bca8afe")
+  )
+  (symbol
+    (lib_id "hub-lib:power_GND2")
+    (at 325.12 140.97 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "bfa73208-1a7a-5a5d-be4e-9b10cc6f0095")
+    (property "Reference" "#PWR7007"
+      (at 325.12 140.97 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "GND2"
+      (at 325.12 144.78 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c52b34b0-9e7c-5a63-b5dd-ba7c02d44267")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/c92b95a8-149c-5d3e-9aff-31a7efa21864"
+          (reference "#PWR7007")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 325.12 127.0)
+      (xy 325.12 123.19)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "469a3d0a-f677-5b0b-bb25-8bcbb33af53d")
+  )
+  (global_label "D6_K"
+    (shape bidirectional)
+    (at 325.12 123.19 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "37193ecb-0e40-5557-8db5-8fdd51330bcb")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 325.12 123.19 0)
       (effects
         (font
           (size 1.27 1.27)

@@ -30,7 +30,7 @@ def main():
         if p.get('exclude_bom'):no_purchase.append(ref)
     out=ROOT/'docs/revc'
     with (out/'symbol-pad-net-audit.csv').open('w') as f:
-        w=csv.writer(f);w.writerow(['Reference','MPN','Footprint','Pin','Function','Expected net','Pad X mm','Pad Y mm','Pad width mm','Pad height mm','Manufacturer source']);w.writerows(rows)
+        w=csv.writer(f,lineterminator="\n");w.writerow(['Reference','MPN','Footprint','Pin','Function','Expected net','Pad X mm','Pad Y mm','Pad width mm','Pad height mm','Manufacturer source']);w.writerows(rows)
     result={'physical_symbols':len(PARTS),'exported_components':len(netlist.findall('components/comp')),
         'pad_rows_including_duplicate_lands':len(rows),'connected_pin_net_differences':errors,
         'purchase_bom_exceptions':{'PCB test pads':no_purchase},
@@ -74,5 +74,7 @@ def render():
     fig.suptitle('Rev C land-pattern review · copper and pin numbers · no tracks or vias',fontsize=16)
     fig.tight_layout(rect=[0,0,1,.97]);out=ROOT/'docs/revc/renders';out.mkdir(exist_ok=True)
     fig.savefig(out/'land-pattern-review.png',dpi=180);fig.savefig(out/'land-pattern-review.svg');plt.close(fig)
+    svg=out/'land-pattern-review.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
 
 if __name__=='__main__':main()

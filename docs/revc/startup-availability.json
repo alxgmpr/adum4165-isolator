@@ -15,6 +15,20 @@
           }
         ]
       }
+    },
+    {
+      "query": "ERJ2RKF6802X",
+      "result": {
+        "results": [
+          {
+            "model": "ERJ2RKF6802X",
+            "manufacturer": "PANASONIC",
+            "lcsc": "C77607",
+            "stock": 15254,
+            "package": "0402"
+          }
+        ]
+      }
     }
   ]
 }

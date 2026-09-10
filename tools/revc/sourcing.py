@@ -112,7 +112,7 @@ def assign(parts):
                 mpn='RT0603BRB07'+yageo_value(rval)+'L';mfr='Yageo';package='0603';rating='0.1%, 10ppm/C thin film, 0.1W'
                 if ref=='R111':mpn='RT0603BRD072K87L';rating='0.1%, 25ppm/C thin film, 0.1W'
             elif ref in ['R81','R82']:
-                mpn='ERJ6ENF1000V';mfr='Panasonic Industry';package='0805';rating='100R 1%, 0.125W; 0.14mJ maximum discharge pulse'
+                mpn='ERJ6ENF1000V';mfr='Panasonic Industry';package='0805';rating='100R 1%, 0.125W; 0.20mJ maximum design discharge pulse'
             else:
                 mpn='ERJ2RKF'+eia(rval)+'X';mfr='Panasonic Industry';rating='1%, 0.1W, 50V'
             p.update(mpn=mpn,manufacturer=mfr,ratings=rating,footprint=f'Resistor_SMD:R_{package}_{METRIC[package]}Metric')

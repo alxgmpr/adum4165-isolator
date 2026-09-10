@@ -2,7 +2,7 @@
 # Nominal JLC04161H-3313, 90 ohm differential target. See routing guide.
 (rule "USB pair geometry"
   (condition "A.hasNetclass('USB90')")
-  (constraint track_width (opt 0.15mm))
+  (constraint track_width (opt 0.136mm))
   (constraint diff_pair_gap (opt 0.15mm))
   (constraint diff_pair_uncoupled (max 5mm))
   (constraint skew (max 0.25mm) (within_diff_pairs))

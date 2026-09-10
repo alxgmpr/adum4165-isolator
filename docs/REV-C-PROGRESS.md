@@ -19,16 +19,16 @@
   downstream Type-C ports lack attach-controlled VBUS; VBUS_DET is permanent.
 - In progress: pin-table and mode review; exact parts and power architecture.
 
-## Completion gates (open)
+## Completion gates — routing handoff
 
-- [ ] Electrical architecture and worst-case power/control calculations
-- [ ] ISOUSB211 symbol, HV footprint, and supply circuit
-- [ ] USB-C attach, host detection, protection, power modes, and hub configuration
-- [ ] Complete schematic fields, exact BOM, and project-local libraries
-- [ ] Clean rendered schematic, zero ERC errors, explained warnings
-- [ ] Complete synchronized placement, outline, mechanics, stackup, rules
-- [ ] Isolation, pad-net, inventory, courtyard, and edge verification
-- [ ] Renders, routing guide, bring-up checklist, hardware/mechanical limitations
+- [x] Electrical architecture and worst-case power/control calculations
+- [x] ISOUSB211 symbol, HV footprint, and supply circuit
+- [x] USB-C attach, host detection, protection, power modes, and hub configuration
+- [x] Complete schematic fields, exact BOM, and project-local libraries
+- [x] Clean rendered schematic, zero ERC errors, explained warnings
+- [x] Complete synchronized placement, outline, mechanics, stackup, rules
+- [x] Isolation, pad-net, inventory, courtyard, and edge verification
+- [x] Renders, routing guide, bring-up checklist, hardware/mechanical limitations
 - [ ] Checkpoint commits, final clean branch, and push
 
 No tracks, vias, autorouter runs, fabrication outputs, main merge, or hardware
@@ -64,3 +64,15 @@ orders are authorized. Unrouted connections will be reported separately.
 - Reconciled KiCad's footprint-local pad rotations and corrected STEP model orientation/offset for the HRO connectors and transformer. Cleared courtyard/edge/silkscreen conflicts without altering the verified electrical lands. Primary transformer and shield remain separate.
 - Fresh KiCad ERC: **0 errors, 0 warnings**. PCB DRC with explicit `--schematic-parity`: **0 geometry/rule violations, 0 parity issues, 499 expected unrouted connections**. Independent inventory/net audit: no differences. Minimum cross-domain pad copper is 8.200 mm at U1 and 9.410 mm outside U1.
 - Remaining final gates: full-page schematic visual signoff, final placement/3D artifacts and mechanical report, fabricator impedance calculation, complete power/startup/descriptor documentation, EEPROM image, routing guide and bring-up checklist. These passing checks are a placement checkpoint, not hardware validation.
+
+## Checkpoint 5 — final design and visual verification (2026-09-10)
+
+- Completed the power/control report and source-load CSV, including component tolerances, voltage drops, thermal estimates, startup, suspend, source switching and faults. Bus design load is 300 mA shared with derating; full 2 A external output is conditional on input voltage, efficiency, temperature and routed loss. Bench-only uncertainty is explicit.
+- Set R121 to 68 kΩ and verified the startup-report delay against capacitor/leakage corners. Increased C84 to 22 µF/25 V to retain margin above U28's 4.7 µF effective VCC-capacitance requirement. Updated captured fields, exact BOM and placement together.
+- Recorded the live JLC04161H-3313 impedance-calculator result: 90 Ω differential, 0.1356 mm width / 0.1501 mm gap, implemented as 0.136/0.150 mm. Preserved all-layer barrier and mounting keepouts; all routing remains Alex's work.
+- Reviewed all eleven schematic pages and dense detail crops. Repaired remaining power-label, field, gate-label and rotated-text collisions. Delivered SVG/PNG pages and an eleven-page PDF.
+- Reviewed top/bottom/courtyard placement and top/bottom/isometric 3D renders. Corrected CY1's model height and documented untrimmed lead limits. Moved shield reference labels clear of enclosed parts and displayed mounting circles in the drawing layer. No unresolved courtyard, edge, isolation or placed-body interference was found.
+- Final ERC: **0 errors, 0 warnings, no exclusions**. Final DRC: **0 geometry/rule violations, 0 schematic parity issues, 499 expected unrouted connections**. Enabled every PCB DRC check; no ignored checks or exclusions remain. The two inapplicable ERC checks are explained in `docs/revc/VERIFICATION.md`.
+- Independent checks pass for all 291 components, 987 pad rows and 42 critical electrical assertions. Board has 295 footprints including four mounting holes, zero tracks, zero vias and zero filled copper. All 37 local footprints and 34 referenced model files resolve. Original single-port files match baseline `741e9b8`.
+- Supplied the development EEPROM image/byte map, routing guide, mechanical assumptions, full bring-up checklist, verification reports, final netlist, model/library provenance and artifact hashes. All hardware tests and actual enclosure fit remain pending, as appropriate for this unrouted handoff.
+- Handoff starts at `docs/revc/README.md`. Final artifact commit and remote synchronization follow this verification checkpoint; no main merge, hardware order or fabrication output was performed.

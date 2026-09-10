@@ -3878,7 +3878,7 @@
     )
     (uuid "2b844478-5755-55bc-a18a-b95e39a031c6")
   )
-  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placement and routing review pending"
+  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placed PCB; all routing by Alex; hardware tests pending"
     (at 20.32 27.94 0)
     (effects
       (font
@@ -3886,7 +3886,7 @@
       )
       (justify left)
     )
-    (uuid "3cbc9f9d-1567-5e7b-b543-279c7cd79191")
+    (uuid "61a91aad-ec4b-5aff-a156-b2ed8ff1f549")
   )
   (text "Host connector and ESD"
     (at 20.32 43.18 0)
@@ -4986,14 +4986,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_D_Zener")
-    (at 66.04 137.16 0)
+    (at 73.66 137.16 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "9d21e7e3-b72d-42e0-a13b-f289fe7c8ce0")
     (property "Reference" "D1"
-      (at 63.50000000000001 128.26999999999998 0)
+      (at 71.11999999999999 128.26999999999998 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5002,7 +5002,7 @@
       )
     )
     (property "Value" "T6V0S5A-7"
-      (at 63.50000000000001 130.81 0)
+      (at 71.11999999999999 130.81 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5011,7 +5011,7 @@
       )
     )
     (property "Footprint" "hub-lib:D_SOD-523"
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5021,7 +5021,7 @@
       )
     )
     (property "Datasheet" "https://www.diodes.com/assets/Datasheets/T6V0S5A.pdf"
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5031,7 +5031,7 @@
       )
     )
     (property "Description" "Unidirectional TVS: physical cathode/band pad 1 to VBUS, anode pad 2 to ground"
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5041,7 +5041,7 @@
       )
     )
     (property "MPN" "T6V0S5A-7"
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5051,7 +5051,7 @@
       )
     )
     (property "Manufacturer" "Diodes Incorporated"
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5061,7 +5061,7 @@
       )
     )
     (property "LCSC" "C19950551"
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5071,7 +5071,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5081,7 +5081,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5091,7 +5091,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 66.04 137.16 0)
+      (at 73.66 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5117,27 +5117,27 @@
   )
   (wire
     (pts
-      (xy 62.23 137.16)
-      (xy 58.42 137.16)
+      (xy 69.85 137.16)
+      (xy 66.04 137.16)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "dbf96745-90af-54f0-8adf-1e9ffd897e98")
+    (uuid "8a2aec79-6ec0-5b05-8a1b-c52f199920fa")
   )
   (global_label "VBUS_HOST"
     (shape bidirectional)
-    (at 58.42 137.16 0)
+    (at 66.04 137.16 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "2da82ac7-01c8-5736-9a53-54ce91f70e11")
+    (uuid "cb140e88-6291-5792-8d0e-80b31211d917")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 58.42 137.16 0)
+      (at 66.04 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5148,27 +5148,27 @@
   )
   (wire
     (pts
-      (xy 69.85 137.16)
-      (xy 73.66 137.16)
+      (xy 77.47 137.16)
+      (xy 81.28 137.16)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "c5f4c6f8-6930-580f-8154-a145f71ab961")
+    (uuid "33283772-3ee8-5f48-972b-97cc8b987feb")
   )
   (global_label "GND1"
     (shape bidirectional)
-    (at 73.66 137.16 180)
+    (at 81.28 137.16 180)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left)
     )
-    (uuid "f5698248-2617-5b8a-a531-12941e7ce13f")
+    (uuid "dbac0bc4-4836-53ba-9926-b88d739b48d7")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 73.66 137.16 180)
+      (at 81.28 137.16 180)
       (effects
         (font
           (size 1.27 1.27)
@@ -5407,43 +5407,6 @@
     (uuid "351d0a57-33d1-591d-955c-18af72118df3")
   )
   (symbol
-    (lib_id "hub-lib:power_VBUS_HOST")
-    (at 344.17 57.15 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "08a3586a-f2bc-5335-88b5-8907b4b32829")
-    (property "Reference" "#PWR2005"
-      (at 344.17 57.15 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "VBUS_HOST"
-      (at 344.17 53.339999999999996 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "40c4df63-958d-57a4-88f3-3739a295bf53")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
-          (reference "#PWR2005")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND1")
     (at 344.17 85.09 0)
     (unit 1)
@@ -5451,7 +5414,7 @@
     (on_board no)
     (dnp no)
     (uuid "36cc8f04-e60e-5da2-903e-cc7bc050e955")
-    (property "Reference" "#PWR2006"
+    (property "Reference" "#PWR2005"
       (at 344.17 85.09 0)
       (effects
         (font
@@ -5470,6 +5433,43 @@
     )
     (pin "1"
       (uuid "3383304c-54cd-52f6-9565-0009a6091933")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
+          (reference "#PWR2005")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_VBUS_HOST")
+    (at 344.17 57.15 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "08a3586a-f2bc-5335-88b5-8907b4b32829")
+    (property "Reference" "#PWR2006"
+      (at 344.17 57.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "VBUS_HOST"
+      (at 344.17 53.339999999999996 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "40c4df63-958d-57a4-88f3-3739a295bf53")
     )
     (instances
       (project "hub"
@@ -5884,43 +5884,6 @@
     (uuid "cbf9b2cf-8314-5546-99f0-5f186237c475")
   )
   (symbol
-    (lib_id "hub-lib:power_HOST_3V3")
-    (at 415.29 57.15 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "afa8d858-9240-5014-b020-b0b99b311e92")
-    (property "Reference" "#PWR2007"
-      (at 415.29 57.15 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "HOST_3V3"
-      (at 415.29 53.339999999999996 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "63cb0508-1f20-5151-9c2a-ca0e3be2492b")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
-          (reference "#PWR2007")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND1")
     (at 415.29 95.25 0)
     (unit 1)
@@ -5928,7 +5891,7 @@
     (on_board no)
     (dnp no)
     (uuid "062d8cfa-b811-5026-8790-b3756336743c")
-    (property "Reference" "#PWR2008"
+    (property "Reference" "#PWR2007"
       (at 415.29 95.25 0)
       (effects
         (font
@@ -5947,6 +5910,43 @@
     )
     (pin "1"
       (uuid "a5798923-42ba-54ab-8784-ff61371dd26c")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
+          (reference "#PWR2007")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_HOST_3V3")
+    (at 415.29 57.15 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "afa8d858-9240-5014-b020-b0b99b311e92")
+    (property "Reference" "#PWR2008"
+      (at 415.29 57.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "HOST_3V3"
+      (at 415.29 53.339999999999996 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "63cb0508-1f20-5151-9c2a-ca0e3be2492b")
     )
     (instances
       (project "hub"
@@ -8357,43 +8357,6 @@
     (uuid "ecf3b4cf-9c5f-5b00-b0bf-f93c1fd8f5ab")
   )
   (symbol
-    (lib_id "hub-lib:power_VBUS_HOST")
-    (at 344.17 168.91 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "13defc36-edf4-5c2b-b14e-e816660bbb3c")
-    (property "Reference" "#PWR2019"
-      (at 344.17 168.91 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "VBUS_HOST"
-      (at 344.17 165.1 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "f40079dd-5219-536a-a236-cc19c5d72f34")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
-          (reference "#PWR2019")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND1")
     (at 344.17 196.85 0)
     (unit 1)
@@ -8401,7 +8364,7 @@
     (on_board no)
     (dnp no)
     (uuid "4f50d671-cd34-5945-8fe6-c2639cb3348d")
-    (property "Reference" "#PWR2020"
+    (property "Reference" "#PWR2019"
       (at 344.17 196.85 0)
       (effects
         (font
@@ -8420,6 +8383,43 @@
     )
     (pin "1"
       (uuid "b00b830b-efdf-5596-8cd8-ac79350b64cb")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
+          (reference "#PWR2019")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_VBUS_HOST")
+    (at 344.17 168.91 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "13defc36-edf4-5c2b-b14e-e816660bbb3c")
+    (property "Reference" "#PWR2020"
+      (at 344.17 168.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "VBUS_HOST"
+      (at 344.17 165.1 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "f40079dd-5219-536a-a236-cc19c5d72f34")
     )
     (instances
       (project "hub"
@@ -9494,43 +9494,6 @@
     (uuid "497d7ad2-fb80-5bcd-b671-57fd38fe0b61")
   )
   (symbol
-    (lib_id "hub-lib:power_VBUS_HOST")
-    (at 54.61 179.07 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "cde67d2b-621c-50b7-8043-3f8b62ca14a0")
-    (property "Reference" "#PWR2025"
-      (at 54.61 179.07 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "VBUS_HOST"
-      (at 54.61 175.26 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "2496f787-8f47-5aa6-8702-ea2eb09746ce")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
-          (reference "#PWR2025")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND1")
     (at 54.61 207.01 0)
     (unit 1)
@@ -9538,7 +9501,7 @@
     (on_board no)
     (dnp no)
     (uuid "16ba2667-2656-5575-a6e8-2b20d10d4d57")
-    (property "Reference" "#PWR2026"
+    (property "Reference" "#PWR2025"
       (at 54.61 207.01 0)
       (effects
         (font
@@ -9557,6 +9520,43 @@
     )
     (pin "1"
       (uuid "004e47d9-0080-5ce3-afba-cece31b041f4")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
+          (reference "#PWR2025")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_VBUS_HOST")
+    (at 54.61 179.07 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "cde67d2b-621c-50b7-8043-3f8b62ca14a0")
+    (property "Reference" "#PWR2026"
+      (at 54.61 179.07 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "VBUS_HOST"
+      (at 54.61 175.26 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "2496f787-8f47-5aa6-8702-ea2eb09746ce")
     )
     (instances
       (project "hub"
@@ -10447,7 +10447,7 @@
     (dnp no)
     (uuid "bf042950-57a9-5456-98fa-5ea226803b99")
     (property "Reference" "L4"
-      (at 129.54000000000002 229.87 0)
+      (at 129.54000000000002 229.87 90)
       (effects
         (font
           (size 1.27 1.27)
@@ -10456,7 +10456,7 @@
       )
     )
     (property "Value" "2.2uH"
-      (at 129.54000000000002 232.41 0)
+      (at 129.54000000000002 232.41 90)
       (effects
         (font
           (size 1.27 1.27)
@@ -10853,14 +10853,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_LED")
-    (at 355.6 287.02 0)
+    (at 363.22 287.02 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "d4d815ab-ac77-4b4a-a180-815a46f2dcc6")
     (property "Reference" "D2"
-      (at 353.06 278.13 0)
+      (at 360.68 278.13 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10869,7 +10869,7 @@
       )
     )
     (property "Value" "GREEN"
-      (at 353.06 280.66999999999996 0)
+      (at 360.68 280.66999999999996 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10878,7 +10878,7 @@
       )
     )
     (property "Footprint" "hub-lib:LED_0603_1608Metric"
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10888,7 +10888,7 @@
       )
     )
     (property "Datasheet" "https://optoelectronics.liteon.com/upload/download/DS22-2000-213/LTST-C190KGKT.pdf"
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10898,7 +10898,7 @@
       )
     )
     (property "Description" ""
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10908,7 +10908,7 @@
       )
     )
     (property "MPN" "LTST-C190KGKT"
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10918,7 +10918,7 @@
       )
     )
     (property "Manufacturer" "Lite-On"
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10928,7 +10928,7 @@
       )
     )
     (property "LCSC" "C125094"
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10938,7 +10938,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10948,7 +10948,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10958,7 +10958,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 355.6 287.02 0)
+      (at 363.22 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -10984,27 +10984,27 @@
   )
   (wire
     (pts
-      (xy 351.79 287.02)
-      (xy 347.98 287.02)
+      (xy 359.41 287.02)
+      (xy 355.6 287.02)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "79f85e3e-8e37-5e92-bc5a-b798c0082903")
+    (uuid "52830089-dc18-5df1-8c39-16e4c157c776")
   )
   (global_label "D2_K"
     (shape bidirectional)
-    (at 347.98 287.02 0)
+    (at 355.6 287.02 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "e00235d7-a446-58a6-9a32-66e28eae9706")
+    (uuid "92f10abd-da12-525b-ad3a-882bee379e5a")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 347.98 287.02 0)
+      (at 355.6 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11015,27 +11015,27 @@
   )
   (wire
     (pts
-      (xy 359.41 287.02)
-      (xy 363.22 287.02)
+      (xy 367.03 287.02)
+      (xy 370.84 287.02)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "c9ad7ce7-78e1-5cc7-9331-a7c4a96073e6")
+    (uuid "befa5e63-1e5c-5a78-928a-06d4094aa3e6")
   )
   (global_label "D2_A"
     (shape bidirectional)
-    (at 363.22 287.02 180)
+    (at 370.84 287.02 180)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left)
     )
-    (uuid "5997ad90-f1b4-534c-9a44-194f77971de8")
+    (uuid "75bbde52-ff3b-59bf-9107-f773ded82823")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 363.22 287.02 180)
+      (at 370.84 287.02 180)
       (effects
         (font
           (size 1.27 1.27)
@@ -11046,14 +11046,14 @@
   )
   (symbol
     (lib_id "hub-lib:Transistor_FET_2N7002")
-    (at 414.02 287.02 0)
+    (at 439.42 287.02 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "cdec55c0-b050-456e-91b2-2b068757f864")
     (property "Reference" "Q2"
-      (at 424.18 285.75 0)
+      (at 449.58000000000004 285.75 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11062,7 +11062,7 @@
       )
     )
     (property "Value" "2N7002"
-      (at 424.18 288.28999999999996 0)
+      (at 449.58000000000004 288.28999999999996 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11071,7 +11071,7 @@
       )
     )
     (property "Footprint" "hub-lib:SOT-23"
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11081,7 +11081,7 @@
       )
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf"
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11091,7 +11091,7 @@
       )
     )
     (property "Description" ""
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11101,7 +11101,7 @@
       )
     )
     (property "MPN" "2N7002,215"
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11111,7 +11111,7 @@
       )
     )
     (property "Manufacturer" "Nexperia"
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11121,7 +11121,7 @@
       )
     )
     (property "LCSC" "C65189"
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11131,7 +11131,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11141,7 +11141,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11151,7 +11151,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 414.02 287.02 0)
+      (at 439.42 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11180,27 +11180,27 @@
   )
   (wire
     (pts
-      (xy 408.94 287.02)
-      (xy 405.13 287.02)
+      (xy 434.34 287.02)
+      (xy 430.53 287.02)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "f86564ba-3a7a-5f80-b697-5cbbbf8c4137")
+    (uuid "dc2d3aaa-4c05-5588-8386-8dee84523693")
   )
   (global_label "HOST_PWR_OK"
     (shape bidirectional)
-    (at 405.13 287.02 0)
+    (at 430.53 287.02 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "bc69da64-0feb-5f6b-b499-67c38aac2791")
+    (uuid "99e566b9-f850-5967-9ca4-5fc9312ce0fa")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 405.13 287.02 0)
+      (at 430.53 287.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11211,25 +11211,25 @@
   )
   (wire
     (pts
-      (xy 416.56 292.1)
-      (xy 416.56 295.91)
+      (xy 441.96 292.1)
+      (xy 441.96 295.91)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "36a8837d-bef4-564c-92c4-31c563924122")
+    (uuid "02efaf55-d702-5f13-9691-9b09f1147459")
   )
   (symbol
     (lib_id "hub-lib:power_GND1")
-    (at 416.56 295.91 0)
+    (at 441.96 295.91 0)
     (unit 1)
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid "2baf4f85-d99f-502b-b833-1cc493777ebc")
+    (uuid "0b851e49-1666-5115-8255-76545e0e7a0f")
     (property "Reference" "#PWR2034"
-      (at 416.56 295.91 0)
+      (at 441.96 295.91 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11238,7 +11238,7 @@
       )
     )
     (property "Value" "GND1"
-      (at 416.56 299.72 0)
+      (at 441.96 299.72 0)
       (effects
         (font
           (size 1.016 1.016)
@@ -11246,7 +11246,7 @@
       )
     )
     (pin "1"
-      (uuid "1711e7e4-00dd-5d0d-afd6-36496a6c2ffb")
+      (uuid "c9a4dd4b-7763-5cb7-a62e-8d9775626e03")
     )
     (instances
       (project "hub"
@@ -11259,27 +11259,27 @@
   )
   (wire
     (pts
-      (xy 416.56 281.94)
-      (xy 416.56 278.13)
+      (xy 441.96 281.94)
+      (xy 441.96 278.13)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "c7f44564-6fcb-555e-9575-b224e5904353")
+    (uuid "b3badfc3-b1ab-5d1b-8d79-a077ac9d4a6e")
   )
   (global_label "D2_K"
     (shape bidirectional)
-    (at 416.56 278.13 0)
+    (at 441.96 278.13 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "18714114-d28d-5fcb-b045-b50b6c0d2ef2")
+    (uuid "b366a031-c371-5586-b693-9ccf527f1b2f")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 416.56 278.13 0)
+      (at 441.96 278.13 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -11439,40 +11439,23 @@
     )
     (uuid "2f4779ce-76fc-52be-9a81-9747512b955d")
   )
-  (symbol
-    (lib_id "hub-lib:power_VBUS_HOST")
+  (global_label "VBUS_HOST"
+    (shape bidirectional)
     (at 40.64 293.37 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "f3b364aa-a81e-50d6-b63d-68b3761b6864")
-    (property "Reference" "#PWR2035"
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "053e93ca-47e3-53e2-b612-d52620a4577d")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 40.64 293.37 0)
       (effects
         (font
           (size 1.27 1.27)
         )
         hide
-      )
-    )
-    (property "Value" "VBUS_HOST"
-      (at 40.64 289.56 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "d0c1cf47-1792-5074-8c12-0e6ba193a8e2")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
-          (reference "#PWR2035")
-          (unit 1)
-        )
       )
     )
   )
@@ -11625,7 +11608,7 @@
     (on_board no)
     (dnp no)
     (uuid "77f19d47-3818-59e2-8e38-27c8c2089141")
-    (property "Reference" "#PWR2036"
+    (property "Reference" "#PWR2035"
       (at 96.52 293.37 0)
       (effects
         (font
@@ -11648,7 +11631,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
-          (reference "#PWR2036")
+          (reference "#PWR2035")
           (unit 1)
         )
       )
@@ -11795,40 +11778,23 @@
     )
     (uuid "2e62228b-b08a-5ca0-9585-323f3c1a2d5a")
   )
-  (symbol
-    (lib_id "hub-lib:power_U1_1V8_HOST")
+  (global_label "U1_1V8_HOST"
+    (shape bidirectional)
     (at 152.4 293.37 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "6d1db9af-d7e4-510d-b888-e19015620707")
-    (property "Reference" "#PWR2037"
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "181eb5ed-27fc-5d20-b02e-8738caff0358")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 152.4 293.37 0)
       (effects
         (font
           (size 1.27 1.27)
         )
         hide
-      )
-    )
-    (property "Value" "U1_1V8_HOST"
-      (at 152.4 289.56 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "af863ca6-21fa-5549-86a0-649f1833292d")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/5d774a76-deba-5db0-bf32-b19a1d2ddefd"
-          (reference "#PWR2037")
-          (unit 1)
-        )
       )
     )
   )

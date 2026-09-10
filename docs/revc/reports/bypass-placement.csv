@@ -36,8 +36,8 @@ C80,22uF,U28 input,92,26,90
 C81,100nF,U28 input,96.5,32.9,0
 C82,100nF,U28.20 boot,96,27.4,0
 C83,100nF,U28.19 boot,99.5,27.4,0
-C84,10uF,U28.18; effective capacitance >4.7uF,103.4,25.8,90
-C85,22uF,U28 output bank,106,30,0
+C84,22uF,U28.18; 22uF gives effective-capacitance margin above 4.7uF,104,28,270
+C85,22uF,U28 output bank,112.75,37.0,0
 C86,22uF,U28 output bank,106,33.5,0
 C87,22uF,U28 output bank,106,37,0
 C88,22uF,U28 output bank,111,33.5,0

@@ -209,14 +209,22 @@ def make_footprint(ref):
   if p and number in p['symbol_pins']:
    a.extend([n('pinfunction',p['symbol_pins'][number]['name']),n('pintype',p['symbol_pins'][number]['type'])])
   # Current KiCad uses pad rotations relative to the footprint; preserve them.
+ user_refs=[q for q in children(f,'fp_text') if q[2] in ['${REFERENCE}','%R']]
+ small=ref.startswith(('R','C')) and ref!='CY1'
+ size=.45 if small else .7
+ ref_xy={'SH1':(0,-8.5),'SH2':(0,-11),'CY1':(7,0)}.get(ref,(0,0))
+ for q in user_refs:
+  child(q,'at')[1:]=[*ref_xy,POS[ref][2]]
+  font=child(child(q,'effects'),'font');child(font,'size')[1:]=[size,size]
+  if child(font,'thickness'):child(font,'thickness')[1]=.08
  for prop in children(f,'property'):
   at=child(prop,'at');at[3]=POS[ref][2] # horizontal after footprint rotation
-  if prop[1]=='Value':
+  if prop[1]!='Reference' or user_refs:
    if child(prop,'hide') is None:prop.append(n('hide',S('yes')))
   if prop[1]=='Reference':
    child(prop,'layer')[1]='F.Fab' # reference map is assembly documentation
-   child(prop,'at')[1:3]=[0,0]
-   font=child(child(prop,'effects'),'font');child(font,'size')[1:]=[.7,.7]
+   child(prop,'at')[1:3]=ref_xy
+   font=child(child(prop,'effects'),'font');child(font,'size')[1:]=[size,size]
    if child(font,'thickness'):child(font,'thickness')[1]=.1
  # Every board object UUID is deterministic and unique, including copied lands.
  def ids(tree,path):
@@ -231,7 +239,7 @@ board=n('kicad_pcb',n('version',20240108),n('generator','pcbnew'),n('general',n(
  n('layers',*[n(str(i),name,S(kind)) for i,name,kind in [(0,'F.Cu','signal'),(1,'In1.Cu','power'),(2,'In2.Cu','power'),(31,'B.Cu','signal'),(34,'B.Paste','user'),(35,'F.Paste','user'),(36,'B.SilkS','user'),(37,'F.SilkS','user'),(38,'B.Mask','user'),(39,'F.Mask','user'),(40,'Dwgs.User','user'),(41,'Cmts.User','user'),(44,'Edge.Cuts','user'),(46,'B.CrtYd','user'),(47,'F.CrtYd','user'),(48,'B.Fab','user'),(49,'F.Fab','user')]]))
 stack=n('stackup',n('layer','F.SilkS',n('type','Top Silk Screen')),n('layer','F.Paste',n('type','Top Solder Paste')),n('layer','F.Mask',n('type','Top Solder Mask'),n('thickness',.015),n('epsilon_r',3.8),n('loss_tangent',0)),
  n('layer','F.Cu',n('type','copper'),n('thickness',.035)),n('layer','dielectric 1',n('type','prepreg'),n('thickness',.0994),n('material','3313'),n('epsilon_r',4.1),n('loss_tangent',.02)),
- n('layer','In1.Cu',n('type','copper'),n('thickness',.0152)),n('layer','dielectric 2',n('type','core'),n('thickness',1.265),n('material','FR4'),n('epsilon_r',4.6),n('loss_tangent',.02)),
+ n('layer','In1.Cu',n('type','copper'),n('thickness',.0152)),n('layer','dielectric 2',n('type','core'),n('thickness',1.265),n('material','NP-155F'),n('epsilon_r',4.43),n('loss_tangent',.02)),
  n('layer','In2.Cu',n('type','copper'),n('thickness',.0152)),n('layer','dielectric 3',n('type','prepreg'),n('thickness',.0994),n('material','3313'),n('epsilon_r',4.1),n('loss_tangent',.02)),
  n('layer','B.Cu',n('type','copper'),n('thickness',.035)),n('layer','B.Mask',n('type','Bottom Solder Mask'),n('thickness',.015),n('epsilon_r',3.8),n('loss_tangent',0)),n('layer','B.Paste',n('type','Bottom Solder Paste')),n('layer','B.SilkS',n('type','Bottom Silk Screen')),n('copper_finish','ENIG'),n('dielectric_constraints',S('yes')))
 board.append(n('setup',stack,n('pad_to_mask_clearance',0),n('allow_soldermask_bridges_in_footprints',S('no'))))
@@ -251,6 +259,7 @@ for ref,pos in MECHANICAL.items():
  ko=keepout(ref+' — M3 hardware clearance',points)
  child(child(ko,'keepout'),'pads')[1]=S('allowed') # permits the NPTH itself; courtyard reserves hardware
  board.append(ko)
+ board.append(n('gr_circle',n('center',pos[0],pos[1]),n('end',pos[0]+1.6,pos[1]),n('stroke',n('width',.15),n('type',S('default'))),n('fill',S('none')),n('layer','Dwgs.User'),n('uuid',uid('hole-drawing/'+ref))))
 for a,b in [((37.85,0),(37.85,116)),((46.15,0),(46.15,116))]:board.append(line(a,b,'Dwgs.User',.15))
 for content,x,y,size,layer in [('REV C / ISOUSB211 / 480 Mbps',77,111,1.2,'F.SilkS'),('HOST',8,85,1,'F.SilkS'),('EXT 5V / 3A',110,8,1,'F.SilkS'),('GND1',21,101,1.5,'F.SilkS'),('GND2',58,108,1.5,'F.SilkS'),('UNROUTED — ALEX ROUTES ALL NETS',74,119,1.5,'Dwgs.User'),('JLC04161H-3313 / 4 LAYERS / 90 OHM USB TARGET',74,122,1.2,'Dwgs.User')]:
  board.append(n('gr_text',content,n('at',x,y),n('layer',layer),n('uuid',uid('pcbtext/'+content)),n('effects',n('font',n('size',size,size),n('thickness',.15)))))

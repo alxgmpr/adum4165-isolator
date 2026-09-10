@@ -1,0 +1,6 @@
+{
+  "bytes": 256,
+  "sha256": "281b20419f95113db0ce3e2bdb161b22f81a0b4a8eadec5a61c5f1e23cdee83e",
+  "source": "https://ww1.microchip.com/downloads/aemDocuments/documents/UNG/ProductDocuments/DataSheets/USB251xB-xBi-Data-Sheet-DS00001692.pdf",
+  "status": "Development configuration; program/read back before first enumeration. Validate descriptors and host policy on hardware."
+}

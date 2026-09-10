@@ -2074,7 +2074,7 @@
     )
     (uuid "6c917265-d8eb-54ab-a160-be8ce498c1d8")
   )
-  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placement and routing review pending"
+  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placed PCB; all routing by Alex; hardware tests pending"
     (at 20.32 27.94 0)
     (effects
       (font
@@ -2082,7 +2082,7 @@
       )
       (justify left)
     )
-    (uuid "3cbc9f9d-1567-5e7b-b543-279c7cd79191")
+    (uuid "61a91aad-ec4b-5aff-a156-b2ed8ff1f549")
   )
   (text "Port 1: USB-A, 500 mA with qualified external power"
     (at 20.32 43.18 0)
@@ -2669,43 +2669,6 @@
     (uuid "ae52a89a-f128-516c-a9d6-db193757c07f")
   )
   (symbol
-    (lib_id "hub-lib:power_PORT_SUPPLY")
-    (at 115.57 57.15 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "447dfc26-148a-5e15-bf24-8430659246d2")
-    (property "Reference" "#PWR9002"
-      (at 115.57 57.15 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "PORT_SUPPLY"
-      (at 115.57 53.339999999999996 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "a11e8aa5-bb29-5257-8fc5-674416a802f8")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
-          (reference "#PWR9002")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND2")
     (at 115.57 85.09 0)
     (unit 1)
@@ -2713,7 +2676,7 @@
     (on_board no)
     (dnp no)
     (uuid "41439f06-eace-5d7b-a19f-2b1708a1d827")
-    (property "Reference" "#PWR9003"
+    (property "Reference" "#PWR9002"
       (at 115.57 85.09 0)
       (effects
         (font
@@ -2732,6 +2695,43 @@
     )
     (pin "1"
       (uuid "8a16de48-2d86-5103-961a-ae290d2cb805")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "#PWR9002")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_PORT_SUPPLY")
+    (at 115.57 57.15 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "447dfc26-148a-5e15-bf24-8430659246d2")
+    (property "Reference" "#PWR9003"
+      (at 115.57 57.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "PORT_SUPPLY"
+      (at 115.57 53.339999999999996 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "a11e8aa5-bb29-5257-8fc5-674416a802f8")
     )
     (instances
       (project "hub"
@@ -4340,14 +4340,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_D_Zener")
-    (at 33.02 199.39 0)
+    (at 40.64 199.39 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "b9bee6bc-ec0b-49b7-a9bb-846a4af09f06")
     (property "Reference" "D8"
-      (at 30.480000000000004 190.5 0)
+      (at 38.1 190.5 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4356,7 +4356,7 @@
       )
     )
     (property "Value" "T6V0S5A-7"
-      (at 30.480000000000004 193.04 0)
+      (at 38.1 193.04 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4365,7 +4365,7 @@
       )
     )
     (property "Footprint" "hub-lib:D_SOD-523"
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4375,7 +4375,7 @@
       )
     )
     (property "Datasheet" "https://www.diodes.com/assets/Datasheets/T6V0S5A.pdf"
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4385,7 +4385,7 @@
       )
     )
     (property "Description" "Unidirectional TVS: physical cathode/band pad 1 to VBUS, anode pad 2 to ground"
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4395,7 +4395,7 @@
       )
     )
     (property "MPN" "T6V0S5A-7"
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4405,7 +4405,7 @@
       )
     )
     (property "Manufacturer" "Diodes Incorporated"
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4415,7 +4415,7 @@
       )
     )
     (property "LCSC" "C19950551"
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4425,7 +4425,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4435,7 +4435,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4445,7 +4445,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 33.02 199.39 0)
+      (at 40.64 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4471,27 +4471,27 @@
   )
   (wire
     (pts
-      (xy 29.21 199.39)
-      (xy 25.4 199.39)
+      (xy 36.83 199.39)
+      (xy 33.02 199.39)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "396e1692-4884-5f29-aa5b-86f88be56042")
+    (uuid "8f2e1cf6-9da7-5687-bc3f-f1273f07b191")
   )
   (global_label "PORT1_VBUS"
     (shape bidirectional)
-    (at 25.4 199.39 0)
+    (at 33.02 199.39 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "757a36b6-e4ab-5fb4-adba-56948fa5e1af")
+    (uuid "aca1a124-bd52-5f1c-b444-9f22d03e606b")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 25.4 199.39 0)
+      (at 33.02 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4502,27 +4502,27 @@
   )
   (wire
     (pts
-      (xy 36.83 199.39)
-      (xy 40.64 199.39)
+      (xy 44.45 199.39)
+      (xy 48.26 199.39)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "faa80647-06e5-5179-a287-80815a520e7f")
+    (uuid "4a9fcef1-bf7f-5537-b4d9-e908b86e81f0")
   )
   (global_label "GND2"
     (shape bidirectional)
-    (at 40.64 199.39 180)
+    (at 48.26 199.39 180)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left)
     )
-    (uuid "489d17f6-a792-5ed5-9ca7-6e700b78216a")
+    (uuid "653a4132-78ce-555a-9637-3fa4d91c90fa")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 40.64 199.39 180)
+      (at 48.26 199.39 180)
       (effects
         (font
           (size 1.27 1.27)
@@ -5116,43 +5116,6 @@
     (uuid "9e8b1504-5e7a-55e0-9487-035bca099163")
   )
   (symbol
-    (lib_id "hub-lib:power_PORT_SUPPLY")
-    (at 321.31 57.15 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "f5bf81d9-de0e-5e71-837b-4c581cf7a769")
-    (property "Reference" "#PWR9013"
-      (at 321.31 57.15 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "PORT_SUPPLY"
-      (at 321.31 53.339999999999996 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "b5284d1d-d134-57bf-b18d-1bf98b4b7429")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
-          (reference "#PWR9013")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND2")
     (at 321.31 85.09 0)
     (unit 1)
@@ -5160,7 +5123,7 @@
     (on_board no)
     (dnp no)
     (uuid "2c450a99-6bd8-5cf0-93ce-26a565072863")
-    (property "Reference" "#PWR9014"
+    (property "Reference" "#PWR9013"
       (at 321.31 85.09 0)
       (effects
         (font
@@ -5179,6 +5142,43 @@
     )
     (pin "1"
       (uuid "5fb1f275-bbb0-50be-9d8d-ccec039de793")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/561ebe21-a25d-5c36-8234-dc8f18f9441b"
+          (reference "#PWR9013")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_PORT_SUPPLY")
+    (at 321.31 57.15 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "f5bf81d9-de0e-5e71-837b-4c581cf7a769")
+    (property "Reference" "#PWR9014"
+      (at 321.31 57.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "PORT_SUPPLY"
+      (at 321.31 53.339999999999996 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "b5284d1d-d134-57bf-b18d-1bf98b4b7429")
     )
     (instances
       (project "hub"
@@ -6787,14 +6787,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_D_Zener")
-    (at 238.76 199.39 0)
+    (at 246.38 199.39 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "09ed91c4-6d32-4d8b-bdc8-616bf26f80af")
     (property "Reference" "D9"
-      (at 236.22 190.5 0)
+      (at 243.84 190.5 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6803,7 +6803,7 @@
       )
     )
     (property "Value" "T6V0S5A-7"
-      (at 236.22 193.04 0)
+      (at 243.84 193.04 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6812,7 +6812,7 @@
       )
     )
     (property "Footprint" "hub-lib:D_SOD-523"
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6822,7 +6822,7 @@
       )
     )
     (property "Datasheet" "https://www.diodes.com/assets/Datasheets/T6V0S5A.pdf"
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6832,7 +6832,7 @@
       )
     )
     (property "Description" "Unidirectional TVS: physical cathode/band pad 1 to VBUS, anode pad 2 to ground"
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6842,7 +6842,7 @@
       )
     )
     (property "MPN" "T6V0S5A-7"
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6852,7 +6852,7 @@
       )
     )
     (property "Manufacturer" "Diodes Incorporated"
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6862,7 +6862,7 @@
       )
     )
     (property "LCSC" "C19950551"
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6872,7 +6872,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6882,7 +6882,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6892,7 +6892,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 238.76 199.39 0)
+      (at 246.38 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6918,27 +6918,27 @@
   )
   (wire
     (pts
-      (xy 234.95 199.39)
-      (xy 231.14 199.39)
+      (xy 242.57 199.39)
+      (xy 238.76 199.39)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "9f27b8ee-b1b6-5e0a-a13a-3e44a8bb761c")
+    (uuid "611ed644-6cf3-5e84-ba01-f170e399ce6a")
   )
   (global_label "PORT2_VBUS"
     (shape bidirectional)
-    (at 231.14 199.39 0)
+    (at 238.76 199.39 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "726b4f23-fcff-5ccc-a9d2-11ac380bc646")
+    (uuid "32dcf154-e6d8-5a2d-8760-e22b515d50fc")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 231.14 199.39 0)
+      (at 238.76 199.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6949,27 +6949,27 @@
   )
   (wire
     (pts
-      (xy 242.57 199.39)
-      (xy 246.38 199.39)
+      (xy 250.19 199.39)
+      (xy 254.0 199.39)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "86f7c96f-312a-5896-8d0b-17b64298e30a")
+    (uuid "cd6ef4a7-9458-55a3-a891-ab24830bb0b9")
   )
   (global_label "GND2"
     (shape bidirectional)
-    (at 246.38 199.39 180)
+    (at 254.0 199.39 180)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left)
     )
-    (uuid "7797c898-2f71-5a28-816e-14a6de229b51")
+    (uuid "e6d92c2d-0fe6-5f67-b4eb-6a6b758a23ca")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 246.38 199.39 180)
+      (at 254.0 199.39 180)
       (effects
         (font
           (size 1.27 1.27)

@@ -1,8 +1,10 @@
 """Resolve the selected passive conflicts after moving reviewed anchor groups."""
-import json,math
+import json,math,argparse
 from board import POS,COURTS,court,legal,PARTS,ROOT
 path=ROOT/'tools/revc/placement-overrides.json';out=json.loads(path.read_text())
-for ref in ['D21','D6']:
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('references',nargs='+',help='Only these footprints may move')
+for ref in parser.parse_args().references:
  old=POS[ref];del COURTS[ref]
  found=[]
  for radius in range(81):

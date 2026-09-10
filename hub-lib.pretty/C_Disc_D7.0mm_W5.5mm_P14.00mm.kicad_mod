@@ -93,7 +93,7 @@
   (embedded_fonts no)
   (model "${KIPRJMOD}/hub-lib.3dshapes/CAP-TH_L7.0-W5.0-P14.0-D0.6.step"
     (offset
-      (xyz 7 0 0)
+      (xyz 7 0 4)
     )
     (scale
       (xyz 1 1 1)

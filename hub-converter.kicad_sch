@@ -1688,6 +1688,126 @@
       )
       (embedded_fonts no)
     )
+    (symbol "hub-lib:power_GND1"
+      (power global)
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "GND1"
+        (at 0 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Description" "Global supply GND1"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "power_GND1_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "power_GND1_1_1"
+        (pin power_in line
+          (at 0 0 270)
+          (length 0)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
     (symbol "hub-lib:power_HOST_CONVERTER_5V"
       (power global)
       (pin_numbers
@@ -1811,126 +1931,6 @@
       (symbol "power_HOST_CONVERTER_5V_1_1"
         (pin power_in line
           (at 0 0 90)
-          (length 0)
-          (name ""
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "hub-lib:power_GND1"
-      (power global)
-      (pin_numbers
-        (hide yes)
-      )
-      (pin_names
-        (offset 0)
-        (hide yes)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "#PWR"
-        (at 0 -6.35 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "GND1"
-        (at 0 -3.81 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" "Global supply GND1"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "global power"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "power_GND1_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "power_GND1_1_1"
-        (pin power_in line
-          (at 0 0 270)
           (length 0)
           (name ""
             (effects
@@ -2365,7 +2365,7 @@
     )
     (uuid "13f9b26d-6268-5da1-b998-bd7ccef2ebda")
   )
-  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placement and routing review pending"
+  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placed PCB; all routing by Alex; hardware tests pending"
     (at 20.32 27.94 0)
     (effects
       (font
@@ -2373,7 +2373,7 @@
       )
       (justify left)
     )
-    (uuid "3cbc9f9d-1567-5e7b-b543-279c7cd79191")
+    (uuid "61a91aad-ec4b-5aff-a156-b2ed8ff1f549")
   )
   (text "Primary push-pull driver and transformer"
     (at 20.32 43.18 0)
@@ -2666,43 +2666,6 @@
     (uuid "49468cc9-5026-5b5a-bff8-966d7e8f0722")
   )
   (symbol
-    (lib_id "hub-lib:power_HOST_CONVERTER_5V")
-    (at 54.61 57.15 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "35273e7b-4ddc-5842-b8bc-90a64df1599c")
-    (property "Reference" "#PWR4001"
-      (at 54.61 57.15 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "HOST_CONVERTER_5V"
-      (at 54.61 53.339999999999996 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "c815360f-bd7d-5211-8ef4-7db7fc048d6a")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4001")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND1")
     (at 54.61 85.09 0)
     (unit 1)
@@ -2710,7 +2673,7 @@
     (on_board no)
     (dnp no)
     (uuid "12e96b57-f7e5-5281-aeac-61b6809eb40d")
-    (property "Reference" "#PWR4002"
+    (property "Reference" "#PWR4001"
       (at 54.61 85.09 0)
       (effects
         (font
@@ -2729,6 +2692,43 @@
     )
     (pin "1"
       (uuid "0de90cc5-ba1d-5abe-8e79-f0700174789b")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
+          (reference "#PWR4001")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_HOST_CONVERTER_5V")
+    (at 54.61 57.15 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "35273e7b-4ddc-5842-b8bc-90a64df1599c")
+    (property "Reference" "#PWR4002"
+      (at 54.61 57.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "HOST_CONVERTER_5V"
+      (at 54.61 53.339999999999996 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c815360f-bd7d-5211-8ef4-7db7fc048d6a")
     )
     (instances
       (project "hub"
@@ -4623,14 +4623,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_D_Schottky")
-    (at 406.4 73.66 0)
+    (at 414.02 73.66 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "d57b8bf4-054d-4598-a4d3-7049a4ce5638")
     (property "Reference" "D3"
-      (at 403.85999999999996 64.77 0)
+      (at 411.47999999999996 64.77 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4639,7 +4639,7 @@
       )
     )
     (property "Value" "SS34"
-      (at 403.85999999999996 67.31 0)
+      (at 411.47999999999996 67.31 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4648,7 +4648,7 @@
       )
     )
     (property "Footprint" "hub-lib:D_SMA"
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4658,7 +4658,7 @@
       )
     )
     (property "Datasheet" "https://www.lcsc.com/datasheet/C8678.pdf"
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4668,7 +4668,7 @@
       )
     )
     (property "Description" ""
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4678,7 +4678,7 @@
       )
     )
     (property "MPN" "SS34"
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4688,7 +4688,7 @@
       )
     )
     (property "Manufacturer" "MDD Microdiode Electronics"
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4698,7 +4698,7 @@
       )
     )
     (property "LCSC" "C8678"
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4708,7 +4708,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4718,7 +4718,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4728,7 +4728,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 406.4 73.66 0)
+      (at 414.02 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4754,27 +4754,27 @@
   )
   (wire
     (pts
-      (xy 402.59 73.66)
-      (xy 398.78 73.66)
+      (xy 410.21 73.66)
+      (xy 406.4 73.66)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "14ff87a1-62f5-5adf-8dfd-355bf32f8d41")
+    (uuid "281665d8-d691-50c9-925a-e98794105929")
   )
   (global_label "DCDC_RAW"
     (shape bidirectional)
-    (at 398.78 73.66 0)
+    (at 406.4 73.66 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "9f803764-acaf-5e10-a00d-ae4c4f635c87")
+    (uuid "55730115-28b2-541f-ad04-2a2012afb91a")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 398.78 73.66 0)
+      (at 406.4 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4785,27 +4785,27 @@
   )
   (wire
     (pts
-      (xy 410.21 73.66)
-      (xy 414.02 73.66)
+      (xy 417.83 73.66)
+      (xy 421.64 73.66)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "35079389-5513-57f3-8670-ae99c5497d1c")
+    (uuid "be1aab00-d785-526f-ab47-9e9f5b9201e6")
   )
   (global_label "SEC_A"
     (shape bidirectional)
-    (at 414.02 73.66 180)
+    (at 421.64 73.66 180)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left)
     )
-    (uuid "19bda343-d821-5acb-be71-16d214b096f0")
+    (uuid "f507b7f8-4c0f-59ec-b74b-78197e246c12")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 414.02 73.66 180)
+      (at 421.64 73.66 180)
       (effects
         (font
           (size 1.27 1.27)
@@ -4816,14 +4816,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_D_Schottky")
-    (at 439.42 73.66 0)
+    (at 485.14 73.66 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "72118869-6b96-407e-b73f-74a1ef04e735")
     (property "Reference" "D4"
-      (at 436.88 64.77 0)
+      (at 482.59999999999997 64.77 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4832,7 +4832,7 @@
       )
     )
     (property "Value" "SS34"
-      (at 436.88 67.31 0)
+      (at 482.59999999999997 67.31 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4841,7 +4841,7 @@
       )
     )
     (property "Footprint" "hub-lib:D_SMA"
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4851,7 +4851,7 @@
       )
     )
     (property "Datasheet" "https://www.lcsc.com/datasheet/C8678.pdf"
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4861,7 +4861,7 @@
       )
     )
     (property "Description" ""
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4871,7 +4871,7 @@
       )
     )
     (property "MPN" "SS34"
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4881,7 +4881,7 @@
       )
     )
     (property "Manufacturer" "MDD Microdiode Electronics"
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4891,7 +4891,7 @@
       )
     )
     (property "LCSC" "C8678"
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4901,7 +4901,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4911,7 +4911,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4921,7 +4921,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 439.42 73.66 0)
+      (at 485.14 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4947,27 +4947,27 @@
   )
   (wire
     (pts
-      (xy 435.61 73.66)
-      (xy 431.8 73.66)
+      (xy 481.33 73.66)
+      (xy 477.52 73.66)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "26c134e0-ecfa-5cbe-b220-4ccf8177f419")
+    (uuid "ec2b18f6-56d5-5aa8-a509-cc3147b37cfe")
   )
   (global_label "DCDC_RAW"
     (shape bidirectional)
-    (at 431.8 73.66 0)
+    (at 477.52 73.66 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "6067cbab-31be-591f-acc3-834850a9b988")
+    (uuid "e2ceb286-c4ac-5b01-bdf8-07edb549e9fe")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 431.8 73.66 0)
+      (at 477.52 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4978,27 +4978,27 @@
   )
   (wire
     (pts
-      (xy 443.23 73.66)
-      (xy 447.04 73.66)
+      (xy 488.95 73.66)
+      (xy 492.76 73.66)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "d8574218-9d81-5144-ab10-eb1d45a95b6c")
+    (uuid "6fb358a9-afeb-52c4-9c87-c9ac01a2553b")
   )
   (global_label "SEC_B"
     (shape bidirectional)
-    (at 447.04 73.66 180)
+    (at 492.76 73.66 180)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left)
     )
-    (uuid "9d9c9554-e753-532f-9b61-0e865347151a")
+    (uuid "413506be-c060-5dc2-921e-1e38ecbe0aaa")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 447.04 73.66 180)
+      (at 492.76 73.66 180)
       (effects
         (font
           (size 1.27 1.27)
@@ -5009,14 +5009,14 @@
   )
   (symbol
     (lib_id "hub-lib:Connector_TestPoint")
-    (at 472.44 73.66 0)
+    (at 548.64 73.66 0)
     (unit 1)
     (in_bom no)
     (on_board yes)
     (dnp no)
     (uuid "46d4dfdb-c0f6-5264-83b6-801ce7b47255")
     (property "Reference" "TP5"
-      (at 476.25 72.39 0)
+      (at 552.4499999999999 72.39 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5025,7 +5025,7 @@
       )
     )
     (property "Value" "DCDC_RAW"
-      (at 476.25 74.92999999999999 0)
+      (at 552.4499999999999 74.92999999999999 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5035,7 +5035,7 @@
       )
     )
     (property "Footprint" "hub-lib:TestPoint_Pad_D1.0mm"
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5045,7 +5045,7 @@
       )
     )
     (property "Datasheet" ""
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5055,7 +5055,7 @@
       )
     )
     (property "Description" "PCB test pad; no purchased part"
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5065,7 +5065,7 @@
       )
     )
     (property "MPN" ""
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5075,7 +5075,7 @@
       )
     )
     (property "Manufacturer" "PCB feature"
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5085,7 +5085,7 @@
       )
     )
     (property "LCSC" ""
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5095,7 +5095,7 @@
       )
     )
     (property "Ratings" "Exposed test pad; no purchased part"
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5105,7 +5105,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5115,7 +5115,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 472.44 73.66 0)
+      (at 548.64 73.66 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -5138,49 +5138,32 @@
   )
   (wire
     (pts
-      (xy 472.44 73.66)
-      (xy 472.44 77.47)
+      (xy 548.64 73.66)
+      (xy 548.64 77.47)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "52c56bda-31eb-5c5b-8501-0878eb09be74")
+    (uuid "173b042b-c13d-53a5-9ffa-dbc64ebeb288")
   )
-  (symbol
-    (lib_id "hub-lib:power_DCDC_RAW")
-    (at 472.44 77.47 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "3db8ce66-6ec9-5b37-9a99-dee1250a87d2")
-    (property "Reference" "#PWR4007"
-      (at 472.44 77.47 0)
+  (global_label "DCDC_RAW"
+    (shape bidirectional)
+    (at 548.64 77.47 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "04ced453-752c-540c-9321-ab570bc8696f")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 548.64 77.47 0)
       (effects
         (font
           (size 1.27 1.27)
         )
         hide
-      )
-    )
-    (property "Value" "DCDC_RAW"
-      (at 472.44 73.66 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "b9a58e7e-f4b6-538e-9054-b7f00af3fe04")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4007")
-          (unit 1)
-        )
       )
     )
   )
@@ -5715,6 +5698,54 @@
   )
   (wire
     (pts
+      (xy 342.9 156.21)
+      (xy 345.44 156.21)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "582b7b4b-ca44-5b1c-be74-65f20a3bf005")
+  )
+  (symbol
+    (lib_id "hub-lib:power_GND2")
+    (at 342.9 156.21 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "b150c0ce-424a-5ca7-86fd-25eefb9c1d28")
+    (property "Reference" "#PWR4007"
+      (at 342.9 156.21 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "GND2"
+      (at 342.9 160.02 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "acedaabc-ce37-558e-8f47-e8e70aced4c7")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
+          (reference "#PWR4007")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
       (xy 342.9 115.57)
       (xy 345.44 115.57)
     )
@@ -5756,54 +5787,6 @@
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
           (reference "#PWR4008")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (wire
-    (pts
-      (xy 342.9 156.21)
-      (xy 345.44 156.21)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "582b7b4b-ca44-5b1c-be74-65f20a3bf005")
-  )
-  (symbol
-    (lib_id "hub-lib:power_GND2")
-    (at 342.9 156.21 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "b150c0ce-424a-5ca7-86fd-25eefb9c1d28")
-    (property "Reference" "#PWR4009"
-      (at 342.9 156.21 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "GND2"
-      (at 342.9 160.02 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "acedaabc-ce37-558e-8f47-e8e70aced4c7")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4009")
           (unit 1)
         )
       )
@@ -6474,7 +6457,7 @@
     (on_board no)
     (dnp no)
     (uuid "e57aab55-b15c-5431-9f92-ca3fe7760399")
-    (property "Reference" "#PWR4010"
+    (property "Reference" "#PWR4009"
       (at 322.58 180.34 0)
       (effects
         (font
@@ -6497,7 +6480,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4010")
+          (reference "#PWR4009")
           (unit 1)
         )
       )
@@ -6556,7 +6539,7 @@
     (on_board no)
     (dnp no)
     (uuid "f975e229-20e0-5bf1-9e04-fbd3671038ba")
-    (property "Reference" "#PWR4011"
+    (property "Reference" "#PWR4010"
       (at 322.58 195.58 0)
       (effects
         (font
@@ -6579,7 +6562,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4011")
+          (reference "#PWR4010")
           (unit 1)
         )
       )
@@ -6766,7 +6749,7 @@
     (on_board no)
     (dnp no)
     (uuid "eac4f570-7126-5000-957e-79e280fb0694")
-    (property "Reference" "#PWR4012"
+    (property "Reference" "#PWR4011"
       (at 393.7 195.58 0)
       (effects
         (font
@@ -6789,7 +6772,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4012")
+          (reference "#PWR4011")
           (unit 1)
         )
       )
@@ -6804,7 +6787,7 @@
     (dnp no)
     (uuid "83c6217b-25d0-46ce-b52f-e122cdbfddc3")
     (property "Reference" "L1"
-      (at 424.18 179.07 0)
+      (at 424.18 179.07 90)
       (effects
         (font
           (size 1.27 1.27)
@@ -6813,7 +6796,7 @@
       )
     )
     (property "Value" "1.5uH"
-      (at 424.18 181.61 0)
+      (at 424.18 181.61 90)
       (effects
         (font
           (size 1.27 1.27)
@@ -7138,7 +7121,7 @@
     (on_board no)
     (dnp no)
     (uuid "1c681166-6081-56e9-becc-d4c481c95040")
-    (property "Reference" "#PWR4013"
+    (property "Reference" "#PWR4012"
       (at 485.14 181.61 0)
       (effects
         (font
@@ -7161,7 +7144,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4013")
+          (reference "#PWR4012")
           (unit 1)
         )
       )
@@ -7348,7 +7331,7 @@
     (on_board no)
     (dnp no)
     (uuid "01198e79-1c12-5ff7-89e7-2c3e4c172f5d")
-    (property "Reference" "#PWR4014"
+    (property "Reference" "#PWR4013"
       (at 518.16 181.61 0)
       (effects
         (font
@@ -7371,7 +7354,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4014")
+          (reference "#PWR4013")
           (unit 1)
         )
       )
@@ -7558,7 +7541,7 @@
     (on_board no)
     (dnp no)
     (uuid "e9a9227e-1791-517c-84a5-3b0ed4dcd2de")
-    (property "Reference" "#PWR4015"
+    (property "Reference" "#PWR4014"
       (at 551.18 181.61 0)
       (effects
         (font
@@ -7581,7 +7564,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4015")
+          (reference "#PWR4014")
           (unit 1)
         )
       )
@@ -7799,7 +7782,7 @@
     (on_board no)
     (dnp no)
     (uuid "b693c7ba-2e29-57f4-ba27-89206cd3c521")
-    (property "Reference" "#PWR4016"
+    (property "Reference" "#PWR4015"
       (at 322.58 223.52 0)
       (effects
         (font
@@ -7822,7 +7805,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4016")
+          (reference "#PWR4015")
           (unit 1)
         )
       )
@@ -7968,40 +7951,23 @@
     )
     (uuid "16715ae1-fa96-5b57-a2e6-0cfa0adf71de")
   )
-  (symbol
-    (lib_id "hub-lib:power_ISO_5V_PRE")
+  (global_label "ISO_5V_PRE"
+    (shape bidirectional)
     (at 355.6 220.98 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "748970a9-2035-57c0-9d59-cc919be25118")
-    (property "Reference" "#PWR4017"
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "1302f778-3292-5b51-b2ec-542a4dfa02ca")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 355.6 220.98 0)
       (effects
         (font
           (size 1.27 1.27)
         )
         hide
-      )
-    )
-    (property "Value" "ISO_5V_PRE"
-      (at 355.6 217.17 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "bb8d97f0-0f2c-5e69-98e9-759379a5d444")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4017")
-          (unit 1)
-        )
       )
     )
   )
@@ -8466,40 +8432,23 @@
     )
     (uuid "62bafcee-68dc-5c66-9c67-5976fb616144")
   )
-  (symbol
-    (lib_id "hub-lib:power_DCDC_RAW")
+  (global_label "DCDC_RAW"
+    (shape bidirectional)
     (at 40.64 232.41 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "7386df28-f17d-5a04-9927-bcd4656c2de1")
-    (property "Reference" "#PWR4018"
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "102a4255-863b-5841-8b00-353f8adb11b7")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 40.64 232.41 0)
       (effects
         (font
           (size 1.27 1.27)
         )
         hide
-      )
-    )
-    (property "Value" "DCDC_RAW"
-      (at 40.64 228.6 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "b7a0b9bc-cf41-5de5-a18a-0d0fe0eda4ca")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4018")
-          (unit 1)
-        )
       )
     )
   )
@@ -8652,7 +8601,7 @@
     (on_board no)
     (dnp no)
     (uuid "fed99ea0-7290-5cd6-ae6b-a92616aecc51")
-    (property "Reference" "#PWR4019"
+    (property "Reference" "#PWR4016"
       (at 96.52 232.41 0)
       (effects
         (font
@@ -8675,7 +8624,7 @@
     (instances
       (project "hub"
         (path "/c86df239-2775-4bfb-906f-796343d9aaf9/4307be80-e4b1-597b-88ad-656eebe4aa35"
-          (reference "#PWR4019")
+          (reference "#PWR4016")
           (unit 1)
         )
       )

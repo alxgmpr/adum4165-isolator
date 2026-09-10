@@ -1,0 +1,30 @@
+ERC report (2026-09-10T15:09:45, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+
+***** Sheet /HOST/
+
+***** Sheet /ISOLATION/
+
+***** Sheet /CONVERTER/
+
+***** Sheet /EXTERNAL/
+
+***** Sheet /DISTRIBUTION/
+
+***** Sheet /BUS START/
+
+***** Sheet /HUB/
+
+***** Sheet /PORTS A/
+
+***** Sheet /PORT C3/
+
+***** Sheet /PORT C4/
+
+ ** ERC messages: 0  Errors 0  Warnings 0
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - SPICE model issue

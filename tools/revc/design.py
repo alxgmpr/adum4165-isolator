@@ -188,7 +188,7 @@ ic('U28','TPS552892RYQR','hub-custom:TPS552892',
     18:'EXT_REG_VCC',19:'EXT_BOOT2',20:'EXT_BOOT1',21:None},'external','Regulates external VBUS for switch-drop allowance')
 add('L3','4.7uH','Device:L',{1:'EXT_SW1',2:'EXT_SW2'},'external','XAL7070-472MEC','Coilcraft')
 c('C82','100nF','EXT_BOOT1','EXT_SW1','external','U28.20 boot');c('C83','100nF','EXT_BOOT2','EXT_SW2','external','U28.19 boot')
-c('C84','10uF','EXT_REG_VCC','GND2','external','U28.18; effective capacitance >4.7uF')
+c('C84','22uF','EXT_REG_VCC','GND2','external','U28.18; 22uF gives effective-capacitance margin above 4.7uF')
 for ref in ['C85','C86','C87','C88']:c(ref,'22uF','EXT_REG_5V','GND2','external','U28 output bank')
 c('C89','100nF','EXT_REG_5V','GND2','external','U28.11')
 r('R20','10kR','EXT_REG_5V','EXT_FB','external','0.1% feedback upper')
@@ -216,7 +216,7 @@ ic('U29','TPS2553DBVR','isolator-lib:TPS2553DBV',
    'Constant-current aggregate bus limiter; 300mA shared; delayed fault report permits reservoir charging')
 r('R62','75kR','PORT_ILIM','GND2','distribution')
 r('R63','10kR','ISO_3V3','BUS_LIMIT_RAW_N','distribution')
-r('R121','47kR','BUS_LIMIT_RAW_N','BUS_FAULT_FILTER_N','bus_start','U48.2; delay persistent bus overload report, not current limiting')
+r('R121','68kR','BUS_LIMIT_RAW_N','BUS_FAULT_FILTER_N','bus_start','U48.2; delay persistent bus overload report, not current limiting')
 r('R122','1kR','BUS_FAULT_FILTER_N','BUS_FAULT_CAP','bus_start','Limits U48 input-clamp current during power-down to <5.5mA')
 c('C116','22uF','ISO_3V3','BUS_FAULT_CAP','bus_start','U48 fault delay; capacitor returns to 3.3V so fresh startup initially reports healthy')
 ic('U48','SN74LVC1G17DBVR','74xGxx:74LVC1G17',
@@ -337,6 +337,9 @@ for ref,rref,qref,control,rail,gnd,page in [
     add(ref,'GREEN','Device:LED',{1:ref+'_K',2:ref+'_A'},page,'LTST-C190KGKT','Lite-On','LED_SMD:LED_0603_1608Metric')
     mos(qref,control,gnd,ref+'_K',page)
 
+
+for ref in ['D20','D21','D22','D23','R29','D6','Q3']:
+    PARTS[ref]['page']='bus_start'
 
 from sourcing import assign
 assign(PARTS)

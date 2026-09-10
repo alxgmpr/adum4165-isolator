@@ -27,6 +27,26 @@
     "U28_at_90pct_W": 1.2806535947712423,
     "U10_at_85pct_W": 0.16888235294117648
   },
+  "startup_and_inrush": {
+    "C116_effective_min_uF": 12.790799999999999,
+    "bus_fault_delay_min_s": 0.3195861385844548,
+    "bus_fault_delay_max_s": 4.159960685441176,
+    "bus_reservoir_charge_s_at_600uF_5_5V_300mA_load": 0.27499999999999974,
+    "host_direct_cap_nominal_uF": 6.9,
+    "host_direct_cap_positive_tolerance_uF": 7.590000000000001,
+    "type_c_discharge_active_s_13uF_101ohm_5_5_to_0_8": 0.0025313217279846097,
+    "type_c_discharge_passive_s_13uF_10k1_5_5_to_0_8": 0.25313217279846095,
+    "U27_typical_rise_s_at_5V": 0.021630000000000003,
+    "U30_typical_rise_s_at_5_2V": 0.0493272
+  },
+  "host_budget": {
+    "HS_A_at_4V_and_75pct_core_eff": 0.07410000000000001,
+    "L2_A_at_4V_60pct_core_eff_and_0_50mA_controls": 0.0024625,
+    "qualified_max_A": 1.0641,
+    "controls_note": "3mA active and 0.50mA L2 are conservative allowances; buck light-load efficiency and complete suspend current require measurement."
+  },
+  "external_min_connector_V_for_2A_at_90pct": 4.916119289097914,
+  "input_path_resistance_ohm": 0.061290000000000004,
   "loop_screen": {
     "corners": 432,
     "minimum_phase_margin_deg": 56.52629084511577,

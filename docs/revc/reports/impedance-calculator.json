@@ -1,0 +1,39 @@
+{
+  "checked": "2026-09-10",
+  "source": "https://jlcpcb.com/pcb-impedance-calculator",
+  "method": "Read the live calculator through its UI; no board upload or order",
+  "inputs": {
+    "board_type": "Rigid",
+    "layers": 4,
+    "nominal_thickness_mm": 1.6,
+    "inner_copper_oz": 0.5,
+    "outer_copper_oz": 1,
+    "target_ohm": 90,
+    "type": "Differential Pair (Non coplanar)",
+    "signal_layer": "L1",
+    "top_reference": null,
+    "bottom_reference": "L2",
+    "gap_mm": 0.15
+  },
+  "selected_result": {
+    "stackup": "JLC04161H-3313",
+    "UI_finished_thickness": "1.56mm +/-10%",
+    "trace_width_mm": 0.1356,
+    "trace_spacing_mm": 0.1501,
+    "solver_tolerance_percent": 0.5,
+    "applied_KiCad_width_mm": 0.136,
+    "applied_KiCad_spacing_mm": 0.15
+  },
+  "layer_thickness_mm_top_to_bottom_excluding_mask": [0.035,0.0994,0.0152,1.265,0.0152,0.0994,0.035],
+  "notes": [
+    "The displayed 0.5% is the calculator search tolerance, not a purchased fabrication tolerance.",
+    "The current calculator guide uses 1.6mil outer copper in its electromagnetic model and a trapezoid (top width = base width minus 0.7mil), although the stackup table labels 1oz as 0.035mm.",
+    "Mask is included by the live solver: 1.2mil above substrate/between traces, 0.6mil above copper, epsilon_r 3.8.",
+    "KiCad stores a uniform 0.015mm mask layer; it does not reproduce the solver's conformal mask geometry.",
+    "The copper/dielectric table sums to 1.5642mm; adding the two KiCad uniform mask layers gives 1.5942mm, consistent with nominal 1.6mm within rounding/process tolerance. Enclosure fit is provisional.",
+    "Use the current NP-155F calculator-guide core epsilon_r 4.43 for >0.70mm core; the older static stackup page gives generic 4.6. The L1-L2 pair is referenced above this core, so this difference does not change its chosen dielectric layer.",
+    "Confirm this exact stackup and impedance dimensions with the fabricator after routing. No fabrication files were generated."
+  ],
+  "guide": "https://jlcpcb.com/help/article/user-guide-to-the-jlcpcb-impedance-calculator",
+  "stackup_source": "https://jlcpcb.com/impedance"
+}

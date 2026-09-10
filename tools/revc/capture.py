@@ -20,7 +20,7 @@ TITLE={
  'converter':'Isolated host power and separate shield frames',
  'external':'Qualified external 5 V input and voltage regulation',
  'distribution':'Supply selection and protected port distribution',
- 'bus_start':'Bus-power capacitor charging and fault timing',
+ 'bus_start':'Bus startup and aggregate fault reporting',
  'hub':'USB2514B hub, 3.3 V supply, clock and configuration',
  'ports_a':'Downstream USB-A ports 1 and 2',
  'port_c3':'Downstream USB-C port 3',
@@ -97,43 +97,6 @@ def component(p,x,y,path):
     return elems
 
 
-def make_page(page,parts,number):
-    page_id=uid('sheet/'+page);path='/'+ROOT_UUID+'/'+page_id
-    origins={'host':['VBUS_HOST','GND1','U1_1V8_HOST'],'converter':['DCDC_RAW','GND2'],'external':['EXT_5V','EXT_SW_5V'],'hub':['ISO_3V3']}
-    for j,net in enumerate(origins.get(page,[])):
-        sy=renamed(source_symbol('power:PWR_FLAG'),'power_PWR_FLAG')
-        parts.append(dict(ref=f'#FLG{number:02d}{j:02d}',value='PWR_FLAG',pins={'1':net},uuid=uid('flag/'+net),
-                          local_lib='hub-lib:power_PWR_FLAG',symbol=sy,symbol_pins=pin_table(sy),dnp=False,virtual=True,
-                          footprint='',note='Declared power origin: '+net,mpn='',manufacturer=''))
-    syms={p['local_lib']:p['symbol'] for p in parts}
-    libs=[]
-    for name,s in syms.items():
-        z=deepcopy(s);z[1]=name;libs.append(z)
-    sch=n('kicad_sch',n('version',20250114),n('generator','eeschema'),n('uuid',uid('document/'+page)),n('paper','A3'),
-          n('title_block',n('title',TITLE[page]),n('rev','C — design verification in progress'),n('date','2026-09-10')),
-          n('lib_symbols',*libs))
-    sch.append(text(TITLE[page],15.24,17.78,2.032))
-    sch.append(text('Rev C | all routing reserved for Alex | electrical draft under review',15.24,24.13))
-    big=[p for p in parts if is_big(p)]
-    small=[p for p in parts if p not in big]
-    x=10.16;y=31.75;rowh=0
-    positions={}
-    for p in big:
-        b=bounds(p['symbol']);w=b[2]-b[0]+38.1;h=b[3]-b[1]+30.48
-        if x+w>406.4:
-            x=10.16;y+=rowh+7.62;rowh=0
-        cx=round(x-b[0]+19.05,6);cy=round(y+b[3]+15.24,6)
-        sch.extend(component(p,cx,cy,path));positions[p['ref']]=[cx,cy]
-        x+=w+5.08;rowh=max(rowh,h)
-    y+=rowh+17.78
-    for i,p in enumerate(small):
-        cx=round(35.56+(i%9)*43.18,6);cy=round(y+(i//9)*25.4,6)
-        sch.extend(component(p,cx,cy,path));positions[p['ref']]=[cx,cy]
-    sch.append(n('embedded_fonts',S('no')))
-    write(ROOT/f'hub-{page}.kicad_sch',sch)
-    return page_id,positions
-
-
 def main():
     from schematic_layout import make_page as layout_page
     syms=build_library(PARTS)
@@ -148,11 +111,11 @@ def main():
             table.append(n('lib',n('name','hub-lib'),n('type','KiCad'),n('uri',uri),n('options',''),n('descr','Rev C project-local verified library')))
             write(ROOT/filename,table)
     root=n('kicad_sch',n('version',20250114),n('generator','eeschema'),n('uuid',ROOT_UUID),n('paper','A2'),
-           n('title_block',n('title','Rev C — Isolated four-port USB 2.0 hub'),n('rev','C — verification in progress'),n('date','2026-09-10')),
+           n('title_block',n('title','Rev C — Isolated four-port USB 2.0 hub'),n('rev','C'),n('date','2026-09-10')),
            n('lib_symbols'))
     root.append(text('ISOLATED FOUR-PORT USB 2.0 HUB',15.24,17.78,3.81))
     root.append(text('ISOUSB211DPR | USB2514B | 2 x USB-A + 2 x USB-C | 480 Mbps',15.24,27.94,2.032))
-    root.append(text('Design verification in progress. PCB placement and all routing are unfinished.',15.24,38.1))
+    root.append(text('Schematic and placed PCB. UNROUTED: Alex routes all nets. Hardware validation pending.',15.24,38.1))
     placements={}
     for i,(page,title) in enumerate(TITLE.items()):
         subset=[p for p in PARTS.values() if p['page']==page]
@@ -165,6 +128,12 @@ def main():
                       n('instances',n('project','hub',n('path','/'+ROOT_UUID,n('page',str(i+2)))))))
         import textwrap
         root.append(text('\n'.join(textwrap.wrap(title,37)),x+5.08,y+12.7,1.524))
+    root.append(text('DATA PATH',20.32,261.62,2.032))
+    root.append(text('J1 host -> ISOUSB211 -> USB2514B -> J3/J4 USB-A + J5/J6 USB-C',20.32,271.78,1.524))
+    root.append(text('POWER MODES',20.32,292.10,2.032))
+    root.append(text('Host must advertise at least 1.5 A: 300 mA shared downstream design budget.\nExternal J2 must advertise 3 A: 2 A total / 500 mA per port, subject to the power-report conditions.\nA default-current host requires qualified external power. Source changes cause re-enumeration.',20.32,304.80,1.524))
+    root.append(text('ROUTING HANDOFF',20.32,337.82,2.032))
+    root.append(text('291 physical components placed; 4-layer bench board. No tracks or vias.\nSeparate GND1 / GND2 shield frames. TI HV land gap: 8.20 mm nominal; other barrier rules: 8.30 mm.\nStart with docs/revc/README.md for power limits, routing priorities, EEPROM and pending hardware tests.',20.32,350.52,1.524))
     root.append(n('sheet_instances',n('path','/',n('page','1'))));root.append(n('embedded_fonts',S('no')))
     write(ROOT/'hub.kicad_sch',root)
     write(ROOT/'hub-lib.kicad_sym',n('kicad_symbol_lib',n('version',20250114),n('generator','kicad_symbol_editor'),*syms.values()))

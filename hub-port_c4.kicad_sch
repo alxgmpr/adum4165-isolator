@@ -3137,7 +3137,7 @@
     )
     (uuid "272182a4-48a3-5817-8132-6934c03bda9d")
   )
-  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placement and routing review pending"
+  (text "USB 2.0 / 480 Mbps  |  Rev C electrical design  |  Placed PCB; all routing by Alex; hardware tests pending"
     (at 20.32 27.94 0)
     (effects
       (font
@@ -3145,7 +3145,7 @@
       )
       (justify left)
     )
-    (uuid "3cbc9f9d-1567-5e7b-b543-279c7cd79191")
+    (uuid "61a91aad-ec4b-5aff-a156-b2ed8ff1f549")
   )
   (text "Port 4: USB-C, USB 2.0 and ESD"
     (at 20.32 43.18 0)
@@ -4018,14 +4018,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_D_Zener")
-    (at 33.02 137.16 0)
+    (at 40.64 137.16 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "3ae9eae3-c8c7-4b2d-9ee1-7002fe2d17ca")
     (property "Reference" "D13"
-      (at 30.480000000000004 128.26999999999998 0)
+      (at 38.1 128.26999999999998 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4034,7 +4034,7 @@
       )
     )
     (property "Value" "T6V0S5A-7"
-      (at 30.480000000000004 130.81 0)
+      (at 38.1 130.81 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4043,7 +4043,7 @@
       )
     )
     (property "Footprint" "hub-lib:D_SOD-523"
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4053,7 +4053,7 @@
       )
     )
     (property "Datasheet" "https://www.diodes.com/assets/Datasheets/T6V0S5A.pdf"
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4063,7 +4063,7 @@
       )
     )
     (property "Description" "Unidirectional TVS: physical cathode/band pad 1 to VBUS, anode pad 2 to ground"
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4073,7 +4073,7 @@
       )
     )
     (property "MPN" "T6V0S5A-7"
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4083,7 +4083,7 @@
       )
     )
     (property "Manufacturer" "Diodes Incorporated"
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4093,7 +4093,7 @@
       )
     )
     (property "LCSC" "C19950551"
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4103,7 +4103,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4113,7 +4113,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4123,7 +4123,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 33.02 137.16 0)
+      (at 40.64 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4149,27 +4149,27 @@
   )
   (wire
     (pts
-      (xy 29.21 137.16)
-      (xy 25.4 137.16)
+      (xy 36.83 137.16)
+      (xy 33.02 137.16)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "91477b64-c2f2-5859-884c-a8a9754041b4")
+    (uuid "4a815bd5-ce80-58fe-808a-39e2257f0be6")
   )
   (global_label "PORT4_VBUS"
     (shape bidirectional)
-    (at 25.4 137.16 0)
+    (at 33.02 137.16 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "aeaa7f8f-a5ef-50de-b54f-10ce20dff13c")
+    (uuid "066586b5-0c55-5b8a-9946-504b41fa6e0e")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 25.4 137.16 0)
+      (at 33.02 137.16 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -4180,27 +4180,27 @@
   )
   (wire
     (pts
-      (xy 36.83 137.16)
-      (xy 40.64 137.16)
+      (xy 44.45 137.16)
+      (xy 48.26 137.16)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "11c38a0e-f8be-5c4a-8e56-3b9be629f588")
+    (uuid "82c54154-4da3-5d10-8260-0719ca21fba1")
   )
   (global_label "GND2"
     (shape bidirectional)
-    (at 40.64 137.16 180)
+    (at 48.26 137.16 180)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left)
     )
-    (uuid "2aa64483-8d23-56bc-a584-117012061383")
+    (uuid "460a7ccf-db51-5d44-bb3d-a19fab4368a3")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 40.64 137.16 180)
+      (at 48.26 137.16 180)
       (effects
         (font
           (size 1.27 1.27)
@@ -4596,43 +4596,6 @@
     (uuid "881f7ac7-d321-5c0f-946b-72c2928bd3dc")
   )
   (symbol
-    (lib_id "hub-lib:power_ISO_3V3")
-    (at 344.17 57.15 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "e732284b-c6e0-5766-b0ce-f1d97923acdb")
-    (property "Reference" "#PWR11003"
-      (at 344.17 57.15 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "ISO_3V3"
-      (at 344.17 53.339999999999996 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "cbf75e8f-249a-5d25-b827-313e1a8cdcfe")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/1459993a-cf95-5326-858d-6452b52a6a92"
-          (reference "#PWR11003")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND2")
     (at 344.17 95.25 0)
     (unit 1)
@@ -4640,7 +4603,7 @@
     (on_board no)
     (dnp no)
     (uuid "6a275d0e-3226-5857-9729-4215bb425242")
-    (property "Reference" "#PWR11004"
+    (property "Reference" "#PWR11003"
       (at 344.17 95.25 0)
       (effects
         (font
@@ -4659,6 +4622,43 @@
     )
     (pin "1"
       (uuid "e97f843f-f0bf-57f2-9a4b-f1ffdea17388")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/1459993a-cf95-5326-858d-6452b52a6a92"
+          (reference "#PWR11003")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_ISO_3V3")
+    (at 344.17 57.15 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "e732284b-c6e0-5766-b0ce-f1d97923acdb")
+    (property "Reference" "#PWR11004"
+      (at 344.17 57.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "ISO_3V3"
+      (at 344.17 53.339999999999996 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "cbf75e8f-249a-5d25-b827-313e1a8cdcfe")
     )
     (instances
       (project "hub"
@@ -6430,43 +6430,6 @@
     (uuid "cbaa1168-1cd1-5353-aa88-5d24570e782b")
   )
   (symbol
-    (lib_id "hub-lib:power_PORT_SUPPLY")
-    (at 496.57 168.91 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid "adfa8f42-004a-5ab3-add8-235bfbb6eefb")
-    (property "Reference" "#PWR11014"
-      (at 496.57 168.91 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property "Value" "PORT_SUPPLY"
-      (at 496.57 165.1 0)
-      (effects
-        (font
-          (size 1.016 1.016)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "a7d05717-d64a-52fd-a698-3c529f2db779")
-    )
-    (instances
-      (project "hub"
-        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/1459993a-cf95-5326-858d-6452b52a6a92"
-          (reference "#PWR11014")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
     (lib_id "hub-lib:power_GND2")
     (at 496.57 196.85 0)
     (unit 1)
@@ -6474,7 +6437,7 @@
     (on_board no)
     (dnp no)
     (uuid "98bc849a-a8e8-5ab3-b7ed-be6bcdaf16f0")
-    (property "Reference" "#PWR11015"
+    (property "Reference" "#PWR11014"
       (at 496.57 196.85 0)
       (effects
         (font
@@ -6493,6 +6456,43 @@
     )
     (pin "1"
       (uuid "c1c4396e-9c9c-5f4b-b01c-a786ca6cf19f")
+    )
+    (instances
+      (project "hub"
+        (path "/c86df239-2775-4bfb-906f-796343d9aaf9/1459993a-cf95-5326-858d-6452b52a6a92"
+          (reference "#PWR11014")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "hub-lib:power_PORT_SUPPLY")
+    (at 496.57 168.91 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid "adfa8f42-004a-5ab3-add8-235bfbb6eefb")
+    (property "Reference" "#PWR11015"
+      (at 496.57 168.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property "Value" "PORT_SUPPLY"
+      (at 496.57 165.1 0)
+      (effects
+        (font
+          (size 1.016 1.016)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "a7d05717-d64a-52fd-a698-3c529f2db779")
     )
     (instances
       (project "hub"
@@ -8696,14 +8696,14 @@
   )
   (symbol
     (lib_id "hub-lib:Transistor_FET_2N7002")
-    (at 66.04 238.76 0)
+    (at 78.74 238.76 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "fe2cd875-5bfb-5b29-b0e0-22c61b4f7757")
     (property "Reference" "Q6"
-      (at 76.2 237.48999999999998 0)
+      (at 88.89999999999999 237.48999999999998 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8712,7 +8712,7 @@
       )
     )
     (property "Value" "2N7002"
-      (at 76.2 240.03 0)
+      (at 88.89999999999999 240.03 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8721,7 +8721,7 @@
       )
     )
     (property "Footprint" "hub-lib:SOT-23"
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8731,7 +8731,7 @@
       )
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf"
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8741,7 +8741,7 @@
       )
     )
     (property "Description" ""
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8751,7 +8751,7 @@
       )
     )
     (property "MPN" "2N7002,215"
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8761,7 +8761,7 @@
       )
     )
     (property "Manufacturer" "Nexperia"
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8771,7 +8771,7 @@
       )
     )
     (property "LCSC" "C65189"
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8781,7 +8781,7 @@
       )
     )
     (property "Ratings" "See exact manufacturer datasheet"
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8791,7 +8791,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8801,7 +8801,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 66.04 238.76 0)
+      (at 78.74 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8830,27 +8830,27 @@
   )
   (wire
     (pts
-      (xy 60.96 238.76)
-      (xy 57.15 238.76)
+      (xy 73.66 238.76)
+      (xy 69.85 238.76)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "4f3f94e2-5a35-5af8-bb2c-13d4d0f39c58")
+    (uuid "92fcdcab-a5b6-5942-942e-72619fd78453")
   )
   (global_label "PORT4_DISCHARGE"
     (shape bidirectional)
-    (at 57.15 238.76 0)
+    (at 69.85 238.76 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "e54717cf-6f8d-5b4d-8f00-2d06f52d4ab0")
+    (uuid "4eb199cb-ae73-5229-a3fa-1ccb599dda13")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 57.15 238.76 0)
+      (at 69.85 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8861,25 +8861,25 @@
   )
   (wire
     (pts
-      (xy 68.58 243.84)
-      (xy 68.58 247.65)
+      (xy 81.28 243.84)
+      (xy 81.28 247.65)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "1a8198ab-e306-5e88-9c16-e0759e40c312")
+    (uuid "046e1a2e-10c8-5f34-849f-c9a3bebdec63")
   )
   (symbol
     (lib_id "hub-lib:power_GND2")
-    (at 68.58 247.65 0)
+    (at 81.28 247.65 0)
     (unit 1)
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid "cbabcff5-28ae-58ed-b5a9-c25725177ca6")
+    (uuid "5caf73ef-3dd2-56fd-ba3e-728fa1826521")
     (property "Reference" "#PWR11029"
-      (at 68.58 247.65 0)
+      (at 81.28 247.65 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8888,7 +8888,7 @@
       )
     )
     (property "Value" "GND2"
-      (at 68.58 251.46 0)
+      (at 81.28 251.46 0)
       (effects
         (font
           (size 1.016 1.016)
@@ -8896,7 +8896,7 @@
       )
     )
     (pin "1"
-      (uuid "861c1bed-3a13-5a6c-8afa-bfad35fd5b1d")
+      (uuid "e9a74ea4-f641-5b66-909d-ad5faf270aa8")
     )
     (instances
       (project "hub"
@@ -8909,27 +8909,27 @@
   )
   (wire
     (pts
-      (xy 68.58 233.68)
-      (xy 68.58 229.87)
+      (xy 81.28 233.68)
+      (xy 81.28 229.87)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "1ffddcb7-e089-5748-8364-01f3b2c93693")
+    (uuid "86091185-0066-5503-923b-a449fcb800e0")
   )
   (global_label "PORT4_DISCHARGE_D"
     (shape bidirectional)
-    (at 68.58 229.87 0)
+    (at 81.28 229.87 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "75f23499-1fb1-5e75-9338-93dfe39bd678")
+    (uuid "d25b2ef7-dd7e-54e0-9315-a3b60c59a818")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 68.58 229.87 0)
+      (at 81.28 229.87 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8940,14 +8940,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_R_Small_US")
-    (at 124.46 238.76 0)
+    (at 152.4 238.76 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "fb177e1c-c8be-5759-835b-09e6e6c042ad")
     (property "Reference" "R82"
-      (at 128.26999999999998 237.48999999999998 0)
+      (at 156.21 237.48999999999998 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8956,7 +8956,7 @@
       )
     )
     (property "Value" "100R"
-      (at 128.26999999999998 240.03 0)
+      (at 156.21 240.03 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8965,7 +8965,7 @@
       )
     )
     (property "Footprint" "hub-lib:R_0805_2012Metric"
-      (at 124.46 238.76 0)
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8975,7 +8975,7 @@
       )
     )
     (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
-      (at 124.46 238.76 0)
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8985,7 +8985,7 @@
       )
     )
     (property "Description" "VBUS discharge; pulse energy and decay verified in power report"
-      (at 124.46 238.76 0)
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8995,7 +8995,7 @@
       )
     )
     (property "MPN" "ERJ6ENF1000V"
-      (at 124.46 238.76 0)
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9005,7 +9005,7 @@
       )
     )
     (property "Manufacturer" "Panasonic Industry"
-      (at 124.46 238.76 0)
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9015,7 +9015,7 @@
       )
     )
     (property "LCSC" "C193990"
-      (at 124.46 238.76 0)
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9024,8 +9024,8 @@
         (justify left)
       )
     )
-    (property "Ratings" "100R 1%, 0.125W; 0.14mJ maximum discharge pulse"
-      (at 124.46 238.76 0)
+    (property "Ratings" "100R 1%, 0.125W; 0.20mJ maximum design discharge pulse"
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9035,7 +9035,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 124.46 238.76 0)
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9045,7 +9045,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 124.46 238.76 0)
+      (at 152.4 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9071,25 +9071,25 @@
   )
   (wire
     (pts
-      (xy 124.46 236.22)
-      (xy 124.46 232.41)
+      (xy 152.4 236.22)
+      (xy 152.4 232.41)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "3c1619b3-b9bc-512d-820c-ccf19346e887")
+    (uuid "1954426a-bec2-58e6-b150-958021fdf957")
   )
   (symbol
     (lib_id "hub-lib:power_PORT4_VBUS")
-    (at 124.46 232.41 0)
+    (at 152.4 232.41 0)
     (unit 1)
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid "84e04bc6-73aa-5694-9924-ac81bd26e472")
+    (uuid "1652aafd-891c-59f9-b4d6-eecfa528da30")
     (property "Reference" "#PWR11030"
-      (at 124.46 232.41 0)
+      (at 152.4 232.41 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9098,7 +9098,7 @@
       )
     )
     (property "Value" "PORT4_VBUS"
-      (at 124.46 228.6 0)
+      (at 152.4 228.6 0)
       (effects
         (font
           (size 1.016 1.016)
@@ -9106,7 +9106,7 @@
       )
     )
     (pin "1"
-      (uuid "62ea3908-4783-555c-a0d1-3599f64c8d1c")
+      (uuid "696618d5-a2ec-5233-ad16-4ae47e6dff6d")
     )
     (instances
       (project "hub"
@@ -9119,27 +9119,27 @@
   )
   (wire
     (pts
-      (xy 124.46 241.3)
-      (xy 124.46 245.11)
+      (xy 152.4 241.3)
+      (xy 152.4 245.11)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "4fbeed1f-fbf3-5252-9076-a8bf29935d37")
+    (uuid "c41d392a-ffc5-594b-9df1-87df1174d889")
   )
   (global_label "PORT4_DISCHARGE_D"
     (shape bidirectional)
-    (at 124.46 245.11 0)
+    (at 152.4 245.11 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify right)
     )
-    (uuid "2c68997a-0915-5b05-9962-4338229fa6ba")
+    (uuid "66209aff-e4ae-52ef-a7cd-d409ceec34f4")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 124.46 245.11 0)
+      (at 152.4 245.11 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9150,14 +9150,14 @@
   )
   (symbol
     (lib_id "hub-lib:Device_R_Small_US")
-    (at 157.48 238.76 0)
+    (at 185.42 238.76 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
     (uuid "8ee0a97e-27af-50ff-a302-59ec17e5dab8")
     (property "Reference" "R120"
-      (at 161.29 237.48999999999998 0)
+      (at 189.23 237.48999999999998 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9166,7 +9166,7 @@
       )
     )
     (property "Value" "10kR"
-      (at 161.29 240.03 0)
+      (at 189.23 240.03 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9175,7 +9175,7 @@
       )
     )
     (property "Footprint" "hub-lib:R_0402_1005Metric"
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9185,7 +9185,7 @@
       )
     )
     (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C307.pdf"
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9195,7 +9195,7 @@
       )
     )
     (property "Description" "Passive VBUS discharge also works after complete board power loss"
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9205,7 +9205,7 @@
       )
     )
     (property "MPN" "ERJ2RKF1002X"
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9215,7 +9215,7 @@
       )
     )
     (property "Manufacturer" "Panasonic Industry"
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9225,7 +9225,7 @@
       )
     )
     (property "LCSC" "C191123"
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9235,7 +9235,7 @@
       )
     )
     (property "Ratings" "1%, 0.1W, 50V"
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9245,7 +9245,7 @@
       )
     )
     (property "CoverMPN" ""
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9255,7 +9255,7 @@
       )
     )
     (property "CoverQuantity" ""
-      (at 157.48 238.76 0)
+      (at 185.42 238.76 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9281,25 +9281,25 @@
   )
   (wire
     (pts
-      (xy 157.48 236.22)
-      (xy 157.48 232.41)
+      (xy 185.42 236.22)
+      (xy 185.42 232.41)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "64df11c6-735a-5b6b-8cc3-6243ca5de1ec")
+    (uuid "64a6f04b-fdb3-562f-812b-8233079ef00e")
   )
   (symbol
     (lib_id "hub-lib:power_PORT4_VBUS")
-    (at 157.48 232.41 0)
+    (at 185.42 232.41 0)
     (unit 1)
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid "21c05a65-bb96-5725-8b6e-23fd3677cb12")
+    (uuid "884f24fd-9b3e-53a0-8435-0160cf0d73f6")
     (property "Reference" "#PWR11031"
-      (at 157.48 232.41 0)
+      (at 185.42 232.41 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9308,7 +9308,7 @@
       )
     )
     (property "Value" "PORT4_VBUS"
-      (at 157.48 228.6 0)
+      (at 185.42 228.6 0)
       (effects
         (font
           (size 1.016 1.016)
@@ -9316,7 +9316,7 @@
       )
     )
     (pin "1"
-      (uuid "2ac1dc74-25e2-5269-9ca1-46d360e863bc")
+      (uuid "b7f67a89-db84-5403-821a-2e335cadcbdd")
     )
     (instances
       (project "hub"
@@ -9329,25 +9329,25 @@
   )
   (wire
     (pts
-      (xy 157.48 241.3)
-      (xy 157.48 245.11)
+      (xy 185.42 241.3)
+      (xy 185.42 245.11)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "80cb053c-519a-58a5-8363-2974af4c0dfa")
+    (uuid "b6fdfbb2-0807-503d-9777-89dfe595d77a")
   )
   (symbol
     (lib_id "hub-lib:power_GND2")
-    (at 157.48 245.11 0)
+    (at 185.42 245.11 0)
     (unit 1)
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid "6ecb0234-9a0a-5a8e-8c8f-fef8ffa5f4b9")
+    (uuid "bce88e9c-a768-5a44-ae39-a92e5bf59da8")
     (property "Reference" "#PWR11032"
-      (at 157.48 245.11 0)
+      (at 185.42 245.11 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -9356,7 +9356,7 @@
       )
     )
     (property "Value" "GND2"
-      (at 157.48 248.92000000000002 0)
+      (at 185.42 248.92000000000002 0)
       (effects
         (font
           (size 1.016 1.016)
@@ -9364,7 +9364,7 @@
       )
     )
     (pin "1"
-      (uuid "349053f4-f59c-5181-bcca-6efc4eae75a7")
+      (uuid "8fc01b3b-0288-585c-a932-5df796762ecf")
     )
     (instances
       (project "hub"
