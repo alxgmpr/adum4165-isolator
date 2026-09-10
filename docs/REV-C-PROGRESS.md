@@ -29,7 +29,7 @@
 - [x] Complete synchronized placement, outline, mechanics, stackup, rules
 - [x] Isolation, pad-net, inventory, courtyard, and edge verification
 - [x] Renders, routing guide, bring-up checklist, hardware/mechanical limitations
-- [ ] Checkpoint commits, final clean branch, and push
+- [x] Checkpoint commits, final clean branch, and push
 
 No tracks, vias, autorouter runs, fabrication outputs, main merge, or hardware
 orders are authorized. Unrouted connections will be reported separately.
@@ -76,3 +76,8 @@ orders are authorized. Unrouted connections will be reported separately.
 - Independent checks pass for all 291 components, 987 pad rows and 42 critical electrical assertions. Board has 295 footprints including four mounting holes, zero tracks, zero vias and zero filled copper. All 37 local footprints and 34 referenced model files resolve. Original single-port files match baseline `741e9b8`.
 - Supplied the development EEPROM image/byte map, routing guide, mechanical assumptions, full bring-up checklist, verification reports, final netlist, model/library provenance and artifact hashes. All hardware tests and actual enclosure fit remain pending, as appropriate for this unrouted handoff.
 - Handoff starts at `docs/revc/README.md`. Final artifact commit and remote synchronization follow this verification checkpoint; no main merge, hardware order or fabrication output was performed.
+
+## Handoff closed — 2026-09-10
+
+- Completed artifacts are committed as `4f81a98` and pushed to `origin/codex/revc-isousb211`. The working tree was clean after that push; all 186 recorded artifact hashes match. This final log-only checkpoint closes the progress gates.
+- The requested schematic/placement deliverables are complete. Alex's routing, all hardware acceptance tests and actual enclosure qualification remain the documented next work. No tracks or vias were added and no fabrication files were released.
