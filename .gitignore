@@ -37,3 +37,8 @@ tools/*.jar
 tools/ar_work/
 __pycache__/
 ~*.lck
+
+# Rev C local research and intermediate renders; curated evidence lives in docs/revc.
+build/
+datasheets/revc/
+.venv-revc/
